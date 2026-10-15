@@ -1,14 +1,25 @@
 import type { Metadata } from "next";
+import { DM_Sans } from "next/font/google";
 import "./globals.css";
+import "./site.css";
+import SiteHeader from "@/components/SiteHeader";
+import SiteFooter from "@/components/SiteFooter";
+import JsonLd, { organizationSchema } from "@/components/JsonLd";
+import { site } from "@/lib/site";
+
+// next/font lädt die Schrift zur Build-Zeit und liefert sie selbst aus – kein Aufruf an Google beim Besucher.
+const dmSans = DM_Sans({ subsets: ["latin"], display: "swap", variable: "--font-dm-sans" });
 
 export const metadata: Metadata = {
-  title: "betreibermanager.de | Betreiberpflichten im Griff",
+  metadataBase: new URL(site.url),
+  title: "Betreiberpflichten organisieren | betreibermanager.de",
   description:
-    "Wir koordinieren Ihre Betreiberpflichten: Prüfungen, Fristen, qualifizierte Prüfpartner und lückenlose Dokumentation. Ein zentraler Ansprechpartner.",
+    "Prüfpflichten ermitteln, Prüfungen koordinieren, Nachweise sichern. Ein Ansprechpartner für Elektro, Brandschutz, Aufzug und Lüftung.",
   icons: { icon: { url: "/favicon.svg", type: "image/svg+xml" } },
+  robots: { index: true, follow: true },
   openGraph: {
-    title: "betreibermanager.de | Betreiberpflichten im Griff",
-    description: "Prüfungen, Fristen und Dokumentation. Ihre Betreiberpflichten aus einer Hand organisiert.",
+    siteName: "betreibermanager.de",
+    locale: "de_DE",
     type: "website",
   },
   twitter: { card: "summary_large_image" },
@@ -16,18 +27,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="de">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        {/* eslint-disable-next-line @next/next/no-page-custom-font */}
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&display=swap"
-        />
-        <link rel="preload" as="image" href="/assets/industrial-building.jpg" fetchPriority="high" />
-      </head>
-      <body>{children}</body>
+    <html lang="de" className={dmSans.variable}>
+      <body>
+        <JsonLd data={organizationSchema()} />
+        <SiteHeader />
+        <main>{children}</main>
+        <SiteFooter />
+      </body>
     </html>
   );
 }

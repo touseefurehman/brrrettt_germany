@@ -47,7 +47,7 @@ export default function DatenschutzPage() {
           im Übrigen Art. 6 Abs. 1 lit. f DSGVO.
         </p>
         <p>
-          Für den Versand der Formularnachrichten nutzen wir [E-Mail-Versanddienst, z. B. Resend Inc., USA – bitte
+          Für den Versand der Formularnachrichten nutzen wir [E-Mail-Versanddienst: Web3Forms bzw. Resend Inc., USA – bitte
           prüfen und Rechtsgrundlage der Übermittlung ergänzen]. Ihre Daten werden gelöscht, sobald die Anfrage
           abschließend bearbeitet ist und keine gesetzlichen Aufbewahrungspflichten entgegenstehen.
         </p>

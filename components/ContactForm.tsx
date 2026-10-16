@@ -8,6 +8,8 @@ import { emailLink, phoneLink, site } from "@/lib/site";
 
 type Status = "idle" | "sending" | "sent" | "error";
 
+const WEB3FORMS_ACCESS_KEY = "c0e91a82-de38-4bc2-b228-cdc1fcd7b8be";
+
 export default function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState("");
@@ -20,12 +22,35 @@ export default function ContactForm() {
     setStatus("sending");
     setError("");
     try {
-      const res = await fetch("/api/kontakt", {
+      let res = await fetch("/api/kontakt", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ...data, elapsed: Date.now() - startedAt.current }),
       });
-      if (!res.ok) {
+      // 503 = Resend noch nicht konfiguriert → Versand über Web3Forms
+      if (res.status === 503) {
+        res = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          body: JSON.stringify({
+            access_key: WEB3FORMS_ACCESS_KEY,
+            subject: `Anfrage über betreibermanager.de – ${String(data.name ?? "").trim()}`,
+            from_name: "betreibermanager.de",
+            Name: data.name,
+            Firma: data.company || "–",
+            email: data.email,
+            Telefon: data.phone || "–",
+            "Standorte / Anlagen": data.scope || "–",
+            "Gewünschter Zeitraum": data.timeframe || "–",
+            Nachricht: data.message,
+            Einwilligung: "erteilt",
+          }),
+        });
+        const result = (await res.json().catch(() => ({}))) as { success?: boolean };
+        if (!res.ok || !result.success) {
+          throw new Error(`Der Versand ist fehlgeschlagen. Bitte schreiben Sie an ${site.email}.`);
+        }
+      } else if (!res.ok) {
         const body = (await res.json().catch(() => ({}))) as { error?: string };
         throw new Error(body.error || "Die Anfrage konnte nicht gesendet werden.");
       }

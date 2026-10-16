@@ -19,7 +19,7 @@ Versand über die Resend-API (`app/api/kontakt/route.ts`):
 | `CONTACT_FROM`   | `Website <anfrage@betreibermanager.de>` (Domain bei Resend verifizieren) |
 | `CONTACT_TO`     | `kontakt@betreibermanager.de` (optional)          |
 
-Ohne diese Variablen antwortet das Formular mit einem Hinweis auf die E-Mail-Adresse.
+Ohne diese Variablen antwortet die Route mit 503 und das Formular versendet stattdessen über Web3Forms (Access Key in `components/ContactForm.tsx`, derselbe wie bei lieferantgesucht.de).
 
 ## Domain
 

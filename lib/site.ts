@@ -3,7 +3,7 @@
 // Schreibweise überall identisch halten (NAP-Konsistenz mit Google Business Profile & Verzeichnissen).
 
 export const site = {
-  url: "https://betreibermanager.de",
+  url: "https://www.betreibermanager.de",
   domain: "betreibermanager.de",
   companyName: "[Firmenname]",
   legalForm: "[Rechtsform]",

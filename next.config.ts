@@ -15,17 +15,8 @@ const nextConfig: NextConfig = {
       },
     ];
   },
-  async redirects() {
-    return [
-      {
-        // Primärdomain ist betreibermanager.de ohne www (zusätzlich in Vercel unter Settings → Domains einstellen)
-        source: "/:path*",
-        has: [{ type: "host", value: "www.betreibermanager.de" }],
-        destination: "https://betreibermanager.de/:path*",
-        permanent: true,
-      },
-    ];
-  },
+  // Keine Host-Weiterleitung hier: betreibermanager.de → www.betreibermanager.de übernimmt Vercel
+  // (Settings → Domains). Eine zweite Regel in die Gegenrichtung erzeugt ERR_TOO_MANY_REDIRECTS.
 };
 
 export default nextConfig;

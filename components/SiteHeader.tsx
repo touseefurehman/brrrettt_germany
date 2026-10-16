@@ -19,7 +19,7 @@ export default function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="site-header">
+    <header id="top" className="site-header">
       <div className="page-width header-inner">
         <Brand />
         <nav className="desktop-nav" aria-label="Hauptnavigation">

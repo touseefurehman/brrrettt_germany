@@ -37,12 +37,5 @@ export const fullCompanyName = isSet(site.companyName)
 export const hasPhone = isSet(site.phoneDisplay) && isSet(site.phoneHref);
 export const hasAddress = [site.street, site.postalCode, site.city].every(isSet);
 export const addressLine = `${site.street}, ${site.postalCode} ${site.city}`;
-
-/**
- * Erst wenn Firma, Anschrift und Telefon eingetragen sind, wird die Seite indexiert.
- * Bis dahin: noindex, und Platzhalter werden im Frontend nicht ausgegeben –
- * eine Seite mit „[Firmenname]“ schadet mehr als eine nicht indexierte.
- */
-export const launchReady = isSet(site.companyName) && hasAddress && hasPhone;
 export const phoneLink = `tel:${site.phoneHref}`;
 export const emailLink = `mailto:${site.email}`;

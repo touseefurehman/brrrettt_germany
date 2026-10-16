@@ -10,7 +10,7 @@ export default function SiteFooter() {
       <div className="page-width footer-main">
         <Brand />
         <p>Betreiberpflichten. Zentral organisiert.</p>
-        <a href="#" className="back-top" aria-label="Zurück nach oben">
+        <a href="#top" className="back-top" aria-label="Zurück nach oben">
           <MoveUpRight size={20} />
         </a>
       </div>

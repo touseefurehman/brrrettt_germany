@@ -5,7 +5,7 @@ import "./site.css";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import JsonLd, { organizationSchema } from "@/components/JsonLd";
-import { launchReady, site } from "@/lib/site";
+import { site } from "@/lib/site";
 
 // next/font lädt die Schrift zur Build-Zeit und liefert sie selbst aus – kein Aufruf an Google beim Besucher.
 const dmSans = DM_Sans({ subsets: ["latin"], display: "swap", variable: "--font-dm-sans" });
@@ -16,8 +16,7 @@ export const metadata: Metadata = {
   description:
     "Prüfpflichten ermitteln, Prüfungen koordinieren, Nachweise sichern. Ein Ansprechpartner für Elektro, Brandschutz, Aufzug und Lüftung.",
   icons: { icon: { url: "/favicon.svg", type: "image/svg+xml" } },
-  // Platzhalter-Schutz: indexiert wird erst, wenn die Firmendaten in lib/site.ts eingetragen sind
-  robots: { index: launchReady, follow: true },
+  robots: { index: true, follow: true },
   openGraph: {
     siteName: "betreibermanager.de",
     locale: "de_DE",

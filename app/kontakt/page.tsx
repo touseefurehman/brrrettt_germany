@@ -19,7 +19,7 @@ export default function KontaktPage() {
     <>
       <PageIntro crumbs={[["Kontakt", "/kontakt"]]} kicker="KONTAKT" title="Beratung zu Betreiberpflichten anfragen">
         <p>
-          Ob einzelne Anlage oder mehrere Standorte: Beschreiben Sie Ihren Bedarf. {site.responseTime} – vertraulich
+          Beschreiben Sie Ihre Standorte, Anlagen und den aktuellen Prüfstatus. {site.responseTime} – vertraulich
           und unverbindlich. Das Erstgespräch ist kostenfrei.
         </p>
       </PageIntro>

@@ -34,7 +34,7 @@ const services: { icon: IconType; title: string; text: string; tag: string }[] =
   {
     icon: ClipboardList,
     title: "Prüfpflichten ermitteln",
-    text: "Wir erfassen Ihre Anlagen und Gebäude und leiten daraus ab, welche Prüfungen nach BetrSichV, DGUV Vorschrift 3, ArbStättV und einschlägigen Regelwerken tatsächlich für Sie gelten. Ergebnis ist eine Pflichtenmatrix je Anlage und Standort.",
+    text: "Wir erfassen Ihre Anlagen und Gebäude und leiten daraus ab, welche Prüfungen nach BetrSichV, DGUV Vorschrift 3, ArbStättV und einschlägigen Regelwerken tatsächlich für Sie gelten. Ergebnis ist eine Pflichtenmatrix je Anlage und Standort – auch einzeln als abgeschlossene Leistung mit Übergabe, ohne Jahresbindung, etwa bei der Objektübernahme nach einem Neubau.",
     tag: "Bestandsaufnahme & Pflichtenmatrix",
   },
   {
@@ -121,8 +121,9 @@ export default function LandingPage() {
             </span>
           </h1>
           <p>
-            Wir ermitteln Ihre Prüfpflichten, koordinieren qualifizierte Prüfpartner und führen die Nachweise
-            zusammen. Sie behalten den Überblick, ohne den Terminkalender zu führen.
+            Für Organisationen mit mehreren Standorten und vielen prüfpflichtigen Anlagen: Wir ermitteln Ihre
+            Prüfpflichten, koordinieren qualifizierte Prüfpartner und führen die Nachweise zusammen. Sie behalten den
+            Überblick, ohne den Terminkalender zu führen.
           </p>
           <div className="hero-actions">
             <a href="#kontakt" className={`${btnHero} h-10 rounded-md px-8`}>
@@ -417,8 +418,8 @@ export default function LandingPage() {
             <span className="subtle-heading">Unser nächstes Gespräch.</span>
           </h2>
           <p>
-            Ob einzelne Anlage oder mehrere Standorte: Beschreiben Sie Ihren Bedarf und lassen Sie uns die nächsten
-            Schritte klären.
+            Beschreiben Sie Ihre Standorte, Anlagen und den aktuellen Prüfstatus. Wir klären mit Ihnen die nächsten
+            Schritte – als Einstieg auch mit einer Bestandsaufnahme für einen Standort.
           </p>
           <address className="contact-details">
             <strong>{fullCompanyName}</strong>

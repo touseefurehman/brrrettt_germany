@@ -123,7 +123,7 @@ export const areas: Area[] = [
     rows: [
       ["Tragbare Feuerlöscher", "Instandhaltung durch Sachkundigen", "2 Jahre", "ASR A2.2, DIN 14406-4"],
       ["Brandmeldeanlagen", "Inspektion / Wartung", "vierteljährlich / jährlich", "DIN 14675-1, DIN VDE 0833-1"],
-      ["Brandmeldeanlagen in Sonderbauten", "Prüfung durch Prüfsachverständigen", "in der Regel 3 Jahre", "Prüfverordnung des Landes"],
+      ["Brandmeldeanlagen in Sonderbauten", "Prüfung durch Prüfsachverständigen", "in der Regel 3 Jahre", "je nach Landesrecht: Prüfverordnung bzw. Sonderbauverordnung des jeweiligen Bundeslandes"],
       ["Sicherheitsbeleuchtung", "Funktionsprüfung / Prüfung der Nennbetriebsdauer", "monatlich / jährlich", "DIN EN 50172, DIN VDE V 0108-100-1"],
       ["Rauch- und Wärmeabzugsanlagen", "Wartung", "1 Jahr", "DIN 18232-2"],
       ["Feststellanlagen an Brandschutztüren", "Funktionsprüfung durch Betreiber / Wartung", "monatlich / jährlich", "DIN 14677, allgemeine bauaufsichtliche Zulassung"],

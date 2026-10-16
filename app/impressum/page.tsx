@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { PageIntro } from "@/components/Subpage";
-import { emailLink, fullCompanyName, phoneLink, site } from "@/lib/site";
+import { emailLink, fullCompanyName, hasAddress, hasPhone, isSet, phoneLink, site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Impressum | betreibermanager.de",
@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 };
 
 // Vor dem Launch anwaltlich prüfen lassen. Angaben nach § 5 DDG.
+// Nicht eingetragene Felder aus lib/site.ts werden ausgelassen statt als „[…]“ ausgegeben.
 export default function ImpressumPage() {
   return (
     <>
@@ -17,31 +18,51 @@ export default function ImpressumPage() {
         <h2>Angaben gemäß § 5 DDG</h2>
         <p>
           {fullCompanyName}
-          <br />
-          {site.street}
-          <br />
-          {site.postalCode} {site.city}
+          {hasAddress && (
+            <>
+              <br />
+              {site.street}
+              <br />
+              {site.postalCode} {site.city}
+            </>
+          )}
         </p>
 
-        <h2>Vertreten durch</h2>
-        <p>{site.representative}</p>
+        {isSet(site.representative) && (
+          <>
+            <h2>Vertreten durch</h2>
+            <p>{site.representative}</p>
+          </>
+        )}
 
         <h2>Kontakt</h2>
         <p>
-          Telefon: <a href={phoneLink}>{site.phoneDisplay}</a>
-          <br />
+          {hasPhone && (
+            <>
+              Telefon: <a href={phoneLink}>{site.phoneDisplay}</a>
+              <br />
+            </>
+          )}
           E-Mail: <a href={emailLink}>{site.email}</a>
         </p>
 
-        <h2>Registereintrag</h2>
-        <p>
-          Registergericht: {site.registerCourt}
-          <br />
-          Registernummer: {site.registerNumber}
-        </p>
+        {isSet(site.registerCourt) && isSet(site.registerNumber) && (
+          <>
+            <h2>Registereintrag</h2>
+            <p>
+              Registergericht: {site.registerCourt}
+              <br />
+              Registernummer: {site.registerNumber}
+            </p>
+          </>
+        )}
 
-        <h2>Umsatzsteuer-ID</h2>
-        <p>Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz: {site.vatId}</p>
+        {isSet(site.vatId) && (
+          <>
+            <h2>Umsatzsteuer-ID</h2>
+            <p>Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz: {site.vatId}</p>
+          </>
+        )}
 
         <h2>Verbraucherstreitbeilegung</h2>
         <p>

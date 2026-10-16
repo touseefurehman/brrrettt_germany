@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { CtaBand, PageIntro } from "@/components/Subpage";
 import { Check } from "@/components/icons";
-import { site } from "@/lib/site";
+import { fullCompanyName, isSet, site } from "@/lib/site";
 
 const title = "Über uns – Ihr Partner für Betreiberpflichten";
 const description =
@@ -19,20 +19,28 @@ export default function UeberUnsPage() {
     <>
       <PageIntro crumbs={[["Über uns", "/ueber-uns"]]} kicker="ÜBER UNS" title="Wer Ihre Betreiberpflichten koordiniert">
         <p>
-          betreibermanager.de ist ein Angebot der {site.companyName} {site.legalForm} mit Sitz in {site.city}. Wir
-          ermitteln Prüfpflichten, koordinieren qualifizierte Prüfpartner und führen die Nachweise zusammen – für
+          {isSet(site.companyName) && (
+            <>
+              betreibermanager.de ist ein Angebot der {fullCompanyName}
+              {isSet(site.city) && <> mit Sitz in {site.city}</>}.{" "}
+            </>
+          )}
+          Wir ermitteln Prüfpflichten, koordinieren qualifizierte Prüfpartner und führen die Nachweise zusammen – für
           Betreiber, technische Leiter und Facility Manager.
         </p>
       </PageIntro>
 
       <section className="section page-width prose-grid">
-        <div className="person-card">
-          {/* TODO: Porträtfoto ergänzen – /public/assets/ansprechpartner.webp, Alt-Text: "[Name], Ansprechpartner für Betreiberpflichten bei betreibermanager.de" */}
-          <div className="person-photo" aria-hidden="true"></div>
-          <h2>{site.contactPerson}</h2>
-          <p>{site.contactPersonRole}</p>
-          <p className="muted-note">[Kurzer Werdegang: Ausbildung, Berufserfahrung, Schwerpunkte]</p>
-        </div>
+        {/* Karte erscheint, sobald contactPerson in lib/site.ts eingetragen ist.
+            TODO: Porträtfoto ergänzen – /public/assets/ansprechpartner.webp,
+            Alt-Text: "<Name>, Ansprechpartner für Betreiberpflichten bei betreibermanager.de"; Werdegang ergänzen */}
+        {isSet(site.contactPerson) && (
+          <div className="person-card">
+            <div className="person-photo" aria-hidden="true"></div>
+            <h2>{site.contactPerson}</h2>
+            {isSet(site.contactPersonRole) && <p>{site.contactPersonRole}</p>}
+          </div>
+        )}
         <div className="prose">
           <h2>Arbeitsweise</h2>
           <p>
@@ -53,8 +61,7 @@ export default function UeberUnsPage() {
               <Check size={15} /> Nachvollziehbare Prüfprotokolle mit Mängelbewertung
             </li>
           </ul>
-          <h2>Mitgliedschaften</h2>
-          <p>[z. B. GEFMA-Mitgliedschaft – falls vorhanden, sonst Abschnitt entfernen]</p>
+          {/* Abschnitt „Mitgliedschaften“ (z. B. GEFMA) hier ergänzen, sobald vorhanden */}
         </div>
       </section>
 

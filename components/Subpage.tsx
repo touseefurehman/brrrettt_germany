@@ -4,7 +4,7 @@ import { ArrowUpRight, Phone } from "./icons";
 import JsonLd, { breadcrumbSchema } from "./JsonLd";
 import { btnHero } from "./ui";
 import type { DeadlineRow } from "@/lib/content";
-import { phoneLink, site } from "@/lib/site";
+import { hasPhone, phoneLink, site } from "@/lib/site";
 
 export function PageIntro({
   crumbs,
@@ -88,9 +88,11 @@ export function CtaBand({ title = "Prüfpflichten klären, Angebot erhalten." }:
           <Link href="/kontakt" className={`${btnHero} h-10 rounded-md px-6`}>
             Angebot anfragen <ArrowUpRight />
           </Link>
-          <a href={phoneLink} className="hero-secondary">
-            <Phone size={17} /> {site.phoneDisplay}
-          </a>
+          {hasPhone && (
+            <a href={phoneLink} className="hero-secondary">
+              <Phone size={17} /> {site.phoneDisplay}
+            </a>
+          )}
         </div>
       </div>
     </section>

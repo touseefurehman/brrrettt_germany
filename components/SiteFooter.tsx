@@ -2,7 +2,7 @@ import Link from "next/link";
 import Brand from "./Brand";
 import { MoveUpRight } from "./icons";
 import { areas } from "@/lib/content";
-import { emailLink, fullCompanyName, phoneLink, site } from "@/lib/site";
+import { emailLink, fullCompanyName, hasAddress, hasPhone, phoneLink, site } from "@/lib/site";
 
 export default function SiteFooter() {
   return (
@@ -17,11 +17,18 @@ export default function SiteFooter() {
       <div className="page-width footer-columns">
         <address>
           <strong>{fullCompanyName}</strong>
+          {hasAddress && (
+            <span>
+              {site.street} · {site.postalCode} {site.city}
+            </span>
+          )}
           <span>
-            {site.street} · {site.postalCode} {site.city}
-          </span>
-          <span>
-            Telefon <a href={phoneLink}>{site.phoneDisplay}</a> · <a href={emailLink}>{site.email}</a>
+            {hasPhone && (
+              <>
+                Telefon <a href={phoneLink}>{site.phoneDisplay}</a> ·{" "}
+              </>
+            )}
+            <a href={emailLink}>{site.email}</a>
           </span>
         </address>
         <nav aria-label="Prüfbereiche">

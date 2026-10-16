@@ -5,7 +5,7 @@ import Link from "next/link";
 import Brand from "./Brand";
 import { ArrowUpRight, Menu, Phone, X } from "./icons";
 import { btnGhost, btnPrimary } from "./ui";
-import { phoneLink, site } from "@/lib/site";
+import { hasPhone, phoneLink, site } from "@/lib/site";
 
 const navItems: [string, string][] = [
   ["Leistungen", "/#leistungen"],
@@ -29,9 +29,11 @@ export default function SiteHeader() {
             </Link>
           ))}
         </nav>
-        <a href={phoneLink} className="header-phone">
-          <Phone size={15} /> {site.phoneDisplay}
-        </a>
+        {hasPhone && (
+          <a href={phoneLink} className="header-phone">
+            <Phone size={15} /> {site.phoneDisplay}
+          </a>
+        )}
         <Link href="/kontakt" className={`${btnPrimary} nav-cta`}>
           Beratung anfragen <ArrowUpRight />
         </Link>
@@ -53,10 +55,12 @@ export default function SiteHeader() {
               <ArrowUpRight size={16} />
             </Link>
           ))}
-          <a href={phoneLink}>
-            {site.phoneDisplay} anrufen
-            <Phone size={16} />
-          </a>
+          {hasPhone && (
+            <a href={phoneLink}>
+              {site.phoneDisplay} anrufen
+              <Phone size={16} />
+            </a>
+          )}
         </nav>
       )}
     </header>

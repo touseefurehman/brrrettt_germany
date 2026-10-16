@@ -1,6 +1,30 @@
 import type { Metadata } from "next";
 import { PageIntro } from "@/components/Subpage";
-import { emailLink, fullCompanyName, phoneLink, site } from "@/lib/site";
+import { addressLine, emailLink, fullCompanyName, hasAddress, hasPhone, phoneLink, site } from "@/lib/site";
+
+// Datenschutz-Aufsichtsbehörden der Länder für den nicht-öffentlichen Bereich, Schlüssel = site.state
+const authorities: Record<string, string> = {
+  "Baden-Württemberg": "Landesbeauftragte/r für den Datenschutz und die Informationsfreiheit Baden-Württemberg",
+  Bayern: "Bayerisches Landesamt für Datenschutzaufsicht (BayLDA)",
+  Berlin: "Berliner Beauftragte/r für Datenschutz und Informationsfreiheit",
+  Brandenburg: "Landesbeauftragte/r für den Datenschutz und für das Recht auf Akteneinsicht Brandenburg",
+  Bremen: "Landesbeauftragte/r für Datenschutz und Informationsfreiheit der Freien Hansestadt Bremen",
+  Hamburg: "Hamburgische/r Beauftragte/r für Datenschutz und Informationsfreiheit",
+  Hessen: "Hessische/r Beauftragte/r für Datenschutz und Informationsfreiheit",
+  "Mecklenburg-Vorpommern": "Landesbeauftragte/r für Datenschutz und Informationsfreiheit Mecklenburg-Vorpommern",
+  Niedersachsen: "Landesbeauftragte/r für den Datenschutz Niedersachsen",
+  "Nordrhein-Westfalen": "Landesbeauftragte/r für Datenschutz und Informationsfreiheit Nordrhein-Westfalen",
+  "Rheinland-Pfalz": "Landesbeauftragte/r für den Datenschutz und die Informationsfreiheit Rheinland-Pfalz",
+  Saarland: "Unabhängiges Datenschutzzentrum Saarland",
+  Sachsen: "Sächsische/r Datenschutz- und Transparenzbeauftragte/r",
+  "Sachsen-Anhalt": "Landesbeauftragte/r für den Datenschutz Sachsen-Anhalt",
+  "Schleswig-Holstein": "Unabhängiges Landeszentrum für Datenschutz Schleswig-Holstein (ULD)",
+  Thüringen: "Thüringer Landesbeauftragte/r für den Datenschutz und die Informationsfreiheit",
+};
+const authority = authorities[site.state];
+
+// Gleiche Bedingung wie in app/api/kontakt/route.ts: ohne Resend-Konfiguration versendet das Formular über Web3Forms
+const usesResend = Boolean(process.env.RESEND_API_KEY && process.env.CONTACT_FROM);
 
 export const metadata: Metadata = {
   title: "Datenschutzerklärung | betreibermanager.de",
@@ -19,10 +43,19 @@ export default function DatenschutzPage() {
         <h2>1. Verantwortlicher</h2>
         <p>
           {fullCompanyName}
+          {hasAddress && (
+            <>
+              <br />
+              {addressLine}
+            </>
+          )}
           <br />
-          {site.street}, {site.postalCode} {site.city}
-          <br />
-          Telefon: <a href={phoneLink}>{site.phoneDisplay}</a> · E-Mail: <a href={emailLink}>{site.email}</a>
+          {hasPhone && (
+            <>
+              Telefon: <a href={phoneLink}>{site.phoneDisplay}</a> ·{" "}
+            </>
+          )}
+          E-Mail: <a href={emailLink}>{site.email}</a>
         </p>
 
         <h2>2. Hosting und Server-Logfiles</h2>
@@ -31,12 +64,15 @@ export default function DatenschutzPage() {
           der Website verarbeitet Vercel technisch notwendige Daten: IP-Adresse, Datum und Uhrzeit des Zugriffs,
           aufgerufene Seite, Referrer-URL, Browsertyp und Betriebssystem. Die Verarbeitung erfolgt auf Grundlage von
           Art. 6 Abs. 1 lit. f DSGVO; unser berechtigtes Interesse liegt in der sicheren und stabilen Bereitstellung der
-          Website. Die Logdaten werden [Speicherdauer – bitte prüfen] gespeichert und anschließend gelöscht.
+          Website. Die Logdaten werden nur so lange gespeichert, wie es für Betrieb, Fehleranalyse und Abwehr von
+          Angriffen erforderlich ist, und anschließend automatisch gelöscht. Eine Zusammenführung mit anderen
+          Datenquellen findet nicht statt.
         </p>
         <p>
-          Dabei können Daten in die USA übermittelt werden. Die Übermittlung stützt sich auf [EU-U.S. Data Privacy
-          Framework und/oder EU-Standardvertragsklauseln – bitte prüfen]. Mit Vercel besteht ein Vertrag zur
-          Auftragsverarbeitung nach Art. 28 DSGVO.
+          Dabei können Daten in die USA übermittelt werden. Vercel Inc. ist unter dem EU-U.S. Data Privacy Framework
+          zertifiziert; die Übermittlung stützt sich auf den Angemessenheitsbeschluss der EU-Kommission (Art. 45 DSGVO)
+          und ergänzend auf EU-Standardvertragsklauseln (Art. 46 Abs. 2 lit. c DSGVO). Mit Vercel besteht ein Vertrag
+          zur Auftragsverarbeitung nach Art. 28 DSGVO.
         </p>
 
         <h2>3. Kontaktformular und Anfragen per E-Mail</h2>
@@ -47,9 +83,22 @@ export default function DatenschutzPage() {
           im Übrigen Art. 6 Abs. 1 lit. f DSGVO.
         </p>
         <p>
-          Für den Versand der Formularnachrichten nutzen wir [E-Mail-Versanddienst: Web3Forms bzw. Resend Inc., USA – bitte
-          prüfen und Rechtsgrundlage der Übermittlung ergänzen]. Ihre Daten werden gelöscht, sobald die Anfrage
-          abschließend bearbeitet ist und keine gesetzlichen Aufbewahrungspflichten entgegenstehen.
+          {usesResend ? (
+            <>
+              Für die Zustellung der Formularnachrichten nutzen wir den E-Mail-Versanddienst Resend (Resend Inc., USA).
+              Die Übermittlung in die USA stützt sich auf EU-Standardvertragsklauseln (Art. 46 Abs. 2 lit. c DSGVO); mit
+              dem Anbieter besteht ein Vertrag zur Auftragsverarbeitung nach Art. 28 DSGVO.
+            </>
+          ) : (
+            <>
+              Für die Zustellung der Formularnachrichten nutzen wir den Formulardienst Web3Forms (web3forms.com). Ihre
+              Angaben werden beim Absenden direkt aus Ihrem Browser an den Dienst übertragen und von dort per E-Mail an
+              uns weitergeleitet. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO; unser berechtigtes Interesse liegt in
+              der zuverlässigen Zustellung Ihrer Anfrage.
+            </>
+          )}{" "}
+          Ihre Daten werden gelöscht, sobald die Anfrage abschließend bearbeitet ist und keine gesetzlichen
+          Aufbewahrungspflichten entgegenstehen.
         </p>
 
         <h2>4. Schriftarten</h2>
@@ -72,7 +121,18 @@ export default function DatenschutzPage() {
         </p>
         <p>
           Sie haben außerdem das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren, insbesondere in dem
-          Bundesland Ihres Wohnsitzes oder unseres Sitzes ([zuständige Landesdatenschutzbehörde]).
+          Bundesland Ihres Wohnsitzes oder unseres Sitzes.{" "}
+          {authority ? (
+            <>Für uns zuständig ist: {authority}.</>
+          ) : (
+            <>
+              Eine Übersicht der Aufsichtsbehörden finden Sie bei der Datenschutzkonferenz unter{" "}
+              <a href="https://www.datenschutzkonferenz-online.de" rel="noopener">
+                datenschutzkonferenz-online.de
+              </a>
+              .
+            </>
+          )}
         </p>
 
         <p className="page-meta">Stand: Oktober 2026</p>

@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
+import ContactDetails from "@/components/ContactDetails";
 import ContactForm from "@/components/ContactForm";
 import { PageIntro } from "@/components/Subpage";
-import { emailLink, fullCompanyName, phoneLink, site } from "@/lib/site";
+import { site } from "@/lib/site";
 
 const title = "Kontakt – Beratung zu Betreiberpflichten";
 const description =
@@ -26,14 +27,7 @@ export default function KontaktPage() {
       <section className="section page-width contact-grid">
         <div>
           <h2>Direkter Kontakt</h2>
-          <address className="contact-details">
-            <strong>{fullCompanyName}</strong>
-            <span>
-              {site.street}, {site.postalCode} {site.city}
-            </span>
-            <a href={phoneLink}>Telefon {site.phoneDisplay}</a>
-            <a href={emailLink}>{site.email}</a>
-          </address>
+          <ContactDetails />
           <p className="muted-note">Eine Vertraulichkeitsvereinbarung ist auf Anfrage möglich.</p>
         </div>
         <ContactForm />

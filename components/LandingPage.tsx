@@ -21,12 +21,13 @@ import {
   Zap,
 } from "./icons";
 import { BrandMark } from "./Brand";
+import ContactDetails from "./ContactDetails";
 import ContactForm from "./ContactForm";
 import FaqList from "./FaqList";
 import JsonLd, { faqSchema } from "./JsonLd";
 import { btnHero } from "./ui";
 import { areas, faqs, type AreaSlug } from "@/lib/content";
-import { emailLink, fullCompanyName, phoneLink, site } from "@/lib/site";
+import { hasPhone, isSet, phoneLink, site } from "@/lib/site";
 
 type IconType = ComponentType<{ size?: number; strokeWidth?: number }>;
 
@@ -129,17 +130,21 @@ export default function LandingPage() {
             <a href="#kontakt" className={`${btnHero} h-10 rounded-md px-8`}>
               Beratung anfragen <ArrowUpRight />
             </a>
-            <a href={phoneLink} className="hero-secondary">
-              <Phone size={17} /> {site.phoneDisplay} anrufen
-            </a>
+            {hasPhone && (
+              <a href={phoneLink} className="hero-secondary">
+                <Phone size={17} /> {site.phoneDisplay} anrufen
+              </a>
+            )}
           </div>
           <div className="hero-checks">
             <span>
               <Check size={15} /> {areas.length} Prüfbereiche koordiniert
             </span>
-            <span>
-              <Check size={15} /> Einzugsgebiet {site.region}
-            </span>
+            {isSet(site.region) && (
+              <span>
+                <Check size={15} /> Einzugsgebiet {site.region}
+              </span>
+            )}
             <span>
               <Check size={15} /> Erstgespräch kostenfrei
             </span>
@@ -421,14 +426,7 @@ export default function LandingPage() {
             Beschreiben Sie Ihre Standorte, Anlagen und den aktuellen Prüfstatus. Wir klären mit Ihnen die nächsten
             Schritte – als Einstieg auch mit einer Bestandsaufnahme für einen Standort.
           </p>
-          <address className="contact-details">
-            <strong>{fullCompanyName}</strong>
-            <span>
-              {site.street}, {site.postalCode} {site.city}
-            </span>
-            <a href={phoneLink}>Telefon {site.phoneDisplay}</a>
-            <a href={emailLink}>{site.email}</a>
-          </address>
+          <ContactDetails />
           <div className="contact-assurance">
             <ShieldCheck size={22} />
             <div>

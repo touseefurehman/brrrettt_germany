@@ -4,7 +4,7 @@ import { useRef, useState, type FormEvent } from "react";
 import Link from "next/link";
 import { ArrowUpRight } from "./icons";
 import { btnPrimary } from "./ui";
-import { emailLink, phoneLink, site } from "@/lib/site";
+import { emailLink, hasPhone, phoneLink, site } from "@/lib/site";
 
 type Status = "idle" | "sending" | "sent" | "error";
 
@@ -74,8 +74,13 @@ export default function ContactForm() {
   return (
     <form className="contact-form" onSubmit={onSubmit}>
       <p className="form-direct">
-        Lieber direkt sprechen? <a href={phoneLink}>{site.phoneDisplay}</a> · <a href={emailLink}>{site.email}</a> ·{" "}
-        {site.responseTime}.
+        Lieber direkt sprechen?{" "}
+        {hasPhone && (
+          <>
+            <a href={phoneLink}>{site.phoneDisplay}</a> ·{" "}
+          </>
+        )}
+        <a href={emailLink}>{site.email}</a> · {site.responseTime}.
       </p>
       <div className="form-row">
         <label>

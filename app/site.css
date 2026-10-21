@@ -433,7 +433,8 @@ details.faq-item[open] .faq-icon-minus {
   margin-bottom: 48px;
   scroll-margin-top: 100px;
 }
-.deadline-group .text-link {
+.deadline-group .text-link,
+.section-tight > .text-link {
   margin-top: 14px;
 }
 .link-cards {

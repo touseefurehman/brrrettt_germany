@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { CtaBand, DeadlineTable, PageIntro } from "@/components/Subpage";
-import { areas, otherDeadlines } from "@/lib/content";
+import { areas, drinkingWaterDeadlines, otherDeadlines } from "@/lib/content";
 
-const title = "Prüffristen für technische Anlagen – Übersicht";
+const title = "Prüffristen im Überblick – Betreiberverantwortung";
 const description =
-  "Welche Anlage muss wann geprüft werden? Prüffristen nach BetrSichV, DGUV Vorschrift 3 und VDI 6022 – mit Rechtsgrundlage je Anlagenart.";
+  "Welche Anlage muss wann geprüft werden? Richtwerte für Elektrotechnik, Brandschutz, Aufzüge, Lüftung und Trinkwasser – mit Rechtsgrundlage je Anlagenart.";
 
 export const metadata: Metadata = {
   title,
@@ -20,12 +20,21 @@ const lastReviewed = "Oktober 2026";
 export default function PrueffristenPage() {
   return (
     <>
-      <PageIntro crumbs={[["Prüffristen", "/prueffristen"]]} kicker="ÜBERSICHT" title="Prüffristen für technische Anlagen">
+      <PageIntro
+        crumbs={[["Prüffristen", "/prueffristen"]]}
+        kicker="ÜBERSICHT"
+        title="Prüffristen im Überblick – alle Prüfbereiche der Betreiberverantwortung"
+      >
         <p>
-          Die Prüffrist einer technischen Anlage legt der Betreiber in der Gefährdungsbeurteilung fest (§ 3
-          Betriebssicherheitsverordnung). Für viele Anlagen geben Verordnungen Höchstfristen vor, für andere nennen
-          DGUV-Regelwerk, Technische Regeln und Normen Richtwerte. Diese Übersicht fasst die gängigen Fristen mit ihrer
-          Rechtsgrundlage zusammen.
+          Welche Prüfung wann fällig ist, steht in fünf verschiedenen Regelwerken. Diese Übersicht führt die Richtwerte
+          für Elektrotechnik, Brandschutz, Aufzugsanlagen, Lüftung und Trinkwasser an einer Stelle zusammen – mit der
+          jeweiligen Rechtsgrundlage, damit Sie jede Angabe nachvollziehen können.
+        </p>
+        <p>
+          Die genannten Werte sind Richtwerte, keine festen Fristen. Verbindlich ist, was sich aus der
+          Gefährdungsbeurteilung für Ihre Anlage ergibt: Eine Baustelle braucht kürzere Intervalle als ein Büro, eine
+          Anlage mit häufigem Nutzerwechsel kürzere als eine stationäre. Umgekehrt lassen sich Intervalle verlängern, wenn
+          die Fehlerquote nachweislich gering ist – das muss aber dokumentiert sein.
         </p>
         <p className="page-meta">Stand: {lastReviewed}</p>
       </PageIntro>
@@ -37,6 +46,7 @@ export default function PrueffristenPage() {
               {a.name}
             </a>
           ))}
+          <a href="#trinkwasser">Trinkwasser</a>
           <a href="#weitere-anlagen">Weitere Anlagen</a>
         </nav>
 
@@ -44,11 +54,23 @@ export default function PrueffristenPage() {
           <div key={a.slug} id={a.slug} className="deadline-group">
             <h2>Prüffristen {a.name}</h2>
             <DeadlineTable rows={a.rows} />
+            {a.slug === "druck-gas" && (
+              <p className="muted-note">
+                Eine pauschale Frist gibt es hier nicht. Äußere Prüfung, innere Prüfung und Festigkeitsprüfung richten
+                sich nach Fluidgruppe und Druckinhaltsprodukt und werden für jede Anlage einzeln bestimmt. Die Tabelle
+                nennt nur die Höchstfristen der BetrSichV – die Frist Ihrer Anlage kann kürzer sein.
+              </p>
+            )}
             <Link href={`/pruefbereiche/${a.slug}`} className="text-link">
               {a.name}: Prüfungen koordinieren lassen
             </Link>
           </div>
         ))}
+
+        <div id="trinkwasser" className="deadline-group">
+          <h2>Prüffristen Trinkwasser</h2>
+          <DeadlineTable rows={drinkingWaterDeadlines} />
+        </div>
 
         <div id="weitere-anlagen" className="deadline-group">
           <h2>Weitere Anlagen und Einrichtungen</h2>
@@ -57,6 +79,23 @@ export default function PrueffristenPage() {
       </section>
 
       <section className="section page-width section-tight prose">
+        <h2>Was passiert, wenn eine Frist überschritten wird</h2>
+        <p>
+          Eine überschrittene Frist ist zunächst kein Schaden, aber eine Lücke im Nachweis. Praktisch wirkt sie an drei
+          Stellen: Der Versicherungsschutz kann eingeschränkt sein. Bei einer Begehung durch Berufsgenossenschaft oder
+          Aufsichtsbehörde drohen Beanstandungen bis hin zu Bußgeldern. Und im Schadensfall stellt sich die Frage nach
+          einer Organisationspflichtverletzung.
+        </p>
+        <p>
+          Entscheidend ist deshalb nicht, dass nie eine Frist abläuft – sondern dass Sie merken, wenn eine abläuft, und es
+          dokumentiert nachholen.
+        </p>
+        <h2>Wer die Fristen führt</h2>
+        <p>
+          Die gesetzliche Betreiberverantwortung bleibt immer beim Betreiber. Delegierbar sind die Aufgaben dahinter:
+          ermitteln, welche Pflichten gelten, Prüfungen beauftragen, Fristen überwachen, Nachweise führen, Mängel
+          nachverfolgen. Genau diese Aufgaben übernehmen wir – über alle Prüfbereiche und alle Standorte hinweg.
+        </p>
         <h2>Wer legt die Prüffrist fest?</h2>
         <p>
           Der Arbeitgeber bzw. Betreiber. Grundlage ist die Gefährdungsbeurteilung nach § 3 ArbSchG und § 3 BetrSichV.
@@ -76,7 +115,7 @@ export default function PrueffristenPage() {
           Durchführung überwachen und die Nachweise vorhalten.
         </p>
         <p className="muted-note">
-          Hinweis: Die Tabelle nennt Richtwerte und Höchstfristen und ersetzt keine Einzelfallprüfung. Abweichende
+          Stand: {lastReviewed}. Die Angaben ersetzen keine Rechtsberatung und keine Gefährdungsbeurteilung. Abweichende
           Fristen können sich aus Herstellerangaben, Auflagen von Behörden oder Versicherern und Landesrecht ergeben.
         </p>
       </section>

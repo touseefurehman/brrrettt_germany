@@ -4,7 +4,14 @@ import { site } from "@/lib/site";
 
 // Impressum und Datenschutz sind noindex und deshalb nicht enthalten.
 export default function sitemap(): MetadataRoute.Sitemap {
-  const paths = ["/", "/prueffristen", ...areas.map((a) => `/pruefbereiche/${a.slug}`), "/ueber-uns", "/kontakt"];
+  const paths = [
+    "/",
+    "/prueffristen",
+    ...areas.map((a) => `/pruefbereiche/${a.slug}`),
+    "/pruefbereiche/dguv-v3-pruefung/kosten",
+    "/ueber-uns",
+    "/kontakt",
+  ];
   return paths.map((path) => ({
     url: `${site.url}${path}`,
     changeFrequency: "monthly",

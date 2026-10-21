@@ -73,6 +73,11 @@ export default async function AreaPage({ params }: Props) {
           Richtwerte und Höchstfristen. Die verbindliche Frist ergibt sich aus der Gefährdungsbeurteilung, Herstellerangaben
           und gegebenenfalls Landesrecht. <Link href="/prueffristen">Alle Prüffristen im Überblick</Link>
         </p>
+        {area.slug === "dguv-v3-pruefung" && (
+          <Link href="/pruefbereiche/dguv-v3-pruefung/kosten" className="text-link">
+            Was kostet die DGUV-V3-Prüfung?
+          </Link>
+        )}
       </section>
 
       <section className="section page-width section-tight">

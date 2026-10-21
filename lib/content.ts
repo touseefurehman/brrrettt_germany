@@ -122,10 +122,14 @@ export const areas: Area[] = [
     ],
     rows: [
       ["Tragbare Feuerlöscher", "Instandhaltung durch Sachkundigen", "2 Jahre", "ASR A2.2, DIN 14406-4"],
+      ["Tragbare Feuerlöscher", "Innere Prüfung", "4–5 Jahre", "DIN 14406-4"],
+      ["Tragbare Feuerlöscher", "Festigkeitsprüfung", "10 Jahre", "DIN 14406-4, BetrSichV"],
+      ["Wandhydranten", "Instandhaltung", "1 Jahr", "DIN 14461-1, DIN EN 671-3"],
       ["Brandmeldeanlagen", "Inspektion / Wartung", "vierteljährlich / jährlich", "DIN 14675-1, DIN VDE 0833-1"],
       ["Brandmeldeanlagen in Sonderbauten", "Prüfung durch Prüfsachverständigen", "in der Regel 3 Jahre", "je nach Landesrecht: Prüfverordnung bzw. Sonderbauverordnung des jeweiligen Bundeslandes"],
       ["Sicherheitsbeleuchtung", "Funktionsprüfung / Prüfung der Nennbetriebsdauer", "monatlich / jährlich", "DIN EN 50172, DIN VDE V 0108-100-1"],
       ["Rauch- und Wärmeabzugsanlagen", "Wartung", "1 Jahr", "DIN 18232-2"],
+      ["Rauch- und Wärmeabzugsanlagen", "Sicht- und Funktionsprüfung durch den Betreiber", "monatlich bzw. vierteljährlich", "DIN 18232-2"],
       ["Feststellanlagen an Brandschutztüren", "Funktionsprüfung durch Betreiber / Wartung", "monatlich / jährlich", "DIN 14677, allgemeine bauaufsichtliche Zulassung"],
     ],
     tasks: [
@@ -189,6 +193,7 @@ export const areas: Area[] = [
     rows: [
       ["RLT-Anlagen ohne Befeuchtung", "Hygieneinspektion", "3 Jahre", "VDI 6022 Blatt 1"],
       ["RLT-Anlagen mit Befeuchtung", "Hygieneinspektion", "2 Jahre", "VDI 6022 Blatt 1"],
+      ["RLT-Anlagen mit erdverlegten Bauteilen", "Hygieneinspektion", "2 Jahre", "VDI 6022 Blatt 1"],
       ["Klimaanlagen über 12 kW Kälteleistung", "Energetische Inspektion", "10 Jahre", "§ 74 GEG"],
       ["Kälteanlagen mit F-Gasen ab 5 t CO₂-Äquivalent", "Dichtheitskontrolle", "12, 6 oder 3 Monate je nach Füllmenge", "Verordnung (EU) 2024/573"],
     ],
@@ -242,5 +247,11 @@ export const otherDeadlines: DeadlineRow[] = [
   ["Leitern und Tritte", "Sichtprüfung durch befähigte Person", "nach Gefährdungsbeurteilung, üblich 1 Jahr", "DGUV Information 208-016"],
   ["Blitzschutzsysteme", "Umfassende Prüfung", "2 Jahre (Schutzklasse I/II) bzw. 4 Jahre (III/IV)", "DIN EN 62305-3 Beiblatt 3"],
   ["Fettabscheider", "Generalinspektion / Wartung", "5 Jahre / 1 Jahr", "DIN 4040-100, DIN EN 1825-2"],
-  ["Großanlagen zur Trinkwassererwärmung", "Untersuchung auf Legionellen", "1 Jahr (öffentlich) bzw. 3 Jahre (gewerblich)", "§ 31 TrinkwV"],
+];
+
+/** Trinkwasser hat keine eigene Prüfbereichsseite, aber eine eigene Gruppe in der Prüffristen-Übersicht */
+export const drinkingWaterDeadlines: DeadlineRow[] = [
+  ["Großanlagen zur Trinkwassererwärmung bei gewerblicher, nicht öffentlicher Tätigkeit – etwa vermietete Wohnungen", "Untersuchung auf Legionellen", "mindestens alle 3 Jahre", "§ 31 TrinkwV"],
+  ["Großanlagen zur Trinkwassererwärmung bei öffentlicher Tätigkeit – etwa Schulen, Kitas", "Untersuchung auf Legionellen", "mindestens jährlich", "§ 31 TrinkwV"],
+  ["Neue Großanlagen zur Trinkwassererwärmung", "Erstuntersuchung auf Legionellen", "3 bis 12 Monate nach Inbetriebnahme", "§ 31 TrinkwV"],
 ];

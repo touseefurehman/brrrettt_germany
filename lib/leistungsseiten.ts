@@ -19,7 +19,7 @@ export const leistungsseiten: ServicePage[] = [
     name: "DGUV V3 Prüfung",
     title: "DGUV V3 Prüfung: Fristen, Prüfer, Kosten",
     description:
-      "DGUV V3 Prüfung elektrischer Anlagen und Geräte: wer verpflichtet ist, Richtfristen nach Tabelle 1A–1C, wer prüfen darf, Kosten und Folgen.",
+      "DGUV V3 Prüfung elektrischer Anlagen und Geräte: wer verpflichtet ist, Richtfristen nach Tabelle 1A und 1B, wer prüfen darf, Kosten und Folgen.",
     h1: "DGUV V3 Prüfung: Pflicht, Fristen und Organisation für mehrere Standorte",
     kicker: "LEISTUNG · ELEKTROTECHNIK",
     serviceType: "Koordination der DGUV-V3-Prüfung",
@@ -63,8 +63,8 @@ export const leistungsseiten: ServicePage[] = [
           ["Anlagen in Räumen besonderer Art (DIN VDE 0100 Gruppe 700)", "1 Jahr", "Elektrofachkraft", "DGUV V3, DA zu § 5, Tabelle 1A"],
           ["Ortsveränderliche Betriebsmittel", "6 Monate, auf Baustellen 3 Monate", "Elektrofachkraft; mit geeigneten Messgeräten auch elektrotechnisch unterwiesene Person", "DGUV V3, DA zu § 5, Tabelle 1B"],
           ["… bei Fehlerquote unter 2 %", "höchstens 1 Jahr (Werkstatt, Fertigung, Baustelle) bzw. 2 Jahre (Büro)", "wie oben", "DGUV V3, DA zu § 5, Tabelle 1B"],
-          ["RCD in stationären Anlagen", "Prüftaste alle 6 Monate", "Benutzer", "DGUV V3, DA zu § 5, Tabelle 1C"],
-          ["RCD in nichtstationären Anlagen", "Prüftaste arbeitstäglich", "Benutzer", "DGUV V3, DA zu § 5, Tabelle 1C"],
+          ["RCD in stationären Anlagen", "Prüftaste alle 6 Monate", "Benutzer", "DGUV V3, DA zu § 5, Tabelle 1A"],
+          ["RCD in nichtstationären Anlagen", "Prüftaste arbeitstäglich", "Benutzer", "DGUV V3, DA zu § 5, Tabelle 1A"],
         ],
       },
       {
@@ -123,7 +123,7 @@ export const leistungsseiten: ServicePage[] = [
       ],
     ],
     sources: [
-      ["DGUV V3", "§ 5 Abs. 1, 2 und 4, § 9; Durchführungsanweisungen zu § 5, Tabellen 1A, 1B, 1C"],
+      ["DGUV V3", "§ 5 Abs. 1, 2 und 4, § 9; Durchführungsanweisungen zu § 5, Tabellen 1A und 1B"],
       ["DGUV V4", "§ 5 (inhaltsgleich zu DGUV Vorschrift 3)"],
       ["BetrSichV", "§ 2 Abs. 6, § 3 Abs. 6, § 14 Abs. 7"],
       ["TRBS 1203", "Anforderungen an zur Prüfung befähigte Personen, elektrische Gefährdungen"],

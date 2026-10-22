@@ -90,8 +90,8 @@ export const areas: Area[] = [
       ["Elektrische Anlagen und ortsfeste Betriebsmittel", "Wiederholungsprüfung", "4 Jahre", "DGUV Vorschrift 3, Tabelle 1A"],
       ["Elektrische Anlagen in Räumen besonderer Art (DIN VDE 0100 Gruppe 700)", "Wiederholungsprüfung", "1 Jahr", "DGUV Vorschrift 3, Tabelle 1A"],
       ["Ortsveränderliche Betriebsmittel", "Wiederholungsprüfung", "Richtwert 6 Monate, auf Baustellen 3 Monate; bei Fehlerquote unter 2 % bis 1 Jahr (Werkstatt) bzw. 2 Jahre (Büro)", "DGUV Vorschrift 3, Tabelle 1B"],
-      ["Fehlerstrom-Schutzeinrichtungen in stationären Anlagen", "Betätigen der Prüftaste durch den Benutzer", "6 Monate", "DGUV Vorschrift 3, Tabelle 1C"],
-      ["Fehlerstrom-Schutzeinrichtungen in nichtstationären Anlagen", "Betätigen der Prüftaste durch den Benutzer", "arbeitstäglich", "DGUV Vorschrift 3, Tabelle 1C"],
+      ["Fehlerstrom-Schutzeinrichtungen in stationären Anlagen", "Betätigen der Prüftaste durch den Benutzer", "6 Monate", "DGUV Vorschrift 3, Tabelle 1A"],
+      ["Fehlerstrom-Schutzeinrichtungen in nichtstationären Anlagen", "Betätigen der Prüftaste durch den Benutzer", "arbeitstäglich", "DGUV Vorschrift 3, Tabelle 1A"],
     ],
     tasks: [
       "Bestand an Anlagen und Betriebsmitteln erfassen und Prüffristen begründet festlegen",

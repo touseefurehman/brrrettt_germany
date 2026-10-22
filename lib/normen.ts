@@ -140,7 +140,7 @@ export const norms: Record<NormKey, Norm> = {
   },
   "PrüfVO": {
     name: "Prüfverordnungen der Länder",
-    title: "z. B. BetrVO Berlin, PVO Hamburg, SPrüfV Bayern, PrüfVO NRW",
+    title: "z. B. PVO Hamburg, SPrüfV Bayern, PrüfVO NRW",
     version: "jeweilige Landesfassung",
   },
   "DIN EN 1176": {

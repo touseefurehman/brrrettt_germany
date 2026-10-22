@@ -54,7 +54,7 @@ export type ServicePage = ContentPage & {
 };
 
 export type Article = ContentPage & {
-  cluster: "Grundlagen" | "Organisation" | "Elektro" | "Trinkwasser & Lüftung" | "Brandschutz & Lager" | "Branchen";
+  cluster: "Grundlagen" | "Organisation" | "Elektro" | "Arbeitsmittel & Brandschutz" | "Trinkwasser & Lüftung" | "Branchen";
   teaser: string;
   /** Prüfbereichsseiten, auf denen der Artikel verlinkt wird */
   areas?: AreaSlug[];

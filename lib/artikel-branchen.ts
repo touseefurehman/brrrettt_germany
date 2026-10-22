@@ -86,6 +86,53 @@ export const branchenArticles: Article[] = [
         type: "p",
         text: "Wie wir diese Pflichten für ganze Bestände organisieren, beschreibt die Seite [Betreiberpflichten für Wohnungsunternehmen](/betreiberpflichten/wohnungsunternehmen).",
       },
+      { type: "h2", text: "Prüfpflichten nach Rolle im Unternehmen", id: "rollen" },
+      {
+        type: "table",
+        caption: "Wer im Wohnungsunternehmen typischerweise wofür zuständig ist (Beispiel)",
+        head: ["Pflicht", "Typisch zuständig", "Unterstützt durch"],
+        rows: [
+          ["Legionellenuntersuchung", "Technisches Bestandsmanagement", "Untersuchungsstelle, Installateur"],
+          ["Aufzugsprüfung", "Technisches Bestandsmanagement", "ZÜS, Wartungsunternehmen"],
+          ["Rauchwarnmelder", "Bestandsmanagement bzw. Messdienstleister", "Mieter je nach Landesrecht"],
+          ["Spielplatzinspektion", "Hausmeisterdienst", "externer Spielplatzprüfer für die Hauptinspektion"],
+          ["Verkehrssicherung, Winterdienst", "Hausmeisterdienst", "Dienstleister"],
+          ["Elektro- und UVV-Prüfung eigener Arbeitsmittel", "Arbeitsschutz bzw. Regiebetrieb", "Prüfdienste"],
+        ],
+      },
+      {
+        type: "p",
+        text: "Die Aufteilung ist von Unternehmen zu Unternehmen verschieden. Entscheidend ist, dass sie schriftlich feststeht und eine Stelle den Gesamtüberblick hat. In vielen Wohnungsunternehmen kennt das Bestandsmanagement die Gebäude, der Hausmeisterdienst die Außenanlagen und der Arbeitsschutz die Werkstätten – aber niemand alle Fristen zusammen.",
+      },
+      { type: "h2", text: "Häufige Lücken nach Gebäudeart", id: "luecken" },
+      {
+        type: "checklist",
+        items: [
+          "Mehrfamilienhaus mit zentraler Warmwasserbereitung: Leitungsinhalt nie ermittelt, Legionellenpflicht unklar",
+          "Wohnanlage mit Tiefgarage: Einordnung als Mittel- oder Großgarage fehlt, Prüfung von CO-Warnanlage und Lüftung nicht beauftragt",
+          "Quartier mit Spielplatz: operative Inspektionen finden statt, sind aber nicht dokumentiert",
+          "Seniorenwohnen mit Aufzug und Gemeinschaftsräumen: Brandschutzanforderungen nicht geprüft",
+          "Gebäude mit Gewerbeeinheit: Fettabscheider oder Lüftung des Mieters nicht erfasst",
+        ],
+      },
+      { type: "h2", text: "Vom Kataster zum Jahresplan", id: "jahresplan" },
+      {
+        type: "p",
+        text: "Wenn alle Pflichten je Gebäude erfasst sind, lässt sich daraus ein Jahresplan ableiten: welche Prüfungen in welchem Monat, in welchem Quartier, durch welchen Dienstleister. Bündelung spart Anfahrten und Mieterankündigungen – etwa Rauchwarnmelder-Wartung und Legionellenprobennahme in denselben Wochen, wenn ohnehin Termine in den Wohnungen nötig sind. Der Plan zeigt auch, welche Leistungen sich gemeinsam ausschreiben lassen. Für Vorstand und Aufsichtsrat ist ein Statusbericht auf Basis dieses Plans der Nachweis, dass die Betreiberpflichten organisiert sind.",
+      },
+      { type: "h2", text: "Kommunikation mit den Mietern", id: "mieter" },
+      {
+        type: "p",
+        text: "Viele Prüfungen im Wohnungsbestand brauchen Zugang zu Wohnungen: Rauchwarnmelder-Wartung, Probennahme für die Legionellenuntersuchung, gelegentlich Elektroprüfungen in Allgemeinräumen, die nur über Mieterkeller erreichbar sind. Rechtzeitige Ankündigungen, feste Terminfenster und ein Ersatztermin senken die Zahl der verpassten Zugänge. Wer mehrere Prüfungen in derselben Woche bündelt, muss die Mieter nur einmal ansprechen. Für Mieter, die Prüfungen nicht ermöglichen, sollte ein Vorgehen feststehen, das dokumentiert, dass der Vermieter seine Pflicht ernst genommen hat. Die Ergebnisse von Prüfungen, die Mieter betreffen – etwa ein Legionellenbefund –, werden nach den Vorgaben des jeweiligen Rechts mitgeteilt; für Trinkwasser regelt das § 52 Abs. 3 TrinkwV.",
+      },
+      {
+        type: "p",
+        text: "Für Genossenschaften und kommunale Wohnungsgesellschaften kommt ein weiterer Aspekt hinzu: Aufsichtsrat und Prüfungsverband fragen zunehmend nach der Organisation der Betreiberpflichten. Ein vollständiges Kataster, ein Jahresplan und ein regelmäßiger Statusbericht beantworten diese Fragen ohne zusätzlichen Aufwand und zeigen, dass der Vorstand seine Organisationspflicht wahrnimmt.",
+      },
+      {
+        type: "p",
+        text: "Für kleinere Bestandshalter ohne eigene Technikabteilung ist ein externer Betreibermanager eine Möglichkeit, Kataster, Jahresplan und Statusbericht aufzubauen und laufend zu pflegen. Die Entscheidungen über Maßnahmen und Budgets bleiben beim Unternehmen; der Dienstleister sorgt dafür, dass keine Frist übersehen wird und alle Nachweise an einer Stelle liegen. Mehr dazu auf der Seite [Externer Betreibermanager](/externer-betreibermanager). Für Bestände mit Aufzügen, zentraler Warmwasserbereitung und Tiefgaragen ist der Aufwand der Koordination meist größer als der der einzelnen Prüfungen – genau dort setzt eine solche Unterstützung an. Der Einstieg ist eine Bestandsaufnahme für einen Teil des Bestands.",
+      },
     ],
     faqs: [
       [
@@ -104,6 +151,10 @@ export const branchenArticles: Article[] = [
         "Wer ist für Rauchwarnmelder in Mietwohnungen zuständig?",
         "Das regelt die jeweilige Landesbauordnung. Der Einbau obliegt in allen Ländern dem Eigentümer; die Sicherstellung der Betriebsbereitschaft liegt je nach Land beim Eigentümer oder bei den unmittelbaren Besitzern, also den Mietern.",
       ],
+      [
+        "Wie behält ein Wohnungsunternehmen den Überblick über alle Prüfpflichten?",
+        "Mit einem Kataster je Gebäude oder Wirtschaftseinheit, das alle Pflichten mit Rechtsgrundlage, Frist und Zuständigkeit enthält, und einem daraus abgeleiteten Jahresplan mit regelmäßigem Statusbericht an die Leitung.",
+      ],
     ],
     sources: [
     ["TrinkwV", "§ 31, § 51"],
@@ -112,7 +163,7 @@ export const branchenArticles: Article[] = [
     ["DIN EN 1176", "Inspektion und Wartung"],
     ["BGB", "§§ 823, 831, 836"],
     ["PrüfVO", "wiederkehrende Prüfungen sicherheitstechnischer Anlagen"],
-    ["DGUV V3", "§ 5 mit Durchführungsanweisungen, Tabellen 1A–1C"],
+    ["DGUV V3", "§ 5 mit Durchführungsanweisungen, Tabellen 1A und 1B"],
   ],
     related: [
       ["Betreiberpflichten Wohnungsunternehmen", "/betreiberpflichten/wohnungsunternehmen", "Bestände organisieren lassen"],
@@ -194,6 +245,62 @@ export const branchenArticles: Article[] = [
         type: "p",
         text: "Wie Kommunen die Betreiberpflichten aller Liegenschaften bündeln, beschreibt die Seite [Betreiberpflichten für Kommunen](/betreiberpflichten/kommunen).",
       },
+      { type: "h2", text: "Ferienzeiten nutzen", id: "ferien" },
+      {
+        type: "p",
+        text: "Schulen haben einen Vorteil, den kaum ein anderes Gebäude bietet: planbare Zeiten ohne Unterricht. Prüfungen, die den Betrieb stören, gehören in die Ferien – Elektroprüfungen in Klassen- und Fachräumen, Prüfungen der Sicherheitsbeleuchtung, Inspektion von Sportgeräten. Für Legionellenprobennahmen in Sporthallen sind die Wochen nach den Ferien heikel, weil das Wasser lange stand; sinnvoll ist dort ein Spülplan für die Ferienzeit, damit die Anlage bei Unterrichtsbeginn ordnungsgemäß betrieben wird. Ein Ferienkalender je Schulträger, in dem alle Prüfungen eingetragen sind, verhindert, dass sich Dienstleister gegenseitig im Weg stehen oder eine Prüfung mangels Zugang ausfällt.",
+      },
+      {
+        type: "table",
+        caption: "Beispiel eines Ferienplans für einen Schulträger",
+        head: ["Ferien", "Prüfungen"],
+        rows: [
+          ["Osterferien", "Sportgeräte, Spielgeräte Schulhof, Laborabzüge"],
+          ["Sommerferien", "Elektroprüfung ortsfeste Anlagen und Geräte, Sicherheitsbeleuchtung, RLT-Hygieneinspektion"],
+          ["Herbstferien", "Feuerlöscher, Feststellanlagen, Nachprüfungen aus dem Sommer"],
+          ["Laufend", "Legionellenuntersuchung nach Plan, Spülungen in Ferienzeiten"],
+        ],
+      },
+      { type: "h2", text: "Vergabe von Prüfleistungen", id: "vergabe" },
+      {
+        type: "p",
+        text: "Schulträger vergeben Prüfleistungen nach Vergaberecht. Eine Ausschreibung in Losen nach Gewerk oder Region, mit einheitlicher Anlagenliste je Schule, macht Angebote vergleichbar. Wichtig ist, die Qualifikation der Prüfer und das Protokollformat in die Leistungsbeschreibung aufzunehmen. Für kleinere Schulträger kann eine gemeinsame Ausschreibung mit Nachbarkommunen sinnvoll sein. Grundlage jeder Ausschreibung ist eine vollständige Erfassung der Anlagen je Schule.",
+      },
+      { type: "h2", text: "Typischer Jahresablauf für einen Schulträger", id: "jahresablauf" },
+      {
+        type: "steps",
+        items: [
+          "**Januar:** Prüfplan des Jahres aus dem Kataster ableiten, Leistungen ausschreiben oder abrufen.",
+          "**Osterferien:** Sport- und Spielgeräte, Fachräume, Nachprüfungen aus dem Vorjahr.",
+          "**Sommerferien:** Elektroprüfung, Sicherheitsbeleuchtung, RLT-Inspektionen, größere Mängelbeseitigung.",
+          "**Herbstferien:** Feuerlöscher, Feststellanlagen, Tore.",
+          "**Dezember:** Statusbericht an die Verwaltungsleitung mit erledigten, offenen und überfälligen Prüfungen.",
+        ],
+      },
+      {
+        type: "p",
+        text: "Ein solcher Ablauf entlastet Hausmeister und Schulleitungen, weil Termine vorhersehbar werden. Er schafft außerdem eine feste Grundlage für die Haushaltsplanung: Die Kosten der Prüfungen und der typischen Mängelbeseitigung sind im Voraus bekannt und können im Haushalt des Schulträgers eingeplant werden.",
+      },
+      { type: "h2", text: "Häufige Fehler", id: "fehler" },
+      {
+        type: "checklist",
+        items: [
+          "Prüfungen je Schule einzeln beauftragt, ohne gemeinsamen Plan",
+          "Fachräume und Schulküchen nicht in die Elektroprüfung einbezogen",
+          "Sporthallenduschen bei der Legionellenuntersuchung übersehen",
+          "Mängel aus der Brandverhütungsschau ohne Verantwortlichen und Frist",
+          "Containerklassen und Interimsbauten nicht im Kataster",
+        ],
+      },
+      {
+        type: "p",
+        text: "Interimsbauten verdienen besondere Aufmerksamkeit: Während Sanierungen werden Klassen oft für Jahre in Containeranlagen ausgelagert. Diese haben eigene Elektroinstallationen, Sicherheitsbeleuchtung und Feuerlöscher, die in keiner Liste stehen, wenn sie nicht ausdrücklich erfasst werden.",
+      },
+      { type: "h2", text: "Schulen als Teil des kommunalen Gebäudebestands", id: "kommune" },
+      {
+        type: "p",
+        text: "Schulen sind für die meisten Kommunen die größte Gruppe öffentlicher Gebäude. Es lohnt sich deshalb, die Organisation der Betreiberpflichten an den Schulen zu beginnen und das Ergebnis auf Kitas, Verwaltungsgebäude, Sporthallen und Bauhöfe zu übertragen. Ein Kataster mit einheitlicher Struktur, ein gemeinsamer Fristenplan und Rahmenverträge für Prüfleistungen schaffen Übersicht für alle Liegenschaften. Die Verantwortung bleibt bei der Kommune als Schulträger; Gebäudemanagement, Schulverwaltung und Hausmeister erhalten klar beschriebene Aufgaben. Wie das für alle Liegenschaften einer Kommune aussieht, beschreibt die Seite [Betreiberpflichten Kommunen](/betreiberpflichten/kommunen). Für kleinere Kommunen ohne eigenes Gebäudemanagement kann die Zusammenarbeit mit Nachbarkommunen oder einem externen Betreibermanager sinnvoll sein. Entscheidend ist in jedem Fall, dass eine Stelle den Gesamtüberblick über alle Schulgebäude hat, Fristen überwacht und der Verwaltungsleitung regelmäßig berichtet, welche Prüfungen erledigt, offen oder überfällig sind. Der Bericht ist zugleich der Nachweis, dass die Kommune ihrer Organisationspflicht nachkommt. Er sollte schriftlich erfolgen, von der Verwaltungsleitung zur Kenntnis genommen und mit Entscheidungen zu offenen Mängeln und Budgets verbunden werden. So wird aus einer Liste eine Steuerung, und Mängel aus Begehungen bleiben nicht über Jahre offen, weil niemand über ihre Behebung entscheidet. Für die Haushaltsberatung liefert der Bericht zudem belastbare Zahlen zum Sanierungsbedarf der Schulgebäude.",
+      },
     ],
     faqs: [
       [
@@ -212,10 +319,14 @@ export const branchenArticles: Article[] = [
         "Sind Schulen Sonderbauten?",
         "In den meisten Ländern ja, entweder ausdrücklich nach Landesbauordnung oder über Schulbaurichtlinien. Dann gelten die Prüfverordnungen des Landes für sicherheitstechnische Anlagen wie Sicherheitsbeleuchtung, Brandmelde- und Alarmierungsanlagen.",
       ],
+      [
+        "Wann sollten Prüfungen in Schulen stattfinden?",
+        "Prüfungen, die den Unterricht stören, gehören in die Ferien. Ein Ferienkalender je Schulträger, in dem alle Prüfungen eingetragen sind, verhindert Terminkonflikte und verpasste Zugänge.",
+      ],
     ],
     sources: [
     ["PrüfVO", "wiederkehrende Prüfungen sicherheitstechnischer Anlagen"],
-    ["DGUV V3", "§ 5 mit Durchführungsanweisungen, Tabellen 1A–1C"],
+    ["DGUV V3", "§ 5 mit Durchführungsanweisungen, Tabellen 1A und 1B"],
     ["TrinkwV", "§ 31, § 51"],
     ["BetrSichV", "§ 3 Abs. 6, § 14, Anhang 2"],
     ["DIN EN 1176", "Inspektion und Wartung"],
@@ -224,7 +335,7 @@ export const branchenArticles: Article[] = [
     related: [
       ["Betreiberpflichten Kommunen", "/betreiberpflichten/kommunen", "Alle Liegenschaften organisieren"],
       ["Brandschutzprüfung", "/pruefbereiche/brandschutz", "BMA, Sicherheitsbeleuchtung, RWA"],
-      ["DGUV-V3-Prüffristen organisieren", "/wissen/dguv-v3-prueffristen-organisieren", "Fristen und Geräteerfassung"],
+      ["DGUV V3 Prüfung: wie oft", "/wissen/dguv-v3-pruefung-wie-oft", "Fristen und Geräteerfassung"],
     ],
     cta: "Prüfpflichten Ihrer Schulen bündeln.",
   },
@@ -236,7 +347,7 @@ export const branchenArticles: Article[] = [
     areas: ["lueftung-klima"],
     title: "Betreiberpflichten Pflegeheim – Prüfungen & Nachweise",
     description:
-      "Betreiberpflichten für Pflegeheime: Brandschutz im Sonderbau, Pflegebetten und Medizinprodukte, Rufanlagen, Trinkwasser und Hygiene – Pflichten und Fristen.",
+      "Betreiberpflichten für Pflegeheime: Brandschutz im Sonderbau, Pflegebetten, Medizinprodukte, Rufanlagen, Trinkwasser und Hygiene – Pflichten und Fristen.",
     h1: "Betreiberpflichten für Pflegeheime: Prüfungen, Fristen und Nachweise",
     kicker: "PFLEGE",
     teaser: "Brandschutz, Pflegebetten, Rufanlagen und Trinkwasser – was Pflegeeinrichtungen nachweisen müssen.",
@@ -308,6 +419,51 @@ export const branchenArticles: Article[] = [
         type: "p",
         text: "Für Kliniken mit höherer Anlagendichte siehe [Betreiberverantwortung im Krankenhaus](/betreiberpflichten/krankenhaeuser).",
       },
+      { type: "h2", text: "Prüfungen im laufenden Betrieb", id: "betrieb" },
+      {
+        type: "p",
+        text: "Anders als Schulen haben Pflegeheime keine Ferien. Prüfungen finden im Wohnbereich der Bewohner statt, oft in Zimmern, in denen Menschen schlafen oder gepflegt werden. Das erfordert Abstimmung mit der Pflegedienstleitung: feste Zeitfenster, Rücksicht auf Pflege- und Essenszeiten, Ankündigung bei Bewohnern und Angehörigen. Elektroprüfungen an Pflegebetten lassen sich mit dem Bettentausch bei Bewohnerwechsel oder mit der Reinigung koppeln. Bei Brandmeldeanlagen ist zu klären, wie Probealarme ablaufen, ohne Bewohner zu beunruhigen. Ein Jahresplan mit allen Prüfterminen, abgestimmt mit Hausleitung und Pflegedienstleitung, verhindert, dass Prüfungen an Personalengpässen oder Belegungsspitzen scheitern.",
+      },
+      {
+        type: "table",
+        caption: "Beispiel einer Abstimmung zwischen Technik und Pflege",
+        head: ["Prüfung", "Zeitfenster", "Abstimmung mit"],
+        rows: [
+          ["Elektroprüfung Pflegebetten", "beim Bewohnerwechsel bzw. vormittags nach der Grundpflege", "Wohnbereichsleitung"],
+          ["Brandmeldeanlage, Probealarm", "angekündigt, außerhalb der Ruhezeiten", "Hausleitung, Bewohner, Angehörige"],
+          ["Legionellenprobennahme", "vormittags, Zugang zu Bewohnerbädern", "Wohnbereichsleitung"],
+          ["Rufanlage", "zimmerweise, kurzfristig", "Pflegefachkräfte"],
+        ],
+      },
+      { type: "h2", text: "Mehrere Einrichtungen eines Trägers", id: "traeger" },
+      {
+        type: "p",
+        text: "Träger mit mehreren Einrichtungen – Wohlfahrtsverbände, kirchliche und kommunale Träger – profitieren von einem gemeinsamen Kataster und einheitlichen Dienstleisterverträgen. Prüffristen werden zentral festgelegt, die Hausleitungen erhalten einen Fristenplan und berichten über Erledigung und Mängel. So kann die Geschäftsführung ihre Kontrollpflicht wahrnehmen, ohne in jedem Haus selbst nachzufragen.",
+      },
+      { type: "h2", text: "Häufige Fehler", id: "fehler" },
+      {
+        type: "checklist",
+        items: [
+          "Pflegebetten nur als Medizinprodukt betrachtet, Elektroprüfung vergessen",
+          "Rufanlage nicht in den Wartungsplan aufgenommen",
+          "Legionellenuntersuchung alle drei Jahre statt jährlich",
+          "Zuständigkeit zwischen Träger und Vermieter für Brandmeldeanlage ungeklärt",
+          "Prüfberichte in der Hausverwaltung, nicht beim Träger",
+        ],
+      },
+      {
+        type: "p",
+        text: "Der dritte Punkt betrifft die Einstufung: Pflegeeinrichtungen gehören zu den Einrichtungen, für die § 31 Abs. 3 TrinkwV eine Verlängerung des jährlichen Untersuchungsintervalls ausschließt. Wer die Untersuchung im Drei-Jahres-Rhythmus organisiert, weil das bei vermieteten Wohngebäuden so üblich ist, verletzt die Untersuchungspflicht. Der vierte Punkt ist bei angemieteten Gebäuden der häufigste Streitpunkt – er sollte vor Mietbeginn schriftlich geregelt sein.",
+      },
+      {
+        type: "p",
+        text: "Für die Heimaufsicht und die Brandverhütungsschau lohnt eine Mappe je Einrichtung, die die aktuellen Nachweise aller sicherheitsrelevanten Prüfungen enthält: Prüfsachverständige, Brandmeldeanlage, Sicherheitsbeleuchtung, Feuerlöscher, Rufanlage, Aufzug, Legionellenbefund und Elektroprüfung. Bei einer Begehung lassen sich Fragen dann ohne Suchaufwand beantworten.",
+      },
+      { type: "h2", text: "Neue Einrichtungen und Umbauten", id: "neubau" },
+      {
+        type: "p",
+        text: "Bei Neubauten und größeren Umbauten von Pflegeeinrichtungen verlangt das Bauordnungsrecht der Länder Prüfungen der sicherheitstechnischen Anlagen durch Prüfsachverständige vor der Nutzungsaufnahme. Mit der Abnahme beginnen die wiederkehrenden Fristen. Wer die Prüfberichte der Abnahme direkt in das Kataster übernimmt und die Folgetermine festlegt, vermeidet die häufige Lücke in den ersten Betriebsjahren, in denen sich niemand für die Prüftermine zuständig fühlt, weil die Gewährleistung noch läuft. Auch Medizinprodukte und Pflegebetten, die mit dem Neubau beschafft werden, gehören von Beginn an in das Bestandsverzeichnis und den Prüfplan. Bei Trägerwechseln oder der Übernahme bestehender Einrichtungen gilt dasselbe wie bei jeder Objektübernahme: Prüfnachweise, Wartungsverträge und offene Mängel vor dem Übergang anfordern, überfällige Prüfungen sofort nachholen und das Kataster in den ersten Wochen vollständig anlegen. Die Heimaufsicht prüft bei der nächsten Begehung nicht, wer die Lücke verursacht hat, sondern ob sie geschlossen ist. Ein dokumentierter Übernahmeprozess zeigt, dass der neue Träger seine Pflichten ab dem ersten Tag ernst nimmt. Das schafft auch gegenüber Bewohnern und Angehörigen Vertrauen in den Wechsel. Und es entlastet die Hausleitung.",
+      },
     ],
     faqs: [
       [
@@ -326,12 +482,16 @@ export const branchenArticles: Article[] = [
         "Ist ein Pflegeheim ein Sonderbau?",
         "Ja. Gebäude mit Nutzungseinheiten zur Pflege oder Betreuung von Personen mit Pflegebedürftigkeit sind nach den Landesbauordnungen Sonderbauten. Das führt zu erhöhten Brandschutzanforderungen und Prüfpflichten nach den Prüfverordnungen der Länder.",
       ],
+      [
+        "Wie lassen sich Prüfungen im Pflegeheim ohne Störung der Bewohner durchführen?",
+        "Mit festen Zeitfenstern, die mit der Pflegedienstleitung abgestimmt sind, Ankündigung bei Bewohnern und Angehörigen und der Kopplung an Abläufe wie Bewohnerwechsel oder Reinigung.",
+      ],
     ],
     sources: [
     ["MPBetreibV", "§§ 7, 12, 15"],
     ["PrüfVO", "wiederkehrende Prüfungen sicherheitstechnischer Anlagen"],
     ["TrinkwV", "§ 31, § 51"],
-    ["DGUV V3", "§ 5 mit Durchführungsanweisungen, Tabellen 1A–1C"],
+    ["DGUV V3", "§ 5 mit Durchführungsanweisungen, Tabellen 1A und 1B"],
     ["BetrSichV", "§ 3 Abs. 6, § 14, Anhang 2"],
     ["VDI 6022", "Hygienekontrollen und Hygieneinspektionen"],
     ["ArbStättV", "§ 4 Abs. 3"],
@@ -427,6 +587,52 @@ export const branchenArticles: Article[] = [
         type: "p",
         text: "Für Verwaltungen mit vielen Objekten übernehmen wir Kataster und Fristenüberwachung als [externer Betreibermanager](/externer-betreibermanager) – die Abstimmung mit Eigentümern bleibt beim Verwalter.",
       },
+      { type: "h2", text: "Pflichtenliste im Verwaltervertrag", id: "vertrag" },
+      {
+        type: "p",
+        text: "Der Verwaltervertrag regelt, welche Aufgaben der Verwalter übernimmt und wofür er haftet. Je klarer die Betreiberpflichten darin beschrieben sind, desto geringer ist das Streitrisiko. Bewährt hat sich eine Anlage zum Vertrag, die für jedes Objekt die prüfpflichtigen Anlagen, die Intervalle und die Aufgabe des Verwalters auflistet – etwa „Beauftragung und Überwachung der Legionellenuntersuchung“ oder „Information der Eigentümer über Prüfergebnisse“. Bei Wohnungseigentum sollten Beschlüsse der Eigentümerversammlung die laufenden Prüfungen und ihr Budget abdecken, damit der Verwalter handeln kann, ohne für jede Prüfung einen eigenen Beschluss herbeizuführen.",
+      },
+      {
+        type: "table",
+        caption: "Beispiel einer Aufgabenzuordnung in der WEG-Verwaltung",
+        head: ["Aufgabe", "Verwalter", "Eigentümergemeinschaft"],
+        rows: [
+          ["Pflichtenliste je Objekt erstellen und aktuell halten", "ja", "zur Kenntnis"],
+          ["Laufende gesetzliche Prüfungen beauftragen", "ja, im Rahmen des Beschlusses", "Beschluss über Budget"],
+          ["Mängelbeseitigung bis zu einer Wertgrenze", "ja", "Beschluss über Wertgrenze"],
+          ["Größere Sanierungen nach Befund", "vorbereiten, Angebote einholen", "Beschluss"],
+          ["Jahresbericht zum Prüfstatus", "ja", "Kenntnisnahme in der Versammlung"],
+        ],
+      },
+      { type: "h2", text: "Viele Objekte, ein System", id: "system" },
+      {
+        type: "p",
+        text: "Hausverwaltungen betreuen oft Dutzende oder Hunderte Objekte mit unterschiedlichen Eigentümern. Ohne einheitliches System entstehen je Objekt eigene Listen, die bei Personalwechsel verloren gehen. Ein zentrales Kataster für alle verwalteten Objekte – mit Anlagen, Fristen, Dienstleistern und Nachweisen – macht die Verwaltung unabhängig von einzelnen Mitarbeitern und erlaubt, Prüfungen über Objekte hinweg zu bündeln. Für die Übergabe an einen neuen Verwalter ist es zugleich die vollständige Dokumentation.",
+      },
+      { type: "h2", text: "Häufige Fehler in der Verwaltung", id: "fehler" },
+      {
+        type: "checklist",
+        items: [
+          "Pflichtenliste existiert nur im Kopf eines Mitarbeiters",
+          "Legionellenuntersuchung beschlossen, aber nie beauftragt",
+          "Prüfberichte beim Wartungsunternehmen, nicht in der Objektakte",
+          "Rauchwarnmelder-Zuständigkeit nicht nach dem jeweiligen Landesrecht geprüft",
+          "Spielplatz und Bäume ohne dokumentierte Kontrollen",
+        ],
+      },
+      {
+        type: "p",
+        text: "Die meisten dieser Fehler haben dieselbe Ursache: Prüfungen werden als Einzelaufträge behandelt statt als wiederkehrende Pflicht mit Frist. Eine Fristenübersicht je Objekt, die bei jeder Objektbesprechung durchgegangen wird, beseitigt die Ursache. Für die Eigentümerversammlung genügt daraus ein kurzer Bericht: welche Prüfungen erfolgt sind, welche Mängel offen sind und welche Beschlüsse für das kommende Jahr nötig werden.",
+      },
+      {
+        type: "p",
+        text: "Bei Mietverwaltungen ist der Eigentümer der Ansprechpartner. Auch hier schützt eine schriftliche Information über anstehende Prüfungen und offene Mängel beide Seiten: Der Eigentümer weiß, wofür er Kosten tragen muss, und der Verwalter kann belegen, dass er auf die Pflicht hingewiesen hat.",
+      },
+      { type: "h2", text: "Übergabe bei Verwalterwechsel", id: "wechsel" },
+      {
+        type: "p",
+        text: "Ein Verwalterwechsel ist der Moment, in dem Prüfnachweise am häufigsten verloren gehen. Der neue Verwalter sollte vom Vorgänger nicht nur Ordner, sondern eine Liste aller prüfpflichtigen Anlagen mit letztem Prüfdatum, nächstem Termin und laufenden Verträgen verlangen. Fehlt sie, ist die Erstellung der Pflichtenliste die erste Aufgabe nach der Übernahme – noch vor der ersten Eigentümerversammlung, damit dort notwendige Beschlüsse gefasst werden können. Überfällige sicherheitsrelevante Prüfungen, etwa an Aufzügen, sollte der Verwalter als dringende Maßnahme sofort veranlassen und die Eigentümer darüber informieren. Die Information sollte schriftlich erfolgen und festhalten, welche Prüfungen fehlten, was veranlasst wurde und welche Kosten entstehen. So ist für alle Beteiligten nachvollziehbar, ab wann der neue Verwalter Verantwortung für die Organisation übernommen hat. Diese Klarheit schützt auch den Verwalter: Lücken aus der Zeit vor der Übernahme sind dokumentiert und nicht ihm anzulasten, solange er nach der Übernahme unverzüglich gehandelt hat. Legen Sie die Information deshalb zur Objektakte und nehmen Sie sie in das Protokoll der nächsten Eigentümerversammlung auf. So ist der Stand für alle Eigentümer dauerhaft nachvollziehbar.",
+      },
     ],
     faqs: [
       [
@@ -444,6 +650,10 @@ export const branchenArticles: Article[] = [
       [
         "Welche Prüfungen fallen in einer WEG an?",
         "Je nach Ausstattung Legionellenuntersuchung, Aufzugsprüfung, Rauchwarnmelder-Wartung, Spielplatzinspektion, Prüfungen in Tiefgaragen, Baumkontrolle, Feuerstättenschau sowie die laufende Verkehrssicherung von Wegen und Treppenhäusern.",
+      ],
+      [
+        "Sollten Betreiberpflichten im Verwaltervertrag geregelt sein?",
+        "Ja. Eine Anlage mit den prüfpflichtigen Anlagen je Objekt und den Aufgaben des Verwalters schafft Klarheit über Zuständigkeit und Haftung und erleichtert die Übergabe bei einem Verwalterwechsel.",
       ],
     ],
     sources: [

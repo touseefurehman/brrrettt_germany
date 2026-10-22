@@ -137,6 +137,9 @@ export const leistungsseiten: ServicePage[] = [
       ["DIN EN 50678", "Prüfung nach Instandsetzung"],
     ],
     related: [
+      ["DGUV V3 Prüfung: wie oft", "/wissen/dguv-v3-pruefung-wie-oft", "Fristen und Fehlerquote"],
+      ["Ortsveränderliche Geräte", "/wissen/dguv-v3-ortsveraenderliche-geraete", "Abgrenzung und Prüfung"],
+      ["DGUV V3 Prüfung selber machen", "/wissen/dguv-v3-pruefung-selber-machen", "Eigenprüfung"],
       ["DGUV V3 Prüfung Kosten", "/dguv-v3-pruefung-kosten", "Preisspannen und Rechenbeispiel"],
       ["Prüffristen im Überblick", "/prueffristen", "Alle Prüfbereiche"],
       ["UVV-Prüfung", "/uvv-pruefung", "Fahrzeuge, Stapler, Krane, Tore"],
@@ -252,6 +255,8 @@ export const leistungsseiten: ServicePage[] = [
       ["OWiG", "§ 130"],
     ],
     related: [
+      ["UVV-Prüfung Fahrzeuge", "/wissen/uvv-pruefung-fahrzeuge", "Fuhrpark nach DGUV V70"],
+      ["UVV-Prüfung Stapler", "/wissen/uvv-pruefung-stapler", "Flurförderzeuge nach DGUV V68"],
       ["DGUV V3 Prüfung", "/dguv-v3-pruefung", "Elektrische Anlagen und Geräte"],
       ["Regalprüfung", "/regalpruefung", "Lagereinrichtungen nach DIN EN 15635"],
       ["Prüffristen im Überblick", "/prueffristen", "Alle Prüfbereiche"],
@@ -378,6 +383,9 @@ export const leistungsseiten: ServicePage[] = [
       ["UBA Legionellen", "Risikoabschätzung nach § 51 Abs. 1 Nr. 3 TrinkwV"],
     ],
     related: [
+      ["Legionellenprüfung für Vermieter", "/wissen/legionellenpruefung-vermieter", "Pflicht und Ablauf"],
+      ["Legionellenprüfung Kosten", "/wissen/legionellenpruefung-kosten", "Preise mit Quellen"],
+      ["Legionellen-Maßnahmenwert", "/wissen/legionellen-massnahmenwert", "Pflichten bei Befund"],
       ["Betreiberpflichten Wohnungsunternehmen", "/betreiberpflichten/wohnungsunternehmen", "Trinkwasser im Bestand"],
       ["Prüffristen Trinkwasser", "/prueffristen#trinkwasser", "Übersicht"],
       ["Betreiberverantwortung Krankenhäuser", "/betreiberpflichten/krankenhaeuser", "Jährliche Untersuchung"],
@@ -489,6 +497,8 @@ export const leistungsseiten: ServicePage[] = [
       ["BetrSichV", "§ 3 Abs. 6 (Gefährdungsbeurteilung)"],
     ],
     related: [
+      ["VDI 6022 Hygieneinspektion", "/wissen/vdi-6022-hygieneinspektion", "Ablauf und Bericht"],
+      ["VDI 6022 Kategorien", "/wissen/vdi-6022-kategorien", "Qualifikation der Prüfer"],
       ["Betreiberverantwortung Krankenhäuser", "/betreiberpflichten/krankenhaeuser", "RLT im Gesundheitswesen"],
       ["Legionellenprüfung", "/legionellenpruefung", "Trinkwasserhygiene"],
       ["Prüffristen im Überblick", "/prueffristen", "Alle Prüfbereiche"],
@@ -607,6 +617,8 @@ export const leistungsseiten: ServicePage[] = [
       ["BetrSichV", "§ 3 Abs. 6; Anhang 2 Abschnitt 4 (Druckgeräte)"],
     ],
     related: [
+      ["Feuerlöscher-Prüfung: wie oft", "/wissen/feuerloescher-pruefung-wie-oft", "Fristen"],
+      ["Feuerlöscher-Prüfung Kosten", "/wissen/feuerloescher-pruefung-kosten", "Preise mit Quellen"],
       ["Brandschutzprüfung", "/pruefbereiche/brandschutz", "BMA, Sicherheitsbeleuchtung, RWA"],
       ["Prüffristen im Überblick", "/prueffristen", "Alle Prüfbereiche"],
       ["Betreiberpflichten Kommunen", "/betreiberpflichten/kommunen", "Schulen und Kitas"],
@@ -726,6 +738,7 @@ export const leistungsseiten: ServicePage[] = [
       ["DGUV I 208-061", "Lagereinrichtungen und -geräte"],
     ],
     related: [
+      ["Regalprüfung: wie oft", "/wissen/regalpruefung-wie-oft", "Inspektion und Sichtkontrollen"],
       ["UVV-Prüfung", "/uvv-pruefung", "Stapler und weitere Arbeitsmittel"],
       ["Prüffristen im Überblick", "/prueffristen#weitere-anlagen", "Weitere Anlagen"],
       ["Betreiberpflichten Wohnungsunternehmen", "/betreiberpflichten/wohnungsunternehmen", "Regiebetriebe"],
@@ -984,6 +997,7 @@ export const leistungsseiten: ServicePage[] = [
       ["PrüfVO", "wiederkehrende Prüfungen in Sonderbauten"],
     ],
     related: [
+      ["Prüffristen festlegen", "/wissen/prueffristen-festlegen", "Gefährdungsbeurteilung"],
       ["Betreiberverantwortung", "/betreiberverantwortung", "Definition und Haftung"],
       ["Prüffristen im Überblick", "/prueffristen", "Alle Prüfbereiche"],
       ["Externer Betreibermanager", "/externer-betreibermanager", "Organisation auslagern"],

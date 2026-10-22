@@ -23,6 +23,7 @@ const nextConfig: NextConfig = {
       { source: "/pruefbereiche/dguv-v3-pruefung/kosten", destination: "/dguv-v3-pruefung-kosten", statusCode: 301 },
       { source: "/pruefbereiche/lueftung-klima", destination: "/vdi-6022", statusCode: 301 },
       { source: "/wissen/was-ist-betreiberverantwortung", destination: "/betreiberverantwortung", statusCode: 301 },
+      { source: "/wissen/dguv-v3-prueffristen-organisieren", destination: "/wissen/dguv-v3-pruefung-wie-oft", statusCode: 301 },
     ];
   },
   // Keine Host-Weiterleitung hier: betreibermanager.de → www.betreibermanager.de übernimmt Vercel

@@ -5,6 +5,7 @@ import JsonLd, { serviceSchema } from "@/components/JsonLd";
 import { CtaBand, DeadlineTable, PageIntro } from "@/components/Subpage";
 import { Check } from "@/components/icons";
 import { areaBySlug, areas } from "@/lib/content";
+import { articlesForArea } from "@/lib/wissen";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -31,6 +32,7 @@ export default async function AreaPage({ params }: Props) {
   if (!area) notFound();
   const path = `/pruefbereiche/${area.slug}`;
   const others = areas.filter((a) => a.slug !== area.slug);
+  const related = articlesForArea(area.slug);
 
   return (
     <>
@@ -79,6 +81,21 @@ export default async function AreaPage({ params }: Props) {
           </Link>
         )}
       </section>
+
+      {related.length > 0 && (
+        <section className="section page-width section-tight">
+          <h2>Fachartikel zum Thema</h2>
+          <div className="link-cards three">
+            {related.map((a) => (
+              <Link key={a.slug} href={`/wissen/${a.slug}`}>
+                <strong>{a.h1}</strong>
+                <p>{a.teaser}</p>
+                <span>Artikel lesen</span>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
 
       <section className="section page-width section-tight">
         <h2>Weitere Prüfbereiche</h2>

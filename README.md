@@ -9,6 +9,14 @@ Next.js 15 (App Router), gehostet auf Vercel.
 - **`app/datenschutz/page.tsx`** – markierte Stellen (Log-Speicherdauer, Rechtsgrundlage USA-Übermittlung, Versanddienst, Aufsichtsbehörde). Impressum und Datenschutz anwaltlich prüfen lassen.
 - **`components/LandingPage.tsx`** – optional `duration` je Ablaufschritt.
 
+## Inhalte (SEO/GEO)
+
+- **Landingpages** – `lib/leistungen.ts`: `/externer-betreibermanager` und `/betreiberpflichten/<slug>` (Wohnungsunternehmen, Kommunen, Krankenhäuser). Jede Seite hat ein eigenes Anfrageformular; die Herkunftsseite steht in der Anfrage-E-Mail (Feld „Seite“).
+- **Wissen** – `lib/artikel-grundlagen.ts`, `lib/artikel-branchen.ts`, registriert in `lib/wissen.ts`. Übersicht `/wissen`, Artikel `/wissen/<slug>`. Sitemap, Übersicht und Prüfbereichsseiten (Feld `areas`) übernehmen neue Artikel automatisch.
+- **Bausteine** – `lib/pages.ts`: Definition, Tabelle, Checkliste, Schritte, Praxisbeispiel, Hinweis. Fließtext kennt `**fett**` und `[Text](/pfad)`. Regelwerke zentral in `lib/normen.ts`.
+- Jede neue Seite bekommt FAQ (inkl. FAQPage-Schema), Breadcrumb-Schema, Canonical und Regelwerksverweise; Artikel zusätzlich Article-Schema mit Datum (`modified` bei Änderungen pflegen).
+- Kostenmodell auf `/externer-betreibermanager` ohne Zahlen – siehe TODO in `lib/leistungen.ts`. Praxisbeispiele sind als veranschaulichende Beispiele gekennzeichnet; durch echte Referenzen ersetzen, sobald freigegeben.
+
 ## Umgebungsvariablen (Kontaktformular)
 
 Versand über die Resend-API (`app/api/kontakt/route.ts`):

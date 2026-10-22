@@ -1,6 +1,7 @@
 import type { ComponentType, ReactNode } from "react";
+import Image from "next/image";
 import Link from "next/link";
-import { preload } from "react-dom";
+import heroImage from "@/public/assets/industrial-building.jpg";
 import {
   ArrowRight,
   ArrowUpDown,
@@ -27,6 +28,7 @@ import FaqList from "./FaqList";
 import JsonLd, { faqSchema } from "./JsonLd";
 import { btnHero } from "./ui";
 import { areas, faqs, type AreaSlug } from "@/lib/content";
+import { audiences, externerBetreibermanager } from "@/lib/leistungen";
 import { hasPhone, isSet, phoneLink, site } from "@/lib/site";
 
 type IconType = ComponentType<{ size?: number; strokeWidth?: number }>;
@@ -94,21 +96,18 @@ function SectionLabel({ number, children }: { number: string; children: ReactNod
 }
 
 export default function LandingPage() {
-  preload("/assets/industrial-building.jpg", { as: "image", fetchPriority: "high" });
-
   return (
     <>
       <JsonLd data={faqSchema(faqs)} />
 
       <section className="hero">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+        {/* next/image liefert AVIF/WebP in passender Breite aus und preloadt das LCP-Bild (priority) */}
+        <Image
           className="hero-image"
-          src="/assets/industrial-building.jpg"
+          src={heroImage}
           alt="Technische Anlagen und Lüftungssysteme in einem modernen Industriegebäude"
-          width={1920}
-          height={1024}
-          fetchPriority="high"
+          sizes="100vw"
+          priority
         />
         <div className="hero-shade"></div>
         <div className="page-width hero-content">
@@ -206,10 +205,37 @@ export default function LandingPage() {
         </div>
       </section>
 
+      <section id="branchen" className="section page-width section-tight">
+        <SectionLabel number="02">FÜR WEN WIR ARBEITEN</SectionLabel>
+        <div className="section-heading">
+          <h2>
+            Ihre Branche.
+            <br />
+            <span className="subtle-heading">Ihre Betreiberpflichten.</span>
+          </h2>
+          <p>
+            Wohnungswirtschaft, Kommunen und Kliniken haben eigene Prüfpflichten und eigene Zuständigkeiten. Wir kennen
+            beides. <Link href="/wissen">Fachartikel im Wissensbereich</Link>
+          </p>
+        </div>
+        <div className="link-cards">
+          {[externerBetreibermanager, ...audiences].map((p) => (
+            <Link
+              key={p.slug}
+              href={p.slug === externerBetreibermanager.slug ? `/${p.slug}` : `/betreiberpflichten/${p.slug}`}
+            >
+              <strong>{p.slug === externerBetreibermanager.slug ? p.name : `Betreiberpflichten ${p.name}`}</strong>
+              <p>{p.cardText}</p>
+              <span>Mehr erfahren</span>
+            </Link>
+          ))}
+        </div>
+      </section>
+
       <section className="problem-section">
         <div className="page-width problem-grid">
           <div>
-            <SectionLabel number="02">WENIGER AUFWAND. MEHR ÜBERBLICK.</SectionLabel>
+            <SectionLabel number="03">WENIGER AUFWAND. MEHR ÜBERBLICK.</SectionLabel>
             <h2>
               Verantwortung bleibt.
               <br />
@@ -249,7 +275,7 @@ export default function LandingPage() {
       </section>
 
       <section id="pruefbereiche" className="section page-width">
-        <SectionLabel number="03">PRÜF- &amp; PFLICHTBEREICHE</SectionLabel>
+        <SectionLabel number="04">PRÜF- &amp; PFLICHTBEREICHE</SectionLabel>
         <div className="section-heading">
           <h2>
             Ihre Anlagen.
@@ -300,7 +326,7 @@ export default function LandingPage() {
       <section className="network-section">
         <div className="page-width network-inner">
           <div>
-            <SectionLabel number="04">UNSER PRÜFPARTNER-NETZWERK</SectionLabel>
+            <SectionLabel number="05">UNSER PRÜFPARTNER-NETZWERK</SectionLabel>
             <h2>
               Die richtigen Spezialisten.
               <br />
@@ -357,7 +383,7 @@ export default function LandingPage() {
       </section>
 
       <section id="ablauf" className="section page-width">
-        <SectionLabel number="05">SO FUNKTIONIERT’S</SectionLabel>
+        <SectionLabel number="06">SO FUNKTIONIERT’S</SectionLabel>
         <div className="section-heading">
           <h2>
             In vier Schritten
@@ -395,7 +421,7 @@ export default function LandingPage() {
       <section id="faq" className="faq-section">
         <div className="page-width faq-grid">
           <div>
-            <SectionLabel number="06">GUT ZU WISSEN</SectionLabel>
+            <SectionLabel number="07">GUT ZU WISSEN</SectionLabel>
             <h2>
               Häufig gefragt.
               <br />
@@ -416,7 +442,7 @@ export default function LandingPage() {
 
       <section id="kontakt" className="section page-width contact-grid">
         <div>
-          <SectionLabel number="07">LASSEN SIE UNS SPRECHEN</SectionLabel>
+          <SectionLabel number="08">LASSEN SIE UNS SPRECHEN</SectionLabel>
           <h2>
             Ihre Betreiberpflichten.
             <br />

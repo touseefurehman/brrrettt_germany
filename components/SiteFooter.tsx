@@ -2,6 +2,7 @@ import Link from "next/link";
 import Brand from "./Brand";
 import { MoveUpRight } from "./icons";
 import { areas } from "@/lib/content";
+import { audiences, externerBetreibermanager } from "@/lib/leistungen";
 import { emailLink, fullCompanyName, hasAddress, hasPhone, phoneLink, site } from "@/lib/site";
 
 export default function SiteFooter() {
@@ -39,8 +40,18 @@ export default function SiteFooter() {
             </Link>
           ))}
         </nav>
+        <nav aria-label="Branchen">
+          <strong>Leistung &amp; Branchen</strong>
+          <Link href="/externer-betreibermanager">{externerBetreibermanager.name}</Link>
+          {audiences.map((a) => (
+            <Link key={a.slug} href={`/betreiberpflichten/${a.slug}`}>
+              Betreiberpflichten {a.name}
+            </Link>
+          ))}
+        </nav>
         <nav aria-label="Unternehmen">
           <strong>Unternehmen</strong>
+          <Link href="/wissen">Wissen</Link>
           <Link href="/prueffristen">Prüffristen</Link>
           <Link href="/ueber-uns">Über uns</Link>
           <Link href="/kontakt">Kontakt</Link>

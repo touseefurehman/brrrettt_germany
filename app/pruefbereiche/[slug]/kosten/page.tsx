@@ -233,7 +233,9 @@ export default function DguvV3KostenPage() {
             Alle diese Fristen sind Richtwerte. Verbindlich ist die Frist, die in der Gefährdungsbeurteilung so festgelegt
             wird, dass die Arbeitsmittel bis zur nächsten Prüfung sicher verwendet werden können (§ 3 Abs. 6 BetrSichV).
             Die Richtwerte aller Prüfbereiche stehen in der{" "}
-            <Link href="/prueffristen#dguv-v3-pruefung">Prüffristen-Übersicht</Link>.
+            <Link href="/prueffristen#dguv-v3-pruefung">Prüffristen-Übersicht</Link>; wie sich Fristen begründet
+            festlegen und verlängern lassen, zeigt der Leitfaden{" "}
+            <Link href="/wissen/dguv-v3-prueffristen-organisieren">DGUV-V3-Prüffristen richtig organisieren</Link>.
           </p>
           <p>Wie stark die Frist die Kosten bestimmt, zeigt ein Rechenbeispiel mit 300 Geräten zu durchschnittlich 5 Euro:</p>
         </div>

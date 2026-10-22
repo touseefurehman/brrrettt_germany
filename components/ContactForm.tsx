@@ -10,7 +10,8 @@ type Status = "idle" | "sending" | "sent" | "error";
 
 const WEB3FORMS_ACCESS_KEY = "c0e91a82-de38-4bc2-b228-cdc1fcd7b8be";
 
-export default function ContactForm() {
+/** `source` = Seite, über die die Anfrage kommt – erscheint in der E-Mail zur Lead-Auswertung */
+export default function ContactForm({ source }: { source?: string }) {
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState("");
   const startedAt = useRef(Date.now());
@@ -43,6 +44,7 @@ export default function ContactForm() {
             "Standorte / Anlagen": data.scope || "–",
             "Gewünschter Zeitraum": data.timeframe || "–",
             Nachricht: data.message,
+            Seite: data.source || "–",
             Einwilligung: "erteilt",
           }),
         });
@@ -122,6 +124,7 @@ export default function ContactForm() {
           maxLength={5000}
         />
       </label>
+      {source && <input type="hidden" name="source" value={source} />}
       {/* Honeypot gegen Spam-Bots – für Menschen unsichtbar */}
       <label className="hp-field" aria-hidden="true">
         Website

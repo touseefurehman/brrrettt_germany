@@ -49,6 +49,7 @@ export async function POST(request: Request) {
     `Telefon: ${field(body.phone, 60) || "–"}`,
     `Standorte / Anlagen: ${field(body.scope, 160) || "–"}`,
     `Gewünschter Zeitraum: ${field(body.timeframe, 120) || "–"}`,
+    `Seite: ${field(body.source, 200) || "–"}`,
     "",
     message,
   ].join("\n");

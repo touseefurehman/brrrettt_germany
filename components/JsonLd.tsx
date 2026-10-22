@@ -43,9 +43,24 @@ export function organizationSchema() {
       "DGUV Vorschrift 3",
       "VDI 6022",
       "GEFMA 190",
+      "TRBS 1203",
+      "Arbeitsstättenverordnung",
+      "Betreiberpflichtenkataster",
       "Prüffristen technischer Anlagen",
     ],
     ...(site.sameAs.length > 0 && { sameAs: site.sameAs }),
+  };
+}
+
+export function websiteSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${site.url}/#website`,
+    url: `${site.url}/`,
+    name: site.domain,
+    inLanguage: "de-DE",
+    publisher: { "@id": orgId },
   };
 }
 
@@ -61,11 +76,12 @@ export function faqSchema(faqs: FaqEntry[]) {
   };
 }
 
-export function serviceSchema(serviceType: string, description: string, path: string) {
+export function serviceSchema(serviceType: string, description: string, path: string, audience?: string) {
   return {
     "@context": "https://schema.org",
     "@type": "Service",
     serviceType,
+    ...(audience && { audience: { "@type": "BusinessAudience", name: audience } }),
     url: `${site.url}${path}`,
     provider: { "@id": orgId },
     areaServed: { "@type": "Country", name: "Deutschland" },
@@ -83,5 +99,31 @@ export function breadcrumbSchema(items: [name: string, path: string][]) {
       name,
       item: `${site.url}${path}`,
     })),
+  };
+}
+
+export function articleSchema(a: {
+  title: string;
+  description: string;
+  path: string;
+  published: string;
+  modified: string;
+  about: string[];
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: a.title,
+    description: a.description,
+    url: `${site.url}${a.path}`,
+    mainEntityOfPage: `${site.url}${a.path}`,
+    datePublished: a.published,
+    dateModified: a.modified,
+    inLanguage: "de-DE",
+    image: `${site.url}/opengraph-image`,
+    author: { "@id": orgId },
+    publisher: { "@id": orgId },
+    isPartOf: { "@id": `${site.url}/#website` },
+    about: a.about.map((name) => ({ "@type": "Thing", name })),
   };
 }

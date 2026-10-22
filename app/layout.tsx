@@ -4,7 +4,7 @@ import "./globals.css";
 import "./site.css";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
-import JsonLd, { organizationSchema } from "@/components/JsonLd";
+import JsonLd, { organizationSchema, websiteSchema } from "@/components/JsonLd";
 import { site } from "@/lib/site";
 
 // next/font lädt die Schrift zur Build-Zeit und liefert sie selbst aus – kein Aufruf an Google beim Besucher.
@@ -30,6 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="de" className={dmSans.variable}>
       <body>
         <JsonLd data={organizationSchema()} />
+        <JsonLd data={websiteSchema()} />
         <SiteHeader />
         <main>{children}</main>
         <SiteFooter />

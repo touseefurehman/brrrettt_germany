@@ -112,7 +112,19 @@ export default function PrueffristenPage() {
         <p>
           Die Richtlinie GEFMA 190 beschreibt, wie Betreiberpflichten systematisch erfasst, delegiert und kontrolliert
           werden. Delegierbar sind Aufgaben, nicht die Verantwortung: Wer Prüfungen beauftragt, muss Auswahl und
-          Durchführung überwachen und die Nachweise vorhalten.
+          Durchführung überwachen und die Nachweise vorhalten. Mehr dazu:{" "}
+          <Link href="/wissen/betreiberpflichten-facility-management">Betreiberpflichten im Facility Management</Link>{" "}
+          und <Link href="/wissen/betreiberpflichtenkataster-erstellen">Betreiberpflichtenkataster erstellen</Link>.
+        </p>
+        <h2>Prüffristen nach Branche</h2>
+        <p>
+          Welche dieser Fristen in Ihrem Bestand anfallen, hängt von der Nutzung ab:{" "}
+          <Link href="/betreiberpflichten/wohnungsunternehmen">Wohnungsunternehmen</Link>,{" "}
+          <Link href="/betreiberpflichten/kommunen">Kommunen</Link>,{" "}
+          <Link href="/betreiberpflichten/krankenhaeuser">Krankenhäuser</Link>,{" "}
+          <Link href="/wissen/betreiberpflichten-schulen">Schulen</Link>,{" "}
+          <Link href="/wissen/betreiberpflichten-pflegeheime">Pflegeheime</Link> und{" "}
+          <Link href="/wissen/betreiberpflichten-hausverwaltung">Hausverwaltungen</Link>.
         </p>
         <p className="muted-note">
           Stand: {lastReviewed}. Die Angaben ersetzen keine Rechtsberatung und keine Gefährdungsbeurteilung. Abweichende

@@ -27,8 +27,14 @@ import ContactForm from "./ContactForm";
 import FaqList from "./FaqList";
 import JsonLd, { faqSchema } from "./JsonLd";
 import { btnHero } from "./ui";
-import { areas, faqs, type AreaSlug } from "@/lib/content";
+import { areaPath, areas, faqs, type AreaSlug } from "@/lib/content";
 import { audiences, externerBetreibermanager } from "@/lib/leistungen";
+import { leistungsseiten } from "@/lib/leistungsseiten";
+
+// Leistungsseiten ohne eigene Karte im Prüfbereichs-Raster (Elektro und Lüftung sind dort schon verlinkt)
+const moreInspections = leistungsseiten.filter((p) =>
+  ["uvv-pruefung", "legionellenpruefung", "feuerloescher-pruefung", "regalpruefung"].includes(p.slug),
+);
 import { hasPhone, isSet, phoneLink, site } from "@/lib/site";
 
 type IconType = ComponentType<{ size?: number; strokeWidth?: number }>;
@@ -291,7 +297,7 @@ export default function LandingPage() {
           {areas.map(({ slug, name, cardText, norm }, i) => {
             const Icon = areaIcons[slug];
             return (
-              <Link key={slug} href={`/pruefbereiche/${slug}`} className="area">
+              <Link key={slug} href={areaPath(slug)} className="area">
                 <div className="area-top">
                   <Icon size={26} strokeWidth={1.4} />
                   <span>{pad(i)}</span>
@@ -319,8 +325,17 @@ export default function LandingPage() {
           </a>
         </div>
         <p className="area-note">
-          Der konkrete Pflichtenumfang richtet sich nach Anlagenart, Nutzung und geltenden Vorschriften.
+          Der konkrete Pflichtenumfang richtet sich nach Anlagenart, Nutzung und geltenden Vorschriften.{" "}
+          <Link href="/betreiberpflichten">Alle Betreiberpflichten im Überblick</Link>
         </p>
+        <div className="link-cards more-inspections">
+          {moreInspections.map((p) => (
+            <Link key={p.slug} href={`/${p.slug}`}>
+              <strong>{p.name}</strong>
+              <span>{p.cardText}</span>
+            </Link>
+          ))}
+        </div>
       </section>
 
       <section className="network-section">

@@ -1,16 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import FaqList from "@/components/FaqList";
-import JsonLd, { faqSchema } from "@/components/JsonLd";
-import { CtaBand, PageIntro } from "@/components/Subpage";
+import { SourceList } from "@/components/ContentBlocks";
+import JsonLd, { faqSchema, serviceSchema } from "@/components/JsonLd";
+import { CoordinationNote, InquirySection, LegalNotice } from "@/components/PageParts";
+import { PageIntro } from "@/components/Subpage";
 import type { FaqEntry } from "@/lib/content";
 
-// Bisher nur für die DGUV-V3-Prüfung – weitere Kostenseiten hier ergänzen.
-export const dynamicParams = false;
-
-export function generateStaticParams() {
-  return [{ slug: "dguv-v3-pruefung" }];
-}
+// Leistungsseite auf das Keyword „dguv v3 prüfung kosten“ (Anlage A Nr. 8), früher /dguv-v3-pruefung-kosten.
 
 /*
  * Quellen (jede Frist und Zahl im Text ist mit einem Kürzel belegt):
@@ -32,10 +29,10 @@ export function generateStaticParams() {
  *        TODO: am Normtext bestätigen, sobald Normenzugang geklärt ist.
  */
 
-const path = "/pruefbereiche/dguv-v3-pruefung/kosten";
+const path = "/dguv-v3-pruefung-kosten";
 const title = "DGUV V3 Prüfung Kosten: Preise je Gerät, Anlage, Anfahrt";
 const description =
-  "DGUV V3 Prüfung Kosten: 3–8 € je Gerät, 50–450 € je Anlage, plus Anfahrt. Preisspannen, Prüffristen, Rechenbeispiel und Hebel für Betreiber mehrerer Objekte.";
+  "DGUV V3 Prüfung Kosten: 3–8 € je Gerät, 50–450 € je Anlage, plus Anfahrt. Preisspannen, Prüffristen, Rechenbeispiel, Hebel für Betreiber mehrerer Objekte.";
 
 export const metadata: Metadata = {
   title,
@@ -90,11 +87,11 @@ const faqs: FaqEntry[] = [
 export default function DguvV3KostenPage() {
   return (
     <>
+      <JsonLd data={serviceSchema("Koordination der DGUV-V3-Prüfung", description, path, "DGUV V3 Prüfung Kosten")} />
       <JsonLd data={faqSchema(faqs)} />
       <PageIntro
         crumbs={[
-          ["Prüfbereiche", "/#pruefbereiche"],
-          ["Elektrotechnik", "/pruefbereiche/dguv-v3-pruefung"],
+          ["DGUV V3 Prüfung", "/dguv-v3-pruefung"],
           ["Kosten", path],
         ]}
         kicker="KOSTEN"
@@ -139,7 +136,7 @@ export default function DguvV3KostenPage() {
         </p>
         <p>
           Ablauf, Prüfumfang und Zuständigkeiten beschreibt die Seite zur{" "}
-          <Link href="/pruefbereiche/dguv-v3-pruefung">DGUV V3 Prüfung</Link>.
+          <Link href="/dguv-v3-pruefung">DGUV V3 Prüfung</Link>.
         </p>
       </section>
 
@@ -330,7 +327,7 @@ export default function DguvV3KostenPage() {
         <p>
           Die DGUV V3 Prüfung ist bei Betreibern mehrerer Objekte selten das einzige offene Thema. Elektroprüfung,{" "}
           <Link href="/pruefbereiche/brandschutz">Brandschutz</Link>,{" "}
-          <Link href="/pruefbereiche/lueftung-klima">Lüftungshygiene nach VDI 6022</Link> und{" "}
+          <Link href="/vdi-6022">Lüftungshygiene nach VDI 6022</Link> und{" "}
           <Link href="/pruefbereiche/aufzugsanlagen">Aufzugsprüfung</Link> laufen mit unterschiedlichen Fristen,
           Dienstleistern und Zuständigen. Kosten entstehen vor allem dort, wo niemand den Gesamtbestand kennt: doppelte
           Anfahrten, verfallene Fristen, fehlende Nachweise. Wir prüfen nicht selbst, sondern ermitteln in einer{" "}
@@ -349,7 +346,38 @@ export default function DguvV3KostenPage() {
         </p>
       </section>
 
-      <CtaBand title="Anlagenliste schicken, belastbaren Preis erhalten." />
+      <CoordinationNote />
+      <InquirySection title="Anlagenliste schicken, belastbaren Preis erhalten." source={path} />
+
+      <section className="section page-width section-tight">
+        <h2>Quellen</h2>
+        <SourceList
+          sources={[
+            ["DGUV V3", "§ 5 Abs. 1 und 2, § 9; Durchführungsanweisungen zu § 5, Tabellen 1A und 1B"],
+            ["DGUV V4", "§ 5 (inhaltsgleich)"],
+            ["BetrSichV", "§ 2 Abs. 6, § 3 Abs. 6, § 14 Abs. 7, § 22 Abs. 1 Nr. 28"],
+            ["SGB VII", "§ 209 Abs. 1 Nr. 1, Abs. 3"],
+            ["ArbSchG", "§ 25 Abs. 1 Nr. 1, Abs. 2"],
+            ["DIN EN 50699", "Wiederholungsprüfung"],
+            ["DIN EN 50678", "Prüfung nach Instandsetzung"],
+          ]}
+        />
+        <p className="muted-note">
+          Preisangaben: Anbieterpreise laut{" "}
+          <a href="https://www.clean-invoice.com/elektropruefung/kosten-und-kalkulation-elektropruefung" rel="noopener">
+            Clean Invoice (Stand 11.02.2026)
+          </a>{" "}
+          und{" "}
+          <a
+            href="https://industrie-fachwissen.de/werkstatt/dguv-v3-pruefung-ortsveraenderliche-betriebsmittel-fristen-richtwerte-kosten"
+            rel="noopener"
+          >
+            industrie-fachwissen.de (Stand 29.09.2026)
+          </a>
+          , netto, ohne Gewähr.
+        </p>
+        <LegalNotice />
+      </section>
     </>
   );
 }

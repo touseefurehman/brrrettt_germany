@@ -1,7 +1,8 @@
 // Regelwerke, auf die Seiten verweisen. Jede Seite listet ihre Quellen am Ende als Tabelle mit Fundstelle und
 // Fassung (Lastenheft R-02). `version` bei jeder Änderung des Regelwerks anpassen.
 // Geprüft am 22.10.2026: Gesetze/Verordnungen an gesetze-im-internet.de, Technische Regeln an BAuA/BGN,
-// Normen an DIN Media. Einträge mit „zu prüfen“ vor Abnahme gegen das Original abgleichen.
+// Normen an DIN Media. TODO vor Abnahme gegen das Original (Normenzugang AG) abgleichen: alle Einträge mit
+// „geltende Ausgabe“/„geltende Fassung“ – dort ist Monat/Jahr (R-02) noch nachzutragen.
 // Kostenpflichtige Normen werden nur sinngemäß wiedergegeben, nie wörtlich zitiert (R-06).
 
 export type NormKey =
@@ -29,7 +30,14 @@ export type NormKey =
   | "DIN EN 15635"
   | "DGUV I 208-061"
   | "DIN EN 50699"
-  | "DIN VDE 0105-100";
+  | "DIN VDE 0105-100"
+  | "DIN EN 50678"
+  | "DGUV V52"
+  | "DGUV R 100-500"
+  | "ASR A1.7"
+  | "DGUV I 208-016"
+  | "VDI 6022-4"
+  | "GEG";
 
 export type Norm = { name: string; title: string; version: string; url?: string };
 
@@ -54,12 +62,12 @@ export const norms: Record<NormKey, Norm> = {
   "DGUV V68": {
     name: "DGUV Vorschrift 68",
     title: "Flurförderzeuge",
-    version: "01/1997 (Abdruck BG Verkehr) – Fassung des zuständigen UV-Trägers prüfen",
+    version: "01/1997 (Abdruck BG Verkehr)",
   },
   "DGUV V70": {
     name: "DGUV Vorschrift 70",
     title: "Fahrzeuge (ehemals BGV D29)",
-    version: "Fassung des zuständigen UV-Trägers – zu prüfen",
+    version: "geltende Fassung des zuständigen UV-Trägers",
     url: "https://vorschriften.bgn-branchenwissen.de/daten/dguv/70/57.htm",
   },
   "ArbStättV": {
@@ -138,12 +146,12 @@ export const norms: Record<NormKey, Norm> = {
   "DIN EN 1176": {
     name: "DIN EN 1176-7",
     title: "Spielplatzgeräte – Installation, Inspektion, Wartung und Betrieb",
-    version: "Ausgabe zu prüfen",
+    version: "07/2020",
   },
   "DIN 14676": {
     name: "DIN 14676-1",
     title: "Rauchwarnmelder für Wohnhäuser – Einbau, Betrieb und Instandhaltung",
-    version: "Ausgabe zu prüfen",
+    version: "12/2018",
   },
   "DIN 14406-4": {
     name: "DIN 14406-4",
@@ -158,7 +166,7 @@ export const norms: Record<NormKey, Norm> = {
   "DGUV I 208-061": {
     name: "DGUV Information 208-061",
     title: "Lagereinrichtungen und -geräte (ehemals DGUV Regel 108-007)",
-    version: "Ausgabe zu prüfen",
+    version: "geltende Ausgabe",
   },
   "DIN EN 50699": {
     name: "DIN EN 50699 (VDE 0702)",
@@ -168,6 +176,43 @@ export const norms: Record<NormKey, Norm> = {
   "DIN VDE 0105-100": {
     name: "DIN VDE 0105-100",
     title: "Betrieb von elektrischen Anlagen",
-    version: "Ausgabe zu prüfen",
+    version: "10/2015 mit A1 06/2017",
+  },
+  "DIN EN 50678": {
+    name: "DIN EN 50678 (VDE 0701)",
+    title: "Prüfung elektrischer Geräte nach der Reparatur",
+    version: "seit 02/2021",
+  },
+  "DGUV V52": {
+    name: "DGUV Vorschrift 52",
+    title: "Krane",
+    version: "geltende Fassung des zuständigen UV-Trägers",
+  },
+  "DGUV R 100-500": {
+    name: "DGUV Regel 100-500",
+    title: "Betreiben von Arbeitsmitteln (Kapitel 2.8 Lastaufnahmeeinrichtungen, 2.10 Hebebühnen)",
+    version: "geltende Ausgabe",
+  },
+  "ASR A1.7": {
+    name: "ASR A1.7",
+    title: "Technische Regel für Arbeitsstätten „Türen und Tore“",
+    version: "geltende Ausgabe",
+    url: "https://www.baua.de/DE/Angebote/Regelwerk/ASR/ASR-A1-7",
+  },
+  "DGUV I 208-016": {
+    name: "DGUV Information 208-016",
+    title: "Handlungsanleitung für den Umgang mit Leitern und Tritten",
+    version: "geltende Ausgabe",
+  },
+  "VDI 6022-4": {
+    name: "VDI 6022 Blatt 4",
+    title: "Qualifizierung von Personal für Hygienekontrollen und Hygieneinspektionen",
+    version: "geltende Ausgabe",
+  },
+  GEG: {
+    name: "GEG",
+    title: "Gebäudeenergiegesetz – energetische Inspektion von Klimaanlagen",
+    version: "08/2020, geltende Fassung",
+    url: "https://www.gesetze-im-internet.de/geg/",
   },
 };

@@ -2,17 +2,21 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import JsonLd, { serviceSchema } from "@/components/JsonLd";
-import { CtaBand, DeadlineTable, PageIntro } from "@/components/Subpage";
+import { CoordinationNote, InquirySection, LegalNotice } from "@/components/PageParts";
+import { DeadlineTable, PageIntro } from "@/components/Subpage";
 import { Check } from "@/components/icons";
-import { areaBySlug, areas } from "@/lib/content";
+import { areaBySlug, areaPath, areas, isMovedArea } from "@/lib/content";
+import { leistungsseiten } from "@/lib/leistungsseiten";
 import { articlesForArea } from "@/lib/wissen";
 
+// Prüfbereiche ohne eigene Leistungsseite auf oberster Ebene. Elektrotechnik und Lüftung liegen unter
+// /dguv-v3-pruefung bzw. /vdi-6022 (301-Weiterleitung in next.config.ts).
 type Props = { params: Promise<{ slug: string }> };
 
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return areas.map((a) => ({ slug: a.slug }));
+  return areas.filter((a) => !isMovedArea(a.slug)).map((a) => ({ slug: a.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -29,14 +33,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function AreaPage({ params }: Props) {
   const area = areaBySlug((await params).slug);
-  if (!area) notFound();
+  if (!area || isMovedArea(area.slug)) notFound();
   const path = `/pruefbereiche/${area.slug}`;
   const others = areas.filter((a) => a.slug !== area.slug);
   const related = articlesForArea(area.slug);
+  const fireExtinguishers = area.slug === "brandschutz" && leistungsseiten.find((p) => p.slug === "feuerloescher-pruefung");
 
   return (
     <>
-      <JsonLd data={serviceSchema(area.serviceType, area.description, path)} />
+      <JsonLd data={serviceSchema(area.serviceType, area.description, path, area.name)} />
       <PageIntro crumbs={[["Prüfbereiche", "/#pruefbereiche"], [area.name, path]]} kicker="PRÜFBEREICH" title={area.h1}>
         {area.intro.map((p) => (
           <p key={p.slice(0, 40)}>{p}</p>
@@ -63,7 +68,7 @@ export default async function AreaPage({ params }: Props) {
           </ol>
           <p className="muted-note">
             Die gesetzliche Betreiberverantwortung verbleibt beim Betreiber. Wir übernehmen Ermittlung, Organisation,
-            Koordination und Dokumentation.
+            Koordination und Dokumentation. <Link href="/betreiberverantwortung">Was Betreiberverantwortung umfasst</Link>
           </p>
         </div>
       </section>
@@ -75,9 +80,9 @@ export default async function AreaPage({ params }: Props) {
           Richtwerte und Höchstfristen. Die verbindliche Frist ergibt sich aus der Gefährdungsbeurteilung, Herstellerangaben
           und gegebenenfalls Landesrecht. <Link href="/prueffristen">Alle Prüffristen im Überblick</Link>
         </p>
-        {area.slug === "dguv-v3-pruefung" && (
-          <Link href="/pruefbereiche/dguv-v3-pruefung/kosten" className="text-link">
-            Was kostet die DGUV-V3-Prüfung?
+        {fireExtinguishers && (
+          <Link href={`/${fireExtinguishers.slug}`} className="text-link">
+            Feuerlöscher-Prüfung: Pflicht, Frist und Nachweis
           </Link>
         )}
       </section>
@@ -101,7 +106,7 @@ export default async function AreaPage({ params }: Props) {
         <h2>Weitere Prüfbereiche</h2>
         <div className="link-cards">
           {others.map((a) => (
-            <Link key={a.slug} href={`/pruefbereiche/${a.slug}`}>
+            <Link key={a.slug} href={areaPath(a.slug)}>
               <strong>{a.name}</strong>
               <span>{a.norm}</span>
             </Link>
@@ -109,7 +114,11 @@ export default async function AreaPage({ params }: Props) {
         </div>
       </section>
 
-      <CtaBand title={`${area.name}: Prüfungen koordinieren lassen.`} />
+      <CoordinationNote />
+      <InquirySection title={`${area.name}: Prüfungen koordinieren lassen.`} source={path} />
+      <section className="section page-width section-tight">
+        <LegalNotice />
+      </section>
     </>
   );
 }

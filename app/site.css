@@ -606,6 +606,14 @@ details.faq-item[open] .faq-icon-minus {
   font-size: 12px;
   line-height: 1.7;
 }
+.more-inspections {
+  margin-top: 16px;
+}
+.area-note a {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
 .cluster {
   margin-bottom: 44px;
 }

@@ -39,7 +39,7 @@ export const externerBetreibermanager: ServicePage = {
     },
     {
       type: "p",
-      text: "Im Unterschied zum Prüfdienstleister prüft der Betreibermanager nicht selbst. Er steht zwischen Betreiber und den vielen Prüf- und Wartungsfirmen und sorgt dafür, dass keine Pflicht übersehen, keine Frist versäumt und kein Nachweis verloren wird. Was dazu gehört, beschreibt der Artikel [Was ist Betreiberverantwortung?](/wissen/was-ist-betreiberverantwortung).",
+      text: "Im Unterschied zum Prüfdienstleister prüft der Betreibermanager nicht selbst. Er steht zwischen Betreiber und den vielen Prüf- und Wartungsfirmen und sorgt dafür, dass keine Pflicht übersehen, keine Frist versäumt und kein Nachweis verloren wird. Was dazu gehört, beschreibt der Artikel [Was ist Betreiberverantwortung?](/betreiberverantwortung).",
     },
     { type: "h2", text: "Aufgaben eines Betreibermanagers" },
     {
@@ -124,7 +124,7 @@ export const externerBetreibermanager: ServicePage = {
     },
     {
       type: "p",
-      text: "Was einzelne Prüfungen kosten, zeigt beispielhaft die Seite [DGUV V3 Prüfung Kosten](/pruefbereiche/dguv-v3-pruefung/kosten). Durch Bündelung von Terminen und Standorten sinken die Prüfkosten häufig spürbar – oft genug, um einen Teil der Koordination zu finanzieren.",
+      text: "Was einzelne Prüfungen kosten, zeigt beispielhaft die Seite [DGUV V3 Prüfung Kosten](/dguv-v3-pruefung-kosten). Durch Bündelung von Terminen und Standorten sinken die Prüfkosten häufig spürbar – oft genug, um einen Teil der Koordination zu finanzieren.",
     },
     { type: "h2", text: "Für wen sich ein externer Betreibermanager lohnt" },
     {
@@ -429,7 +429,7 @@ export const audiences: ServicePage[] = [
   ],
     related: [
       ["Betreiberpflichten für Schulen", "/wissen/betreiberpflichten-schulen", "Fachräume, Sporthallen, Sonderbau"],
-      ["Was ist Betreiberverantwortung?", "/wissen/was-ist-betreiberverantwortung", "Definition und Grundlagen"],
+      ["Was ist Betreiberverantwortung?", "/betreiberverantwortung", "Definition und Grundlagen"],
       ["Betreiberpflichtenkataster erstellen", "/wissen/betreiberpflichtenkataster-erstellen", "Anleitung mit Vorlage"],
       ["Brandschutzprüfung", "/pruefbereiche/brandschutz", "BMA, Löschtechnik, Sicherheitsbeleuchtung"],
     ],
@@ -550,8 +550,8 @@ export const audiences: ServicePage[] = [
   ],
     related: [
       ["Betreiberpflichten für Pflegeheime", "/wissen/betreiberpflichten-pflegeheime", "Pflegeeinrichtungen im Detail"],
-      ["Lüftung & Klima nach VDI 6022", "/pruefbereiche/lueftung-klima", "Hygieneinspektion"],
-      ["Elektroprüfung nach DGUV V3", "/pruefbereiche/dguv-v3-pruefung", "Fristen und Ablauf"],
+      ["Lüftung & Klima nach VDI 6022", "/vdi-6022", "Hygieneinspektion"],
+      ["Elektroprüfung nach DGUV V3", "/dguv-v3-pruefung", "Fristen und Ablauf"],
       ["Wer haftet bei fehlenden Prüfungen?", "/wissen/haftung-fehlende-pruefungen", "Haftung und Delegation"],
     ],
     cta: "Prüfmanagement für Ihre Klinik anfragen.",

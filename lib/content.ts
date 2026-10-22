@@ -240,10 +240,19 @@ export const areas: Area[] = [
 
 export const areaBySlug = (slug: string) => areas.find((a) => a.slug === slug);
 
+// Elektrotechnik und Lüftung haben eigene Leistungsseiten auf oberster Ebene (Lastenheft T-01);
+// die alten URLs unter /pruefbereiche leiten per 301 dorthin weiter (next.config.ts).
+const movedAreas: Partial<Record<AreaSlug, string>> = {
+  "dguv-v3-pruefung": "/dguv-v3-pruefung",
+  "lueftung-klima": "/vdi-6022",
+};
+export const areaPath = (slug: AreaSlug) => movedAreas[slug] ?? `/pruefbereiche/${slug}`;
+export const isMovedArea = (slug: AreaSlug) => slug in movedAreas;
+
 /** Weitere Anlagen ohne eigene Prüfbereichsseite – für die Prüffristen-Übersicht */
 export const otherDeadlines: DeadlineRow[] = [
   ["Kraftbetätigte Türen und Tore", "Prüfung durch Sachkundigen", "mindestens 1 Jahr", "ASR A1.7"],
-  ["Lagereinrichtungen und Regale", "Inspektion durch fachkundige Person", "mindestens 1 Jahr", "DIN EN 15635, DGUV Regel 108-007"],
+  ["Lagereinrichtungen und Regale", "Experteninspektion durch fachkundige Person", "mindestens alle 12 Monate", "DIN EN 15635, § 14 Abs. 2 BetrSichV, DGUV Information 208-061"],
   ["Leitern und Tritte", "Sichtprüfung durch befähigte Person", "nach Gefährdungsbeurteilung, üblich 1 Jahr", "DGUV Information 208-016"],
   ["Blitzschutzsysteme", "Umfassende Prüfung", "2 Jahre (Schutzklasse I/II) bzw. 4 Jahre (III/IV)", "DIN EN 62305-3 Beiblatt 3"],
   ["Fettabscheider", "Generalinspektion / Wartung", "5 Jahre / 1 Jahr", "DIN 4040-100, DIN EN 1825-2"],
@@ -251,7 +260,6 @@ export const otherDeadlines: DeadlineRow[] = [
 
 /** Trinkwasser hat keine eigene Prüfbereichsseite, aber eine eigene Gruppe in der Prüffristen-Übersicht */
 export const drinkingWaterDeadlines: DeadlineRow[] = [
-  ["Großanlagen zur Trinkwassererwärmung bei gewerblicher, nicht öffentlicher Tätigkeit – etwa vermietete Wohnungen", "Untersuchung auf Legionellen", "mindestens alle 3 Jahre", "§ 31 TrinkwV"],
-  ["Großanlagen zur Trinkwassererwärmung bei öffentlicher Tätigkeit – etwa Schulen, Kitas", "Untersuchung auf Legionellen", "mindestens jährlich", "§ 31 TrinkwV"],
-  ["Neue Großanlagen zur Trinkwassererwärmung", "Erstuntersuchung auf Legionellen", "3 bis 12 Monate nach Inbetriebnahme", "§ 31 TrinkwV"],
+  ["Großanlagen zur Trinkwassererwärmung mit Duschen bei gewerblicher, nicht öffentlicher Tätigkeit – etwa vermietete Wohnungen", "Untersuchung auf Legionellen", "mindestens alle 3 Jahre", "§ 31 Abs. 1, Abs. 2 Nr. 2 Buchst. a TrinkwV"],
+  ["Großanlagen zur Trinkwassererwärmung mit Duschen bei öffentlicher Tätigkeit – etwa Schulen, Kitas, Kliniken", "Untersuchung auf Legionellen", "mindestens jährlich; Verlängerung bis 3 Jahre durch das Gesundheitsamt möglich, nicht für Kliniken und Pflegeeinrichtungen", "§ 31 Abs. 2 Nr. 2 Buchst. b, Abs. 3 TrinkwV"],
 ];

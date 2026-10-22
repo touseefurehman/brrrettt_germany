@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { PageIntro } from "@/components/Subpage";
+import { hasAnalytics } from "@/lib/analytics";
 import { addressLine, emailLink, fullCompanyName, hasAddress, hasPhone, phoneLink, site } from "@/lib/site";
 
 // Datenschutz-Aufsichtsbehörden der Länder für den nicht-öffentlichen Bereich, Schlüssel = site.state
@@ -33,7 +34,8 @@ export const metadata: Metadata = {
 };
 
 // Entwurf nach Art. 13 DSGVO, abgestimmt auf das, was die Seite tatsächlich tut
-// (Hosting Vercel, Kontaktformular mit E-Mail-Versand, lokal eingebundene Schrift, keine Cookies, kein Analytics).
+// (Hosting Vercel, Kontaktformular mit E-Mail-Versand, lokal eingebundene Schrift; Google Analytics nur mit
+// gesetzter NEXT_PUBLIC_GA_ID und Einwilligung).
 // Vor dem Launch anwaltlich prüfen lassen und bei jeder Änderung (z. B. Analytics) anpassen.
 export default function DatenschutzPage() {
   return (
@@ -78,7 +80,8 @@ export default function DatenschutzPage() {
         <h2>3. Kontaktformular und Anfragen per E-Mail</h2>
         <p>
           Wenn Sie uns über das Kontaktformular oder per E-Mail kontaktieren, verarbeiten wir die von Ihnen angegebenen
-          Daten (Name, Firma, E-Mail-Adresse, optional Telefonnummer sowie Ihre Nachricht) zur Bearbeitung Ihrer Anfrage.
+          Daten (Organisation, Ansprechpartner, E-Mail-Adresse, Anzahl der Standorte, optional Telefonnummer und
+          Nachricht sowie die Seite, von der aus Sie das Formular abgesendet haben) zur Bearbeitung Ihrer Anfrage.
           Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO, soweit die Anfrage auf einen Vertragsabschluss gerichtet ist,
           im Übrigen Art. 6 Abs. 1 lit. f DSGVO.
         </p>
@@ -108,10 +111,29 @@ export default function DatenschutzPage() {
         </p>
 
         <h2>5. Cookies und Analyse</h2>
-        <p>
-          Diese Website setzt keine Cookies und verwendet keine Analyse- oder Trackingdienste. Sollte sich das ändern,
-          holen wir vorher Ihre Einwilligung ein und passen diese Erklärung an.
-        </p>
+        {hasAnalytics ? (
+          <>
+            {/* TODO: vor Aktivierung anwaltlich prüfen; AV-Vertrag mit Google abschließen (Lastenheft Kap. 9) */}
+            <p>
+              Mit Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO, § 25 Abs. 1 TDDDG) nutzen wir Google Analytics 4, einen
+              Webanalysedienst der Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland. Google Analytics
+              setzt Cookies und verarbeitet Nutzungsdaten wie aufgerufene Seiten, Gerätedaten und eine gekürzte
+              IP-Adresse. Wir werten damit aus, welche Seiten zu Anfragen führen; beim Absenden des Formulars wird ein
+              Ereignis mit der Quellseite und der Anzahl der Standorte erfasst, jedoch keine Kontaktdaten. Eine
+              Übermittlung in die USA ist möglich; Google ist unter dem EU-US Data Privacy Framework zertifiziert.
+            </p>
+            <p>
+              Ohne Ihre Einwilligung wird Google Analytics nicht geladen. Sie können die Einwilligung jederzeit mit
+              Wirkung für die Zukunft über „Cookie-Einstellungen“ im Fußbereich widerrufen. Ihre Entscheidung speichern
+              wir im lokalen Speicher Ihres Browsers.
+            </p>
+          </>
+        ) : (
+          <p>
+            Diese Website setzt keine Cookies und verwendet keine Analyse- oder Trackingdienste. Sollte sich das ändern,
+            holen wir vorher Ihre Einwilligung ein und passen diese Erklärung an.
+          </p>
+        )}
 
         <h2>6. Ihre Rechte</h2>
         <p>

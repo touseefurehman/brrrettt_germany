@@ -8,6 +8,8 @@ const published = "2026-10-22";
 export const grundlagenArticles: Article[] = [
   {
     slug: "betreiberpflichtenkataster-erstellen",
+    keyword: "betreiberpflichtenkataster",
+    secondary: ["pflichtenkataster"],
     cluster: "Organisation",
     title: "Betreiberpflichtenkataster erstellen – Anleitung & Aufbau",
     description:
@@ -122,7 +124,14 @@ export const grundlagenArticles: Article[] = [
         "Ein Rechtskataster listet die geltenden Vorschriften, häufig im Umwelt- oder Arbeitsschutzmanagement. Das Betreiberpflichtenkataster geht weiter und ordnet jeder Anlage die konkreten Pflichten, Fristen, Zuständigkeiten und Nachweise zu.",
       ],
     ],
-    norms: ["GEFMA 190", "BetrSichV", "ArbSchG", "DGUV V3", "ArbStättV", "TRBS 1203"],
+    sources: [
+    ["GEFMA 190", "Pflichtenermittlung, Delegation, Wirksamkeitskontrolle"],
+    ["BetrSichV", "§ 3 Abs. 6, § 14, Anhang 2"],
+    ["ArbSchG", "§ 5, § 13 Abs. 2"],
+    ["DGUV V3", "§ 5 mit Durchführungsanweisungen, Tabellen 1A–1C"],
+    ["ArbStättV", "§ 4 Abs. 3"],
+    ["TRBS 1203", "Anforderungen an zur Prüfung befähigte Personen"],
+  ],
     related: [
       ["Externer Betreibermanager", "/externer-betreibermanager", "Kataster erstellen und pflegen lassen"],
       ["Prüffristen im Überblick", "/prueffristen", "Richtwerte je Anlagenart"],
@@ -132,6 +141,8 @@ export const grundlagenArticles: Article[] = [
   },
   {
     slug: "was-ist-betreiberverantwortung",
+    keyword: "was ist betreiberverantwortung",
+    secondary: [],
     cluster: "Grundlagen",
     title: "Was ist Betreiberverantwortung? Definition & Pflichten",
     description:
@@ -231,7 +242,14 @@ export const grundlagenArticles: Article[] = [
         "Die Geschäftsführung als Organ der Gesellschaft. Sie kann Aufgaben an Führungskräfte, Fachkräfte oder Dienstleister übertragen, muss aber die Organisation so gestalten und überwachen, dass die Pflichten erfüllt werden.",
       ],
     ],
-    norms: ["BGB", "ArbSchG", "BetrSichV", "ArbStättV", "DGUV V3", "GEFMA 190"],
+    sources: [
+    ["BGB", "§§ 823, 831, 836"],
+    ["ArbSchG", "§ 5, § 13 Abs. 2"],
+    ["BetrSichV", "§ 3 Abs. 6, § 14, Anhang 2"],
+    ["ArbStättV", "§ 4 Abs. 3"],
+    ["DGUV V3", "§ 5 mit Durchführungsanweisungen, Tabellen 1A–1C"],
+    ["GEFMA 190", "Pflichtenermittlung, Delegation, Wirksamkeitskontrolle"],
+  ],
     related: [
       ["Wer haftet bei fehlenden Prüfungen?", "/wissen/haftung-fehlende-pruefungen", "Zivil-, Straf- und Bußgeldrecht"],
       ["Betreiberpflichten im Facility Management", "/wissen/betreiberpflichten-facility-management", "Delegation an FM-Dienstleister"],
@@ -241,6 +259,8 @@ export const grundlagenArticles: Article[] = [
   },
   {
     slug: "haftung-fehlende-pruefungen",
+    keyword: "haftung fehlende prüfung",
+    secondary: ["wer haftet bei fehlenden prüfungen", "organisationsverschulden betreiber"],
     cluster: "Grundlagen",
     title: "Wer haftet bei fehlenden Prüfungen? Betreiberhaftung erklärt",
     description:
@@ -338,7 +358,14 @@ export const grundlagenArticles: Article[] = [
         "Teilweise. Der Betreiber haftet dann nicht für jeden Fehler des Dienstleisters, muss aber nachweisen, dass er ihn sorgfältig ausgewählt, klar beauftragt und angemessen kontrolliert hat.",
       ],
     ],
-    norms: ["BGB", "OWiG", "ArbSchG", "BetrSichV", "DGUV V3", "GEFMA 190"],
+    sources: [
+    ["BGB", "§§ 823, 831, 836"],
+    ["OWiG", "§§ 9, 130"],
+    ["ArbSchG", "§ 5, § 13 Abs. 2"],
+    ["BetrSichV", "§ 3 Abs. 6, § 14, Anhang 2"],
+    ["DGUV V3", "§ 5 mit Durchführungsanweisungen, Tabellen 1A–1C"],
+    ["GEFMA 190", "Pflichtenermittlung, Delegation, Wirksamkeitskontrolle"],
+  ],
     related: [
       ["Was ist Betreiberverantwortung?", "/wissen/was-ist-betreiberverantwortung", "Definition und Delegation"],
       ["Externer Betreibermanager", "/externer-betreibermanager", "Haftungsrisiken reduzieren"],
@@ -348,6 +375,8 @@ export const grundlagenArticles: Article[] = [
   },
   {
     slug: "betreiberpflichten-facility-management",
+    keyword: "betreiberpflichten facility management",
+    secondary: ["gefma 190", "betreiberverantwortung fm"],
     cluster: "Organisation",
     title: "Betreiberpflichten im Facility Management nach GEFMA 190",
     description:
@@ -446,7 +475,14 @@ export const grundlagenArticles: Article[] = [
         "Unter anderem Prüf- und Wartungspflichten für technische Anlagen, Verkehrssicherungspflichten für Gebäude und Außenanlagen, Dokumentationspflichten, Unterweisungspflichten sowie Organisations- und Kontrollpflichten gegenüber eingesetzten Dienstleistern.",
       ],
     ],
-    norms: ["GEFMA 190", "BetrSichV", "ArbStättV", "DGUV V3", "ArbSchG", "BGB"],
+    sources: [
+    ["GEFMA 190", "Pflichtenermittlung, Delegation, Wirksamkeitskontrolle"],
+    ["BetrSichV", "§ 3 Abs. 6, § 14, Anhang 2"],
+    ["ArbStättV", "§ 4 Abs. 3"],
+    ["DGUV V3", "§ 5 mit Durchführungsanweisungen, Tabellen 1A–1C"],
+    ["ArbSchG", "§ 5, § 13 Abs. 2"],
+    ["BGB", "§§ 823, 831, 836"],
+  ],
     related: [
       ["Betreiberpflichtenkataster erstellen", "/wissen/betreiberpflichtenkataster-erstellen", "Grundlage jeder Delegation"],
       ["Externer Betreibermanager", "/externer-betreibermanager", "Steuerung der FM-Dienstleister"],
@@ -456,6 +492,8 @@ export const grundlagenArticles: Article[] = [
   },
   {
     slug: "betreiberpflichten-objektuebernahme",
+    keyword: "betreiberpflichten objektübernahme",
+    secondary: ["objektübernahme checkliste"],
     cluster: "Organisation",
     title: "Betreiberpflichten bei Objektübernahme – Checkliste",
     description:
@@ -540,7 +578,14 @@ export const grundlagenArticles: Article[] = [
         "Nicht automatisch. Ob Verträge übergehen, hängt von den Vertragsregelungen und der Vereinbarung im Kaufvertrag ab. Deshalb gehört die Prüfung laufender Verträge zur Übernahme.",
       ],
     ],
-    norms: ["BetrSichV", "PrüfVO", "DGUV V3", "TrinkwV", "VDI 6022", "GEFMA 190"],
+    sources: [
+    ["BetrSichV", "§ 3 Abs. 6, § 14, Anhang 2"],
+    ["PrüfVO", "wiederkehrende Prüfungen sicherheitstechnischer Anlagen"],
+    ["DGUV V3", "§ 5 mit Durchführungsanweisungen, Tabellen 1A–1C"],
+    ["TrinkwV", "§ 31, § 51"],
+    ["VDI 6022", "Hygienekontrollen und Hygieneinspektionen"],
+    ["GEFMA 190", "Pflichtenermittlung, Delegation, Wirksamkeitskontrolle"],
+  ],
     related: [
       ["Betreiberpflichtenkataster erstellen", "/wissen/betreiberpflichtenkataster-erstellen", "Kataster nach Übernahme"],
       ["Externer Betreibermanager", "/externer-betreibermanager", "Übernahme begleiten lassen"],
@@ -550,6 +595,8 @@ export const grundlagenArticles: Article[] = [
   },
   {
     slug: "dguv-v3-prueffristen-organisieren",
+    keyword: "dguv v3 prüffristen organisieren",
+    secondary: [],
     cluster: "Organisation",
     areas: ["dguv-v3-pruefung"],
     title: "DGUV V3 Prüffristen richtig organisieren – Leitfaden",
@@ -649,7 +696,12 @@ export const grundlagenArticles: Article[] = [
         "Die DGUV Vorschrift 3 verlangt eine Prüfung vor der ersten Inbetriebnahme. Bei neuen Geräten mit Herstellerbestätigung über die Einhaltung der elektrotechnischen Regeln entfällt diese Erstprüfung in der Regel; sie werden dann in den Prüfzyklus aufgenommen.",
       ],
     ],
-    norms: ["DGUV V3", "BetrSichV", "TRBS 1203", "ArbSchG"],
+    sources: [
+    ["DGUV V3", "§ 5 mit Durchführungsanweisungen, Tabellen 1A–1C"],
+    ["BetrSichV", "§ 3 Abs. 6, § 14, Anhang 2"],
+    ["TRBS 1203", "Anforderungen an zur Prüfung befähigte Personen"],
+    ["ArbSchG", "§ 5, § 13 Abs. 2"],
+  ],
     related: [
       ["DGUV V3 Prüfung", "/pruefbereiche/dguv-v3-pruefung", "Prüfbereich Elektrotechnik"],
       ["DGUV V3 Prüfung Kosten", "/pruefbereiche/dguv-v3-pruefung/kosten", "Preise und Rechenbeispiel"],

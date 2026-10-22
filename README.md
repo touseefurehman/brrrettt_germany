@@ -27,7 +27,13 @@ Versand über die Resend-API (`app/api/kontakt/route.ts`):
 | `CONTACT_FROM`   | `Website <anfrage@betreibermanager.de>` (Domain bei Resend verifizieren) |
 | `CONTACT_TO`     | `kontakt@betreibermanager.de` (optional)          |
 
-Ohne diese Variablen antwortet die Route mit 503 und das Formular versendet stattdessen über Web3Forms (Access Key in `components/ContactForm.tsx`, derselbe wie bei lieferantgesucht.de).
+| `NEXT_PUBLIC_GA_ID` | `G-XXXXXXXXXX` – GA4-Mess-ID (optional, siehe unten) |
+
+Das Formular „Bestandsaufnahme anfragen“ hat die Pflichtfelder Organisation, Ansprechpartner, E-Mail und Anzahl Standorte (Lastenheft L-02/L-03). Nach dem Versand leitet es auf `/anfrage-gesendet` weiter und sendet das GA4-Event `generate_lead` mit `source_page` und `locations`.
+
+**Google Analytics** wird nur geladen, wenn `NEXT_PUBLIC_GA_ID` gesetzt ist **und** der Besucher im Einwilligungsbanner zustimmt. Ohne ID bleibt die Seite cookiefrei; Datenschutzerklärung und Footer passen sich automatisch an. Vor dem Aktivieren: Freigabe des Auftraggebers (T-12), AV-Vertrag mit Google, anwaltliche Prüfung der Datenschutzerklärung. In GA4 `generate_lead` als Schlüsselereignis markieren.
+
+Ohne die Resend-Variablen antwortet die Route mit 503 und das Formular versendet stattdessen über Web3Forms (Access Key in `components/ContactForm.tsx`, derselbe wie bei lieferantgesucht.de).
 
 ## Domain
 

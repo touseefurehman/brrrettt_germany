@@ -9,6 +9,8 @@ import type { ServicePage } from "./pages";
 // (z. B. „Bestandsaufnahme ab … € je Standort“) – konkrete Zahlen erhöhen die Anfragequote deutlich.
 export const externerBetreibermanager: ServicePage = {
   slug: "externer-betreibermanager",
+  keyword: "externer betreibermanager",
+  secondary: ["betreibermanagement", "betreiberpflichten auslagern"],
   name: "Externer Betreibermanager",
   title: "Externer Betreibermanager – Betreiberpflichten auslagern",
   description:
@@ -158,7 +160,15 @@ export const externerBetreibermanager: ServicePage = {
       "Alle prüfpflichtigen technischen Anlagen und Gebäudeteile, insbesondere elektrische Anlagen nach DGUV Vorschrift 3, Brandschutztechnik, Aufzüge, Lüftungs- und Klimaanlagen nach VDI 6022, Druckanlagen, Trinkwasseranlagen sowie Verkehrssicherungsthemen wie Spielplätze und Außenanlagen.",
     ],
   ],
-  norms: ["GEFMA 190", "BetrSichV", "DGUV V3", "ArbStättV", "TRBS 1203", "VDI 6022", "ArbSchG"],
+  sources: [
+    ["GEFMA 190", "Pflichtenermittlung, Delegation, Wirksamkeitskontrolle"],
+    ["BetrSichV", "§ 3 Abs. 6, § 14, Anhang 2"],
+    ["DGUV V3", "§ 5 mit Durchführungsanweisungen, Tabellen 1A–1C"],
+    ["ArbStättV", "§ 4 Abs. 3"],
+    ["TRBS 1203", "Anforderungen an zur Prüfung befähigte Personen"],
+    ["VDI 6022", "Hygienekontrollen und Hygieneinspektionen"],
+    ["ArbSchG", "§ 5, § 13 Abs. 2"],
+  ],
   related: [
     ["Betreiberpflichtenkataster erstellen", "/wissen/betreiberpflichtenkataster-erstellen", "Anleitung mit Vorlage"],
     ["Wer haftet bei fehlenden Prüfungen?", "/wissen/haftung-fehlende-pruefungen", "Haftung und Delegation"],
@@ -171,6 +181,8 @@ export const externerBetreibermanager: ServicePage = {
 export const audiences: ServicePage[] = [
   {
     slug: "wohnungsunternehmen",
+    keyword: "betreiberpflichten wohnungsunternehmen",
+    secondary: ["prüfpflichten wohnungsbestand"],
     name: "Wohnungsunternehmen",
     title: "Betreiberpflichten Wohnungsunternehmen – Prüfpflichten im Bestand",
     description:
@@ -279,7 +291,16 @@ export const audiences: ServicePage[] = [
         "Ab etwa zehn Objekten mit Aufzügen, zentraler Warmwasserbereitung oder Tiefgaragen wird die Koordination aufwendig. Als Einstieg eignet sich eine Bestandsaufnahme mit Kataster als abgeschlossene Leistung ohne laufenden Vertrag.",
       ],
     ],
-    norms: ["TrinkwV", "BetrSichV", "DIN 14676", "DIN EN 1176", "BGB", "DGUV V3", "ArbStättV", "GEFMA 190"],
+    sources: [
+    ["TrinkwV", "§ 31, § 51"],
+    ["BetrSichV", "§ 3 Abs. 6, § 14, Anhang 2"],
+    ["DIN 14676", "Inspektion und Wartung"],
+    ["DIN EN 1176", "Inspektion und Wartung"],
+    ["BGB", "§§ 823, 831, 836"],
+    ["DGUV V3", "§ 5 mit Durchführungsanweisungen, Tabellen 1A–1C"],
+    ["ArbStättV", "§ 4 Abs. 3"],
+    ["GEFMA 190", "Pflichtenermittlung, Delegation, Wirksamkeitskontrolle"],
+  ],
     related: [
       ["Prüfpflichten im Wohnungsbestand", "/wissen/pruefpflichten-wohnungsbestand", "Checkliste je Gebäudeart"],
       ["Betreiberpflichten für Hausverwaltungen", "/wissen/betreiberpflichten-hausverwaltung", "WEG und Mietverwaltung"],
@@ -290,6 +311,8 @@ export const audiences: ServicePage[] = [
   },
   {
     slug: "kommunen",
+    keyword: "betreiberpflichten kommune",
+    secondary: ["betreiberverantwortung öffentliche gebäude"],
     name: "Kommunen",
     title: "Betreiberpflichten Kommune – öffentliche Gebäude & Schulen",
     description:
@@ -394,7 +417,16 @@ export const audiences: ServicePage[] = [
         "Ja, die organisatorischen Aufgaben können als Dienstleistung vergeben werden, abhängig vom Auftragswert nach dem jeweiligen Vergaberecht. Die Betreiberverantwortung bleibt bei der Kommune.",
       ],
     ],
-    norms: ["PrüfVO", "DGUV V3", "TrinkwV", "BetrSichV", "ArbStättV", "DIN EN 1176", "VDI 6022", "GEFMA 190"],
+    sources: [
+    ["PrüfVO", "wiederkehrende Prüfungen sicherheitstechnischer Anlagen"],
+    ["DGUV V3", "§ 5 mit Durchführungsanweisungen, Tabellen 1A–1C"],
+    ["TrinkwV", "§ 31, § 51"],
+    ["BetrSichV", "§ 3 Abs. 6, § 14, Anhang 2"],
+    ["ArbStättV", "§ 4 Abs. 3"],
+    ["DIN EN 1176", "Inspektion und Wartung"],
+    ["VDI 6022", "Hygienekontrollen und Hygieneinspektionen"],
+    ["GEFMA 190", "Pflichtenermittlung, Delegation, Wirksamkeitskontrolle"],
+  ],
     related: [
       ["Betreiberpflichten für Schulen", "/wissen/betreiberpflichten-schulen", "Fachräume, Sporthallen, Sonderbau"],
       ["Was ist Betreiberverantwortung?", "/wissen/was-ist-betreiberverantwortung", "Definition und Grundlagen"],
@@ -405,6 +437,8 @@ export const audiences: ServicePage[] = [
   },
   {
     slug: "krankenhaeuser",
+    keyword: "betreiberverantwortung krankenhaus",
+    secondary: ["prüfmanagement krankenhaus"],
     name: "Krankenhäuser",
     title: "Betreiberpflichten Krankenhaus – Prüfmanagement Klinik",
     description:
@@ -504,7 +538,16 @@ export const audiences: ServicePage[] = [
         "Die sicherheitstechnische Kontrolle (STK) nach § 12 MPBetreibV betrifft bestimmte aktive Medizinprodukte und ist spätestens alle zwei Jahre fällig. Die DGUV-V3-Prüfung betrifft elektrische Anlagen und Betriebsmittel allgemein. Für Medizinprodukte sollte geklärt sein, welche Prüfung was abdeckt, damit nicht doppelt beauftragt wird.",
       ],
     ],
-    norms: ["MPBetreibV", "DGUV V3", "BetrSichV", "PrüfVO", "VDI 6022", "TrinkwV", "ArbStättV", "GEFMA 190"],
+    sources: [
+    ["MPBetreibV", "§§ 7, 12, 15"],
+    ["DGUV V3", "§ 5 mit Durchführungsanweisungen, Tabellen 1A–1C"],
+    ["BetrSichV", "§ 3 Abs. 6, § 14, Anhang 2"],
+    ["PrüfVO", "wiederkehrende Prüfungen sicherheitstechnischer Anlagen"],
+    ["VDI 6022", "Hygienekontrollen und Hygieneinspektionen"],
+    ["TrinkwV", "§ 31, § 51"],
+    ["ArbStättV", "§ 4 Abs. 3"],
+    ["GEFMA 190", "Pflichtenermittlung, Delegation, Wirksamkeitskontrolle"],
+  ],
     related: [
       ["Betreiberpflichten für Pflegeheime", "/wissen/betreiberpflichten-pflegeheime", "Pflegeeinrichtungen im Detail"],
       ["Lüftung & Klima nach VDI 6022", "/pruefbereiche/lueftung-klima", "Hygieneinspektion"],

@@ -9,6 +9,8 @@ const published = "2026-10-22";
 export const branchenArticles: Article[] = [
   {
     slug: "pruefpflichten-wohnungsbestand",
+    keyword: "prüfpflichten wohnungsbestand",
+    secondary: ["prüfpflichten mehrfamilienhaus", "prüfpflichten vermieter"],
     cluster: "Branchen",
     title: "Prüfpflichten im Wohnungsbestand – Checkliste je Gebäudeart",
     description:
@@ -103,7 +105,15 @@ export const branchenArticles: Article[] = [
         "Das regelt die jeweilige Landesbauordnung. Der Einbau obliegt in allen Ländern dem Eigentümer; die Sicherstellung der Betriebsbereitschaft liegt je nach Land beim Eigentümer oder bei den unmittelbaren Besitzern, also den Mietern.",
       ],
     ],
-    norms: ["TrinkwV", "BetrSichV", "DIN 14676", "DIN EN 1176", "BGB", "PrüfVO", "DGUV V3"],
+    sources: [
+    ["TrinkwV", "§ 31, § 51"],
+    ["BetrSichV", "§ 3 Abs. 6, § 14, Anhang 2"],
+    ["DIN 14676", "Inspektion und Wartung"],
+    ["DIN EN 1176", "Inspektion und Wartung"],
+    ["BGB", "§§ 823, 831, 836"],
+    ["PrüfVO", "wiederkehrende Prüfungen sicherheitstechnischer Anlagen"],
+    ["DGUV V3", "§ 5 mit Durchführungsanweisungen, Tabellen 1A–1C"],
+  ],
     related: [
       ["Betreiberpflichten Wohnungsunternehmen", "/betreiberpflichten/wohnungsunternehmen", "Bestände organisieren lassen"],
       ["Betreiberpflichten für Hausverwaltungen", "/wissen/betreiberpflichten-hausverwaltung", "WEG und Mietverwaltung"],
@@ -113,6 +123,8 @@ export const branchenArticles: Article[] = [
   },
   {
     slug: "betreiberpflichten-schulen",
+    keyword: "betreiberpflichten schule",
+    secondary: ["prüfpflichten schulträger"],
     cluster: "Branchen",
     areas: ["brandschutz", "dguv-v3-pruefung"],
     title: "Betreiberpflichten Schule – Prüfpflichten für Schulträger",
@@ -201,7 +213,14 @@ export const branchenArticles: Article[] = [
         "In den meisten Ländern ja, entweder ausdrücklich nach Landesbauordnung oder über Schulbaurichtlinien. Dann gelten die Prüfverordnungen des Landes für sicherheitstechnische Anlagen wie Sicherheitsbeleuchtung, Brandmelde- und Alarmierungsanlagen.",
       ],
     ],
-    norms: ["PrüfVO", "DGUV V3", "TrinkwV", "BetrSichV", "DIN EN 1176", "ArbStättV"],
+    sources: [
+    ["PrüfVO", "wiederkehrende Prüfungen sicherheitstechnischer Anlagen"],
+    ["DGUV V3", "§ 5 mit Durchführungsanweisungen, Tabellen 1A–1C"],
+    ["TrinkwV", "§ 31, § 51"],
+    ["BetrSichV", "§ 3 Abs. 6, § 14, Anhang 2"],
+    ["DIN EN 1176", "Inspektion und Wartung"],
+    ["ArbStättV", "§ 4 Abs. 3"],
+  ],
     related: [
       ["Betreiberpflichten Kommunen", "/betreiberpflichten/kommunen", "Alle Liegenschaften organisieren"],
       ["Brandschutzprüfung", "/pruefbereiche/brandschutz", "BMA, Sicherheitsbeleuchtung, RWA"],
@@ -211,6 +230,8 @@ export const branchenArticles: Article[] = [
   },
   {
     slug: "betreiberpflichten-pflegeheime",
+    keyword: "betreiberpflichten pflegeheim",
+    secondary: ["prüfpflichten pflegeeinrichtung"],
     cluster: "Branchen",
     areas: ["lueftung-klima"],
     title: "Betreiberpflichten Pflegeheim – Prüfungen & Nachweise",
@@ -306,7 +327,15 @@ export const branchenArticles: Article[] = [
         "Ja. Gebäude mit Nutzungseinheiten zur Pflege oder Betreuung von Personen mit Pflegebedürftigkeit sind nach den Landesbauordnungen Sonderbauten. Das führt zu erhöhten Brandschutzanforderungen und Prüfpflichten nach den Prüfverordnungen der Länder.",
       ],
     ],
-    norms: ["MPBetreibV", "PrüfVO", "TrinkwV", "DGUV V3", "BetrSichV", "VDI 6022", "ArbStättV"],
+    sources: [
+    ["MPBetreibV", "§§ 7, 12, 15"],
+    ["PrüfVO", "wiederkehrende Prüfungen sicherheitstechnischer Anlagen"],
+    ["TrinkwV", "§ 31, § 51"],
+    ["DGUV V3", "§ 5 mit Durchführungsanweisungen, Tabellen 1A–1C"],
+    ["BetrSichV", "§ 3 Abs. 6, § 14, Anhang 2"],
+    ["VDI 6022", "Hygienekontrollen und Hygieneinspektionen"],
+    ["ArbStättV", "§ 4 Abs. 3"],
+  ],
     related: [
       ["Betreiberverantwortung Krankenhaus", "/betreiberpflichten/krankenhaeuser", "Prüfmanagement für Kliniken und Pflege"],
       ["Lüftung & Klima nach VDI 6022", "/pruefbereiche/lueftung-klima", "Hygieneinspektion"],
@@ -316,6 +345,8 @@ export const branchenArticles: Article[] = [
   },
   {
     slug: "betreiberpflichten-hausverwaltung",
+    keyword: "betreiberpflichten hausverwaltung",
+    secondary: ["prüfpflichten weg verwalter"],
     cluster: "Branchen",
     title: "Betreiberpflichten Hausverwaltung – WEG & Mietverwaltung",
     description:
@@ -415,7 +446,14 @@ export const branchenArticles: Article[] = [
         "Je nach Ausstattung Legionellenuntersuchung, Aufzugsprüfung, Rauchwarnmelder-Wartung, Spielplatzinspektion, Prüfungen in Tiefgaragen, Baumkontrolle, Feuerstättenschau sowie die laufende Verkehrssicherung von Wegen und Treppenhäusern.",
       ],
     ],
-    norms: ["BGB", "TrinkwV", "BetrSichV", "DIN 14676", "DIN EN 1176", "PrüfVO"],
+    sources: [
+    ["BGB", "§§ 823, 831, 836"],
+    ["TrinkwV", "§ 31, § 51"],
+    ["BetrSichV", "§ 3 Abs. 6, § 14, Anhang 2"],
+    ["DIN 14676", "Inspektion und Wartung"],
+    ["DIN EN 1176", "Inspektion und Wartung"],
+    ["PrüfVO", "wiederkehrende Prüfungen sicherheitstechnischer Anlagen"],
+  ],
     related: [
       ["Prüfpflichten im Wohnungsbestand", "/wissen/pruefpflichten-wohnungsbestand", "Checkliste je Gebäudeart"],
       ["Betreiberpflichten Wohnungsunternehmen", "/betreiberpflichten/wohnungsunternehmen", "Für Bestandshalter"],

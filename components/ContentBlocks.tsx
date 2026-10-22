@@ -111,28 +111,41 @@ export default function ContentBlocks({ blocks }: { blocks: Block[] }) {
   });
 }
 
-export function NormList({ keys }: { keys: NormKey[] }) {
+/** Quellenliste je Seite (Lastenheft R-02): Regelwerk, Fundstelle, Fassung */
+export function SourceList({ sources }: { sources: [NormKey, string][] }) {
   return (
-    <dl className="norm-list">
-      {keys.map((key) => {
-        const { name, title, text, url } = norms[key];
-        return (
-          <div key={key}>
-            <dt>
-              {url ? (
-                <a href={url} rel="noopener">
-                  {name}
-                </a>
-              ) : (
-                name
-              )}
-              <small>{title}</small>
-            </dt>
-            <dd>{text}</dd>
-          </div>
-        );
-      })}
-    </dl>
+    <div className="table-wrap">
+      <table className="data-table source-table">
+        <thead>
+          <tr>
+            <th scope="col">Regelwerk</th>
+            <th scope="col">Fundstelle</th>
+            <th scope="col">Fassung</th>
+          </tr>
+        </thead>
+        <tbody>
+          {sources.map(([key, ref]) => {
+            const { name, title, version, url } = norms[key];
+            return (
+              <tr key={key + ref}>
+                <th scope="row">
+                  {url ? (
+                    <a href={url} rel="noopener">
+                      {name}
+                    </a>
+                  ) : (
+                    name
+                  )}
+                  <small>{title}</small>
+                </th>
+                <td>{ref}</td>
+                <td>{version}</td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
   );
 }
 

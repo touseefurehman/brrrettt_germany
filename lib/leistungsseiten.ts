@@ -90,6 +90,10 @@ export const leistungsseiten: ServicePage[] = [
         type: "p",
         text: "Für Elektroprüfungen gibt es keine amtliche Gebührenordnung. Nach veröffentlichten Anbieterangaben (Stand Oktober 2026) liegen ortsveränderliche Geräte bei rund 3 bis 8 Euro netto je Stück, ortsfeste Anlagen wie Unterverteilungen bei 50 bis 450 Euro, dazu kommen Anfahrtspauschalen. Preisspannen, Quellen und ein Rechenbeispiel stehen auf der Seite [DGUV V3 Prüfung Kosten](/dguv-v3-pruefung-kosten). Bei mehreren Standorten bestimmen Anfahrten und Terminlogistik den Preis stärker als der Einzelpreis je Gerät.",
       },
+      {
+        type: "p",
+        text: "Regionale Hinweise zu Unfallkassen, Aufsichtsbehörden und Landesrecht: [DGUV V3 Prüfung Berlin](/dguv-v3-pruefung-berlin) · [DGUV V3 Prüfung Hamburg](/dguv-v3-pruefung-hamburg) · [DGUV V3 Prüfung München](/dguv-v3-pruefung-muenchen).",
+      },
       { type: "h2", text: "Folgen einer versäumten Prüfung" },
       {
         type: "p",

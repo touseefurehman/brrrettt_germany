@@ -3,6 +3,7 @@ import { areas, isMovedArea } from "@/lib/content";
 import { audiences } from "@/lib/leistungen";
 import { leistungsseiten } from "@/lib/leistungsseiten";
 import { site } from "@/lib/site";
+import { staedteseiten } from "@/lib/staedteseiten";
 import { articles } from "@/lib/wissen";
 
 // Impressum, Datenschutz und die Bestätigungsseite sind noindex und deshalb nicht enthalten.
@@ -14,6 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ["/", 1, lastUpdate],
     ...leistungsseiten.map((p): [string, number, string] => [`/${p.slug}`, 0.9, lastUpdate]),
     ["/dguv-v3-pruefung-kosten", 0.9, lastUpdate],
+    ...staedteseiten.map((p): [string, number, string] => [`/${p.slug}`, 0.8, lastUpdate]),
     ["/externer-betreibermanager", 0.8, lastUpdate],
     ...audiences.map((a): [string, number, string] => [`/betreiberpflichten/${a.slug}`, 0.8, lastUpdate]),
     ["/prueffristen", 0.8, lastUpdate],

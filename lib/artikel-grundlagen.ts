@@ -105,6 +105,39 @@ export const grundlagenArticles: Article[] = [
         type: "p",
         text: "Für einen Standort mit überschaubarem Bestand genügt eine sauber gepflegte Tabelle. Ab mehreren Standorten oder einigen hundert Positionen lohnt ein CAFM-System mit Fristenfunktion. Entscheidend ist nicht das Werkzeug, sondern dass jemand die Fälligkeiten tatsächlich überwacht. Diese Aufgabe übernimmt ein [externer Betreibermanager](/externer-betreibermanager).",
       },
+      { type: "h2", text: "Rechtsquellen je Anlage finden", id: "rechtsquellen" },
+      {
+        type: "table",
+        caption: "Wo die Pflichten für typische Anlagen stehen",
+        head: ["Anlage", "Rechtsquelle", "Beispiel einer Pflicht"],
+        rows: [
+          ["Elektrische Anlagen und Geräte", "DGUV Vorschrift 3 bzw. 4, BetrSichV", "Wiederholungsprüfung nach § 5 DGUV V3"],
+          ["Aufzüge", "BetrSichV Anhang 2 Abschnitt 2", "Haupt- und Zwischenprüfung durch ZÜS"],
+          ["Trinkwasser", "TrinkwV", "Legionellenuntersuchung nach § 31"],
+          ["RLT-Anlagen", "ArbStättV, VDI 6022", "Hygieneinspektion"],
+          ["Feuerlöscher", "ArbStättV, ASR A2.2, DIN 14406-4", "Instandhaltung mindestens alle 2 Jahre"],
+          ["Sicherheitstechnik in Sonderbauten", "Prüfverordnung des Landes", "Prüfung durch Prüfsachverständige"],
+          ["Regale", "BetrSichV, DIN EN 15635", "Experteninspektion mindestens alle 12 Monate"],
+          ["Fahrzeuge, Stapler", "DGUV Vorschrift 70, 68", "Sachkundigenprüfung mindestens jährlich"],
+        ],
+      },
+      {
+        type: "p",
+        text: "Die Tabelle ist ein Einstieg, keine vollständige Liste. Je nach Nutzung kommen weitere Rechtsquellen hinzu – Landesbauordnungen für Rauchwarnmelder, die Medizinprodukte-Betreiberverordnung in Kliniken und Pflege, das Wasserhaushaltsrecht für Anlagen mit wassergefährdenden Stoffen. Ein gutes Kataster zeigt bei jeder Zeile, aus welcher Quelle die Pflicht stammt, damit Änderungen der Rechtslage gezielt eingepflegt werden können.",
+      },
+      { type: "h2", text: "Das Kataster aktuell halten", id: "pflege" },
+      {
+        type: "p",
+        text: "Ein Kataster veraltet an drei Stellen: wenn sich Anlagen ändern (Neubau, Umbau, Austausch, Stilllegung), wenn sich die Nutzung ändert (ein Büro wird zur Kita, ein Lager zur Werkstatt) und wenn sich die Rechtslage ändert. Legen Sie für jede dieser Änderungsarten fest, wer das Kataster informiert. Bei Organisationen mit vielen Standorten sollte jede Baumaßnahme und jeder Mieterwechsel automatisch eine Prüfung des Katasters auslösen. Mindestens einmal jährlich wird das Kataster vollständig mit dem tatsächlichen Bestand abgeglichen – am besten bei einer Begehung, bei der auch Anlagen auffallen, die in keiner Liste stehen.",
+      },
+      {
+        type: "p",
+        text: "Ein Hinweis zum Umfang: Ein Kataster muss nicht am ersten Tag perfekt sein. Beginnen Sie mit den Anlagen, bei denen ein Versäumnis die schwersten Folgen hätte – Aufzüge, Brandschutztechnik, Trinkwasser, Elektro –, und ergänzen Sie danach Regale, Tore, Leitern und Außenanlagen. Wichtig ist, dass jede erfasste Pflicht sofort eine Frist und eine verantwortliche Person erhält. Ein unvollständiges, aber gepflegtes Kataster ist wertvoller als ein vollständiges, das niemand nutzt.",
+      },
+      {
+        type: "p",
+        text: "Für Wohnungsunternehmen, Kommunen und Klinikträger mit vielen Standorten empfiehlt sich eine einheitliche Struktur über alle Liegenschaften, damit Auswertungen und Statusberichte ohne Nacharbeit möglich sind.",
+      },
     ],
     faqs: [
       [
@@ -123,12 +156,16 @@ export const grundlagenArticles: Article[] = [
         "Was ist der Unterschied zwischen Rechtskataster und Betreiberpflichtenkataster?",
         "Ein Rechtskataster listet die geltenden Vorschriften, häufig im Umwelt- oder Arbeitsschutzmanagement. Das Betreiberpflichtenkataster geht weiter und ordnet jeder Anlage die konkreten Pflichten, Fristen, Zuständigkeiten und Nachweise zu.",
       ],
+      [
+        "Wie oft muss ein Betreiberpflichtenkataster aktualisiert werden?",
+        "Bei jeder Änderung an Anlagen, Nutzung oder Rechtslage und zusätzlich mindestens einmal jährlich in einem vollständigen Abgleich mit dem tatsächlichen Bestand.",
+      ],
     ],
     sources: [
     ["GEFMA 190", "Pflichtenermittlung, Delegation, Wirksamkeitskontrolle"],
     ["BetrSichV", "§ 3 Abs. 6, § 14, Anhang 2"],
     ["ArbSchG", "§ 5, § 13 Abs. 2"],
-    ["DGUV V3", "§ 5 mit Durchführungsanweisungen, Tabellen 1A–1C"],
+    ["DGUV V3", "§ 5 mit Durchführungsanweisungen, Tabellen 1A und 1B"],
     ["ArbStättV", "§ 4 Abs. 3"],
     ["TRBS 1203", "Anforderungen an zur Prüfung befähigte Personen"],
   ],
@@ -146,7 +183,7 @@ export const grundlagenArticles: Article[] = [
     cluster: "Grundlagen",
     title: "Wer haftet bei fehlenden Prüfungen? Betreiberhaftung erklärt",
     description:
-      "Wer haftet bei fehlenden Prüfungen? Zivil-, Straf- und Bußgeldhaftung von Unternehmen, Geschäftsführung und Beauftragten – mit Beispielen und Schutzmaßnahmen.",
+      "Wer haftet bei fehlenden Prüfungen? Zivil-, Straf- und Bußgeldhaftung von Unternehmen, Leitung und Beauftragten – mit Beispielen und Schutzmaßnahmen.",
     h1: "Wer haftet bei fehlenden Prüfungen? Haftung von Betreiber, Leitung und Beauftragten",
     kicker: "GRUNDLAGEN",
     teaser: "Zivil-, Straf- und Bußgeldhaftung – und wie eine saubere Organisation davor schützt.",
@@ -195,7 +232,7 @@ export const grundlagenArticles: Article[] = [
         type: "table",
         head: ["Verstoß", "Rechtsgrundlage", "Bußgeldrahmen"],
         rows: [
-          ["Arbeitsmittel nicht oder nicht rechtzeitig geprüft", "§ 22 Abs. 1 BetrSichV i. V. m. § 25 Abs. 2 ArbSchG", "bis 5.000 €"],
+          ["Arbeitsmittel vor der erstmaligen Verwendung bzw. Arbeitsmittel nach Anhang 3 nicht oder nicht rechtzeitig prüfen lassen", "§ 22 Abs. 1 Nr. 28 BetrSichV i. V. m. § 25 Abs. 2 ArbSchG", "bis 5.000 €"],
           ["Überwachungsbedürftige Anlage ohne vorgeschriebene Prüfung betrieben", "§ 22 BetrSichV", "Bußgeld nach § 22 Abs. 2 BetrSichV; bei Gefährdung von Leben oder Gesundheit Straftat nach § 23 BetrSichV"],
           ["Elektrische Anlagen entgegen § 5 DGUV Vorschrift 3 nicht geprüft", "§ 9 DGUV Vorschrift 3 i. V. m. § 209 SGB VII", "bis 10.000 €"],
           ["Aufsichtspflichtverletzung im Unternehmen", "§ 130 OWiG", "bis 1 Mio. €, wenn die Pflichtverletzung mit Strafe bedroht ist"],
@@ -221,6 +258,45 @@ export const grundlagenArticles: Article[] = [
           "Der Leitung regelmäßig schriftlich berichten – das ist der Nachweis der Kontrollpflicht",
         ],
       },
+      { type: "h2", text: "Haftung in Kommunen und bei sozialen Trägern", id: "oeffentlich" },
+      {
+        type: "p",
+        text: "Bei Kommunen tritt neben die zivilrechtliche Haftung die Amtshaftung: Verletzt ein Amtsträger in Ausübung eines öffentlichen Amtes eine Pflicht gegenüber Dritten, haftet grundsätzlich die Körperschaft (§ 839 BGB in Verbindung mit Art. 34 GG). Die Verkehrssicherungspflicht für öffentliche Gebäude wird in der Praxis häufig als Amtspflicht behandelt. Strafrechtlich bleibt es bei der persönlichen Verantwortung der handelnden Personen – Bürgermeister, Amtsleitungen, technische Leitungen und beauftragte Mitarbeiter können ebenso ins Visier von Ermittlungen geraten wie Geschäftsführer eines Unternehmens. § 130 OWiG gilt nach Abs. 2 ausdrücklich auch für öffentliche Unternehmen.",
+      },
+      {
+        type: "p",
+        text: "Bei sozialen Trägern, Kirchengemeinden und Vereinen ist die Verantwortung oft auf ehrenamtliche Vorstände verteilt. Auch sie tragen die Organisationsverantwortung für Gebäude und Anlagen, die der Träger betreibt. Gerade dort fehlt häufig eine klare schriftliche Aufgabenübertragung an Hauptamtliche oder Dienstleister – und damit der Nachweis, dass die Leitung ihre Auswahl-, Anweisungs- und Kontrollpflicht erfüllt hat.",
+      },
+      { type: "h2", text: "Wie eine wirksame Delegation aussieht", id: "delegation" },
+      {
+        type: "table",
+        caption: "Inhalt einer schriftlichen Pflichtenübertragung (Beispiel)",
+        head: ["Bestandteil", "Inhalt"],
+        rows: [
+          ["Aufgaben", "konkret benannte Pflichten, z. B. Organisation der Elektro- und Brandschutzprüfungen für die Liegenschaften A bis F"],
+          ["Befugnisse", "Beauftragung von Prüfdiensten bis zu einer Wertgrenze, Stilllegung von Anlagen bei Gefahr"],
+          ["Mittel", "Budget, Zugang zu Unterlagen, Unterstützung durch Fachkraft für Arbeitssicherheit"],
+          ["Berichtspflicht", "quartalsweiser Statusbericht an die Leitung"],
+          ["Qualifikation", "Nachweis, dass die Person zuverlässig und fachkundig ist"],
+          ["Unterschriften", "Leitung und beauftragte Person, mit Datum"],
+        ],
+      },
+      {
+        type: "p",
+        text: "§ 13 Abs. 2 ArbSchG verlangt für die Übertragung von Arbeitgeberpflichten die Schriftform. Eine Stellenbeschreibung, die nur allgemein von „Betreiberpflichten“ spricht, reicht dafür in der Regel nicht. Je konkreter die Übertragung, desto klarer ist im Schadensfall, wer welche Pflicht hatte.",
+      },
+      {
+        type: "p",
+        text: "Für die Praxis lässt sich die Haftungsfrage auf drei Prüffragen zurückführen, die im Schadensfall gestellt werden: Waren die Pflichten bekannt, also im Kataster erfasst? Waren sie wirksam einer Person oder einem Dienstleister übertragen, schriftlich und mit den nötigen Befugnissen? Und hat die Leitung kontrolliert, ob sie erfüllt werden? Wer alle drei Fragen mit Unterlagen beantworten kann, hat seine Organisationspflicht erfüllt – auch wenn im Einzelfall trotzdem etwas schiefgeht. Wer eine der Fragen nicht beantworten kann, hat ein Organisationsproblem, das über den Einzelfall hinausgeht.",
+      },
+      {
+        type: "p",
+        text: "Für Organisationen mit vielen Standorten ist der Statusbericht an die Leitung das zentrale Instrument: Er dokumentiert die Kontrollpflicht der Leitung und zeigt rechtzeitig, wo Fristen überschritten oder Mängel offen sind.",
+      },
+      {
+        type: "p",
+        text: "Der Bericht sollte schriftlich erfolgen und von der Leitung zur Kenntnis genommen werden – erst dann ist er im Ernstfall ein Beleg.",
+      },
     ],
     faqs: [
       [
@@ -239,13 +315,17 @@ export const grundlagenArticles: Article[] = [
         "Entlastet die Beauftragung eines Dienstleisters den Betreiber?",
         "Teilweise. Der Betreiber haftet dann nicht für jeden Fehler des Dienstleisters, muss aber nachweisen, dass er ihn sorgfältig ausgewählt, klar beauftragt und angemessen kontrolliert hat.",
       ],
+      [
+        "Haftet eine Kommune für fehlende Prüfungen in einer Schule?",
+        "Gegenüber Geschädigten kommt die Amtshaftung nach § 839 BGB in Verbindung mit Art. 34 GG in Betracht; die Körperschaft haftet dann anstelle des Amtsträgers. Strafrechtlich bleiben die handelnden Personen persönlich verantwortlich.",
+      ],
     ],
     sources: [
     ["BGB", "§§ 823, 831, 836"],
     ["OWiG", "§§ 9, 130"],
     ["ArbSchG", "§ 5, § 13 Abs. 2"],
     ["BetrSichV", "§ 3 Abs. 6, § 14, Anhang 2"],
-    ["DGUV V3", "§ 5 mit Durchführungsanweisungen, Tabellen 1A–1C"],
+    ["DGUV V3", "§ 5 mit Durchführungsanweisungen, Tabellen 1A und 1B"],
     ["GEFMA 190", "Pflichtenermittlung, Delegation, Wirksamkeitskontrolle"],
   ],
     related: [
@@ -338,6 +418,79 @@ export const grundlagenArticles: Article[] = [
           "Dokumentation der Kontrolle selbst – sie ist der Nachweis gegenüber Behörden und Gerichten",
         ],
       },
+      { type: "h2", text: "Typische Schnittstellen und ihre Regelung", id: "schnittstellen" },
+      {
+        type: "table",
+        caption: "Häufige Schnittstellen im Facility Management",
+        head: ["Schnittstelle", "Typisches Problem", "Regelung"],
+        rows: [
+          ["Eigentümer – Mieter", "Unklar, wer Arbeitsmittel und Gebäudetechnik prüft", "Pflichtenmatrix als Anlage zum Mietvertrag"],
+          ["Eigentümer – FM-Dienstleister", "Pflichten nur pauschal übertragen", "Leistungsverzeichnis mit Anlagenliste und Rechtsgrundlagen"],
+          ["FM-Dienstleister – Nachunternehmer", "Prüfer nicht qualifiziert, Protokolle fehlen", "Qualifikationsnachweise und Protokollformat im Vertrag"],
+          ["Technik – Hygiene (Klinik)", "Doppelte oder fehlende Prüfungen an RLT und Trinkwasser", "Schriftliche Zuständigkeitsregelung"],
+          ["Verwaltung – Nutzer (Schule)", "Mitgebrachte Geräte, Vereinsnutzung", "Hausordnung und Nutzungsvereinbarungen"],
+        ],
+      },
+      {
+        type: "p",
+        text: "Die meisten Lücken entstehen nicht durch fehlende Dienstleister, sondern durch ungeregelte Übergänge zwischen ihnen. Eine Schnittstellenliste – welche Pflicht liegt bei wem, wer meldet Mängel an wen, wer entscheidet über Maßnahmen – ist deshalb so wichtig wie das Kataster selbst.",
+      },
+      { type: "h2", text: "Leistungsverzeichnisse richtig aufbauen", id: "leistungsverzeichnis" },
+      {
+        type: "p",
+        text: "Ein FM-Vertrag überträgt nur, was im Leistungsverzeichnis konkret steht. Bewährt hat sich eine Struktur, die jeder Anlage aus dem Betreiberpflichtenkataster eine Leistung, ein Intervall, eine Rechtsgrundlage und eine Dokumentationspflicht zuordnet. GEFMA bietet dafür Arbeitshilfen; viele öffentliche Auftraggeber orientieren sich zusätzlich an den Empfehlungen des Arbeitskreises Maschinen- und Elektrotechnik staatlicher und kommunaler Verwaltungen (AMEV). Entscheidend ist, dass das Leistungsverzeichnis aus dem Kataster entsteht und nicht umgekehrt – sonst decken Verträge nur ab, was der Dienstleister ohnehin anbietet.",
+      },
+      {
+        type: "checklist",
+        items: [
+          "Jede Position mit Anlage, Leistung, Intervall und Rechtsgrundlage",
+          "Qualifikation des Personals je Leistung",
+          "Format und Frist für Berichte und Protokolle",
+          "Mängelmeldung mit Fristen nach Dringlichkeit",
+          "Schnittstellen zu anderen Dienstleistern und zum Nutzer",
+          "Kennzahlen für das Berichtswesen, z. B. Anteil fristgerecht erledigter Prüfungen",
+        ],
+      },
+      { type: "h2", text: "FM über mehrere Standorte steuern", id: "steuerung" },
+      {
+        type: "p",
+        text: "Bei Wohnungsunternehmen, Kommunen und Klinikverbünden arbeiten oft mehrere FM-Dienstleister nebeneinander – regional verteilt oder nach Gewerken getrennt. Die Betreiberorganisation braucht dann eine Stelle, die alle Verträge, Fristen und Berichte zusammenführt. Ohne diese Stelle hat jeder Dienstleister seinen Ausschnitt im Blick, aber niemand das Ganze. Das ist die Aufgabe eines Betreibermanagements, intern oder extern: Pflichten aus dem Kataster in Verträge übersetzen, Erfüllung kontrollieren und der Leitung berichten.",
+      },
+      { type: "h2", text: "Häufige Fehler in FM-Verträgen", id: "fehler" },
+      {
+        type: "checklist",
+        items: [
+          "Pauschale Übertragung „aller Betreiberpflichten“ ohne Anlagenliste",
+          "Keine Regelung, wer Prüfungen durch ZÜS oder Prüfsachverständige beauftragt",
+          "Mängel werden gemeldet, aber niemand ist befugt, die Behebung zu beauftragen",
+          "Berichte nur auf Anfrage statt regelmäßig",
+          "Kein Recht des Betreibers, Prüfnachweise und Qualifikationsnachweise einzusehen",
+        ],
+      },
+      {
+        type: "p",
+        text: "Diese Fehler fallen meist erst auf, wenn etwas passiert. Dann zeigt sich, dass der Dienstleister seinen Vertrag erfüllt hat, die eigentliche Pflicht aber nicht abgedeckt war. Eine jährliche Überprüfung der Verträge gegen das Betreiberpflichtenkataster schließt diese Lücken: Jede Pflicht im Kataster muss einer Vertragsposition oder einer internen Stelle zugeordnet sein. Was übrig bleibt, ist eine offene Pflicht und muss vergeben werden.",
+      },
+      { type: "h2", text: "Kennzahlen für die Steuerung", id: "kennzahlen" },
+      {
+        type: "table",
+        head: ["Kennzahl", "Aussage"],
+        rows: [
+          ["Anteil fristgerecht durchgeführter Prüfungen", "Wie zuverlässig arbeitet die Organisation?"],
+          ["Zahl überfälliger Prüfungen", "Wo besteht akuter Handlungsbedarf?"],
+          ["Offene Mängel nach Alter", "Werden Mängel behoben oder nur verwaltet?"],
+          ["Anlagen ohne zugeordnete Zuständigkeit", "Wo fehlt die Delegation?"],
+          ["Verträge ohne Qualifikationsnachweis", "Ist die Auswahlpflicht erfüllt?"],
+        ],
+      },
+      {
+        type: "p",
+        text: "Wenige Kennzahlen genügen, um die Kontrollpflicht wirksam wahrzunehmen. Sie gehören in den regelmäßigen Bericht an Geschäftsführung, Vorstand oder Verwaltungsleitung und zeigen über die Zeit, ob die Betreiberorganisation besser wird.",
+      },
+      {
+        type: "p",
+        text: "Für öffentliche Auftraggeber haben Kennzahlen einen zusätzlichen Nutzen: Sie machen die Leistung verschiedener Dienstleister vergleichbar und liefern Argumente für die nächste Vergabe. Wer über mehrere Jahre sieht, dass ein Dienstleister Fristen regelmäßig überschreitet oder Mängel lange offen lässt, kann das bei der Neuausschreibung berücksichtigen. Ebenso zeigen die Kennzahlen, wo interne Abläufe hakeln – etwa wenn Mängel zwar gemeldet, aber mangels Freigabe nicht beauftragt werden. Solche Engpässe lassen sich durch klare Wertgrenzen und Befugnisse beheben. Ein jährliches Gespräch mit jedem Dienstleister auf Basis dieser Zahlen hält beide Seiten im Takt.",
+      },
     ],
     faqs: [
       [
@@ -356,12 +509,16 @@ export const grundlagenArticles: Article[] = [
         "Welche Betreiberpflichten gibt es im Facility Management?",
         "Unter anderem Prüf- und Wartungspflichten für technische Anlagen, Verkehrssicherungspflichten für Gebäude und Außenanlagen, Dokumentationspflichten, Unterweisungspflichten sowie Organisations- und Kontrollpflichten gegenüber eingesetzten Dienstleistern.",
       ],
+      [
+        "Was gehört in ein Leistungsverzeichnis für FM-Dienstleister?",
+        "Je Anlage die Leistung, das Intervall, die Rechtsgrundlage, die Qualifikation des Personals, Format und Frist der Dokumentation, die Regelung für Mängel und die Schnittstellen zu anderen Beteiligten.",
+      ],
     ],
     sources: [
     ["GEFMA 190", "Pflichtenermittlung, Delegation, Wirksamkeitskontrolle"],
     ["BetrSichV", "§ 3 Abs. 6, § 14, Anhang 2"],
     ["ArbStättV", "§ 4 Abs. 3"],
-    ["DGUV V3", "§ 5 mit Durchführungsanweisungen, Tabellen 1A–1C"],
+    ["DGUV V3", "§ 5 mit Durchführungsanweisungen, Tabellen 1A und 1B"],
     ["ArbSchG", "§ 5, § 13 Abs. 2"],
     ["BGB", "§§ 823, 831, 836"],
   ],
@@ -379,7 +536,7 @@ export const grundlagenArticles: Article[] = [
     cluster: "Organisation",
     title: "Betreiberpflichten bei Objektübernahme – Checkliste",
     description:
-      "Betreiberpflichten bei Objektübernahmen: Welche Unterlagen, Prüfnachweise und Verträge Sie bei Kauf, Neubau oder Mieterwechsel übernehmen müssen – Checkliste.",
+      "Betreiberpflichten bei Objektübernahmen: welche Unterlagen, Prüfnachweise und Verträge Sie bei Kauf, Neubau oder Mieterwechsel brauchen – Checkliste.",
     h1: "Betreiberpflichten bei Objektübernahmen: Unterlagen, Prüfstatus und Fristen sichern",
     kicker: "ORGANISATION",
     teaser: "Was Käufer, Bauherren und neue Betreiber am ersten Tag wissen müssen.",
@@ -441,6 +598,65 @@ export const grundlagenArticles: Article[] = [
         type: "p",
         text: "In Sonderbauten verlangen die Prüfverordnungen der Länder, dass sicherheitstechnische Anlagen vor der ersten Inbetriebnahme durch Prüfsachverständige geprüft werden. Aufzüge und überwachungsbedürftige Druckanlagen brauchen eine Prüfung vor Inbetriebnahme durch die ZÜS (§ 15 BetrSichV), elektrische Anlagen eine Erstprüfung. Mit der Abnahme beginnen die wiederkehrenden Fristen – sie müssen ab dem ersten Tag überwacht werden.",
       },
+      { type: "h2", text: "Technische Due Diligence: worauf es ankommt", id: "due-diligence" },
+      {
+        type: "p",
+        text: "Vor einem Ankauf zeigt die technische Due Diligence, welche Betreiberpflichten das Objekt auslöst und ob sie bisher erfüllt wurden. Dabei geht es nicht nur um den baulichen Zustand, sondern um Nachweise: Liegen für alle prüfpflichtigen Anlagen aktuelle Prüfberichte vor? Sind Mängel aus diesen Berichten behoben? Gibt es behördliche Auflagen oder offene Beanstandungen aus einer Brandschau? Fehlende Nachweise sind kein Ausschlussgrund, aber ein Kostenfaktor: Nachgeholte Prüfungen, Mängelbeseitigung und eventuell Stilllegungen bis zur Prüfung gehören in die Kaufpreisverhandlung oder in die Gewährleistungsregelung.",
+      },
+      {
+        type: "table",
+        caption: "Prüfpunkte der technischen Due Diligence aus Sicht der Betreiberpflichten",
+        head: ["Bereich", "Frage", "Risiko bei fehlendem Nachweis"],
+        rows: [
+          ["Aufzüge", "Aktuelle Prüfbescheinigung der ZÜS, Notrufsystem?", "Stilllegung bis zur Prüfung"],
+          ["Brandschutz", "Prüfberichte der Prüfsachverständigen, Wartung BMA, RWA, Feuerlöscher?", "Auflagen der Bauaufsicht, Nutzungsuntersagung im Extremfall"],
+          ["Elektro", "Prüfprotokolle ortsfester Anlagen?", "Nachprüfung, Mängelbeseitigung"],
+          ["Trinkwasser", "Legionellenbefunde, Probennahmestellen?", "Nachuntersuchung, Nachrüstung, ggf. Sanierung"],
+          ["Lüftung", "Hygieneinspektionsberichte?", "Inspektion und Reinigung"],
+          ["Verträge", "Laufzeiten, Kündigungsfristen, Leistungsumfang?", "Doppelte Kosten, Lücken nach Übergang"],
+        ],
+      },
+      { type: "h2", text: "Häufige Fehler bei Übernahmen", id: "fehler" },
+      {
+        type: "checklist",
+        items: [
+          "Unterlagen nach dem Übergang angefordert statt vor der Unterzeichnung",
+          "Wartungsverträge des Verkäufers ungeprüft weiterlaufen lassen oder gekündigt, ohne Ersatz",
+          "Prüffristen aus alten Berichten nicht übernommen – die nächste Fälligkeit wird übersehen",
+          "Anlagen im Mieterbereich nicht erfasst, weil sie in keiner Liste standen",
+          "Zuständigkeit im eigenen Haus für das neue Objekt nicht festgelegt",
+        ],
+      },
+      { type: "h2", text: "Übernahme im Wohnungsbestand und bei Kommunen", id: "bestand" },
+      {
+        type: "p",
+        text: "Wohnungsunternehmen übernehmen Objekte häufig im Paket – etwa beim Ankauf eines Portfolios oder bei der Fusion zweier Genossenschaften. Die Prüfung jedes einzelnen Gebäudes ist dann aufwendig, aber notwendig: Legionellenpflicht, Aufzüge, Tiefgaragen und Spielplätze unterscheiden sich von Objekt zu Objekt. Kommunen übernehmen Gebäude bei Schulneubauten, Rückkäufen aus PPP-Modellen oder Eingemeindungen. In allen Fällen gilt: Die Betreiberpflichten beginnen mit dem Übergang, unabhängig davon, ob die Unterlagen vollständig sind. Wer die Übernahme mit einem Kataster abschließt, hat ab dem ersten Tag einen Fristenplan.",
+      },
+      { type: "h2", text: "Die ersten 100 Tage nach dem Übergang", id: "hundert-tage" },
+      {
+        type: "table",
+        head: ["Zeitraum", "Aufgabe", "Ergebnis"],
+        rows: [
+          ["Tag 1", "Übergabeprotokoll mit Unterlagen, Schlüsseln und offenen Mängeln", "dokumentierter Ausgangszustand"],
+          ["Woche 1", "überfällige sicherheitsrelevante Prüfungen beauftragen, gefährliche Anlagen sichern", "kein Betrieb ohne Prüfung"],
+          ["Monat 1", "Betreiberpflichtenkataster anlegen, Zuständigkeiten festlegen", "vollständige Pflichtenliste"],
+          ["Monat 2", "Verträge prüfen, übernehmen, kündigen oder neu vergeben", "lückenlose Leistungsabdeckung"],
+          ["Monat 3", "Fristenplan in die laufende Überwachung übernehmen, erster Statusbericht", "Regelbetrieb"],
+        ],
+      },
+      {
+        type: "p",
+        text: "Der Zeitplan ist ehrgeizig, aber realistisch, wenn die Unterlagen vor dem Übergang angefordert wurden. Kritisch sind die ersten Tage: Eine Aufzugsprüfung, die seit Monaten überfällig ist, wird mit dem Übergang zum Risiko des neuen Eigentümers. Wer in der ersten Woche handelt und dokumentiert, steht im Schadensfall deutlich besser da als jemand, der erst den vollständigen Überblick abwartet. Für Wohnungsunternehmen, Kommunen und Klinikträger, die regelmäßig Objekte übernehmen, lohnt sich ein standardisierter Übernahmeprozess mit Checkliste und Verantwortlichen.",
+      },
+      { type: "h2", text: "Übernahme bei Mieterwechsel", id: "mieterwechsel" },
+      {
+        type: "p",
+        text: "Ein Sonderfall ist der Auszug eines Mieters, der ein Gebäude allein genutzt und als Betreiber vieler Anlagen auftrat – etwa eines Logistikers in einer Halle oder einer Klinik in einem gemieteten Gebäude. Mit dem Auszug fallen Pflichten an den Eigentümer zurück, die er jahrelang nicht wahrgenommen hat. Lassen Sie sich bei der Rückgabe die Prüfnachweise und Wartungsverträge übergeben, erfassen Sie Einbauten des Mieters und klären Sie, welche Anlagen zurückgebaut werden. Bis zur Neuvermietung bleiben Verkehrssicherung, Trinkwasser und Brandschutz Pflichten des Eigentümers, auch im Leerstand.",
+      },
+      {
+        type: "p",
+        text: "Im Leerstand ändern sich manche Pflichten, andere nicht. Trinkwasseranlagen müssen weiter so betrieben werden, dass sich keine Legionellen vermehren – Stagnation im Leerstand ist ein typisches Risiko. Aufzüge, die außer Betrieb genommen werden, sollten formal stillgelegt und gesichert werden. Brandschutz und Verkehrssicherung bleiben in vollem Umfang bestehen. Wer leerstehende Objekte im Kataster als eigenen Status führt, behält diese Pflichten im Blick, bis das Objekt wieder genutzt wird. Das gilt auch für Teilleerstand in einzelnen Etagen oder Gebäudeteilen.",
+      },
     ],
     faqs: [
       [
@@ -459,11 +675,15 @@ export const grundlagenArticles: Article[] = [
         "Gehen Wartungsverträge beim Kauf automatisch über?",
         "Nicht automatisch. Ob Verträge übergehen, hängt von den Vertragsregelungen und der Vereinbarung im Kaufvertrag ab. Deshalb gehört die Prüfung laufender Verträge zur Übernahme.",
       ],
+      [
+        "Wer haftet für Prüfungen, die der Verkäufer versäumt hat?",
+        "Für Schäden nach dem Übergang haftet grundsätzlich der neue Betreiber, wenn er die Lücke kennen musste und nicht gehandelt hat. Ansprüche gegen den Verkäufer richten sich nach dem Kaufvertrag. Deshalb gehören fehlende Nachweise vor der Unterzeichnung auf den Tisch.",
+      ],
     ],
     sources: [
     ["BetrSichV", "§ 3 Abs. 6, § 14, Anhang 2"],
     ["PrüfVO", "wiederkehrende Prüfungen sicherheitstechnischer Anlagen"],
-    ["DGUV V3", "§ 5 mit Durchführungsanweisungen, Tabellen 1A–1C"],
+    ["DGUV V3", "§ 5 mit Durchführungsanweisungen, Tabellen 1A und 1B"],
     ["TrinkwV", "§ 31, § 51"],
     ["VDI 6022", "Hygienekontrollen und Hygieneinspektionen"],
     ["GEFMA 190", "Pflichtenermittlung, Delegation, Wirksamkeitskontrolle"],
@@ -474,121 +694,5 @@ export const grundlagenArticles: Article[] = [
       ["Betreiberpflichten Wohnungsunternehmen", "/betreiberpflichten/wohnungsunternehmen", "Zukäufe im Wohnungsbestand"],
     ],
     cta: "Objektübernahme strukturiert begleiten lassen.",
-  },
-  {
-    slug: "dguv-v3-prueffristen-organisieren",
-    keyword: "dguv v3 prüffristen organisieren",
-    secondary: [],
-    cluster: "Organisation",
-    areas: ["dguv-v3-pruefung"],
-    title: "DGUV V3 Prüffristen richtig organisieren – Leitfaden",
-    description:
-      "DGUV-V3-Prüffristen organisieren: Fristen festlegen, Gefährdungsbeurteilung, Fehlerquote, Geräteerfassung und Fristenüberwachung für mehrere Standorte.",
-    h1: "DGUV-V3-Prüffristen richtig organisieren: von der Geräteliste bis zur Fristverlängerung",
-    kicker: "ORGANISATION",
-    teaser: "Fristen begründet festlegen, Geräte erfassen, Fehlerquote nutzen – für einen oder viele Standorte.",
-    published,
-    modified: published,
-    lead: [
-      "DGUV-V3-Prüffristen werden vom Betreiber in der Gefährdungsbeurteilung festgelegt. Die Durchführungsanweisungen zur DGUV Vorschrift 3 nennen Richtwerte: vier Jahre für ortsfeste Anlagen, sechs Monate für ortsveränderliche Betriebsmittel – verlängerbar bis auf zwei Jahre, wenn die Fehlerquote unter 2 Prozent liegt. Gut organisiert wird daraus ein planbarer Jahreskalender statt einer Folge von Einzelterminen.",
-    ],
-    blocks: [
-      { type: "h2", text: "Richtwerte der DGUV Vorschrift 3", id: "richtwerte" },
-      {
-        type: "table",
-        caption: "Richtwerte nach den Durchführungsanweisungen zu § 5 DGUV Vorschrift 3",
-        head: ["Anlage / Betriebsmittel", "Richtwert", "Prüfer", "Tabelle"],
-        rows: [
-          ["Elektrische Anlagen und ortsfeste Betriebsmittel", "4 Jahre", "Elektrofachkraft", "1A"],
-          ["Anlagen in Räumen besonderer Art (DIN VDE 0100-700 ff.)", "1 Jahr", "Elektrofachkraft", "1A"],
-          ["Ortsveränderliche Betriebsmittel", "6 Monate, Baustellen 3 Monate", "Elektrofachkraft; mit Messgerät auch EuP", "1B"],
-          ["… bei Fehlerquote unter 2 %", "bis 1 Jahr (Werkstatt, Fertigung) bzw. 2 Jahre (Büro)", "wie oben", "1B"],
-          ["RCD in stationären Anlagen", "Prüftaste alle 6 Monate", "Benutzer", "1C"],
-        ],
-      },
-      {
-        type: "note",
-        text: "Für Kommunen und andere Mitglieder der Unfallkassen gilt die inhaltsgleiche DGUV Vorschrift 4. Alle Fristen mit Rechtsgrundlage: [DGUV V3 Prüfung](/dguv-v3-pruefung).",
-      },
-      { type: "h2", text: "Frist festlegen: die Gefährdungsbeurteilung", id: "festlegen" },
-      {
-        type: "p",
-        text: "Verbindlich ist nicht der Richtwert, sondern die Frist, die der Betreiber nach § 3 Abs. 6 BetrSichV so bemisst, dass die Arbeitsmittel bis zur nächsten Prüfung sicher verwendet werden können. Kriterien sind Beanspruchung, Umgebungsbedingungen, Nutzungshäufigkeit, Nutzerkreis und Erfahrungen aus früheren Prüfungen.",
-      },
-      {
-        type: "table",
-        head: ["Einsatzbereich", "Typische Festlegung ortsveränderlicher Geräte", "Begründung"],
-        rows: [
-          ["Büro, Verwaltung", "12–24 Monate", "geringe Beanspruchung, Fehlerquote meist niedrig"],
-          ["Schule, Kita (Lehrerzimmer, Küche)", "12 Monate", "wechselnde Nutzer, mitgebrachte Geräte"],
-          ["Hausmeisterwerkstatt, Bauhof", "6–12 Monate", "mechanische Beanspruchung"],
-          ["Baustelle, Außeneinsatz", "3 Monate", "hohe Beanspruchung, Feuchtigkeit"],
-          ["Großküche", "6–12 Monate", "Feuchtigkeit, Wärme, Reinigung"],
-        ],
-      },
-      { type: "h2", text: "Prüffristen organisieren in sechs Schritten", id: "organisieren" },
-      {
-        type: "steps",
-        items: [
-          "**Bestand erfassen:** Geräte und Anlagen je Raum mit Inventarnummer, Geräteart, Schutzklasse und letztem Prüfdatum.",
-          "**Gruppen bilden:** Geräte nach Einsatzbereich zusammenfassen und je Gruppe eine Frist festlegen.",
-          "**Fristen dokumentieren:** Begründung in der Gefährdungsbeurteilung festhalten.",
-          "**Termine bündeln:** Prüfungen je Standort oder Region auf feste Monate legen; ortsfeste Anlagen und Geräte im selben Termin prüfen, wenn möglich.",
-          "**Protokolle auswerten:** Fehlerquote je Gruppe aus den Prüfprotokollen ablesen.",
-          "**Fristen anpassen:** Bei belegter Fehlerquote unter 2 % verlängern, bei hoher Quote verkürzen – jeweils dokumentiert.",
-        ],
-      },
-      {
-        type: "example",
-        title: "Verwaltung mit 1.200 Geräten an neun Standorten",
-        text: [
-          "Bisher: jährliche Prüfung aller Geräte, verteilt auf 30 Einzeltermine. Nach Auswertung der Protokolle liegt die Fehlerquote in den Büros bei 0,8 %, in den Werkstätten bei 4,1 %.",
-          "Neu: Bürogeräte alle 24 Monate, Werkstattgeräte alle 6 Monate, Prüfungen in drei regionalen Blöcken. Die Zahl der jährlichen Geräteprüfungen sinkt deutlich, während die risikoreichen Bereiche häufiger geprüft werden. Was das finanziell bedeutet, zeigt die Seite [DGUV V3 Prüfung Kosten](/dguv-v3-pruefung-kosten).",
-        ],
-      },
-      { type: "h2", text: "Checkliste für das Prüfprotokoll", id: "protokoll" },
-      {
-        type: "checklist",
-        items: [
-          "Eindeutige Geräte-ID und Standort",
-          "Angewandte Norm (DIN EN 50699 / VDE 0702 bzw. DIN VDE 0105-100)",
-          "Messwerte und Bewertung bestanden / nicht bestanden",
-          "Name und Qualifikation des Prüfers, verwendetes Messgerät",
-          "Prüfdatum und nächster Prüftermin",
-          "Festgestellte Mängel mit Maßnahme",
-          "Auswertbar nach Gerätegruppe – Voraussetzung für die Fristverlängerung",
-        ],
-      },
-    ],
-    faqs: [
-      [
-        "Wer legt die DGUV-V3-Prüffristen fest?",
-        "Der Unternehmer bzw. Betreiber in der Gefährdungsbeurteilung nach § 3 Abs. 6 BetrSichV. Die Tabellen der Durchführungsanweisungen zur DGUV Vorschrift 3 liefern dafür Richtwerte.",
-      ],
-      [
-        "Kann die Prüffrist für Bürogeräte auf zwei Jahre verlängert werden?",
-        "Ja, wenn bei den Prüfungen eine Fehlerquote unter 2 Prozent nachgewiesen ist. Dann nennt Tabelle 1B als Maximum zwei Jahre für Büros und ähnliche Bedingungen. Die Begründung muss dokumentiert sein.",
-      ],
-      [
-        "Was ist die Fehlerquote bei der DGUV-V3-Prüfung?",
-        "Der Anteil der geprüften Betriebsmittel, bei denen Mängel festgestellt wurden. Sie wird aus den Prüfprotokollen je Gerätegruppe ermittelt und ist Grundlage für die Verlängerung oder Verkürzung der Frist.",
-      ],
-      [
-        "Müssen neue Geräte sofort geprüft werden?",
-        "Die DGUV Vorschrift 3 verlangt eine Prüfung vor der ersten Inbetriebnahme. Bei neuen Geräten mit Herstellerbestätigung über die Einhaltung der elektrotechnischen Regeln entfällt diese Erstprüfung in der Regel; sie werden dann in den Prüfzyklus aufgenommen.",
-      ],
-    ],
-    sources: [
-    ["DGUV V3", "§ 5 mit Durchführungsanweisungen, Tabellen 1A–1C"],
-    ["BetrSichV", "§ 3 Abs. 6, § 14, Anhang 2"],
-    ["TRBS 1203", "Anforderungen an zur Prüfung befähigte Personen"],
-    ["ArbSchG", "§ 5, § 13 Abs. 2"],
-  ],
-    related: [
-      ["DGUV V3 Prüfung", "/dguv-v3-pruefung", "Prüfbereich Elektrotechnik"],
-      ["DGUV V3 Prüfung Kosten", "/dguv-v3-pruefung-kosten", "Preise und Rechenbeispiel"],
-      ["Prüffristen im Überblick", "/prueffristen", "Alle Prüfbereiche"],
-    ],
-    cta: "DGUV-V3-Prüfungen über alle Standorte koordinieren lassen.",
   },
 ];

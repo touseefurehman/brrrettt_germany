@@ -37,7 +37,11 @@ export type NormKey =
   | "ASR A1.7"
   | "DGUV I 208-016"
   | "VDI 6022-4"
-  | "GEG";
+  | "GEG"
+  | "DGUV V1"
+  | "TRBS 1201"
+  | "DGUV G 314-003"
+  | "DIN VDE 1000-10";
 
 export type Norm = { name: string; title: string; version: string; url?: string };
 
@@ -207,6 +211,26 @@ export const norms: Record<NormKey, Norm> = {
   "VDI 6022-4": {
     name: "VDI 6022 Blatt 4",
     title: "Qualifizierung von Personal für Hygienekontrollen und Hygieneinspektionen",
+    version: "geltende Ausgabe",
+  },
+  "DGUV V1": {
+    name: "DGUV Vorschrift 1",
+    title: "Grundsätze der Prävention",
+    version: "11/2013",
+  },
+  "TRBS 1201": {
+    name: "TRBS 1201",
+    title: "Technische Regel für Betriebssicherheit „Prüfungen und Kontrollen von Arbeitsmitteln und überwachungsbedürftigen Anlagen“",
+    version: "geltende Ausgabe",
+  },
+  "DGUV G 314-003": {
+    name: "DGUV Grundsatz 314-003",
+    title: "Prüfung von Fahrzeugen durch Sachkundige",
+    version: "geltende Ausgabe",
+  },
+  "DIN VDE 1000-10": {
+    name: "DIN VDE 1000-10",
+    title: "Anforderungen an die im Bereich der Elektrotechnik tätigen Personen",
     version: "geltende Ausgabe",
   },
   GEG: {

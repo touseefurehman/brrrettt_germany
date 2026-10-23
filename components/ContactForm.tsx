@@ -10,6 +10,7 @@ import { emailLink, hasPhone, phoneLink, site } from "@/lib/site";
 
 type Status = "idle" | "sending" | "error";
 
+// Versand ausschließlich über Web3Forms (web3forms.com); Zustellung an die E-Mail-Adresse dieses Access Keys
 const WEB3FORMS_ACCESS_KEY = "c0e91a82-de38-4bc2-b228-cdc1fcd7b8be";
 
 /**
@@ -30,38 +31,33 @@ export default function ContactForm({ source }: { source: string }) {
     const data = Object.fromEntries(new FormData(form)) as Record<string, string>;
     setStatus("sending");
     setError("");
+    // Spam-Schutz: Honeypot gefüllt oder in unter 3 Sekunden abgeschickt → still verwerfen
+    if (data.website || Date.now() - startedAt.current < 3000) {
+      router.push("/anfrage-gesendet");
+      return;
+    }
     try {
-      let res = await fetch("/api/kontakt", {
+      const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...data, elapsed: Date.now() - startedAt.current }),
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: `Bestandsaufnahme angefragt – ${(data.organisation ?? "").trim()} (${data.standorte} Standorte)`,
+          from_name: "betreibermanager.de",
+          botcheck: false,
+          Organisation: data.organisation,
+          Ansprechpartner: data.name,
+          email: data.email,
+          Telefon: data.phone || "–",
+          "Anzahl Standorte": data.standorte,
+          Nachricht: data.message || "–",
+          Seite: source,
+          Einwilligung: "erteilt",
+        }),
       });
-      // 503 = Resend noch nicht konfiguriert → Versand über Web3Forms
-      if (res.status === 503) {
-        res = await fetch("https://api.web3forms.com/submit", {
-          method: "POST",
-          headers: { "Content-Type": "application/json", Accept: "application/json" },
-          body: JSON.stringify({
-            access_key: WEB3FORMS_ACCESS_KEY,
-            subject: `Bestandsaufnahme angefragt – ${(data.organisation ?? "").trim()} (${data.standorte} Standorte)`,
-            from_name: "betreibermanager.de",
-            Organisation: data.organisation,
-            Ansprechpartner: data.name,
-            email: data.email,
-            Telefon: data.phone || "–",
-            "Anzahl Standorte": data.standorte,
-            Nachricht: data.message || "–",
-            Seite: source,
-            Einwilligung: "erteilt",
-          }),
-        });
-        const result = (await res.json().catch(() => ({}))) as { success?: boolean };
-        if (!res.ok || !result.success) {
-          throw new Error(`Der Versand ist fehlgeschlagen. Bitte schreiben Sie an ${site.email}.`);
-        }
-      } else if (!res.ok) {
-        const body = (await res.json().catch(() => ({}))) as { error?: string };
-        throw new Error(body.error || "Die Anfrage konnte nicht gesendet werden.");
+      const result = (await res.json().catch(() => ({}))) as { success?: boolean };
+      if (!res.ok || !result.success) {
+        throw new Error(`Der Versand ist fehlgeschlagen. Bitte schreiben Sie an ${site.email}.`);
       }
       track("generate_lead", { source_page: source, locations: Number(data.standorte) || 0 });
       router.push(`/anfrage-gesendet?quelle=${encodeURIComponent(source)}`);

@@ -24,8 +24,6 @@ const authorities: Record<string, string> = {
 };
 const authority = authorities[site.state];
 
-// Gleiche Bedingung wie in app/api/kontakt/route.ts: ohne Resend-Konfiguration versendet das Formular über Web3Forms
-const usesResend = Boolean(process.env.RESEND_API_KEY && process.env.CONTACT_FROM);
 
 export const metadata: Metadata = {
   title: "Datenschutzerklärung | betreibermanager.de",
@@ -86,21 +84,10 @@ export default function DatenschutzPage() {
           im Übrigen Art. 6 Abs. 1 lit. f DSGVO.
         </p>
         <p>
-          {usesResend ? (
-            <>
-              Für die Zustellung der Formularnachrichten nutzen wir den E-Mail-Versanddienst Resend (Resend Inc., USA).
-              Die Übermittlung in die USA stützt sich auf EU-Standardvertragsklauseln (Art. 46 Abs. 2 lit. c DSGVO); mit
-              dem Anbieter besteht ein Vertrag zur Auftragsverarbeitung nach Art. 28 DSGVO.
-            </>
-          ) : (
-            <>
-              Für die Zustellung der Formularnachrichten nutzen wir den Formulardienst Web3Forms (web3forms.com). Ihre
-              Angaben werden beim Absenden direkt aus Ihrem Browser an den Dienst übertragen und von dort per E-Mail an
-              uns weitergeleitet. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO; unser berechtigtes Interesse liegt in
-              der zuverlässigen Zustellung Ihrer Anfrage.
-            </>
-          )}{" "}
-          Ihre Daten werden gelöscht, sobald die Anfrage abschließend bearbeitet ist und keine gesetzlichen
+          Für die Zustellung der Formularnachrichten nutzen wir den Formulardienst Web3Forms (web3forms.com). Ihre
+          Angaben werden beim Absenden direkt aus Ihrem Browser an den Dienst übertragen und von dort per E-Mail an uns
+          weitergeleitet. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO; unser berechtigtes Interesse liegt in der
+          zuverlässigen Zustellung Ihrer Anfrage. Ihre Daten werden gelöscht, sobald die Anfrage abschließend bearbeitet ist und keine gesetzlichen
           Aufbewahrungspflichten entgegenstehen.
         </p>
 

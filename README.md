@@ -17,24 +17,17 @@ Next.js 15 (App Router), gehostet auf Vercel.
 - Jede neue Seite bekommt FAQ (inkl. FAQPage-Schema), Breadcrumb-Schema, Canonical und Regelwerksverweise; Artikel zusätzlich Article-Schema mit Datum (`modified` bei Änderungen pflegen).
 - Kostenmodell auf `/externer-betreibermanager` ohne Zahlen – siehe TODO in `lib/leistungen.ts`. Praxisbeispiele sind als veranschaulichende Beispiele gekennzeichnet; durch echte Referenzen ersetzen, sobald freigegeben.
 
-## Umgebungsvariablen (Kontaktformular)
+## Kontaktformular und Umgebungsvariablen
 
-Versand über die Resend-API (`app/api/kontakt/route.ts`):
+Das Formular sendet direkt aus dem Browser an Web3Forms (Access Key in `components/ContactForm.tsx`, derselbe wie bei lieferantgesucht.de). Die Anfragen gehen an die E-Mail-Adresse, mit der dieser Access Key bei web3forms.com registriert ist. Spam-Schutz: verstecktes Honeypot-Feld, Mindestzeit von 3 Sekunden, `botcheck` von Web3Forms.
 
-| Variable         | Beispiel                                          |
-| ---------------- | ------------------------------------------------- |
-| `RESEND_API_KEY` | `re_…`                                            |
-| `CONTACT_FROM`   | `Website <anfrage@betreibermanager.de>` (Domain bei Resend verifizieren) |
-| `CONTACT_TO`     | `kontakt@betreibermanager.de` (optional)          |
-
+| Variable            | Beispiel                                             |
+| ------------------- | ---------------------------------------------------- |
 | `NEXT_PUBLIC_GA_ID` | `G-XXXXXXXXXX` – GA4-Mess-ID (optional, siehe unten) |
 
 Das Formular „Bestandsaufnahme anfragen“ hat die Pflichtfelder Organisation, Ansprechpartner, E-Mail und Anzahl Standorte (Lastenheft L-02/L-03). Nach dem Versand leitet es auf `/anfrage-gesendet` weiter und sendet das GA4-Event `generate_lead` mit `source_page` und `locations`.
 
 **Google Analytics** wird nur geladen, wenn `NEXT_PUBLIC_GA_ID` gesetzt ist **und** der Besucher im Einwilligungsbanner zustimmt. Ohne ID bleibt die Seite cookiefrei; Datenschutzerklärung und Footer passen sich automatisch an. Vor dem Aktivieren: Freigabe des Auftraggebers (T-12), AV-Vertrag mit Google, anwaltliche Prüfung der Datenschutzerklärung. In GA4 `generate_lead` als Schlüsselereignis markieren.
-
-Ohne die Resend-Variablen antwortet die Route mit 503 und das Formular versendet stattdessen über Web3Forms (Access Key in `components/ContactForm.tsx`, derselbe wie bei lieferantgesucht.de).
-
 ## Domain
 
 In Vercel unter Settings → Domains `www.betreibermanager.de` als Primary (Production) und `betreibermanager.de` als 308-Weiterleitung auf www eintragen. Die Weiterleitung übernimmt allein Vercel – keine Host-Weiterleitung in `next.config.ts` anlegen, sonst entsteht eine Redirect-Schleife. `site.url` in `lib/site.ts` muss auf dieselbe Primärdomain zeigen. `*.vercel.app` wird per `X-Robots-Tag: noindex` gesperrt (`next.config.ts`). Nach dem Launch Sitemap (`/sitemap.xml`) in Google Search Console und Bing Webmaster Tools einreichen.

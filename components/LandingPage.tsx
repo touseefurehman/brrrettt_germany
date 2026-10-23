@@ -461,7 +461,7 @@ export default function LandingPage() {
             </div>
           </div>
         </div>
-        <ContactForm />
+        <ContactForm source="/" />
       </section>
     </>
   );

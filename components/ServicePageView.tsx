@@ -1,15 +1,16 @@
-import Link from "next/link";
-import ContactDetails from "./ContactDetails";
-import ContactForm from "./ContactForm";
-import ContentBlocks, { NormList, RelatedLinks } from "./ContentBlocks";
+import ContentBlocks, { RelatedLinks, SourceList } from "./ContentBlocks";
 import FaqList from "./FaqList";
-import { ArrowUpRight, Check, ShieldCheck } from "./icons";
+import { ArrowUpRight, Check } from "./icons";
 import JsonLd, { faqSchema, serviceSchema } from "./JsonLd";
+import { CoordinationNote, InquirySection, LegalNotice } from "./PageParts";
 import { PageIntro } from "./Subpage";
 import { btnPrimary } from "./ui";
 import type { ServicePage } from "@/lib/pages";
 
-/** Landingpage für Leistung oder Zielgruppe: Inhalt, Regelwerke, FAQ, Fachartikel, Anfrageformular. */
+/**
+ * Leistungsseite, Städte-Seite oder Zielgruppen-Landingpage:
+ * direkte Antwort → Inhalt → FAQ → Koordination → Formular „Bestandsaufnahme anfragen“ → Quellen und Hinweise.
+ */
 export default function ServicePageView({
   page,
   path,
@@ -36,18 +37,13 @@ export default function ServicePageView({
         </ul>
         <div>
           <a href="#anfrage" className={btnPrimary}>
-            Unverbindlich anfragen <ArrowUpRight />
+            Bestandsaufnahme anfragen <ArrowUpRight />
           </a>
         </div>
       </PageIntro>
 
       <section className="section page-width section-tight prose">
         <ContentBlocks blocks={page.blocks} />
-      </section>
-
-      <section className="section page-width section-tight">
-        <h2>Rechtsgrundlagen und Regelwerke</h2>
-        <NormList keys={page.norms} />
       </section>
 
       <section className="section page-width section-tight">
@@ -62,25 +58,13 @@ export default function ServicePageView({
         </section>
       )}
 
-      <section id="anfrage" className="section page-width contact-grid">
-        <div>
-          <div className="section-label">ANFRAGE</div>
-          <h2>{page.cta}</h2>
-          <p>
-            Beschreiben Sie Ihre Liegenschaften, Anlagen und den aktuellen Prüfstatus. Wir melden uns mit einem Vorschlag
-            für die nächsten Schritte – als Einstieg auch mit einer Bestandsaufnahme für einen Standort.{" "}
-            <Link href="/externer-betreibermanager">So arbeiten wir</Link>
-          </p>
-          <ContactDetails />
-          <div className="contact-assurance">
-            <ShieldCheck size={22} />
-            <div>
-              Vertraulich. Persönlich. Unverbindlich.
-              <small>Das Erstgespräch ist kostenfrei.</small>
-            </div>
-          </div>
-        </div>
-        <ContactForm source={path} />
+      <CoordinationNote />
+      <InquirySection title={page.cta} source={path} />
+
+      <section className="section page-width section-tight">
+        <h2>Quellen</h2>
+        <SourceList sources={page.sources} />
+        <LegalNotice />
       </section>
     </>
   );

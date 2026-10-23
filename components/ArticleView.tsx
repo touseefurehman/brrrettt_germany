@@ -1,6 +1,7 @@
-import ContentBlocks, { NormList, RelatedLinks } from "./ContentBlocks";
+import ContentBlocks, { RelatedLinks, SourceList } from "./ContentBlocks";
 import FaqList from "./FaqList";
 import JsonLd, { articleSchema, faqSchema } from "./JsonLd";
+import { CoordinationNote, LegalNotice } from "./PageParts";
 import { CtaBand, PageIntro } from "./Subpage";
 import type { Article } from "@/lib/pages";
 import { norms } from "@/lib/normen";
@@ -21,7 +22,7 @@ export default function ArticleView({ article }: { article: Article }) {
           path,
           published: article.published,
           modified: article.modified,
-          about: article.norms.map((k) => norms[k].name),
+          about: [...new Set(article.sources.map(([k]) => norms[k].name))],
         })}
       />
       <JsonLd data={faqSchema(article.faqs)} />
@@ -56,23 +57,21 @@ export default function ArticleView({ article }: { article: Article }) {
       </section>
 
       <section className="section page-width section-tight">
-        <h2>Rechtsgrundlagen und Regelwerke</h2>
-        <NormList keys={article.norms} />
-      </section>
-
-      <section className="section page-width section-tight">
         <h2>Häufige Fragen</h2>
         <FaqList faqs={article.faqs} />
-        <p className="muted-note">
-          Dieser Beitrag ersetzt keine Rechtsberatung und keine Gefährdungsbeurteilung. Fristen sind Richtwerte;
-          verbindlich ist, was sich aus Gefährdungsbeurteilung, Herstellerangaben, Landesrecht und behördlichen Auflagen
-          für Ihre Anlage ergibt.
-        </p>
       </section>
 
       <section className="section page-width section-tight">
         <h2>Weiterführend</h2>
         <RelatedLinks links={article.related} />
+      </section>
+
+      <CoordinationNote href="/kontakt" />
+
+      <section className="section page-width section-tight">
+        <h2>Quellen</h2>
+        <SourceList sources={article.sources} />
+        <LegalNotice />
       </section>
 
       <CtaBand title={article.cta} />

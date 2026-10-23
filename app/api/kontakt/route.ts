@@ -22,11 +22,17 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: true });
   }
 
+  const organisation = field(body.organisation, 160);
   const name = field(body.name, 120);
   const email = field(body.email, 200);
   const message = field(body.message, 5000);
-  if (!name || !message || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    return NextResponse.json({ error: "Bitte Name, gültige E-Mail-Adresse und Ihr Anliegen angeben." }, { status: 422 });
+  // „Anzahl Standorte“ ist das Qualifizierungsmerkmal (Lastenheft L-02) und Pflichtfeld
+  const locations = Number.parseInt(field(body.standorte, 10), 10);
+  if (!organisation || !name || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || !(locations >= 1)) {
+    return NextResponse.json(
+      { error: "Bitte Organisation, Ansprechpartner, gültige E-Mail-Adresse und Anzahl Standorte angeben." },
+      { status: 422 },
+    );
   }
   if (body.consent !== "yes") {
     return NextResponse.json({ error: "Bitte bestätigen Sie die Datenschutzerklärung." }, { status: 422 });
@@ -43,15 +49,14 @@ export async function POST(request: Request) {
   }
 
   const text = [
-    `Name: ${name}`,
-    `Firma: ${field(body.company, 160) || "–"}`,
+    `Organisation: ${organisation}`,
+    `Ansprechpartner: ${name}`,
     `E-Mail: ${email}`,
     `Telefon: ${field(body.phone, 60) || "–"}`,
-    `Standorte / Anlagen: ${field(body.scope, 160) || "–"}`,
-    `Gewünschter Zeitraum: ${field(body.timeframe, 120) || "–"}`,
+    `Anzahl Standorte: ${locations}`,
     `Seite: ${field(body.source, 200) || "–"}`,
     "",
-    message,
+    message || "(keine Nachricht)",
   ].join("\n");
 
   const res = await fetch("https://api.resend.com/emails", {
@@ -61,7 +66,7 @@ export async function POST(request: Request) {
       from,
       to: [process.env.CONTACT_TO || site.email],
       reply_to: email,
-      subject: `Anfrage über betreibermanager.de – ${name}`,
+      subject: `Bestandsaufnahme angefragt – ${organisation} (${locations} Standorte)`,
       text,
     }),
   });

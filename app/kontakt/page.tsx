@@ -30,7 +30,7 @@ export default function KontaktPage() {
           <ContactDetails />
           <p className="muted-note">Eine Vertraulichkeitsvereinbarung ist auf Anfrage möglich.</p>
         </div>
-        <ContactForm />
+        <ContactForm source="/kontakt" />
       </section>
     </>
   );

@@ -5,6 +5,8 @@ import "./site.css";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import JsonLd, { organizationSchema, websiteSchema } from "@/components/JsonLd";
+import CookieConsent from "@/components/CookieConsent";
+import { hasAnalytics } from "@/lib/analytics";
 import { site } from "@/lib/site";
 
 // next/font lädt die Schrift zur Build-Zeit und liefert sie selbst aus – kein Aufruf an Google beim Besucher.
@@ -34,6 +36,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <SiteHeader />
         <main>{children}</main>
         <SiteFooter />
+        {hasAnalytics && <CookieConsent />}
       </body>
     </html>
   );

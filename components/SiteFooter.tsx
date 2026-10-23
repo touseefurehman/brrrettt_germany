@@ -1,5 +1,7 @@
 import Link from "next/link";
 import Brand from "./Brand";
+import { ConsentSettingsButton } from "./CookieConsent";
+import { hasAnalytics } from "@/lib/analytics";
 import { MoveUpRight } from "./icons";
 import { areas } from "@/lib/content";
 import { audiences, externerBetreibermanager } from "@/lib/leistungen";
@@ -63,6 +65,12 @@ export default function SiteFooter() {
         <span>© 2026 betreibermanager.de – Partner für Betreiberpflichten und Anlagenbetrieb</span>
         <span>
           <Link href="/impressum">Impressum</Link> · <Link href="/datenschutz">Datenschutz</Link>
+          {hasAnalytics && (
+            <>
+              {" · "}
+              <ConsentSettingsButton />
+            </>
+          )}
         </span>
       </div>
     </footer>

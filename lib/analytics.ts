@@ -1,7 +1,8 @@
 // Google Analytics 4 – wird nur geladen, wenn NEXT_PUBLIC_GA_ID gesetzt ist UND der Besucher eingewilligt hat
 // (Lastenheft L-05). Ohne ID bleibt die Website cookie- und trackingfrei, Datenschutzerklärung passt sich an.
 
-export const GA_ID = process.env.NEXT_PUBLIC_GA_ID ?? "";
+// Mess-ID des GA4-Datenstreams „betreibermanager.de“ (Property 560297836); per NEXT_PUBLIC_GA_ID überschreibbar
+export const GA_ID = process.env.NEXT_PUBLIC_GA_ID || "G-V1E03KQL0H";
 export const hasAnalytics = /^G-[A-Z0-9]+$/.test(GA_ID);
 
 export const CONSENT_KEY = "bm-analytics-consent";

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { CtaBand, DeadlineTable, PageIntro } from "@/components/Subpage";
-import { areas, drinkingWaterDeadlines, otherDeadlines } from "@/lib/content";
+import { areaPath, areas, drinkingWaterDeadlines, otherDeadlines } from "@/lib/content";
 
 const title = "Prüffristen im Überblick – Betreiberverantwortung";
 const description =
@@ -61,7 +61,7 @@ export default function PrueffristenPage() {
                 nennt nur die Höchstfristen der BetrSichV – die Frist Ihrer Anlage kann kürzer sein.
               </p>
             )}
-            <Link href={`/pruefbereiche/${a.slug}`} className="text-link">
+            <Link href={areaPath(a.slug)} className="text-link">
               {a.name}: Prüfungen koordinieren lassen
             </Link>
           </div>
@@ -70,11 +70,23 @@ export default function PrueffristenPage() {
         <div id="trinkwasser" className="deadline-group">
           <h2>Prüffristen Trinkwasser</h2>
           <DeadlineTable rows={drinkingWaterDeadlines} />
+          <p className="muted-note">
+            Pflicht nur, wenn zusätzlich Duschen oder andere vernebelnde Entnahmestellen vorhanden sind und es sich nicht
+            um ein Ein- oder Zweifamilienhaus handelt (§ 31 Abs. 1 TrinkwV).
+          </p>
+          <Link href="/legionellenpruefung" className="text-link">
+            Legionellenprüfung: Pflicht, Intervalle und Maßnahmen
+          </Link>
         </div>
 
         <div id="weitere-anlagen" className="deadline-group">
           <h2>Weitere Anlagen und Einrichtungen</h2>
           <DeadlineTable rows={otherDeadlines} />
+          <p className="muted-note">
+            Ausführlich: <Link href="/regalpruefung">Regalprüfung</Link> ·{" "}
+            <Link href="/uvv-pruefung">UVV-Prüfung für Fahrzeuge, Stapler, Krane und Tore</Link> ·{" "}
+            <Link href="/feuerloescher-pruefung">Feuerlöscher-Prüfung</Link>
+          </p>
         </div>
       </section>
 

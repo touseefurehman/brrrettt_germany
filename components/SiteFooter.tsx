@@ -3,8 +3,12 @@ import Brand from "./Brand";
 import { ConsentSettingsButton } from "./CookieConsent";
 import { hasAnalytics } from "@/lib/analytics";
 import { MoveUpRight } from "./icons";
-import { areas } from "@/lib/content";
+import { areaPath, areas, isMovedArea } from "@/lib/content";
 import { audiences, externerBetreibermanager } from "@/lib/leistungen";
+import { leistungsseiten } from "@/lib/leistungsseiten";
+
+// Prüfungs-Leistungsseiten; Betreiberpflichten und Betreiberverantwortung stehen in der Spalte daneben
+const inspections = leistungsseiten.filter((p) => !["betreiberpflichten", "betreiberverantwortung"].includes(p.slug));
 import { emailLink, fullCompanyName, hasAddress, hasPhone, phoneLink, site } from "@/lib/site";
 
 export default function SiteFooter() {
@@ -34,16 +38,26 @@ export default function SiteFooter() {
             <a href={emailLink}>{site.email}</a>
           </span>
         </address>
-        <nav aria-label="Prüfbereiche">
-          <strong>Prüfbereiche</strong>
-          {areas.map((a) => (
-            <Link key={a.slug} href={`/pruefbereiche/${a.slug}`}>
-              {a.name}
+        <nav aria-label="Prüfungen">
+          <strong>Prüfungen</strong>
+          {inspections.map((p) => (
+            <Link key={p.slug} href={`/${p.slug}`}>
+              {p.name}
             </Link>
           ))}
+          <Link href="/dguv-v3-pruefung-kosten">DGUV V3 Prüfung Kosten</Link>
+          {areas
+            .filter((a) => !isMovedArea(a.slug))
+            .map((a) => (
+              <Link key={a.slug} href={areaPath(a.slug)}>
+                {a.name}
+              </Link>
+            ))}
         </nav>
         <nav aria-label="Branchen">
           <strong>Leistung &amp; Branchen</strong>
+          <Link href="/betreiberpflichten">Betreiberpflichten</Link>
+          <Link href="/betreiberverantwortung">Betreiberverantwortung</Link>
           <Link href="/externer-betreibermanager">{externerBetreibermanager.name}</Link>
           {audiences.map((a) => (
             <Link key={a.slug} href={`/betreiberpflichten/${a.slug}`}>

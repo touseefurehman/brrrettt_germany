@@ -10,13 +10,18 @@ import { hasPhone, phoneLink, site } from "@/lib/site";
 // Fünf Einträge passen zwischen 800 und 1100 px neben Logo und CTA; „Prüfbereiche“ und „Kontakt“
 // sind über Startseite, Footer und den CTA-Button erreichbar.
 const navItems: [string, string][] = [
-  ["Leistung", "/externer-betreibermanager"],
+  ["Betreiberpflichten", "/betreiberpflichten"],
   ["Branchen", "/#branchen"],
   ["Prüffristen", "/prueffristen"],
   ["Wissen", "/wissen"],
   ["Über uns", "/ueber-uns"],
 ];
-const mobileNavItems: [string, string][] = [...navItems, ["Prüfbereiche", "/#pruefbereiche"], ["Kontakt", "/kontakt"]];
+const mobileNavItems: [string, string][] = [
+  ...navItems,
+  ["Externer Betreibermanager", "/externer-betreibermanager"],
+  ["Prüfbereiche", "/#pruefbereiche"],
+  ["Kontakt", "/kontakt"],
+];
 
 export default function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false);

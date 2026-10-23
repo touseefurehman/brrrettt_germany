@@ -140,124 +140,6 @@ export const grundlagenArticles: Article[] = [
     cta: "Betreiberpflichtenkataster erstellen lassen.",
   },
   {
-    slug: "was-ist-betreiberverantwortung",
-    keyword: "was ist betreiberverantwortung",
-    secondary: [],
-    cluster: "Grundlagen",
-    title: "Was ist Betreiberverantwortung? Definition & Pflichten",
-    description:
-      "Was ist Betreiberverantwortung? Definition, Rechtsgrundlagen, wer Betreiber ist, welche Pflichten gelten und was sich delegieren lässt – verständlich erklärt.",
-    h1: "Was ist Betreiberverantwortung? Definition, Rechtsgrundlagen und Pflichten",
-    kicker: "GRUNDLAGEN",
-    teaser: "Definition, Rechtsgrundlagen und die Frage, was sich delegieren lässt und was nicht.",
-    published,
-    modified: published,
-    lead: [
-      "Betreiberverantwortung ist die Pflicht des Eigentümers oder Betreibers eines Gebäudes oder einer Anlage, für deren sicheren und rechtskonformen Betrieb zu sorgen – und dies nachweisen zu können. Sie ergibt sich nicht aus einem einzelnen Gesetz, sondern aus einer Vielzahl von Vorschriften, Normen und der allgemeinen Verkehrssicherungspflicht.",
-    ],
-    blocks: [
-      { type: "h2", text: "Definition", id: "definition" },
-      {
-        type: "definition",
-        term: "Betreiberverantwortung",
-        text: "Die Gesamtheit der rechtlichen Pflichten, die einer natürlichen oder juristischen Person aus dem Betrieb von Gebäuden, Anlagen und Einrichtungen erwachsen. Ziel ist, Gefahren für Leben, Gesundheit, Umwelt und Sachwerte abzuwenden. Betreiber ist, wer die tatsächliche und rechtliche Verfügungsgewalt über die Anlage hat – in der Regel der Eigentümer.",
-      },
-      {
-        type: "definition",
-        term: "Betreiberpflichten",
-        text: "Die konkreten Einzelpflichten, aus denen sich die Betreiberverantwortung zusammensetzt: Prüfen, Warten, Instandhalten, Unterweisen, Dokumentieren, Organisieren und Kontrollieren.",
-      },
-      { type: "h2", text: "Woraus sich Betreiberverantwortung ergibt", id: "rechtsgrundlagen" },
-      {
-        type: "table",
-        head: ["Quelle", "Beispiele", "Was sie verlangt"],
-        rows: [
-          ["Zivilrecht", "§§ 823, 836 BGB", "Verkehrssicherungspflicht: Gefahrenquellen beherrschen, Gebäudeteile sichern"],
-          ["Arbeitsschutzrecht", "ArbSchG, BetrSichV, ArbStättV", "Gefährdungsbeurteilung, Prüfung von Arbeitsmitteln und Sicherheitseinrichtungen"],
-          ["Unfallverhütungsvorschriften", "DGUV Vorschrift 1, 3, 4", "Prüfung elektrischer Anlagen und Betriebsmittel"],
-          ["Bauordnungsrecht der Länder", "Landesbauordnungen, Prüfverordnungen", "Prüfung sicherheitstechnischer Anlagen in Sonderbauten, Rauchwarnmelder"],
-          ["Umwelt- und Gesundheitsrecht", "TrinkwV, WHG, F-Gase-Verordnung", "Legionellenuntersuchung, Anlagen mit wassergefährdenden Stoffen, Dichtheitskontrollen"],
-          ["Technische Regeln und Normen", "TRBS, ASR, DIN, VDE, VDI 6022", "Konkretisieren den Stand der Technik und die Prüfverfahren"],
-          ["Verträge", "Mietverträge, Versicherungsbedingungen", "Zusätzliche Pflichten, z. B. Obliegenheiten gegenüber dem Versicherer"],
-        ],
-      },
-      { type: "h2", text: "Wer ist Betreiber?", id: "betreiber" },
-      {
-        type: "p",
-        text: "Betreiber ist zunächst der Eigentümer. Bei Unternehmen trifft die Verantwortung die Organe – Geschäftsführung, Vorstand, bei Kommunen die Verwaltungsleitung. Durch Vertrag kann die Betreiberrolle teilweise übergehen, etwa auf einen Mieter, der eine Halle vollständig nutzt, oder auf einen Generalunternehmer im FM. Entscheidend ist, wer die Anlage tatsächlich beherrscht. Unklare Zuordnungen sind eine der häufigsten Ursachen für Lücken.",
-      },
-      { type: "h2", text: "Was sich delegieren lässt – und was nicht", id: "delegation" },
-      {
-        type: "p",
-        text: "Delegierbar sind **Aufgaben**, nicht die **Verantwortung**. Wer Aufgaben überträgt, behält drei Pflichten, die in der Rechtsprechung als Auswahl-, Anweisungs- und Kontrollpflicht bezeichnet werden.",
-      },
-      {
-        type: "table",
-        head: ["Pflicht des Delegierenden", "Inhalt", "Nachweis"],
-        rows: [
-          ["Auswahlpflicht", "Nur zuverlässige und fachkundige Personen oder Firmen beauftragen", "Qualifikationsnachweise, z. B. nach TRBS 1203"],
-          ["Anweisungspflicht", "Aufgaben, Befugnisse und Mittel klar festlegen", "Schriftliche Pflichtenübertragung, Leistungsbeschreibung"],
-          ["Kontrollpflicht", "Stichprobenartig prüfen, ob Aufgaben erfüllt werden", "Statusberichte, Audits, Prüfberichte"],
-        ],
-      },
-      {
-        type: "p",
-        text: "Für Arbeitgeberpflichten sieht § 13 Abs. 2 ArbSchG ausdrücklich eine schriftliche Übertragung auf zuverlässige und fachkundige Personen vor. Wie die Haftung im Einzelnen verteilt ist, erklärt der Artikel [Wer haftet bei fehlenden Prüfungen?](/wissen/haftung-fehlende-pruefungen).",
-      },
-      {
-        type: "example",
-        title: "Hausmeister mit Prüfaufgaben",
-        text: [
-          "Eine Geschäftsführerin überträgt dem Hausmeister mündlich, „sich um die Prüfungen zu kümmern“. Nach einem Stromunfall an einem ungeprüften Verlängerungskabel zeigt sich: Es gab weder eine Liste der Geräte noch eine schriftliche Aufgabenübertragung, noch wurde je kontrolliert.",
-          "Die Delegation war damit unwirksam organisiert – die Verantwortung liegt weiter bei der Geschäftsführung. Eine schriftliche Übertragung mit Anlagenliste, Budget und Quartalsbericht hätte die Kontrollpflicht erfüllt.",
-        ],
-      },
-      { type: "h2", text: "Die fünf Kernaufgaben der Betreiberorganisation", id: "aufgaben" },
-      {
-        type: "checklist",
-        items: [
-          "**Ermitteln:** Welche Pflichten gelten für welche Anlage? → [Betreiberpflichtenkataster](/wissen/betreiberpflichtenkataster-erstellen)",
-          "**Übertragen:** Wer erfüllt welche Pflicht? → schriftliche Delegation",
-          "**Durchführen:** Prüfungen und Wartungen durch qualifizierte Personen",
-          "**Dokumentieren:** Nachweise je Anlage auffindbar ablegen",
-          "**Kontrollieren:** Fristen, Mängel und Dienstleister überwachen",
-        ],
-      },
-    ],
-    faqs: [
-      [
-        "Was versteht man unter Betreiberverantwortung?",
-        "Die Pflicht des Eigentümers oder Betreibers, Gebäude und Anlagen so zu betreiben, dass niemand zu Schaden kommt, und dies nachzuweisen. Sie setzt sich aus vielen Einzelpflichten wie Prüfen, Warten, Dokumentieren und Kontrollieren zusammen.",
-      ],
-      [
-        "Ist Betreiberverantwortung gesetzlich geregelt?",
-        "Es gibt kein einzelnes Betreiberverantwortungsgesetz. Die Pflichten ergeben sich aus BGB, Arbeitsschutzrecht wie ArbSchG, BetrSichV und ArbStättV, Unfallverhütungsvorschriften, Bauordnungsrecht, Trinkwasserverordnung sowie technischen Regeln und Normen.",
-      ],
-      [
-        "Kann man Betreiberverantwortung auf einen Dienstleister übertragen?",
-        "Übertragen lassen sich die Aufgaben, nicht die Verantwortung. Der Betreiber muss den Dienstleister sorgfältig auswählen, klar beauftragen und regelmäßig kontrollieren.",
-      ],
-      [
-        "Wer ist bei einer GmbH für die Betreiberverantwortung zuständig?",
-        "Die Geschäftsführung als Organ der Gesellschaft. Sie kann Aufgaben an Führungskräfte, Fachkräfte oder Dienstleister übertragen, muss aber die Organisation so gestalten und überwachen, dass die Pflichten erfüllt werden.",
-      ],
-    ],
-    sources: [
-    ["BGB", "§§ 823, 831, 836"],
-    ["ArbSchG", "§ 5, § 13 Abs. 2"],
-    ["BetrSichV", "§ 3 Abs. 6, § 14, Anhang 2"],
-    ["ArbStättV", "§ 4 Abs. 3"],
-    ["DGUV V3", "§ 5 mit Durchführungsanweisungen, Tabellen 1A–1C"],
-    ["GEFMA 190", "Pflichtenermittlung, Delegation, Wirksamkeitskontrolle"],
-  ],
-    related: [
-      ["Wer haftet bei fehlenden Prüfungen?", "/wissen/haftung-fehlende-pruefungen", "Zivil-, Straf- und Bußgeldrecht"],
-      ["Betreiberpflichten im Facility Management", "/wissen/betreiberpflichten-facility-management", "Delegation an FM-Dienstleister"],
-      ["Externer Betreibermanager", "/externer-betreibermanager", "Aufgaben auslagern"],
-    ],
-    cta: "Betreiberverantwortung strukturiert organisieren.",
-  },
-  {
     slug: "haftung-fehlende-pruefungen",
     keyword: "haftung fehlende prüfung",
     secondary: ["wer haftet bei fehlenden prüfungen", "organisationsverschulden betreiber"],
@@ -306,7 +188,7 @@ export const grundlagenArticles: Article[] = [
       },
       {
         type: "p",
-        text: "Die Delegation verschiebt also Pflichten nach unten, entlastet die Leitung aber nur, wenn Auswahl, Anweisung und Kontrolle nachweisbar sind. Mehr dazu: [Was ist Betreiberverantwortung?](/wissen/was-ist-betreiberverantwortung)",
+        text: "Die Delegation verschiebt also Pflichten nach unten, entlastet die Leitung aber nur, wenn Auswahl, Anweisung und Kontrolle nachweisbar sind. Mehr dazu: [Was ist Betreiberverantwortung?](/betreiberverantwortung)",
       },
       { type: "h2", text: "Bußgelder bei versäumten Prüfungen", id: "bussgelder" },
       {
@@ -367,9 +249,9 @@ export const grundlagenArticles: Article[] = [
     ["GEFMA 190", "Pflichtenermittlung, Delegation, Wirksamkeitskontrolle"],
   ],
     related: [
-      ["Was ist Betreiberverantwortung?", "/wissen/was-ist-betreiberverantwortung", "Definition und Delegation"],
+      ["Was ist Betreiberverantwortung?", "/betreiberverantwortung", "Definition und Delegation"],
       ["Externer Betreibermanager", "/externer-betreibermanager", "Haftungsrisiken reduzieren"],
-      ["DGUV V3 Prüfung Kosten", "/pruefbereiche/dguv-v3-pruefung/kosten", "Was die Prüfung kostet"],
+      ["DGUV V3 Prüfung Kosten", "/dguv-v3-pruefung-kosten", "Was die Prüfung kostet"],
     ],
     cta: "Haftungsrisiken durch klare Organisation senken.",
   },
@@ -626,7 +508,7 @@ export const grundlagenArticles: Article[] = [
       },
       {
         type: "note",
-        text: "Für Kommunen und andere Mitglieder der Unfallkassen gilt die inhaltsgleiche DGUV Vorschrift 4. Alle Fristen mit Rechtsgrundlage: [DGUV V3 Prüfung](/pruefbereiche/dguv-v3-pruefung).",
+        text: "Für Kommunen und andere Mitglieder der Unfallkassen gilt die inhaltsgleiche DGUV Vorschrift 4. Alle Fristen mit Rechtsgrundlage: [DGUV V3 Prüfung](/dguv-v3-pruefung).",
       },
       { type: "h2", text: "Frist festlegen: die Gefährdungsbeurteilung", id: "festlegen" },
       {
@@ -661,7 +543,7 @@ export const grundlagenArticles: Article[] = [
         title: "Verwaltung mit 1.200 Geräten an neun Standorten",
         text: [
           "Bisher: jährliche Prüfung aller Geräte, verteilt auf 30 Einzeltermine. Nach Auswertung der Protokolle liegt die Fehlerquote in den Büros bei 0,8 %, in den Werkstätten bei 4,1 %.",
-          "Neu: Bürogeräte alle 24 Monate, Werkstattgeräte alle 6 Monate, Prüfungen in drei regionalen Blöcken. Die Zahl der jährlichen Geräteprüfungen sinkt deutlich, während die risikoreichen Bereiche häufiger geprüft werden. Was das finanziell bedeutet, zeigt die Seite [DGUV V3 Prüfung Kosten](/pruefbereiche/dguv-v3-pruefung/kosten).",
+          "Neu: Bürogeräte alle 24 Monate, Werkstattgeräte alle 6 Monate, Prüfungen in drei regionalen Blöcken. Die Zahl der jährlichen Geräteprüfungen sinkt deutlich, während die risikoreichen Bereiche häufiger geprüft werden. Was das finanziell bedeutet, zeigt die Seite [DGUV V3 Prüfung Kosten](/dguv-v3-pruefung-kosten).",
         ],
       },
       { type: "h2", text: "Checkliste für das Prüfprotokoll", id: "protokoll" },
@@ -703,8 +585,8 @@ export const grundlagenArticles: Article[] = [
     ["ArbSchG", "§ 5, § 13 Abs. 2"],
   ],
     related: [
-      ["DGUV V3 Prüfung", "/pruefbereiche/dguv-v3-pruefung", "Prüfbereich Elektrotechnik"],
-      ["DGUV V3 Prüfung Kosten", "/pruefbereiche/dguv-v3-pruefung/kosten", "Preise und Rechenbeispiel"],
+      ["DGUV V3 Prüfung", "/dguv-v3-pruefung", "Prüfbereich Elektrotechnik"],
+      ["DGUV V3 Prüfung Kosten", "/dguv-v3-pruefung-kosten", "Preise und Rechenbeispiel"],
       ["Prüffristen im Überblick", "/prueffristen", "Alle Prüfbereiche"],
     ],
     cta: "DGUV-V3-Prüfungen über alle Standorte koordinieren lassen.",

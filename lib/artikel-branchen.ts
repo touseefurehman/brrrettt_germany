@@ -338,7 +338,7 @@ export const branchenArticles: Article[] = [
   ],
     related: [
       ["Betreiberverantwortung Krankenhaus", "/betreiberpflichten/krankenhaeuser", "Prüfmanagement für Kliniken und Pflege"],
-      ["Lüftung & Klima nach VDI 6022", "/pruefbereiche/lueftung-klima", "Hygieneinspektion"],
+      ["Lüftung & Klima nach VDI 6022", "/vdi-6022", "Hygieneinspektion"],
       ["Wer haftet bei fehlenden Prüfungen?", "/wissen/haftung-fehlende-pruefungen", "Haftung des Trägers"],
     ],
     cta: "Prüfpflichten Ihrer Einrichtung organisieren lassen.",

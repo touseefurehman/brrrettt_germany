@@ -32,7 +32,7 @@ export default async function AudiencePage({ params }: Props) {
       page={page}
       path={path}
       crumbs={[
-        ["Branchen", "/#branchen"],
+        ["Betreiberpflichten", "/betreiberpflichten"],
         [page.name, path],
       ]}
     />

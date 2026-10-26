@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { PageIntro } from "@/components/Subpage";
 import { hasAnalytics } from "@/lib/analytics";
-import { addressLine, emailLink, fullCompanyName, hasAddress, hasPhone, phoneLink, site } from "@/lib/site";
+import EmailLink from "@/components/EmailLink";
+import { addressLine, fullCompanyName, hasAddress, hasPhone, phoneLink, site } from "@/lib/site";
 
 // Datenschutz-Aufsichtsbehörden der Länder für den nicht-öffentlichen Bereich, Schlüssel = site.state
 const authorities: Record<string, string> = {
@@ -55,7 +56,7 @@ export default function DatenschutzPage() {
               Telefon: <a href={phoneLink}>{site.phoneDisplay}</a> ·{" "}
             </>
           )}
-          E-Mail: <a href={emailLink}>{site.email}</a>
+          E-Mail: <EmailLink />
         </p>
 
         <h2>2. Hosting und Server-Logfiles</h2>

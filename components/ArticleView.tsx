@@ -1,9 +1,12 @@
+import Link from "next/link";
 import ContentBlocks, { RelatedLinks, SourceList } from "./ContentBlocks";
 import FaqList from "./FaqList";
 import JsonLd, { articleSchema, faqSchema } from "./JsonLd";
 import { CoordinationNote, LegalNotice } from "./PageParts";
 import { CtaBand, PageIntro } from "./Subpage";
+import { authorFor, authorPath } from "@/lib/autoren";
 import type { Article } from "@/lib/pages";
+import { isSet } from "@/lib/site";
 import { norms } from "@/lib/normen";
 
 const formatDate = (iso: string) =>
@@ -12,6 +15,7 @@ const formatDate = (iso: string) =>
 export default function ArticleView({ article }: { article: Article }) {
   const path = `/wissen/${article.slug}`;
   const headings = article.blocks.flatMap((b) => (b.type === "h2" && b.id ? [{ text: b.text, id: b.id }] : []));
+  const author = authorFor(article.author);
 
   return (
     <>
@@ -23,6 +27,7 @@ export default function ArticleView({ article }: { article: Article }) {
           published: article.published,
           modified: article.modified,
           about: [...new Set(article.sources.map(([k]) => norms[k].name))],
+          author,
         })}
       />
       <JsonLd data={faqSchema(article.faqs)} />
@@ -38,8 +43,21 @@ export default function ArticleView({ article }: { article: Article }) {
           <p key={p.slice(0, 40)}>{p}</p>
         ))}
         <p className="page-meta">
-          Aktualisiert am <time dateTime={article.modified}>{formatDate(article.modified)}</time> · Redaktion
-          betreibermanager.de
+          {author ? (
+            <>
+              Von <Link href={authorPath(author)}>{author.name}</Link>
+              {isSet(author.role) && <>, {author.role}</>}
+            </>
+          ) : (
+            "Redaktion betreibermanager.de"
+          )}{" "}
+          · Veröffentlicht am <time dateTime={article.published}>{formatDate(article.published)}</time>
+          {article.modified !== article.published && (
+            <>
+              {" "}
+              · Aktualisiert am <time dateTime={article.modified}>{formatDate(article.modified)}</time>
+            </>
+          )}
         </p>
       </PageIntro>
 

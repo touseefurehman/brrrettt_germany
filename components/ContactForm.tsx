@@ -6,7 +6,8 @@ import { useRouter } from "next/navigation";
 import { ArrowUpRight } from "./icons";
 import { btnPrimary } from "./ui";
 import { track } from "@/lib/analytics";
-import { emailLink, hasPhone, phoneLink, site } from "@/lib/site";
+import EmailLink from "./EmailLink";
+import { hasPhone, phoneLink, site } from "@/lib/site";
 
 type Status = "idle" | "sending" | "error";
 
@@ -79,7 +80,7 @@ export default function ContactForm({ source }: { source: string }) {
             <a href={phoneLink}>{site.phoneDisplay}</a> ·{" "}
           </>
         )}
-        <a href={emailLink}>{site.email}</a> · {site.responseTime}.
+        <EmailLink /> · {site.responseTime}.
       </p>
       <div className="form-row">
         <label>

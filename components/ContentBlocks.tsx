@@ -95,7 +95,7 @@ export default function ContentBlocks({ blocks }: { blocks: Block[] }) {
       case "example":
         return (
           <aside key={i} className="example-box">
-            <strong>Praxisbeispiel: {block.title}</strong>
+            <h3>Praxisbeispiel: {block.title}</h3>
             {block.text.map((t) => (
               <p key={t.slice(0, 40)}>{rich(t)}</p>
             ))}

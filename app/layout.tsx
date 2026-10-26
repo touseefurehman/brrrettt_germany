@@ -25,6 +25,12 @@ export const metadata: Metadata = {
     type: "website",
   },
   twitter: { card: "summary_large_image" },
+  // Search Console und Bing Webmaster Tools: Code aus der jeweiligen Konsole als Umgebungsvariable in Vercel setzen.
+  // Alternative ohne Code: Domain-Property per DNS-TXT-Eintrag verifizieren.
+  verification: {
+    ...(process.env.GOOGLE_SITE_VERIFICATION && { google: process.env.GOOGLE_SITE_VERIFICATION }),
+    ...(process.env.BING_SITE_VERIFICATION && { other: { "msvalidate.01": process.env.BING_SITE_VERIFICATION } }),
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

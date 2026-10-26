@@ -23,9 +23,30 @@ export const site = {
   vatId: "[USt-IdNr.]",
   contactPerson: "[Name]",
   contactPersonRole: "[Qualifikation / Funktion]",
+  /** Verantwortlich für redaktionelle Inhalte nach § 18 Abs. 2 MStV (Wissensbereich): Name und Anschrift */
+  editorialResponsible: "[Name, Anschrift]",
   responseTime: "Antwort innerhalb eines Werktags",
   /** URLs von Google Business Profile, LinkedIn, wlw etc., sobald vorhanden */
   sameAs: [] as string[],
+};
+
+// Belegbare Angaben für „Über uns“ und das Organization-Schema (GEO-Audit, Aufgabe 3).
+// Nur eintragen, was belegt ist – leere oder „[…]“-Felder werden ausgelassen statt vage formuliert.
+export const company = {
+  /** z. B. "2024" */
+  foundingYear: "[Gründungsjahr]",
+  /** z. B. "5 Mitarbeitende" */
+  teamSize: "[Teamgröße]",
+  /** Kennzahlen, z. B. ["120", "betreute Standorte"] */
+  figures: [] as [value: string, label: string][],
+  /** Handelnde Personen mit Werdegang */
+  people: [] as { name: string; role: string; background: string }[],
+  /** Mitgliedschaften, z. B. "GEFMA – Deutscher Verband für Facility Management" */
+  memberships: [] as string[],
+  /** Eigene Zertifizierungen, z. B. "ISO 9001:2015 (Zertifizierer, Gültigkeit)" */
+  certifications: [] as string[],
+  /** Referenzen oder anonymisierte Fallbeispiele: Ausgangslage, Vorgehen, Ergebnis */
+  cases: [] as { title: string; text: string }[],
 };
 
 /** true, sobald ein Platzhalter durch echte Daten ersetzt wurde */

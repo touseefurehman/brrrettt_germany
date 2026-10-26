@@ -61,4 +61,6 @@ export type Article = ContentPage & {
   /** ISO-Datum */
   published: string;
   modified: string;
+  /** Slug aus lib/autoren.ts; ohne Angabe der erste eingetragene Autor */
+  author?: string;
 };

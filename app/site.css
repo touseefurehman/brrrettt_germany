@@ -473,6 +473,34 @@ details.faq-item[open] .faq-icon-minus {
   border-radius: 5px;
   background: var(--surface-green);
 }
+img.person-photo {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+.copy-hint {
+  color: var(--primary);
+}
+.fact-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  margin: 0;
+}
+.fact-list > div {
+  padding: 16px 18px;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+}
+.fact-list dt {
+  color: var(--muted-foreground);
+  font-size: 11px;
+}
+.fact-list dd {
+  margin: 4px 0 0;
+  font-size: 20px;
+  font-weight: 600;
+}
 .cta-band {
   background: var(--network-background);
   color: var(--hero-foreground);
@@ -560,9 +588,8 @@ details.faq-item[open] .faq-icon-minus {
   border-radius: 5px;
   background: var(--surface-green);
 }
-.example-box > strong {
-  display: block;
-  margin-bottom: 10px;
+.example-box > h3 {
+  margin: 0 0 10px;
   font-size: 14px;
   font-weight: 600;
 }

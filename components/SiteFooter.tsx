@@ -9,7 +9,8 @@ import { leistungsseiten } from "@/lib/leistungsseiten";
 
 // Prüfungs-Leistungsseiten; Betreiberpflichten und Betreiberverantwortung stehen in der Spalte daneben
 const inspections = leistungsseiten.filter((p) => !["betreiberpflichten", "betreiberverantwortung"].includes(p.slug));
-import { emailLink, fullCompanyName, hasAddress, hasPhone, phoneLink, site } from "@/lib/site";
+import EmailLink from "./EmailLink";
+import { fullCompanyName, hasAddress, hasPhone, phoneLink, site } from "@/lib/site";
 
 export default function SiteFooter() {
   return (
@@ -35,7 +36,7 @@ export default function SiteFooter() {
                 Telefon <a href={phoneLink}>{site.phoneDisplay}</a> ·{" "}
               </>
             )}
-            <a href={emailLink}>{site.email}</a>
+            <EmailLink />
           </span>
         </address>
         <nav aria-label="Prüfungen">

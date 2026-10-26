@@ -1,5 +1,6 @@
+import { type Author, authorPath } from "@/lib/autoren";
 import type { FaqEntry } from "@/lib/content";
-import { isSet, site } from "@/lib/site";
+import { company, isSet, site } from "@/lib/site";
 
 export default function JsonLd({ data }: { data: object }) {
   return (
@@ -36,6 +37,12 @@ export function organizationSchema() {
     ...(isSet(site.phoneHref) && { telephone: site.phoneHref }),
     email: site.email,
     address,
+    ...(isSet(site.companyName) && isSet(site.legalForm) && { legalName: `${site.companyName} ${site.legalForm}` }),
+    ...(isSet(company.foundingYear) && { foundingDate: company.foundingYear }),
+    ...(isSet(site.vatId) && { vatID: site.vatId }),
+    ...(company.memberships.length > 0 && {
+      memberOf: company.memberships.map((name) => ({ "@type": "Organization", name })),
+    }),
     areaServed: { "@type": "Country", name: "Deutschland" },
     knowsAbout: [
       "Betreiberpflichten",
@@ -109,6 +116,7 @@ export function articleSchema(a: {
   published: string;
   modified: string;
   about: string[];
+  author?: Author;
 }) {
   return {
     "@context": "https://schema.org",
@@ -121,9 +129,32 @@ export function articleSchema(a: {
     dateModified: a.modified,
     inLanguage: "de-DE",
     image: `${site.url}/opengraph-image`,
-    author: { "@id": orgId },
+    // Ohne eingetragenen Autor bleibt die Organisation Autorin
+    author: a.author ? { "@id": personId(a.author) } : { "@id": orgId },
     publisher: { "@id": orgId },
     isPartOf: { "@id": `${site.url}/#website` },
     about: a.about.map((name) => ({ "@type": "Thing", name })),
+  };
+}
+
+const personId = (a: Author) => `${site.url}${authorPath(a)}#person`;
+
+/** Vollständiges Person-Objekt auf der Autorenseite; Artikel verweisen per @id darauf. */
+export function personSchema(a: Author) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": personId(a),
+    name: a.name,
+    url: `${site.url}${authorPath(a)}`,
+    ...(isSet(a.role) && { jobTitle: a.role }),
+    ...(a.photo && { image: `${site.url}${a.photo}` }),
+    ...(isSet(a.bio) && { description: a.bio }),
+    knowsAbout: a.expertise,
+    ...(a.qualifications.length > 0 && {
+      hasCredential: a.qualifications.map((name) => ({ "@type": "EducationalOccupationalCredential", name })),
+    }),
+    worksFor: { "@id": orgId },
+    ...(a.sameAs && a.sameAs.length > 0 && { sameAs: a.sameAs }),
   };
 }

@@ -12,7 +12,7 @@ import { hasPhone, phoneLink, site } from "@/lib/site";
 type Status = "idle" | "sending" | "error";
 
 // Versand ausschließlich über Web3Forms (web3forms.com); Zustellung an die E-Mail-Adresse dieses Access Keys
-const WEB3FORMS_ACCESS_KEY = "c0e91a82-de38-4bc2-b228-cdc1fcd7b8be";
+const WEB3FORMS_ACCESS_KEY = "faef2fdb-f4c6-40c8-ac8c-a551a003e1b6";
 
 /**
  * Formular „Bestandsaufnahme anfragen“ (Lastenheft L-01 bis L-06).

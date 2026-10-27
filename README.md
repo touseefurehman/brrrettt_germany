@@ -20,7 +20,7 @@ Next.js 15 (App Router), gehostet auf Vercel.
 
 ## Kontaktformular und Umgebungsvariablen
 
-Das Formular sendet direkt aus dem Browser an Web3Forms (Access Key in `components/ContactForm.tsx`, derselbe wie bei lieferantgesucht.de). Die Anfragen gehen an die E-Mail-Adresse, mit der dieser Access Key bei web3forms.com registriert ist. Spam-Schutz: verstecktes Honeypot-Feld, Mindestzeit von 3 Sekunden, `botcheck` von Web3Forms.
+Das Formular sendet direkt aus dem Browser an Web3Forms (Access Key in `components/ContactForm.tsx`). Die Anfragen gehen an die E-Mail-Adresse, mit der dieser Access Key bei web3forms.com registriert ist. Spam-Schutz: verstecktes Honeypot-Feld, Mindestzeit von 3 Sekunden, `botcheck` von Web3Forms.
 
 | Variable            | Beispiel                                             |
 | ------------------- | ---------------------------------------------------- |

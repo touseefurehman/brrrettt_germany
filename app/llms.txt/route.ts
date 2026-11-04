@@ -39,6 +39,7 @@ export function GET() {
     service("betreiberpflichten"),
     service("betreiberverantwortung"),
     service(externerBetreibermanager.slug),
+    link("Leistungskatalog", "/leistungen", "Alle koordinierten Prüf-, Wartungs- und Betreiberleistungen nach Gewerk."),
     link("Prüffristen", "/prueffristen", "Übersicht der Prüffristen technischer Anlagen mit Rechtsgrundlage."),
     "",
     "## Prüfbereiche",

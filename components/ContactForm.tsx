@@ -7,6 +7,7 @@ import { ArrowUpRight } from "./icons";
 import { btnPrimary } from "./ui";
 import { track } from "@/lib/analytics";
 import EmailLink from "./EmailLink";
+import CatalogSelect from "./CatalogSelect";
 import { hasPhone, phoneLink, site } from "@/lib/site";
 
 type Status = "idle" | "sending" | "error";
@@ -20,7 +21,7 @@ const WEB3FORMS_ACCESS_KEY = "faef2fdb-f4c6-40c8-ac8c-a551a003e1b6";
  * Qualifizierungsmerkmal und darf nicht entfallen. Nach dem Versand: GA4-Event `generate_lead` mit Quellseite,
  * dann Weiterleitung auf die Bestätigungsseite /anfrage-gesendet (eigene URL für die Conversion-Messung).
  */
-export default function ContactForm({ source }: { source: string }) {
+export default function ContactForm({ source, catalog = false }: { source: string; catalog?: boolean }) {
   const router = useRouter();
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState("");
@@ -43,7 +44,9 @@ export default function ContactForm({ source }: { source: string }) {
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({
           access_key: WEB3FORMS_ACCESS_KEY,
-          subject: `Bestandsaufnahme angefragt – ${(data.organisation ?? "").trim()} (${data.standorte} Standorte)`,
+          subject: `Bestandsaufnahme angefragt – ${(data.organisation ?? "").trim()} (${data.standorte} Standorte)${
+            data.leistung ? ` – ${data.leistung}` : ""
+          }`,
           from_name: "betreibermanager.de",
           botcheck: false,
           Organisation: data.organisation,
@@ -51,6 +54,7 @@ export default function ContactForm({ source }: { source: string }) {
           email: data.email,
           Telefon: data.phone || "–",
           "Anzahl Standorte": data.standorte,
+          ...(catalog ? { Leistung: data.leistung || "–" } : {}),
           Nachricht: data.message || "–",
           Seite: source,
           Einwilligung: "erteilt",
@@ -102,6 +106,7 @@ export default function ContactForm({ source }: { source: string }) {
           <input name="standorte" type="number" inputMode="numeric" min={1} max={100000} step={1} placeholder="z. B. 12" required />
         </label>
       </div>
+      {catalog && <CatalogSelect />}
       <label>
         Telefon <span>(optional)</span>
         <input name="phone" type="tel" placeholder="Für Rückfragen" autoComplete="tel" maxLength={60} />

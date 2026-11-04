@@ -32,7 +32,7 @@ export function LegalNotice() {
 }
 
 /** Formular „Bestandsaufnahme anfragen“ (L-01) mit Anbieterangaben */
-export function InquirySection({ title, source }: { title: string; source: string }) {
+export function InquirySection({ title, source, catalog }: { title: string; source: string; catalog?: boolean }) {
   return (
     <section id="anfrage" className="section page-width contact-grid">
       <div>
@@ -51,7 +51,7 @@ export function InquirySection({ title, source }: { title: string; source: strin
           </div>
         </div>
       </div>
-      <ContactForm source={source} />
+      <ContactForm source={source} catalog={catalog} />
     </section>
   );
 }

@@ -56,6 +56,9 @@ Ausrichtung nach K-06 auf Anfrage: kurze Seiten (400–700 Wörter), Formular ob
 | Betreiberpflichten Wohnungsunternehmen | `/betreiberpflichten/wohnungsunternehmen` |
 | Betreiberpflichten Kommunen | `/betreiberpflichten/kommunen` |
 | Betreiberverantwortung Krankenhäuser und Pflege | `/betreiberpflichten/krankenhaeuser` |
+| Leistungskatalog (Master-Portfolio Teil 2, 84 Leistungen) | `/leistungen` |
+
+Der Leistungskatalog (`lib/leistungskatalog.ts`) ist eine Übersichtsseite ohne eigenes Hauptkeyword. Einzelne Leistungen erhalten nach K-01/K-05 erst dann eine eigene Seite, wenn ihr Suchvolumen belegt ist; bis dahin verlinkt der Katalog auf bestehende Seiten, die die Leistung behandeln.
 
 ### 3.4 Fachartikel (20) – Longtail der Anlage-A-Begriffe (K-04)
 

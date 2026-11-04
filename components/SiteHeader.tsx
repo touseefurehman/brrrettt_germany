@@ -11,13 +11,14 @@ import { hasPhone, phoneLink, site } from "@/lib/site";
 // sind über Startseite, Footer und den CTA-Button erreichbar.
 const navItems: [string, string][] = [
   ["Betreiberpflichten", "/betreiberpflichten"],
-  ["Branchen", "/#branchen"],
+  ["Leistungen", "/leistungen"],
   ["Prüffristen", "/prueffristen"],
   ["Wissen", "/wissen"],
   ["Über uns", "/ueber-uns"],
 ];
 const mobileNavItems: [string, string][] = [
   ...navItems,
+  ["Branchen", "/#branchen"],
   ["Externer Betreibermanager", "/externer-betreibermanager"],
   ["Prüfbereiche", "/#pruefbereiche"],
   ["Kontakt", "/kontakt"],

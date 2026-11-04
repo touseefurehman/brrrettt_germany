@@ -13,6 +13,7 @@ Next.js 15 (App Router), gehostet auf Vercel.
 ## Inhalte (SEO/GEO)
 
 - **Landingpages** – `lib/leistungen.ts`: `/externer-betreibermanager` und `/betreiberpflichten/<slug>` (Wohnungsunternehmen, Kommunen, Krankenhäuser). Jede Seite hat ein eigenes Anfrageformular; die Herkunftsseite steht in der Anfrage-E-Mail (Feld „Seite“).
+- **Leistungskatalog** – `lib/leistungskatalog.ts`: alle Leistungen nach Gewerk auf `/leistungen`. Feld `href` verlinkt eine bestehende Seite zur Leistung. „Anfragen“ wählt die Leistung im Formular vor (`/leistungen?leistung=<slug>#anfrage`); sie steht als Feld „Leistung“ in der Anfrage-E-Mail.
 - **Wissen** – `lib/artikel-grundlagen.ts`, `lib/artikel-branchen.ts`, registriert in `lib/wissen.ts`. Übersicht `/wissen`, Artikel `/wissen/<slug>`. Sitemap, Übersicht und Prüfbereichsseiten (Feld `areas`) übernehmen neue Artikel automatisch.
 - **Bausteine** – `lib/pages.ts`: Definition, Tabelle, Checkliste, Schritte, Praxisbeispiel, Hinweis. Fließtext kennt `**fett**` und `[Text](/pfad)`. Regelwerke zentral in `lib/normen.ts`.
 - Jede neue Seite bekommt FAQ (inkl. FAQPage-Schema), Breadcrumb-Schema, Canonical und Regelwerksverweise; Artikel zusätzlich Article-Schema mit Datum (`modified` bei Änderungen pflegen).

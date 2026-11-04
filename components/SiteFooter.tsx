@@ -57,6 +57,7 @@ export default function SiteFooter() {
         </nav>
         <nav aria-label="Branchen">
           <strong>Leistung &amp; Branchen</strong>
+          <Link href="/leistungen">Alle Leistungen</Link>
           <Link href="/betreiberpflichten">Betreiberpflichten</Link>
           <Link href="/betreiberverantwortung">Betreiberverantwortung</Link>
           <Link href="/externer-betreibermanager">{externerBetreibermanager.name}</Link>

@@ -65,7 +65,8 @@ export default function WissenPage() {
           </div>
         ))}
         <p className="muted-note">
-          Alle Fristen auf einen Blick: <Link href="/prueffristen">Prüffristen im Überblick</Link>
+          Alle Fristen auf einen Blick: <Link href="/prueffristen">Prüffristen im Überblick</Link> · Fragen und
+          Antworten zur Elektroprüfung: <Link href="/elektropruefung-dguv-v3">Elektroprüfung nach DGUV V3</Link>
         </p>
       </section>
 

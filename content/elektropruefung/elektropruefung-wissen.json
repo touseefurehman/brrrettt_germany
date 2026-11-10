@@ -1,0 +1,632 @@
+[
+  {
+    "id": 1,
+    "slug": "ist-die-dguv-v3-pruefung-fuer-jedes-unternehmen-pflicht",
+    "question": "Ist die DGUV V3 Prüfung für jedes Unternehmen Pflicht?",
+    "category": "Pflicht & Rechtsgrundlage",
+    "shortAnswer": "Ja, sobald ein Unternehmen mindestens einen Beschäftigten hat, muss es seine elektrischen Anlagen und Betriebsmittel nach DGUV Vorschrift 3 regelmäßig prüfen lassen. Die Pflicht ergibt sich zusätzlich aus Arbeitsschutzgesetz und Betriebssicherheitsverordnung.",
+    "expertText": "In der Praxis wird die Pflicht häufig unterschätzt, weil keine Behörde aktiv an die Prüfung erinnert. Spätestens bei einem Unfall, einem Brand oder einer Begehung durch die Berufsgenossenschaft wird jedoch nach dem Prüfnachweis gefragt. Für Betreiber im Facility Management gehört die Elektroprüfung deshalb fest in den Betreiberpflichten-Katalog und in das Fristenmanagement. Wer keine eigenen Elektrofachkräfte hat, beauftragt einen qualifizierten Prüfdienstleister mit klarer Dokumentation.",
+    "legalBasis": "DGUV Vorschrift 3, ArbSchG, BetrSichV"
+  },
+  {
+    "id": 2,
+    "slug": "welche-gesetze-schreiben-die-elektropruefung-in-betrieben-vor",
+    "question": "Welche Gesetze schreiben die Elektroprüfung in Betrieben vor?",
+    "category": "Pflicht & Rechtsgrundlage",
+    "shortAnswer": "Maßgeblich sind die DGUV Vorschrift 3 (Unfallverhütungsvorschrift der Berufsgenossenschaften), die Betriebssicherheitsverordnung (BetrSichV) und das Arbeitsschutzgesetz (ArbSchG). Ergänzend konkretisieren VDE-Normen, wie geprüft wird.",
+    "expertText": "Die BetrSichV verpflichtet den Arbeitgeber, Arbeitsmittel auf Basis einer Gefährdungsbeurteilung prüfen zu lassen (§§ 3, 14). Die DGUV Vorschrift 3 präzisiert dies für elektrische Anlagen und Betriebsmittel und nennt Richtwerte für Prüffristen. Die technischen Regeln für Durchführung und Messungen stehen in DIN VDE 0105-100 (ortsfeste Anlagen) sowie DIN EN 50699 / VDE 0702 (Geräte). Für Betreiber bedeutet das: Wer nach diesen Regeln prüft und dokumentiert, kann die Erfüllung der Betreiberpflicht im Ernstfall belegen.",
+    "legalBasis": "DGUV Vorschrift 3, ArbSchG, BetrSichV"
+  },
+  {
+    "id": 3,
+    "slug": "was-ist-der-unterschied-zwischen-dguv-vorschrift-3-und-der",
+    "question": "Was ist der Unterschied zwischen DGUV Vorschrift 3 und der Betriebssicherheitsverordnung?",
+    "category": "Pflicht & Rechtsgrundlage",
+    "shortAnswer": "Die BetrSichV ist eine staatliche Verordnung und gilt für alle Arbeitsmittel; die DGUV Vorschrift 3 ist eine Unfallverhütungsvorschrift der Berufsgenossenschaften speziell für elektrische Anlagen und Betriebsmittel. Beide gelten parallel.",
+    "expertText": "Die BetrSichV gibt den Rahmen vor: Gefährdungsbeurteilung, Festlegung von Art, Umfang und Fristen der Prüfung, Prüfung durch eine befähigte Person. Die DGUV Vorschrift 3 liefert dazu die elektrotechnischen Details und in ihren Durchführungsanweisungen konkrete Richtwerte für Prüfintervalle. In der Praxis erfüllt eine Prüfung nach DGUV V3 mit dokumentierter Gefährdungsbeurteilung beide Regelwerke. Für FM-Verantwortliche lohnt es sich, beide Grundlagen im Prüfkonzept ausdrücklich zu benennen.",
+    "legalBasis": "DGUV Vorschrift 3, ArbSchG, BetrSichV"
+  },
+  {
+    "id": 4,
+    "slug": "muss-ich-als-vermieter-von-gewerbeflaechen-die-elektropruefung-beauftragen-oder",
+    "question": "Muss ich als Vermieter von Gewerbeflächen die Elektroprüfung beauftragen oder der Mieter?",
+    "category": "Pflicht & Rechtsgrundlage",
+    "shortAnswer": "Grundsätzlich gilt: Der Vermieter ist für die fest installierte Elektroanlage des Gebäudes verantwortlich, der Mieter als Arbeitgeber für seine eigenen Geräte und die von ihm betriebenen Anlagenteile. Die genaue Abgrenzung regelt der Mietvertrag.",
+    "expertText": "In Gewerbemietverträgen wird die Prüfpflicht häufig ganz oder teilweise auf den Mieter übertragen – das ist zulässig, muss aber eindeutig formuliert sein. Unklare Klauseln führen in der Praxis dazu, dass sich keine Seite zuständig fühlt und die Prüfung ausbleibt. Empfehlenswert ist eine Schnittstellenliste (z. B. ab Unterverteilung Mieter), die Teil des Mietvertrags oder des FM-Vertrags wird. Der Vermieter bleibt trotz Übertragung in einer Kontrollpflicht.",
+    "legalBasis": "DGUV Vorschrift 3, ArbSchG, BetrSichV"
+  },
+  {
+    "id": 5,
+    "slug": "gilt-die-dguv-v3-pruefung-auch-fuer-kleinbetriebe-mit-nur-einem-mitarbeiter",
+    "question": "Gilt die DGUV V3 Prüfung auch für Kleinbetriebe mit nur einem Mitarbeiter?",
+    "category": "Pflicht & Rechtsgrundlage",
+    "shortAnswer": "Ja. Sobald ein Unternehmen auch nur einen Beschäftigten hat, gilt die DGUV Vorschrift 3 in vollem Umfang – unabhängig von der Betriebsgröße. Nur Soloselbstständige ohne Mitarbeiter sind nicht direkt erfasst.",
+    "expertText": "Für Kleinbetriebe ist der Prüfumfang meist überschaubar: wenige Geräte im Büro, eine kleine Unterverteilung. Die Kosten liegen entsprechend niedrig, das Haftungsrisiko bei fehlender Prüfung dagegen nicht. Auch Soloselbstständige sollten prüfen lassen, weil die allgemeine Verkehrssicherungspflicht und der Versicherungsschutz davon abhängen können. Ein einfaches Prüfkataster mit Fristen genügt in kleinen Betrieben häufig als Organisationsnachweis.",
+    "legalBasis": "DGUV Vorschrift 3, ArbSchG, BetrSichV"
+  },
+  {
+    "id": 6,
+    "slug": "ist-die-e-check-pruefung-dasselbe-wie-die-dguv-v3-pruefung",
+    "question": "Ist die E-Check Prüfung dasselbe wie die DGUV V3 Prüfung?",
+    "category": "Pflicht & Rechtsgrundlage",
+    "shortAnswer": "Nein, nicht automatisch. Der E-Check ist ein Markenprodukt des Elektrohandwerks (ZVEH); er kann die Anforderungen der DGUV Vorschrift 3 erfüllen, wenn Umfang, Normen und Dokumentation passen.",
+    "expertText": "Entscheidend ist nicht der Name der Prüfung, sondern was tatsächlich geprüft und dokumentiert wird: alle ortsfesten Anlagen und ortsveränderlichen Betriebsmittel, Messungen nach den einschlägigen VDE-Normen und ein vollständiges Prüfprotokoll. Betreiber sollten im Angebot ausdrücklich „Prüfung nach DGUV Vorschrift 3 und BetrSichV“ verlangen. So ist im Schadensfall eindeutig belegbar, dass die gesetzliche Prüfpflicht erfüllt wurde.",
+    "legalBasis": "DGUV Vorschrift 3, ArbSchG, BetrSichV"
+  },
+  {
+    "id": 7,
+    "slug": "wer-ist-im-unternehmen-fuer-die-elektropruefung-verantwortlich",
+    "question": "Wer ist im Unternehmen für die Elektroprüfung verantwortlich – Geschäftsführer oder Facility Manager?",
+    "category": "Pflicht & Rechtsgrundlage",
+    "shortAnswer": "Rechtlich verantwortlich ist immer der Unternehmer bzw. die Geschäftsführung. Die Durchführung und Organisation kann sie schriftlich an Facility Manager oder Dienstleister übertragen – die Gesamtverantwortung bleibt aber bei der Leitung.",
+    "expertText": "Betreiberverantwortung lässt sich delegieren, aber nicht abgeben. Die Geschäftsführung muss geeignete Personen auswählen, ihnen Befugnisse und Budget geben und die Erfüllung stichprobenartig kontrollieren (Auswahl-, Anweisungs- und Kontrollpflicht). Im FM-Alltag bewährt sich eine schriftliche Pflichtenübertragung nach § 13 ArbSchG an die FM-Leitung, ergänzt durch ein Fristenmanagement, das Prüftermine und Mängel transparent macht.",
+    "legalBasis": "DGUV Vorschrift 3, ArbSchG, BetrSichV"
+  },
+  {
+    "id": 8,
+    "slug": "kann-die-verantwortung-fuer-die-elektropruefung-an-einen-fm-dienstleister",
+    "question": "Kann die Verantwortung für die Elektroprüfung an einen FM-Dienstleister delegiert werden?",
+    "category": "Pflicht & Rechtsgrundlage",
+    "shortAnswer": "Ja. Die Organisation und Durchführung der Elektroprüfung kann vertraglich an einen FM-Dienstleister übertragen werden. Der Auftraggeber bleibt jedoch in der Pflicht, den Dienstleister sorgfältig auszuwählen und zu kontrollieren.",
+    "expertText": "In großen Portfolios ist die Delegation an einen FM-Dienstleister der Normalfall. Wichtig sind ein klarer Leistungsumfang (welche Anlagen, welche Geräte, welche Fristen), die Qualifikation der eingesetzten Prüfer und ein vereinbartes Reporting über Prüfergebnisse und offene Mängel. Fehlt diese Kontrollschleife, bleibt das Haftungsrisiko beim Eigentümer bzw. Betreiber. Ein Blick in die Prüfprotokolle mindestens einmal jährlich gehört zur Kontrollpflicht.",
+    "legalBasis": "DGUV Vorschrift 3, ArbSchG, BetrSichV"
+  },
+  {
+    "id": 9,
+    "slug": "ist-die-pruefung-ortsveraenderlicher-geraete-auch-im-homeoffice-pflicht",
+    "question": "Ist die Prüfung ortsveränderlicher Geräte auch im Homeoffice Pflicht?",
+    "category": "Pflicht & Rechtsgrundlage",
+    "shortAnswer": "Ja, für Geräte, die der Arbeitgeber zur Verfügung stellt – etwa Laptop-Netzteile, Monitore oder Docking-Stationen. Private Geräte der Beschäftigten fallen nicht unter seine Prüfpflicht.",
+    "expertText": "Das Homeoffice ist kein prüffreier Raum: Arbeitsmittel des Arbeitgebers bleiben Arbeitsmittel im Sinne der BetrSichV. In der Praxis werden die Geräte entweder beim Büro-Termin mitgebracht und geprüft oder über ein Tausch- bzw. Versandmodell erfasst. Wichtig ist, dass mobile Geräte im Prüfkataster einem Mitarbeiter zugeordnet sind. Die Prüffrist kann bei geringer Beanspruchung im Homeoffice in der Regel wie im Büro festgelegt werden.",
+    "legalBasis": "DGUV Vorschrift 3, ArbSchG, BetrSichV"
+  },
+  {
+    "id": 10,
+    "slug": "was-passiert-wenn-ein-unternehmen-keine-dguv-v3-pruefung-durchfuehrt",
+    "question": "Was passiert, wenn ein Unternehmen keine DGUV V3 Prüfung durchführt?",
+    "category": "Pflicht & Rechtsgrundlage",
+    "shortAnswer": "Ohne Prüfung drohen Bußgelder, Regressforderungen der Berufsgenossenschaft und Probleme mit der Versicherung. Im Schadensfall kann zudem die Geschäftsführung persönlich haften.",
+    "expertText": "Das größte Risiko ist nicht das Bußgeld, sondern die Beweislage nach einem Unfall oder Brand: Ohne Prüfnachweis kann der Betreiber kaum belegen, dass er seine Organisationspflichten erfüllt hat. Versicherer können Leistungen wegen grober Fahrlässigkeit kürzen, Berufsgenossenschaften Regress nehmen. Für Betreiber ist die Elektroprüfung deshalb ein vergleichsweise günstiger Schutz vor sehr hohen Folgekosten.",
+    "legalBasis": "DGUV Vorschrift 3, ArbSchG, BetrSichV"
+  },
+  {
+    "id": 11,
+    "slug": "gilt-die-pruefpflicht-nach-dguv-v3-auch-fuer-vereine-und-ehrenamt",
+    "question": "Gilt die Prüfpflicht nach DGUV V3 auch für Vereine und Ehrenamt?",
+    "category": "Pflicht & Rechtsgrundlage",
+    "shortAnswer": "Ja, wenn der Verein Beschäftigte hat oder bei einer Berufsgenossenschaft versichert ist, gilt die DGUV Vorschrift 3. Auch sonst ist eine regelmäßige Prüfung wegen der Verkehrssicherungspflicht dringend zu empfehlen.",
+    "expertText": "Vereinsheime, Sporthallen und Veranstaltungen sind typische Orte mit vielen Mehrfachsteckdosen, Kabeltrommeln und Küchengeräten – also mit erhöhtem Risiko. Ehrenamtliche sind in vielen Fällen gesetzlich unfallversichert, was die Prüfpflicht nach UVV auslösen kann. Der Vorstand haftet für die Verkehrssicherheit. Eine Prüfung im Rhythmus der DGUV-Richtwerte ist der sicherste Weg, die Sorgfaltspflicht zu belegen.",
+    "legalBasis": "DGUV Vorschrift 3, ArbSchG, BetrSichV"
+  },
+  {
+    "id": 12,
+    "slug": "muessen-neue-elektrogeraete-vor-der-ersten-nutzung-geprueft-werden",
+    "question": "Müssen neue Elektrogeräte vor der ersten Nutzung geprüft werden?",
+    "category": "Pflicht & Rechtsgrundlage",
+    "shortAnswer": "Nicht zwingend. Nach DGUV Vorschrift 3 § 5 Abs. 4 entfällt die Prüfung vor der ersten Inbetriebnahme, wenn der Hersteller bestätigt, dass das Gerät den elektrotechnischen Regeln entspricht (z. B. über die CE-Kennzeichnung).",
+    "expertText": "Neue Geräte müssen trotzdem sofort ins Prüfkataster aufgenommen werden, damit die erste Wiederholungsprüfung fristgerecht erfolgt. Viele Betreiber kennzeichnen Neugeräte mit einer Plakette „Erstprüfung durch Hersteller“ und dem Datum der nächsten Prüfung. Anders sieht es bei selbst zusammengestellten oder umgebauten Geräten aus – sie müssen vor der ersten Nutzung geprüft werden.",
+    "legalBasis": "DGUV Vorschrift 3, ArbSchG, BetrSichV"
+  },
+  {
+    "id": 13,
+    "slug": "wie-oft-muessen-ortsveraenderliche-elektrogeraete-im-buero-geprueft-werden",
+    "question": "Wie oft müssen ortsveränderliche Elektrogeräte im Büro geprüft werden?",
+    "category": "Prüffristen & Intervalle",
+    "shortAnswer": "Für ortsveränderliche Geräte im Büro nennt die DGUV Vorschrift 3 einen Richtwert von 6 Monaten. Liegt die Fehlerquote unter 2 %, kann die Frist bis auf maximal 24 Monate verlängert werden.",
+    "expertText": "In der Praxis prüfen die meisten Bürobetreiber im Rhythmus von 12 oder 24 Monaten – auf Basis einer dokumentierten Gefährdungsbeurteilung und niedriger Fehlerquoten. Die Frist darf nicht pauschal gewählt werden, sondern muss begründet sein. Geräte mit höherer Beanspruchung, etwa Wasserkocher oder Kaffeemaschinen in Teeküchen, verdienen eine eigene Betrachtung. Das Fristenmanagement sollte unterschiedliche Intervalle je Gerätegruppe abbilden können.",
+    "legalBasis": "DGUV V3 §5, DGUV V3 Durchführungsanweisung Tabellen 1A/1B, BetrSichV §3"
+  },
+  {
+    "id": 14,
+    "slug": "welche-prueffristen-gelten-fuer-ortsfeste-elektrische-anlagen-nach-dguv-v3",
+    "question": "Welche Prüffristen gelten für ortsfeste elektrische Anlagen nach DGUV V3?",
+    "category": "Prüffristen & Intervalle",
+    "shortAnswer": "Ortsfeste elektrische Anlagen und Betriebsmittel sind nach DGUV Vorschrift 3 im Regelfall alle 4 Jahre durch eine Elektrofachkraft zu prüfen. In Betriebsstätten besonderer Art, etwa Feuchträumen, gilt ein Richtwert von 1 Jahr.",
+    "expertText": "Die 4-Jahres-Frist ist ein Richtwert, kein Freibrief: Die Gefährdungsbeurteilung kann kürzere Intervalle ergeben, z. B. bei hoher Last, Staub, Feuchtigkeit oder sicherheitsrelevanten Anlagen. Zusätzlich verlangen Feuerversicherer oft eigene Prüfungen nach VdS-Richtlinien. Fehlerstromschutzschalter in stationären Anlagen sind zudem halbjährlich über die Prüftaste zu testen. Ein Prüfkonzept sollte all diese Fristen zusammenführen.",
+    "legalBasis": "DGUV V3 §5, DGUV V3 Durchführungsanweisung Tabellen 1A/1B, BetrSichV §3"
+  },
+  {
+    "id": 15,
+    "slug": "wie-oft-muessen-elektrogeraete-auf-baustellen-geprueft-werden",
+    "question": "Wie oft müssen Elektrogeräte auf Baustellen geprüft werden?",
+    "category": "Prüffristen & Intervalle",
+    "shortAnswer": "Auf Baustellen gilt für ortsveränderliche Geräte ein Richtwert von 3 Monaten. Bei einer Fehlerquote unter 2 % kann die Frist auf maximal 1 Jahr verlängert werden.",
+    "expertText": "Baustellen gehören zu den Umgebungen mit der höchsten Beanspruchung: Feuchtigkeit, mechanische Belastung und häufiger Standortwechsel. Für Baustromverteiler und RCD-Schutzmaßnahmen in nichtstationären Anlagen gelten noch kürzere Intervalle, teils arbeitstäglich bzw. monatlich. Generalunternehmer und Betreiber sollten vertraglich festlegen, wer für die Prüfung der Geräte von Nachunternehmern verantwortlich ist.",
+    "legalBasis": "DGUV V3 §5, DGUV V3 Durchführungsanweisung Tabellen 1A/1B, BetrSichV §3"
+  },
+  {
+    "id": 16,
+    "slug": "wer-legt-die-prueffristen-fuer-elektrogeraete-fest-die-dguv-oder-der-arbeitgeber",
+    "question": "Wer legt die Prüffristen für Elektrogeräte fest – die DGUV oder der Arbeitgeber?",
+    "category": "Prüffristen & Intervalle",
+    "shortAnswer": "Der Arbeitgeber legt die Prüffristen auf Grundlage einer Gefährdungsbeurteilung fest. Die Richtwerte der DGUV Vorschrift 3 dienen dabei als Orientierung, sind aber keine starren Vorgaben.",
+    "expertText": "Das ist ein häufiges Missverständnis: Die DGUV nennt Richt- und Maximalwerte, die konkrete Frist verantwortet der Betreiber. Wer kürzere oder längere Fristen wählt, muss das begründen und dokumentieren – etwa mit Einsatzbedingungen und Fehlerquoten früherer Prüfungen. Für FM-Verantwortliche heißt das: Die Gefährdungsbeurteilung ist das zentrale Dokument, auf das sich jede Prüffrist zurückführen lassen muss.",
+    "legalBasis": "DGUV V3 §5, DGUV V3 Durchführungsanweisung Tabellen 1A/1B, BetrSichV §3"
+  },
+  {
+    "id": 17,
+    "slug": "wie-erstelle-ich-eine-gefaehrdungsbeurteilung-zur-festlegung-der-prueffristen",
+    "question": "Wie erstelle ich eine Gefährdungsbeurteilung zur Festlegung der Prüffristen?",
+    "category": "Prüffristen & Intervalle",
+    "shortAnswer": "Die Gefährdungsbeurteilung erfasst Geräte und Anlagen, bewertet Einsatzbedingungen und Beanspruchung und leitet daraus Art, Umfang und Fristen der Prüfung ab. Sie ist schriftlich zu dokumentieren und regelmäßig zu aktualisieren.",
+    "expertText": "Bewährt hat sich ein Vorgehen in Gerätegruppen: Bürogeräte, Teeküchen, Werkstatt, Außenbereich, Baustelle. Je Gruppe werden Belastung, Umgebung, Nutzerkreis und bisherige Fehlerquote bewertet. Das Ergebnis ist eine Fristentabelle, die direkt ins CAFM- oder Fristensystem übernommen werden kann. Die Beurteilung sollte von einer Fachkraft für Arbeitssicherheit mit elektrotechnischem Sachverstand begleitet werden.",
+    "legalBasis": "DGUV V3 §5, DGUV V3 Durchführungsanweisung Tabellen 1A/1B, BetrSichV §3"
+  },
+  {
+    "id": 18,
+    "slug": "kann-man-prueffristen-verlaengern-wenn-die-fehlerquote-unter-2-liegt",
+    "question": "Kann man Prüffristen verlängern, wenn die Fehlerquote unter 2 % liegt?",
+    "category": "Prüffristen & Intervalle",
+    "shortAnswer": "Ja. Nach den Durchführungsanweisungen zur DGUV Vorschrift 3 kann die Prüffrist verlängert werden, wenn bei den Prüfungen weniger als 2 % der Geräte Mängel aufweisen – bis zu den genannten Maximalwerten.",
+    "expertText": "Die Fehlerquote ist damit ein echter Kostenhebel: Wer über mehrere Prüfzyklen sauber dokumentiert, kann Intervalle begründet verlängern und Prüfkosten senken. Voraussetzung ist eine Auswertung je Gerätegruppe, nicht nur über den gesamten Bestand. Steigt die Fehlerquote wieder, muss die Frist verkürzt werden. Ein gutes Prüfprotokoll liefert diese Kennzahl automatisch.",
+    "legalBasis": "DGUV V3 §5, DGUV V3 Durchführungsanweisung Tabellen 1A/1B, BetrSichV §3"
+  },
+  {
+    "id": 19,
+    "slug": "wie-oft-muessen-fi-schutzschalter-rcd-geprueft-werden",
+    "question": "Wie oft müssen FI-Schutzschalter (RCD) geprüft werden?",
+    "category": "Prüffristen & Intervalle",
+    "shortAnswer": "Fehlerstromschutzschalter (RCD/FI) in stationären Anlagen sind halbjährlich durch Betätigen der Prüftaste zu testen. In nichtstationären Anlagen, etwa auf Baustellen, gilt arbeitstäglich die Prüftaste und monatlich eine messtechnische Prüfung.",
+    "expertText": "Die Prüftaste testet die Mechanik, nicht die Auslöseparameter – deshalb wird der RCD zusätzlich bei der Anlagenprüfung messtechnisch geprüft (Auslösestrom, Auslösezeit). In vielen Gebäuden wird der halbjährliche Tastentest schlicht vergessen, weil niemand zuständig ist. Er gehört als eigene Aufgabe in den Wartungsplan des Hausmeisters oder Haustechnikers und sollte mit Datum dokumentiert werden.",
+    "legalBasis": "DGUV V3 §5, DGUV V3 Durchführungsanweisung Tabellen 1A/1B, BetrSichV §3"
+  },
+  {
+    "id": 20,
+    "slug": "welche-prueffristen-gelten-fuer-elektrische-anlagen-in-werkstaetten-und",
+    "question": "Welche Prüffristen gelten für elektrische Anlagen in Werkstätten und Produktion?",
+    "category": "Prüffristen & Intervalle",
+    "shortAnswer": "Für ortsveränderliche Geräte in Werkstätten und Fertigungsstätten liegt der Richtwert bei 6 Monaten, maximal 1 Jahr bei niedriger Fehlerquote. Ortsfeste Anlagen werden in der Regel alle 4 Jahre geprüft, in Räumen besonderer Art jährlich.",
+    "expertText": "Produktionsumgebungen bringen Staub, Vibrationen, Öl und Hitze mit sich – Faktoren, die in der Gefährdungsbeurteilung zu kürzeren Intervallen führen können. Hinzu kommen Maschinen mit eigener elektrischer Ausrüstung, für die Herstellervorgaben und DIN EN 60204-1 zu beachten sind. Prüftermine sollten mit Produktionsplanung und Instandhaltung abgestimmt werden, um Stillstände zu vermeiden.",
+    "legalBasis": "DGUV V3 §5, DGUV V3 Durchführungsanweisung Tabellen 1A/1B, BetrSichV §3"
+  },
+  {
+    "id": 21,
+    "slug": "wie-oft-muss-die-elektroinstallation-in-einem-buerogebaeude-geprueft-werden",
+    "question": "Wie oft muss die Elektroinstallation in einem Bürogebäude geprüft werden?",
+    "category": "Prüffristen & Intervalle",
+    "shortAnswer": "Die fest installierte Elektroanlage eines Bürogebäudes ist nach DGUV Vorschrift 3 im Regelfall alle 4 Jahre zu prüfen. Kürzere Fristen ergeben sich, wenn die Gefährdungsbeurteilung oder der Versicherer dies verlangt.",
+    "expertText": "In Bürogebäuden gehören neben Verteilungen und Stromkreisen auch Sicherheitsbeleuchtung, Notstrom- bzw. USV-Anlagen und Blitzschutz zum Prüfumfang – teils mit eigenen, kürzeren Fristen nach Landesprüfverordnung oder Herstellerangaben. Für Multi-Tenant-Gebäude ist zudem die Abgrenzung zwischen Vermieter- und Mieterbereich entscheidend. Ein gebäudebezogener Prüfplan schafft hier Klarheit.",
+    "legalBasis": "DGUV V3 §5, DGUV V3 Durchführungsanweisung Tabellen 1A/1B, BetrSichV §3"
+  },
+  {
+    "id": 22,
+    "slug": "welche-pruefintervalle-gelten-fuer-verlaengerungskabel-und-mehrfachsteckdosen",
+    "question": "Welche Prüfintervalle gelten für Verlängerungskabel und Mehrfachsteckdosen?",
+    "category": "Prüffristen & Intervalle",
+    "shortAnswer": "Verlängerungskabel und Mehrfachsteckdosen sind ortsveränderliche Betriebsmittel und unterliegen denselben Richtwerten wie andere Geräte: im Büro meist 6 bis 24 Monate, auf Baustellen 3 Monate bis 1 Jahr.",
+    "expertText": "Gerade Kabel und Steckdosenleisten gehören zu den Geräten mit der höchsten Fehlerquote – durch Quetschungen, Knicke und Überlastung. Viele Betreiber setzen sie deshalb in eine eigene Gerätegruppe mit kürzerer Frist. Defekte oder nicht prüfbare Billigprodukte sollten konsequent ausgesondert werden. Hintereinandergesteckte Mehrfachsteckdosen sind ein klassischer Mangel bei Begehungen.",
+    "legalBasis": "DGUV V3 §5, DGUV V3 Durchführungsanweisung Tabellen 1A/1B, BetrSichV §3"
+  },
+  {
+    "id": 23,
+    "slug": "wie-oft-muessen-elektrogeraete-in-kuechen-und-kantinen-geprueft-werden",
+    "question": "Wie oft müssen Elektrogeräte in Küchen und Kantinen geprüft werden?",
+    "category": "Prüffristen & Intervalle",
+    "shortAnswer": "In Küchen und Kantinen werden ortsveränderliche Geräte wegen Feuchtigkeit, Hitze und intensiver Nutzung meist kürzer geprüft als im Büro – häufig alle 6 bis 12 Monate. Die konkrete Frist ergibt sich aus der Gefährdungsbeurteilung.",
+    "expertText": "Großküchengeräte sind oft fest angeschlossen und zählen damit zu den ortsfesten Betriebsmitteln; sie werden zusammen mit der Anlage geprüft, in Feuchträumen in der Regel jährlich. Bei Kantinen, die von einem Caterer betrieben werden, muss vertraglich geklärt sein, wer prüft. Teeküchen in Büros werden häufig unterschätzt und sollten als eigene Gerätegruppe geführt werden.",
+    "legalBasis": "DGUV V3 §5, DGUV V3 Durchführungsanweisung Tabellen 1A/1B, BetrSichV §3"
+  },
+  {
+    "id": 24,
+    "slug": "was-gilt-wenn-die-prueffrist-fuer-die-dguv-v3-pruefung-abgelaufen-ist",
+    "question": "Was gilt, wenn die Prüffrist für die DGUV V3 Prüfung abgelaufen ist?",
+    "category": "Prüffristen & Intervalle",
+    "shortAnswer": "Ist die Prüffrist abgelaufen, sollte die Prüfung schnellstmöglich nachgeholt werden. Bis dahin muss der Betreiber das Risiko bewerten und bei Zweifeln betroffene Geräte außer Betrieb nehmen.",
+    "expertText": "Eine überschrittene Frist ist ein Organisationsmangel, der im Schadensfall schwer wiegt. Wer die Überschreitung erkennt, dokumentiert sie, beauftragt die Prüfung umgehend und hält die Gründe fest. Dauerhafte Lösung ist ein Fristenmanagement mit Vorlauf-Erinnerungen, idealerweise 8 bis 12 Wochen vor Fälligkeit. So bleibt genug Zeit für Angebot, Beauftragung und Terminierung.",
+    "legalBasis": "DGUV V3 §5, DGUV V3 Durchführungsanweisung Tabellen 1A/1B, BetrSichV §3"
+  },
+  {
+    "id": 25,
+    "slug": "wie-laeuft-eine-dguv-v3-pruefung-im-unternehmen-ab",
+    "question": "Wie läuft eine DGUV V3 Prüfung im Unternehmen ab?",
+    "category": "Ablauf & Normen",
+    "shortAnswer": "Eine DGUV V3 Prüfung besteht aus Bestandsaufnahme, Sichtprüfung, Messungen, Funktionsprüfung und Dokumentation. Geprüfte Geräte erhalten eine Prüfplakette, Mängel werden im Prüfprotokoll festgehalten.",
+    "expertText": "Professionelle Prüfdienstleister beginnen mit einer Begehung oder einer Bestandsliste, um Umfang und Aufwand zu kalkulieren. Die Prüfung selbst erfolgt meist raumweise, Geräte werden mit ID-Nummer oder Barcode erfasst. Am Ende stehen ein Prüfbericht mit Messwerten, eine Mängelliste mit Empfehlungen und die Termine der nächsten Prüfung. Für Betreiber ist eine digitale Übergabe ins eigene System ein klarer Mehrwert.",
+    "legalBasis": "DIN VDE 0105-100, DIN EN 50678 (VDE 0701), DIN EN 50699 (VDE 0702), DIN VDE 0100-600"
+  },
+  {
+    "id": 26,
+    "slug": "welche-messungen-werden-bei-der-pruefung-ortsveraenderlicher-geraete",
+    "question": "Welche Messungen werden bei der Prüfung ortsveränderlicher Geräte durchgeführt?",
+    "category": "Ablauf & Normen",
+    "shortAnswer": "Geprüft werden in der Regel Schutzleiterwiderstand, Isolationswiderstand sowie Schutzleiter- bzw. Berührungsstrom, ergänzt um Sichtprüfung und Funktionsprüfung. Grundlage ist DIN EN 50699 (VDE 0702).",
+    "expertText": "Welche Messungen nötig sind, hängt von der Schutzklasse ab: Geräte der Schutzklasse I benötigen eine Schutzleitermessung, Geräte der Schutzklasse II nicht. Die Grenzwerte sind normativ festgelegt, z. B. 0,3 Ω Schutzleiterwiderstand bei Leitungslängen bis 5 m. Die Sichtprüfung ist oft der wichtigste Teil – viele Mängel wie beschädigte Stecker oder Kabel werden bereits hier erkannt.",
+    "legalBasis": "DIN VDE 0105-100, DIN EN 50678 (VDE 0701), DIN EN 50699 (VDE 0702), DIN VDE 0100-600"
+  },
+  {
+    "id": 27,
+    "slug": "was-ist-der-unterschied-zwischen-din-vde-0701-und-din-vde-0702",
+    "question": "Was ist der Unterschied zwischen DIN VDE 0701 und DIN VDE 0702?",
+    "category": "Ablauf & Normen",
+    "shortAnswer": "DIN VDE 0701 regelt die Prüfung nach einer Reparatur oder Änderung, DIN VDE 0702 die Wiederholungsprüfung im Betrieb. Heute gelten dafür die europäischen Normen DIN EN 50678 (VDE 0701) und DIN EN 50699 (VDE 0702).",
+    "expertText": "Lange Zeit waren beide Teile in der gemeinsamen Norm DIN VDE 0701-0702 zusammengefasst, die inzwischen durch die beiden EN-Normen ersetzt wurde. Für Betreiber ist vor allem die VDE 0702 relevant, denn sie beschreibt die regelmäßige Prüfung im Unternehmen. Prüfprotokolle sollten die angewendete Norm ausdrücklich nennen. Ältere Protokolle mit Bezug auf die Vorgängernorm sind dadurch nicht ungültig.",
+    "legalBasis": "DIN VDE 0105-100, DIN EN 50678 (VDE 0701), DIN EN 50699 (VDE 0702), DIN VDE 0100-600"
+  },
+  {
+    "id": 28,
+    "slug": "welche-norm-gilt-fuer-die-pruefung-ortsfester-elektrischer-anlagen",
+    "question": "Welche Norm gilt für die Prüfung ortsfester elektrischer Anlagen?",
+    "category": "Ablauf & Normen",
+    "shortAnswer": "Für die wiederkehrende Prüfung ortsfester Anlagen gilt DIN VDE 0105-100. Die Erstprüfung neuer oder geänderter Anlagen erfolgt nach DIN VDE 0100-600.",
+    "expertText": "Die Prüfung ortsfester Anlagen umfasst Besichtigen, Erproben und Messen: unter anderem Isolationswiderstand, Schleifenimpedanz, RCD-Auslösung und Durchgängigkeit der Schutzleiter. Sie darf nur von einer Elektrofachkraft durchgeführt werden. In größeren Gebäuden wird die Prüfung oft in Abschnitte gegliedert, um den Betrieb nicht zu stören. Aktuelle Bestandspläne erleichtern die Prüfung erheblich.",
+    "legalBasis": "DIN VDE 0105-100, DIN EN 50678 (VDE 0701), DIN EN 50699 (VDE 0702), DIN VDE 0100-600"
+  },
+  {
+    "id": 29,
+    "slug": "was-ist-eine-erstpruefung-nach-din-vde-0100-600-und-wann-ist-sie-noetig",
+    "question": "Was ist eine Erstprüfung nach DIN VDE 0100-600 und wann ist sie nötig?",
+    "category": "Ablauf & Normen",
+    "shortAnswer": "Die Erstprüfung nach DIN VDE 0100-600 ist vor der ersten Inbetriebnahme einer neuen, erweiterten oder geänderten Elektroanlage durch den Errichter vorgeschrieben. Sie bestätigt, dass die Anlage normgerecht errichtet wurde.",
+    "expertText": "Für Betreiber ist das Erstprüfprotokoll ein zentrales Übergabedokument – es sollte bei Neubau, Umbau oder Mieterausbau konsequent eingefordert werden. Fehlt es, kann der Betreiber die Normkonformität der Anlage kaum nachweisen. Im FM-Betrieb gehört die Erstprüfung deshalb in die Abnahmecheckliste. Sie ersetzt nicht die spätere wiederkehrende Prüfung nach DGUV V3.",
+    "legalBasis": "DIN VDE 0105-100, DIN EN 50678 (VDE 0701), DIN EN 50699 (VDE 0702), DIN VDE 0100-600"
+  },
+  {
+    "id": 30,
+    "slug": "muss-der-betrieb-waehrend-der-elektropruefung-unterbrochen-werden",
+    "question": "Muss der Betrieb während der Elektroprüfung unterbrochen werden?",
+    "category": "Ablauf & Normen",
+    "shortAnswer": "In der Regel nein. Ortsveränderliche Geräte werden einzeln und kurz vom Netz genommen; bei ortsfesten Anlagen sind kurze, abgestimmte Abschaltungen einzelner Stromkreise nötig.",
+    "expertText": "Ein guter Prüfdienstleister plant die Prüfung so, dass der Betrieb weiterlaufen kann – raumweise, nach Geschäftsschluss oder am Wochenende. Kritisch sind IT, Server und Produktionsanlagen: Hier sind Abschaltungen mit der IT und der Produktion vorab abzustimmen. Ein Prüfablaufplan mit Zeitfenstern je Bereich verhindert Überraschungen und ist bei größeren Objekten Standard.",
+    "legalBasis": "DIN VDE 0105-100, DIN EN 50678 (VDE 0701), DIN EN 50699 (VDE 0702), DIN VDE 0100-600"
+  },
+  {
+    "id": 31,
+    "slug": "wie-lange-dauert-eine-dguv-v3-pruefung-fuer-ein-buero-mit-50-arbeitsplaetzen",
+    "question": "Wie lange dauert eine DGUV V3 Prüfung für ein Büro mit 50 Arbeitsplätzen?",
+    "category": "Ablauf & Normen",
+    "shortAnswer": "Für ein Büro mit 50 Arbeitsplätzen und rund 250 bis 400 Geräten benötigt ein Prüfer erfahrungsgemäß etwa 2 bis 3 Arbeitstage. Die Prüfung der ortsfesten Anlage kommt je nach Größe hinzu.",
+    "expertText": "Der Zeitaufwand hängt stark von der Vorbereitung ab: Sind Geräte zugänglich und gibt es eine Bestandsliste, geht es deutlich schneller. Ein Prüfer schafft je nach Gerätetyp etwa 100 bis 200 Geräte pro Tag. Wiederholungsprüfungen mit vorhandenen Barcodes sind spürbar schneller als die Erstaufnahme. Für die Kalkulation lohnt sich deshalb eine saubere Inventur vorab.",
+    "legalBasis": "DIN VDE 0105-100, DIN EN 50678 (VDE 0701), DIN EN 50699 (VDE 0702), DIN VDE 0100-600"
+  },
+  {
+    "id": 32,
+    "slug": "was-passiert-mit-geraeten-die-bei-der-elektropruefung-durchfallen",
+    "question": "Was passiert mit Geräten, die bei der Elektroprüfung durchfallen?",
+    "category": "Ablauf & Normen",
+    "shortAnswer": "Geräte, die durchfallen, werden als „nicht bestanden“ gekennzeichnet und dürfen nicht weiter genutzt werden. Sie müssen repariert und erneut geprüft oder ausgesondert werden.",
+    "expertText": "Wichtig ist, dass defekte Geräte sofort aus dem Verkehr gezogen werden – idealerweise mit einer Sperrplakette direkt durch den Prüfer. Der Betreiber erhält eine Mängelliste und entscheidet über Reparatur oder Ersatz. Nach einer Reparatur ist eine Prüfung nach DIN EN 50678 (VDE 0701) erforderlich. Die Nachverfolgung offener Mängel ist ein typischer Schwachpunkt und gehört ins Fristenmanagement.",
+    "legalBasis": "DIN VDE 0105-100, DIN EN 50678 (VDE 0701), DIN EN 50699 (VDE 0702), DIN VDE 0100-600"
+  },
+  {
+    "id": 33,
+    "slug": "was-bedeutet-die-pruefplakette-auf-elektrogeraeten-und-was-muss-darauf-stehen",
+    "question": "Was bedeutet die Prüfplakette auf Elektrogeräten und was muss darauf stehen?",
+    "category": "Ablauf & Normen",
+    "shortAnswer": "Die Prüfplakette zeigt, dass ein Gerät geprüft wurde und wann die nächste Prüfung fällig ist. Üblich sind Angaben zu Prüfdatum bzw. nächstem Termin, Prüfer oder Firma und oft eine Geräte-ID.",
+    "expertText": "Die Plakette ist ein praktisches Signal für Nutzer, aber kein Ersatz für das Prüfprotokoll – nur das Protokoll belegt Messwerte und Ergebnis. Eine gesetzliche Pflicht zur Plakette gibt es nicht, sie ist aber Standard. Moderne Plaketten tragen einen Barcode oder QR-Code, der direkt mit dem digitalen Prüfprotokoll verknüpft ist. Das erleichtert Kontrolle und Wiederholungsprüfung.",
+    "legalBasis": "DIN VDE 0105-100, DIN EN 50678 (VDE 0701), DIN EN 50699 (VDE 0702), DIN VDE 0100-600"
+  },
+  {
+    "id": 34,
+    "slug": "welche-vorbereitung-braucht-ein-unternehmen-vor-der-dguv-v3-pruefung",
+    "question": "Welche Vorbereitung braucht ein Unternehmen vor der DGUV V3 Prüfung?",
+    "category": "Ablauf & Normen",
+    "shortAnswer": "Vor der Prüfung sollten eine Geräte- bzw. Anlagenliste, Zugang zu allen Räumen und Verteilungen, aktuelle Pläne und abgestimmte Abschaltzeiten vorliegen. Mitarbeiter sollten über den Termin informiert sein.",
+    "expertText": "Je besser die Vorbereitung, desto geringer die Kosten. Hilfreich sind ein fester Ansprechpartner vor Ort, Schlüssel für Technikräume und eine Klärung, welche Geräte privat sind. Bei Wiederholungsprüfungen sollte das letzte Prüfprotokoll vorliegen, damit offene Mängel nachgeprüft werden können. In Multi-Site-Portfolios empfiehlt sich eine standardisierte Checkliste für alle Standorte.",
+    "legalBasis": "DIN VDE 0105-100, DIN EN 50678 (VDE 0701), DIN EN 50699 (VDE 0702), DIN VDE 0100-600"
+  },
+  {
+    "id": 35,
+    "slug": "wer-darf-eine-dguv-v3-pruefung-durchfuehren",
+    "question": "Wer darf eine DGUV V3 Prüfung durchführen?",
+    "category": "Prüfer & Qualifikation",
+    "shortAnswer": "Prüfen darf eine Elektrofachkraft oder – bei geeigneten Mess- und Prüfgeräten – eine elektrotechnisch unterwiesene Person unter Leitung und Aufsicht einer Elektrofachkraft. Nach BetrSichV muss der Prüfer zudem eine befähigte Person sein.",
+    "expertText": "Die Qualifikation ist kein Formalismus: Im Schadensfall prüfen Versicherer und Gerichte, wer geprüft hat und ob er dazu befähigt war. Betreiber sollten sich die Qualifikation der eingesetzten Prüfer nachweisen lassen. Bei ortsfesten Anlagen ist immer eine Elektrofachkraft erforderlich. Für ortsveränderliche Geräte setzen viele Dienstleister unterwiesene Personen mit Elektrofachkraft-Aufsicht ein.",
+    "legalBasis": "TRBS 1203 (befähigte Person), DGUV V3 §2 (Elektrofachkraft, EuP)"
+  },
+  {
+    "id": 36,
+    "slug": "was-ist-eine-befaehigte-person-nach-trbs-1203-bei-der-elektropruefung",
+    "question": "Was ist eine befähigte Person nach TRBS 1203 bei der Elektroprüfung?",
+    "category": "Prüfer & Qualifikation",
+    "shortAnswer": "Eine befähigte Person nach TRBS 1203 verfügt durch Berufsausbildung, Berufserfahrung und zeitnahe berufliche Tätigkeit über die nötigen Fachkenntnisse zur Prüfung von Arbeitsmitteln. Für die Elektroprüfung ist das in der Regel eine Elektrofachkraft.",
+    "expertText": "Die TRBS 1203 konkretisiert die Anforderungen der Betriebssicherheitsverordnung an Prüfer. Wichtig ist der Aspekt der zeitnahen Tätigkeit: Wer jahrelang nicht geprüft hat, gilt nicht automatisch als befähigt. Der Arbeitgeber muss die befähigte Person auswählen und die Auswahl dokumentieren. Bei externen Dienstleistern genügt in der Regel ein Qualifikationsnachweis im Angebot.",
+    "legalBasis": "TRBS 1203 (befähigte Person), DGUV V3 §2 (Elektrofachkraft, EuP)"
+  },
+  {
+    "id": 37,
+    "slug": "darf-eine-elektrotechnisch-unterwiesene-person-eup-geraete-pruefen",
+    "question": "Darf eine elektrotechnisch unterwiesene Person (EuP) Geräte prüfen?",
+    "category": "Prüfer & Qualifikation",
+    "shortAnswer": "Ja, eine elektrotechnisch unterwiesene Person (EuP) darf ortsveränderliche Geräte prüfen, wenn sie geeignete Mess- und Prüfgeräte nutzt und unter Leitung und Aufsicht einer Elektrofachkraft arbeitet. Ortsfeste Anlagen darf sie nicht eigenständig prüfen.",
+    "expertText": "Die Bewertung der Ergebnisse und die Verantwortung bleiben bei der Elektrofachkraft. Viele Unternehmen bilden eigene Mitarbeiter zur EuP aus, um einfache Geräteprüfungen intern zu erledigen. Das funktioniert nur mit klarer Organisation: benannte Elektrofachkraft, Unterweisungsnachweis, Prüfgerät mit automatischer Bewertung. Ohne diese Struktur ist die interne Prüfung angreifbar.",
+    "legalBasis": "TRBS 1203 (befähigte Person), DGUV V3 §2 (Elektrofachkraft, EuP)"
+  },
+  {
+    "id": 38,
+    "slug": "brauche-ich-fuer-die-elektropruefung-einen-tuev-oder-reicht-ein-elektriker",
+    "question": "Brauche ich für die Elektroprüfung einen TÜV oder reicht ein Elektriker?",
+    "category": "Prüfer & Qualifikation",
+    "shortAnswer": "Ein TÜV ist für die Elektroprüfung nach DGUV V3 nicht vorgeschrieben. Prüfen darf jede befähigte Elektrofachkraft – also auch ein qualifizierter Elektrobetrieb oder spezialisierter Prüfdienst.",
+    "expertText": "Eine Pflicht zur Prüfung durch eine Zugelassene Überwachungsstelle (ZÜS) besteht nur bei überwachungsbedürftigen Anlagen, etwa Aufzügen oder bestimmten Anlagen in explosionsgefährdeten Bereichen. Für die normale Elektroprüfung zählt die Qualifikation des Prüfers, nicht der Name der Organisation. Einige Versicherer verlangen jedoch zusätzlich Prüfungen durch VdS-anerkannte Sachverständige. Das sollte vorab mit der Police abgeglichen werden.",
+    "legalBasis": "TRBS 1203 (befähigte Person), DGUV V3 §2 (Elektrofachkraft, EuP)"
+  },
+  {
+    "id": 39,
+    "slug": "welche-messgeraete-muss-ein-pruefer-fuer-die-dguv-v3-pruefung-haben",
+    "question": "Welche Messgeräte muss ein Prüfer für die DGUV V3 Prüfung haben?",
+    "category": "Prüfer & Qualifikation",
+    "shortAnswer": "Für Geräte wird ein Gerätetester nach DIN VDE 0404 benötigt, für ortsfeste Anlagen ein Installationstester nach DIN EN 61557. Beide müssen regelmäßig kalibriert werden.",
+    "expertText": "Professionelle Prüfgeräte speichern Messwerte, bewerten sie automatisch nach Norm und übertragen sie in eine Prüfsoftware. Das reduziert Fehler und schafft einen lückenlosen Nachweis. Betreiber sollten sich bei externen Dienstleistern das Kalibrierzertifikat zeigen lassen. Ein einfacher Spannungsprüfer oder Multimeter genügt für eine normgerechte Prüfung nicht.",
+    "legalBasis": "TRBS 1203 (befähigte Person), DGUV V3 §2 (Elektrofachkraft, EuP)"
+  },
+  {
+    "id": 40,
+    "slug": "woran-erkenne-ich-einen-qualifizierten-pruefdienstleister-fuer-elektropruefungen",
+    "question": "Woran erkenne ich einen qualifizierten Prüfdienstleister für Elektroprüfungen?",
+    "category": "Prüfer & Qualifikation",
+    "shortAnswer": "Ein qualifizierter Prüfdienst kann die Elektrofachkraft benennen, nach DGUV V3, BetrSichV und den aktuellen VDE-Normen prüfen, kalibrierte Messgeräte nachweisen und vollständige digitale Prüfprotokolle mit Messwerten liefern.",
+    "expertText": "Weitere Kriterien sind Referenzen in vergleichbaren Objekten, eine ausreichende Betriebshaftpflicht und die Fähigkeit, Daten in Ihr Fristen- oder CAFM-System zu übergeben. Für Portfolios zählt außerdem die regionale bzw. bundesweite Abdeckung. Ein Musterprotokoll und ein kurzes Telefonat mit einer Referenz sagen oft mehr als jede Hochglanzbroschüre.",
+    "legalBasis": "TRBS 1203 (befähigte Person), DGUV V3 §2 (Elektrofachkraft, EuP)"
+  },
+  {
+    "id": 41,
+    "slug": "kann-ein-hausmeister-die-elektropruefung-uebernehmen",
+    "question": "Kann ein Hausmeister die Elektroprüfung übernehmen?",
+    "category": "Prüfer & Qualifikation",
+    "shortAnswer": "Nur, wenn der Hausmeister die nötige Qualifikation hat: als Elektrofachkraft oder als elektrotechnisch unterwiesene Person unter Aufsicht einer Elektrofachkraft. Ohne diese Qualifikation darf er nicht prüfen.",
+    "expertText": "Hausmeister können wichtige Aufgaben übernehmen, die keine Prüfung im Sinne der DGUV V3 sind: Sichtkontrollen, RCD-Prüftaste, Meldung von Schäden, Vorbereitung der Prüftermine. Für die eigentliche Prüfung braucht es Qualifikation, Prüfgerät und Dokumentation. Eine EuP-Ausbildung kann sinnvoll sein, wenn im Hintergrund eine verantwortliche Elektrofachkraft benannt ist.",
+    "legalBasis": "TRBS 1203 (befähigte Person), DGUV V3 §2 (Elektrofachkraft, EuP)"
+  },
+  {
+    "id": 42,
+    "slug": "externer-pruefdienst-oder-eigene-elektrofachkraft-was-ist-rechtssicherer",
+    "question": "Externer Prüfdienst oder eigene Elektrofachkraft – was ist rechtssicherer?",
+    "category": "Prüfer & Qualifikation",
+    "shortAnswer": "Beides kann rechtssicher sein, wenn Qualifikation, Messgeräte und Dokumentation stimmen. Ein externer Prüfdienst bietet oft mehr Unabhängigkeit und eine standardisierte Dokumentation, die eigene Elektrofachkraft mehr Flexibilität.",
+    "expertText": "Rechtssicherheit entsteht durch Nachweisbarkeit: benannte befähigte Person, kalibriertes Prüfgerät, vollständiges Protokoll, nachverfolgte Mängel. Interne Lösungen scheitern häufiger an der Organisation – Urlaub, Personalwechsel, fehlende Fortbildung. Externe Dienstleister bringen Routine und Vertretung mit. Viele Betreiber kombinieren daher interne Sichtkontrollen mit externer Prüfung.",
+    "legalBasis": "TRBS 1203 (befähigte Person), DGUV V3 §2 (Elektrofachkraft, EuP)"
+  },
+  {
+    "id": 43,
+    "slug": "wer-haftet-bei-einem-unfall-wenn-die-elektropruefung-nicht-durchgefuehrt-wurde",
+    "question": "Wer haftet bei einem Unfall, wenn die Elektroprüfung nicht durchgeführt wurde?",
+    "category": "Haftung & Versicherung",
+    "shortAnswer": "Bei einem Unfall ohne gültige Elektroprüfung haftet in erster Linie der Unternehmer bzw. Betreiber – zivilrechtlich auf Schadenersatz und unter Umständen strafrechtlich wegen fahrlässiger Körperverletzung. Delegierte Verantwortliche können mithaften.",
+    "expertText": "Die fehlende Prüfung gilt im Schadensfall als Indiz für eine Verletzung der Organisationspflicht. Die Berufsgenossenschaft kann bei grober Fahrlässigkeit Regress nehmen. Wurde die Prüfung an einen Dienstleister übertragen, prüfen Gerichte, ob der Auftraggeber sorgfältig ausgewählt und kontrolliert hat. Ein lückenloser Prüfnachweis ist daher die wichtigste Entlastung.",
+    "legalBasis": "§ 823 BGB, ArbSchG §13, SGB VII §110, VdS 2871 / Klausel SK 3602"
+  },
+  {
+    "id": 44,
+    "slug": "zahlt-die-versicherung-bei-einem-brand-ohne-gueltige-elektropruefung",
+    "question": "Zahlt die Versicherung bei einem Brand ohne gültige Elektroprüfung?",
+    "category": "Haftung & Versicherung",
+    "shortAnswer": "Nicht unbedingt in voller Höhe. Fehlt eine vertraglich vereinbarte oder gesetzlich vorgeschriebene Prüfung, kann der Versicherer die Leistung wegen Obliegenheitsverletzung oder grober Fahrlässigkeit kürzen.",
+    "expertText": "Viele Feuer- und Sachversicherungen enthalten Klauseln, die eine regelmäßige Prüfung der Elektroanlage verlangen, häufig nach VdS-Richtlinien. Ob und wie stark gekürzt wird, hängt vom Vertrag und vom Zusammenhang zwischen Mangel und Schaden ab. Betreiber sollten ihre Policen auf Prüfklauseln durchsehen und die Prüfnachweise griffbereit halten. Der Abgleich gehört in jedes Betreiberpflichten-Audit.",
+    "legalBasis": "§ 823 BGB, ArbSchG §13, SGB VII §110, VdS 2871 / Klausel SK 3602"
+  },
+  {
+    "id": 45,
+    "slug": "haftet-der-geschaeftsfuehrer-persoenlich-bei-fehlender-dguv-v3-pruefung",
+    "question": "Haftet der Geschäftsführer persönlich bei fehlender DGUV V3 Prüfung?",
+    "category": "Haftung & Versicherung",
+    "shortAnswer": "Ja, das ist möglich. Geschäftsführer haften bei Verletzung ihrer Organisationspflichten unter Umständen persönlich – zivilrechtlich gegenüber dem Unternehmen und Geschädigten sowie strafrechtlich bei Personenschäden.",
+    "expertText": "Die persönliche Haftung greift vor allem, wenn die Geschäftsführung die Prüfpflicht weder selbst erfüllt noch wirksam delegiert und kontrolliert hat. Eine schriftliche Pflichtenübertragung, ein funktionierendes Fristenmanagement und regelmäßige Berichte an die Leitung sind die beste Absicherung. Eine D&O-Versicherung deckt Organisationsverschulden nicht in jedem Fall ab. Im Zweifel sollte die Haftungssituation rechtlich geprüft werden.",
+    "legalBasis": "§ 823 BGB, ArbSchG §13, SGB VII §110, VdS 2871 / Klausel SK 3602"
+  },
+  {
+    "id": 46,
+    "slug": "was-verlangt-die-feuerversicherung-bei-der-pruefung-elektrischer-anlagen-vds",
+    "question": "Was verlangt die Feuerversicherung bei der Prüfung elektrischer Anlagen (VdS-Prüfung)?",
+    "category": "Haftung & Versicherung",
+    "shortAnswer": "Feuerversicherer verlangen häufig eine regelmäßige Prüfung der elektrischen Anlagen durch VdS-anerkannte Sachverständige nach Richtlinie VdS 2871 (Klausel SK 3602). Das Intervall steht in der Police, oft jährlich.",
+    "expertText": "Die VdS-Prüfung ist keine Unfallverhütungsprüfung, sondern zielt auf Brandschutz und Sachwerte – sie ersetzt die DGUV V3 Prüfung nicht und umgekehrt. Viele Betreiber kombinieren beide Prüfungen in einem Termin, wenn der Dienstleister beide Qualifikationen hat. Festgestellte Mängel müssen innerhalb der gesetzten Frist beseitigt werden. Ein Blick in die Police klärt, ob die Klausel vereinbart ist.",
+    "legalBasis": "§ 823 BGB, ArbSchG §13, SGB VII §110, VdS 2871 / Klausel SK 3602"
+  },
+  {
+    "id": 47,
+    "slug": "welche-bussgelder-drohen-bei-fehlender-elektropruefung",
+    "question": "Welche Bußgelder drohen bei fehlender Elektroprüfung?",
+    "category": "Haftung & Versicherung",
+    "shortAnswer": "Bußgelder können nach dem Arbeitsschutzgesetz bis zu 30.000 Euro betragen, Verstöße gegen Unfallverhütungsvorschriften nach SGB VII bis zu 10.000 Euro. In der Praxis sind die Folgekosten nach einem Schaden meist deutlich höher.",
+    "expertText": "Bußgelder werden typischerweise nach einer Anordnung der Aufsichtsbehörde oder Berufsgenossenschaft verhängt, wenn Mängel nicht abgestellt werden. Das eigentliche wirtschaftliche Risiko liegt in Regress, Versicherungskürzungen, Betriebsunterbrechung und Reputationsschaden. Kommt es zu Personenschäden, drohen zudem strafrechtliche Ermittlungen. Die Prüfung ist im Verhältnis dazu ein geringer Aufwand.",
+    "legalBasis": "§ 823 BGB, ArbSchG §13, SGB VII §110, VdS 2871 / Klausel SK 3602"
+  },
+  {
+    "id": 48,
+    "slug": "kann-die-berufsgenossenschaft-regress-nehmen-wenn-die-elektropruefung-fehlt",
+    "question": "Kann die Berufsgenossenschaft Regress nehmen, wenn die Elektroprüfung fehlt?",
+    "category": "Haftung & Versicherung",
+    "shortAnswer": "Ja. Bei vorsätzlich oder grob fahrlässig verursachten Arbeitsunfällen kann die Berufsgenossenschaft nach § 110 SGB VII ihre Aufwendungen vom Unternehmer zurückfordern. Eine fehlende Elektroprüfung kann als grob fahrlässig gewertet werden.",
+    "expertText": "Regressforderungen können sehr hoch ausfallen, weil sie Heilbehandlung, Rehabilitation und Renten umfassen. Sie richten sich gegen den Unternehmer und unter Umständen gegen verantwortliche Führungskräfte. Der Nachweis regelmäßiger, dokumentierter Prüfungen ist die wichtigste Verteidigung. Betreiber sollten Prüfprotokolle deshalb deutlich länger aufbewahren als gesetzlich mindestens gefordert.",
+    "legalBasis": "§ 823 BGB, ArbSchG §13, SGB VII §110, VdS 2871 / Klausel SK 3602"
+  },
+  {
+    "id": 49,
+    "slug": "wie-schuetze-ich-mich-als-betreiber-haftungsrechtlich-bei-der-elektropruefung-ab",
+    "question": "Wie schütze ich mich als Betreiber haftungsrechtlich bei der Elektroprüfung ab?",
+    "category": "Haftung & Versicherung",
+    "shortAnswer": "Durch eine Gefährdungsbeurteilung mit begründeten Prüffristen, schriftliche Pflichtenübertragung, qualifizierte Prüfer, vollständige Prüfprotokolle und konsequente Mängelverfolgung. Diese fünf Bausteine belegen die Erfüllung der Organisationspflicht.",
+    "expertText": "Haftungsschutz entsteht durch eine lückenlose Organisationskette: Wer ist zuständig, was wird wann geprüft, wer prüft, was wurde festgestellt und was wurde behoben. Ein Fristenmanagement oder CAFM-System macht diese Kette jederzeit abrufbar. Bei Dienstleistern sollten Auswahl und Kontrolle dokumentiert sein. Regelmäßige interne Audits schließen die Lücke zwischen Papier und Praxis.",
+    "legalBasis": "§ 823 BGB, ArbSchG §13, SGB VII §110, VdS 2871 / Klausel SK 3602"
+  },
+  {
+    "id": 50,
+    "slug": "haftet-der-fm-dienstleister-oder-der-eigentuemer-bei-maengeln-in-der",
+    "question": "Haftet der FM-Dienstleister oder der Eigentümer bei Mängeln in der Elektroanlage?",
+    "category": "Haftung & Versicherung",
+    "shortAnswer": "Das hängt vom Vertrag ab. Der Eigentümer bzw. Betreiber bleibt grundsätzlich verantwortlich; der FM-Dienstleister haftet für Fehler in den Leistungen, die er vertraglich übernommen hat.",
+    "expertText": "Im FM-Vertrag sollte eindeutig stehen, ob der Dienstleister nur die Prüfung organisiert, selbst prüft oder auch Mängel beseitigt. Fehlt diese Klarheit, entstehen Haftungslücken. Der Eigentümer muss den Dienstleister kontrollieren und auf gemeldete Mängel reagieren, etwa durch Freigabe von Reparaturen. Eine Schnittstellen- und Verantwortungsmatrix nach GEFMA-Logik schafft hier Transparenz.",
+    "legalBasis": "§ 823 BGB, ArbSchG §13, SGB VII §110, VdS 2871 / Klausel SK 3602"
+  },
+  {
+    "id": 51,
+    "slug": "welche-elektropruefungen-sind-in-arztpraxen-und-krankenhaeusern-vorgeschrieben",
+    "question": "Welche Elektroprüfungen sind in Arztpraxen und Krankenhäusern vorgeschrieben?",
+    "category": "Objektarten & Branchen",
+    "shortAnswer": "Neben der DGUV V3 Prüfung gelten in Praxen und Kliniken die Medizinprodukte-Betreiberverordnung mit sicherheitstechnischen Kontrollen sowie die Prüfung medizinischer Geräte nach DIN EN 62353 (VDE 0751-1). Medizinisch genutzte Räume unterliegen DIN VDE 0100-710.",
+    "expertText": "Gesundheitseinrichtungen haben damit mehrere Prüfregime parallel: allgemeine Elektrogeräte nach DGUV V3, Medizinprodukte nach MPBetreibV, Raumgruppen und Sicherheitsstromversorgung nach VDE 0100-710 und Landesrecht. Die Koordination dieser Fristen ist eine typische Aufgabe des technischen FM. Prüfdienstleister sollten Erfahrung mit medizintechnischen Prüfungen nachweisen können.",
+    "legalBasis": "DGUV V3, branchenspezifische DGUV-Regeln, Muster-Prüfverordnung"
+  },
+  {
+    "id": 52,
+    "slug": "welche-elektropruefungen-gelten-fuer-schulen-und-kitas",
+    "question": "Welche Elektroprüfungen gelten für Schulen und Kitas?",
+    "category": "Objektarten & Branchen",
+    "shortAnswer": "In Schulen und Kitas gilt die DGUV Vorschrift 3 für die Arbeitsmittel des Personals und die Gebäudeanlagen; die Prüffristen werden wegen der Nutzung durch Kinder oft kürzer gewählt. Träger ist meist die Kommune bzw. der Schulträger.",
+    "expertText": "Besonderes Augenmerk liegt auf Geräten in Fachräumen (Physik, Werken, Küche), auf Steckdosen in Reichweite von Kindern und auf der Sicherheitsbeleuchtung. Die Unfallkassen der Länder geben zusätzliche Hinweise. Für Schulträger mit vielen Liegenschaften lohnt sich ein zentraler Rahmenvertrag mit einheitlicher Dokumentation. Prüfungen werden bevorzugt in den Ferien geplant.",
+    "legalBasis": "DGUV V3, branchenspezifische DGUV-Regeln, Muster-Prüfverordnung"
+  },
+  {
+    "id": 53,
+    "slug": "welche-elektropruefungen-braucht-ein-hotel",
+    "question": "Welche Elektroprüfungen braucht ein Hotel?",
+    "category": "Objektarten & Branchen",
+    "shortAnswer": "Hotels müssen ortsfeste Anlagen und ortsveränderliche Geräte nach DGUV V3 prüfen lassen und zusätzlich Sicherheitsbeleuchtung und Sicherheitsstromversorgung nach Landesbaurecht. Geräte in Gästezimmern zählen dabei ebenfalls zum Prüfumfang.",
+    "expertText": "Hotels kombinieren Büro, Großküche, Wellness, Veranstaltung und Beherbergung – entsprechend unterschiedlich sind die Prüffristen. Föhne, Wasserkocher und Minibars in Zimmern sind Betriebsmittel des Betreibers. Prüfungen müssen eng mit der Belegung abgestimmt werden. Für Hotelketten bietet ein standortübergreifender Prüfplan mit einheitlichem Reporting deutliche Effizienzvorteile.",
+    "legalBasis": "DGUV V3, branchenspezifische DGUV-Regeln, Muster-Prüfverordnung"
+  },
+  {
+    "id": 54,
+    "slug": "elektropruefung-in-mehrfamilienhaeusern-was-muss-die-hausverwaltung-pruefen",
+    "question": "Elektroprüfung in Mehrfamilienhäusern – was muss die Hausverwaltung prüfen lassen?",
+    "category": "Objektarten & Branchen",
+    "shortAnswer": "Die Hausverwaltung bzw. der Eigentümer sollte die Gemeinschaftsanlagen prüfen lassen – Hausanschluss, Zählerplatz, Treppenhausbeleuchtung, Keller und Außenanlagen. Eine DGUV-Pflicht besteht nur bei Beschäftigten, die Verkehrssicherungspflicht gilt immer.",
+    "expertText": "Für die Elektroinstallation in Mietwohnungen ist der Vermieter verantwortlich, eine feste gesetzliche Prüffrist gibt es für Wohnungen jedoch nicht; empfohlen wird häufig ein Turnus von etwa 4 Jahren. Bei Hausmeistern oder Reinigungskräften als Beschäftigte gelten deren Arbeitsmittel als prüfpflichtig. Viele Verwaltungen bündeln Elektroprüfung, Rauchwarnmelder und Blitzschutz in einem Dienstleistungspaket.",
+    "legalBasis": "DGUV V3, branchenspezifische DGUV-Regeln, Muster-Prüfverordnung"
+  },
+  {
+    "id": 55,
+    "slug": "welche-elektropruefungen-sind-in-rechenzentren-notwendig",
+    "question": "Welche Elektroprüfungen sind in Rechenzentren notwendig?",
+    "category": "Objektarten & Branchen",
+    "shortAnswer": "In Rechenzentren werden neben der DGUV V3 Prüfung vor allem USV-Anlagen, Netzersatzanlagen, Schaltanlagen und Stromverteilungen engmaschig geprüft, oft ergänzt um Thermografie. Orientierung bietet die Normenreihe DIN EN 50600.",
+    "expertText": "Die Herausforderung ist die Prüfung im laufenden Betrieb: Redundante Versorgungspfade ermöglichen Prüfungen ohne Ausfall, erfordern aber eine präzise Planung und Freigabeprozesse. Thermografie erkennt Übergangswiderstände frühzeitig, ohne abzuschalten. Prüfdienstleister sollten Erfahrung mit hochverfügbaren Anlagen und dokumentierten Wartungsfenstern haben.",
+    "legalBasis": "DGUV V3, branchenspezifische DGUV-Regeln, Muster-Prüfverordnung"
+  },
+  {
+    "id": 56,
+    "slug": "welche-elektropruefungen-gelten-fuer-lager-und-logistikhallen",
+    "question": "Welche Elektroprüfungen gelten für Lager- und Logistikhallen?",
+    "category": "Objektarten & Branchen",
+    "shortAnswer": "In Lager- und Logistikhallen werden neben der Anlage vor allem Ladegeräte und Batterieladestationen für Flurförderzeuge, Torantriebe, Beleuchtung und mobile Geräte geprüft. Staub und mechanische Belastung führen oft zu kürzeren Fristen.",
+    "expertText": "Batterieladebereiche haben eigene Anforderungen an Lüftung und Elektrik, die in der Gefährdungsbeurteilung zu berücksichtigen sind. In Hallen mit Mehrschichtbetrieb sind Prüftermine eng mit der Logistik abzustimmen. Viele Betreiber kombinieren Elektroprüfung, Regalprüfung und Torprüfung in einem jährlichen Prüfpaket. Das spart Koordinationsaufwand und schafft einen einheitlichen Prüfkalender.",
+    "legalBasis": "DGUV V3, branchenspezifische DGUV-Regeln, Muster-Prüfverordnung"
+  },
+  {
+    "id": 57,
+    "slug": "welche-elektropruefungen-braucht-ein-einzelhaendler-mit-mehreren-filialen",
+    "question": "Welche Elektroprüfungen braucht ein Einzelhändler mit mehreren Filialen?",
+    "category": "Objektarten & Branchen",
+    "shortAnswer": "Filialisten müssen in jeder Filiale die ortsfeste Anlage und alle ortsveränderlichen Geräte nach DGUV V3 prüfen lassen – von Kassen über Kühlmöbel bis zu Beleuchtung. Die Herausforderung liegt in der einheitlichen Steuerung vieler Standorte.",
+    "expertText": "Für Filialnetze lohnt sich ein Rahmenvertrag mit einem Dienstleister, der alle Regionen abdeckt und einheitlich dokumentiert. Prüfungen sollten außerhalb der Öffnungszeiten stattfinden. Ein zentrales Dashboard mit Prüfstatus je Filiale macht Lücken sofort sichtbar. Bei Mietflächen in Einkaufszentren ist die Schnittstelle zum Center-Betreiber vertraglich zu klären.",
+    "legalBasis": "DGUV V3, branchenspezifische DGUV-Regeln, Muster-Prüfverordnung"
+  },
+  {
+    "id": 58,
+    "slug": "wie-werden-ladesaeulen-fuer-e-autos-auf-dem-firmenparkplatz-geprueft",
+    "question": "Wie werden Ladesäulen für E-Autos auf dem Firmenparkplatz geprüft?",
+    "category": "Objektarten & Branchen",
+    "shortAnswer": "Ladesäulen und Wallboxen sind elektrische Anlagen und unterliegen der Prüfung nach DGUV V3 bzw. DIN VDE 0105-100. Die Errichtung erfolgt nach DIN VDE 0100-722 mit Erstprüfung vor Inbetriebnahme.",
+    "expertText": "Geprüft werden unter anderem Schutzmaßnahmen, Fehlerstromschutz einschließlich Gleichfehlerstromerkennung, Ladekabel und Steckvorrichtungen. Da Ladeinfrastruktur im Freien und von vielen Nutzern verwendet wird, werden oft kürzere Intervalle als 4 Jahre festgelegt, häufig jährlich. Herstellervorgaben zur Wartung sind zusätzlich zu beachten. Betreiber sollten Ladesäulen als eigene Anlagengruppe im Prüfkataster führen.",
+    "legalBasis": "DGUV V3, branchenspezifische DGUV-Regeln, Muster-Prüfverordnung"
+  },
+  {
+    "id": 59,
+    "slug": "welche-elektropruefungen-gelten-fuer-photovoltaikanlagen-auf-gewerbedaechern",
+    "question": "Welche Elektroprüfungen gelten für Photovoltaikanlagen auf Gewerbedächern?",
+    "category": "Objektarten & Branchen",
+    "shortAnswer": "Photovoltaikanlagen auf Gewerbedächern werden bei Inbetriebnahme nach DIN EN 62446-1 geprüft und anschließend wiederkehrend als elektrische Anlage nach DGUV V3 bzw. DIN VDE 0105-100. Viele Versicherer verlangen zusätzliche Prüfungen.",
+    "expertText": "Bei PV-Anlagen sind DC-Seite, Wechselrichter, Überspannungsschutz und Brandschutzaspekte besonders relevant. Thermografie aus der Luft oder vom Dach erkennt defekte Module und Steckverbinder. Bei gemieteten Dachflächen muss geklärt sein, ob Gebäudeeigentümer oder Anlagenbetreiber prüft. Die Prüfung sollte mit der Dachwartung koordiniert werden.",
+    "legalBasis": "DGUV V3, branchenspezifische DGUV-Regeln, Muster-Prüfverordnung"
+  },
+  {
+    "id": 60,
+    "slug": "welche-pruefpflichten-gelten-fuer-elektrik-in-restaurants-und-grosskuechen",
+    "question": "Welche Prüfpflichten gelten für Elektrik in Restaurants und Großküchen?",
+    "category": "Objektarten & Branchen",
+    "shortAnswer": "Restaurants und Großküchen müssen ihre Anlagen und Geräte nach DGUV V3 prüfen lassen; wegen Feuchtigkeit, Hitze und Fett werden kürzere Fristen gewählt, häufig jährlich. Fest angeschlossene Küchengeräte werden mit der Anlage geprüft.",
+    "expertText": "Küchen gelten typischerweise als Räume mit erhöhter Gefährdung. Neben der Elektrik sind Abluftanlagen, Fettabscheider und Brandschutz in den Prüfkalender einzubinden. Prüfungen erfolgen sinnvollerweise an Ruhetagen. Für Kantinenbetreiber in fremden Gebäuden ist die Abgrenzung zwischen Caterer und Gebäudebetreiber ein häufiger Streitpunkt.",
+    "legalBasis": "DGUV V3, branchenspezifische DGUV-Regeln, Muster-Prüfverordnung"
+  },
+  {
+    "id": 61,
+    "slug": "wie-werden-maschinen-und-produktionsanlagen-elektrisch-geprueft-din-en-60204",
+    "question": "Wie werden Maschinen und Produktionsanlagen elektrisch geprüft (DIN EN 60204)?",
+    "category": "Objektarten & Branchen",
+    "shortAnswer": "Maschinen werden vor der ersten Inbetriebnahme nach DIN EN 60204-1 (VDE 0113-1) geprüft und anschließend wiederkehrend nach DGUV V3 und BetrSichV. Prüfumfang und Fristen ergeben sich aus Gefährdungsbeurteilung und Herstellerangaben.",
+    "expertText": "Geprüft werden unter anderem Schutzleitersystem, Isolationswiderstand, Not-Halt-Funktionen und Schutzeinrichtungen. Nach wesentlichen Änderungen ist eine erneute Prüfung erforderlich. Die Prüfung sollte mit Instandhaltung und Produktionsplanung abgestimmt werden. Ein Prüfdienstleister mit Industrieerfahrung kennt die typischen Anforderungen an Stillstandsfenster.",
+    "legalBasis": "DGUV V3, branchenspezifische DGUV-Regeln, Muster-Prüfverordnung"
+  },
+  {
+    "id": 62,
+    "slug": "welche-elektropruefungen-gelten-fuer-veranstaltungsstaetten-und-messen",
+    "question": "Welche Elektroprüfungen gelten für Veranstaltungsstätten und Messen?",
+    "category": "Objektarten & Branchen",
+    "shortAnswer": "Veranstaltungsstätten unterliegen neben der DGUV V3 dem Landesrecht für Versammlungsstätten mit Prüfungen der Sicherheitsstromversorgung und -beleuchtung. Für Messestände und temporäre Aufbauten gilt DIN VDE 0100-711 mit Prüfung vor jeder Inbetriebnahme.",
+    "expertText": "Temporäre Anlagen werden bei jedem Aufbau neu errichtet und müssen daher jedes Mal geprüft werden. Mobile Stromverteiler und Kabel unterliegen hoher Beanspruchung und kurzen Fristen. Veranstalter, Messegesellschaft und Standbauer sollten vertraglich klären, wer welche Prüfung nachweist. Ein Prüfdienst vor Ort beschleunigt die Abnahme erheblich.",
+    "legalBasis": "DGUV V3, branchenspezifische DGUV-Regeln, Muster-Prüfverordnung"
+  },
+  {
+    "id": 63,
+    "slug": "was-muss-in-einem-dguv-v3-pruefprotokoll-stehen",
+    "question": "Was muss in einem DGUV V3 Prüfprotokoll stehen?",
+    "category": "Dokumentation & Fristenmanagement",
+    "shortAnswer": "Ein Prüfprotokoll sollte Prüfer und Firma, Datum, Geräte- bzw. Anlagenkennung, Prüfumfang und angewendete Norm, Messwerte, Ergebnis, festgestellte Mängel, nächsten Prüftermin und eine Unterschrift enthalten.",
+    "expertText": "Nur ein vollständiges Protokoll mit Messwerten ist im Schadensfall ein belastbarer Nachweis – eine reine Geräteliste mit Haken genügt nicht. Digitale Protokolle mit eindeutiger Geräte-ID erleichtern die Wiederholungsprüfung und Auswertung von Fehlerquoten. Betreiber sollten sich ein Musterprotokoll vorab zeigen lassen. Die Protokolle sollten zentral und revisionssicher abgelegt werden.",
+    "legalBasis": "DGUV V3 §5 Abs. 3, BetrSichV §14 Abs. 7, GEFMA 190"
+  },
+  {
+    "id": 64,
+    "slug": "wie-lange-muessen-pruefprotokolle-der-elektropruefung-aufbewahrt-werden",
+    "question": "Wie lange müssen Prüfprotokolle der Elektroprüfung aufbewahrt werden?",
+    "category": "Dokumentation & Fristenmanagement",
+    "shortAnswer": "Nach BetrSichV § 14 Abs. 7 sind Prüfaufzeichnungen mindestens bis zur nächsten Prüfung aufzubewahren. Aus Haftungsgründen empfiehlt sich eine deutlich längere Aufbewahrung, häufig über mehrere Prüfzyklen.",
+    "expertText": "Schadenersatzansprüche wegen Personenschäden können sehr lange nach dem Ereignis geltend gemacht werden. Wer dann ältere Prüfnachweise vorlegen kann, ist klar im Vorteil. Digitale Archivierung macht lange Aufbewahrung kostengünstig. Viele Betreiber legen intern 10 Jahre oder länger fest und dokumentieren dies in ihrer Organisationsrichtlinie.",
+    "legalBasis": "DGUV V3 §5 Abs. 3, BetrSichV §14 Abs. 7, GEFMA 190"
+  },
+  {
+    "id": 65,
+    "slug": "wie-verwalte-ich-prueffristen-fuer-elektrogeraete-an-mehreren-standorten",
+    "question": "Wie verwalte ich Prüffristen für Elektrogeräte an mehreren Standorten?",
+    "category": "Dokumentation & Fristenmanagement",
+    "shortAnswer": "Mit einem zentralen Fristenmanagement, das alle Standorte, Gerätegruppen und Prüfintervalle in einem System führt und rechtzeitig vor Fälligkeit erinnert. Grundlage ist ein einheitliches Prüfkataster.",
+    "expertText": "In Multi-Site-Portfolios scheitert die Prüfpflicht selten an der Technik, sondern an der Übersicht. Bewährt hat sich ein Standortverantwortlicher je Liegenschaft, ein zentraler Prüfkalender und ein Dashboard mit Ampelstatus. Prüfdienstleister sollten ihre Ergebnisse in einem vereinbarten Datenformat liefern, damit sie automatisch übernommen werden. So wird der Prüfstatus jederzeit auditfähig.",
+    "legalBasis": "DGUV V3 §5 Abs. 3, BetrSichV §14 Abs. 7, GEFMA 190"
+  },
+  {
+    "id": 66,
+    "slug": "welche-software-eignet-sich-fuer-das-fristenmanagement-von-elektropruefungen",
+    "question": "Welche Software eignet sich für das Fristenmanagement von Elektroprüfungen?",
+    "category": "Dokumentation & Fristenmanagement",
+    "shortAnswer": "Geeignet sind CAFM-Systeme mit Prüf- und Wartungsmodul, spezialisierte Prüfmanagement-Software oder die Kundenportale von Prüfdienstleistern. Wichtig sind Fristenlogik, Mängelverfolgung, Dokumentenablage und Datenimport.",
+    "expertText": "Die beste Software ist die, die tatsächlich gepflegt wird. Für kleinere Betriebe reicht oft das Portal des Prüfdienstleisters, große Portfolios brauchen ein zentrales System mit Schnittstellen. Entscheidend ist, dass Prüfergebnisse nicht manuell abgetippt werden müssen. Bei der Auswahl sollten DSGVO-Konformität und die Übertragbarkeit der Daten bei Anbieterwechsel geprüft werden.",
+    "legalBasis": "DGUV V3 §5 Abs. 3, BetrSichV §14 Abs. 7, GEFMA 190"
+  },
+  {
+    "id": 67,
+    "slug": "wie-binde-ich-elektropruefungen-in-ein-cafm-system-ein",
+    "question": "Wie binde ich Elektroprüfungen in ein CAFM-System ein?",
+    "category": "Dokumentation & Fristenmanagement",
+    "shortAnswer": "Über ein Prüf- und Wartungsmodul: Geräte und Anlagen werden als Objekte mit Prüfintervall angelegt, Prüfaufträge automatisch erzeugt und Protokolle samt Mängeln direkt am Objekt hinterlegt.",
+    "expertText": "Der größte Hebel ist ein automatischer Datenimport der Prüfergebnisse vom Dienstleister, idealerweise über eine eindeutige Geräte-ID oder einen Barcode. So entsteht eine durchgängige Historie je Gerät. Die Prüfpflichten sollten nach GEFMA 190 strukturiert werden, damit sie sich in die gesamte Betreiberverantwortung einfügen. Ein Pilotstandort hilft, Datenstruktur und Prozesse zu testen.",
+    "legalBasis": "DGUV V3 §5 Abs. 3, BetrSichV §14 Abs. 7, GEFMA 190"
+  },
+  {
+    "id": 68,
+    "slug": "ist-eine-digitale-dokumentation-der-elektropruefung-rechtlich-ausreichend",
+    "question": "Ist eine digitale Dokumentation der Elektroprüfung rechtlich ausreichend?",
+    "category": "Dokumentation & Fristenmanagement",
+    "shortAnswer": "Ja. Eine digitale Dokumentation ist zulässig, wenn sie vollständig, nachvollziehbar und vor nachträglicher Veränderung geschützt ist. Eine Papierform ist nicht vorgeschrieben.",
+    "expertText": "Digitale Protokolle bieten Vorteile: schnelle Suche, Auswertung von Fehlerquoten, automatische Fristen und ortsunabhängiger Zugriff. Wichtig sind eine revisionssichere Ablage, Zugriffsrechte und Datensicherung. Für den Nachweis im Schadensfall muss klar erkennbar sein, wer wann geprüft hat. Eine digitale Signatur oder ein Freigabeprozess schafft zusätzliche Sicherheit.",
+    "legalBasis": "DGUV V3 §5 Abs. 3, BetrSichV §14 Abs. 7, GEFMA 190"
+  },
+  {
+    "id": 69,
+    "slug": "was-prueft-die-berufsgenossenschaft-bei-einer-begehung-zur-elektrosicherheit",
+    "question": "Was prüft die Berufsgenossenschaft bei einer Begehung zur Elektrosicherheit?",
+    "category": "Dokumentation & Fristenmanagement",
+    "shortAnswer": "Bei einer Begehung prüft die Berufsgenossenschaft typischerweise, ob eine Gefährdungsbeurteilung vorliegt, ob Prüffristen festgelegt und eingehalten wurden, ob Prüfprotokolle vorhanden sind und ob offensichtliche Mängel bestehen.",
+    "expertText": "Typische Feststellungen sind abgelaufene Plaketten, hintereinandergesteckte Mehrfachsteckdosen, beschädigte Kabel und fehlende Nachweise für den RCD-Tastentest. Wer Prüfkataster, Protokolle und Mängelstatus auf Knopfdruck vorlegen kann, hinterlässt einen professionellen Eindruck. Die Begehung ist zugleich eine gute Gelegenheit, die eigene Organisation zu überprüfen.",
+    "legalBasis": "DGUV V3 §5 Abs. 3, BetrSichV §14 Abs. 7, GEFMA 190"
+  },
+  {
+    "id": 70,
+    "slug": "wie-erstelle-ich-ein-pruefkataster-fuer-alle-elektrogeraete-im-unternehmen",
+    "question": "Wie erstelle ich ein Prüfkataster für alle Elektrogeräte im Unternehmen?",
+    "category": "Dokumentation & Fristenmanagement",
+    "shortAnswer": "Erfassen Sie alle Geräte mit eindeutiger ID, Standort, Gerätetyp, Schutzklasse und Gerätegruppe, ordnen Sie jeder Gruppe eine Prüffrist aus der Gefährdungsbeurteilung zu und pflegen Sie das Kataster bei Zu- und Abgängen.",
+    "expertText": "Die Erstaufnahme erledigt in der Praxis meist der Prüfdienstleister bei der ersten Prüfung – mit Barcode-Plaketten und direktem Export. Danach ist die Pflege die Herausforderung: Neugeräte müssen eingetragen, ausgesonderte Geräte ausgebucht werden. Ein klarer Prozess mit Einkauf und IT verhindert Lücken. Das Kataster ist die Basis für Fristen, Kosten und Fehlerquoten.",
+    "legalBasis": "DGUV V3 §5 Abs. 3, BetrSichV §14 Abs. 7, GEFMA 190"
+  }
+]

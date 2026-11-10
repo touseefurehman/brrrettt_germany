@@ -141,6 +141,7 @@ export const leistungsseiten: ServicePage[] = [
       ["Ortsveränderliche Geräte", "/wissen/dguv-v3-ortsveraenderliche-geraete", "Abgrenzung und Prüfung"],
       ["DGUV V3 Prüfung selber machen", "/wissen/dguv-v3-pruefung-selber-machen", "Eigenprüfung"],
       ["DGUV V3 Prüfung Kosten", "/dguv-v3-pruefung-kosten", "Preisspannen und Rechenbeispiel"],
+      ["Elektroprüfung DGUV V3: Fragen & Antworten", "/elektropruefung-dguv-v3", "Anbieter, Kosten, Pflichten"],
       ["Prüffristen im Überblick", "/prueffristen", "Alle Prüfbereiche"],
       ["UVV-Prüfung", "/uvv-pruefung", "Fahrzeuge, Stapler, Krane, Tore"],
       ["Betreiberpflichten Kommunen", "/betreiberpflichten/kommunen", "DGUV Vorschrift 4 in der Praxis"],

@@ -47,6 +47,7 @@ export default function SiteFooter() {
             </Link>
           ))}
           <Link href="/dguv-v3-pruefung-kosten">DGUV V3 Prüfung Kosten</Link>
+          <Link href="/elektropruefung-dguv-v3">Elektroprüfung DGUV V3: Fragen &amp; Antworten</Link>
           {areas
             .filter((a) => !isMovedArea(a.slug))
             .map((a) => (

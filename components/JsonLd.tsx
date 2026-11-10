@@ -87,6 +87,7 @@ export function serviceSchema(serviceType: string, description: string, path: st
   return {
     "@context": "https://schema.org",
     "@type": "Service",
+    name: serviceType,
     serviceType,
     ...(audience && { audience: { "@type": "BusinessAudience", name: audience } }),
     url: `${site.url}${path}`,
@@ -134,6 +135,31 @@ export function articleSchema(a: {
     publisher: { "@id": orgId },
     isPartOf: { "@id": `${site.url}/#website` },
     about: a.about.map((name) => ({ "@type": "Thing", name })),
+  };
+}
+
+/** Frage-Antwort-Seiten (Elektroprüfung DGUV V3): Autorin ist die Redaktion als Organisation, nicht eine Person. */
+export function editorialArticleSchema(a: {
+  title: string;
+  description: string;
+  path: string;
+  published: string;
+  modified: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: a.title,
+    description: a.description,
+    url: `${site.url}${a.path}`,
+    mainEntityOfPage: `${site.url}${a.path}`,
+    datePublished: a.published,
+    dateModified: a.modified,
+    inLanguage: "de-DE",
+    image: `${site.url}/opengraph-image`,
+    author: { "@type": "Organization", name: `Redaktion ${site.domain}`, url: `${site.url}/` },
+    publisher: { "@id": orgId },
+    isPartOf: { "@id": `${site.url}/#website` },
   };
 }
 

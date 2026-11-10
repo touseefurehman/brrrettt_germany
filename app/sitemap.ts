@@ -1,6 +1,14 @@
 import type { MetadataRoute } from "next";
 import { authorPath, authors } from "@/lib/autoren";
 import { areas, isMovedArea } from "@/lib/content";
+import {
+  commercialPath,
+  HUB_PATH,
+  knowledgeItems,
+  knowledgePath,
+  MODIFIED_DATE,
+  publishedCommercial,
+} from "@/lib/elektropruefung";
 import { audiences } from "@/lib/leistungen";
 import { leistungsseiten } from "@/lib/leistungsseiten";
 import { hasAddress, site } from "@/lib/site";
@@ -31,6 +39,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ["/", 1, lastmod.home],
     ...leistungsseiten.map((p): [string, number, string] => [`/${p.slug}`, 0.9, lastmod.services]),
     ["/dguv-v3-pruefung-kosten", 0.9, lastmod.static],
+    // Elektroprüfung DGUV V3: nur veröffentlichte Phasen (PUBLISHED_PHASES in lib/elektropruefung.ts)
+    [HUB_PATH, 0.8, MODIFIED_DATE],
+    ...publishedCommercial.map((c): [string, number, string] => [commercialPath(c), 0.7, MODIFIED_DATE]),
+    ...knowledgeItems.map((k): [string, number, string] => [knowledgePath(k), 0.6, MODIFIED_DATE]),
     ...staedteseiten.map((p): [string, number, string] => [`/${p.slug}`, 0.8, lastmod.cities]),
     ["/leistungen", 0.8, lastmod.catalog],
     ["/externer-betreibermanager", 0.8, lastmod.audiences],

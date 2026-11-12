@@ -1,15 +1,74 @@
-import type { ReactNode } from "react";
+import { Fragment, type ReactNode } from "react";
 import Link from "next/link";
 import JsonLd, { editorialArticleSchema, faqSchema } from "./JsonLd";
+import { rich } from "./ContentBlocks";
 import { LegalNotice } from "./PageParts";
 import { CtaBand, PageIntro } from "./Subpage";
-import { legalBasisParts, MODIFIED_DATE, PUBLISHED_DATE, type Partner } from "@/lib/elektropruefung";
+import {
+  type ExpansionBlock,
+  expansionFor,
+  expansionText,
+  legalBasisParts,
+  modifiedFor,
+  parseExpansion,
+  PUBLISHED_DATE,
+  type Partner,
+} from "@/lib/elektropruefung";
 import { site } from "@/lib/site";
 
 const formatDate = (iso: string) =>
   new Date(iso).toLocaleDateString("de-DE", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
 
 const paragraphs = (text: string) => text.split(/\n\s*\n/).filter((p) => p.trim());
+
+const isQuestion = (heading: string) => heading.trim().endsWith("?");
+
+function ExpansionBlocks({ blocks }: { blocks: ExpansionBlock[] }) {
+  return blocks.map((block, i) => {
+    switch (block.type) {
+      case "p":
+        return <p key={i}>{rich(block.text)}</p>;
+      case "ul":
+      case "ol": {
+        const List = block.type;
+        return (
+          <List key={i} className="qa-list">
+            {block.items.map((item) => (
+              <li key={item}>{rich(item)}</li>
+            ))}
+          </List>
+        );
+      }
+      case "table":
+        return (
+          // Auf schmalen Bildschirmen horizontal scrollbar (.table-wrap)
+          <div key={i} className="table-wrap">
+            <table className="data-table">
+              <thead>
+                <tr>
+                  {block.head.map((h) => (
+                    <th key={h} scope="col">
+                      {h}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {block.rows.map(([first, ...rest]) => (
+                  <tr key={first}>
+                    <th scope="row">{rich(first)}</th>
+                    {rest.map((cell, j) => (
+                      <td key={j}>{rich(cell)}</td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        );
+    }
+  });
+}
 
 export type QaLink = [title: string, path: string, note: string];
 
@@ -27,7 +86,7 @@ export default function ElektroQaView({
   partner,
   children,
 }: {
-  item: { question: string; shortAnswer: string; expertText: string; legalBasis: string };
+  item: { slug: string; question: string; shortAnswer: string; expertText: string; legalBasis: string };
   path: string;
   crumbs: [name: string, path: string][];
   kicker: string;
@@ -36,16 +95,34 @@ export default function ElektroQaView({
   /** Abschnitte mit weiterführenden Links */
   children: ReactNode;
 }) {
+  const modified = modifiedFor(item.slug);
+  // Zusatzabschnitte: als Frage formulierte Überschriften gehen ins FAQPage-Schema, die übrigen in den Article-Text
+  const sections = expansionFor(item.slug);
+  const faqSections = sections.filter((s) => isQuestion(s.heading));
+  const bodySections = sections.filter((s) => !isQuestion(s.heading));
+
   return (
     <>
-      <JsonLd data={faqSchema([[item.question, `${item.shortAnswer} ${item.expertText}`]])} />
+      <JsonLd
+        data={faqSchema([
+          [item.question, `${item.shortAnswer} ${item.expertText}`],
+          ...faqSections.map((s): [string, string] => [s.heading, expansionText(s.content)]),
+        ])}
+      />
       <JsonLd
         data={editorialArticleSchema({
           title: item.question,
           description,
           path,
           published: PUBLISHED_DATE,
-          modified: MODIFIED_DATE,
+          modified,
+          ...(bodySections.length > 0 && {
+            body: [
+              item.shortAnswer,
+              item.expertText,
+              ...bodySections.map((s) => `${s.heading}. ${expansionText(s.content)}`),
+            ].join("\n\n"),
+          }),
         })}
       />
       <PageIntro crumbs={crumbs} kicker={kicker} title={item.question}>
@@ -59,6 +136,12 @@ export default function ElektroQaView({
         <h2>Einordnung der Redaktion</h2>
         {paragraphs(item.expertText).map((p) => (
           <p key={p.slice(0, 40)}>{p}</p>
+        ))}
+        {sections.map((s) => (
+          <Fragment key={s.heading}>
+            <h2>{s.heading}</h2>
+            <ExpansionBlocks blocks={parseExpansion(s.content)} />
+          </Fragment>
         ))}
       </section>
 
@@ -100,7 +183,7 @@ export default function ElektroQaView({
         <aside className="author-box">
           <strong>Redaktion {site.domain}</strong>
           <span>
-            Zuletzt aktualisiert: <time dateTime={MODIFIED_DATE}>{formatDate(MODIFIED_DATE)}</time>
+            Zuletzt aktualisiert: <time dateTime={modified}>{formatDate(modified)}</time>
           </span>
         </aside>
       </section>

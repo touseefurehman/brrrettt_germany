@@ -1,0 +1,748 @@
+{
+  "elektriker-oder-pruefdienstleister-wer-sollte-die-dguv-v3-pruefung-machen": {
+    "question": "Elektriker oder Prüfdienstleister – wer sollte die DGUV V3 Prüfung machen?",
+    "type": "commercial",
+    "sections": [
+      {
+        "heading": "Checkliste: Elektriker vs. Prüfdienstleister",
+        "content": "| Kriterium | Elektriker | Spezialisierter Prüfdienst |\n|---|---|---|\n| Sofortige Mängelbeseitigung | ✔ Direkt möglich | ✘ Meist nur Befundaufnahme |\n| Kalibrierte Messtechnik | Teilweise | ✔ Immer vorhanden |\n| Digitale Dokumentation | Selten | ✔ Standard mit Prüfsoftware |\n| Fristenmanagement | ✘ Meist nicht | ✔ Automatisch |\n| Große Gerätebestände (>500) | Langsam | ✔ Effizient durch Teams |\n| Kosten pro Gerät | Ab 3 € (aber weniger Leistung) | Ab 2,50 € (Mengenrabatt) |"
+      },
+      {
+        "heading": "Häufige Fehler bei der Auswahl",
+        "content": "- **Nur den Preis vergleichen**: Ein günstiger Elektriker ohne kalibrierte Messtechnik liefert keine belastbaren Prüfprotokolle – bei einer BG-Prüfung fällt das sofort auf.\n- **Qualifikation nicht prüfen**: Nicht jeder Elektriker ist automatisch befähigte Person nach TRBS 1203. Fragen Sie nach Schulungsnachweis und Berufserfahrung.\n- **Dokumentation vernachlässigen**: Mündliche Zusagen reichen nicht. Das Prüfprotokoll muss Messwerte, Prüfnorm und Befund enthalten."
+      },
+      {
+        "heading": "Praxisbeispiel",
+        "content": "Ein mittelständischer Betrieb mit 800 Geräten ließ die DGUV V3 Prüfung jahrelang vom Hauselektriker durchführen. Bei einer BG-Begehung fehlten kalibrierte Messprotokolle – die gesamte Prüfung musste wiederholt werden. Mit einem spezialisierten Prüfdienst sank die Prüfzeit von vier Wochen auf fünf Tage, und die digitalen Protokolle waren sofort verfügbar."
+      }
+    ]
+  },
+  "gibt-es-einen-pruefdienst-der-dguv-v3-und-vds-pruefung-zusammen-anbietet": {
+    "question": "Gibt es einen Prüfdienst, der DGUV V3 und VdS-Prüfung zusammen anbietet?",
+    "type": "commercial",
+    "sections": [
+      {
+        "heading": "Vorteile einer Kombiprüfung DGUV V3 + VdS",
+        "content": "- **Weniger Betriebsunterbrechung**: Statt zwei Termine nur ein Prüftag – besonders wichtig in Produktionsbetrieben.\n- **Kostenersparnis**: Kombi-Angebote liegen typischerweise 15–20 % unter der Summe zweier Einzelaufträge.\n- **Einheitliche Dokumentation**: Ein Ansprechpartner, ein Bericht – das vereinfacht die Ablage für Versicherung und BG.\n- **Versicherungsrabatt**: Viele Sachversicherer gewähren Prämiennachlass bei regelmäßiger VdS-Prüfung nach VdS 2871."
+      },
+      {
+        "heading": "Checkliste: Darauf achten beim Kombi-Anbieter",
+        "content": "1. VdS-Anerkennung des Prüfers nachfragen (nicht nur DGUV V3-Qualifikation)\n2. Prüfumfang klären: VdS prüft Brandschutz, DGUV V3 prüft Arbeitsschutz – beides muss separat dokumentiert werden\n3. Kalibriernachweis der Messtechnik anfordern\n4. Referenzen in Ihrer Branche erfragen\n5. Prüfbericht-Muster vorab ansehen – enthält er VdS-Befundschlüssel?"
+      }
+    ]
+  },
+  "pruefdienst-mit-eigenem-personal-oder-mit-subunternehmern-was-ist-besser": {
+    "question": "Prüfdienst mit eigenem Personal oder mit Subunternehmern – was ist besser?",
+    "type": "commercial",
+    "sections": [
+      {
+        "heading": "Checkliste: Fragen an den Anbieter",
+        "content": "1. Werden die Prüfungen durch eigene Mitarbeiter oder Subunternehmer durchgeführt?\n2. Wie wird die Qualifikation der Subunternehmer kontrolliert?\n3. Gibt es einheitliche Prüfprotokolle und Software, auch bei Subunternehmern?\n4. Wer haftet bei Prüffehlern – der Hauptauftragnehmer oder der Subunternehmer?\n5. Bleibt der Prüfer bei Folgeprüfungen derselbe?"
+      },
+      {
+        "heading": "Typische Risiken bei Subunternehmer-Modellen",
+        "content": "- **Wechselnde Prüfer**: Jeder neue Prüfer muss sich erst einarbeiten – das kostet Zeit und kann zu Inkonsistenzen führen.\n- **Unklare Haftung**: Wenn der Subunternehmer einen Mangel übersieht, ist die Frage, wer haftet, oft vertraglich ungeklärt.\n- **Unterschiedliche Messtechnik**: Verschiedene Messgeräte liefern leicht abweichende Ergebnisse – das erschwert den Vergleich über Jahre.\n- **Datenschutz**: Prüfer erhalten Zugang zu Ihren Betriebsräumen. Bei Subunternehmern ist die Geheimhaltung schwerer zu kontrollieren."
+      }
+    ]
+  },
+  "tuev-dekra-oder-spezialisierter-pruefdienst-wer-ist-besser-fuer-die-dguv-v3": {
+    "question": "TÜV, DEKRA oder spezialisierter Prüfdienst – wer ist besser für die DGUV V3?",
+    "type": "commercial",
+    "sections": [
+      {
+        "heading": "Vergleich: TÜV/DEKRA vs. Spezialist",
+        "content": "| Kriterium | TÜV / DEKRA | Spezialisierter Prüfdienst |\n|---|---|---|\n| Bekanntheit | ✔ Hohes Markenvertrauen | Geringer, aber Referenzen zählen |\n| Preis pro Gerät | Ab 5–8 € | Ab 2–4 € |\n| Terminflexibilität | Oft lange Vorlaufzeit | ✔ Kurzfristiger verfügbar |\n| Individuelle Beratung | Standardprozess | ✔ Maßgeschneidert |\n| ZÜS-pflichtige Anlagen | ✔ Erforderlich (z. B. Aufzüge) | ✘ Nicht zugelassen |\n| Digitales Kundenportal | Teilweise | ✔ Häufig Standard |"
+      },
+      {
+        "heading": "Wann TÜV oder DEKRA die bessere Wahl ist",
+        "content": "Für reine DGUV V3 Prüfungen ortsfester und ortsveränderlicher Geräte ist kein TÜV vorgeschrieben. Ein Spezialist ist hier oft günstiger und flexibler. Der TÜV oder die DEKRA ist dann die richtige Wahl, wenn zusätzlich ZÜS-pflichtige Anlagen geprüft werden müssen (z. B. Aufzüge nach BetrSichV §17) oder Ihr Unternehmen eine bekannte Marke auf dem Prüfprotokoll benötigt, etwa für internationale Kunden oder Audits."
+      }
+    ]
+  },
+  "was-muss-ein-gutes-angebot-fuer-die-dguv-v3-pruefung-enthalten": {
+    "question": "Was muss ein gutes Angebot für die DGUV V3 Prüfung enthalten?",
+    "type": "commercial",
+    "sections": [
+      {
+        "heading": "Checkliste: Mindestangaben im Angebot",
+        "content": "1. **Prüfumfang**: Welche Gerätetypen und Anlagen werden geprüft (ortsveränderlich, ortsfest, Maschinen)?\n2. **Normengrundlage**: DGUV V3, DIN EN 50699, DIN VDE 0105-100 – welche Normen gelten?\n3. **Mengenbasis**: Anzahl der Geräte und geschätzte Prüfdauer\n4. **Preis je Position**: Einzelpreise, nicht nur Pauschale – so sind Nachträge nachvollziehbar\n5. **Qualifikation**: Name oder Rolle des Prüfers, Nachweis als befähigte Person nach TRBS 1203\n6. **Dokumentation**: Art des Prüfprotokolls (digital/Papier), Lieferformat und Frist\n7. **Mängelkategorien**: Wie werden Befunde eingestuft (sofort, kurzfristig, empfohlen)?\n8. **Haftpflicht**: Betriebshaftpflicht und ggf. Vermögensschadenhaftpflicht des Prüfdienstes"
+      },
+      {
+        "heading": "Häufige Fehler beim Angebotsvergleich",
+        "content": "- **Äpfel mit Birnen vergleichen**: Ein Angebot über „ortsveränderliche Geräte\" und eines über „alle elektrischen Betriebsmittel\" sind nicht vergleichbar. Sorgen Sie für identische Leistungsbeschreibungen.\n- **Anfahrtskosten übersehen**: Manche Anbieter rechnen Anfahrt separat ab – fragen Sie nach einem All-inclusive-Preis.\n- **Nachprüfung vergessen**: Wird die Wiederholungsprüfung nach Mängelbeseitigung im Preis enthalten? Oft nicht."
+      }
+    ]
+  },
+  "welche-firma-ist-auf-elektropruefungen-nach-dguv-v3-spezialisiert": {
+    "question": "Welche Firma ist auf Elektroprüfungen nach DGUV V3 spezialisiert?",
+    "type": "commercial",
+    "sections": [
+      {
+        "heading": "Woran Sie einen echten Spezialisten erkennen",
+        "content": "- **Kerngeschäft ist die Prüfung**: Mindestens 80 % des Umsatzes stammen aus wiederkehrenden Elektroprüfungen – nicht aus Installation oder Handel.\n- **Eigene Prüfsoftware**: Der Anbieter arbeitet mit einer etablierten Prüfsoftware (z. B. e-Manager, Testboy, Fluke DMS) und liefert digitale Protokolle.\n- **Referenzen in Ihrer Größenordnung**: Ein Spezialist für 50.000-Geräte-Bestände ist nicht automatisch der richtige für ein KMU mit 200 Geräten.\n- **Zertifizierung**: Qualitätsmanagement nach ISO 9001 oder Akkreditierung nach DIN EN ISO/IEC 17025 zeigt professionelle Struktur."
+      },
+      {
+        "heading": "Typische Kosten bei spezialisierten Prüfdiensten",
+        "content": "| Leistung | Preisspanne |\n|---|---|\n| Ortsveränderliche Geräte (Klasse I/II) | 2,50–5,00 € pro Gerät |\n| Ortsfeste Anlagen (je Stromkreis) | 8–15 € pro Stromkreis |\n| Maschinen nach DIN EN 60204 | 25–80 € pro Maschine |\n| Thermografie-Zuschlag | 150–300 € pauschal |\n| Digitales Prüfprotokoll | Meist inklusive |\n\nDie Preise variieren je nach Region, Menge und Zugänglichkeit der Anlagen."
+      }
+    ]
+  },
+  "welche-firma-uebernimmt-die-komplette-elektropruefung-inklusive": {
+    "question": "Welche Firma übernimmt die komplette Elektroprüfung inklusive Dokumentation?",
+    "type": "commercial",
+    "sections": [
+      {
+        "heading": "Was gehört zu einer Komplettprüfung?",
+        "content": "1. **Bestandsaufnahme**: Ersterfassung aller elektrischen Betriebsmittel mit Barcode- oder RFID-Kennzeichnung\n2. **Sichtprüfung, Messung, Funktionsprüfung**: Nach DGUV V3 und den zugehörigen VDE-Normen\n3. **Befunddokumentation**: Digitales Prüfprotokoll mit Messwerten, Fotos und Befundkategorien\n4. **Fristenmanagement**: Automatische Erinnerung an die nächste Prüfung\n5. **Mängelbegleitung**: Übersicht offener Mängel mit Priorität und Beseitigungsfrist"
+      },
+      {
+        "heading": "Praxisbeispiel: Verwaltungsgebäude mit 1.200 Geräten",
+        "content": "Ein Facility Manager beauftragte einen Komplettanbieter mit der Erstprüfung: Innerhalb von drei Tagen waren alle Geräte erfasst, geprüft und im digitalen Portal sichtbar. 47 Mängel wurden dokumentiert, davon 3 mit sofortigem Nutzungsverbot. Der Facility Manager konnte die Mängelliste direkt an die Haustechnik weiterleiten und den Fortschritt im Portal verfolgen."
+      }
+    ]
+  },
+  "welche-fragen-sollte-ich-einem-pruefdienst-vor-der-beauftragung-stellen": {
+    "question": "Welche Fragen sollte ich einem Prüfdienst vor der Beauftragung stellen?",
+    "type": "commercial",
+    "sections": [
+      {
+        "heading": "Die 10 wichtigsten Fragen",
+        "content": "1. Sind Ihre Prüfer befähigte Personen nach TRBS 1203?\n2. Welche Messtechnik setzen Sie ein und wann wurde sie zuletzt kalibriert?\n3. Arbeiten Sie mit eigenem Personal oder mit Subunternehmern?\n4. Wie sieht Ihr Prüfprotokoll aus – können Sie ein Muster zeigen?\n5. Welche Normen werden geprüft (DGUV V3, DIN EN 50699, DIN VDE 0105-100)?\n6. Bieten Sie digitale Dokumentation mit Fristenüberwachung an?\n7. Was passiert, wenn ein Gerät durchfällt – kennzeichnen Sie es?\n8. Wie schnell können Sie einen Termin stellen?\n9. Haben Sie Referenzen in unserer Branche und Größenordnung?\n10. Was kostet die Nachprüfung nach Mängelbeseitigung?"
+      },
+      {
+        "heading": "Warnsignale bei der Antwort",
+        "content": "- **Keine konkreten Normen genannt**: Ein seriöser Prüfdienst benennt die Prüfgrundlage sofort.\n- **Kein Musterprotokoll vorhanden**: Wer regelmäßig prüft, hat ein Standardformat.\n- **Pauschalpreis ohne Mengenerhebung**: Ohne Kenntnis der Geräteanzahl kann kein realistisches Angebot erstellt werden.\n- **Keine Haftpflichtversicherung**: Fragen Sie nach der Deckungssumme der Betriebshaftpflicht."
+      }
+    ]
+  },
+  "welche-pruefdienstleister-bieten-dguv-v3-pruefung-und-fristenmanagement-aus": {
+    "question": "Welche Prüfdienstleister bieten DGUV V3 Prüfung und Fristenmanagement aus einer Hand?",
+    "type": "commercial",
+    "sections": [
+      {
+        "heading": "Was ein gutes Fristenmanagement leistet",
+        "content": "- **Automatische Erinnerung**: 8–12 Wochen vor Fälligkeit per E-Mail oder im Kundenportal\n- **Ampelsystem**: Grün (geprüft), Gelb (bald fällig), Rot (überfällig) – auf einen Blick erkennbar\n- **Standortfilter**: Bei mehreren Niederlassungen nach Standort, Gebäude oder Kostenstelle filtern\n- **Export**: Prüfberichte als PDF oder Excel für BG-Audits und Versicherungen\n- **Gerätelebenslauf**: Alle bisherigen Prüfungen, Mängel und Reparaturen je Gerät"
+      },
+      {
+        "heading": "Häufige Fehler beim Fristenmanagement",
+        "content": "- **Excel-Listen statt Software**: Manuelle Tabellen werden schnell unübersichtlich und fehleranfällig – ab 200 Geräten lohnt sich ein digitales System.\n- **Keine Übergabe bei Prüferwechsel**: Wenn der Prüfdienst wechselt, müssen alle Fristen und Historien übergeben werden. Klären Sie das Datenformat vorab.\n- **Nur Prüftermin, kein Mängeltracking**: Fristenmanagement ohne Mängelverfolgung ist nur die halbe Lösung."
+      }
+    ]
+  },
+  "welche-pruefsoftware-nutzen-professionelle-pruefdienste-fuer-die-dguv-v3": {
+    "question": "Welche Prüfsoftware nutzen professionelle Prüfdienste für die DGUV V3?",
+    "type": "commercial",
+    "sections": [
+      {
+        "heading": "Gängige Prüfsoftware im Überblick",
+        "content": "| Software | Besonderheit |\n|---|---|\n| e-Manager | Weit verbreitet, integriertes Fristenmanagement |\n| Testboy Profitest | Direkte Messgeräte-Anbindung |\n| Fluke DMS | International, Cloud-basiert |\n| MEBEDO | Speziell für Elektrofachkräfte, modularer Aufbau |\n| HIK-Prüfplaner | Einfache Bedienung, DACH-fokussiert |\n\nEntscheidend ist nicht die Software selbst, sondern ob der Prüfdienst die Daten in einem offenen Format liefert, damit Sie bei einem Wechsel nicht an den Anbieter gebunden sind."
+      },
+      {
+        "heading": "Praxistipp: Datenformat vorab klären",
+        "content": "Bestehen Sie darauf, dass Prüfprotokolle in einem offenen Format (PDF plus CSV oder XML) geliefert werden. Proprietäre Formate binden Sie an den Anbieter. Prüfen Sie außerdem, ob das Kundenportal auch nach Vertragsende lesbar bleibt oder ob Sie Ihre Daten vorher exportieren müssen."
+      }
+    ]
+  },
+  "welche-vorteile-bietet-ein-spezialisierter-pruefdienst-gegenueber-dem": {
+    "question": "Welche Vorteile bietet ein spezialisierter Prüfdienst gegenüber dem Hauselektriker?",
+    "type": "commercial",
+    "sections": [
+      {
+        "heading": "5 entscheidende Vorteile",
+        "content": "1. **Unabhängigkeit**: Ein externer Prüfer hat kein Interesse, eigene Installationsfehler zu übersehen.\n2. **Aktuelle Messtechnik**: Spezialisierte Dienste investieren regelmäßig in kalibrierte Messgeräte.\n3. **Geschwindigkeit**: Ein eingespieltes Prüfteam schafft 80–120 Geräte pro Tag – ein einzelner Hauselektriker deutlich weniger.\n4. **Rechtssicherheit**: Befähigungsnachweise, Versicherung und Prüfprotokolle sind standardmäßig vorhanden.\n5. **Fristenmanagement**: Automatische Wiedervorlagen statt manueller Terminverfolgung."
+      },
+      {
+        "heading": "Wann der Hauselektriker trotzdem reicht",
+        "content": "Für sehr kleine Betriebe mit weniger als 50 Geräten und einer qualifizierten Elektrofachkraft vor Ort kann die Prüfung in Eigenregie wirtschaftlich sinnvoll sein – vorausgesetzt, die Dokumentation entspricht den Anforderungen und die Messtechnik ist kalibriert."
+      }
+    ]
+  },
+  "welche-zertifizierungen-sollte-ein-pruefdienst-fuer-elektropruefungen-haben": {
+    "question": "Welche Zertifizierungen sollte ein Prüfdienst für Elektroprüfungen haben?",
+    "type": "commercial",
+    "sections": [
+      {
+        "heading": "Wichtige Zertifizierungen und Nachweise",
+        "content": "| Zertifizierung | Bedeutung |\n|---|---|\n| TRBS 1203 (befähigte Person) | Pflicht – jeder Prüfer muss nachweisen können |\n| ISO 9001 | Qualitätsmanagement – zeigt professionelle Prozesse |\n| DIN EN ISO/IEC 17025 | Akkreditierung – höchste Stufe für Prüflabore |\n| VdS-Anerkennung | Erforderlich für brandschutztechnische Prüfungen |\n| DAkkS-Kalibrierung | Messtechnik wurde rückführbar kalibriert |\n\nTRBS 1203 ist die Mindestanforderung. ISO 9001 zeigt, dass der Anbieter strukturiert arbeitet. Eine Akkreditierung nach 17025 ist für die reine DGUV V3 Prüfung nicht vorgeschrieben, aber ein starkes Qualitätsmerkmal."
+      },
+      {
+        "heading": "Praxistipp",
+        "content": "Lassen Sie sich den Befähigungsnachweis des konkreten Prüfers zeigen – nicht nur eine allgemeine Firmenzertifizierung. Die befähigte Person muss Berufsausbildung, Berufserfahrung und zeitnahe berufliche Tätigkeit im Bereich Elektrotechnik nachweisen."
+      }
+    ]
+  },
+  "welcher-anbieter-macht-dguv-v3-pruefungen-auch-nachts-oder-am-wochenende": {
+    "question": "Welcher Anbieter macht DGUV V3 Prüfungen auch nachts oder am Wochenende?",
+    "type": "commercial",
+    "sections": [
+      {
+        "heading": "Wann Nacht- und Wochenendprüfung sinnvoll ist",
+        "content": "- **Produktionsbetriebe**: Maschinen können tagsüber nicht abgeschaltet werden\n- **Krankenhäuser und Pflegeheime**: Medizingeräte sind im Tagesbetrieb im Einsatz\n- **Einzelhandel und Gastronomie**: Prüfung vor oder nach Ladenöffnung vermeidet Kundenstörung\n- **Rechenzentren**: Server dürfen nicht abgeschaltet werden – Prüfung nur im laufenden Betrieb"
+      },
+      {
+        "heading": "Typische Zuschläge",
+        "content": "| Zeitfenster | Aufschlag |\n|---|---|\n| Samstag | 25–50 % |\n| Sonntag / Feiertag | 50–100 % |\n| Nachtarbeit (22–6 Uhr) | 30–75 % |\n\nKlären Sie vorab, ob der Zuschlag auf den Stundensatz oder den Gerätepreis berechnet wird. Manche Anbieter bieten Nachtprüfung zum Normalpreis, wenn ein Mindestvolumen erreicht wird."
+      }
+    ]
+  },
+  "welcher-anbieter-prueft-elektrogeraete-im-homeoffice-der-mitarbeiter": {
+    "question": "Welcher Anbieter prüft Elektrogeräte im Homeoffice der Mitarbeiter?",
+    "type": "commercial",
+    "sections": [
+      {
+        "heading": "Rechtliche Grundlage",
+        "content": "Stellt der Arbeitgeber Geräte für das Homeoffice, bleibt die Prüfpflicht nach DGUV V3 bestehen. Das betrifft vor allem Notebooks, Monitore, Dockingstations und Mehrfachsteckdosen. Private Geräte der Mitarbeiter sind nicht prüfpflichtig, es sei denn, sie werden dienstlich eingesetzt und der Arbeitgeber duldet dies ausdrücklich."
+      },
+      {
+        "heading": "Praxismodelle für die Homeoffice-Prüfung",
+        "content": "- **Sammeltermin im Büro**: Mitarbeiter bringen ihre Geräte zu einem festen Termin ins Büro – effizient und günstig.\n- **Tournee-Prüfung**: Der Prüfer fährt die Homeoffices an – teuer, aber nötig bei ortsfesten Geräten (z. B. fest montierte Monitore).\n- **Selbstprüfung mit Schulung**: Mitarbeiter führen eine Sichtprüfung durch, der Prüfdienst schult und dokumentiert. Messung trotzdem durch Fachkraft.\n\nDie meisten Prüfdienste empfehlen das Sammeltermin-Modell – es spart Fahrtkosten und erlaubt eine effiziente Prüfung."
+      }
+    ]
+  },
+  "welcher-anbieter-prueft-ortsfeste-elektrische-anlagen-nach-din-vde-0105-100": {
+    "question": "Welcher Anbieter prüft ortsfeste elektrische Anlagen nach DIN VDE 0105-100?",
+    "type": "commercial",
+    "sections": [
+      {
+        "heading": "Was bei ortsfesten Anlagen geprüft wird",
+        "content": "- **Schutzleiter und Isolationswiderstand**: Messung an Verteilern und Zuleitungen\n- **Fehlerstrom-Schutzeinrichtungen (RCDs)**: Auslösezeit und Auslösestrom\n- **Überstromschutzorgane**: Sicherungen und Leitungsschutzschalter auf korrekte Dimensionierung prüfen\n- **Potenzialausgleich**: Durchgängigkeit und Widerstandswerte\n- **Sichtprüfung**: Zustand der Verkabelung, Verteilerkästen, Klemmstellen"
+      },
+      {
+        "heading": "Prüfintervall und Dokumentation",
+        "content": "Die DGUV V3 schreibt für ortsfeste Anlagen ein Prüfintervall von 4 Jahren vor – in Betriebsstätten mit erhöhter Gefährdung (z. B. Feuchtbereiche, Werkstätten) kann es auf 1 Jahr verkürzt werden. Das Prüfprotokoll muss Messwerte je Stromkreis enthalten und dem Betreiber übergeben werden. Viele Prüfdienste ergänzen die Messung um eine Thermografie – das zeigt überlastete Klemmen und Leitungen, bevor ein Brand entsteht."
+      }
+    ]
+  },
+  "welcher-elektropruefdienst-hat-die-besten-bewertungen": {
+    "question": "Welcher Elektroprüfdienst hat die besten Bewertungen?",
+    "type": "commercial",
+    "sections": [
+      {
+        "heading": "Worauf Sie bei Bewertungen achten sollten",
+        "content": "- **Branchenrelevanz**: Bewertungen aus Ihrer Branche (z. B. Produktion, Verwaltung, Gesundheitswesen) sind aussagekräftiger als allgemeine Sternebewertungen.\n- **Detailgrad**: Nützliche Bewertungen nennen konkrete Leistungen – Schnelligkeit, Dokumentationsqualität, Kommunikation.\n- **Aktualität**: Bewertungen älter als 2 Jahre sagen wenig über die heutige Leistung aus.\n- **Plattform**: Google-Bewertungen, ProvenExpert und branchenspezifische Portale sind relevanter als anonyme Foren."
+      },
+      {
+        "heading": "Über Bewertungen hinaus: Referenzen einholen",
+        "content": "Fragen Sie den Prüfdienst nach 2–3 Referenzkunden in Ihrer Größenordnung. Ein kurzes Telefonat mit einem bestehenden Kunden sagt mehr als jede Online-Bewertung – fragen Sie nach Termintreue, Protokollqualität und wie der Anbieter mit Mängeln umgeht."
+      }
+    ]
+  },
+  "welcher-pruefdienst-bietet-dguv-v3-pruefungen-mit-digitalem-kundenportal-an": {
+    "question": "Welcher Prüfdienst bietet DGUV V3 Prüfungen mit digitalem Kundenportal an?",
+    "type": "commercial",
+    "sections": [
+      {
+        "heading": "Was ein gutes Kundenportal bietet",
+        "content": "1. **Geräteübersicht**: Alle Betriebsmittel mit Prüfstatus auf einen Blick\n2. **Fristenampel**: Grün/Gelb/Rot zeigt sofort, welche Geräte bald fällig sind\n3. **Dokumenten-Download**: Prüfprotokolle als PDF jederzeit abrufbar\n4. **Mängelübersicht**: Offene Befunde mit Priorität und Bearbeitungsstatus\n5. **Standortfilter**: Mehrere Niederlassungen in einem System verwalten\n6. **Export-Funktion**: Daten als Excel oder CSV für eigene Auswertungen"
+      },
+      {
+        "heading": "Häufige Fehler",
+        "content": "- **Kein Datenexport bei Anbieterwechsel**: Prüfen Sie vorab, ob Sie Ihre Daten vollständig exportieren können.\n- **Nur Lesezugriff**: Ein Portal, in dem Sie keine eigenen Geräte nachtragen oder Standorte anlegen können, ist nur ein Archiv.\n- **Keine App**: Für Facility Manager, die viel vor Ort sind, ist eine mobile Ansicht oder App wichtig."
+      }
+    ]
+  },
+  "welcher-pruefdienst-fuer-dguv-v3-pruefungen-ist-bundesweit-empfehlenswert": {
+    "question": "Welcher Prüfdienst für DGUV V3 Prüfungen ist bundesweit empfehlenswert?",
+    "type": "commercial",
+    "sections": [
+      {
+        "heading": "Checkliste: Anforderungen an einen bundesweiten Prüfdienst",
+        "content": "1. **Flächendeckende Verfügbarkeit**: Eigene Teams oder feste Partner in allen relevanten Regionen\n2. **Einheitliches Reporting**: Gleiche Prüfprotokolle und Software an jedem Standort\n3. **Zentraler Ansprechpartner**: Ein Projektleiter koordiniert alle Standorte\n4. **Rahmenvertragsfähigkeit**: Einheitliche Konditionen für alle Niederlassungen\n5. **Skalierbarkeit**: Der Anbieter kann auch kurzfristig große Mengen prüfen"
+      },
+      {
+        "heading": "Praxisbeispiel: Filialunternehmen mit 30 Standorten",
+        "content": "Ein bundesweit tätiger Einzelhändler ließ seine 30 Filialen bisher von lokalen Elektrikern prüfen – mit unterschiedlichen Protokollen, Fristen und Qualitätsstandards. Nach dem Wechsel zu einem bundesweiten Prüfdienst hat der zentrale Facility Manager alle Standorte in einem Portal, einheitliche Berichte für das BG-Audit und einen festen Ansprechpartner."
+      }
+    ]
+  },
+  "welcher-pruefdienst-ist-fuer-mittelstaendische-unternehmen-zu-empfehlen": {
+    "question": "Welcher Prüfdienst ist für mittelständische Unternehmen zu empfehlen?",
+    "type": "commercial",
+    "sections": [
+      {
+        "heading": "Worauf der Mittelstand besonders achten sollte",
+        "content": "- **Flexibilität**: Der Anbieter passt den Prüfumfang an Ihre Geräteanzahl und Ihr Budget an – kein starrer Konzernprozess.\n- **Persönliche Betreuung**: Fester Prüfer, der Ihren Betrieb kennt und wiederkehrende Mängelmuster erkennt.\n- **Faire Preise**: Mengenrabatte ab 200 Geräten, keine Mindestauftragswerte von 5.000 €.\n- **Kurze Reaktionszeiten**: Termin innerhalb von 2–4 Wochen statt 3 Monaten Vorlauf."
+      },
+      {
+        "heading": "Typische Kosten für ein mittelständisches Unternehmen",
+        "content": "| Betriebsgröße | Geräteanzahl | Geschätzte Kosten |\n|---|---|---|\n| Kleiner Betrieb | 50–200 Geräte | 300–800 € |\n| Mittlerer Betrieb | 200–1.000 Geräte | 800–3.000 € |\n| Größerer Mittelstand | 1.000–5.000 Geräte | 3.000–12.000 € |\n\nHinzu kommen ggf. Kosten für ortsfeste Anlagen und Maschinen. Holen Sie mindestens 3 Angebote ein."
+      }
+    ]
+  },
+  "wer-ist-der-beste-anbieter-fuer-die-pruefung-ortsveraenderlicher-elektrogeraete": {
+    "question": "Wer ist der beste Anbieter für die Prüfung ortsveränderlicher Elektrogeräte?",
+    "type": "commercial",
+    "sections": [
+      {
+        "heading": "Was bei ortsveränderlichen Geräten geprüft wird",
+        "content": "Die Prüfung nach DIN EN 50699 (VDE 0702) umfasst:\n1. **Sichtprüfung**: Gehäuse, Anschlussleitung, Stecker auf Beschädigung\n2. **Schutzleiterwiderstand**: Bei Schutzklasse I maximal 0,3 Ω\n3. **Isolationswiderstand**: Mindestens 1 MΩ (Schutzklasse I) bzw. 2 MΩ (Schutzklasse II)\n4. **Ableitstrom**: Je nach Gerätetyp max. 0,5–3,5 mA\n5. **Funktionsprüfung**: Gerät im Betrieb testen"
+      },
+      {
+        "heading": "Praxistipp: Geräte vorab kennzeichnen",
+        "content": "Lassen Sie alle Geräte vor dem Prüftermin mit Barcode- oder QR-Aufklebern versehen. Das beschleunigt die Prüfung um bis zu 30 % und ermöglicht eine lückenlose Zuordnung. Viele Prüfdienste übernehmen die Ersterfassung – fragen Sie nach den Kosten für die Inventarisierung."
+      }
+    ]
+  },
+  "wie-finde-ich-einen-zuverlaessigen-partner-fuer-die-jaehrliche-elektropruefung": {
+    "question": "Wie finde ich einen zuverlässigen Partner für die jährliche Elektroprüfung?",
+    "type": "commercial",
+    "sections": [
+      {
+        "heading": "5 Schritte zum richtigen Prüfpartner",
+        "content": "1. **Bedarf ermitteln**: Wie viele Geräte, welche Typen, wie viele Standorte?\n2. **3 Angebote einholen**: Vergleichbare Leistungsbeschreibung verwenden\n3. **Referenzen prüfen**: Mindestens 2 Referenzkunden anrufen\n4. **Testprüfung vereinbaren**: Einen Standort probeweise prüfen lassen\n5. **Rahmenvertrag mit Ausstiegsklausel**: 1 Jahr Laufzeit, 3 Monate Kündigungsfrist"
+      },
+      {
+        "heading": "Warnsignale beim Prüfpartner",
+        "content": "- **Kein schriftliches Angebot**: Seriöse Anbieter erstellen ein detailliertes Angebot nach Ortsbegehung oder Geräteliste.\n- **Dumpingpreise**: Unter 1,50 € pro Gerät wird an Messqualität oder Dokumentation gespart.\n- **Keine Versicherung**: Fragen Sie nach der Betriebshaftpflicht – sie sollte Prüffehler abdecken.\n- **Keine Prüfplaketten**: Nach der Prüfung muss jedes Gerät eine Prüfplakette mit nächstem Prüftermin erhalten."
+      }
+    ]
+  },
+  "wie-vergleiche-ich-angebote-fuer-die-elektropruefung-richtig": {
+    "question": "Wie vergleiche ich Angebote für die Elektroprüfung richtig?",
+    "type": "commercial",
+    "sections": [
+      {
+        "heading": "Vergleichsmatrix: Angebotsvergleich in 6 Schritten",
+        "content": "| Schritt | Was prüfen? |\n|---|---|\n| 1. Leistungsumfang | Identische Gerätetypen und Normen in allen Angeboten? |\n| 2. Preisstruktur | Gerätepreis, Anfahrt, Dokumentation – alles einzeln ausgewiesen? |\n| 3. Qualifikation | Befähigte Person nach TRBS 1203 benannt? |\n| 4. Dokumentation | Digital, mit Messwerten, als PDF/Excel lieferbar? |\n| 5. Fristenmanagement | Inklusive oder Aufpreis? |\n| 6. Nachprüfung | Kosten für Wiederholungsprüfung nach Mängelbehebung? |"
+      },
+      {
+        "heading": "Praxistipp: Normierte Leistungsbeschreibung",
+        "content": "Senden Sie allen Anbietern dieselbe Geräteliste mit Anzahl, Typ und Standort. Nur so sind die Angebote vergleichbar. Fragen Sie explizit, welche Leistungen im Preis enthalten sind und welche extra kosten – besonders Anfahrt, Gerätekennzeichnung und digitale Dokumentation."
+      }
+    ]
+  },
+  "wie-wechsle-ich-den-pruefdienstleister-fuer-die-elektropruefung-ohne": {
+    "question": "Wie wechsle ich den Prüfdienstleister für die Elektroprüfung ohne Risiko?",
+    "type": "commercial",
+    "sections": [
+      {
+        "heading": "Checkliste für den Anbieterwechsel",
+        "content": "1. **Fristen prüfen**: Kündigungsfrist im Altvertrag einhalten\n2. **Daten anfordern**: Prüfprotokolle, Gerätelisten und Fristenübersicht in offenem Format exportieren\n3. **Neuen Anbieter briefen**: Gerätebestand, Standorte und Sonderwünsche übergeben\n4. **Übergangsphase planen**: Idealerweise überschneiden sich alter und neuer Anbieter um 4 Wochen\n5. **Prüfplaketten**: Der neue Anbieter bringt eigene Plaketten an – alte Plaketten bleiben bis zur nächsten Prüfung gültig"
+      },
+      {
+        "heading": "Häufige Fehler beim Wechsel",
+        "content": "- **Daten nicht rechtzeitig sichern**: Manche Portale löschen Ihre Daten nach Vertragsende. Exportieren Sie alles vor der Kündigung.\n- **Fristen nicht abgleichen**: Der neue Anbieter muss wissen, welche Geräte wann fällig sind – sonst entstehen Lücken.\n- **Nur den Preis als Wechselgrund nennen**: Bessere Dokumentation, Fristenmanagement oder Branchenkenntnis sind nachhaltigere Auswahlkriterien."
+      }
+    ]
+  },
+  "woran-erkenne-ich-einen-unserioesen-anbieter-fuer-elektropruefungen": {
+    "question": "Woran erkenne ich einen unseriösen Anbieter für Elektroprüfungen?",
+    "type": "commercial",
+    "sections": [
+      {
+        "heading": "10 Warnsignale",
+        "content": "1. **Kein Impressum oder Handelsregistereintrag**: Prüfen Sie die Firmendaten\n2. **Dumpingpreise unter 1 € pro Gerät**: Qualität lässt sich darunter nicht erbringen\n3. **Keine Referenzen**: Seriöse Anbieter zeigen Kundenstimmen oder geben Referenzkontakte\n4. **Prüfung ohne Messtechnik**: Nur Sichtprüfung reicht für DGUV V3 nicht\n5. **Kein Prüfprotokoll mit Messwerten**: Nur ein Häkchen „bestanden\" ist keine Prüfung\n6. **Druck zum Sofortabschluss**: Seriöse Anbieter geben Bedenkzeit\n7. **Keine Haftpflichtversicherung**: Muss auf Nachfrage nachgewiesen werden\n8. **Qualifikation unklar**: Kein Nachweis als befähigte Person nach TRBS 1203\n9. **Keine Prüfplaketten**: Jedes Gerät muss nach der Prüfung gekennzeichnet werden\n10. **Kalte Akquise mit Drohungen**: „Die BG kommt nächste Woche\" ist ein bekannter Trick"
+      },
+      {
+        "heading": "Was tun bei Verdacht?",
+        "content": "Melden Sie unseriöse Anbieter bei Ihrer Industrie- und Handelskammer (IHK) oder der Handwerkskammer. Bei Betrugsversuchen ist die Polizei zuständig. Fragen Sie bei Ihrer BG nach einer Liste empfohlener Prüfdienste in Ihrer Region."
+      }
+    ]
+  },
+  "worauf-muss-ich-bei-der-auswahl-eines-pruefdienstleisters-fuer": {
+    "question": "Worauf muss ich bei der Auswahl eines Prüfdienstleisters achten?",
+    "type": "commercial",
+    "sections": [
+      {
+        "heading": "Die 7 wichtigsten Auswahlkriterien",
+        "content": "1. **Qualifikation**: Befähigte Person nach TRBS 1203 mit nachgewiesener Berufserfahrung\n2. **Messtechnik**: Kalibrierte Geräte mit aktuellem Kalibriernachweis\n3. **Dokumentation**: Digitale Prüfprotokolle mit Messwerten, nicht nur „bestanden/nicht bestanden\"\n4. **Fristenmanagement**: Automatische Wiedervorlage für Folgeprüfungen\n5. **Branchenkenntnis**: Erfahrung mit Ihrem Gerätetyp und Ihrer Betriebsgröße\n6. **Versicherung**: Betriebshaftpflicht mit ausreichender Deckungssumme\n7. **Referenzen**: Mindestens 2–3 vergleichbare Kunden"
+      },
+      {
+        "heading": "Praxistipp: Probeprüfung vereinbaren",
+        "content": "Beauftragen Sie den Anbieter zunächst mit der Prüfung eines Teilbereichs (z. B. ein Stockwerk oder eine Abteilung). So testen Sie Qualität, Geschwindigkeit und Dokumentation, bevor Sie einen Rahmenvertrag abschließen. Die Kosten für eine Probeprüfung liegen bei 200–500 € – eine sinnvolle Investition."
+      }
+    ]
+  },
+  "darf-eine-elektrotechnisch-unterwiesene-person-eup-geraete-pruefen": {
+    "question": "Darf eine elektrotechnisch unterwiesene Person (EuP) Geräte prüfen?",
+    "type": "wissen",
+    "sections": [
+      {
+        "heading": "Was eine EuP darf – und was nicht",
+        "content": "Eine elektrotechnisch unterwiesene Person darf **Sichtprüfungen** durchführen: Gehäuse, Leitung und Stecker auf sichtbare Schäden kontrollieren. Die **Messung** (Schutzleiterwiderstand, Isolationswiderstand, Ableitstrom) darf sie jedoch nur unter **Aufsicht einer Elektrofachkraft** durchführen. Die eigenständige Prüfung als befähigte Person nach TRBS 1203 setzt eine abgeschlossene Berufsausbildung im Bereich Elektrotechnik voraus."
+      },
+      {
+        "heading": "Praxistipp: EuP sinnvoll einsetzen",
+        "content": "Setzen Sie EuP für die Sichtprüfung zwischen den Hauptprüfungen ein – das ist erlaubt und spart Kosten. Schulen Sie die EuP einmal jährlich und dokumentieren Sie die Unterweisung. Die messtechnische Prüfung bleibt der Elektrofachkraft vorbehalten."
+      }
+    ]
+  },
+  "elektropruefung-in-mehrfamilienhaeusern-was-muss-die-hausverwaltung-pruefen": {
+    "question": "Elektroprüfung in Mehrfamilienhäusern – was muss die Hausverwaltung prüfen?",
+    "type": "wissen",
+    "sections": [
+      {
+        "heading": "Prüfpflichten der Hausverwaltung",
+        "content": "Die Hausverwaltung ist für die Elektrosicherheit der **Gemeinschaftsflächen** verantwortlich: Treppenhaus, Keller, Waschküche, Tiefgarage, Aufzug. Dazu gehören:\n- Beleuchtungsanlagen in Fluren und Treppenhäusern\n- Elektrische Anlagen in Heizungsräumen\n- Steckdosen und Schalter in Gemeinschaftsbereichen\n- Haussprechanlagen und Türöffner\n- Aufzugsanlagen (hier gelten zusätzlich BetrSichV-Vorschriften)"
+      },
+      {
+        "heading": "Prüfintervalle",
+        "content": "Ortsfeste Anlagen in Wohngebäuden: alle 4 Jahre. In Bereichen mit erhöhter Gefährdung (Waschküche, Heizungsraum): alle 2 Jahre. Die Kosten werden als Instandhaltungskosten auf die Eigentümer umgelegt."
+      }
+    ]
+  },
+  "externer-pruefdienst-oder-eigene-elektrofachkraft-was-ist-rechtssicherer": {
+    "question": "Externer Prüfdienst oder eigene Elektrofachkraft – was ist rechtssicherer?",
+    "type": "wissen",
+    "sections": [
+      {
+        "heading": "Rechtliche Einordnung",
+        "content": "Beide Varianten sind rechtlich gleichwertig, sofern der Prüfer die Anforderungen der TRBS 1203 erfüllt. Entscheidend sind:\n- **Berufsausbildung** im Bereich Elektrotechnik\n- **Berufserfahrung** (mindestens 1 Jahr)\n- **Zeitnahe berufliche Tätigkeit** (regelmäßige Prüfungen in den letzten 12 Monaten)\n- **Kalibrierte Messtechnik** mit aktuellem Nachweis"
+      },
+      {
+        "heading": "Vor- und Nachteile im Vergleich",
+        "content": "| Kriterium | Eigene EFK | Externer Prüfdienst |\n|---|---|---|\n| Unabhängigkeit | ✘ Eigene Arbeit prüfen | ✔ Neutrale Bewertung |\n| Betriebskenntnis | ✔ Kennt die Anlage | ✘ Einarbeitungszeit |\n| Kosten | Personalkosten + Messtechnik | Prüfpauschale |\n| Haftung | Arbeitgeber haftet | Prüfdienst haftet anteilig |\n\nIn der Praxis empfehlen BGen häufig die externe Prüfung, weil die Unabhängigkeit die Dokumentation glaubwürdiger macht."
+      }
+    ]
+  },
+  "ist-eine-digitale-dokumentation-der-elektropruefung-rechtlich-ausreichend": {
+    "question": "Ist eine digitale Dokumentation der Elektroprüfung rechtlich ausreichend?",
+    "type": "wissen",
+    "sections": [
+      {
+        "heading": "Rechtliche Anforderungen an die Dokumentation",
+        "content": "Ja, eine digitale Dokumentation ist vollständig ausreichend – die DGUV V3 schreibt keine Papierform vor. Entscheidend ist, dass das Prüfprotokoll folgende Angaben enthält:\n1. Eindeutige Geräteidentifikation (Inventarnummer, Barcode)\n2. Prüfdatum und Name des Prüfers\n3. Angewandte Prüfnorm\n4. Messwerte (Schutzleiter, Isolation, Ableitstrom)\n5. Befund und Bewertung\n6. Nächster Prüftermin"
+      },
+      {
+        "heading": "Vorteile der digitalen Dokumentation",
+        "content": "- **Manipulationssicher**: Zeitstempel und digitale Signatur schützen vor nachträglicher Änderung\n- **Schnell auffindbar**: Bei einer BG-Prüfung müssen Protokolle sofort verfügbar sein – digital geht das per Suche\n- **Platzsparend**: Keine Aktenordner, kein Archivraum\n- **Automatische Fristenverwaltung**: Das System erinnert an fällige Prüfungen"
+      }
+    ]
+  },
+  "kann-die-berufsgenossenschaft-regress-nehmen-wenn-die-elektropruefung-fehlt": {
+    "question": "Kann die Berufsgenossenschaft Regress nehmen, wenn die Elektroprüfung fehlt?",
+    "type": "wissen",
+    "sections": [
+      {
+        "heading": "Konsequenzen fehlender Prüfung",
+        "content": "Ja. Bei einem Arbeitsunfall durch ein ungeprüftes Gerät kann die BG den Arbeitgeber in Regress nehmen – das bedeutet, sie fordert die Behandlungs- und Rentenkosten zurück. Die Grundlage ist §110 SGB VII (grobe Fahrlässigkeit). In der Praxis drohen:\n- **Regressforderungen** von oft 50.000–500.000 €\n- **Bußgeld** bis 25.000 € je Verstoß (Arbeitsschutzgesetz §25)\n- **Strafverfahren** bei Körperverletzung oder Tod (§223, §229 StGB)"
+      },
+      {
+        "heading": "Praxisbeispiel",
+        "content": "Ein Mitarbeiter erlitt einen Stromschlag durch ein defektes Verlängerungskabel. Die BG stellte fest, dass das Kabel seit 3 Jahren nicht geprüft worden war. Die Regressforderung betrug 180.000 € für Krankenhauskosten und Verdienstausfall. Der Betrieb zahlte – seine Betriebshaftpflicht deckte den Schaden nicht vollständig, weil die Pflichtverletzung vorsätzlich erfolgte."
+      }
+    ]
+  },
+  "kann-ein-hausmeister-die-elektropruefung-uebernehmen": {
+    "question": "Kann ein Hausmeister die Elektroprüfung übernehmen?",
+    "type": "wissen",
+    "sections": [
+      {
+        "heading": "Voraussetzungen",
+        "content": "Ein Hausmeister darf die DGUV V3 Prüfung nur dann durchführen, wenn er die Anforderungen der TRBS 1203 erfüllt:\n1. **Abgeschlossene Berufsausbildung** als Elektriker, Elektroniker oder vergleichbar\n2. **Mindestens 1 Jahr Berufserfahrung** in der Elektrotechnik\n3. **Zeitnahe Tätigkeit**: Regelmäßige Prüfungen in den letzten 12 Monaten\n4. **Kalibrierte Messtechnik** mit aktuellem Kalibriernachweis\n\nEin Hausmeister ohne elektrotechnische Ausbildung darf maximal Sichtprüfungen durchführen – keine Messungen."
+      },
+      {
+        "heading": "Häufiger Fehler",
+        "content": "Viele Betreiber gehen davon aus, dass ein Hausmeister mit „Elektro-Grundkenntnissen\" prüfen darf. Das reicht nicht. Bei einem Unfall haftet der Betreiber, wenn der Prüfer nicht qualifiziert war. Im Zweifel ist ein externer Prüfdienst die sicherere und oft auch günstigere Lösung."
+      }
+    ]
+  },
+  "muessen-neue-elektrogeraete-vor-der-ersten-nutzung-geprueft-werden": {
+    "question": "Müssen neue Elektrogeräte vor der ersten Nutzung geprüft werden?",
+    "type": "wissen",
+    "sections": [
+      {
+        "heading": "Erstprüfung: Pflicht oder nicht?",
+        "content": "Grundsätzlich gelten Neugeräte mit CE-Kennzeichnung als erstgeprüft durch den Hersteller. Eine **erneute Messung ist nicht vorgeschrieben**, solange das Gerät originalverpackt und unbeschädigt ist. Allerdings empfiehlt die DGUV, auch Neugeräte vor der ersten Nutzung zu **erfassen** und in das Prüfkataster aufzunehmen – mit:\n- Inventarnummer / Barcode\n- Standort und Nutzer\n- Erstem Prüftermin (= Inbetriebnahmedatum + Prüfintervall)"
+      },
+      {
+        "heading": "Ausnahmen: Wann doch geprüft werden muss",
+        "content": "- **Gerät wurde umgebaut oder verändert** (z. B. Stecker getauscht, Leitung gekürzt)\n- **Sichtbare Transportschäden** am Gehäuse oder Kabel\n- **Kein CE-Zeichen vorhanden** – dann gilt das Gerät als nicht erstgeprüft\n- **Firmeninterne Regelung** schreibt Erstprüfung vor (häufig in Produktionsbetrieben)"
+      }
+    ]
+  },
+  "was-muss-in-einem-dguv-v3-pruefprotokoll-stehen": {
+    "question": "Was muss in einem DGUV V3 Prüfprotokoll stehen?",
+    "type": "wissen",
+    "sections": [
+      {
+        "heading": "Pflichtangaben im Prüfprotokoll",
+        "content": "1. **Geräteidentifikation**: Inventarnummer, Hersteller, Typ, Seriennummer\n2. **Standort**: Gebäude, Raum, Kostenstelle\n3. **Prüfdatum** und **Name des Prüfers**\n4. **Prüfnorm**: z. B. DIN EN 50699 (ortsveränderlich) oder DIN VDE 0105-100 (ortsfest)\n5. **Messwerte**: Schutzleiterwiderstand (Ω), Isolationswiderstand (MΩ), Ableitstrom (mA)\n6. **Sichtprüfung**: Zustand von Gehäuse, Leitung, Stecker\n7. **Funktionsprüfung**: Ergebnis\n8. **Befund**: Bestanden / nicht bestanden / Mängel mit Kategorie\n9. **Nächster Prüftermin**"
+      },
+      {
+        "heading": "Häufige Mängel in Prüfprotokollen",
+        "content": "- **Fehlende Messwerte**: Nur „bestanden\" ohne Zahlenwerte ist bei einer BG-Prüfung nicht akzeptabel.\n- **Keine Prüferidentifikation**: Der Name des Prüfers muss eindeutig zuordenbar sein.\n- **Falsche Norm angegeben**: Ortsveränderliche Geräte werden nach DIN EN 50699, nicht nach DIN VDE 0105-100 geprüft."
+      }
+    ]
+  },
+  "was-passiert-wenn-ein-unternehmen-keine-dguv-v3-pruefung-durchfuehrt": {
+    "question": "Was passiert, wenn ein Unternehmen keine DGUV V3 Prüfung durchführt?",
+    "type": "wissen",
+    "sections": [
+      {
+        "heading": "Mögliche Konsequenzen",
+        "content": "| Konsequenz | Details |\n|---|---|\n| Bußgeld | Bis 25.000 € je Verstoß (§25 ArbSchG) |\n| BG-Auflagen | Nachprüfung mit Frist, bei Nichterfüllung: erhöhter Beitrag |\n| Regressforderung | Bei Personenschaden: BG fordert Behandlungskosten zurück (§110 SGB VII) |\n| Strafanzeige | Bei Körperverletzung oder Tod durch ungeprüftes Gerät (§223, §229 StGB) |\n| Versicherungsausfall | Sachversicherer kann Leistung kürzen oder verweigern |\n| Betriebsunterbrechung | Aufsichtsbehörde kann Stilllegung anordnen |"
+      },
+      {
+        "heading": "Praxistipp",
+        "content": "Beginnen Sie mit einer Bestandsaufnahme: Welche Geräte sind vorhanden, welche wurden zuletzt geprüft? Schon eine dokumentierte Planung zeigt der BG, dass Sie das Thema ernst nehmen. Ein Prüfdienst kann innerhalb von 2–4 Wochen starten und den Rückstand aufarbeiten."
+      }
+    ]
+  },
+  "was-prueft-die-berufsgenossenschaft-bei-einer-begehung-zur-elektrosicherheit": {
+    "question": "Was prüft die Berufsgenossenschaft bei einer Begehung zur Elektrosicherheit?",
+    "type": "wissen",
+    "sections": [
+      {
+        "heading": "Typischer Ablauf einer BG-Begehung",
+        "content": "1. **Dokumentenprüfung**: Prüfprotokolle, Gefährdungsbeurteilung, Bestellung der Elektrofachkraft\n2. **Stichprobe**: 10–20 Geräte werden zufällig ausgewählt und die Protokolle kontrolliert\n3. **Sichtprüfung vor Ort**: Zustand der Kabel, Steckdosen, Verteiler\n4. **Prüfplaketten**: Sind sie vorhanden und aktuell?\n5. **Unterweisungsnachweise**: Wurden Mitarbeiter im Umgang mit elektrischen Geräten unterwiesen?"
+      },
+      {
+        "heading": "So bereiten Sie sich vor",
+        "content": "- Halten Sie alle Prüfprotokolle digital griffbereit – Suche nach Gerätenummer muss in Sekunden möglich sein.\n- Stellen Sie sicher, dass die Gefährdungsbeurteilung die Elektroprüfung als Maßnahme benennt.\n- Aktualisieren Sie die Bestellung der verantwortlichen Elektrofachkraft (VEFK), falls ein Personalwechsel stattfand."
+      }
+    ]
+  },
+  "welche-bussgelder-drohen-bei-fehlender-elektropruefung": {
+    "question": "Welche Bußgelder drohen bei fehlender Elektroprüfung?",
+    "type": "wissen",
+    "sections": [
+      {
+        "heading": "Bußgeldrahmen",
+        "content": "| Verstoß | Bußgeld |\n|---|---|\n| Fehlende Prüfung (§25 ArbSchG) | Bis 25.000 € je Verstoß |\n| Fehlende Gefährdungsbeurteilung | Bis 25.000 € |\n| Fehlende Dokumentation | Bis 5.000 € |\n| Wiederholter Verstoß | Verdopplung möglich |\n| Vorsätzlicher Verstoß mit Gefährdung | Straftat nach §26 ArbSchG – Freiheitsstrafe bis 1 Jahr |\n\nIn der Praxis liegen die Bußgelder bei Erstverstoß meist zwischen 1.000 und 5.000 €. Bei Wiederholung oder nach einem Unfall steigen sie erheblich."
+      },
+      {
+        "heading": "Praxistipp",
+        "content": "Dokumentieren Sie den Prüfstatus lückenlos. Selbst wenn nicht alle Geräte fristgerecht geprüft werden können, zeigt ein Prüfplan mit Terminen und Priorisierung, dass Sie systematisch vorgehen. Die BG unterscheidet zwischen einem Betrieb, der nichts tut, und einem, der einen Rückstand strukturiert aufarbeitet."
+      }
+    ]
+  },
+  "welche-elektropruefungen-braucht-ein-einzelhaendler-mit-mehreren-filialen": {
+    "question": "Welche Elektroprüfungen braucht ein Einzelhändler mit mehreren Filialen?",
+    "type": "wissen",
+    "sections": [
+      {
+        "heading": "Typische Prüfpflichten im Einzelhandel",
+        "content": "- **Ortsveränderliche Geräte** (Kassen, Scanner, Handstaubsauger, Wasserkocher): Prüfung alle 2 Jahre, in Verkaufsräumen mit hoher Belastung jährlich\n- **Ortsfeste Anlagen** (Beleuchtung, Klimaanlage, Rolltreppen): Alle 4 Jahre\n- **Kühlgeräte und Kühltheken** (Lebensmitteleinzelhandel): Alle 2 Jahre\n- **Notbeleuchtung**: Jährliche Funktionsprüfung, Batteriewechsel nach Herstellerangabe"
+      },
+      {
+        "heading": "Praxistipp für Filialbetriebe",
+        "content": "Beauftragen Sie einen bundesweiten Prüfdienst mit einem Rahmenvertrag. So erhalten Sie einheitliche Prüfprotokolle, einen zentralen Ansprechpartner und Mengenrabatte. Planen Sie die Prüfungen außerhalb der Geschäftszeiten, um den Verkaufsbetrieb nicht zu stören."
+      }
+    ]
+  },
+  "welche-elektropruefungen-braucht-ein-hotel": {
+    "question": "Welche Elektroprüfungen braucht ein Hotel?",
+    "type": "wissen",
+    "sections": [
+      {
+        "heading": "Prüfpflichten im Hotelgewerbe",
+        "content": "- **Zimmer**: Wasserkocher, Fön, Minibar, Ladekabel – ortsveränderliche Geräte alle 1–2 Jahre\n- **Küche/Restaurant**: Professionelle Küchengeräte alle 6–12 Monate (erhöhte Beanspruchung)\n- **Wellnessbereich**: Whirlpool, Sauna, Dampfbad – ortsfeste Anlagen in Feuchtbereichen alle 1–2 Jahre\n- **Haustechnik**: Aufzüge (BetrSichV), Brandmeldeanlagen, Notbeleuchtung\n- **Konferenzbereich**: Beamer, Lautsprecher, Verlängerungskabel"
+      },
+      {
+        "heading": "Praxistipp",
+        "content": "Hotels haben eine besondere Verkehrssicherungspflicht gegenüber Gästen. Dokumentieren Sie die Prüfungen sorgfältig – im Schadensfall ist der Nachweis der regelmäßigen Prüfung Ihre beste Verteidigung. Planen Sie die Prüfung in der Nebensaison, wenn weniger Zimmer belegt sind."
+      }
+    ]
+  },
+  "welche-elektropruefungen-gelten-fuer-lager-und-logistikhallen": {
+    "question": "Welche Elektroprüfungen gelten für Lager- und Logistikhallen?",
+    "type": "wissen",
+    "sections": [
+      {
+        "heading": "Typische Prüfpflichten in Lager und Logistik",
+        "content": "- **Flurförderzeuge** (Stapler-Ladegeräte): Jährliche Prüfung\n- **Fördertechnik** (Rollenbahnen, Sorter): Ortsfeste Anlagen alle 4 Jahre, bei starker Beanspruchung alle 2 Jahre\n- **Hallenbeleuchtung**: Ortsfeste Anlage, alle 4 Jahre\n- **Tore und Verladebrücken**: Elektrische Antriebe als ortsfeste Anlage prüfen\n- **Handscanner und Drucker**: Ortsveränderliche Geräte, alle 2 Jahre\n- **Kühlhäuser**: Kältemaschinen und Steuerungstechnik, Sonderregelungen beachten"
+      },
+      {
+        "heading": "Besonderheit: Staubbelastung und Vibration",
+        "content": "In Lagerhallen mit hoher Staubbelastung (z. B. Holz, Papier, Lebensmittel) verkürzt sich das Prüfintervall auf 1 Jahr. Vibration durch Fördertechnik löst Klemmverbindungen – die Thermografie zeigt überlastete Kontaktstellen frühzeitig."
+      }
+    ]
+  },
+  "welche-elektropruefungen-gelten-fuer-photovoltaikanlagen-auf-gewerbedaechern": {
+    "question": "Welche Elektroprüfungen gelten für Photovoltaikanlagen auf Gewerbedächern?",
+    "type": "wissen",
+    "sections": [
+      {
+        "heading": "Prüfpflichten für PV-Anlagen",
+        "content": "- **Erstprüfung**: Durch den Installateur nach DIN EN 62446 (VDE 0126-23) – Protokoll muss dem Betreiber übergeben werden\n- **Wiederkehrende Prüfung**: Alle 4 Jahre als ortsfeste Anlage nach DGUV V3\n- **Wechselrichter und Einspeisepunkt**: Alle 4 Jahre (ortsfeste Anlage)\n- **Blitzschutz**: Falls vorhanden, alle 2–4 Jahre nach DIN EN 62305\n- **Thermografie**: Empfohlen alle 2 Jahre zur Erkennung defekter Module und Hotspots"
+      },
+      {
+        "heading": "Praxistipp",
+        "content": "Kombinieren Sie die Elektroprüfung mit der Anlageninspektion (Modulreinigung, Ertragskontrolle). Viele PV-Wartungsfirmen bieten beides an. Defekte Module oder lose Steckverbindungen senken nicht nur den Ertrag, sondern sind auch ein Brandrisiko."
+      }
+    ]
+  },
+  "welche-elektropruefungen-gelten-fuer-veranstaltungsstaetten-und-messen": {
+    "question": "Welche Elektroprüfungen gelten für Veranstaltungsstätten und Messen?",
+    "type": "wissen",
+    "sections": [
+      {
+        "heading": "Prüfpflichten für Veranstaltungsstätten",
+        "content": "- **Ortsfeste Anlagen** (Bühnenbeleuchtung, Tontechnik-Installation): Alle 4 Jahre\n- **Ortsveränderliche Geräte** (mobile Scheinwerfer, Kabeltrommeln, Nebelmaschinen): Vor jeder Veranstaltung Sichtprüfung, messtechnisch alle 6 Monate\n- **Temporäre Aufbauten** (Messen, Festivals): Erstprüfung vor Inbetriebnahme nach DIN VDE 0100-740\n- **Not- und Sicherheitsbeleuchtung**: Jährliche Funktionsprüfung (VStättVO)"
+      },
+      {
+        "heading": "Besonderheit: Veranstalterhaftung",
+        "content": "Der Betreiber der Veranstaltungsstätte haftet für die ortsfeste Installation, der Veranstalter für seine mitgebrachte Technik. Bei externen Dienstleistern (z. B. Lichttechnik-Firmen) sollte die Prüfpflicht vertraglich geregelt sein. Messen mit vielen Ausstellern brauchen eine zentrale Elektroabnahme vor Eröffnung."
+      }
+    ]
+  },
+  "welche-elektropruefungen-sind-in-arztpraxen-und-krankenhaeusern-vorgeschrieben": {
+    "question": "Welche Elektroprüfungen sind in Arztpraxen und Krankenhäusern vorgeschrieben?",
+    "type": "wissen",
+    "sections": [
+      {
+        "heading": "Prüfpflichten im Gesundheitswesen",
+        "content": "- **Medizinprodukte** (EKG, Ultraschall, Defibrillatoren): STK/MTK nach MPBetreibV und DIN EN 62353 – Intervall je nach Risikoklasse (6–24 Monate)\n- **Allgemeine Elektrogeräte** (PC, Drucker, Kaffeemaschine): DGUV V3, alle 2 Jahre\n- **Ortsfeste Anlagen** (OP-Beleuchtung, Versorgungseinheit): DGUV V3 + DIN VDE 0100-710, alle 2 Jahre in medizinisch genutzten Räumen\n- **IT-Netzteile und Server**: DGUV V3, alle 2 Jahre\n- **Notstromanlagen**: Monatlicher Probelauf, jährliche Prüfung"
+      },
+      {
+        "heading": "Häufiger Fehler",
+        "content": "Viele Praxen verwechseln die STK (sicherheitstechnische Kontrolle) für Medizinprodukte mit der DGUV V3 Prüfung. Beides ist Pflicht, folgt aber unterschiedlichen Vorschriften. Ein Prüfdienst, der beides abdeckt, spart Zeit und Koordination."
+      }
+    ]
+  },
+  "welche-elektropruefungen-sind-in-rechenzentren-notwendig": {
+    "question": "Welche Elektroprüfungen sind in Rechenzentren notwendig?",
+    "type": "wissen",
+    "sections": [
+      {
+        "heading": "Prüfpflichten im Rechenzentrum",
+        "content": "- **USV-Anlagen**: Jährliche Prüfung der Batterie und Umschaltung\n- **Energieverteilung** (PDUs, Schienenverteiler): Ortsfeste Anlage, alle 4 Jahre – Thermografie empfohlen alle 1–2 Jahre\n- **Serverschränke und Kabelmanagement**: Sichtprüfung, alle 2 Jahre\n- **Klimaanlagen**: Elektrische Prüfung der Kompressoren und Steuerung\n- **Brandmeldeanlage und Gaslöschanlage**: Jährliche Funktionsprüfung\n- **Notstromdiesel**: Monatlicher Probelauf, jährliche Elektroprüfung"
+      },
+      {
+        "heading": "Besonderheit: Prüfung im laufenden Betrieb",
+        "content": "Server dürfen nicht abgeschaltet werden. Die Prüfung ortsfester Anlagen muss im laufenden Betrieb erfolgen – das erfordert Erfahrung mit redundanten Versorgungspfaden und A/B-Feeds. Thermografie ist hier besonders wertvoll: Überlastete Klemmen und Kabel werden ohne Abschaltung erkannt."
+      }
+    ]
+  },
+  "welche-messgeraete-muss-ein-pruefer-fuer-die-dguv-v3-pruefung-haben": {
+    "question": "Welche Messgeräte muss ein Prüfer für die DGUV V3 Prüfung haben?",
+    "type": "wissen",
+    "sections": [
+      {
+        "heading": "Pflicht-Messgeräte",
+        "content": "| Messgröße | Messgerät | Norm |\n|---|---|---|\n| Schutzleiterwiderstand | Niederohmmessgerät | DIN EN 50699 |\n| Isolationswiderstand | Isolationsmessgerät | DIN EN 50699 |\n| Ableitstrom | Differenzstrommessgerät | DIN EN 50699 |\n| RCD-Auslösezeit | RCD-Prüfgerät | DIN VDE 0105-100 |\n| Schleifenimpedanz | Schleifenimpedanzmessgerät | DIN VDE 0100-600 |\n\nKombigeräte (z. B. Fluke 6500, Gossen Metrawatt Secutest) vereinen mehrere Messungen in einem Gerät."
+      },
+      {
+        "heading": "Kalibrierung",
+        "content": "Alle Messgeräte müssen regelmäßig kalibriert werden – empfohlen jährlich, spätestens alle 2 Jahre. Die Kalibrierung muss rückführbar auf ein nationales Normal sein (DAkkS-Kalibrierung). Nicht kalibrierte Geräte liefern keine rechtssicheren Messwerte."
+      }
+    ]
+  },
+  "welche-pruefintervalle-gelten-fuer-verlaengerungskabel-und-mehrfachsteckdosen": {
+    "question": "Welche Prüfintervalle gelten für Verlängerungskabel und Mehrfachsteckdosen?",
+    "type": "wissen",
+    "sections": [
+      {
+        "heading": "Empfohlene Prüfintervalle",
+        "content": "| Einsatzort | Intervall |\n|---|---|\n| Büro, Verwaltung | Alle 2 Jahre |\n| Werkstatt, Produktion | Jährlich |\n| Baustelle | Alle 3 Monate |\n| Labor, Feuchtbereiche | Alle 6 Monate |\n| Outdoor / Veranstaltung | Vor jeder Nutzung Sichtprüfung, messtechnisch alle 6 Monate |\n\nVerlängerungskabel und Mehrfachsteckdosen gehören zu den am häufigsten beanstandeten Geräten bei DGUV V3 Prüfungen."
+      },
+      {
+        "heading": "Häufige Mängel",
+        "content": "- **Mechanische Beschädigungen**: Gequetschte Kabel, gerissene Isolierung, verbogene Steckerstifte\n- **Überlastung**: Mehrfachsteckdosen in Reihe geschaltet – ein häufiger Brandherd\n- **Feuchtigkeit**: Kabeltrommeln im Außenbereich ohne Spritzwasserschutz\n- **Fehlender Berührungsschutz**: Ältere Modelle ohne Kindersicherung in Publikumsbereichen"
+      }
+    ]
+  },
+  "welche-pruefpflichten-gelten-fuer-elektrik-in-restaurants-und-grosskuechen": {
+    "question": "Welche Prüfpflichten gelten für Elektrik in Restaurants und Großküchen?",
+    "type": "wissen",
+    "sections": [
+      {
+        "heading": "Prüfpflichten in der Gastronomie",
+        "content": "- **Küchengeräte** (Konvektomat, Fritteuse, Spülmaschine): Ortsveränderlich oder fest angeschlossen – alle 6–12 Monate wegen erhöhter Beanspruchung durch Hitze, Fett und Feuchtigkeit\n- **Kühlgeräte**: Alle 12 Monate\n- **Kassensysteme, Kaffeevollautomaten**: Alle 2 Jahre\n- **Ortsfeste Anlagen** (Lüftung, Beleuchtung): Alle 4 Jahre, in Nassräumen alle 2 Jahre\n- **Abzugshauben mit elektrischem Antrieb**: Als ortsfeste Anlage prüfen"
+      },
+      {
+        "heading": "Praxistipp",
+        "content": "Planen Sie die Prüfung außerhalb der Servicezeiten – idealerweise montags oder dienstags vormittags. Geräte müssen für die Messung kurzzeitig vom Netz getrennt werden. Ein erfahrener Prüfdienst schafft eine Restaurantküche in 3–4 Stunden."
+      }
+    ]
+  },
+  "welche-software-eignet-sich-fuer-das-fristenmanagement-von-elektropruefungen": {
+    "question": "Welche Software eignet sich für das Fristenmanagement von Elektroprüfungen?",
+    "type": "wissen",
+    "sections": [
+      {
+        "heading": "Software-Kategorien im Überblick",
+        "content": "| Kategorie | Beispiele | Geeignet für |\n|---|---|---|\n| CAFM-Systeme | pit-FM, Planon, Archibus | Große Unternehmen mit umfassendem FM |\n| Prüfmanagement | e-Manager, MEBEDO, Wartungsplaner | Mittelstand, reine Prüfverwaltung |\n| Excel + Add-Ins | Eigene Tabellen | Kleine Betriebe (<100 Geräte) |\n| Cloud-Portale der Prüfdienste | Vom Anbieter bereitgestellt | Outsourcing der Prüfverwaltung |\n\nAb 200 Geräten lohnt sich der Umstieg von Excel auf eine spezialisierte Lösung."
+      },
+      {
+        "heading": "Wichtige Funktionen",
+        "content": "- **Automatische Fristenerinnerung**: Per E-Mail oder Dashboard-Ampel, 8–12 Wochen vor Fälligkeit\n- **Gerätehistorie**: Alle Prüfungen, Mängel und Reparaturen je Gerät chronologisch\n- **Standortfilter**: Bei mehreren Gebäuden oder Filialen unverzichtbar\n- **Datenimport**: CSV-Import aus vorhandenen Listen oder vom Prüfdienst\n- **Export**: PDF und Excel für BG-Audits"
+      }
+    ]
+  },
+  "wer-darf-eine-dguv-v3-pruefung-durchfuehren": {
+    "question": "Wer darf eine DGUV V3 Prüfung durchführen?",
+    "type": "wissen",
+    "sections": [
+      {
+        "heading": "Anforderungen nach TRBS 1203",
+        "content": "Eine DGUV V3 Prüfung darf nur eine **befähigte Person** durchführen. Die TRBS 1203 definiert drei Anforderungen:\n1. **Berufsausbildung**: Abgeschlossene Ausbildung als Elektroniker, Elektriker, Elektroingenieur oder vergleichbar\n2. **Berufserfahrung**: Mindestens 1 Jahr praktische Erfahrung mit der zu prüfenden Geräteart\n3. **Zeitnahe berufliche Tätigkeit**: Regelmäßige Prüftätigkeit in den letzten 12 Monaten, Fortbildung in aktuellen Normen"
+      },
+      {
+        "heading": "Wer darf nicht prüfen?",
+        "content": "- Hausmeister ohne elektrotechnische Ausbildung\n- Elektrotechnisch unterwiesene Personen (EuP) – sie dürfen nur Sichtprüfungen unter Aufsicht durchführen\n- Mitarbeiter mit abgelaufener Qualifikation (z. B. letzte Prüftätigkeit vor mehr als 12 Monaten)\n- Der Betreiber selbst, wenn er keine Elektrofachkraft ist"
+      }
+    ]
+  },
+  "wie-lange-muessen-pruefprotokolle-der-elektropruefung-aufbewahrt-werden": {
+    "question": "Wie lange müssen Prüfprotokolle der Elektroprüfung aufbewahrt werden?",
+    "type": "wissen",
+    "sections": [
+      {
+        "heading": "Aufbewahrungsfristen",
+        "content": "- **Mindestens bis zur nächsten Prüfung**: Das aktuelle Protokoll muss jederzeit vorlegbar sein\n- **Empfohlen: Gesamte Nutzungsdauer des Geräts + 5 Jahre**: Für Haftungsfälle, die auch nach Jahren aufkommen können\n- **Bei Personenschaden**: Unbegrenzt – Regressforderungen der BG verjähren erst nach 30 Jahren\n- **Für ortsfeste Anlagen**: Mindestens 10 Jahre – so lange wie die Anlage betrieben wird"
+      },
+      {
+        "heading": "Praxistipp",
+        "content": "Bewahren Sie Prüfprotokolle digital auf – Papier vergilbt, wird verlegt oder ist bei einem Brand vernichtet. Ein Cloud-Backup sichert die Daten auch bei einem Bürobrand. Viele Prüfdienste bieten ein digitales Archiv im Kundenportal an, das auch nach Vertragsende lesbar bleibt – klären Sie die Exportmöglichkeit vorab."
+      }
+    ]
+  },
+  "wie-oft-muessen-elektrogeraete-auf-baustellen-geprueft-werden": {
+    "question": "Wie oft müssen Elektrogeräte auf Baustellen geprüft werden?",
+    "type": "wissen",
+    "sections": [
+      {
+        "heading": "Prüfintervalle auf Baustellen",
+        "content": "| Geräteart | Intervall |\n|---|---|\n| Ortsveränderliche Geräte (Bohrmaschine, Flex, Rüttler) | Alle 3 Monate |\n| Verlängerungskabel und Kabeltrommeln | Alle 3 Monate |\n| Baustromverteiler | Alle 6 Monate |\n| Schutzeinrichtungen (PRCD-S, RCDs) | Täglich Funktionstest, messtechnisch alle 3 Monate |\n\nBaustellen gelten als Bereiche mit erhöhter Gefährdung – die Prüfintervalle sind daher deutlich kürzer als in Büros."
+      },
+      {
+        "heading": "Praxistipp",
+        "content": "Führen Sie ein Baustellenprüfbuch: Jedes Gerät, das auf die Baustelle kommt, wird erfasst und erhält eine Prüfplakette. Geräte mit abgelaufener Prüfung dürfen nicht eingesetzt werden. Unterweisen Sie alle Mitarbeiter, defekte Geräte sofort zu melden und aus dem Verkehr zu ziehen."
+      }
+    ]
+  },
+  "wie-verwalte-ich-prueffristen-fuer-elektrogeraete-an-mehreren-standorten": {
+    "question": "Wie verwalte ich Prüffristen für Elektrogeräte an mehreren Standorten?",
+    "type": "wissen",
+    "sections": [
+      {
+        "heading": "Zentrale Fristenverwaltung in 4 Schritten",
+        "content": "1. **Gerätekataster anlegen**: Alle Geräte aller Standorte in einer Datenbank erfassen – mit Standort, Raum und Kostenstelle\n2. **Prüfintervalle zuweisen**: Je nach Gerätetyp und Einsatzort – automatisch durch die Software\n3. **Prüfdienstleister koordinieren**: Idealerweise ein Anbieter für alle Standorte mit einheitlichem Reporting\n4. **Dashboard einrichten**: Ampelansicht je Standort – wer ist fällig, wer ist überfällig?"
+      },
+      {
+        "heading": "Häufige Fehler bei Multistandort-Verwaltung",
+        "content": "- **Dezentrale Excel-Listen**: Jeder Standort führt eigene Listen – Übersicht geht verloren\n- **Kein verantwortlicher Ansprechpartner**: Pro Standort muss eine Person benannt sein, die Zugang gewährt und Befunde nachverfolgt\n- **Unterschiedliche Prüfdienste**: Verschiedene Anbieter liefern verschiedene Formate – das erschwert den Gesamtüberblick"
+      }
+    ]
+  },
+  "wie-werden-maschinen-und-produktionsanlagen-elektrisch-geprueft-din-en-60204": {
+    "question": "Wie werden Maschinen und Produktionsanlagen elektrisch geprüft (DIN EN 60204)?",
+    "type": "wissen",
+    "sections": [
+      {
+        "heading": "Prüfumfang nach DIN EN 60204-1",
+        "content": "1. **Sichtprüfung**: Kennzeichnung, Schutzleiter-Anschluss, Kabelführung, Schaltschrank-Zustand\n2. **Schutzleiterprüfung**: Durchgängigkeit aller Schutzleiterverbindungen\n3. **Isolationswiderstand**: Zwischen aktiven Leitern und Schutzleiter – Grenzwert abhängig von Spannung\n4. **Spannungsfestigkeit**: Bei neuen Maschinen oder nach wesentlicher Änderung\n5. **Funktionsprüfung**: Not-Aus, Schutztüren, Verriegelungen, Anlaufverhalten\n6. **EMV-relevante Maßnahmen**: Schirmung und Filterung (Sichtprüfung)"
+      },
+      {
+        "heading": "Praxistipp",
+        "content": "Maschinen haben oft komplexe Steuerungen mit Sicherheitsfunktionen (Not-Aus, Lichtvorhänge). Der Prüfer muss die Sicherheitsschaltung verstehen und testen – nicht nur die Elektrik messen. Beauftragen Sie einen Prüfdienst mit Erfahrung in Ihrer Maschinenart (CNC, Spritzguss, Verpackung etc.)."
+      }
+    ]
+  },
+  "woran-erkenne-ich-einen-qualifizierten-pruefdienstleister-fuer-elektropruefungen": {
+    "question": "Woran erkenne ich einen qualifizierten Prüfdienstleister für Elektroprüfungen?",
+    "type": "wissen",
+    "sections": [
+      {
+        "heading": "5 Qualitätsmerkmale",
+        "content": "1. **Transparente Qualifikation**: Der Anbieter zeigt Befähigungsnachweise seiner Prüfer nach TRBS 1203 – nicht nur eine Firmenurkunde\n2. **Kalibrierte Messtechnik**: Aktueller DAkkS-Kalibriernachweis für alle eingesetzten Messgeräte\n3. **Strukturierte Dokumentation**: Digitale Prüfprotokolle mit Messwerten, Fotos und klaren Befundkategorien\n4. **Branchenreferenzen**: Erfahrung mit Betrieben Ihrer Größe und Art\n5. **Haftpflichtversicherung**: Betriebshaftpflicht mit Deckung für Prüftätigkeiten"
+      },
+      {
+        "heading": "Warnsignale",
+        "content": "- Angebote per Kaltakquise mit angeblich dringender BG-Frist\n- Preise unter 1,50 € pro Gerät ohne Erklärung, wie die Qualität gesichert wird\n- Kein Prüfprotokoll-Muster auf Anfrage\n- Keine nachprüfbare Firmenadresse oder kein Impressum auf der Website"
+      }
+    ]
+  }
+}

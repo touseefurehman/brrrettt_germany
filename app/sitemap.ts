@@ -6,6 +6,7 @@ import {
   HUB_PATH,
   knowledgeItems,
   knowledgePath,
+  modifiedFor,
   MODIFIED_DATE,
   publishedCommercial,
 } from "@/lib/elektropruefung";
@@ -41,8 +42,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ["/dguv-v3-pruefung-kosten", 0.9, lastmod.static],
     // Elektroprüfung DGUV V3: nur veröffentlichte Phasen (PUBLISHED_PHASES in lib/elektropruefung.ts)
     [HUB_PATH, 0.8, MODIFIED_DATE],
-    ...publishedCommercial.map((c): [string, number, string] => [commercialPath(c), 0.7, MODIFIED_DATE]),
-    ...knowledgeItems.map((k): [string, number, string] => [knowledgePath(k), 0.6, MODIFIED_DATE]),
+    ...publishedCommercial.map((c): [string, number, string] => [commercialPath(c), 0.7, modifiedFor(c.slug)]),
+    ...knowledgeItems.map((k): [string, number, string] => [knowledgePath(k), 0.6, modifiedFor(k.slug)]),
     ...staedteseiten.map((p): [string, number, string] => [`/${p.slug}`, 0.8, lastmod.cities]),
     ["/leistungen", 0.8, lastmod.catalog],
     ["/externer-betreibermanager", 0.8, lastmod.audiences],

@@ -10,7 +10,7 @@ import {
   knowledgePath,
   metaDescriptionFor,
   metaTitleFor,
-  MODIFIED_DATE,
+  modifiedFor,
   otherKnowledgeInCategory,
   PUBLISHED_DATE,
   relatedCommercial,
@@ -45,7 +45,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       type: "article",
       publishedTime: PUBLISHED_DATE,
-      modifiedTime: MODIFIED_DATE,
+      modifiedTime: modifiedFor(item.slug),
     },
   };
 }

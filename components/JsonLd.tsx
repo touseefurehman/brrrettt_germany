@@ -145,6 +145,8 @@ export function editorialArticleSchema(a: {
   path: string;
   published: string;
   modified: string;
+  /** Volltext (articleBody), optional */
+  body?: string;
 }) {
   return {
     "@context": "https://schema.org",
@@ -155,6 +157,7 @@ export function editorialArticleSchema(a: {
     mainEntityOfPage: `${site.url}${a.path}`,
     datePublished: a.published,
     dateModified: a.modified,
+    ...(a.body && { articleBody: a.body }),
     inLanguage: "de-DE",
     image: `${site.url}/opengraph-image`,
     author: { "@type": "Organization", name: `Redaktion ${site.domain}`, url: `${site.url}/` },

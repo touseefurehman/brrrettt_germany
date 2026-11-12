@@ -964,3 +964,28 @@ img.person-photo {
 
 
 
+/* Zusatzabschnitte der Elektroprüfungsseiten (Listen aus Markdown) */
+.prose .qa-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0 0 26px;
+  padding-left: 22px;
+  color: var(--muted-foreground);
+  font-size: 14px;
+  line-height: 1.75;
+}
+.prose ul.qa-list {
+  list-style: disc;
+}
+.prose ol.qa-list {
+  list-style: decimal;
+}
+.prose .qa-list li::marker {
+  color: var(--primary);
+}
+.prose .qa-list strong,
+.prose .data-table strong {
+  color: var(--foreground);
+  font-weight: 600;
+}

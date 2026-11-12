@@ -2,6 +2,7 @@ import commercialData from "@/content/elektropruefung/elektropruefung-commercial
 import partnerData from "@/content/elektropruefung/elektropruefung-partners.json";
 import wissenData from "@/content/elektropruefung/elektropruefung-wissen.json";
 import seoTitleData from "@/content/elektropruefung/elektropruefung-seo-titles.json";
+import expansionData from "@/content/elektropruefung/elektropruefung-expansions.json";
 import { site } from "@/lib/site";
 
 // Elektroprüfung DGUV V3: Antwortseiten (kommerzielle Fragen) und Wissensseiten (informationelle Fragen).
@@ -16,6 +17,9 @@ export const PUBLISHED_PHASES: number[] = [1];
 /** Erst- und Änderungsdatum aller Seiten (Autorenbox, Article-Schema, Sitemap). Bei Textänderungen anpassen. */
 export const PUBLISHED_DATE = "2026-11-10";
 export const MODIFIED_DATE = "2026-11-10";
+
+/** Änderungsdatum der Seiten mit Zusatzabschnitten aus elektropruefung-expansions.json */
+export const EXPANSION_DATE = "2026-11-12";
 
 export const HUB_PATH = "/elektropruefung-dguv-v3";
 export const HUB_NAME = "Elektroprüfung DGUV V3";
@@ -203,4 +207,77 @@ export function legalBasisParts(text: string): ({ text: string; url?: undefined 
     .split(sourcePattern)
     .filter((part) => part !== "")
     .map((part) => (urls.has(part) ? { text: part, url: urls.get(part)! } : { text: part }));
+}
+
+// ---- Zusatzabschnitte -------------------------------------------------------------------------------------------
+// elektropruefung-expansions.json ergänzt einzelne Seiten um Abschnitte unterhalb der Einordnung der Redaktion.
+// Schlüssel sind Slug-Präfixe: Manche Seiten-Slugs sind länger als der Schlüssel, deshalb Treffer per startsWith
+// (bei mehreren Treffern gewinnt der längste Schlüssel). Inhalt ist einfaches Markdown: Absätze, „- “-Listen,
+// „1. “-Listen, Tabellen mit Kopfzeile und **fett**.
+
+export type ExpansionBlock =
+  | { type: "p"; text: string }
+  | { type: "ul" | "ol"; items: string[] }
+  | { type: "table"; head: string[]; rows: string[][] };
+
+export type ExpansionSection = { heading: string; content: string };
+
+const expansions = expansionData as Record<string, { question: string; type: string; sections: ExpansionSection[] }>;
+const expansionKeys = Object.keys(expansions).sort((a, b) => b.length - a.length);
+
+/** Zusatzabschnitte zur Seite, leer wenn es keine gibt */
+export function expansionFor(slug: string): ExpansionSection[] {
+  const key = expansionKeys.find((k) => slug.startsWith(k));
+  return key ? expansions[key].sections : [];
+}
+
+/** Änderungsdatum der Seite: später, wenn sie Zusatzabschnitte hat */
+export const modifiedFor = (slug: string) => (expansionFor(slug).length > 0 ? EXPANSION_DATE : MODIFIED_DATE);
+
+const cells = (line: string) =>
+  line
+    .trim()
+    .replace(/^\||\|$/g, "")
+    .split("|")
+    .map((c) => c.trim());
+
+export function parseExpansion(content: string): ExpansionBlock[] {
+  const blocks: ExpansionBlock[] = [];
+  for (const raw of content.split("\n")) {
+    const line = raw.trim();
+    const last = blocks[blocks.length - 1];
+    if (!line) {
+      blocks.push({ type: "p", text: "" }); // Trenner, wird unten entfernt
+    } else if (line.startsWith("|")) {
+      if (/^\|[\s|:-]+\|$/.test(line)) continue; // Trennzeile |---|---|
+      if (last?.type === "table") last.rows.push(cells(line));
+      else blocks.push({ type: "table", head: cells(line), rows: [] });
+    } else if (/^[-*] /.test(line)) {
+      const text = line.slice(2).trim();
+      if (last?.type === "ul") last.items.push(text);
+      else blocks.push({ type: "ul", items: [text] });
+    } else if (/^\d+\. /.test(line)) {
+      const text = line.replace(/^\d+\.\s+/, "");
+      if (last?.type === "ol") last.items.push(text);
+      else blocks.push({ type: "ol", items: [text] });
+    } else if (last?.type === "p" && last.text) {
+      last.text += ` ${line}`;
+    } else {
+      blocks.push({ type: "p", text: line });
+    }
+  }
+  return blocks.filter((b) => b.type !== "p" || b.text);
+}
+
+/** Klartext eines Abschnitts für das Schema (ohne Markdown-Zeichen) */
+export function expansionText(content: string): string {
+  const strip = (s: string) => s.replace(/\*\*/g, "");
+  const end = (s: string) => (/[.!?:]$/.test(s) ? s : `${s}.`);
+  return parseExpansion(content)
+    .map((b) => {
+      if (b.type === "p") return strip(b.text);
+      if (b.type === "table") return b.rows.map((r) => end(r.map((c, i) => `${b.head[i]}: ${strip(c)}`).join(", "))).join(" ");
+      return b.items.map((item) => end(strip(item))).join(" ");
+    })
+    .join(" ");
 }

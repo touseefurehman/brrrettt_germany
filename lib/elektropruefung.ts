@@ -1,6 +1,8 @@
 import commercialData from "@/content/elektropruefung/elektropruefung-commercial.json";
 import partnerData from "@/content/elektropruefung/elektropruefung-partners.json";
 import wissenData from "@/content/elektropruefung/elektropruefung-wissen.json";
+import seoTitleData from "@/content/elektropruefung/elektropruefung-seo-titles.json";
+import { site } from "@/lib/site";
 
 // Elektroprüfung DGUV V3: Antwortseiten (kommerzielle Fragen) und Wissensseiten (informationelle Fragen).
 // Die Texte kommen unverändert aus content/elektropruefung/*.json – hier nichts umformulieren.
@@ -18,6 +20,8 @@ export const MODIFIED_DATE = "2026-11-10";
 export const HUB_PATH = "/elektropruefung-dguv-v3";
 export const HUB_NAME = "Elektroprüfung DGUV V3";
 export const HUB_TITLE = "Elektroprüfung nach DGUV V3 – Anbieter, Kosten, Pflichten";
+/** Meta-Titel des Hubs (max. 65 Zeichen inkl. Marke); die H1 bleibt HUB_TITLE */
+export const HUB_META_TITLE = "Elektroprüfung DGUV V3: Anbieter & Kosten";
 
 /** "national" oder "city:<Stadt>", z. B. "city:Berlin" */
 export type PartnerSlot = "national" | `city:${string}`;
@@ -58,6 +62,32 @@ const partners = partnerData as Record<string, Partner>;
 
 /** Alle kommerziellen Fragen der veröffentlichten Phasen */
 export const publishedCommercial = commercialAll.filter((c) => PUBLISHED_PHASES.includes(c.phase));
+
+// ---- Meta-Titel und -Beschreibung -------------------------------------------------------------------------------
+// Suchmaschinen kürzen Titel ab ca. 65 Zeichen und Beschreibungen ab ca. 155 Zeichen. Die Fragen sind dafür meist zu
+// lang, deshalb gibt es je Seite einen kurzen SEO-Titel in elektropruefung-seo-titles.json (H1 bleibt die Frage).
+// Neue Seiten ohne Eintrag fallen auf die Frage zurück – bei Fragen über 65 Zeichen dort einen Eintrag ergänzen.
+
+const TITLE_MAX = 65;
+const DESCRIPTION_MAX = 155;
+const BRAND_SUFFIX = ` | ${site.domain}`;
+const seoTitles = seoTitleData as Record<string, string>;
+
+/** Meta-Titel: kurzer SEO-Titel (oder die Frage) mit Marke, wenn beides zusammen in 65 Zeichen passt. */
+export function metaTitleFor(item: { slug: string; question: string }): string {
+  const base = seoTitles[item.slug] ?? item.question;
+  return base.length + BRAND_SUFFIX.length <= TITLE_MAX ? `${base}${BRAND_SUFFIX}` : base;
+}
+
+/** Meta-Beschreibung: Kurzantwort, bei Bedarf am Satz- oder Wortende gekürzt (nie mitten im Wort). */
+export function metaDescriptionFor(item: { shortAnswer: string }): string {
+  const text = item.shortAnswer.trim();
+  if (text.length <= DESCRIPTION_MAX) return text;
+  const cut = text.slice(0, DESCRIPTION_MAX);
+  const sentenceEnd = cut.lastIndexOf(". ");
+  if (sentenceEnd >= 80) return cut.slice(0, sentenceEnd + 1);
+  return `${cut.slice(0, cut.lastIndexOf(" ")).replace(/[,;:–-]\s*$/, "")} …`;
+}
 
 export const commercialPath = (c: CommercialItem) => `${HUB_PATH}/${c.slug}`;
 export const knowledgePath = (k: KnowledgeItem) => `/wissen/elektropruefung/${k.slug}`;

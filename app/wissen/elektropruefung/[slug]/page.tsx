@@ -8,12 +8,13 @@ import {
   knowledgeBySlug,
   knowledgeItems,
   knowledgePath,
+  metaDescriptionFor,
+  metaTitleFor,
   MODIFIED_DATE,
   otherKnowledgeInCategory,
   PUBLISHED_DATE,
   relatedCommercial,
 } from "@/lib/elektropruefung";
-import { site } from "@/lib/site";
 
 // Wissensseiten Elektroprüfung (informationelle Fragen) – alle veröffentlicht, ohne Partnerbox.
 type Props = { params: Promise<{ slug: string }> };
@@ -24,9 +25,9 @@ export function generateStaticParams() {
   return knowledgeItems.map((k) => ({ slug: k.slug }));
 }
 
-const metaFor = (k: { question: string; shortAnswer: string }) => ({
-  title: `${k.question} | ${site.domain}`,
-  description: k.shortAnswer.slice(0, 155),
+const metaFor = (k: { slug: string; question: string; shortAnswer: string }) => ({
+  title: metaTitleFor(k),
+  description: metaDescriptionFor(k),
 });
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

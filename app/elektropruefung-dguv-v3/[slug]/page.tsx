@@ -7,6 +7,8 @@ import {
   HUB_NAME,
   HUB_PATH,
   knowledgePath,
+  metaDescriptionFor,
+  metaTitleFor,
   MODIFIED_DATE,
   partnerFor,
   PUBLISHED_DATE,
@@ -28,14 +30,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const item = commercialBySlug((await params).slug);
   if (!item) return {};
   const path = commercialPath(item);
+  const title = metaTitleFor(item);
+  const description = metaDescriptionFor(item);
   return {
-    title: { absolute: item.metaTitle },
-    description: item.metaDescription,
+    title: { absolute: title },
+    description,
     alternates: { canonical: path },
     openGraph: {
       url: path,
-      title: item.metaTitle,
-      description: item.metaDescription,
+      title,
+      description,
       type: "article",
       publishedTime: PUBLISHED_DATE,
       modifiedTime: MODIFIED_DATE,
@@ -57,7 +61,7 @@ export default async function ElektroAnswerPage({ params }: Props) {
         [item.question, path],
       ]}
       kicker={`ELEKTROPRÜFUNG · ${item.category.toUpperCase()}`}
-      description={item.metaDescription}
+      description={metaDescriptionFor(item)}
       partner={partnerFor(item.partnerSlot)}
     >
       <QaLinks

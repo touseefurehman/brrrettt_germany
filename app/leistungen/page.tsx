@@ -7,7 +7,7 @@ import { katalogLeistungen, katalogSlug, leistungskatalog } from "@/lib/leistung
 
 const path = "/leistungen";
 const title = "Leistungen: Prüfung, Wartung und Betreiberpflichten im Überblick";
-const description = `${katalogLeistungen.length} Prüf-, Wartungs- und Betreiberleistungen von DGUV V3 über Brandschutz, Aufzüge und RLT bis CAFM – koordiniert über qualifizierte Fachbetriebe, bundesweit für mehrere Standorte.`;
+const description = `${katalogLeistungen.length} Prüf-, Wartungs- und Betreiberleistungen von DGUV V3 über Brandschutz, Aufzüge und RLT bis CAFM – koordiniert über Fachbetriebe, bundesweit.`;
 const lead =
   "Prüfungen, Wartungen und Beauftragte für alle Gewerke Ihrer Gebäude – betreibermanager.de beauftragt qualifizierte Fachbetriebe, überwacht die Fristen und führt die Nachweise an einer Stelle zusammen.";
 

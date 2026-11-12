@@ -144,7 +144,7 @@ export const areas: Area[] = [
     cardText:
       "Haupt- und Zwischenprüfung durch eine zugelassene Überwachungsstelle, üblicherweise im Wechsel alle zwölf Monate.",
     norm: "BetrSichV · ZÜS",
-    title: "Aufzugsprüfung durch ZÜS koordinieren",
+    title: "Aufzugsanlagen: Prüfung durch ZÜS koordinieren",
     description:
       "Haupt- und Zwischenprüfung Ihrer Aufzugsanlagen durch zugelassene Überwachungsstellen – Termine, Fristen und Dokumentation aus einer Hand.",
     h1: "Aufzugsprüfung durch die ZÜS: Haupt- und Zwischenprüfung koordinieren",

@@ -7,6 +7,7 @@ import {
   groupByCategory,
   HUB_NAME,
   HUB_PATH,
+  HUB_META_TITLE,
   HUB_TITLE,
   knowledgeItems,
   knowledgePath,
@@ -17,7 +18,7 @@ import { site } from "@/lib/site";
 // Hub der Elektroprüfung-DGUV-V3-Fragen. Welche Antwortseiten erscheinen, steuert PUBLISHED_PHASES in
 // lib/elektropruefung.ts; die Wissensseiten sind immer vollständig verlinkt.
 
-const title = `${HUB_TITLE} | ${site.domain}`;
+const title = `${HUB_META_TITLE} | ${site.domain}`;
 const description =
   "Expertenantworten zur Elektroprüfung nach DGUV V3: Anbieter auswählen, Kosten einschätzen, Pflichten kennen – mit Rechtsgrundlagen für Einkauf und FM-Leitung.";
 

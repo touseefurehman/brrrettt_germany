@@ -10,16 +10,19 @@ import { site } from "@/lib/site";
 
 /**
  * Veröffentlichte Phasen der kommerziellen Fragen. Nur diese Fragen bekommen eine Seite und erscheinen im Hub
- * und in der Sitemap. Nächste Stufe: [1, 2], dann [1, 2, 3] … – keine weitere Codeänderung nötig.
+ * und in der Sitemap. Seit 2026-11-13 sind alle Phasen live; zum Zurücknehmen einzelner Phasen hier entfernen.
  */
-export const PUBLISHED_PHASES: number[] = [1];
+export const PUBLISHED_PHASES: number[] = [1, 2, 3, 4];
 
 /** Erst- und Änderungsdatum aller Seiten (Autorenbox, Article-Schema, Sitemap). Bei Textänderungen anpassen. */
 export const PUBLISHED_DATE = "2026-11-10";
 export const MODIFIED_DATE = "2026-11-10";
 
-/** Änderungsdatum der Seiten mit Zusatzabschnitten aus elektropruefung-expansions.json */
-export const EXPANSION_DATE = "2026-11-12";
+/**
+ * Freischaltung aller Phasen: Änderungsdatum des Hubs, der Seiten aus Phase 2–4 und der Seiten mit
+ * Zusatzabschnitten aus elektropruefung-expansions.json.
+ */
+export const RELEASE_DATE = "2026-11-13";
 
 export const HUB_PATH = "/elektropruefung-dguv-v3";
 export const HUB_NAME = "Elektroprüfung DGUV V3";
@@ -231,8 +234,12 @@ export function expansionFor(slug: string): ExpansionSection[] {
   return key ? expansions[key].sections : [];
 }
 
-/** Änderungsdatum der Seite: später, wenn sie Zusatzabschnitte hat */
-export const modifiedFor = (slug: string) => (expansionFor(slug).length > 0 ? EXPANSION_DATE : MODIFIED_DATE);
+/** Änderungsdatum der Seite: RELEASE_DATE für Seiten mit Zusatzabschnitten und kommerzielle Seiten aus Phase 2–4 */
+export function modifiedFor(slug: string): string {
+  if (expansionFor(slug).length > 0) return RELEASE_DATE;
+  const phase = commercialAll.find((c) => c.slug === slug)?.phase;
+  return phase !== undefined && phase > 1 ? RELEASE_DATE : MODIFIED_DATE;
+}
 
 const cells = (line: string) =>
   line

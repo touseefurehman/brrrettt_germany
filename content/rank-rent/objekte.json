@@ -1,0 +1,22 @@
+[
+  {
+    "slug": "schulen",
+    "name": "Schulen",
+    "h1": "Prüfpflichten für Schulen im Überblick",
+    "intro": "[BEISPIELTEXT – Platzhalter] Schulträger und Schulleitungen müssen Anlagen und Arbeitsmittel regelmäßig prüfen lassen. Diese Seite bündelt die Prüfpflichten für Schulgebäude nach Prüfbereich.",
+    "audience": "Schulträger, Schulleitungen, Hausmeister- und Gebäudemanagement",
+    "metaTitle": "Prüfpflichten für Schulen | betreibermanager.de",
+    "metaDescription": "[Beispieltext] Prüfpflichten für Schulen: DGUV V3, Brandschutz und weitere Prüfungen mit Rechtsgrundlagen und Angebotsanfrage.",
+    "faq": [
+      {
+        "question": "[Beispiel] Wer ist bei Schulen für die Prüfungen verantwortlich?",
+        "answer": "[Beispieltext – Platzhalter] Verantwortlich ist der Betreiber, in der Regel der Schulträger. Aufgaben können vertraglich übertragen werden."
+      },
+      {
+        "question": "[Beispiel] Wie finde ich einen geeigneten Prüfbetrieb?",
+        "answer": "[Beispieltext – Platzhalter] Über das Anfrageformular auf der jeweiligen Prüfbereichsseite können Sie Ihr Objekt beschreiben."
+      }
+    ],
+    "status": "draft"
+  }
+]

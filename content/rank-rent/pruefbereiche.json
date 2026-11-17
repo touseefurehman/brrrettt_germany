@@ -1,0 +1,72 @@
+[
+  {
+    "slug": "dguv-v3",
+    "name": "DGUV V3 Prüfung",
+    "legalBasis": ["DGUV Vorschrift 3", "BetrSichV", "TRBS 1203"],
+    "defaultIntervals": "[Beispiel – Platzhalter] Fristen richten sich nach Gefährdungsbeurteilung und Anlagenart.",
+    "formFields": [
+      {
+        "name": "geraeteanzahl",
+        "label": "Anzahl ortsveränderlicher Geräte",
+        "type": "select",
+        "options": ["unter 100", "100–500", "über 500"],
+        "required": true
+      },
+      {
+        "name": "ortsfeste_anlagen",
+        "label": "Ortsfeste Anlagen vorhanden?",
+        "type": "select",
+        "options": ["Ja", "Nein"],
+        "required": true
+      },
+      { "name": "wunschtermin", "label": "Wunschtermin", "type": "date", "required": false }
+    ]
+  },
+  {
+    "slug": "brandschutz",
+    "name": "Brandschutzprüfung",
+    "legalBasis": ["ASR A2.2", "DIN 14675", "ArbSchG"],
+    "defaultIntervals": "[Beispiel – Platzhalter] Fristen richten sich nach Anlagenart, Herstellerangaben und Vorgaben des Bauordnungsrechts.",
+    "formFields": [
+      {
+        "name": "anlagenart",
+        "label": "Art der Anlagen",
+        "type": "multiselect",
+        "options": ["Feuerlöscher", "Brandmeldeanlage (BMA)", "Rauch- und Wärmeabzug (RWA)", "Brandschutztüren"],
+        "required": true
+      },
+      { "name": "standorte", "label": "Anzahl Standorte", "type": "number", "required": true },
+      { "name": "letzte_pruefung", "label": "Letzte Prüfung bekannt (Datum)", "type": "date", "required": false }
+    ]
+  },
+  {
+    "slug": "legionellen",
+    "name": "Legionellenprüfung",
+    "legalBasis": ["TrinkwV"],
+    "defaultIntervals": "[Platzhalter – noch nicht ausgearbeitet]",
+    "formFields": [
+      { "name": "objektart", "label": "Objektart", "type": "text", "required": true },
+      { "name": "zapfstellen", "label": "Anzahl Zapfstellen", "type": "number", "required": true }
+    ]
+  },
+  {
+    "slug": "vdi-6022",
+    "name": "Hygieneprüfung Lüftung (VDI 6022)",
+    "legalBasis": ["VDI 6022"],
+    "defaultIntervals": "[Platzhalter – noch nicht ausgearbeitet]",
+    "formFields": [
+      { "name": "objektart", "label": "Objektart", "type": "text", "required": true },
+      { "name": "rlt_anlagen", "label": "Anzahl RLT-Anlagen", "type": "number", "required": true }
+    ]
+  },
+  {
+    "slug": "regal-uvv-tore",
+    "name": "Regal-, UVV- und Torprüfung",
+    "legalBasis": ["DIN EN 15635", "ASR A1.7", "DGUV V52", "BetrSichV"],
+    "defaultIntervals": "[Platzhalter – noch nicht ausgearbeitet]",
+    "formFields": [
+      { "name": "anlagen", "label": "Zu prüfende Anlagen", "type": "text", "required": true },
+      { "name": "stueckzahl", "label": "Stückzahl", "type": "number", "required": true }
+    ]
+  }
+]

@@ -1,0 +1,67 @@
+[
+  {
+    "id": 1,
+    "objekt": "schulen",
+    "pruefbereich": "dguv-v3",
+    "slug": "dguv-v3-pruefung",
+    "h1": "DGUV V3 Prüfung für Schulen",
+    "shortAnswer": "[BEISPIELTEXT – Platzhalter] Elektrische Anlagen und Betriebsmittel in Schulen müssen regelmäßig durch eine Elektrofachkraft geprüft werden. Die Fristen legt der Betreiber anhand einer Gefährdungsbeurteilung fest.",
+    "heroText": "[BEISPIELTEXT – Platzhalter] Dieser Text ist ein Muster, damit das Template geprüft werden kann. Der echte Inhalt folgt nach der Scoring-Analyse.",
+    "sections": [
+      {
+        "heading": "[Beispiel] Was muss in Schulen geprüft werden?",
+        "content": "[Beispieltext – Platzhalter]\n\n- Ortsveränderliche Geräte, z. B. in Verwaltung und Werkräumen\n- Ortsfeste elektrische Anlagen\n- **Besondere Bereiche**, z. B. Fachräume und Küchen"
+      },
+      {
+        "heading": "[Beispiel] Richtwerte für Prüffristen",
+        "content": "| Anlagenart | Richtfrist |\n| --- | --- |\n| [Platzhalter] Geräte Verwaltung | [Platzhalter] |\n| [Platzhalter] Geräte Werkraum | [Platzhalter] |"
+      }
+    ],
+    "faq": [
+      { "question": "[Beispiel] Wer darf nach DGUV V3 prüfen?", "answer": "[Beispieltext – Platzhalter] Elektrofachkräfte bzw. unter deren Leitung befähigte Personen." },
+      { "question": "[Beispiel] Wie oft muss geprüft werden?", "answer": "[Beispieltext – Platzhalter] Das richtet sich nach der Gefährdungsbeurteilung." },
+      { "question": "[Beispiel] Wer trägt die Verantwortung?", "answer": "[Beispieltext – Platzhalter] Der Betreiber, bei Schulen meist der Schulträger." },
+      { "question": "[Beispiel] Was kostet die Prüfung?", "answer": "[Beispieltext – Platzhalter] Das hängt von Umfang und Anzahl der Geräte ab." }
+    ],
+    "legalBasis": "DGUV Vorschrift 3, BetrSichV, TRBS 1203",
+    "costRange": { "text": "[Platzhalter – Kostenspanne folgt]", "note": "[Beispieltext]" },
+    "metaTitle": "DGUV V3 Prüfung für Schulen | betreibermanager.de",
+    "metaDescription": "[Beispieltext] DGUV V3 Prüfung für Schulen: Pflichten, Fristen, Rechtsgrundlagen und Angebotsanfrage.",
+    "partnerSlotId": "schulen-dguv-v3",
+    "status": "draft",
+    "priorityScore": 0,
+    "trackingPrompts": ["[Beispiel] DGUV V3 Prüfung Schule Pflicht"],
+    "published": "2026-11-17",
+    "updated": "2026-11-17"
+  },
+  {
+    "id": 2,
+    "objekt": "schulen",
+    "pruefbereich": "brandschutz",
+    "slug": "brandschutzpruefung",
+    "h1": "Brandschutzprüfung für Schulen",
+    "shortAnswer": "[BEISPIELTEXT – Platzhalter] Brandschutzeinrichtungen in Schulen müssen regelmäßig geprüft und gewartet werden. Umfang und Fristen ergeben sich aus Anlagenart, Herstellerangaben und Brandschutzkonzept.",
+    "heroText": "[BEISPIELTEXT – Platzhalter] Dieser Text ist ein Muster, damit das Template geprüft werden kann. Der echte Inhalt folgt nach der Scoring-Analyse.",
+    "sections": [
+      {
+        "heading": "[Beispiel] Welche Brandschutzeinrichtungen sind betroffen?",
+        "content": "[Beispieltext – Platzhalter]\n\n1. Feuerlöscher\n2. Brandmeldeanlage\n3. Rauch- und Wärmeabzug\n4. **Brandschutztüren**"
+      }
+    ],
+    "faq": [
+      { "question": "[Beispiel] Wer ist für den Brandschutz verantwortlich?", "answer": "[Beispieltext – Platzhalter] Der Betreiber." },
+      { "question": "[Beispiel] Wie oft werden Feuerlöscher geprüft?", "answer": "[Beispieltext – Platzhalter] Das hängt vom Gerät ab." },
+      { "question": "[Beispiel] Was gehört in ein Brandschutzbuch?", "answer": "[Beispieltext – Platzhalter] Nachweise zu Prüfungen und Mängeln." },
+      { "question": "[Beispiel] Wer darf prüfen?", "answer": "[Beispieltext – Platzhalter] Sachkundige Personen bzw. Fachfirmen." }
+    ],
+    "legalBasis": "ASR A2.2, DIN 14675, ArbSchG",
+    "metaTitle": "Brandschutzprüfung für Schulen | betreibermanager.de",
+    "metaDescription": "[Beispieltext] Brandschutzprüfung für Schulen: Pflichten, Rechtsgrundlagen und Angebotsanfrage.",
+    "partnerSlotId": "schulen-brandschutz",
+    "status": "draft",
+    "priorityScore": 0,
+    "trackingPrompts": [],
+    "published": "2026-11-17",
+    "updated": "2026-11-17"
+  }
+]

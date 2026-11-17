@@ -10,6 +10,7 @@ import { leistungsseiten } from "@/lib/leistungsseiten";
 // Prüfungs-Leistungsseiten; Betreiberpflichten und Betreiberverantwortung stehen in der Spalte daneben
 const inspections = leistungsseiten.filter((p) => !["betreiberpflichten", "betreiberverantwortung"].includes(p.slug));
 import EmailLink from "./EmailLink";
+import { hasPublishedObjects } from "@/lib/rank-rent";
 import { fullCompanyName, hasAddress, hasPhone, phoneLink, site } from "@/lib/site";
 
 export default function SiteFooter() {
@@ -72,6 +73,8 @@ export default function SiteFooter() {
           <strong>Unternehmen</strong>
           <Link href="/wissen">Wissen</Link>
           <Link href="/prueffristen">Prüffristen</Link>
+          {hasPublishedObjects && <Link href="/pruefpflichten">Prüfpflichten nach Objekt</Link>}
+          <Link href="/fuer-pruefpartner">Für Prüfpartner</Link>
           <Link href="/ueber-uns">Über uns</Link>
           <Link href="/kontakt">Kontakt</Link>
           <Link href="/impressum">Impressum</Link>

@@ -11,6 +11,15 @@ import {
   RELEASE_DATE,
 } from "@/lib/elektropruefung";
 import { audiences } from "@/lib/leistungen";
+import {
+  BASE_PATH as RR_BASE,
+  hasPublishedObjects,
+  landingPath as rrLandingPath,
+  objektPath as rrObjektPath,
+  PARTNER_PAGE_PATH,
+  publishedLandingpages,
+  publishedObjekte,
+} from "@/lib/rank-rent";
 import { leistungsseiten } from "@/lib/leistungsseiten";
 import { hasAddress, site } from "@/lib/site";
 import { staedteseiten } from "@/lib/staedteseiten";
@@ -52,6 +61,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...areas
       .filter((a) => !isMovedArea(a.slug))
       .map((a): [string, number, string] => [`/pruefbereiche/${a.slug}`, 0.6, lastmod.areas]),
+    // Rank & Rent: nur veröffentlichte Objekte und Landingpages (Entwürfe nie)
+    ...(hasPublishedObjects ? ([[RR_BASE, 0.7, lastmod.static]] as [string, number, string][]) : []),
+    ...publishedObjekte.map((o): [string, number, string] => [rrObjektPath(o), 0.7, lastmod.static]),
+    ...publishedLandingpages.map((l): [string, number, string] => [rrLandingPath(l), 0.7, l.updated]),
+    [PARTNER_PAGE_PATH, 0.4, "2026-11-17"],
     ["/wissen", 0.7, newest],
     ...articles.map((a): [string, number, string] => [`/wissen/${a.slug}`, 0.6, a.modified]),
     ...authors.map((a): [string, number, string] => [authorPath(a), 0.5, lastmod.about]),

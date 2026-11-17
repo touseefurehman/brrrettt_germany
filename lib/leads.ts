@@ -3,11 +3,10 @@ import { bereichBySlug, leadRecipient, landingFor, landingPath, objektBySlug, pr
 import type { FormField } from "@/lib/rank-rent";
 import { site } from "@/lib/site";
 
-// Serverseitige Lead-Verarbeitung für Rank & Rent: Validierung, Spam-Schutz, E-Mail (Resend per REST),
+// Serverseitige Lead-Verarbeitung für Rank & Rent: Validierung, Spam-Schutz, E-Mail (Web3Forms per REST),
 // Speicherung (Upstash Redis per REST). Keine zusätzlichen Pakete – nur fetch.
 //
-// Umgebungsvariablen: RESEND_API_KEY, LEAD_FROM_EMAIL, LEAD_FALLBACK_EMAIL, LEAD_ADMIN_EMAIL,
-// KV_REST_API_URL + KV_REST_API_TOKEN (oder UPSTASH_REDIS_REST_URL + UPSTASH_REDIS_REST_TOKEN).
+// Umgebungsvariablen (alle optional): WEB3FORMS_ACCESS_KEY, WEB3FORMS_PRO, KV_REST_API_URL + KV_REST_API_TOKEN (oder UPSTASH_REDIS_REST_URL + UPSTASH_REDIS_REST_TOKEN).
 // LEAD_DRY_RUN=1 schreibt die E-Mail in die Server-Konsole, statt sie zu senden (nur für lokale Tests).
 
 export type Json = Record<string, unknown>;
@@ -64,36 +63,44 @@ async function allow(bucket: string, ip: string, limit: number): Promise<boolean
   return hit.count <= limit;
 }
 
-// ---- E-Mail (Resend) --------------------------------------------------------------------------------------------
+// ---- E-Mail (Web3Forms) -----------------------------------------------------------------------------------------
+// Web3Forms stellt an das Postfach zu, mit dem der Access Key registriert ist. Es gibt kein BCC und kein Routing
+// pro Empfänger: Der Partner-Empfänger steht deshalb oben in der Mail ("Weiterleiten an …"). Nur mit Pro-Tarif
+// (WEB3FORMS_PRO=1) wird er zusätzlich als `ccemail` mitgegeben und bekommt die Mail direkt.
 
-export type Mail = { from: string; to: string[]; bcc?: string[]; reply_to?: string; subject: string; text: string };
+export type Mail = { cc?: string; reply_to?: string; subject: string; text: string };
+
+// Derselbe Access Key wie im Kontaktformular (components/ContactForm.tsx); per WEB3FORMS_ACCESS_KEY überschreibbar
+const accessKey = () => process.env.WEB3FORMS_ACCESS_KEY?.trim() || "faef2fdb-f4c6-40c8-ac8c-a551a003e1b6";
 
 async function sendMail(mail: Mail): Promise<{ ok: boolean; dry?: boolean }> {
+  const payload = {
+    access_key: accessKey(),
+    subject: mail.subject,
+    from_name: site.domain,
+    botcheck: false,
+    ...(mail.reply_to && { replyto: mail.reply_to }),
+    ...(mail.cc && process.env.WEB3FORMS_PRO === "1" && { ccemail: mail.cc }),
+    message: mail.text,
+  };
   if (process.env.LEAD_DRY_RUN === "1") {
-    console.log(`[rank-rent:dry-run] E-Mail\n${JSON.stringify(mail, null, 2)}`);
+    console.log(`[rank-rent:dry-run] Web3Forms\n${JSON.stringify({ ...payload, access_key: "***" }, null, 2)}`);
     return { ok: true, dry: true };
   }
-  const key = process.env.RESEND_API_KEY;
-  if (!key) {
-    console.error("[rank-rent] RESEND_API_KEY fehlt – E-Mail nicht gesendet");
-    return { ok: false };
-  }
   try {
-    const res = await fetch("https://api.resend.com/emails", {
+    const res = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
-      headers: { Authorization: `Bearer ${key}`, "Content-Type": "application/json" },
-      body: JSON.stringify(mail),
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify(payload),
     });
-    if (!res.ok) console.error("[rank-rent] Resend-Fehler", res.status, await res.text().catch(() => ""));
-    return { ok: res.ok };
+    const result = (await res.json().catch(() => ({}))) as { success?: boolean; message?: string };
+    if (!res.ok || !result.success) console.error("[rank-rent] Web3Forms-Fehler", res.status, result.message);
+    return { ok: res.ok && Boolean(result.success) };
   } catch (err) {
-    console.error("[rank-rent] Resend nicht erreichbar:", err instanceof Error ? err.message : err);
+    console.error("[rank-rent] Web3Forms nicht erreichbar:", err instanceof Error ? err.message : err);
     return { ok: false };
   }
 }
-
-const fromAddress = () => process.env.LEAD_FROM_EMAIL?.trim() || `${site.domain} <leads@${site.domain}>`;
-const adminAddress = () => process.env.LEAD_ADMIN_EMAIL?.trim() || null;
 
 // ---- Speicher ---------------------------------------------------------------------------------------------------
 
@@ -174,15 +181,14 @@ export async function handleLead(body: Json, ip: string): Promise<Result> {
   }
 
   const { to, partner } = leadRecipient(landing.partnerSlotId);
-  if (!to) {
-    console.error("[rank-rent] Kein Empfänger: weder aktiver Partner noch LEAD_FALLBACK_EMAIL");
-    return fail(500, "Die Anfrage kann derzeit nicht zugestellt werden. Bitte schreiben Sie uns direkt per E-Mail.");
-  }
 
   const consentAt = new Date().toISOString();
   const url = `${site.url}${landingPath(landing)}`;
-  const admin = adminAddress();
   const lines = [
+    to
+      ? `WEITERLEITEN AN PARTNER: ${partner?.name} <${to}>`
+      : "KEIN PARTNER GEMIETET – Anfrage selbst bearbeiten oder vermitteln (Fallback)",
+    "",
     `Neue Anfrage über ${site.domain}`,
     "",
     `Seite: ${url}`,
@@ -201,9 +207,7 @@ export async function handleLead(body: Json, ip: string): Promise<Result> {
     `Einwilligung zur Weiterleitung an einen Prüfbetrieb: ${consentAt}`,
   ];
   const mail: Mail = {
-    from: fromAddress(),
-    to: [to],
-    ...(admin && admin.toLowerCase() !== to.toLowerCase() && { bcc: [admin] }),
+    ...(to && { cc: to }),
     reply_to: email,
     subject: oneLine(`Anfrage ${bereich.name} – ${objekt.name} – ${firma}${partner ? "" : " [Fallback]"}`).slice(0, 200),
     text: lines.join("\n"),
@@ -217,7 +221,7 @@ export async function handleLead(body: Json, ip: string): Promise<Result> {
     page: landingPath(landing),
     partnerSlotId: landing.partnerSlotId,
     routedTo: partner ? "partner" : "fallback",
-    recipient: to,
+    recipient: to ?? "web3forms-inbox",
     emailStatus: sent.ok ? (sent.dry ? "dry-run" : "sent") : "failed",
     fields: { firma, name, email, telefon, plz, nachricht, ...Object.fromEntries(extra) },
   });
@@ -245,15 +249,8 @@ export async function handlePartnerRequest(body: Json, ip: string): Promise<Resu
   if (!telefon) return fail(400, "Bitte geben Sie Ihre Telefonnummer an.");
   if (body.consent !== true) return fail(400, "Bitte stimmen Sie der Verarbeitung Ihrer Angaben zu.");
 
-  const admin = adminAddress();
-  if (!admin) {
-    console.error("[rank-rent] LEAD_ADMIN_EMAIL fehlt – Partneranfrage nicht zustellbar");
-    return fail(500, "Die Anfrage kann derzeit nicht zugestellt werden. Bitte schreiben Sie uns direkt per E-Mail.");
-  }
   const consentAt = new Date().toISOString();
   const mail: Mail = {
-    from: fromAddress(),
-    to: [admin],
     reply_to: email,
     subject: oneLine(`Partneranfrage ${bereich.name} – ${firma}`).slice(0, 200),
     text: [

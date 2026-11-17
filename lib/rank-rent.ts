@@ -181,11 +181,11 @@ export function activePartner(slotId: string): Partner | null {
   return { ...p, ctaUrl: p.ctaUrl && isHttpUrl(p.ctaUrl) ? p.ctaUrl : undefined };
 }
 
-/** Wohin eine Anfrage geht: gemieteter Slot → Partner-E-Mail, sonst Fallback aus der Umgebung */
+/** Wohin eine Anfrage geht: gemieteter Slot → Partner-E-Mail; sonst null (Anfrage bleibt im Web3Forms-Postfach) */
 export function leadRecipient(slotId: string): { to: string | null; partner: Partner | null } {
   const partner = activePartner(slotId);
   if (partner && partner.leadEmail.trim()) return { to: partner.leadEmail.trim(), partner };
-  return { to: process.env.LEAD_FALLBACK_EMAIL?.trim() || null, partner: null };
+  return { to: null, partner: null };
 }
 
 // ---- Verwandte Seiten -------------------------------------------------------------------------------------------

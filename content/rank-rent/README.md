@@ -48,17 +48,20 @@ In `partners.json` unter der `partnerSlotId` eintragen und `active: true` setzen
 zeigt die Seite die neutrale Box (Modus A) mit dem Hinweis auf `/fuer-pruefpartner`, Anfragen gehen an `LEAD_FALLBACK_EMAIL`.
 Deaktivieren: `active: false`.
 
-## Umgebungsvariablen (Vercel → Settings → Environment Variables)
+## E-Mail-Versand und Umgebungsvariablen
+
+Versand über **Web3Forms** (derselbe Access Key wie das Kontaktformular). Alle Anfragen kommen im Postfach des Keys an.
+Web3Forms kennt kein BCC und kein Routing: Oben in der Mail steht „WEITERLEITEN AN PARTNER: …“ (Slot gemietet) bzw.
+„KEIN PARTNER GEMIETET“. Mit Web3Forms-Pro (`WEB3FORMS_PRO=1`) geht die Mail zusätzlich direkt als CC an den Partner.
 
 | Variable | Zweck |
 | --- | --- |
-| `RESEND_API_KEY` | API-Key von Resend (E-Mail-Versand per REST, kein Paket) |
-| `LEAD_FROM_EMAIL` | Absender, z. B. `betreibermanager.de <leads@betreibermanager.de>` (Domain bei Resend verifizieren) |
-| `LEAD_FALLBACK_EMAIL` | Empfänger für Anfragen nicht gemieteter Slots |
-| `LEAD_ADMIN_EMAIL` | BCC jeder Anfrage und Empfänger der Partneranfragen |
-| `KV_REST_API_URL`, `KV_REST_API_TOKEN` (oder `UPSTASH_REDIS_REST_URL`, `UPSTASH_REDIS_REST_TOKEN`) | Upstash Redis (Vercel Marketplace): Lead-Speicher und Rate-Limit. Ohne sie bleibt die BCC-Mail das Archiv. |
+| `WEB3FORMS_ACCESS_KEY` | optional; Standard ist der Key aus `components/ContactForm.tsx` |
+| `WEB3FORMS_PRO` | optional, `1` nur mit Pro-Tarif: Partner-Adresse als `ccemail` |
+| `KV_REST_API_URL`, `KV_REST_API_TOKEN` (oder `UPSTASH_REDIS_REST_URL`, `UPSTASH_REDIS_REST_TOKEN`) | optional: Upstash Redis (Vercel Marketplace) für Lead-Speicher und Rate-Limit. Ohne sie ist die Mail das Archiv. |
 
-Lokal testen: `LEAD_DRY_RUN=1` schreibt die E-Mail in die Server-Konsole statt sie zu senden.
+Lokal testen: `LEAD_DRY_RUN=1` schreibt die Anfrage in die Server-Konsole statt sie zu senden.
+Hinweis: Web3Forms erlaubt Server-seitige Aufrufe ggf. nur in bezahlten Tarifen. Schlägt der Versand fehl, zeigt das Formular eine Fehlermeldung.
 
 Leads liegen in Redis als Listen `rankrent:leads` und `rankrent:partner-requests` (JSON je Eintrag, inkl. Einwilligungs-Zeitstempel).
 Spam-Schutz: Honeypot, Mindestausfüllzeit 3 s, 5 Anfragen pro Stunde und IP.

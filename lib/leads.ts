@@ -2,12 +2,13 @@ import { createHash, randomUUID } from "node:crypto";
 import { bereichBySlug, leadRecipient, landingFor, landingPath, objektBySlug, pruefbereiche } from "@/lib/rank-rent";
 import type { FormField } from "@/lib/rank-rent";
 import { site } from "@/lib/site";
+import type { Web3FormsPayload } from "@/lib/web3forms";
 
-// Serverseitige Lead-Verarbeitung für Rank & Rent: Validierung, Spam-Schutz, E-Mail (Web3Forms per REST),
+// Serverseitige Lead-Verarbeitung für Rank & Rent: Validierung, Spam-Schutz, Aufbau der E-Mail (Versand per Web3Forms im Browser),
 // Speicherung (Upstash Redis per REST). Keine zusätzlichen Pakete – nur fetch.
 //
-// Umgebungsvariablen (alle optional): WEB3FORMS_ACCESS_KEY, WEB3FORMS_PRO, KV_REST_API_URL + KV_REST_API_TOKEN (oder UPSTASH_REDIS_REST_URL + UPSTASH_REDIS_REST_TOKEN).
-// LEAD_DRY_RUN=1 schreibt die E-Mail in die Server-Konsole, statt sie zu senden (nur für lokale Tests).
+// Umgebungsvariablen (alle optional): WEB3FORMS_PRO, KV_REST_API_URL + KV_REST_API_TOKEN (oder UPSTASH_REDIS_REST_URL + UPSTASH_REDIS_REST_TOKEN).
+// LEAD_DRY_RUN=1 schreibt die E-Mail in die Server-Konsole und gibt keine Nachricht zum Senden zurück (nur lokal).
 
 export type Json = Record<string, unknown>;
 
@@ -19,7 +20,7 @@ const oneLine = (v: string) => v.replace(/[\r\n]+/g, " ").trim();
 const EMAIL_RE = /^[^\s@<>()"]+@[^\s@<>()"]+\.[A-Za-z]{2,}$/;
 const MIN_FILL_MS = 3000;
 
-export type Result = { ok: true; dry?: boolean; silent?: boolean } | { ok: false; status: number; message: string };
+export type Result = { ok: true; dry?: boolean; silent?: boolean; mail?: Web3FormsPayload } | { ok: false; status: number; message: string };
 const fail = (status: number, message: string): Result => ({ ok: false, status, message });
 
 // ---- Rate-Limit -------------------------------------------------------------------------------------------------
@@ -64,42 +65,31 @@ async function allow(bucket: string, ip: string, limit: number): Promise<boolean
 }
 
 // ---- E-Mail (Web3Forms) -----------------------------------------------------------------------------------------
-// Web3Forms stellt an das Postfach zu, mit dem der Access Key registriert ist. Es gibt kein BCC und kein Routing
-// pro Empfänger: Der Partner-Empfänger steht deshalb oben in der Mail ("Weiterleiten an …"). Nur mit Pro-Tarif
-// (WEB3FORMS_PRO=1) wird er zusätzlich als `ccemail` mitgegeben und bekommt die Mail direkt.
+// Der Server prüft, begrenzt und speichert – den Versand übernimmt der Browser (lib/web3forms.ts), weil Web3Forms im
+// kostenlosen Tarif keine serverseitigen Anfragen annimmt. Die Route liefert dazu die fertige Nachricht zurück.
+// Web3Forms stellt an das Postfach des Access Keys zu; der Partner-Empfänger steht oben in der Mail
+// ("Weiterleiten an …"). Nur mit Pro-Tarif (WEB3FORMS_PRO=1) wird er zusätzlich als `ccemail` mitgegeben.
 
 export type Mail = { cc?: string; reply_to?: string; subject: string; text: string };
 
-// Derselbe Access Key wie im Kontaktformular (components/ContactForm.tsx); per WEB3FORMS_ACCESS_KEY überschreibbar
-const accessKey = () => process.env.WEB3FORMS_ACCESS_KEY?.trim() || "faef2fdb-f4c6-40c8-ac8c-a551a003e1b6";
-
-async function sendMail(mail: Mail): Promise<{ ok: boolean; dry?: boolean }> {
-  const payload = {
-    access_key: accessKey(),
+function toPayload(mail: Mail): Web3FormsPayload {
+  return {
     subject: mail.subject,
     from_name: site.domain,
-    botcheck: false,
     ...(mail.reply_to && { replyto: mail.reply_to }),
     ...(mail.cc && process.env.WEB3FORMS_PRO === "1" && { ccemail: mail.cc }),
     message: mail.text,
   };
+}
+
+/** Ergebnis für den Client: entweder Fehler oder die zu sendende Nachricht (bei Spam/Dry-Run ohne Nachricht) */
+function ready(mail: Mail): Result {
+  const payload = toPayload(mail);
   if (process.env.LEAD_DRY_RUN === "1") {
-    console.log(`[rank-rent:dry-run] Web3Forms\n${JSON.stringify({ ...payload, access_key: "***" }, null, 2)}`);
+    console.log(`[rank-rent:dry-run] Web3Forms\n${JSON.stringify(payload, null, 2)}`);
     return { ok: true, dry: true };
   }
-  try {
-    const res = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: { "Content-Type": "application/json", Accept: "application/json" },
-      body: JSON.stringify(payload),
-    });
-    const result = (await res.json().catch(() => ({}))) as { success?: boolean; message?: string };
-    if (!res.ok || !result.success) console.error("[rank-rent] Web3Forms-Fehler", res.status, result.message);
-    return { ok: res.ok && Boolean(result.success) };
-  } catch (err) {
-    console.error("[rank-rent] Web3Forms nicht erreichbar:", err instanceof Error ? err.message : err);
-    return { ok: false };
-  }
+  return { ok: true, mail: payload };
 }
 
 // ---- Speicher ---------------------------------------------------------------------------------------------------
@@ -213,7 +203,6 @@ export async function handleLead(body: Json, ip: string): Promise<Result> {
     text: lines.join("\n"),
   };
 
-  const sent = await sendMail(mail);
   await store("leads", {
     id: randomUUID(),
     createdAt: consentAt,
@@ -222,11 +211,10 @@ export async function handleLead(body: Json, ip: string): Promise<Result> {
     partnerSlotId: landing.partnerSlotId,
     routedTo: partner ? "partner" : "fallback",
     recipient: to ?? "web3forms-inbox",
-    emailStatus: sent.ok ? (sent.dry ? "dry-run" : "sent") : "failed",
+    emailStatus: process.env.LEAD_DRY_RUN === "1" ? "dry-run" : "client-web3forms",
     fields: { firma, name, email, telefon, plz, nachricht, ...Object.fromEntries(extra) },
   });
-  if (!sent.ok) return fail(502, "Die Anfrage konnte nicht zugestellt werden. Bitte versuchen Sie es später erneut.");
-  return { ok: true, dry: sent.dry };
+  return ready(mail);
 }
 
 // ---- Anfrage von Prüfbetrieben (Verfügbarkeit) ------------------------------------------------------------------
@@ -266,14 +254,12 @@ export async function handlePartnerRequest(body: Json, ip: string): Promise<Resu
       `Einwilligung: ${consentAt}`,
     ].join("\n"),
   };
-  const sent = await sendMail(mail);
   await store("partner-requests", {
     id: randomUUID(),
     createdAt: consentAt,
     consentAt,
-    emailStatus: sent.ok ? (sent.dry ? "dry-run" : "sent") : "failed",
+    emailStatus: process.env.LEAD_DRY_RUN === "1" ? "dry-run" : "client-web3forms",
     fields: { firma, ansprechpartner, pruefbereich: bereich.slug, einsatzgebiet, email, telefon },
   });
-  if (!sent.ok) return fail(502, "Die Anfrage konnte nicht zugestellt werden. Bitte versuchen Sie es später erneut.");
-  return { ok: true, dry: sent.dry };
+  return ready(mail);
 }

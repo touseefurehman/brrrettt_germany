@@ -2,10 +2,12 @@
 
 import { useRef, useState, type FormEvent } from "react";
 import Link from "next/link";
+import { sendViaWeb3Forms, type Web3FormsPayload } from "@/lib/web3forms";
+import { site } from "@/lib/site";
 
 type Status = "idle" | "sending" | "done" | "error";
 
-/** Verfügbarkeitsanfrage für Prüfbetriebe; geht über /api/partner-anfrage an LEAD_ADMIN_EMAIL. */
+/** Verfügbarkeitsanfrage für Prüfbetriebe; Prüfung über /api/partner-anfrage, Versand per Web3Forms. */
 export default function PartnerApplyForm({ bereiche }: { bereiche: { slug: string; name: string }[] }) {
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState("");
@@ -32,8 +34,10 @@ export default function PartnerApplyForm({ bereiche }: { bereiche: { slug: strin
           elapsed: Date.now() - startedAt.current,
         }),
       });
-      const result = (await res.json().catch(() => ({}))) as { ok?: boolean; message?: string };
+      const result = (await res.json().catch(() => ({}))) as { ok?: boolean; message?: string; mail?: Web3FormsPayload };
       if (!res.ok || !result.ok) throw new Error(result.message || "Die Anfrage konnte nicht gesendet werden.");
+      // Versand per Web3Forms aus dem Browser (kostenloser Tarif nimmt keine Server-Anfragen an)
+      if (result.mail) await sendViaWeb3Forms(result.mail, site.email);
       setStatus("done");
     } catch (err) {
       setError(err instanceof Error ? err.message : "Die Anfrage konnte nicht gesendet werden.");

@@ -9,11 +9,10 @@ import { track } from "@/lib/analytics";
 import EmailLink from "./EmailLink";
 import CatalogSelect from "./CatalogSelect";
 import { hasPhone, phoneLink, site } from "@/lib/site";
+import { sendViaWeb3Forms } from "@/lib/web3forms";
 
 type Status = "idle" | "sending" | "error";
 
-// Versand ausschließlich über Web3Forms (web3forms.com); Zustellung an die E-Mail-Adresse dieses Access Keys
-const WEB3FORMS_ACCESS_KEY = "faef2fdb-f4c6-40c8-ac8c-a551a003e1b6";
 
 /**
  * Formular „Bestandsaufnahme anfragen“ (Lastenheft L-01 bis L-06).
@@ -39,16 +38,13 @@ export default function ContactForm({ source, catalog = false }: { source: strin
       return;
     }
     try {
-      const res = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify({
-          access_key: WEB3FORMS_ACCESS_KEY,
+      // Versand per Web3Forms (lib/web3forms.ts); `email` setzt Web3Forms automatisch als Antwortadresse
+      await sendViaWeb3Forms(
+        {
           subject: `Bestandsaufnahme angefragt – ${(data.organisation ?? "").trim()} (${data.standorte} Standorte)${
             data.leistung ? ` – ${data.leistung}` : ""
           }`,
-          from_name: "betreibermanager.de",
-          botcheck: false,
+          from_name: site.domain,
           Organisation: data.organisation,
           Ansprechpartner: data.name,
           email: data.email,
@@ -58,12 +54,9 @@ export default function ContactForm({ source, catalog = false }: { source: strin
           Nachricht: data.message || "–",
           Seite: source,
           Einwilligung: "erteilt",
-        }),
-      });
-      const result = (await res.json().catch(() => ({}))) as { success?: boolean };
-      if (!res.ok || !result.success) {
-        throw new Error(`Der Versand ist fehlgeschlagen. Bitte schreiben Sie an ${site.email}.`);
-      }
+        },
+        site.email,
+      );
       track("generate_lead", { source_page: source, locations: Number(data.standorte) || 0 });
       router.push(`/anfrage-gesendet?quelle=${encodeURIComponent(source)}`);
     } catch (err) {

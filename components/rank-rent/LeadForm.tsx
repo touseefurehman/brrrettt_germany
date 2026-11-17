@@ -2,12 +2,14 @@
 
 import { useRef, useState, type FormEvent } from "react";
 import Link from "next/link";
+import { sendViaWeb3Forms, type Web3FormsPayload } from "@/lib/web3forms";
+import { site } from "@/lib/site";
 import { track } from "@/lib/analytics";
 import type { FormField } from "@/lib/rank-rent";
 
 type Status = "idle" | "sending" | "done" | "error";
 
-/** Themenspezifisches Anfrageformular: Basisfelder + `fields` aus pruefbereiche.json. Versand über /api/leads. */
+/** Themenspezifisches Anfrageformular: Basisfelder + `fields` aus pruefbereiche.json. Prüfung über /api/leads, Versand per Web3Forms. */
 export default function LeadForm({
   objekt,
   seite,
@@ -58,8 +60,10 @@ export default function LeadForm({
           extra,
         }),
       });
-      const result = (await res.json().catch(() => ({}))) as { ok?: boolean; message?: string };
+      const result = (await res.json().catch(() => ({}))) as { ok?: boolean; message?: string; mail?: Web3FormsPayload };
       if (!res.ok || !result.ok) throw new Error(result.message || "Die Anfrage konnte nicht gesendet werden.");
+      // Versand per Web3Forms aus dem Browser (kostenloser Tarif nimmt keine Server-Anfragen an)
+      if (result.mail) await sendViaWeb3Forms(result.mail, site.email);
       track("generate_lead", { source_page: `${objekt}/${seite}`, topic });
       setStatus("done");
     } catch (err) {

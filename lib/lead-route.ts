@@ -16,6 +16,6 @@ export async function leadResponse(req: Request, handler: (body: Json, ip: strin
   }
   const ip = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || req.headers.get("x-real-ip") || "unknown";
   const result = await handler(body as Json, ip);
-  if (result.ok) return NextResponse.json({ ok: true });
+  if (result.ok) return NextResponse.json({ ok: true, ...(result.mail && { mail: result.mail }) });
   return NextResponse.json({ ok: false, message: result.message }, { status: result.status });
 }

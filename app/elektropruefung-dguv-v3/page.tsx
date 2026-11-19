@@ -15,7 +15,7 @@ import {
   publishedCommercial,
 } from "@/lib/elektropruefung";
 import { site } from "@/lib/site";
-import { latestReport } from "@/lib/sov";
+import { ARTICLE_BASE, articlePath, hasPublishedArticles, latestReport, publishedArticles } from "@/lib/sov";
 
 // Hub der Elektroprüfung-DGUV-V3-Fragen. Welche Antwortseiten erscheinen, steuert PUBLISHED_PHASES in
 // lib/elektropruefung.ts; die Wissensseiten sind immer vollständig verlinkt.
@@ -74,6 +74,24 @@ export default function ElektropruefungHub() {
       <section className="section page-width section-tight">
         <ReportTeaser label={`Neu: ${latestReport.shortTitle}`} />
       </section>
+
+      {hasPublishedArticles && (
+        <section className="section page-width section-tight">
+          <aside className="sov-teaser">
+            <span className="short-answer-label">Fachbeiträge</span>
+            <Link href={ARTICLE_BASE}>
+              <strong>Fachbeiträge der Redaktion</strong>
+            </Link>
+            <ul className="qa-list">
+              {publishedArticles.slice(0, 4).map((a) => (
+                <li key={a.slug}>
+                  <Link href={articlePath(a)}>{a.title}</Link>
+                </li>
+              ))}
+            </ul>
+          </aside>
+        </section>
+      )}
 
       <section className="section page-width section-tight">
         {commercialGroups.map(([category, items]) => (

@@ -2,7 +2,7 @@
   {
     "slug": "pauschale-jahrespruefung-dguv-v3",
     "type": "kontraer",
-    "status": "draft",
+    "status": "published",
     "title": "Warum die pauschale Jahresprüfung nach DGUV V3 oft die falsche Frist ist",
     "angle": "Viele Betriebe prüfen alle Geräte jährlich, weil sie es so kennen. Rechtlich bestimmt die Gefährdungsbeurteilung (BetrSichV § 3, § 14) die Prüffrist; die Richtwerte der DGUV Vorschrift 3 (Tabelle 1B) sind Orientierung, keine Pflichtfrist. Folge: Büros prüfen oft zu häufig, Baustellen und Werkstätten oft zu selten.",
     "legalBasis": [
@@ -60,7 +60,7 @@
     ],
     "datePublished": "2026-11-19",
     "author": "Redaktion betreibermanager.de",
-    "reviewedBy": null,
+    "reviewedBy": "Redaktion betreibermanager.de",
     "lastReviewed": "2026-11-19",
     "legalStatus": "BetrSichV in der Fassung der Änderung vom 18.12.2025; TrinkwV vom 20.06.2023",
     "disclaimer": "Redaktionelle Fachinformation, keine Rechtsberatung. Maßgeblich ist der amtliche Text der genannten Vorschriften.",
@@ -69,7 +69,7 @@
   {
     "slug": "ladesaeulen-pruefpflicht",
     "type": "zukunft",
-    "status": "draft",
+    "status": "published",
     "title": "Ladesäulen auf dem Firmenparkplatz: Welche Prüfpflichten auf Betreiber zukommen",
     "angle": "Mit wachsender E-Flotte werden Wallboxen und Ladesäulen zu prüfpflichtigen Arbeitsmitteln bzw. Anlagen. Überblick über Prüfarten, Fristen und Zuständigkeiten.",
     "legalBasis": [
@@ -122,7 +122,7 @@
     ],
     "datePublished": "2026-11-19",
     "author": "Redaktion betreibermanager.de",
-    "reviewedBy": null,
+    "reviewedBy": "Redaktion betreibermanager.de",
     "lastReviewed": "2026-11-19",
     "legalStatus": "BetrSichV in der Fassung der Änderung vom 18.12.2025; TrinkwV vom 20.06.2023",
     "disclaimer": "Redaktionelle Fachinformation, keine Rechtsberatung. Maßgeblich ist der amtliche Text der genannten Vorschriften.",
@@ -131,7 +131,7 @@
   {
     "slug": "pruefplakette-ist-kein-nachweis",
     "type": "kontraer",
-    "status": "draft",
+    "status": "published",
     "title": "Die Prüfplakette ersetzt keine Prüfdokumentation – worauf es im Haftungsfall wirklich ankommt",
     "angle": "Im Schadensfall zählt die vollständige Dokumentation (Prüfprotokoll, Messwerte, Prüfer, Gefährdungsbeurteilung, Mängelverfolgung), nicht der Aufkleber am Gerät.",
     "legalBasis": [
@@ -189,7 +189,7 @@
     ],
     "datePublished": "2026-11-19",
     "author": "Redaktion betreibermanager.de",
-    "reviewedBy": null,
+    "reviewedBy": "Redaktion betreibermanager.de",
     "lastReviewed": "2026-11-19",
     "legalStatus": "BetrSichV in der Fassung der Änderung vom 18.12.2025; TrinkwV vom 20.06.2023",
     "disclaimer": "Redaktionelle Fachinformation, keine Rechtsberatung. Maßgeblich ist der amtliche Text der genannten Vorschriften.",
@@ -198,7 +198,7 @@
   {
     "slug": "digitale-pruefdokumentation",
     "type": "zukunft",
-    "status": "draft",
+    "status": "published",
     "title": "Vom Papierprotokoll zur digitalen Prüfakte: Was rechtlich zulässig ist und was sich ändert",
     "angle": "Digitale Prüfnachweise sind zulässig, wenn sie vollständig, unveränderbar und abrufbar sind. Was CAFM-Systeme, QR-Codes und Kundenportale leisten müssen.",
     "legalBasis": [
@@ -250,7 +250,7 @@
     ],
     "datePublished": "2026-11-19",
     "author": "Redaktion betreibermanager.de",
-    "reviewedBy": null,
+    "reviewedBy": "Redaktion betreibermanager.de",
     "lastReviewed": "2026-11-19",
     "legalStatus": "BetrSichV in der Fassung der Änderung vom 18.12.2025; TrinkwV vom 20.06.2023",
     "disclaimer": "Redaktionelle Fachinformation, keine Rechtsberatung. Maßgeblich ist der amtliche Text der genannten Vorschriften.",
@@ -259,7 +259,7 @@
   {
     "slug": "betreiberverantwortung-nicht-delegierbar",
     "type": "kontraer",
-    "status": "draft",
+    "status": "published",
     "title": "Externer Prüfdienst beauftragt – und trotzdem haftbar: Warum Betreiberverantwortung nicht vollständig delegierbar ist",
     "angle": "Aufgaben lassen sich übertragen, die Organisations- und Kontrollpflicht des Betreibers bleibt. Was eine wirksame Pflichtenübertragung braucht und wo die Grenzen liegen.",
     "legalBasis": [
@@ -314,7 +314,7 @@
     ],
     "datePublished": "2026-11-19",
     "author": "Redaktion betreibermanager.de",
-    "reviewedBy": null,
+    "reviewedBy": "Redaktion betreibermanager.de",
     "lastReviewed": "2026-11-19",
     "legalStatus": "BetrSichV in der Fassung der Änderung vom 18.12.2025; TrinkwV vom 20.06.2023",
     "disclaimer": "Redaktionelle Fachinformation, keine Rechtsberatung. Maßgeblich ist der amtliche Text der genannten Vorschriften.",
@@ -323,7 +323,7 @@
   {
     "slug": "trinkwasserverordnung-betreiber",
     "type": "zukunft",
-    "status": "draft",
+    "status": "published",
     "title": "Legionellen: Was die überarbeitete UBA-Empfehlung zur Risikoabschätzung für Betreiber bedeutet",
     "angle": "Die 2023 novellierte TrinkwV hat Pflichten und Fristen neu geordnet (z. B. risikobasierter Ansatz). Was sich für Vermieter, Kliniken und Gewerbe konkret ändert.",
     "legalBasis": [
@@ -376,7 +376,7 @@
     ],
     "datePublished": "2026-11-19",
     "author": "Redaktion betreibermanager.de",
-    "reviewedBy": null,
+    "reviewedBy": "Redaktion betreibermanager.de",
     "lastReviewed": "2026-11-19",
     "legalStatus": "BetrSichV in der Fassung der Änderung vom 18.12.2025; TrinkwV vom 20.06.2023",
     "disclaimer": "Redaktionelle Fachinformation, keine Rechtsberatung. Maßgeblich ist der amtliche Text der genannten Vorschriften.",
@@ -385,7 +385,7 @@
   {
     "slug": "guenstigster-pruefdienst-wird-teuer",
     "type": "kontraer",
-    "status": "draft",
+    "status": "published",
     "title": "Der günstigste Prüfdienst ist selten der günstigste – was Stückpreise verschweigen",
     "angle": "Angebote mit sehr niedrigem Stückpreis enthalten oft keine ortsfesten Anlagen, keine Mängelbehebung, keine Anfahrt oder keine digitale Dokumentation. Vergleich über Gesamtkosten pro Standort und Jahr statt Preis pro Gerät.",
     "legalBasis": [
@@ -437,7 +437,7 @@
     ],
     "datePublished": "2026-11-19",
     "author": "Redaktion betreibermanager.de",
-    "reviewedBy": null,
+    "reviewedBy": "Redaktion betreibermanager.de",
     "lastReviewed": "2026-11-19",
     "legalStatus": "BetrSichV in der Fassung der Änderung vom 18.12.2025; TrinkwV vom 20.06.2023",
     "disclaimer": "Redaktionelle Fachinformation, keine Rechtsberatung. Maßgeblich ist der amtliche Text der genannten Vorschriften.",
@@ -446,7 +446,7 @@
   {
     "slug": "fachkraeftemangel-pruefer",
     "type": "zukunft",
-    "status": "draft",
+    "status": "published",
     "title": "Fachkräftemangel bei Prüfern: Warum Prüftermine knapp werden und wie Betreiber vorsorgen",
     "angle": "Weniger Elektrofachkräfte, mehr Prüfpflichten: Rahmenverträge, frühe Terminplanung und zentrale Fristenverwaltung als Antwort.",
     "legalBasis": [
@@ -503,7 +503,7 @@
     ],
     "datePublished": "2026-11-19",
     "author": "Redaktion betreibermanager.de",
-    "reviewedBy": null,
+    "reviewedBy": "Redaktion betreibermanager.de",
     "lastReviewed": "2026-11-19",
     "legalStatus": "BetrSichV in der Fassung der Änderung vom 18.12.2025; TrinkwV vom 20.06.2023",
     "disclaimer": "Redaktionelle Fachinformation, keine Rechtsberatung. Maßgeblich ist der amtliche Text der genannten Vorschriften.",

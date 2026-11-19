@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
 import PartnerApplyForm from "@/components/rank-rent/PartnerApplyForm";
+import ReportTeaser from "@/components/sov/ReportTeaser";
 import { PageIntro } from "@/components/Subpage";
 import { PARTNER_PAGE_PATH, pruefbereiche } from "@/lib/rank-rent";
 import { site } from "@/lib/site";
@@ -69,6 +70,13 @@ export default function ForPartners() {
             </div>
           ))}
         </div>
+      </section>
+
+      <section className="section page-width section-tight">
+        <ReportTeaser
+          label="Unsere Daten zur KI-Sichtbarkeit"
+          text="Welche Prüfdienstleister ChatGPT, Perplexity und Gemini bei Fragen zur DGUV V3 nennen – und warum die Plätze in KI-Antworten noch nicht verteilt sind."
+        />
       </section>
 
       <section className="section page-width section-tight prose">

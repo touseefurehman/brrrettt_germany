@@ -1,0 +1,377 @@
+{
+  "title": "Welche Quellen empfiehlt die KI? Der DGUV-V3-Report 2026",
+  "period": "10.–11. November 2026",
+  "methodology": {
+    "engines": [
+      "ChatGPT",
+      "Perplexity",
+      "Gemini"
+    ],
+    "prompts": 30,
+    "runs": 122,
+    "citations": 811,
+    "uniqueDomains": 286,
+    "scoring": "Jede zitierte Quelle wird nach ihrer Position gewichtet: Score = 1 / Wurzel(Position). Share of Voice = Score einer Domain / Summe aller Scores.",
+    "promptSource": "Reale Einkaufsfragen von Facility Managern, Betreibern und Einkäufern zur Elektroprüfung nach DGUV Vorschrift 3, aus drei Kategorien: Anbieterempfehlung, Anbietervergleich & Auswahl sowie kurzfristiger Bedarf.",
+    "limitations": "Momentaufnahme: 30 Fragen, gemessen am 10. und 11. November 2026. KI-Antworten schwanken je nach Zeitpunkt, Formulierung und Nutzerkonto. Die Einteilung der Quellen in Typen erfolgte redaktionell anhand der Domain. Der Report wird mit weiteren Messläufen fortgeschrieben."
+  },
+  "keyFindings": {
+    "top10": [
+      {
+        "domain": "baua.de",
+        "citations": 29,
+        "shareOfVoice": 4.2,
+        "type": "Behörden, Unfallversicherung & Normung"
+      },
+      {
+        "domain": "dpg-gruppe.de",
+        "citations": 26,
+        "shareOfVoice": 4.0,
+        "type": "Prüfdienstleister & Fachbetriebe"
+      },
+      {
+        "domain": "dguv.de",
+        "citations": 23,
+        "shareOfVoice": 4.0,
+        "type": "Behörden, Unfallversicherung & Normung"
+      },
+      {
+        "domain": "esg-gesellschaft.de",
+        "citations": 24,
+        "shareOfVoice": 3.8,
+        "type": "Prüfdienstleister & Fachbetriebe"
+      },
+      {
+        "domain": "sfc-group.de",
+        "citations": 25,
+        "shareOfVoice": 3.2,
+        "type": "Prüfdienstleister & Fachbetriebe"
+      },
+      {
+        "domain": "piepenbrock.de",
+        "citations": 19,
+        "shareOfVoice": 3.0,
+        "type": "Prüfdienstleister & Fachbetriebe"
+      },
+      {
+        "domain": "oms-pruefservice.de",
+        "citations": 17,
+        "shareOfVoice": 2.8,
+        "type": "Prüfdienstleister & Fachbetriebe"
+      },
+      {
+        "domain": "abpruefservice.de",
+        "citations": 23,
+        "shareOfVoice": 2.7,
+        "type": "Prüfdienstleister & Fachbetriebe"
+      },
+      {
+        "domain": "gp-pruefservice.de",
+        "citations": 20,
+        "shareOfVoice": 2.7,
+        "type": "Prüfdienstleister & Fachbetriebe"
+      },
+      {
+        "domain": "e-service-check.de",
+        "citations": 22,
+        "shareOfVoice": 2.5,
+        "type": "Prüfdienstleister & Fachbetriebe"
+      }
+    ],
+    "top10ShareCombined": 33.0,
+    "maxSingleShare": 4.2,
+    "domainsCitedOnce": 154,
+    "sourceTypesOverall": {
+      "Prüfdienstleister & Fachbetriebe": 75.2,
+      "Behörden, Unfallversicherung & Normung": 13.4,
+      "TÜV, DEKRA & Prüforganisationen": 4.6,
+      "Bewertungsportale & Verzeichnisse": 3.5,
+      "Fachmedien, Ratgeber & Foren": 3.2
+    },
+    "firstPositionByType": {
+      "Prüfdienstleister & Fachbetriebe": 68.5,
+      "Behörden, Unfallversicherung & Normung": 18.9,
+      "TÜV, DEKRA & Prüforganisationen": 7.2,
+      "Bewertungsportale & Verzeichnisse": 2.7,
+      "Fachmedien, Ratgeber & Foren": 2.7
+    }
+  },
+  "byEngine": {
+    "ChatGPT": {
+      "runs": 32,
+      "citations": 129,
+      "avgSourcesPerAnswer": 4.0,
+      "top5": [
+        {
+          "domain": "dpg-gruppe.de",
+          "citations": 12,
+          "shareOfVoice": 12.9,
+          "type": "Prüfdienstleister & Fachbetriebe"
+        },
+        {
+          "domain": "dguv.de",
+          "citations": 11,
+          "shareOfVoice": 10.8,
+          "type": "Behörden, Unfallversicherung & Normung"
+        },
+        {
+          "domain": "devi-tec.de",
+          "citations": 10,
+          "shareOfVoice": 6.5,
+          "type": "Prüfdienstleister & Fachbetriebe"
+        },
+        {
+          "domain": "tuev-nord.de",
+          "citations": 5,
+          "shareOfVoice": 4.8,
+          "type": "TÜV, DEKRA & Prüforganisationen"
+        },
+        {
+          "domain": "baua.de",
+          "citations": 4,
+          "shareOfVoice": 3.8,
+          "type": "Behörden, Unfallversicherung & Normung"
+        }
+      ],
+      "sourceTypes": {
+        "Prüfdienstleister & Fachbetriebe": 73.1,
+        "Behörden, Unfallversicherung & Normung": 18.5,
+        "TÜV, DEKRA & Prüforganisationen": 7.8,
+        "Bewertungsportale & Verzeichnisse": 0.6
+      }
+    },
+    "Perplexity": {
+      "runs": 60,
+      "citations": 600,
+      "avgSourcesPerAnswer": 10.0,
+      "top5": [
+        {
+          "domain": "baua.de",
+          "citations": 25,
+          "shareOfVoice": 5.1,
+          "type": "Behörden, Unfallversicherung & Normung"
+        },
+        {
+          "domain": "piepenbrock.de",
+          "citations": 16,
+          "shareOfVoice": 3.8,
+          "type": "Prüfdienstleister & Fachbetriebe"
+        },
+        {
+          "domain": "sfc-group.de",
+          "citations": 18,
+          "shareOfVoice": 3.4,
+          "type": "Prüfdienstleister & Fachbetriebe"
+        },
+        {
+          "domain": "abpruefservice.de",
+          "citations": 19,
+          "shareOfVoice": 3.2,
+          "type": "Prüfdienstleister & Fachbetriebe"
+        },
+        {
+          "domain": "gp-pruefservice.de",
+          "citations": 15,
+          "shareOfVoice": 2.8,
+          "type": "Prüfdienstleister & Fachbetriebe"
+        }
+      ],
+      "sourceTypes": {
+        "Prüfdienstleister & Fachbetriebe": 76.0,
+        "Behörden, Unfallversicherung & Normung": 13.9,
+        "Bewertungsportale & Verzeichnisse": 5.0,
+        "Fachmedien, Ratgeber & Foren": 4.0,
+        "TÜV, DEKRA & Prüforganisationen": 1.1
+      }
+    },
+    "Gemini": {
+      "runs": 30,
+      "citations": 82,
+      "avgSourcesPerAnswer": 2.7,
+      "top5": [
+        {
+          "domain": "esg-gesellschaft.de",
+          "citations": 10,
+          "shareOfVoice": 13.3,
+          "type": "Prüfdienstleister & Fachbetriebe"
+        },
+        {
+          "domain": "tuev-sued.de",
+          "citations": 8,
+          "shareOfVoice": 11.1,
+          "type": "TÜV, DEKRA & Prüforganisationen"
+        },
+        {
+          "domain": "dekra.de",
+          "citations": 7,
+          "shareOfVoice": 7.5,
+          "type": "TÜV, DEKRA & Prüforganisationen"
+        },
+        {
+          "domain": "gp-pruefservice.de",
+          "citations": 4,
+          "shareOfVoice": 5.3,
+          "type": "Prüfdienstleister & Fachbetriebe"
+        },
+        {
+          "domain": "oms-pruefservice.de",
+          "citations": 3,
+          "shareOfVoice": 5.1,
+          "type": "Prüfdienstleister & Fachbetriebe"
+        }
+      ],
+      "sourceTypes": {
+        "Prüfdienstleister & Fachbetriebe": 74.0,
+        "TÜV, DEKRA & Prüforganisationen": 19.7,
+        "Fachmedien, Ratgeber & Foren": 3.8,
+        "Behörden, Unfallversicherung & Normung": 2.5
+      }
+    }
+  },
+  "byCategory": {
+    "Anbieterempfehlung": {
+      "prompts": 12,
+      "citations": 374,
+      "top3": [
+        {
+          "domain": "dpg-gruppe.de",
+          "citations": 21,
+          "shareOfVoice": 6.8,
+          "type": "Prüfdienstleister & Fachbetriebe"
+        },
+        {
+          "domain": "sfc-group.de",
+          "citations": 20,
+          "shareOfVoice": 5.5,
+          "type": "Prüfdienstleister & Fachbetriebe"
+        },
+        {
+          "domain": "gp-pruefservice.de",
+          "citations": 17,
+          "shareOfVoice": 5.0,
+          "type": "Prüfdienstleister & Fachbetriebe"
+        }
+      ],
+      "sourceTypes": {
+        "Prüfdienstleister & Fachbetriebe": 85.9,
+        "TÜV, DEKRA & Prüforganisationen": 5.9,
+        "Bewertungsportale & Verzeichnisse": 3.6,
+        "Fachmedien, Ratgeber & Foren": 2.8,
+        "Behörden, Unfallversicherung & Normung": 1.8
+      }
+    },
+    "Anbietervergleich & Auswahl": {
+      "prompts": 13,
+      "citations": 309,
+      "top3": [
+        {
+          "domain": "baua.de",
+          "citations": 29,
+          "shareOfVoice": 11.2,
+          "type": "Behörden, Unfallversicherung & Normung"
+        },
+        {
+          "domain": "dguv.de",
+          "citations": 21,
+          "shareOfVoice": 9.6,
+          "type": "Behörden, Unfallversicherung & Normung"
+        },
+        {
+          "domain": "esg-gesellschaft.de",
+          "citations": 8,
+          "shareOfVoice": 4.1,
+          "type": "Prüfdienstleister & Fachbetriebe"
+        }
+      ],
+      "sourceTypes": {
+        "Prüfdienstleister & Fachbetriebe": 58.7,
+        "Behörden, Unfallversicherung & Normung": 30.0,
+        "TÜV, DEKRA & Prüforganisationen": 4.5,
+        "Bewertungsportale & Verzeichnisse": 4.4,
+        "Fachmedien, Ratgeber & Foren": 2.5
+      }
+    },
+    "Kurzfristig & akut": {
+      "prompts": 5,
+      "citations": 128,
+      "top3": [
+        {
+          "domain": "dpg-gruppe.de",
+          "citations": 5,
+          "shareOfVoice": 5.5,
+          "type": "Prüfdienstleister & Fachbetriebe"
+        },
+        {
+          "domain": "famgmbh.de",
+          "citations": 4,
+          "shareOfVoice": 3.9,
+          "type": "Prüfdienstleister & Fachbetriebe"
+        },
+        {
+          "domain": "oms-pruefservice.de",
+          "citations": 3,
+          "shareOfVoice": 3.7,
+          "type": "Prüfdienstleister & Fachbetriebe"
+        }
+      ],
+      "sourceTypes": {
+        "Prüfdienstleister & Fachbetriebe": 83.5,
+        "Behörden, Unfallversicherung & Normung": 8.2,
+        "Fachmedien, Ratgeber & Foren": 6.1,
+        "Bewertungsportale & Verzeichnisse": 1.2,
+        "TÜV, DEKRA & Prüforganisationen": 1.0
+      }
+    }
+  },
+  "slug": "ki-report-dguv-v3-2026",
+  "metaTitle": "KI-Report DGUV V3 2026: Wen ChatGPT & Co. zitieren",
+  "metaDescription": "Welche Quellen nennen ChatGPT, Perplexity und Gemini bei Fragen zur Elektroprüfung nach DGUV V3? Auswertung von 811 KI-Zitationen aus 122 Antworten.",
+  "datePublished": "2026-11-19",
+  "shortAnswer": "Bei Fragen zur Elektroprüfung nach DGUV V3 zitieren ChatGPT, Perplexity und Gemini überwiegend Websites von Prüfdienstleistern (rund 75 % des gewichteten Zitationsanteils), gefolgt von Behörden und Unfallversicherung (rund 13 %). Der Markt ist stark zersplittert: Keine Quelle erreicht mehr als 4,2 % Share of Voice, die zehn meistzitierten Domains kommen zusammen nur auf 33 %.",
+  "findings": [
+    {
+      "heading": "1. Kein Anbieter dominiert die KI-Antworten",
+      "content": "In 122 KI-Antworten wurden 811 Quellen von 286 verschiedenen Domains genannt. Die meistzitierte Quelle, die Bundesanstalt für Arbeitsschutz und Arbeitsmedizin (baua.de), erreicht 4,2 % Share of Voice. Die zehn stärksten Domains kommen zusammen auf 33 %, und 154 Domains wurden nur ein einziges Mal genannt. Für Prüfdienstleister heißt das: Die Sichtbarkeit in KI-Antworten ist noch nicht verteilt."
+    },
+    {
+      "heading": "2. Drei von vier Zitationen gehen an Anbieter-Websites",
+      "content": "Rund 75 % des gewichteten Zitationsanteils entfallen auf Websites von Prüfdienstleistern und Fachbetrieben. Behörden, Unfallversicherung und Normung (z. B. DGUV, BAuA, VDE) kommen auf rund 13 %, TÜV, DEKRA und andere Prüforganisationen auf knapp 5 %. Unabhängige Fachmedien und Ratgeber spielen mit gut 3 % kaum eine Rolle, ebenso Bewertungsportale und Verzeichnisse (3,5 %)."
+    },
+    {
+      "heading": "3. Perplexity nennt die meisten Quellen, Gemini die wenigsten",
+      "content": "Perplexity führt im Schnitt 10 Quellen pro Antwort auf, ChatGPT 4 und Gemini 2,7. Wer in Gemini oder ChatGPT genannt werden will, konkurriert also um sehr wenige Plätze."
+    },
+    {
+      "heading": "4. Gemini vertraut TÜV und DEKRA deutlich stärker",
+      "content": "Bei Gemini entfällt rund ein Fünftel des Zitationsanteils (19,7 %) auf TÜV, DEKRA und andere Prüforganisationen, bei Perplexity nur gut 1 %. ChatGPT greift mit 18,5 % am häufigsten auf Behörden und Unfallversicherung zurück."
+    },
+    {
+      "heading": "5. Bei Vergleichsfragen zählen Rechtsquellen",
+      "content": "Fragen nach der Auswahl und dem Vergleich von Prüfdiensten beantworten die KI-Systeme deutlich häufiger mit amtlichen Quellen (30 % Anteil Behörden, Unfallversicherung und Normung). Bei direkten Anbieterempfehlungen dominieren dagegen Anbieter-Websites mit 86 %."
+    }
+  ],
+  "takeaways": [
+    "Prüfdienstleister sollten ihre Inhalte so aufbauen, dass die Antwort im ersten Absatz steht (Kurzantwort), mit klaren Rechtsquellen wie DGUV Vorschrift 3, BetrSichV und TRBS 1203.",
+    "Strukturierte Daten (FAQ-, Article- und Organisations-Schema) erleichtern es KI-Systemen, Inhalte korrekt zuzuordnen.",
+    "Weil Gemini und ChatGPT nur wenige Quellen nennen, entscheidet die Qualität einzelner Seiten, nicht die Masse.",
+    "Die Messung sollte regelmäßig wiederholt werden, da sich KI-Antworten laufend verändern."
+  ],
+  "faq": [
+    {
+      "question": "Was bedeutet Share of Voice in KI-Antworten?",
+      "answer": "Share of Voice beschreibt, welchen Anteil eine Quelle an allen Quellenangaben der KI-Antworten hat. In diesem Report wird jede Nennung nach ihrer Position gewichtet (1 geteilt durch die Wurzel der Position), damit eine Nennung an erster Stelle mehr zählt als eine weiter unten."
+    },
+    {
+      "question": "Welche KI-Systeme wurden untersucht?",
+      "answer": "ChatGPT, Perplexity und Gemini. Insgesamt wurden 30 Fragen in 122 Durchläufen gestellt, mit 811 erfassten Quellenangaben."
+    },
+    {
+      "question": "Wie oft wird der Report aktualisiert?",
+      "answer": "Der Report ist eine Momentaufnahme vom November 2026 und wird mit weiteren Messläufen fortgeschrieben."
+    },
+    {
+      "question": "Darf ich die Daten zitieren?",
+      "answer": "Ja, gerne mit Quellenangabe und Link auf betreibermanager.de."
+    }
+  ]
+}

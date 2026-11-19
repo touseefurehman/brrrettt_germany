@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
+import ReportTeaser from "@/components/sov/ReportTeaser";
 import { CtaBand, PageIntro } from "@/components/Subpage";
 import {
   commercialPath,
@@ -14,6 +15,7 @@ import {
   publishedCommercial,
 } from "@/lib/elektropruefung";
 import { site } from "@/lib/site";
+import { latestReport } from "@/lib/sov";
 
 // Hub der Elektroprüfung-DGUV-V3-Fragen. Welche Antwortseiten erscheinen, steuert PUBLISHED_PHASES in
 // lib/elektropruefung.ts; die Wissensseiten sind immer vollständig verlinkt.
@@ -68,6 +70,10 @@ export default function ElektropruefungHub() {
           <Link href="/dguv-v3-pruefung-kosten">DGUV V3 Prüfung Kosten</Link>
         </p>
       </PageIntro>
+
+      <section className="section page-width section-tight">
+        <ReportTeaser label={`Neu: ${latestReport.shortTitle}`} />
+      </section>
 
       <section className="section page-width section-tight">
         {commercialGroups.map(([category, items]) => (

@@ -1,0 +1,74 @@
+[
+  {
+    "slug": "pauschale-jahrespruefung-dguv-v3",
+    "type": "kontraer",
+    "status": "draft",
+    "title": "Warum die pauschale Jahresprüfung nach DGUV V3 oft die falsche Frist ist",
+    "angle": "Viele Betriebe prüfen alle Geräte jährlich, weil sie es so kennen. Rechtlich bestimmt die Gefährdungsbeurteilung (BetrSichV § 3, § 14) die Prüffrist; die Richtwerte der DGUV Vorschrift 3 (Tabelle 1B) sind Orientierung, keine Pflichtfrist. Folge: Büros prüfen oft zu häufig, Baustellen und Werkstätten oft zu selten.",
+    "legalBasis": ["BetrSichV § 3", "BetrSichV § 14", "DGUV Vorschrift 3 § 5", "TRBS 1201"],
+    "relatedPages": ["/elektropruefung-dguv-v3", "/dguv-v3-pruefung"]
+  },
+  {
+    "slug": "guenstigster-pruefdienst-wird-teuer",
+    "type": "kontraer",
+    "status": "draft",
+    "title": "Der günstigste Prüfdienst ist selten der günstigste – was Stückpreise verschweigen",
+    "angle": "Angebote mit sehr niedrigem Stückpreis enthalten oft keine ortsfesten Anlagen, keine Mängelbehebung, keine Anfahrt oder keine digitale Dokumentation. Vergleich über Gesamtkosten pro Standort und Jahr statt Preis pro Gerät.",
+    "legalBasis": ["DGUV Vorschrift 3", "TRBS 1203"],
+    "relatedPages": ["/elektropruefung-dguv-v3", "/dguv-v3-pruefung-kosten"]
+  },
+  {
+    "slug": "pruefplakette-ist-kein-nachweis",
+    "type": "kontraer",
+    "status": "draft",
+    "title": "Die Prüfplakette ist kein Nachweis – worauf es im Haftungsfall wirklich ankommt",
+    "angle": "Im Schadensfall zählt die vollständige Dokumentation (Prüfprotokoll, Messwerte, Prüfer, Gefährdungsbeurteilung, Mängelverfolgung), nicht der Aufkleber am Gerät.",
+    "legalBasis": ["BetrSichV § 14 Abs. 7", "DGUV Vorschrift 3", "DIN VDE 0701-0702"],
+    "relatedPages": ["/elektropruefung-dguv-v3"]
+  },
+  {
+    "slug": "betreiberverantwortung-nicht-delegierbar",
+    "type": "kontraer",
+    "status": "draft",
+    "title": "Externer Prüfdienst beauftragt – und trotzdem haftbar: Warum Betreiberverantwortung nicht vollständig delegierbar ist",
+    "angle": "Aufgaben lassen sich übertragen, die Organisations- und Kontrollpflicht des Betreibers bleibt. Was eine wirksame Pflichtenübertragung braucht und wo die Grenzen liegen.",
+    "legalBasis": ["ArbSchG § 13", "BetrSichV", "BGB § 823", "DGUV Vorschrift 1 § 13"],
+    "relatedPages": ["/betreiberverantwortung", "/externer-betreibermanager"]
+  },
+  {
+    "slug": "ladesaeulen-pruefpflicht",
+    "type": "zukunft",
+    "status": "draft",
+    "title": "Ladesäulen auf dem Firmenparkplatz: Welche Prüfpflichten auf Betreiber zukommen",
+    "angle": "Mit wachsender E-Flotte werden Wallboxen und Ladesäulen zu prüfpflichtigen Arbeitsmitteln bzw. Anlagen. Überblick über Prüfarten, Fristen und Zuständigkeiten.",
+    "legalBasis": ["DGUV Vorschrift 3", "BetrSichV", "DIN VDE 0100-722", "DIN VDE 0105-100"],
+    "relatedPages": ["/elektropruefung-dguv-v3"]
+  },
+  {
+    "slug": "digitale-pruefdokumentation",
+    "type": "zukunft",
+    "status": "draft",
+    "title": "Vom Papierprotokoll zur digitalen Prüfakte: Was rechtlich zulässig ist und was sich ändert",
+    "angle": "Digitale Prüfnachweise sind zulässig, wenn sie vollständig, unveränderbar und abrufbar sind. Was CAFM-Systeme, QR-Codes und Kundenportale leisten müssen.",
+    "legalBasis": ["BetrSichV § 14 Abs. 7", "TRBS 1201"],
+    "relatedPages": ["/elektropruefung-dguv-v3"]
+  },
+  {
+    "slug": "trinkwasserverordnung-betreiber",
+    "type": "zukunft",
+    "status": "draft",
+    "title": "Neue Trinkwasserverordnung: Was Betreiber bei der Legionellenprüfung jetzt beachten müssen",
+    "angle": "Die 2023 novellierte TrinkwV hat Pflichten und Fristen neu geordnet (z. B. risikobasierter Ansatz). Was sich für Vermieter, Kliniken und Gewerbe konkret ändert.",
+    "legalBasis": ["TrinkwV 2023", "DVGW W 551", "UBA-Empfehlungen"],
+    "relatedPages": ["/legionellenpruefung"]
+  },
+  {
+    "slug": "fachkraeftemangel-pruefer",
+    "type": "zukunft",
+    "status": "draft",
+    "title": "Fachkräftemangel bei Prüfern: Warum Prüftermine knapp werden und wie Betreiber vorsorgen",
+    "angle": "Weniger Elektrofachkräfte, mehr Prüfpflichten: Rahmenverträge, frühe Terminplanung und zentrale Fristenverwaltung als Antwort.",
+    "legalBasis": ["TRBS 1203", "DGUV Vorschrift 3"],
+    "relatedPages": ["/elektropruefung-dguv-v3", "/externer-betreibermanager"]
+  }
+]

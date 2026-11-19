@@ -224,6 +224,14 @@ export const legalSources: [term: string, url: string][] = [
   ["DIN EN 15635", "https://www.dinmedia.de"],
   ["DGUV V52", "https://publikationen.dguv.de"],
   ["DGUV Vorschrift 52", "https://publikationen.dguv.de"],
+  // Fachbeiträge (content/sov)
+  ["DGUV Vorschrift 1", "https://publikationen.dguv.de"],
+  ["TRBS 1201", "https://www.baua.de/DE/Angebote/Regelwerk/TRBS/TRBS-1201.html"],
+  ["DVGW W 551", "https://www.dvgw-regelwerk.de"],
+  ["DIN VDE 0100-722", "https://www.vde-verlag.de/normen"],
+  ["DIN VDE 0105-100", "https://www.vde-verlag.de/normen"],
+  ["DIN VDE 0701-0702", "https://www.vde-verlag.de/normen"],
+  ["UBA", "https://www.umweltbundesamt.de/themen/wasser/trinkwasser"],
 ];
 
 const escapeRe = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");

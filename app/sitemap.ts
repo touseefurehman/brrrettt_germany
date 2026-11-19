@@ -21,7 +21,7 @@ import {
   publishedObjekte,
 } from "@/lib/rank-rent";
 import { leistungsseiten } from "@/lib/leistungsseiten";
-import { articlePath, publishedArticles, REPORT_BASE, reportPath, reports } from "@/lib/sov";
+import { ARTICLE_BASE, articlePath, publishedArticles, REPORT_BASE, reportPath, reports } from "@/lib/sov";
 import { hasAddress, site } from "@/lib/site";
 import { staedteseiten } from "@/lib/staedteseiten";
 import { articles } from "@/lib/wissen";
@@ -70,6 +70,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Share-of-Voice-Inhalte: alle Reports; Fachbeiträge nur veröffentlichte (Entwürfe nie)
     [REPORT_BASE, 0.6, reports.reduce((max, r) => (r.datePublished > max ? r.datePublished : max), "")],
     ...reports.map((r): [string, number, string] => [reportPath(r), 0.8, r.datePublished]),
+    ...(publishedArticles.length > 0
+      ? ([[ARTICLE_BASE, 0.7, publishedArticles.reduce((max, a) => ((a.dateModified ?? a.datePublished) > max ? (a.dateModified ?? a.datePublished) : max), "")]] as [string, number, string][])
+      : []),
     ...publishedArticles.map((a): [string, number, string] => [articlePath(a), 0.7, a.dateModified ?? a.datePublished]),
     ["/wissen", 0.7, newest],
     ...articles.map((a): [string, number, string] => [`/wissen/${a.slug}`, 0.6, a.modified]),

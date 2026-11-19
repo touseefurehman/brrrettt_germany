@@ -35,6 +35,8 @@ Zum Veröffentlichen ergänzen:
 - `faq[]` – optional, `{ "question", "answer" }` (erzeugt FAQPage-Schema)
 - `metaTitle` (max. 65 Zeichen), `metaDescription`, `datePublished` (ISO), optional `dateModified`
 
+Außerdem (Fassung 2): `author`, `reviewedBy` (Name und Qualifikation der fachlich prüfenden Person – **Pflicht zur Veröffentlichung**, derzeit `null`), `lastReviewed`, `legalStatus`, `disclaimer`; `showPartnerCta` blendet die Prüfpartner-Box ein (Standard aus).
+
 Dann `status: "published"`. Der Build bricht ab, wenn ein veröffentlichter Beitrag Pflichtfelder vermissen lässt.
 Mit dem ersten veröffentlichten Beitrag werden `/fachbeitraege` (gruppiert nach `type`: `kontraer` / `zukunft`),
 der Footer-Link und der Sitemap-Eintrag automatisch aktiv.

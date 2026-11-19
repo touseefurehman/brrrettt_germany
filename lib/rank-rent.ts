@@ -226,6 +226,7 @@ export const legalSources: [term: string, url: string][] = [
   ["DGUV Vorschrift 52", "https://publikationen.dguv.de"],
   // Fachbeiträge (content/sov)
   ["DGUV Vorschrift 1", "https://publikationen.dguv.de"],
+  ["DGUV Information 203-071", "https://publikationen.dguv.de"],
   ["TRBS 1201", "https://www.baua.de/DE/Angebote/Regelwerk/TRBS/TRBS-1201.html"],
   ["DVGW W 551", "https://www.dvgw-regelwerk.de"],
   ["DIN VDE 0100-722", "https://www.vde-verlag.de/normen"],

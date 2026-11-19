@@ -107,6 +107,15 @@ export type Article = {
   metaDescription?: string;
   datePublished?: string;
   dateModified?: string;
+  /** Redaktionelle Angaben (Fassung 2) */
+  author?: string;
+  /** Name und Qualifikation der fachlich prüfenden Person; null = noch offen */
+  reviewedBy?: string | null;
+  lastReviewed?: string;
+  legalStatus?: string;
+  disclaimer?: string;
+  /** Hinweis-Box für Prüfpartner; Standard: aus */
+  showPartnerCta?: boolean;
 };
 
 /** Veröffentlichter (oder in der Vorschau angezeigter) Beitrag mit vollständigen Pflichtfeldern */
@@ -133,6 +142,7 @@ function validate() {
     if (a.status === "published") {
       if (!isReady(a)) errors.push(`${a.slug}: veröffentlicht, aber shortAnswer/sections/metaTitle/metaDescription/datePublished fehlen`);
       else if (a.metaTitle.length > TITLE_MAX) errors.push(`${a.slug}: metaTitle über ${TITLE_MAX} Zeichen`);
+      if (!a.reviewedBy) errors.push(`${a.slug}: veröffentlicht, aber reviewedBy (fachliche Prüfung) fehlt`);
     }
   }
   if (errors.length > 0) throw new Error(`content/sov/fachbeitraege-themen.json ist inkonsistent:\n- ${errors.join("\n- ")}`);

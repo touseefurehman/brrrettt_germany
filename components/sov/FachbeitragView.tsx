@@ -85,7 +85,7 @@ export default function FachbeitragView({ a }: { a: ReadyArticle }) {
               </li>
             ))}
           </ul>
-          <LegalNotice />
+          {a.disclaimer ? <p className="muted-note legal-note">{a.disclaimer}</p> : <LegalNotice />}
         </section>
       )}
 
@@ -110,6 +110,7 @@ export default function FachbeitragView({ a }: { a: ReadyArticle }) {
         </section>
       )}
 
+      {a.showPartnerCta && (
       <section className="section page-width section-tight">
         <aside className="partner-box">
           <strong>Sie sind Prüfdienstleister?</strong>
@@ -119,10 +120,18 @@ export default function FachbeitragView({ a }: { a: ReadyArticle }) {
           </p>
         </aside>
       </section>
+      )}
 
       <section className="section page-width section-tight">
         <aside className="author-box">
-          <strong>Redaktion {site.domain}</strong>
+          <strong>{a.author ?? `Redaktion ${site.domain}`}</strong>
+          {a.reviewedBy && <span>Fachlich geprüft: {a.reviewedBy}</span>}
+          {a.lastReviewed && (
+            <span>
+              Stand: <time dateTime={a.lastReviewed}>{formatDate(a.lastReviewed)}</time>
+            </span>
+          )}
+          {a.legalStatus && <span>Rechtsstand: {a.legalStatus}</span>}
           <span>
             Veröffentlicht: <time dateTime={a.datePublished}>{formatDate(a.datePublished)}</time>
           </span>

@@ -18,7 +18,7 @@ Texte werden unverändert aus dem JSON gerendert (`content` und `sections[].cont
    Achtung: Zahlen im Fließtext (`shortAnswer`, `findings`, `faq`) werden nicht automatisch angepasst.
 2. **Neuer Report** (z. B. 2027): neue JSON-Datei mit gleicher Struktur und neuem `slug` anlegen und in `lib/sov.ts` im
    Array `reports` ergänzen (`shortTitle`, `temporalCoverage`). Der neueste Report (nach `datePublished`) erscheint
-   automatisch in den Linkboxen (Elektroprüfung-Hub, `/fuer-pruefpartner`, Footer); Sitemap und `/report` listen alle.
+   automatisch in den Linkboxen (Elektroprüfung-Hub, `/fachpartner`, Footer); Sitemap und `/report` listen alle.
 3. Diagramme: Befund 1–4 bekommen der Reihe nach Top-10-Domains, Quellentypen gesamt, Quellen pro Antwort und
    Quellentypen je KI-System. Werte erscheinen mit einer Nachkommastelle (`4,0 %`).
 4. Prüfen: `npm run build && npm start`, dann `node scripts/check-sov.mjs http://localhost:3000`

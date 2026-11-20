@@ -10,7 +10,7 @@ import { primarySources } from "@/lib/elektropruefung";
 
 export const BASE_PATH = "/pruefpflichten";
 export const BASE_NAME = "Prüfpflichten";
-export const PARTNER_PAGE_PATH = "/fuer-pruefpartner";
+export const PARTNER_PAGE_PATH = "/fachpartner";
 
 export type Status = "draft" | "published";
 export type FaqItem = { question: string; answer: string };

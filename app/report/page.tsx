@@ -3,6 +3,7 @@ import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
 import { PageIntro } from "@/components/Subpage";
 import { formatDate } from "@/lib/rank-rent";
+import { SPONSORING_PATH, upcomingReports } from "@/lib/partners";
 import { site } from "@/lib/site";
 import { REPORT_BASE, REPORT_BASE_NAME, reportPath, reports } from "@/lib/sov";
 
@@ -59,6 +60,24 @@ export default function ReportsOverview() {
           ))}
         </div>
       </section>
+      {upcomingReports.length > 0 && (
+        <section className="section page-width section-tight">
+          <h2>Kommende Reports</h2>
+          <div className="link-cards three">
+            {upcomingReports.map((u) => (
+              <div key={u.slug} className="rr-benefit">
+                <strong>{u.title}</strong>
+                <span>
+                  Messe-Bezug: {u.messe} · Status: {u.status}
+                </span>
+              </div>
+            ))}
+          </div>
+          <p className="muted-note">
+            Sie möchten einen Report unterstützen? <Link href={SPONSORING_PATH}>Studien-Sponsoring</Link>
+          </p>
+        </section>
+      )}
     </>
   );
 }

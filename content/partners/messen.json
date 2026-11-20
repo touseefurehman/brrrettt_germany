@@ -1,0 +1,46 @@
+[
+  {
+    "themen": "Arbeitsschutz, SiFa, UVV & PSAgA",
+    "messen": ["A+A", "Arbeitsschutz Aktuell"],
+    "links": [
+      { "label": "UVV-Prüfung", "href": "/uvv-pruefung" },
+      { "label": "Betreiberverantwortung", "href": "/betreiberverantwortung" }
+    ]
+  },
+  {
+    "themen": "Facility Management, Brandschutz & Hygiene",
+    "messen": ["INservFM", "FeuerTrutz", "ISH", "interlift"],
+    "links": [
+      { "label": "Brandschutz", "href": "/pruefbereiche/brandschutz" },
+      { "label": "Feuerlöscherprüfung", "href": "/feuerloescher-pruefung" },
+      { "label": "Legionellenprüfung", "href": "/legionellenpruefung" },
+      { "label": "VDI 6022", "href": "/vdi-6022" }
+    ]
+  },
+  {
+    "themen": "Elektrotechnik, DGUV V3, PV & Ladeinfrastruktur",
+    "messen": ["Light + Building", "elnatec/belektro", "The smarter E/Intersolar"],
+    "links": [
+      { "label": "Elektroprüfung DGUV V3", "href": "/elektropruefung-dguv-v3" },
+      { "label": "DGUV V3 Prüfung", "href": "/dguv-v3-pruefung" },
+      { "label": "Ladesäulen: Prüfpflichten", "href": "/fachbeitraege/ladesaeulen-pruefpflicht" }
+    ]
+  },
+  {
+    "themen": "BSI, IT-Security, NIS2 & KRITIS",
+    "messen": ["it-sa"],
+    "links": [
+      { "label": "Betreiberpflichten", "href": "/betreiberpflichten" },
+      { "label": "Betreiberverantwortung", "href": "/betreiberverantwortung" }
+    ]
+  },
+  {
+    "themen": "Kommunen, Energie & Maschinensicherheit",
+    "messen": ["IFAT", "E-world", "Motek/SPS"],
+    "links": [
+      { "label": "Betreiberpflichten Kommunen", "href": "/betreiberpflichten/kommunen" },
+      { "label": "Druck & Gas", "href": "/pruefbereiche/druck-gas" },
+      { "label": "Aufzugsanlagen", "href": "/pruefbereiche/aufzugsanlagen" }
+    ]
+  }
+]

@@ -65,7 +65,7 @@ export default function PartnerBox({
         </a>
       </div>
       <p className="rr-partner-note">
-        Sie sind Prüfbetrieb? Dieser Exklusiv-Platz ist verfügbar → <Link href={PARTNER_PAGE_PATH}>/fuer-pruefpartner</Link>
+        Sie sind Prüfbetrieb? Dieser Exklusiv-Platz ist verfügbar → <Link href={PARTNER_PAGE_PATH}>Fachpartner werden</Link>
       </p>
     </aside>
   );

@@ -1,0 +1,33 @@
+[
+  {
+    "slug": "presented-by",
+    "name": "Presented by (Hauptsponsor)",
+    "summary": "Ein Unternehmen präsentiert einen Report als Hauptsponsor.",
+    "points": [
+      "Nennung als Hauptsponsor („Presented by“) im Report, gekennzeichnet als „Anzeige“",
+      "Darstellung getrennt von den Messergebnissen",
+      "Nicht möglich für Unternehmen aus der im Report bewerteten Kategorie"
+    ],
+    "price": "auf Anfrage"
+  },
+  {
+    "slug": "experten-statement",
+    "name": "Experten-Statement",
+    "summary": "Ein Fachstatement Ihres Hauses im Umfeld eines Reports.",
+    "points": [
+      "Veröffentlichung als „Gesponsertes Statement“, klar von der Redaktion getrennt",
+      "Keine Einflussnahme auf Methodik und Ergebnisse"
+    ],
+    "price": "auf Anfrage"
+  },
+  {
+    "slug": "co-marketing",
+    "name": "Co-Marketing-Paket",
+    "summary": "Gemeinsame Kommunikation rund um einen Report, z. B. zur Messe.",
+    "points": [
+      "Maßnahmen und Umfang werden individuell abgestimmt",
+      "Alle Werbeinhalte sind als „Anzeige“ gekennzeichnet"
+    ],
+    "price": "auf Anfrage"
+  }
+]

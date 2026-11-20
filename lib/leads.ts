@@ -1,6 +1,7 @@
 import { createHash, randomUUID } from "node:crypto";
 import { bereichBySlug, leadRecipient, landingFor, landingPath, objektBySlug, pruefbereiche } from "@/lib/rank-rent";
 import type { FormField } from "@/lib/rank-rent";
+import { ANLIEGEN, POSITIONEN, sponsoringPakete, upcomingReports } from "@/lib/partners";
 import { site } from "@/lib/site";
 import type { Web3FormsPayload } from "@/lib/web3forms";
 
@@ -260,6 +261,66 @@ export async function handlePartnerRequest(body: Json, ip: string): Promise<Resu
     consentAt,
     emailStatus: process.env.LEAD_DRY_RUN === "1" ? "dry-run" : "client-web3forms",
     fields: { firma, ansprechpartner, pruefbereich: bereich.slug, einsatzgebiet, email, telefon },
+  });
+  return ready(mail);
+}
+
+// ---- Anfrage von Fachpartnern und Sponsoren (/fachpartner) ------------------------------------------------------
+
+export async function handleFachpartnerRequest(body: Json, ip: string): Promise<Result> {
+  if (str(body.website, 200) || Number(body.elapsed) < MIN_FILL_MS) return { ok: true, silent: true };
+  if (!(await allow("fachpartner", ip, 5))) return fail(429, "Zu viele Anfragen. Bitte versuchen Sie es später erneut.");
+
+  const firma = str(body.firma, 160);
+  const name = str(body.name, 120);
+  const email = str(body.email, 200);
+  const telefon = str(body.telefon, 60);
+  const position = POSITIONEN.find((p) => p === str(body.position, 60));
+  const anliegen = ANLIEGEN.find((a) => a === str(body.anliegen, 60));
+  const leistung = str(body.leistung, 300);
+  const region = str(body.region, 300);
+  const messenText = str(body.messen, 300);
+  const paket = sponsoringPakete.find((p) => p.slug === str(body.paket, 80));
+  const report = upcomingReports.find((r) => r.slug === str(body.report, 80));
+  const nachricht = str(body.nachricht, 2000);
+  if (!firma) return fail(400, "Bitte geben Sie Ihre Firma an.");
+  if (!name) return fail(400, "Bitte geben Sie Ihren Namen an.");
+  if (!EMAIL_RE.test(email)) return fail(400, "Bitte geben Sie eine gültige E-Mail-Adresse an.");
+  if (!position) return fail(400, "Bitte wählen Sie Ihre Position.");
+  if (!anliegen) return fail(400, "Bitte wählen Sie Ihr Anliegen.");
+  if (!leistung) return fail(400, "Bitte geben Sie Ihre Leistung bzw. Vertikale an.");
+  if (!region) return fail(400, "Bitte geben Sie Ihre Region an.");
+  if (body.consent !== true) return fail(400, "Bitte stimmen Sie der Verarbeitung Ihrer Angaben zu.");
+
+  const consentAt = new Date().toISOString();
+  const mail: Mail = {
+    reply_to: email,
+    subject: oneLine(`Fachpartner-Anfrage (${anliegen}) – ${firma}`).slice(0, 200),
+    text: [
+      `Anfrage über /fachpartner (${site.domain})`,
+      "",
+      `Anliegen: ${anliegen}`,
+      `Firma: ${firma}`,
+      `Name: ${name}`,
+      `Position: ${position}`,
+      `E-Mail: ${email}`,
+      ...(telefon ? [`Telefon: ${telefon}`] : []),
+      `Leistung/Vertikale: ${leistung}`,
+      `Region: ${region}`,
+      ...(messenText ? [`Besuchte Messen: ${messenText}`] : []),
+      ...(paket ? [`Sponsoring-Paket: ${paket.name}`] : []),
+      ...(report ? [`Report-Thema: ${report.title} (${report.messe})`] : []),
+      ...(nachricht ? ["", "Nachricht:", nachricht] : []),
+      "",
+      `Einwilligung: ${consentAt}`,
+    ].join("\n"),
+  };
+  await store("partner-requests", {
+    id: randomUUID(),
+    createdAt: consentAt,
+    consentAt,
+    emailStatus: process.env.LEAD_DRY_RUN === "1" ? "dry-run" : "client-web3forms",
+    fields: { kind: "fachpartner", firma, name, email, telefon, position, anliegen, leistung, region, messen: messenText, paket: paket?.slug ?? "", report: report?.slug ?? "", nachricht },
   });
   return ready(mail);
 }

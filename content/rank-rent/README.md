@@ -11,7 +11,7 @@ Datengetriebenes System für Landingpages mit je einem mietbaren Partnerplatz. A
 | `/pruefpflichten` | Übersicht aller veröffentlichten Objekttypen (ohne veröffentlichtes Objekt: 404) |
 | `/pruefpflichten/[objekt]` | Objekt-Hub, z. B. `/pruefpflichten/schulen` |
 | `/pruefpflichten/[objekt]/[slug]` | Landingpage, z. B. `/pruefpflichten/schulen/dguv-v3-pruefung` (Segment = `slug` der Landingpage) |
-| `/fuer-pruefpartner` | Vertriebsseite für Prüfbetriebe mit Verfügbarkeitsformular (sofort live) |
+| `/fachpartner` | Fachpartner-Seite (vorher `/fuer-pruefpartner`, 301) mit Anfrageformular (sofort live) |
 
 ## Dateien
 
@@ -45,7 +45,7 @@ erscheinen in Hubs und Sitemap. Der Footer-Link auf `/pruefpflichten` erscheint 
 
 In `partners.json` unter der `partnerSlotId` eintragen und `active: true` setzen. Erst dann erscheinen Name, Logo und Zitat
 (Modus B, gekennzeichnet als „Anzeige“, Links `rel="sponsored noopener"`) und Anfragen gehen an `leadEmail`. Ohne aktiven Eintrag
-zeigt die Seite die neutrale Box (Modus A) mit dem Hinweis auf `/fuer-pruefpartner`, Anfragen gehen an `LEAD_FALLBACK_EMAIL`.
+zeigt die Seite die neutrale Box (Modus A) mit dem Hinweis auf `/fachpartner`, Anfragen gehen an `LEAD_FALLBACK_EMAIL`.
 Deaktivieren: `active: false`.
 
 ## E-Mail-Versand und Umgebungsvariablen

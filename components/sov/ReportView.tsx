@@ -229,10 +229,10 @@ export default function ReportView({ r }: { r: Report }) {
 
       <section className="section page-width section-tight">
         <aside className="partner-box">
-          <strong>Sie sind Prüfdienstleister? So werden Sie in KI-Antworten sichtbar</strong>
+          <strong>Sie sind Fachbetrieb oder Prüfdienstleister? So werden Sie in KI-Antworten sichtbar</strong>
           <p>
             Auf {site.domain} vergeben wir je Prüfbereich und Objekttyp einen exklusiven Partnerplatz.{" "}
-            <Link href={PARTNER_PAGE_PATH}>Mehr für Prüfpartner</Link>
+            <Link href={PARTNER_PAGE_PATH}>Mehr für Fachpartner</Link>
           </p>
           <p>
             Alle Fragen und Antworten zur Elektroprüfung: <Link href={HUB_PATH}>{HUB_NAME}</Link>

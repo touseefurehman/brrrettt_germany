@@ -112,7 +112,7 @@ for (const a of articles.filter((a) => a.status !== "published")) {
 const sitemap = (await get("/sitemap.xml")).body;
 check(sitemap.includes(`${path}</loc>`) && sitemap.includes("/report</loc>"), "Sitemap enthält Report und /report");
 check(articles.filter((a) => a.status !== "published").every((a) => !sitemap.includes(`/fachbeitraege/${a.slug}`)) && (published.length > 0 || !sitemap.includes("/fachbeitraege")), "Sitemap enthält keine Entwürfe");
-for (const p of ["/elektropruefung-dguv-v3", "/fuer-pruefpartner", "/"]) {
+for (const p of ["/elektropruefung-dguv-v3", "/fachpartner", "/"]) {
   check((await get(p)).body.includes(`href="${path}"`), `${p} verlinkt den Report`);
 }
 

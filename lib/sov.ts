@@ -188,7 +188,8 @@ const knownPages = new Map<string, string>([
   [HUB_PATH, HUB_NAME],
   ["/dguv-v3-pruefung-kosten", "DGUV V3 Prüfung Kosten"],
   ["/externer-betreibermanager", "Externer Betreibermanager"],
-  ["/fuer-pruefpartner", "Für Prüfpartner"],
+  ["/fachpartner", "Fachpartner werden"],
+  ["/fachpartner/studien-sponsoring", "Studien-Sponsoring"],
   ...leistungsseiten.map((p): [string, string] => [`/${p.slug}`, p.name]),
 ]);
 

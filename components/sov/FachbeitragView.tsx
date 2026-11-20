@@ -116,7 +116,7 @@ export default function FachbeitragView({ a }: { a: ReadyArticle }) {
           <strong>Sie sind Prüfdienstleister?</strong>
           <p>
             Auf {site.domain} vergeben wir je Prüfbereich und Objekttyp einen exklusiven Partnerplatz.{" "}
-            <Link href={PARTNER_PAGE_PATH}>Mehr für Prüfpartner</Link>
+            <Link href={PARTNER_PAGE_PATH}>Mehr für Fachpartner</Link>
           </p>
         </aside>
       </section>

@@ -77,7 +77,7 @@ export default function SiteFooter() {
           <Link href={reportPath(latestReport)}>{latestReport.shortTitle}</Link>
           {hasPublishedArticles && <Link href={ARTICLE_BASE}>Fachbeiträge</Link>}
           {hasPublishedObjects && <Link href="/pruefpflichten">Prüfpflichten nach Objekt</Link>}
-          <Link href="/fuer-pruefpartner">Für Prüfpartner</Link>
+          <Link href="/fachpartner">Fachpartner werden</Link>
           <Link href="/ueber-uns">Über uns</Link>
           <Link href="/kontakt">Kontakt</Link>
           <Link href="/impressum">Impressum</Link>

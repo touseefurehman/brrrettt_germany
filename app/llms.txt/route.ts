@@ -68,6 +68,36 @@ export function GET() {
     article("haftung-fehlende-pruefungen"),
     article("betreiberpflichtenkataster-erstellen"),
     "",
+    "## KI-Reports",
+    "",
+    "Eigene Daten von betreibermanager.de: Share of Voice in KI-Antworten zu Betreiberpflichten, mit offengelegter Methodik.",
+    "",
+    link("KI-Reports", "/report", "Übersicht der Reports mit eigenen Messdaten zur Sichtbarkeit in KI-Antworten."),
+    link(
+      "KI-Report DGUV V3 2026",
+      "/report/ki-report-dguv-v3-2026",
+      "Share of Voice in KI-Antworten zur DGUV V3 Prüfung, inklusive Methodik der Erhebung.",
+    ),
+    "",
+    "## Fachbeiträge",
+    "",
+    link(
+      "Fachbeiträge",
+      "/fachbeitraege",
+      "Redaktionelle Fachinformationen zu Betreiberpflichten, Prüffristen und Trinkwasserverordnung (TrinkwV).",
+    ),
+    "",
+    "## Fachpartner und Studien-Sponsoring",
+    "",
+    "Exklusive Partnerplätze für Prüf- und Fachunternehmen. Partnerschaften und Sponsoring sind als solche gekennzeichnet; sie begründen keine Garantie für Platzierungen in KI-Antworten und beeinflussen die redaktionellen Inhalte nicht.",
+    "",
+    link("Fachpartner", "/fachpartner", "Fachpartner-Programm mit exklusiven Partnerplätzen, gekennzeichnet als Partnerangebot."),
+    link(
+      "Studien-Sponsoring",
+      "/fachpartner/studien-sponsoring",
+      "Sponsoring von Studien und KI-Reports; gekennzeichnet, ohne Garantie für KI-Platzierungen.",
+    ),
+    "",
   ].join("\n");
 
   return new Response(body, { headers: { "Content-Type": "text/plain; charset=utf-8" } });

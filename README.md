@@ -39,4 +39,4 @@ In Vercel unter Settings → Domains `www.betreibermanager.de` als Primary (Prod
 - **Sitemap** (`app/sitemap.ts`) wird aus den Routing-Daten erzeugt, nur kanonische URLs, `lastmod` je Seitengruppe bzw. Artikel-`modified`.
 - **Search Console / Bing**: Verifizierungscode als `GOOGLE_SITE_VERIFICATION` bzw. `BING_SITE_VERIFICATION` in Vercel setzen (oder Domain per DNS-TXT verifizieren), dann Sitemap einreichen. Bing kann die Property aus der Search Console importieren.
 - **IndexNow**: Schlüsseldatei liegt in `public/`. Nach einem Deployment `npm run indexnow` (ganze Sitemap) oder `npm run indexnow -- /wissen/<slug>` (einzelne URLs).
-- **llms.txt** (`app/llms.txt/route.ts`): rund 15 Kernseiten, Firmierung und Sitz erscheinen automatisch, sobald in `lib/site.ts` eingetragen.
+- **llms.txt** (`app/llms.txt/route.ts`): rund 20 Kernseiten, Firmierung und Sitz erscheinen automatisch, sobald in `lib/site.ts` eingetragen.

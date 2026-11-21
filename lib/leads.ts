@@ -1,5 +1,6 @@
 import { createHash, randomUUID } from "node:crypto";
-import { bereichBySlug, leadRecipient, landingFor, landingPath, objektBySlug, pruefbereiche } from "@/lib/rank-rent";
+import { routeLead, regionName } from "@/lib/partner-regions";
+import { bereichBySlug, landingFor, landingPath, objektBySlug, pruefbereiche } from "@/lib/rank-rent";
 import type { FormField } from "@/lib/rank-rent";
 import { ANLIEGEN, POSITIONEN, sponsoringPakete, upcomingReports } from "@/lib/partners";
 import { site } from "@/lib/site";
@@ -171,7 +172,8 @@ export async function handleLead(body: Json, ip: string): Promise<Result> {
     if (r.value !== undefined) extra.push([field.label, r.value]);
   }
 
-  const { to, partner } = leadRecipient(landing.partnerSlotId);
+  // Regionales Routing: Thema × Objektart × Bundesland (aus der PLZ); ohne aktiven Partner → Fallback-Postfach
+  const { to, partner, bundesland, slotId } = routeLead(plz, bereich.slug, objekt.slug);
 
   const consentAt = new Date().toISOString();
   const url = `${site.url}${landingPath(landing)}`;
@@ -185,7 +187,8 @@ export async function handleLead(body: Json, ip: string): Promise<Result> {
     `Seite: ${url}`,
     `Prüfbereich: ${bereich.name}`,
     `Objekt: ${objekt.name}`,
-    `Partner-Slot: ${landing.partnerSlotId} (${partner ? `gemietet: ${partner.name}` : "nicht gemietet – Fallback"})`,
+    `Bundesland (aus PLZ): ${regionName(bundesland) ?? "unbekannt"}`,
+    `Partner-Slot: ${slotId ?? "–"} (${partner ? `gemietet: ${partner.name}` : "nicht gemietet – Fallback"})`,
     "",
     `Firma: ${firma}`,
     `Name: ${name}`,
@@ -209,7 +212,8 @@ export async function handleLead(body: Json, ip: string): Promise<Result> {
     createdAt: consentAt,
     consentAt,
     page: landingPath(landing),
-    partnerSlotId: landing.partnerSlotId,
+    bundesland,
+    partnerSlotId: slotId,
     routedTo: partner ? "partner" : "fallback",
     recipient: to ?? "web3forms-inbox",
     emailStatus: process.env.LEAD_DRY_RUN === "1" ? "dry-run" : "client-web3forms",

@@ -2,6 +2,7 @@ import objekteData from "@/content/rank-rent/objekte.json";
 import pruefbereicheData from "@/content/rank-rent/pruefbereiche.json";
 import landingData from "@/content/rank-rent/landingpages.json";
 import partnerData from "@/content/rank-rent/partners.json";
+import regionalSlots from "@/content/partners/slots.json";
 import { primarySources } from "@/lib/elektropruefung";
 
 // Rank & Rent: Objekttyp × Prüfbereich = Landingpage mit genau einem mietbaren Partnerplatz.
@@ -131,7 +132,8 @@ function validate() {
     }
   }
   for (const key of Object.keys(partners)) {
-    if (!slots.has(key)) errors.push(`partners.json: Slot "${key}" gehört zu keiner Landingpage`);
+    const regional = regionalSlots.some((s) => (s as { partnerSlotId?: string }).partnerSlotId === key);
+    if (!slots.has(key) && !regional) errors.push(`partners.json: Slot "${key}" gehört zu keiner Landingpage oder keinem Slot in content/partners/slots.json`);
   }
   if (errors.length > 0) throw new Error(`content/rank-rent ist inkonsistent:\n- ${errors.join("\n- ")}`);
 }
@@ -179,13 +181,6 @@ export function activePartner(slotId: string): Partner | null {
   const p = rawPartner(slotId);
   if (!p || p.active !== true) return null;
   return { ...p, ctaUrl: p.ctaUrl && isHttpUrl(p.ctaUrl) ? p.ctaUrl : undefined };
-}
-
-/** Wohin eine Anfrage geht: gemieteter Slot → Partner-E-Mail; sonst null (Anfrage bleibt im Web3Forms-Postfach) */
-export function leadRecipient(slotId: string): { to: string | null; partner: Partner | null } {
-  const partner = activePartner(slotId);
-  if (partner && partner.leadEmail.trim()) return { to: partner.leadEmail.trim(), partner };
-  return { to: null, partner: null };
 }
 
 // ---- Verwandte Seiten -------------------------------------------------------------------------------------------

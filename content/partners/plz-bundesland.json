@@ -1,0 +1,507 @@
+[
+  {
+    "von": 1000,
+    "bis": 1999,
+    "bundesland": "sachsen"
+  },
+  {
+    "von": 2000,
+    "bis": 2999,
+    "bundesland": "sachsen"
+  },
+  {
+    "von": 3000,
+    "bis": 3999,
+    "bundesland": "brandenburg"
+  },
+  {
+    "von": 4000,
+    "bis": 4999,
+    "bundesland": "sachsen"
+  },
+  {
+    "von": 6000,
+    "bis": 6999,
+    "bundesland": "sachsen-anhalt"
+  },
+  {
+    "von": 7000,
+    "bis": 7999,
+    "bundesland": "thueringen"
+  },
+  {
+    "von": 8000,
+    "bis": 8999,
+    "bundesland": "sachsen"
+  },
+  {
+    "von": 9000,
+    "bis": 9999,
+    "bundesland": "sachsen"
+  },
+  {
+    "von": 10000,
+    "bis": 10999,
+    "bundesland": "berlin"
+  },
+  {
+    "von": 12000,
+    "bis": 12999,
+    "bundesland": "berlin"
+  },
+  {
+    "von": 13000,
+    "bis": 13999,
+    "bundesland": "berlin"
+  },
+  {
+    "von": 14000,
+    "bis": 14999,
+    "bundesland": "brandenburg"
+  },
+  {
+    "von": 15000,
+    "bis": 15999,
+    "bundesland": "brandenburg"
+  },
+  {
+    "von": 16000,
+    "bis": 16999,
+    "bundesland": "brandenburg"
+  },
+  {
+    "von": 17000,
+    "bis": 17999,
+    "bundesland": "mecklenburg-vorpommern"
+  },
+  {
+    "von": 18000,
+    "bis": 18999,
+    "bundesland": "mecklenburg-vorpommern"
+  },
+  {
+    "von": 19000,
+    "bis": 19999,
+    "bundesland": "mecklenburg-vorpommern"
+  },
+  {
+    "von": 20000,
+    "bis": 20999,
+    "bundesland": "hamburg"
+  },
+  {
+    "von": 21000,
+    "bis": 21999,
+    "bundesland": "niedersachsen"
+  },
+  {
+    "von": 22000,
+    "bis": 22999,
+    "bundesland": "hamburg"
+  },
+  {
+    "von": 23000,
+    "bis": 23999,
+    "bundesland": "schleswig-holstein"
+  },
+  {
+    "von": 24000,
+    "bis": 24999,
+    "bundesland": "schleswig-holstein"
+  },
+  {
+    "von": 25000,
+    "bis": 25999,
+    "bundesland": "schleswig-holstein"
+  },
+  {
+    "von": 26000,
+    "bis": 26999,
+    "bundesland": "niedersachsen"
+  },
+  {
+    "von": 27000,
+    "bis": 27999,
+    "bundesland": "niedersachsen"
+  },
+  {
+    "von": 28000,
+    "bis": 28999,
+    "bundesland": "bremen"
+  },
+  {
+    "von": 29000,
+    "bis": 29999,
+    "bundesland": "niedersachsen"
+  },
+  {
+    "von": 30000,
+    "bis": 30999,
+    "bundesland": "niedersachsen"
+  },
+  {
+    "von": 31000,
+    "bis": 31999,
+    "bundesland": "niedersachsen"
+  },
+  {
+    "von": 32000,
+    "bis": 32999,
+    "bundesland": "nordrhein-westfalen"
+  },
+  {
+    "von": 33000,
+    "bis": 33999,
+    "bundesland": "nordrhein-westfalen"
+  },
+  {
+    "von": 34000,
+    "bis": 34999,
+    "bundesland": "hessen"
+  },
+  {
+    "von": 35000,
+    "bis": 35999,
+    "bundesland": "hessen"
+  },
+  {
+    "von": 36000,
+    "bis": 36999,
+    "bundesland": "hessen"
+  },
+  {
+    "von": 37000,
+    "bis": 37999,
+    "bundesland": "niedersachsen"
+  },
+  {
+    "von": 38000,
+    "bis": 38999,
+    "bundesland": "niedersachsen"
+  },
+  {
+    "von": 39000,
+    "bis": 39999,
+    "bundesland": "sachsen-anhalt"
+  },
+  {
+    "von": 40000,
+    "bis": 40999,
+    "bundesland": "nordrhein-westfalen"
+  },
+  {
+    "von": 41000,
+    "bis": 41999,
+    "bundesland": "nordrhein-westfalen"
+  },
+  {
+    "von": 42000,
+    "bis": 42999,
+    "bundesland": "nordrhein-westfalen"
+  },
+  {
+    "von": 44000,
+    "bis": 44999,
+    "bundesland": "nordrhein-westfalen"
+  },
+  {
+    "von": 45000,
+    "bis": 45999,
+    "bundesland": "nordrhein-westfalen"
+  },
+  {
+    "von": 46000,
+    "bis": 46999,
+    "bundesland": "nordrhein-westfalen"
+  },
+  {
+    "von": 47000,
+    "bis": 47999,
+    "bundesland": "nordrhein-westfalen"
+  },
+  {
+    "von": 48000,
+    "bis": 48999,
+    "bundesland": "nordrhein-westfalen"
+  },
+  {
+    "von": 49000,
+    "bis": 49999,
+    "bundesland": "niedersachsen"
+  },
+  {
+    "von": 50000,
+    "bis": 50999,
+    "bundesland": "nordrhein-westfalen"
+  },
+  {
+    "von": 51000,
+    "bis": 51999,
+    "bundesland": "nordrhein-westfalen"
+  },
+  {
+    "von": 52000,
+    "bis": 52999,
+    "bundesland": "nordrhein-westfalen"
+  },
+  {
+    "von": 53000,
+    "bis": 53999,
+    "bundesland": "nordrhein-westfalen"
+  },
+  {
+    "von": 54000,
+    "bis": 54999,
+    "bundesland": "rheinland-pfalz"
+  },
+  {
+    "von": 55000,
+    "bis": 55999,
+    "bundesland": "rheinland-pfalz"
+  },
+  {
+    "von": 56000,
+    "bis": 56999,
+    "bundesland": "rheinland-pfalz"
+  },
+  {
+    "von": 57000,
+    "bis": 57999,
+    "bundesland": "nordrhein-westfalen"
+  },
+  {
+    "von": 58000,
+    "bis": 58999,
+    "bundesland": "nordrhein-westfalen"
+  },
+  {
+    "von": 59000,
+    "bis": 59999,
+    "bundesland": "nordrhein-westfalen"
+  },
+  {
+    "von": 60000,
+    "bis": 60999,
+    "bundesland": "hessen"
+  },
+  {
+    "von": 61000,
+    "bis": 61999,
+    "bundesland": "hessen"
+  },
+  {
+    "von": 63000,
+    "bis": 63999,
+    "bundesland": "hessen"
+  },
+  {
+    "von": 64000,
+    "bis": 64999,
+    "bundesland": "hessen"
+  },
+  {
+    "von": 65000,
+    "bis": 65999,
+    "bundesland": "hessen"
+  },
+  {
+    "von": 66000,
+    "bis": 66999,
+    "bundesland": "saarland"
+  },
+  {
+    "von": 67000,
+    "bis": 67999,
+    "bundesland": "rheinland-pfalz"
+  },
+  {
+    "von": 68000,
+    "bis": 68999,
+    "bundesland": "baden-wuerttemberg"
+  },
+  {
+    "von": 69000,
+    "bis": 69999,
+    "bundesland": "baden-wuerttemberg"
+  },
+  {
+    "von": 70000,
+    "bis": 70999,
+    "bundesland": "baden-wuerttemberg"
+  },
+  {
+    "von": 71000,
+    "bis": 71999,
+    "bundesland": "baden-wuerttemberg"
+  },
+  {
+    "von": 72000,
+    "bis": 72999,
+    "bundesland": "baden-wuerttemberg"
+  },
+  {
+    "von": 73000,
+    "bis": 73999,
+    "bundesland": "baden-wuerttemberg"
+  },
+  {
+    "von": 74000,
+    "bis": 74999,
+    "bundesland": "baden-wuerttemberg"
+  },
+  {
+    "von": 75000,
+    "bis": 75999,
+    "bundesland": "baden-wuerttemberg"
+  },
+  {
+    "von": 76000,
+    "bis": 76999,
+    "bundesland": "baden-wuerttemberg"
+  },
+  {
+    "von": 77000,
+    "bis": 77999,
+    "bundesland": "baden-wuerttemberg"
+  },
+  {
+    "von": 78000,
+    "bis": 78999,
+    "bundesland": "baden-wuerttemberg"
+  },
+  {
+    "von": 79000,
+    "bis": 79999,
+    "bundesland": "baden-wuerttemberg"
+  },
+  {
+    "von": 80000,
+    "bis": 80999,
+    "bundesland": "bayern"
+  },
+  {
+    "von": 81000,
+    "bis": 81999,
+    "bundesland": "bayern"
+  },
+  {
+    "von": 82000,
+    "bis": 82999,
+    "bundesland": "bayern"
+  },
+  {
+    "von": 83000,
+    "bis": 83999,
+    "bundesland": "bayern"
+  },
+  {
+    "von": 84000,
+    "bis": 84999,
+    "bundesland": "bayern"
+  },
+  {
+    "von": 85000,
+    "bis": 85999,
+    "bundesland": "bayern"
+  },
+  {
+    "von": 86000,
+    "bis": 86999,
+    "bundesland": "bayern"
+  },
+  {
+    "von": 87000,
+    "bis": 87999,
+    "bundesland": "bayern"
+  },
+  {
+    "von": 88000,
+    "bis": 88999,
+    "bundesland": "baden-wuerttemberg"
+  },
+  {
+    "von": 89000,
+    "bis": 89999,
+    "bundesland": "baden-wuerttemberg"
+  },
+  {
+    "von": 90000,
+    "bis": 90999,
+    "bundesland": "bayern"
+  },
+  {
+    "von": 91000,
+    "bis": 91999,
+    "bundesland": "bayern"
+  },
+  {
+    "von": 92000,
+    "bis": 92999,
+    "bundesland": "bayern"
+  },
+  {
+    "von": 93000,
+    "bis": 93999,
+    "bundesland": "bayern"
+  },
+  {
+    "von": 94000,
+    "bis": 94999,
+    "bundesland": "bayern"
+  },
+  {
+    "von": 95000,
+    "bis": 95999,
+    "bundesland": "bayern"
+  },
+  {
+    "von": 96000,
+    "bis": 96999,
+    "bundesland": "bayern"
+  },
+  {
+    "von": 97000,
+    "bis": 97999,
+    "bundesland": "bayern"
+  },
+  {
+    "von": 98000,
+    "bis": 98999,
+    "bundesland": "thueringen"
+  },
+  {
+    "von": 99000,
+    "bis": 99999,
+    "bundesland": "thueringen"
+  },
+  {
+    "von": 14050,
+    "bis": 14199,
+    "bundesland": "berlin"
+  },
+  {
+    "von": 21029,
+    "bis": 21149,
+    "bundesland": "hamburg"
+  },
+  {
+    "von": 27568,
+    "bis": 27580,
+    "bundesland": "bremen"
+  },
+  {
+    "von": 88131,
+    "bis": 88179,
+    "bundesland": "bayern"
+  },
+  {
+    "von": 89231,
+    "bis": 89233,
+    "bundesland": "bayern"
+  },
+  {
+    "von": 63739,
+    "bis": 63928,
+    "bundesland": "bayern"
+  }
+]

@@ -1,0 +1,54 @@
+[
+  {
+    "slug": "dguv-v3",
+    "name": "DGUV V3",
+    "href": "/dguv-v3-pruefung",
+    "pruefbereiche": [
+      "dguv-v3"
+    ],
+    "text": "Prüfung elektrischer Anlagen und Betriebsmittel"
+  },
+  {
+    "slug": "trinkwasser-legionellen",
+    "name": "Trinkwasser / Legionellen",
+    "href": "/legionellenpruefung",
+    "pruefbereiche": [
+      "legionellen"
+    ],
+    "text": "Trinkwasserverordnung und Legionellenprüfung"
+  },
+  {
+    "slug": "uvv",
+    "name": "UVV",
+    "href": "/uvv-pruefung",
+    "pruefbereiche": [
+      "regal-uvv-tore"
+    ],
+    "text": "Prüfungen nach Unfallverhütungsvorschriften"
+  },
+  {
+    "slug": "vdi-6022",
+    "name": "VDI 6022",
+    "href": "/vdi-6022",
+    "pruefbereiche": [
+      "vdi-6022"
+    ],
+    "text": "Hygiene raumlufttechnischer Anlagen"
+  },
+  {
+    "slug": "brandschutz",
+    "name": "Brandschutz",
+    "href": "/pruefbereiche/brandschutz",
+    "pruefbereiche": [
+      "brandschutz"
+    ],
+    "text": "Brandschutzprüfungen und Feuerlöscher"
+  },
+  {
+    "slug": "externer-betreibermanager",
+    "name": "Externer Betreibermanager",
+    "href": "/externer-betreibermanager",
+    "pruefbereiche": [],
+    "text": "Koordination der Betreiberpflichten als Dienstleistung"
+  }
+]

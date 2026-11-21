@@ -1,0 +1,512 @@
+[
+  {
+    "thema": "dguv-v3",
+    "region": "bundesweit",
+    "status": "frei"
+  },
+  {
+    "thema": "dguv-v3",
+    "region": "baden-wuerttemberg",
+    "status": "frei"
+  },
+  {
+    "thema": "dguv-v3",
+    "region": "bayern",
+    "status": "frei"
+  },
+  {
+    "thema": "dguv-v3",
+    "region": "berlin",
+    "status": "frei"
+  },
+  {
+    "thema": "dguv-v3",
+    "region": "brandenburg",
+    "status": "frei"
+  },
+  {
+    "thema": "dguv-v3",
+    "region": "bremen",
+    "status": "frei"
+  },
+  {
+    "thema": "dguv-v3",
+    "region": "hamburg",
+    "status": "frei"
+  },
+  {
+    "thema": "dguv-v3",
+    "region": "hessen",
+    "status": "frei"
+  },
+  {
+    "thema": "dguv-v3",
+    "region": "mecklenburg-vorpommern",
+    "status": "frei"
+  },
+  {
+    "thema": "dguv-v3",
+    "region": "niedersachsen",
+    "status": "frei"
+  },
+  {
+    "thema": "dguv-v3",
+    "region": "nordrhein-westfalen",
+    "status": "frei"
+  },
+  {
+    "thema": "dguv-v3",
+    "region": "rheinland-pfalz",
+    "status": "frei"
+  },
+  {
+    "thema": "dguv-v3",
+    "region": "saarland",
+    "status": "frei"
+  },
+  {
+    "thema": "dguv-v3",
+    "region": "sachsen",
+    "status": "frei"
+  },
+  {
+    "thema": "dguv-v3",
+    "region": "sachsen-anhalt",
+    "status": "frei"
+  },
+  {
+    "thema": "dguv-v3",
+    "region": "schleswig-holstein",
+    "status": "frei"
+  },
+  {
+    "thema": "dguv-v3",
+    "region": "thueringen",
+    "status": "frei"
+  },
+  {
+    "thema": "trinkwasser-legionellen",
+    "region": "bundesweit",
+    "status": "frei"
+  },
+  {
+    "thema": "trinkwasser-legionellen",
+    "region": "baden-wuerttemberg",
+    "status": "frei"
+  },
+  {
+    "thema": "trinkwasser-legionellen",
+    "region": "bayern",
+    "status": "frei"
+  },
+  {
+    "thema": "trinkwasser-legionellen",
+    "region": "berlin",
+    "status": "frei"
+  },
+  {
+    "thema": "trinkwasser-legionellen",
+    "region": "brandenburg",
+    "status": "frei"
+  },
+  {
+    "thema": "trinkwasser-legionellen",
+    "region": "bremen",
+    "status": "frei"
+  },
+  {
+    "thema": "trinkwasser-legionellen",
+    "region": "hamburg",
+    "status": "frei"
+  },
+  {
+    "thema": "trinkwasser-legionellen",
+    "region": "hessen",
+    "status": "frei"
+  },
+  {
+    "thema": "trinkwasser-legionellen",
+    "region": "mecklenburg-vorpommern",
+    "status": "frei"
+  },
+  {
+    "thema": "trinkwasser-legionellen",
+    "region": "niedersachsen",
+    "status": "frei"
+  },
+  {
+    "thema": "trinkwasser-legionellen",
+    "region": "nordrhein-westfalen",
+    "status": "frei"
+  },
+  {
+    "thema": "trinkwasser-legionellen",
+    "region": "rheinland-pfalz",
+    "status": "frei"
+  },
+  {
+    "thema": "trinkwasser-legionellen",
+    "region": "saarland",
+    "status": "frei"
+  },
+  {
+    "thema": "trinkwasser-legionellen",
+    "region": "sachsen",
+    "status": "frei"
+  },
+  {
+    "thema": "trinkwasser-legionellen",
+    "region": "sachsen-anhalt",
+    "status": "frei"
+  },
+  {
+    "thema": "trinkwasser-legionellen",
+    "region": "schleswig-holstein",
+    "status": "frei"
+  },
+  {
+    "thema": "trinkwasser-legionellen",
+    "region": "thueringen",
+    "status": "frei"
+  },
+  {
+    "thema": "uvv",
+    "region": "bundesweit",
+    "status": "frei"
+  },
+  {
+    "thema": "uvv",
+    "region": "baden-wuerttemberg",
+    "status": "frei"
+  },
+  {
+    "thema": "uvv",
+    "region": "bayern",
+    "status": "frei"
+  },
+  {
+    "thema": "uvv",
+    "region": "berlin",
+    "status": "frei"
+  },
+  {
+    "thema": "uvv",
+    "region": "brandenburg",
+    "status": "frei"
+  },
+  {
+    "thema": "uvv",
+    "region": "bremen",
+    "status": "frei"
+  },
+  {
+    "thema": "uvv",
+    "region": "hamburg",
+    "status": "frei"
+  },
+  {
+    "thema": "uvv",
+    "region": "hessen",
+    "status": "frei"
+  },
+  {
+    "thema": "uvv",
+    "region": "mecklenburg-vorpommern",
+    "status": "frei"
+  },
+  {
+    "thema": "uvv",
+    "region": "niedersachsen",
+    "status": "frei"
+  },
+  {
+    "thema": "uvv",
+    "region": "nordrhein-westfalen",
+    "status": "frei"
+  },
+  {
+    "thema": "uvv",
+    "region": "rheinland-pfalz",
+    "status": "frei"
+  },
+  {
+    "thema": "uvv",
+    "region": "saarland",
+    "status": "frei"
+  },
+  {
+    "thema": "uvv",
+    "region": "sachsen",
+    "status": "frei"
+  },
+  {
+    "thema": "uvv",
+    "region": "sachsen-anhalt",
+    "status": "frei"
+  },
+  {
+    "thema": "uvv",
+    "region": "schleswig-holstein",
+    "status": "frei"
+  },
+  {
+    "thema": "uvv",
+    "region": "thueringen",
+    "status": "frei"
+  },
+  {
+    "thema": "vdi-6022",
+    "region": "bundesweit",
+    "status": "frei"
+  },
+  {
+    "thema": "vdi-6022",
+    "region": "baden-wuerttemberg",
+    "status": "frei"
+  },
+  {
+    "thema": "vdi-6022",
+    "region": "bayern",
+    "status": "frei"
+  },
+  {
+    "thema": "vdi-6022",
+    "region": "berlin",
+    "status": "frei"
+  },
+  {
+    "thema": "vdi-6022",
+    "region": "brandenburg",
+    "status": "frei"
+  },
+  {
+    "thema": "vdi-6022",
+    "region": "bremen",
+    "status": "frei"
+  },
+  {
+    "thema": "vdi-6022",
+    "region": "hamburg",
+    "status": "frei"
+  },
+  {
+    "thema": "vdi-6022",
+    "region": "hessen",
+    "status": "frei"
+  },
+  {
+    "thema": "vdi-6022",
+    "region": "mecklenburg-vorpommern",
+    "status": "frei"
+  },
+  {
+    "thema": "vdi-6022",
+    "region": "niedersachsen",
+    "status": "frei"
+  },
+  {
+    "thema": "vdi-6022",
+    "region": "nordrhein-westfalen",
+    "status": "frei"
+  },
+  {
+    "thema": "vdi-6022",
+    "region": "rheinland-pfalz",
+    "status": "frei"
+  },
+  {
+    "thema": "vdi-6022",
+    "region": "saarland",
+    "status": "frei"
+  },
+  {
+    "thema": "vdi-6022",
+    "region": "sachsen",
+    "status": "frei"
+  },
+  {
+    "thema": "vdi-6022",
+    "region": "sachsen-anhalt",
+    "status": "frei"
+  },
+  {
+    "thema": "vdi-6022",
+    "region": "schleswig-holstein",
+    "status": "frei"
+  },
+  {
+    "thema": "vdi-6022",
+    "region": "thueringen",
+    "status": "frei"
+  },
+  {
+    "thema": "brandschutz",
+    "region": "bundesweit",
+    "status": "frei"
+  },
+  {
+    "thema": "brandschutz",
+    "region": "baden-wuerttemberg",
+    "status": "frei"
+  },
+  {
+    "thema": "brandschutz",
+    "region": "bayern",
+    "status": "frei"
+  },
+  {
+    "thema": "brandschutz",
+    "region": "berlin",
+    "status": "frei"
+  },
+  {
+    "thema": "brandschutz",
+    "region": "brandenburg",
+    "status": "frei"
+  },
+  {
+    "thema": "brandschutz",
+    "region": "bremen",
+    "status": "frei"
+  },
+  {
+    "thema": "brandschutz",
+    "region": "hamburg",
+    "status": "frei"
+  },
+  {
+    "thema": "brandschutz",
+    "region": "hessen",
+    "status": "frei"
+  },
+  {
+    "thema": "brandschutz",
+    "region": "mecklenburg-vorpommern",
+    "status": "frei"
+  },
+  {
+    "thema": "brandschutz",
+    "region": "niedersachsen",
+    "status": "frei"
+  },
+  {
+    "thema": "brandschutz",
+    "region": "nordrhein-westfalen",
+    "status": "frei"
+  },
+  {
+    "thema": "brandschutz",
+    "region": "rheinland-pfalz",
+    "status": "frei"
+  },
+  {
+    "thema": "brandschutz",
+    "region": "saarland",
+    "status": "frei"
+  },
+  {
+    "thema": "brandschutz",
+    "region": "sachsen",
+    "status": "frei"
+  },
+  {
+    "thema": "brandschutz",
+    "region": "sachsen-anhalt",
+    "status": "frei"
+  },
+  {
+    "thema": "brandschutz",
+    "region": "schleswig-holstein",
+    "status": "frei"
+  },
+  {
+    "thema": "brandschutz",
+    "region": "thueringen",
+    "status": "frei"
+  },
+  {
+    "thema": "externer-betreibermanager",
+    "region": "bundesweit",
+    "status": "frei"
+  },
+  {
+    "thema": "externer-betreibermanager",
+    "region": "baden-wuerttemberg",
+    "status": "frei"
+  },
+  {
+    "thema": "externer-betreibermanager",
+    "region": "bayern",
+    "status": "frei"
+  },
+  {
+    "thema": "externer-betreibermanager",
+    "region": "berlin",
+    "status": "frei"
+  },
+  {
+    "thema": "externer-betreibermanager",
+    "region": "brandenburg",
+    "status": "frei"
+  },
+  {
+    "thema": "externer-betreibermanager",
+    "region": "bremen",
+    "status": "frei"
+  },
+  {
+    "thema": "externer-betreibermanager",
+    "region": "hamburg",
+    "status": "frei"
+  },
+  {
+    "thema": "externer-betreibermanager",
+    "region": "hessen",
+    "status": "frei"
+  },
+  {
+    "thema": "externer-betreibermanager",
+    "region": "mecklenburg-vorpommern",
+    "status": "frei"
+  },
+  {
+    "thema": "externer-betreibermanager",
+    "region": "niedersachsen",
+    "status": "frei"
+  },
+  {
+    "thema": "externer-betreibermanager",
+    "region": "nordrhein-westfalen",
+    "status": "frei"
+  },
+  {
+    "thema": "externer-betreibermanager",
+    "region": "rheinland-pfalz",
+    "status": "frei"
+  },
+  {
+    "thema": "externer-betreibermanager",
+    "region": "saarland",
+    "status": "frei"
+  },
+  {
+    "thema": "externer-betreibermanager",
+    "region": "sachsen",
+    "status": "frei"
+  },
+  {
+    "thema": "externer-betreibermanager",
+    "region": "sachsen-anhalt",
+    "status": "frei"
+  },
+  {
+    "thema": "externer-betreibermanager",
+    "region": "schleswig-holstein",
+    "status": "frei"
+  },
+  {
+    "thema": "externer-betreibermanager",
+    "region": "thueringen",
+    "status": "frei"
+  }
+]

@@ -65,3 +65,14 @@ Hinweis: Web3Forms erlaubt Server-seitige Aufrufe ggf. nur in bezahlten Tarifen.
 
 Leads liegen in Redis als Listen `rankrent:leads` und `rankrent:partner-requests` (JSON je Eintrag, inkl. Einwilligungs-Zeitstempel).
 Spam-Schutz: Honeypot, Mindestausfüllzeit 3 s, 5 Anfragen pro Stunde und IP.
+
+## Regionale Exklusivität (content/partners)
+
+- `regionen.json` – die 16 Bundesländer (`slug`, `name`).
+- `themen.json` – Kernthemen mit Link auf die bestehende Seite und den zugehörigen `pruefbereiche` (für das Routing).
+- `slots.json` – `{ thema, objektart?, region (Bundesland-Slug oder "bundesweit"), status: "frei" | "vergeben", partnerSlotId? }`.
+  Vergeben: `status: "vergeben"` + `partnerSlotId` setzen und denselben Schlüssel in `partners.json` mit `active: true`, `leadEmail` eintragen.
+- `plz-bundesland.json` – PLZ-Bereiche (`von`, `bis`, `bundesland`); der engste Bereich gewinnt. Näherung, keine amtliche Tabelle.
+- Routing (serverseitig, `lib/partner-regions.ts`): PLZ → Bundesland, dann Slot für Thema × Objektart × Bundesland (danach bundesweit);
+  ohne aktiven Partner geht die Anfrage an das bestehende Postfach. Tests: `npm test`.
+- Optional per Umgebungsvariable: `BOOKING_URL` (Button „Gespräch buchen“) und `PARTNER_CONTACT_NAME/ROLE/EMAIL`; ohne Wert erscheint nichts.

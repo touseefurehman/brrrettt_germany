@@ -4,6 +4,9 @@ import FaqList from "@/components/FaqList";
 import JsonLd, { faqSchema } from "@/components/JsonLd";
 import FachpartnerForm from "@/components/partners/FachpartnerForm";
 import { PageIntro } from "@/components/Subpage";
+import { BOOKING_URL, partnerContact } from "@/lib/partner-config";
+import { fachseiten, fachseitenGesamt, slotUebersicht, zielgruppen } from "@/lib/partner-medienkit";
+import { regionen } from "@/lib/partner-regions";
 import { FACHPARTNER_PATH, messen, SPONSORING_PATH, upcomingReports } from "@/lib/partners";
 import { site } from "@/lib/site";
 import { int, latestReport, pct, REPORT_BASE, reportPath } from "@/lib/sov";
@@ -144,6 +147,13 @@ export default function Fachpartner() {
           <a className="rr-btn" href="#anfrage">
             Gespräch anfragen
           </a>{" "}
+          {BOOKING_URL && (
+            <>
+              <a className="rr-btn" href={BOOKING_URL} rel="noopener">
+                Gespräch buchen
+              </a>{" "}
+            </>
+          )}
           <Link className="rr-btn-secondary" href={reportPath(r)}>
             KI-Report ansehen
           </Link>
@@ -197,6 +207,76 @@ export default function Fachpartner() {
           Messung ist eine Momentaufnahme.{" "}
           <Link href={reportPath(r)}>Zum Report</Link>
         </p>
+      </section>
+
+      <section className="section page-width section-tight">
+        <h2>Kernthemen für Partnerschaften</h2>
+        <p className="muted-note">Preise für alle Themen: auf Anfrage.</p>
+        <div className="link-cards three">
+          {slotUebersicht.map(({ thema, frei, gesamt }) => (
+            <Link key={thema.slug} href={thema.href}>
+              <strong>{thema.name}</strong>
+              <span>{thema.text}</span>
+              <span>
+                Bundesländer frei: {frei} von {gesamt} · Preis auf Anfrage
+              </span>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <section className="section page-width section-tight prose">
+        <h2>So funktioniert die Exklusivität</h2>
+        <ul>
+          <li>Ein Partner pro Thema × Objektart × Bundesland.</li>
+          <li>Anfragen von Betreibern werden anhand der Postleitzahl des Objekts dem Bundesland zugeordnet und an den Partner dieses Gebiets weitergeleitet.</li>
+          <li>Bundesweite Exklusivität für ein Thema ist auf Anfrage möglich.</li>
+          <li>Gibt es in einem Gebiet noch keinen Partner, bearbeiten wir die Anfrage selbst.</li>
+        </ul>
+        <p className="muted-note">Gebietsraster: {regionen.map((x) => x.name).join(", ")}.</p>
+      </section>
+
+      <section className="section page-width section-tight">
+        <h2>Medienkit: Zielgruppen und Themen-Tiefe</h2>
+        <div className="link-cards three">
+          <div className="rr-benefit">
+            <strong>Zielgruppen</strong>
+            <ul>
+              {zielgruppen.map((z) => (
+                <li key={z}>{z}</li>
+              ))}
+            </ul>
+          </div>
+          <div className="rr-benefit">
+            <strong>Themen-Tiefe: {fachseitenGesamt} veröffentlichte Fachseiten</strong>
+            <ul>
+              {fachseiten.map(([label, n]) => (
+                <li key={label}>
+                  {label}: {n}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="rr-benefit">
+            <strong>Regionale Exklusivität</strong>
+            <span>
+              Ein Partner je Thema, Objektart und Bundesland ({regionen.length} Bundesländer, {slotUebersicht.length} Themen).
+              Bundesweit auf Anfrage.
+            </span>
+          </div>
+        </div>
+        {partnerContact && (
+          <p className="muted-note">
+            Ansprechpartner: {partnerContact.name}
+            {partnerContact.role && `, ${partnerContact.role}`}
+            {partnerContact.email && (
+              <>
+                {" · "}
+                <a href={`mailto:${partnerContact.email}`}>{partnerContact.email}</a>
+              </>
+            )}
+          </p>
+        )}
       </section>
 
       <section className="section page-width section-tight">

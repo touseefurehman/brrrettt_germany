@@ -18,7 +18,9 @@ export const metadata: Metadata = {
 };
 
 export default async function Befund({ params }: { params: Promise<{ token: string }> }) {
-  const lead = await leadBy("token", (await params).token);
+  const token = (await params).token;
+  // Ohne Datenbank oder bei Datenbankfehler: 404 statt 500
+  const lead = await leadBy("token", token).catch(() => null);
   const f = lead?.findingsJson as Findings | null | undefined;
   // Nur bestätigte Leads (Double-Opt-in) oder vorab erzeugte Outbound-Befunde; Warteliste hat noch keinen Befund
   if (!lead || !f || (lead.source === "form" && !lead.confirmedAt) || lead.status === "warteliste") notFound();

@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
-import { createRequest } from "@/lib/funnel";
-import { storeConfigured } from "@/lib/store";
+import { createFallback, createRequest, FALLBACK_MESSAGE, funnelReady } from "@/lib/funnel";
 
 export const dynamic = "force-dynamic";
 
@@ -24,7 +23,12 @@ export async function POST(req: Request) {
   if (typeof body.website === "string" && body.website.trim()) return NextResponse.json({ ok: true, status: "neu" });
   if (Number(body.elapsed) < 3000) return NextResponse.json({ ok: true, status: "neu" });
   if (!allowed(ip)) return NextResponse.json({ ok: false, message: "Zu viele Anfragen. Bitte versuchen Sie es später erneut." }, { status: 429 });
-  if (!storeConfigured) return NextResponse.json({ ok: false, message: "Die Anfrage kann derzeit nicht gespeichert werden." }, { status: 503 });
+  // Ohne DATABASE_URL/RESEND_API_KEY: Anfrage über den Kanal des Kontaktformulars (Web3Forms, Versand im Browser) weitergeben
+  if (!funnelReady) {
+    const f = createFallback(body);
+    if (!f.ok) return NextResponse.json({ ok: false, message: f.message }, { status: f.status });
+    return NextResponse.json({ ok: true, status: "angefragt", message: FALLBACK_MESSAGE, mail: f.mail });
+  }
   try {
     const r = await createRequest(body);
     if (!r.ok) return NextResponse.json({ ok: false, message: r.message }, { status: r.status });

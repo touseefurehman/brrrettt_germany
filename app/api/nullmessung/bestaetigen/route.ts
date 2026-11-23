@@ -5,7 +5,7 @@ export const dynamic = "force-dynamic";
 
 export async function GET(req: Request) {
   const url = new URL(req.url);
-  const lead = await confirmLead(url.searchParams.get("t") ?? "");
+  const lead = await confirmLead(url.searchParams.get("t") ?? "").catch(() => null);
   const base = process.env.SITE_URL || url.origin;
   if (!lead) return NextResponse.redirect(`${base}/nullmessung/bestaetigt?ungueltig=1`, 303);
   if (lead.status === "warteliste") return NextResponse.redirect(`${base}/nullmessung/bestaetigt`, 303);

@@ -2,6 +2,8 @@
 
 import { useRef, useState, type FormEvent } from "react";
 import Link from "next/link";
+import { sendViaWeb3Forms, type Web3FormsPayload } from "@/lib/web3forms";
+import { site } from "@/lib/site";
 
 const ROLES = ["Geschäftsführung", "Marketing", "Vertrieb", "Sonstige"];
 
@@ -10,6 +12,7 @@ export default function NullmessungForm({ cluster, clusterName }: { cluster: str
   const [status, setStatus] = useState<"idle" | "sending" | "done" | "error">("idle");
   const [error, setError] = useState("");
   const [waitlist, setWaitlist] = useState(false);
+  const [fallback, setFallback] = useState(false);
   const startedAt = useRef(Date.now());
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
@@ -33,14 +36,28 @@ export default function NullmessungForm({ cluster, clusterName }: { cluster: str
           elapsed: Date.now() - startedAt.current,
         }),
       });
-      const r = (await res.json().catch(() => ({}))) as { ok?: boolean; message?: string; status?: string };
+      const r = (await res.json().catch(() => ({}))) as { ok?: boolean; message?: string; status?: string; mail?: Web3FormsPayload };
       if (!res.ok || !r.ok) throw new Error(r.message || "Die Anfrage konnte nicht gesendet werden.");
+      if (r.mail) {
+        // Ausweichweg: gleicher Versand wie das Kontaktformular (Web3Forms aus dem Browser)
+        await sendViaWeb3Forms(r.mail, site.email);
+        setFallback(true);
+      }
       setWaitlist(r.status === "warteliste");
       setStatus("done");
     } catch (err) {
       setError(err instanceof Error ? err.message : "Die Anfrage konnte nicht gesendet werden.");
       setStatus("error");
     }
+  }
+
+  if (status === "done" && fallback) {
+    return (
+      <div className="rr-form-done" role="status">
+        <strong>Danke – Ihre Nullmessung ist angefragt.</strong>
+        <p>Wir melden uns per E-Mail, sobald Ihr Befund vorliegt.</p>
+      </div>
+    );
   }
 
   if (status === "done") {

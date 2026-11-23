@@ -73,7 +73,7 @@ export default async function ClusterPage({ params }: Props) {
     {
       role: "Vertrieb",
       problem: "Anfragen entstehen heute auch aus KI-Antworten. Ob Sie dort auftauchen, wissen Sie nicht.",
-      measurement: m ? `In ${fmtInt(m.promptCount)} Kaufentscheidungsfragen wurden ${hasProviders ? `${fmtInt(m.providerCount)} Anbieter` : `${fmtInt(m.uniqueDomains)} Domains als Quellen`} genannt.` : "Die Messung für dieses Feld liegt noch nicht vor.",
+      measurement: m ? `In ${fmtInt(m.promptCount)} Kaufentscheidungsfragen wurden ${hasProviders ? `${fmtInt(m.providerCount)} Anbieter genannt` : `${fmtInt(m.uniqueDomains)} Domains als Quellen zitiert`}.` : "Die Messung für dieses Feld liegt noch nicht vor.",
       benefit: ["Befund für Ihr Unternehmen mit Wettbewerbsvergleich", "20-Minuten-Gespräch zum Ergebnis", "Keine Zusage zu Anfragezahlen"],
     },
   ];
@@ -96,7 +96,7 @@ export default async function ClusterPage({ params }: Props) {
         kicker={`FÜR ANBIETER · ${c.name.toUpperCase()}`}
         title={
           m
-            ? `In ${fmtInt(m.promptCount)} Kaufentscheidungsfragen wurden ${hasProviders ? `${fmtInt(m.providerCount)} Anbieter` : `${fmtInt(m.uniqueDomains)} Domains als Quellen`} genannt. Vermutlich nicht Sie.`
+            ? `In ${fmtInt(m.promptCount)} Kaufentscheidungsfragen wurden ${hasProviders ? `${fmtInt(m.providerCount)} Anbieter genannt` : `${fmtInt(m.uniqueDomains)} Domains als Quellen zitiert`}. Vermutlich nicht Sie.`
             : `${c.name}: Werden Sie in KI-Antworten genannt?`
         }
       >

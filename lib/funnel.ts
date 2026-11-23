@@ -3,6 +3,8 @@ import { sendMail } from "@/lib/mail";
 import { measurementFor, measurementHistory } from "@/lib/measurement";
 import { computeFindings, isFreemail, normDomain, type Findings } from "@/lib/nullmessung";
 import { COMPARISON_STEP, confirmMail, day0, day14, day3, day30, day7, notifyMail, STEPS } from "@/lib/sequence";
+import { site } from "@/lib/site";
+import type { Web3FormsPayload } from "@/lib/web3forms";
 import { deleteLead, getLeads, leadBy, logEvent, newId, newToken, saveLead, type Lead } from "@/lib/store";
 
 export const ROLES = ["Geschäftsführung", "Marketing", "Vertrieb", "Sonstige"] as const;
@@ -15,7 +17,15 @@ export const baselineFor = (cluster: string) => measurementFor(cluster);
 
 export type CreateResult = { ok: true; status: "neu" | "warteliste" } | { ok: false; status: number; message: string };
 
-export async function createRequest(body: Record<string, unknown>): Promise<CreateResult> {
+export const FALLBACK_MESSAGE = "Danke – Ihre Nullmessung ist angefragt. Wir melden uns per E-Mail, sobald Ihr Befund vorliegt.";
+
+/** Voller Ablauf (Speicher, Double-Opt-in, Folge) nur mit Datenbank UND Resend; in der Entwicklung immer (Datei-Speicher, Konsole) */
+export const funnelReady =
+  process.env.NODE_ENV !== "production" || Boolean(process.env.DATABASE_URL && process.env.RESEND_API_KEY);
+
+type Valid = { company: string; domain: string; name: string; role: string; email: string; cluster: NonNullable<ReturnType<typeof clusterBySlug>> };
+
+function validate(body: Record<string, unknown>): Valid | { ok: false; status: number; message: string } {
   const company = str(body.company, 160);
   const domain = normDomain(str(body.domain, 200));
   const name = str(body.name, 120);
@@ -30,6 +40,42 @@ export async function createRequest(body: Record<string, unknown>): Promise<Crea
   if (!EMAIL_RE.test(email)) return { ok: false, status: 400, message: "Bitte geben Sie eine gültige E-Mail-Adresse an." };
   if (isFreemail(email)) return { ok: false, status: 400, message: "Bitte nutzen Sie Ihre geschäftliche E-Mail-Adresse." };
   if (body.consent !== true) return { ok: false, status: 400, message: "Bitte stimmen Sie der Verarbeitung Ihrer Angaben zu." };
+  return { company, domain, name, role, email, cluster };
+}
+
+/**
+ * Ausweichweg ohne Datenbank/Resend: dieselbe Zustellung wie das Kontaktformular auf /fachpartner (Web3Forms, Versand im Browser).
+ * Die Route liefert die fertige Nachricht zurück; der Browser sendet sie ab.
+ */
+export function createFallback(body: Record<string, unknown>): { ok: true; mail: Web3FormsPayload } | { ok: false; status: number; message: string } {
+  const v = validate(body);
+  if (!("cluster" in v)) return v;
+  return {
+    ok: true,
+    mail: {
+      subject: `Nullmessung angefragt (${v.cluster.name}) – ${v.company}`.replace(/[\r\n]+/g, " ").slice(0, 200),
+      from_name: site.domain,
+      replyto: v.email,
+      message: [
+        `Nullmessung angefragt über ${site.domain} (ohne Datenbank, Ausweichweg)`,
+        "",
+        `Cluster: ${v.cluster.name} (${v.cluster.slug})`,
+        `Firma: ${v.company}`,
+        `Domain: ${v.domain}`,
+        `Name: ${v.name}`,
+        `Rolle: ${v.role}`,
+        `E-Mail: ${v.email}`,
+        "",
+        `Einwilligung zur Verarbeitung: ${new Date().toISOString()}`,
+      ].join("\n"),
+    },
+  };
+}
+
+export async function createRequest(body: Record<string, unknown>): Promise<CreateResult> {
+  const v = validate(body);
+  if (!("cluster" in v)) return v;
+  const { company, domain, name, role, email, cluster } = v;
 
   const m = baselineFor(cluster.slug);
   const lead: Lead = {

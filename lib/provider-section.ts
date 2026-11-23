@@ -21,7 +21,7 @@ export const providerSectionLive = (clusterSlug: string) => providerSectionFor(c
 
 export function shortAnswer({ cluster, m }: ProviderSectionData): string {
   const top = m.providers[0];
-  const base = `${m.engines.join(", ")} haben im Messzeitraum ${m.dateLabel} in ${fmtInt(m.answerCount)} Antworten auf ${fmtInt(m.promptCount)} Kaufentscheidungsfragen zu ${cluster.topicLabel} ${fmtInt(m.totalCitations)} Quellen von ${fmtInt(m.uniqueDomains)} Domains genannt.`;
+  const base = `${m.engines.join(", ")} haben im Messzeitraum ${m.dateLabel} in ${fmtInt(m.answerCount)} Antworten auf ${fmtInt(m.promptCount)} Kaufentscheidungsfragen zu ${cluster.topicLabel} ${fmtInt(m.totalCitations)} Quellen von ${fmtInt(m.uniqueDomains)} Domains zitiert.`;
   if (m.granularity === "aggregate") {
     return `${base} Die Messdatei weist ${m.providers.length} Anbieter-Domains unter den meistzitierten Quellen aus; die meistzitierte ist ${top.name} mit ${fmtInt(top.citations)} Zitationen. Ein Anbieter, der dort nicht steht, wurde in den ausgewerteten Ranglisten nicht genannt.`;
   }

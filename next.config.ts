@@ -1,11 +1,18 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Messdateien werden zur Laufzeit gelesen (Befund, Cron, Admin) und müssen im Deployment liegen
+  outputFileTracingIncludes: { "/**/*": ["./content/measurements/**/*"] },
   async headers() {
     return [
       {
         source: "/:path*",
         headers: [{ key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains" }],
+      },
+      {
+        // Persönliche Befunde und Abmeldung: nie indexieren
+        source: "/:path(befund|abmelden|nullmessung)/:rest*",
+        headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }],
       },
       {
         // Staging- und Preview-URLs (*.vercel.app) dürfen nicht mit der echten Domain konkurrieren

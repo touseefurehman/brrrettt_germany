@@ -92,6 +92,23 @@ export default function DatenschutzPage() {
           Aufbewahrungspflichten entgegenstehen.
         </p>
 
+        <h2>3a. Nullmessung, Befundseite und E-Mail-Folge</h2>
+        <p>
+          Wenn Sie eine kostenlose Nullmessung anfordern, verarbeiten wir Firmenname, Domain, Vor- und Nachname, Rolle und geschäftliche
+          E-Mail-Adresse. Wir gleichen Ihr Unternehmen mit unserer Messung ab, speichern das Ergebnis und stellen es auf einer nicht
+          öffentlichen Befundseite bereit, die nur über einen zufälligen Link erreichbar ist. Rechtsgrundlage ist Ihre Einwilligung
+          (Art. 6 Abs. 1 lit. a DSGVO), die Sie im Formular erteilen und im Double-Opt-in-Verfahren per Bestätigungslink in einer
+          E-Mail bestätigen. Erst danach schalten wir den Befund frei und senden die Folge-E-Mails (nach 3, 7 und 14 Tagen sowie bei
+          einer neuen Messung nach etwa 30 Tagen).
+        </p>
+        <p>
+          Für Speicherung und Versand setzen wir Dienstleister als Auftragsverarbeiter ein: Resend (E-Mail-Versand) und einen
+          Datenbankanbieter (Neon bzw. Vercel Postgres). Unbestätigte Anfragen löschen wir nach 30 Tagen. Bestätigte Anfragen speichern wir,
+          solange die Kommunikation zur Nullmessung andauert, längstens bis zum Widerruf oder zur Abmeldung. In jeder E-Mail finden Sie
+          einen Abmeldelink; die Abmeldung stoppt sofort alle weiteren Nachrichten. Sie können Ihre Einwilligung jederzeit mit Wirkung für
+          die Zukunft widerrufen.
+        </p>
+
         <h2>4. Schriftarten</h2>
         <p>
           Diese Website verwendet die Schriftart „DM Sans“. Sie wird lokal von unserem Server ausgeliefert; beim

@@ -6,6 +6,9 @@ import { PageIntro } from "../Subpage";
 import Markdown from "../rank-rent/Markdown";
 import { BarChart, SmallMultiples } from "./Charts";
 import CiteBox from "./CiteBox";
+import ProviderSection from "../partners/ProviderSection";
+import { clusterForReport, clusterPath } from "@/lib/clusters";
+import { providerFaqs, providerSectionFor } from "@/lib/provider-section";
 import { HUB_NAME, HUB_PATH } from "@/lib/elektropruefung";
 import { formatDate, PARTNER_PAGE_PATH } from "@/lib/rank-rent";
 import { site } from "@/lib/site";
@@ -13,7 +16,7 @@ import { dec, int, pct, REPORT_BASE, REPORT_BASE_NAME, reportPath, sourceTypeOrd
 
 const orgId = `${site.url}/#organization`;
 
-export function reportSchemas(r: Report) {
+export function reportSchemas(r: Report, extraFaqs: [string, string][] = []) {
   const url = `${site.url}${reportPath(r)}`;
   const m = r.methodology;
   return [
@@ -51,7 +54,7 @@ export function reportSchemas(r: Report) {
       variableMeasured: "Share of Voice in KI-Antworten",
       keywords: ["DGUV V3", "Elektroprüfung", "KI-Suche", "Share of Voice", ...m.engines],
     },
-    faqSchema(r.faq.map((f): [string, string] => [f.question, f.answer])),
+    faqSchema([...r.faq.map((f): [string, string] => [f.question, f.answer]), ...extraFaqs]),
   ];
 }
 
@@ -148,10 +151,12 @@ export default function ReportView({ r }: { r: Report }) {
   const url = `${site.url}${path}`;
   const m = r.methodology;
   const chartList = charts(r);
+  const cluster = clusterForReport(r.slug);
+  const section = cluster ? providerSectionFor(cluster.slug) : null;
 
   return (
     <>
-      {reportSchemas(r).map((s, i) => (
+      {reportSchemas(r, section ? providerFaqs(section) : []).map((s, i) => (
         <JsonLd key={i} data={s} />
       ))}
 
@@ -218,6 +223,8 @@ export default function ReportView({ r }: { r: Report }) {
         </dl>
       </section>
 
+      {section && <ProviderSection data={section} pageUrl={url} />}
+
       <section className="section page-width section-tight">
         <h2>Häufige Fragen</h2>
         <FaqList faqs={r.faq.map((f): [string, string] => [f.question, f.answer])} />
@@ -227,11 +234,22 @@ export default function ReportView({ r }: { r: Report }) {
         <CiteBox text={`Quelle: ${site.domain}, ${r.shortTitle}`} url={url} />
       </section>
 
+      {cluster && (
+        <section className="section page-width section-tight">
+          <aside className="partner-box">
+            <strong>Für Anbieter: Werden Sie in diesem Markt genannt?</strong>
+            <p>
+              <Link href={`${clusterPath(cluster)}#nullmessung`}>→ Kostenlose Nullmessung</Link>
+            </p>
+          </aside>
+        </section>
+      )}
+
       <section className="section page-width section-tight">
         <aside className="partner-box">
           <strong>Sie sind Fachbetrieb oder Prüfdienstleister? So werden Sie in KI-Antworten sichtbar</strong>
           <p>
-            Auf {site.domain} vergeben wir je Prüfbereich und Objekttyp einen exklusiven Partnerplatz.{" "}
+            Auf {site.domain} vergeben wir je Feld einen exklusiven, bundesweiten Partnerplatz.{" "}
             <Link href={PARTNER_PAGE_PATH}>Mehr für Fachpartner</Link>
           </p>
           <p>

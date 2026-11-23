@@ -1,0 +1,14 @@
+{
+  "cluster": "rlt-klima",
+  "_todo": "TODO: Fragenset (41 Fragen) von der Redaktion liefern; nicht erfinden.",
+  "engines": [
+    "chatgpt",
+    "perplexity",
+    "gemini"
+  ],
+  "intents": [
+    "beauftragung",
+    "anbietercheck"
+  ],
+  "prompts": []
+}

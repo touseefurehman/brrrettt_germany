@@ -1,3 +1,5 @@
+import { clusterPath, publishedClusters } from "@/lib/clusters";
+import { measurementFor } from "@/lib/measurement";
 import { audiences, externerBetreibermanager } from "@/lib/leistungen";
 import { leistungsseiten } from "@/lib/leistungsseiten";
 import { fullCompanyName, isSet, site } from "@/lib/site";
@@ -96,6 +98,13 @@ export function GET() {
       "Studien-Sponsoring",
       "/fachpartner/studien-sponsoring",
       "Sponsoring von Studien und KI-Reports; gekennzeichnet, ohne Garantie für KI-Platzierungen.",
+    ),
+    ...publishedClusters.map((c) =>
+      link(
+        `Fachpartner ${c.name}`,
+        clusterPath(c),
+        `Kostenlose Nullmessung und Fachpartnerplatz im Feld ${c.name}; Zahlen aus der Messung vom ${measurementFor(c.slug)?.dateLabel ?? "–"}.`,
+      ),
     ),
     "",
   ].join("\n");

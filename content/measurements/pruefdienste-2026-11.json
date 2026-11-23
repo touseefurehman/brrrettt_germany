@@ -1,0 +1,232 @@
+{
+  "cluster": "pruefdienste",
+  "month": "2026-11",
+  "mock": false,
+  "source": "report-aggregate",
+  "granularity": "aggregate",
+  "reportSlug": "ki-report-dguv-v3-2026",
+  "dateLabel": "10. und 11. November 2026",
+  "temporalCoverage": "2026-11-10/2026-11-11",
+  "engines": [
+    "ChatGPT",
+    "Perplexity",
+    "Gemini"
+  ],
+  "promptCount": 30,
+  "answerCount": 122,
+  "totalCitations": 811,
+  "uniqueDomains": 286,
+  "providerCount": null,
+  "rankingComplete": false,
+  "rankingNote": "Die Messdatei enthält bisher nur die Anbieter-Domains der Top-10-Liste des Reports. Die vollständige Liste aller genannten Anbieter folgt mit der Einzelauswertung der Antworten.",
+  "top10ShareCombined": 33,
+  "maxSingleShare": 4.2,
+  "outsideProviderShare": 24.8,
+  "topDomains": [
+    {
+      "domain": "baua.de",
+      "citations": 29,
+      "shareOfVoice": 4.2,
+      "type": "Behörden, Unfallversicherung & Normung"
+    },
+    {
+      "domain": "dpg-gruppe.de",
+      "citations": 26,
+      "shareOfVoice": 4,
+      "type": "Prüfdienstleister & Fachbetriebe"
+    },
+    {
+      "domain": "dguv.de",
+      "citations": 23,
+      "shareOfVoice": 4,
+      "type": "Behörden, Unfallversicherung & Normung"
+    },
+    {
+      "domain": "esg-gesellschaft.de",
+      "citations": 24,
+      "shareOfVoice": 3.8,
+      "type": "Prüfdienstleister & Fachbetriebe"
+    },
+    {
+      "domain": "sfc-group.de",
+      "citations": 25,
+      "shareOfVoice": 3.2,
+      "type": "Prüfdienstleister & Fachbetriebe"
+    },
+    {
+      "domain": "piepenbrock.de",
+      "citations": 19,
+      "shareOfVoice": 3,
+      "type": "Prüfdienstleister & Fachbetriebe"
+    },
+    {
+      "domain": "oms-pruefservice.de",
+      "citations": 17,
+      "shareOfVoice": 2.8,
+      "type": "Prüfdienstleister & Fachbetriebe"
+    },
+    {
+      "domain": "abpruefservice.de",
+      "citations": 23,
+      "shareOfVoice": 2.7,
+      "type": "Prüfdienstleister & Fachbetriebe"
+    },
+    {
+      "domain": "gp-pruefservice.de",
+      "citations": 20,
+      "shareOfVoice": 2.7,
+      "type": "Prüfdienstleister & Fachbetriebe"
+    },
+    {
+      "domain": "e-service-check.de",
+      "citations": 22,
+      "shareOfVoice": 2.5,
+      "type": "Prüfdienstleister & Fachbetriebe"
+    }
+  ],
+  "providers": [
+    {
+      "name": "dpg-gruppe.de",
+      "domain": "dpg-gruppe.de",
+      "mentions": null,
+      "shareOfAnswers": null,
+      "citations": 26,
+      "shareOfVoice": 4
+    },
+    {
+      "name": "sfc-group.de",
+      "domain": "sfc-group.de",
+      "mentions": null,
+      "shareOfAnswers": null,
+      "citations": 25,
+      "shareOfVoice": 3.2
+    },
+    {
+      "name": "esg-gesellschaft.de",
+      "domain": "esg-gesellschaft.de",
+      "mentions": null,
+      "shareOfAnswers": null,
+      "citations": 24,
+      "shareOfVoice": 3.8
+    },
+    {
+      "name": "abpruefservice.de",
+      "domain": "abpruefservice.de",
+      "mentions": null,
+      "shareOfAnswers": null,
+      "citations": 23,
+      "shareOfVoice": 2.7
+    },
+    {
+      "name": "e-service-check.de",
+      "domain": "e-service-check.de",
+      "mentions": null,
+      "shareOfAnswers": null,
+      "citations": 22,
+      "shareOfVoice": 2.5
+    },
+    {
+      "name": "gp-pruefservice.de",
+      "domain": "gp-pruefservice.de",
+      "mentions": null,
+      "shareOfAnswers": null,
+      "citations": 20,
+      "shareOfVoice": 2.7
+    },
+    {
+      "name": "piepenbrock.de",
+      "domain": "piepenbrock.de",
+      "mentions": null,
+      "shareOfAnswers": null,
+      "citations": 19,
+      "shareOfVoice": 3
+    },
+    {
+      "name": "oms-pruefservice.de",
+      "domain": "oms-pruefservice.de",
+      "mentions": null,
+      "shareOfAnswers": null,
+      "citations": 17,
+      "shareOfVoice": 2.8
+    }
+  ],
+  "byEngine": {
+    "ChatGPT": {
+      "answers": 32,
+      "providers": [
+        {
+          "name": "dpg-gruppe.de",
+          "domain": "dpg-gruppe.de",
+          "citations": 12,
+          "shareOfVoice": 12.9
+        },
+        {
+          "name": "devi-tec.de",
+          "domain": "devi-tec.de",
+          "citations": 10,
+          "shareOfVoice": 6.5
+        }
+      ]
+    },
+    "Perplexity": {
+      "answers": 60,
+      "providers": [
+        {
+          "name": "abpruefservice.de",
+          "domain": "abpruefservice.de",
+          "citations": 19,
+          "shareOfVoice": 3.2
+        },
+        {
+          "name": "sfc-group.de",
+          "domain": "sfc-group.de",
+          "citations": 18,
+          "shareOfVoice": 3.4
+        },
+        {
+          "name": "piepenbrock.de",
+          "domain": "piepenbrock.de",
+          "citations": 16,
+          "shareOfVoice": 3.8
+        },
+        {
+          "name": "gp-pruefservice.de",
+          "domain": "gp-pruefservice.de",
+          "citations": 15,
+          "shareOfVoice": 2.8
+        }
+      ]
+    },
+    "Gemini": {
+      "answers": 30,
+      "providers": [
+        {
+          "name": "esg-gesellschaft.de",
+          "domain": "esg-gesellschaft.de",
+          "citations": 10,
+          "shareOfVoice": 13.3
+        },
+        {
+          "name": "gp-pruefservice.de",
+          "domain": "gp-pruefservice.de",
+          "citations": 4,
+          "shareOfVoice": 5.3
+        },
+        {
+          "name": "oms-pruefservice.de",
+          "domain": "oms-pruefservice.de",
+          "citations": 3,
+          "shareOfVoice": 5.1
+        }
+      ]
+    }
+  },
+  "scores": {
+    "sovScore": null,
+    "citedAnswers": null,
+    "partnerMentions": null,
+    "anbietercheckSov": null,
+    "anbietercheckAnswers": null
+  },
+  "answers": []
+}

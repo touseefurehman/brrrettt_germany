@@ -5,15 +5,15 @@ import JsonLd, { faqSchema } from "@/components/JsonLd";
 import FachpartnerForm from "@/components/partners/FachpartnerForm";
 import { PageIntro } from "@/components/Subpage";
 import { BOOKING_URL, partnerContact } from "@/lib/partner-config";
-import { fachseiten, fachseitenGesamt, slotUebersicht, zielgruppen } from "@/lib/partner-medienkit";
-import { regionen } from "@/lib/partner-regions";
+import { fachseiten, fachseitenGesamt, zielgruppen } from "@/lib/partner-medienkit";
+import { clusterPath, clusters, partnerStatusLabel } from "@/lib/clusters";
 import { FACHPARTNER_PATH, messen, SPONSORING_PATH, upcomingReports } from "@/lib/partners";
 import { site } from "@/lib/site";
 import { int, latestReport, pct, REPORT_BASE, reportPath } from "@/lib/sov";
 
 const title = "Exklusiver Fachpartner werden | betreibermanager.de";
 const description =
-  "Exklusiver Fachpartner auf betreibermanager.de: ein Partner je Gebiet oder Vertikale, 12 Monate Sichtbarkeit auf dem Portal für Betreiberpflichten, Anfragen direkt an Sie.";
+  "Exklusiver Fachpartner auf betreibermanager.de: ein bundesweiter Partner je Feld, 12 Monate Sichtbarkeit auf dem Portal für Betreiberpflichten, Anfragen direkt an Sie.";
 
 export const metadata: Metadata = {
   title: { absolute: title },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 const roles: [string, string[]][] = [
   [
     "CEO / Geschäftsführung",
-    ["Planbares 12-Monats-Modell statt Einzelkampagnen", "Exklusivität je Gebiet oder Vertikale", "Preis auf Anfrage, abgestimmt auf Ihr Gebiet"],
+    ["Planbares 12-Monats-Modell statt Einzelkampagnen", "Exklusivität: ein bundesweiter Partner je Feld", "Preis auf Anfrage, im Gespräch nach der Nullmessung"],
   ],
   [
     "Marketing",
@@ -39,14 +39,14 @@ const roles: [string, string[]][] = [
     "Vertrieb",
     [
       "Strukturierte Anfragen mit Standort, Umfang und Ansprechpartner",
-      "Regionale Tourendichte durch Anfragen aus Ihrem Gebiet",
+      "Sichtbarkeit in dem Feld, in dem Einkäufer KI-Systeme fragen",
       "Anfragen gehen direkt an Sie",
     ],
   ],
 ];
 
 const reasons: [string, string][] = [
-  ["Exklusivität statt Preiskampf", "Pro Gebiet oder Vertikale gibt es einen Partner. Ihre Seite wird nicht mit Wettbewerbern geteilt."],
+  ["Exklusivität statt Preiskampf", "Pro Feld gibt es einen bundesweiten Partner. Ihre Seite wird nicht mit Wettbewerbern geteilt."],
   [
     "365 Tage statt wenige Messetage",
     "Ihre Messepräsenz endet mit dem Messestand. Die Partnerschaft hält Ihre Sichtbarkeit über zwölf Monate aufrecht.",
@@ -70,7 +70,7 @@ const reasons: [string, string][] = [
 ];
 
 const steps = [
-  "Ein Partner pro Gebiet oder Vertikale",
+  "Ein bundesweiter Partner pro Feld",
   "Laufzeit: 12 Monate",
   "Ihre Partnerbox, gekennzeichnet als „Anzeige“, getrennt von den redaktionellen Inhalten",
   "Anfragen gehen direkt an Sie",
@@ -81,7 +81,7 @@ const steps = [
 const faqs: [string, string][] = [
   [
     "Was bedeutet Exklusivität?",
-    "Pro Gebiet oder Vertikale gibt es einen Fachpartner. Solange Ihre Partnerschaft läuft, erscheint kein Wettbewerber in diesem Platz.",
+    "Pro Feld gibt es einen bundesweiten Fachpartner. Solange Ihre Partnerschaft läuft, erscheint kein Wettbewerber in diesem Platz.",
   ],
   [
     "Garantieren Sie Platzierungen in ChatGPT & Co.?",
@@ -91,7 +91,7 @@ const faqs: [string, string][] = [
     "Wie wird Werbung gekennzeichnet?",
     "Partnerinhalte erscheinen als „Anzeige“ und getrennt von den redaktionellen Inhalten. Report-Ergebnisse und Methodik bleiben unabhängig.",
   ],
-  ["Was kostet die Partnerschaft?", "Auf Anfrage. Der Preis richtet sich nach Gebiet bzw. Vertikale. Wir nennen ihn im Gespräch."],
+  ["Was kostet die Partnerschaft?", "Auf Anfrage. Wir nennen ihn nach der kostenlosen Nullmessung im 20-Minuten-Gespräch."],
   [
     "Wie kommen die Anfragen bei uns an?",
     "Direkt per E-Mail an Sie, mit Angaben zu Standort, Umfang und Ansprechpartner. Eine Auswertung erhalten Sie quartalsweise.",
@@ -126,7 +126,7 @@ export default function Fachpartner() {
           offers: {
             "@type": "Offer",
             name: "Exklusive Fachpartnerschaft, 12 Monate",
-            description: "Ein Partner je Gebiet oder Vertikale. Preis auf Anfrage.",
+            description: "Ein bundesweiter Partner je Feld. Preis auf Anfrage.",
             seller: { "@id": `${site.url}/#organization` },
           },
           isPartOf: { "@id": `${site.url}/#website` },
@@ -141,7 +141,7 @@ export default function Fachpartner() {
         <p>Ihre Messe dauert wenige Tage – Ihre Sichtbarkeit 365.</p>
         <p>
           Für Geschäftsführung, Marketing und Vertrieb von Fachbetrieben und Messeausstellern: Als Fachpartner Betreiberpflichten
-          sind Sie auf unserem Portal je Gebiet oder Vertikale exklusiv präsent.
+          sind Sie auf unserem Portal in Ihrem Feld exklusiv präsent.
         </p>
         <p className="rr-partner-actions">
           <a className="rr-btn" href="#anfrage">
@@ -210,30 +210,33 @@ export default function Fachpartner() {
       </section>
 
       <section className="section page-width section-tight">
-        <h2>Kernthemen für Partnerschaften</h2>
-        <p className="muted-note">Preise für alle Themen: auf Anfrage.</p>
+        <h2>Die zwölf Felder</h2>
+        <p className="muted-note">Je Feld ein eigener KI-Report und genau ein bundesweiter Fachpartnerplatz. Preis: auf Anfrage.</p>
         <div className="link-cards three">
-          {slotUebersicht.map(({ thema, frei, gesamt }) => (
-            <Link key={thema.slug} href={thema.href}>
-              <strong>{thema.name}</strong>
-              <span>{thema.text}</span>
-              <span>
-                Bundesländer frei: {frei} von {gesamt} · Preis auf Anfrage
-              </span>
-            </Link>
-          ))}
+          {clusters.map((c) =>
+            c.status === "published" ? (
+              <Link key={c.slug} href={clusterPath(c)}>
+                <strong>{c.name}</strong>
+                <span>Report live · {partnerStatusLabel[c.partnerStatus]}</span>
+                <span>Nullmessung anfordern</span>
+              </Link>
+            ) : (
+              <div key={c.slug} className="rr-benefit">
+                <strong>{c.name}</strong>
+                <span>Report in Erhebung · {partnerStatusLabel[c.partnerStatus]}</span>
+              </div>
+            ),
+          )}
         </div>
       </section>
 
       <section className="section page-width section-tight prose">
         <h2>So funktioniert die Exklusivität</h2>
         <ul>
-          <li>Ein Partner pro Thema × Objektart × Bundesland.</li>
-          <li>Anfragen von Betreibern werden anhand der Postleitzahl des Objekts dem Bundesland zugeordnet und an den Partner dieses Gebiets weitergeleitet.</li>
-          <li>Bundesweite Exklusivität für ein Thema ist auf Anfrage möglich.</li>
-          <li>Gibt es in einem Gebiet noch keinen Partner, bearbeiten wir die Anfrage selbst.</li>
+          <li>Ein Partner pro Feld, bundesweit.</li>
+          <li>Der Platz wird für 12 Monate vergeben; vorab erhalten Sie eine kostenlose Nullmessung für Ihr Unternehmen.</li>
+          <li>Der Preis wird nach der Nullmessung im 20-Minuten-Gespräch genannt.</li>
         </ul>
-        <p className="muted-note">Gebietsraster: {regionen.map((x) => x.name).join(", ")}.</p>
       </section>
 
       <section className="section page-width section-tight">
@@ -258,11 +261,8 @@ export default function Fachpartner() {
             </ul>
           </div>
           <div className="rr-benefit">
-            <strong>Regionale Exklusivität</strong>
-            <span>
-              Ein Partner je Thema, Objektart und Bundesland ({regionen.length} Bundesländer, {slotUebersicht.length} Themen).
-              Bundesweit auf Anfrage.
-            </span>
+            <strong>Exklusivität</strong>
+            <span>Ein bundesweiter Partner je Feld, {clusters.length} Felder mit eigenem KI-Report.</span>
           </div>
         </div>
         {partnerContact && (
@@ -351,7 +351,7 @@ export default function Fachpartner() {
       <section id="anfrage" className="section page-width section-tight">
         <h2>Gespräch anfragen</h2>
         <p>
-          Nennen Sie uns Leistung, Vertikale und Region. Wir melden uns mit der Verfügbarkeit und den Konditionen.
+          Nennen Sie uns Leistung, Feld und Einsatzgebiet. Wir melden uns mit der Verfügbarkeit und den Konditionen.
         </p>
         <FachpartnerForm />
       </section>

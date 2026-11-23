@@ -21,6 +21,8 @@ import {
   publishedObjekte,
 } from "@/lib/rank-rent";
 import { leistungsseiten } from "@/lib/leistungsseiten";
+import { clusterPath, publishedClusters } from "@/lib/clusters";
+import { measurementFor } from "@/lib/measurement";
 import { SPONSORING_PATH } from "@/lib/partners";
 import { ARTICLE_BASE, articlePath, publishedArticles, REPORT_BASE, reportPath, reports } from "@/lib/sov";
 import { hasAddress, site } from "@/lib/site";
@@ -69,6 +71,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...publishedLandingpages.map((l): [string, number, string] => [rrLandingPath(l), 0.7, l.updated]),
     [PARTNER_PAGE_PATH, 0.7, "2026-11-20"],
     [SPONSORING_PATH, 0.6, "2026-11-20"],
+    // Fachpartner-Seiten je veröffentlichtem Cluster (/befund und /admin bewusst nicht enthalten)
+    ...publishedClusters.map((c): [string, number, string] => [
+      clusterPath(c),
+      0.7,
+      measurementFor(c.slug)?.temporalCoverage.split("/").pop() ?? "2026-11-20",
+    ]),
     // Share-of-Voice-Inhalte: alle Reports; Fachbeiträge nur veröffentlichte (Entwürfe nie)
     [REPORT_BASE, 0.6, reports.reduce((max, r) => (r.datePublished > max ? r.datePublished : max), "")],
     ...reports.map((r): [string, number, string] => [reportPath(r), 0.8, r.datePublished]),

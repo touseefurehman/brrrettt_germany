@@ -1,5 +1,4 @@
 import sitemap from "@/app/sitemap";
-import { slots, regionen, themen } from "@/lib/partner-regions";
 import { site } from "@/lib/site";
 import { ARTICLE_BASE, REPORT_BASE } from "@/lib/sov";
 
@@ -41,9 +40,3 @@ export const fachseiten: [label: string, count: number][] = [
 export const fachseitenGesamt = fachseiten.reduce((sum, [, n]) => sum + n, 0);
 /** Alle URLs der Sitemap (zur Gegenprobe) */
 export const sitemapUrls = paths.length;
-
-/** Freie Bundesland-Slots je Thema (Slots „bundesweit“ zählen nicht mit) */
-export const slotUebersicht = themen.map((t) => {
-  const own = slots.filter((s) => s.thema === t.slug && s.region !== "bundesweit");
-  return { thema: t, frei: own.filter((s) => s.status === "frei").length, gesamt: regionen.length };
-});

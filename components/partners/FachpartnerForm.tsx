@@ -127,12 +127,12 @@ export default function FachpartnerForm({
       </div>
       <div className="form-row">
         <label>
-          Leistung / Vertikale
+          Leistung / Feld
           <input name="leistung" type="text" placeholder="z. B. Brandschutzprüfung, Elektrotechnik" required maxLength={300} />
         </label>
         <label>
-          Region
-          <input name="region" type="text" placeholder="z. B. PLZ-Gebiete oder Bundesländer" required maxLength={300} />
+          Einsatzgebiet
+          <input name="region" type="text" placeholder="z. B. bundesweit oder Einsatzgebiet" required maxLength={300} />
         </label>
       </div>
       <label>

@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import JsonLd, { serviceSchema } from "@/components/JsonLd";
+import JsonLd, { serviceSchema, webPageSchema } from "@/components/JsonLd";
+import PageStand from "@/components/PageStand";
+import { pageModified } from "@/lib/page-meta";
 import { CoordinationNote, InquirySection, LegalNotice } from "@/components/PageParts";
 import { DeadlineTable, PageIntro } from "@/components/Subpage";
 import { Check } from "@/components/icons";
@@ -28,6 +30,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: area.description,
     alternates: { canonical: path },
     openGraph: { url: path, title: area.title, description: area.description },
+    // Offene redaktionelle Punkte: nicht indexieren, bis der Inhalt geprüft ist
+    ...(area.todoRedaktion?.length && { robots: { index: false, follow: true } }),
   };
 }
 
@@ -35,6 +39,7 @@ export default async function AreaPage({ params }: Props) {
   const area = areaBySlug((await params).slug);
   if (!area || isMovedArea(area.slug)) notFound();
   const path = `/pruefbereiche/${area.slug}`;
+  const modified = pageModified[path];
   const others = areas.filter((a) => a.slug !== area.slug);
   const related = articlesForArea(area.slug);
   const fireExtinguishers = area.slug === "brandschutz" && leistungsseiten.find((p) => p.slug === "feuerloescher-pruefung");
@@ -42,15 +47,29 @@ export default async function AreaPage({ params }: Props) {
   return (
     <>
       <JsonLd data={serviceSchema(area.serviceType, area.description, path, area.name)} />
+      {modified && <JsonLd data={webPageSchema(path, area.h1, modified)} />}
+      {area.todoRedaktion?.length ? (
+        <div hidden data-todo-redaktion>
+          {`TODO-Redaktion: ${area.todoRedaktion.join(" | ")}`}
+        </div>
+      ) : null}
       <PageIntro crumbs={[["Prüfbereiche", "/#pruefbereiche"], [area.name, path]]} kicker="PRÜFBEREICH" title={area.h1}>
         {area.intro.map((p) => (
           <p key={p.slice(0, 40)}>{p}</p>
         ))}
+        {modified && <PageStand iso={modified} />}
       </PageIntro>
+
+      <section className="section page-width section-tight">
+        <div className="short-answer">
+          <span className="short-answer-label">Kurzantwort</span>
+          <p>{area.intro[0]}</p>
+        </div>
+      </section>
 
       <section className="section page-width prose-grid">
         <div>
-          <h2>Was geprüft wird</h2>
+          <h2>Was wird im Prüfbereich {area.name} geprüft?</h2>
           <ul className="check-list">
             {area.scope.map((s) => (
               <li key={s}>
@@ -60,7 +79,7 @@ export default async function AreaPage({ params }: Props) {
           </ul>
         </div>
         <div>
-          <h2>Was wir übernehmen</h2>
+          <h2>Was übernimmt betreibermanager.de?</h2>
           <ol className="task-list">
             {area.tasks.map((t) => (
               <li key={t}>{t}</li>
@@ -74,7 +93,7 @@ export default async function AreaPage({ params }: Props) {
       </section>
 
       <section className="section page-width section-tight">
-        <h2>Prüffristen {area.name}</h2>
+        <h2>Welche Prüffristen gelten im Prüfbereich {area.name}?</h2>
         <DeadlineTable rows={area.rows} />
         <p className="muted-note">
           Richtwerte und Höchstfristen. Die verbindliche Frist ergibt sich aus der Gefährdungsbeurteilung, Herstellerangaben

@@ -1,7 +1,9 @@
 import ContentBlocks, { RelatedLinks, SourceList } from "./ContentBlocks";
 import FaqList from "./FaqList";
 import { ArrowUpRight, Check } from "./icons";
-import JsonLd, { faqSchema, serviceSchema } from "./JsonLd";
+import JsonLd, { faqSchema, serviceSchema, webPageSchema } from "./JsonLd";
+import PageStand from "./PageStand";
+import { pageModified } from "@/lib/page-meta";
 import { CoordinationNote, InquirySection, LegalNotice } from "./PageParts";
 import { PageIntro } from "./Subpage";
 import { btnPrimary } from "./ui";
@@ -20,9 +22,11 @@ export default function ServicePageView({
   path: string;
   crumbs: [name: string, path: string][];
 }) {
+  const modified = pageModified[path];
   return (
     <>
       <JsonLd data={serviceSchema(page.serviceType, page.description, path, page.name)} />
+      {modified && <JsonLd data={webPageSchema(path, page.h1, modified)} />}
       <JsonLd data={faqSchema(page.faqs)} />
       <PageIntro crumbs={crumbs} kicker={page.kicker} title={page.h1}>
         {page.lead.map((p) => (
@@ -35,6 +39,7 @@ export default function ServicePageView({
             </li>
           ))}
         </ul>
+        {modified && <PageStand iso={modified} />}
         <div>
           <a href="#anfrage" className={btnPrimary}>
             Bestandsaufnahme anfragen <ArrowUpRight />

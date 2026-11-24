@@ -1,5 +1,5 @@
 {
   "cluster": "brandschutz",
-  "_todo": "Bekannte Anbieternamen für die Erkennung von Nennungen: [{name, aliases[], domain}]",
+  "_todo": "Bekannte Anbieternamen: [{name, aliases[], domain}]",
   "brands": []
 }

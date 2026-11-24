@@ -249,7 +249,7 @@ export default function ReportView({ r }: { r: Report }) {
         <aside className="partner-box">
           <strong>Sie sind Fachbetrieb oder Prüfdienstleister? So werden Sie in KI-Antworten sichtbar</strong>
           <p>
-            Auf {site.domain} vergeben wir je Feld einen exklusiven, bundesweiten Partnerplatz.{" "}
+            Auf {site.domain} vergeben wir je Prüfbereich einen exklusiven, bundesweiten Partnerplatz.{" "}
             <Link href={PARTNER_PAGE_PATH}>Mehr für Fachpartner</Link>
           </p>
           <p>

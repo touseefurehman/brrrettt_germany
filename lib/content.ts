@@ -62,6 +62,11 @@ export type Area = {
   scope: string[];
   rows: DeadlineRow[];
   tasks: string[];
+  /**
+   * Offene redaktionelle Punkte (Pflichtbestandteile, die ohne geprüften Text nicht ergänzt werden dürfen).
+   * Solange die Liste nicht leer ist: Seite noindex, nicht in der Sitemap, TODO im Quelltext.
+   */
+  todoRedaktion?: string[];
 };
 
 export const areas: Area[] = [
@@ -137,6 +142,11 @@ export const areas: Area[] = [
       "Sachkundige, Fachfirmen und Prüfsachverständige beauftragen und Termine bündeln",
       "Prüfberichte und Mängel zentral dokumentieren, Behebung bis zum Abschluss verfolgen",
     ],
+    todoRedaktion: [
+      "FAQ (häufige Fragen mit geprüften Antworten) ergänzen; ohne FAQ kein FAQPage-Schema",
+      "Quellenliste mit geprüften Fundstellen (Regelwerk, Fundstelle, Fassung) wie auf /vdi-6022 ergänzen",
+      "Rechtsinhalt der Seite fachlich prüfen lassen, danach TODO entfernen (Seite wird wieder indexierbar)",
+    ],
   },
   {
     slug: "aufzugsanlagen",
@@ -168,6 +178,11 @@ export const areas: Area[] = [
       "Prüftermine mit ZÜS und Wartungsunternehmen abstimmen, damit die Anlage nur einmal stillsteht",
       "Notfallplan und Notrufkonzept auf Vollständigkeit prüfen",
       "Prüfberichte ablegen, Mängelfristen überwachen und Nachprüfungen veranlassen",
+    ],
+    todoRedaktion: [
+      "FAQ (häufige Fragen mit geprüften Antworten) ergänzen; ohne FAQ kein FAQPage-Schema",
+      "Quellenliste mit geprüften Fundstellen (Regelwerk, Fundstelle, Fassung) wie auf /vdi-6022 ergänzen",
+      "Rechtsinhalt der Seite fachlich prüfen lassen, danach TODO entfernen (Seite wird wieder indexierbar)",
     ],
   },
   {

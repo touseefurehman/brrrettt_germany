@@ -97,6 +97,21 @@ export function serviceSchema(serviceType: string, description: string, path: st
   };
 }
 
+/** WebPage mit Änderungsdatum und Autor (Organisation); verweist auf die Leistung bzw. den Inhalt der Seite */
+export function webPageSchema(path: string, name: string, modified: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name,
+    url: `${site.url}${path}`,
+    dateModified: modified,
+    inLanguage: "de-DE",
+    author: { "@id": orgId },
+    publisher: { "@id": orgId },
+    isPartOf: { "@id": `${site.url}/#website` },
+  };
+}
+
 export function breadcrumbSchema(items: [name: string, path: string][]) {
   return {
     "@context": "https://schema.org",

@@ -1,5 +1,5 @@
 {
-  "cluster": "pruefdienste",
+  "cluster": "dguv-v3",
   "month": "2026-11",
   "mock": false,
   "source": "report-aggregate",

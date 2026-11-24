@@ -63,7 +63,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...audiences.map((a): [string, number, string] => [`/betreiberpflichten/${a.slug}`, 0.8, lastmod.audiences]),
     ["/prueffristen", 0.8, lastmod.static],
     ...areas
-      .filter((a) => !isMovedArea(a.slug))
+      .filter((a) => !isMovedArea(a.slug) && !a.todoRedaktion?.length)
       .map((a): [string, number, string] => [`/pruefbereiche/${a.slug}`, 0.6, lastmod.areas]),
     // Rank & Rent: nur veröffentlichte Objekte und Landingpages (Entwürfe nie)
     ...(hasPublishedObjects ? ([[RR_BASE, 0.7, lastmod.static]] as [string, number, string][]) : []),

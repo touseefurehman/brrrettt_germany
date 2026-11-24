@@ -217,6 +217,7 @@ export const norms: Record<NormKey, Norm> = {
     name: "DGUV Vorschrift 1",
     title: "Grundsätze der Prävention",
     version: "11/2013",
+    url: "https://publikationen.dguv.de",
   },
   "TRBS 1201": {
     name: "TRBS 1201",

@@ -103,7 +103,7 @@ export function GET() {
       link(
         `Fachpartner ${c.name}`,
         clusterPath(c),
-        `Kostenlose Nullmessung und Fachpartnerplatz im Feld ${c.name}; Zahlen aus der Messung vom ${measurementFor(c.slug)?.dateLabel ?? "–"}.`,
+        `Kostenlose Nullmessung und Fachpartnerplatz im Prüfbereich ${c.name}; Zahlen aus der Messung vom ${measurementFor(c.slug)?.dateLabel ?? "–"}.`,
       ),
     ),
     "",

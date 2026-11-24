@@ -1,0 +1,14 @@
+{
+  "cluster": "rlt-hygiene",
+  "_todo": "TODO: Fragenset (41 Fragen) liefern; nicht erfinden. Neue Seiten erst bei nachgewiesener Marktchance.",
+  "engines": [
+    "chatgpt",
+    "perplexity",
+    "gemini"
+  ],
+  "intents": [
+    "beauftragung",
+    "anbietercheck"
+  ],
+  "prompts": []
+}

@@ -1,6 +1,6 @@
 {
   "cluster": "brandschutz",
-  "_todo": "TODO: Fragenset (41 Fragen) von der Redaktion liefern; nicht erfinden.",
+  "_todo": "TODO: Fragenset (41 Fragen) liefern; nicht erfinden. Neue Seiten erst bei nachgewiesener Marktchance.",
   "engines": [
     "chatgpt",
     "perplexity",

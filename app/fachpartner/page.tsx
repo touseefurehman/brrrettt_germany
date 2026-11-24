@@ -13,7 +13,7 @@ import { int, latestReport, pct, REPORT_BASE, reportPath } from "@/lib/sov";
 
 const title = "Exklusiver Fachpartner werden | betreibermanager.de";
 const description =
-  "Exklusiver Fachpartner auf betreibermanager.de: ein bundesweiter Partner je Feld, 12 Monate Sichtbarkeit auf dem Portal für Betreiberpflichten, Anfragen direkt an Sie.";
+  "Exklusiver Fachpartner auf betreibermanager.de: ein bundesweiter Partner je Prüfbereich, 12 Monate Sichtbarkeit auf dem Portal für Betreiberpflichten, Anfragen direkt an Sie.";
 
 export const metadata: Metadata = {
   title: { absolute: title },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 const roles: [string, string[]][] = [
   [
     "CEO / Geschäftsführung",
-    ["Planbares 12-Monats-Modell statt Einzelkampagnen", "Exklusivität: ein bundesweiter Partner je Feld", "Preis auf Anfrage, im Gespräch nach der Nullmessung"],
+    ["Planbares 12-Monats-Modell statt Einzelkampagnen", "Exklusivität: ein bundesweiter Partner je Prüfbereich", "Preis auf Anfrage, im Gespräch nach der Nullmessung"],
   ],
   [
     "Marketing",
@@ -39,14 +39,14 @@ const roles: [string, string[]][] = [
     "Vertrieb",
     [
       "Strukturierte Anfragen mit Standort, Umfang und Ansprechpartner",
-      "Sichtbarkeit in dem Feld, in dem Einkäufer KI-Systeme fragen",
+      "Sichtbarkeit in dem Prüfbereich, in dem Einkäufer KI-Systeme fragen",
       "Anfragen gehen direkt an Sie",
     ],
   ],
 ];
 
 const reasons: [string, string][] = [
-  ["Exklusivität statt Preiskampf", "Pro Feld gibt es einen bundesweiten Partner. Ihre Seite wird nicht mit Wettbewerbern geteilt."],
+  ["Exklusivität statt Preiskampf", "Pro Prüfbereich gibt es einen bundesweiten Partner. Ihre Seite wird nicht mit Wettbewerbern geteilt."],
   [
     "365 Tage statt wenige Messetage",
     "Ihre Messepräsenz endet mit dem Messestand. Die Partnerschaft hält Ihre Sichtbarkeit über zwölf Monate aufrecht.",
@@ -70,7 +70,7 @@ const reasons: [string, string][] = [
 ];
 
 const steps = [
-  "Ein bundesweiter Partner pro Feld",
+  "Ein bundesweiter Partner pro Prüfbereich",
   "Laufzeit: 12 Monate",
   "Ihre Partnerbox, gekennzeichnet als „Anzeige“, getrennt von den redaktionellen Inhalten",
   "Anfragen gehen direkt an Sie",
@@ -81,7 +81,7 @@ const steps = [
 const faqs: [string, string][] = [
   [
     "Was bedeutet Exklusivität?",
-    "Pro Feld gibt es einen bundesweiten Fachpartner. Solange Ihre Partnerschaft läuft, erscheint kein Wettbewerber in diesem Platz.",
+    "Pro Prüfbereich gibt es einen bundesweiten Fachpartner. Solange Ihre Partnerschaft läuft, erscheint kein Wettbewerber in diesem Platz.",
   ],
   [
     "Garantieren Sie Platzierungen in ChatGPT & Co.?",
@@ -126,7 +126,7 @@ export default function Fachpartner() {
           offers: {
             "@type": "Offer",
             name: "Exklusive Fachpartnerschaft, 12 Monate",
-            description: "Ein bundesweiter Partner je Feld. Preis auf Anfrage.",
+            description: "Ein bundesweiter Partner je Prüfbereich. Preis auf Anfrage.",
             seller: { "@id": `${site.url}/#organization` },
           },
           isPartOf: { "@id": `${site.url}/#website` },
@@ -141,7 +141,7 @@ export default function Fachpartner() {
         <p>Ihre Messe dauert wenige Tage – Ihre Sichtbarkeit 365.</p>
         <p>
           Für Geschäftsführung, Marketing und Vertrieb von Fachbetrieben und Messeausstellern: Als Fachpartner Betreiberpflichten
-          sind Sie auf unserem Portal in Ihrem Feld exklusiv präsent.
+          sind Sie auf unserem Portal in Ihrem Prüfbereich exklusiv präsent.
         </p>
         <p className="rr-partner-actions">
           <a className="rr-btn" href="#anfrage">
@@ -210,30 +210,37 @@ export default function Fachpartner() {
       </section>
 
       <section className="section page-width section-tight">
-        <h2>Die zwölf Felder</h2>
-        <p className="muted-note">Je Feld ein eigener KI-Report und genau ein bundesweiter Fachpartnerplatz. Preis: auf Anfrage.</p>
+        <h2>Die sechs Prüfbereiche</h2>
+        <p className="muted-note">Je Prüfbereich ein eigener KI-Report und genau ein bundesweiter Fachpartnerplatz. Preis: auf Anfrage.</p>
         <div className="link-cards three">
-          {clusters.map((c) =>
-            c.status === "published" ? (
-              <Link key={c.slug} href={clusterPath(c)}>
+          {clusters.map((c) => {
+            const href = c.status === "published" ? clusterPath(c) : c.existingPage;
+            const body = (
+              <>
                 <strong>{c.name}</strong>
-                <span>Report live · {partnerStatusLabel[c.partnerStatus]}</span>
-                <span>Nullmessung anfordern</span>
+                <span>
+                  {c.status === "published" ? "Report live" : "Report in Erhebung"} · {partnerStatusLabel[c.partnerStatus]}
+                </span>
+                {href && <span>{c.status === "published" ? "Nullmessung anfordern" : "Mehr zum Prüfbereich"}</span>}
+              </>
+            );
+            return href ? (
+              <Link key={c.slug} href={href}>
+                {body}
               </Link>
             ) : (
               <div key={c.slug} className="rr-benefit">
-                <strong>{c.name}</strong>
-                <span>Report in Erhebung · {partnerStatusLabel[c.partnerStatus]}</span>
+                {body}
               </div>
-            ),
-          )}
+            );
+          })}
         </div>
       </section>
 
       <section className="section page-width section-tight prose">
         <h2>So funktioniert die Exklusivität</h2>
         <ul>
-          <li>Ein Partner pro Feld, bundesweit.</li>
+          <li>Ein Partner pro Prüfbereich, bundesweit.</li>
           <li>Der Platz wird für 12 Monate vergeben; vorab erhalten Sie eine kostenlose Nullmessung für Ihr Unternehmen.</li>
           <li>Der Preis wird nach der Nullmessung im 20-Minuten-Gespräch genannt.</li>
         </ul>
@@ -262,7 +269,7 @@ export default function Fachpartner() {
           </div>
           <div className="rr-benefit">
             <strong>Exklusivität</strong>
-            <span>Ein bundesweiter Partner je Feld, {clusters.length} Felder mit eigenem KI-Report.</span>
+            <span>Ein bundesweiter Partner je Prüfbereich, {clusters.length} Prüfbereiche.</span>
           </div>
         </div>
         {partnerContact && (
@@ -351,7 +358,7 @@ export default function Fachpartner() {
       <section id="anfrage" className="section page-width section-tight">
         <h2>Gespräch anfragen</h2>
         <p>
-          Nennen Sie uns Leistung, Feld und Einsatzgebiet. Wir melden uns mit der Verfügbarkeit und den Konditionen.
+          Nennen Sie uns Leistung, Prüfbereich und Einsatzgebiet. Wir melden uns mit der Verfügbarkeit und den Konditionen.
         </p>
         <FachpartnerForm />
       </section>

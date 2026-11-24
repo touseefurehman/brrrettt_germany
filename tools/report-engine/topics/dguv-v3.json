@@ -1,0 +1,14 @@
+{
+  "cluster": "dguv-v3",
+  "_todo": "TODO: Die 41 bestehenden DGUV-V3-Fragen liegen nicht in diesem Repository. Hier einfügen (Felder id, text, intent); nicht erfinden.",
+  "engines": [
+    "chatgpt",
+    "perplexity",
+    "gemini"
+  ],
+  "intents": [
+    "beauftragung",
+    "anbietercheck"
+  ],
+  "prompts": []
+}

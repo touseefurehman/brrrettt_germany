@@ -25,7 +25,10 @@ import { BrandMark } from "./Brand";
 import ContactDetails from "./ContactDetails";
 import ContactForm from "./ContactForm";
 import FaqList from "./FaqList";
-import JsonLd, { faqSchema } from "./JsonLd";
+import JsonLd, { breadcrumbSchema, faqSchema, webPageSchema } from "./JsonLd";
+import PageStand from "./PageStand";
+import { norms } from "@/lib/normen";
+import { pageModified } from "@/lib/page-meta";
 import { btnHero } from "./ui";
 import { areaPath, areas, faqs, type AreaSlug } from "@/lib/content";
 import { audiences, externerBetreibermanager } from "@/lib/leistungen";
@@ -105,6 +108,8 @@ export default function LandingPage() {
   return (
     <>
       <JsonLd data={faqSchema(faqs)} />
+      <JsonLd data={breadcrumbSchema([])} />
+      <JsonLd data={webPageSchema("/", "Betreiberpflichten organisieren", pageModified["/"])} />
 
       <section className="hero">
         {/* next/image liefert AVIF/WebP in passender Breite aus und preloadt das LCP-Bild (priority) */}
@@ -254,6 +259,25 @@ export default function LandingPage() {
             <p className="consequence-note">
               Versäumte Prüffristen können Bußgelder, Probleme mit dem Versicherungsschutz und im Schadensfall den
               Vorwurf einer Organisationspflichtverletzung nach sich ziehen.
+            </p>
+            <p className="muted-note">
+              Rechtsgrundlagen:{" "}
+              {(
+                [
+                  ["BetrSichV", "§ 3, § 14"],
+                  ["ArbSchG", "§ 5, § 13 Abs. 2"],
+                  ["DGUV V1", ""],
+                ] as const
+              ).map(([key, ref], i) => (
+                <span key={key}>
+                  {i > 0 && " · "}
+                  <a href={norms[key].url} rel="noopener">
+                    {norms[key].name}
+                  </a>
+                  {ref && ` ${ref}`}
+                </span>
+              ))}
+              . Weitere Quellen: <Link href="/betreiberverantwortung">Betreiberverantwortung</Link>.
             </p>
             <a href="#kontakt" className="text-link">
               Bringen wir gemeinsam Ordnung hinein <ArrowUpRight size={18} />
@@ -453,6 +477,10 @@ export default function LandingPage() {
           </div>
           <FaqList faqs={faqs} />
         </div>
+      </section>
+
+      <section className="section page-width section-tight">
+        <PageStand iso={pageModified["/"]} />
       </section>
 
       <section id="kontakt" className="section page-width contact-grid">

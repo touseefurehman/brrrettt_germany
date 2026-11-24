@@ -13,7 +13,7 @@ const k = r.keyFindings;
 // Rangfolge: Zitationen absteigend, bei Gleichstand höherer Share of Voice
 const byCitations = (list) => [...list].sort((a, b) => b.citations - a.citations || b.shareOfVoice - a.shareOfVoice);
 const m = {
-  cluster: "pruefdienste",
+  cluster: "dguv-v3",
   month: "2026-11",
   mock: false,
   source: "report-aggregate",
@@ -49,5 +49,5 @@ const m = {
   scores: { sovScore: null, citedAnswers: null, partnerMentions: null, anbietercheckSov: null, anbietercheckAnswers: null },
   answers: [],
 };
-writeFileSync(join(root, "content/measurements/pruefdienste-2026-11.json"), JSON.stringify(m, null, 2) + "\n");
-console.log("content/measurements/pruefdienste-2026-11.json geschrieben,", m.providers.length, "Anbieter-Domains");
+writeFileSync(join(root, "content/measurements/dguv-v3-2026-11.json"), JSON.stringify(m, null, 2) + "\n");
+console.log("content/measurements/dguv-v3-2026-11.json geschrieben,", m.providers.length, "Anbieter-Domains");

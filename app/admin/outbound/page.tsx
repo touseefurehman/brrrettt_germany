@@ -34,7 +34,7 @@ export default async function Outbound({ searchParams }: { searchParams: Promise
       <form method="post" action="/admin/outbound/import" className="rr-form">
         <label>
           CSV (Firma, Domain, Cluster-Slug, Kontakt – eine Zeile je Unternehmen)
-          <textarea name="csv" rows={8} required placeholder={"Firma,Domain,Cluster,Kontakt\nMusterprüf GmbH,musterpruef.de,pruefdienste,Erika Mustermann"} />
+          <textarea name="csv" rows={8} required placeholder={"Firma,Domain,Cluster,Kontakt\nMusterprüf GmbH,musterpruef.de,dguv-v3,Erika Mustermann"} />
         </label>
         <button className="rr-btn" type="submit">Befundseiten erzeugen</button>
       </form>

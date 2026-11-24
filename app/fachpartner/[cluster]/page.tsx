@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const c = publishedClusterBySlug((await params).cluster);
   if (!c) return {};
   const title = `Fachpartner ${c.name}: Werden Sie in KI-Antworten genannt? | ${site.domain}`;
-  const description = `Kostenlose Nullmessung: Wie oft nennen ChatGPT, Perplexity und Gemini Ihr Unternehmen im Feld ${c.name}? Ein exklusiver bundesweiter Fachpartnerplatz.`;
+  const description = `Kostenlose Nullmessung: Wie oft nennen ChatGPT, Perplexity und Gemini Ihr Unternehmen im Prüfbereich ${c.name}? Ein exklusiver bundesweiter Fachpartnerplatz.`;
   return { title: { absolute: title }, description, alternates: { canonical: clusterPath(c) }, openGraph: { url: clusterPath(c), title, description } };
 }
 
@@ -39,7 +39,7 @@ export default async function ClusterPage({ params }: Props) {
   const c = publishedClusterBySlug((await params).cluster);
   if (!c) notFound();
   const m = measurementFor(c.slug);
-  const report = reportBySlug(c.reportSlug);
+  const report = c.reportSlug ? reportBySlug(c.reportSlug) : undefined;
   const section = providerSectionFor(c.slug);
   const path = clusterPath(c);
   const pageUrl = `${site.url}${path}`;
@@ -61,19 +61,19 @@ export default async function ClusterPage({ params }: Props) {
     {
       role: "Geschäftsführung",
       problem: "Einkäufer fragen KI-Systeme, wen sie beauftragen sollen. Sie sehen nicht, ob Ihr Unternehmen dort vorkommt.",
-      measurement: m ? `Messung vom ${m.dateLabel}: ${fmtInt(m.answerCount)} Antworten, ${fmtInt(m.totalCitations)} Quellenangaben. Wer dort nicht steht, wird in dieser Stichprobe nicht genannt.` : "Die Messung für dieses Feld liegt noch nicht vor.",
-      benefit: ["Zahlen statt Vermutungen zur eigenen Sichtbarkeit", "Ein exklusiver, bundesweiter Platz im Feld", "Preis im Gespräch, nicht vorher"],
+      measurement: m ? `Messung vom ${m.dateLabel}: ${fmtInt(m.answerCount)} Antworten, ${fmtInt(m.totalCitations)} Quellenangaben. Wer dort nicht steht, wird in dieser Stichprobe nicht genannt.` : "Die Messung für diesen Prüfbereich liegt noch nicht vor.",
+      benefit: ["Zahlen statt Vermutungen zur eigenen Sichtbarkeit", "Ein exklusiver, bundesweiter Platz im Prüfbereich", "Preis im Gespräch, nicht vorher"],
     },
     {
       role: "Marketing",
       problem: "Klassische Rankings zeigen nicht, was ChatGPT, Perplexity und Gemini antworten.",
-      measurement: m ? `${fmtPct(m.outsideProviderShare)} der gewichteten Zitationen stammen nicht von Anbieter-Websites, sondern von Behörden, Portalen und Fachmedien.` : "Die Messung für dieses Feld liegt noch nicht vor.",
-      benefit: ["Baseline vorab als Nullmessung", "Monatliche Messung als Verlauf", "Zugang zum KI-Report des Feldes"],
+      measurement: m ? `${fmtPct(m.outsideProviderShare)} der gewichteten Zitationen stammen nicht von Anbieter-Websites, sondern von Behörden, Portalen und Fachmedien.` : "Die Messung für diesen Prüfbereich liegt noch nicht vor.",
+      benefit: ["Baseline vorab als Nullmessung", "Monatliche Messung als Verlauf", "Zugang zum KI-Report des Prüfbereichs"],
     },
     {
       role: "Vertrieb",
       problem: "Anfragen entstehen heute auch aus KI-Antworten. Ob Sie dort auftauchen, wissen Sie nicht.",
-      measurement: m ? `In ${fmtInt(m.promptCount)} Kaufentscheidungsfragen wurden ${hasProviders ? `${fmtInt(m.providerCount)} Anbieter genannt` : `${fmtInt(m.uniqueDomains)} Domains als Quellen zitiert`}.` : "Die Messung für dieses Feld liegt noch nicht vor.",
+      measurement: m ? `In ${fmtInt(m.promptCount)} Kaufentscheidungsfragen wurden ${hasProviders ? `${fmtInt(m.providerCount)} Anbieter genannt` : `${fmtInt(m.uniqueDomains)} Domains als Quellen zitiert`}.` : "Die Messung für diesen Prüfbereich liegt noch nicht vor.",
       benefit: ["Befund für Ihr Unternehmen mit Wettbewerbsvergleich", "20-Minuten-Gespräch zum Ergebnis", "Keine Zusage zu Anfragezahlen"],
     },
   ];
@@ -81,7 +81,7 @@ export default async function ClusterPage({ params }: Props) {
   const faqs: [string, string][] = [
     ...(section ? providerFaqs(section) : []),
     ["Was kostet der Fachpartnerplatz?", `${c.priceLabel}. Den Preis nennen wir nach der Nullmessung im 20-Minuten-Gespräch.`],
-    ["Ist der Platz exklusiv?", `Ja. Pro Feld gibt es genau einen bundesweiten Partner. Aktueller Stand: ${partnerStatusLabel[c.partnerStatus]}.`],
+    ["Ist der Platz exklusiv?", `Ja. Pro Prüfbereich gibt es genau einen bundesweiten Partner. Aktueller Stand: ${partnerStatusLabel[c.partnerStatus]}.`],
     ["Garantieren Sie Nennungen in KI-Systemen?", "Nein. Wir garantieren weder Nennungen in KI-Systemen noch eine Anzahl an Anfragen."],
   ];
 
@@ -150,7 +150,7 @@ export default async function ClusterPage({ params }: Props) {
       )}
       {!m && (
         <section className="section page-width section-tight prose">
-          <p>Die Messung für dieses Feld liegt noch nicht vor. Sie können die Nullmessung dennoch anfordern; sie folgt nach Abschluss der Erhebung.</p>
+          <p>Die Messung für diesen Prüfbereich liegt noch nicht vor. Sie können die Nullmessung dennoch anfordern; sie folgt nach Abschluss der Erhebung.</p>
         </section>
       )}
 
@@ -188,7 +188,7 @@ export default async function ClusterPage({ params }: Props) {
       <section className="section page-width section-tight prose">
         <h2>Was enthalten ist</h2>
         <ul>
-          <li>Der KI-Report zum Feld {c.name}</li>
+          <li>Der KI-Report zum Prüfbereich {c.name}</li>
           <li>Eine monatliche Messung mit Verlauf</li>
           <li>Vorab die Nullmessung für Ihr Unternehmen</li>
         </ul>

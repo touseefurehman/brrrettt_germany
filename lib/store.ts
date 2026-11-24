@@ -44,6 +44,10 @@ export type Lead = {
 export type EventType = "email" | "click" | "buchung" | "status" | "abmeldung" | "bestaetigung";
 export type LeadEvent = { id: string; leadId: string; type: EventType; detail: string; createdAt: string };
 
+// Frühere Cluster-Slugs auf den heutigen abbilden (kein Datenverlust bei der Umstellung auf 6 Prüfbereiche)
+const LEGACY: Record<string, string> = { pruefdienste: "dguv-v3" };
+const migrate = (l: Lead): Lead => (LEGACY[l.cluster] ? { ...l, cluster: LEGACY[l.cluster] } : l);
+
 export const newToken = () => randomBytes(24).toString("base64url");
 export const newId = () => randomBytes(12).toString("hex");
 
@@ -176,7 +180,7 @@ function need(): Backend {
   return backend;
 }
 
-export const getLeads = () => need().leads();
+export const getLeads = async () => (await need().leads()).map(migrate);
 export const saveLead = (l: Lead) => need().saveLead(l);
 export const deleteLead = (id: string) => need().deleteLead(id);
 export const getEvents = () => need().events();

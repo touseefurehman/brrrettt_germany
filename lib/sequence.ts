@@ -58,7 +58,7 @@ export const day0 = (l: Lead): Mail =>
   mail(l, `Ihr Befund für ${l.company} ist fertig`, [
     `Guten Tag ${firstName(l)},`,
     "",
-    `Ihre Nullmessung für ${l.company} im Feld „${clusterName(l)}“ liegt vor:`,
+    `Ihre Nullmessung für ${l.company} im Prüfbereich „${clusterName(l)}“ liegt vor:`,
     befundUrl(l),
     "",
     "Sie sehen darin, wie oft und wo KI-Systeme Ihr Unternehmen in der letzten Messung genannt haben und wen sie stattdessen nennen.",
@@ -67,7 +67,7 @@ export const day0 = (l: Lead): Mail =>
 
 export function day3(l: Lead, f: Findings): Mail {
   const top = f.topSources.slice(0, 3);
-  return mail(l, `Welche Quellen KI-Systeme im Feld „${clusterName(l)}“ nutzen`, [
+  return mail(l, `Welche Quellen KI-Systeme im Prüfbereich „${clusterName(l)}“ nutzen`, [
     `Guten Tag ${firstName(l)},`,
     "",
     `in der Messung vom ${f.dateLabel} haben ChatGPT, Perplexity und Gemini diese Quellen am häufigsten genutzt:`,
@@ -92,7 +92,7 @@ export function day14(l: Lead): Mail {
   return mail(l, `Fachpartnerplatz „${clusterName(l)}“: aktueller Stand`, [
     `Guten Tag ${firstName(l)},`,
     "",
-    `Pro Feld vergeben wir genau einen bundesweiten Fachpartnerplatz. Aktueller Stand für „${clusterName(l)}“: ${status}.`,
+    `Pro Prüfbereich vergeben wir genau einen bundesweiten Fachpartnerplatz. Aktueller Stand für „${clusterName(l)}“: ${status}.`,
     "Wir garantieren keine Nennung in KI-Systemen. Wenn Sie den Platz besprechen möchten, melden Sie sich gern:",
     BOOKING_URL || site.email,
     "",

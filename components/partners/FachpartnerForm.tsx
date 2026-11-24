@@ -127,7 +127,7 @@ export default function FachpartnerForm({
       </div>
       <div className="form-row">
         <label>
-          Leistung / Feld
+          Leistung / Prüfbereich
           <input name="leistung" type="text" placeholder="z. B. Brandschutzprüfung, Elektrotechnik" required maxLength={300} />
         </label>
         <label>

@@ -77,6 +77,18 @@ export type QaLink = [title: string, path: string, note: string];
  * H1 = Frage → Kurzantwort (erster Absatz, wird von KI-Suchen zitiert) → Einordnung der Redaktion →
  * Rechtsgrundlagen → ggf. Anzeige → verwandte Fragen → Autorenbox.
  */
+/** Überschriften als Frage für kurze Pflichtenseiten (Text unverändert, nur die Überschrift) */
+const questionHeadings: Record<string, { expert: string; legal: string }> = {
+  "wer-ist-im-unternehmen-fuer-die-elektropruefung-verantwortlich": {
+    expert: "Wie lässt sich die Verantwortung für die Elektroprüfung delegieren?",
+    legal: "Auf welchen Rechtsgrundlagen beruht die Verantwortung?",
+  },
+  "was-ist-der-unterschied-zwischen-din-vde-0701-und-din-vde-0702": {
+    expert: "Was bedeutet der Unterschied für Betreiber?",
+    legal: "Welche Normen gelten?",
+  },
+};
+
 export default function ElektroQaView({
   item,
   path,
@@ -133,7 +145,7 @@ export default function ElektroQaView({
       </PageIntro>
 
       <section className="section page-width section-tight prose">
-        <h2>Einordnung der Redaktion</h2>
+        <h2>{questionHeadings[item.slug]?.expert ?? "Einordnung der Redaktion"}</h2>
         {paragraphs(item.expertText).map((p) => (
           <p key={p.slice(0, 40)}>{p}</p>
         ))}
@@ -146,7 +158,7 @@ export default function ElektroQaView({
       </section>
 
       <section className="section page-width section-tight prose">
-        <h2>Rechtsgrundlagen</h2>
+        <h2>{questionHeadings[item.slug]?.legal ?? "Rechtsgrundlagen"}</h2>
         <p className="legal-basis">
           {legalBasisParts(item.legalBasis).map((part, i) =>
             part.url ? (

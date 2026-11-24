@@ -15,7 +15,7 @@ export default async function Bestaetigt({ searchParams }: { searchParams: Promi
       <p>
         {bad
           ? "Dieser Bestätigungslink ist ungültig oder abgelaufen. Bitte fordern Sie die Nullmessung erneut an."
-          : "Danke. Ihre Nullmessung folgt, sobald die Erhebung für Ihr Feld abgeschlossen ist. Wir melden uns per E-Mail."}
+          : "Danke. Ihre Nullmessung folgt, sobald die Erhebung für Ihren Prüfbereich abgeschlossen ist. Wir melden uns per E-Mail."}
       </p>
       <p>
         <Link href="/fachpartner">Zur Fachpartner-Übersicht</Link>

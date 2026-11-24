@@ -32,7 +32,7 @@ function validate(body: Record<string, unknown>): Valid | { ok: false; status: n
   const role = str(body.role, 40);
   const email = str(body.email, 200).toLowerCase();
   const cluster = clusterBySlug(str(body.cluster, 60));
-  if (!cluster) return { ok: false, status: 400, message: "Dieses Feld ist noch nicht verfügbar." };
+  if (!cluster) return { ok: false, status: 400, message: "Dieser Prüfbereich ist noch nicht verfügbar." };
   if (!company) return { ok: false, status: 400, message: "Bitte geben Sie den Firmennamen an." };
   if (!/^[a-z0-9-]+(\.[a-z0-9-]+)+$/.test(domain)) return { ok: false, status: 400, message: "Bitte geben Sie eine gültige Website bzw. Domain an." };
   if (name.split(/\s+/).filter(Boolean).length < 2) return { ok: false, status: 400, message: "Bitte geben Sie Vor- und Nachnamen an." };

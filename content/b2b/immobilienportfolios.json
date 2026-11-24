@@ -1,0 +1,273 @@
+{
+  "slug": "immobilienportfolios",
+  "url": "/pruefmanagement/immobilienportfolios",
+  "service": "pruefmanagement",
+  "objekt": "immobilienportfolios",
+  "zielkunde": "Portfolio-Halter, Fonds und Asset Manager mit mehreren Immobilien (Schwerpunkt Gewerbe und Mischnutzung)",
+  "status": "review",
+  "reviewedBy": null,
+  "lastReviewed": "2026-11-24",
+  "metaTitle": "Prüfmanagement Immobilienportfolios | betreibermanager.de",
+  "metaDescription": "Prüfpflichten über viele Standorte steuern: einheitliches Kataster, zentrale Beauftragung, Reporting für Asset Manager. Mit Rechtsgrundlagen und Fristen.",
+  "h1": "Prüfmanagement für Immobilienportfolios: Prüfpflichten über viele Standorte steuern",
+  "kurzantwort": "In einem Immobilienportfolio koordiniert ein zentrales Prüfmanagement die Prüfpflichten aller Objekte: ein einheitliches Pflichtenkataster, abgestimmte Prüfer, ein gemeinsamer Fristenplan und ein Bericht für den Asset Manager. betreibermanager.de übernimmt diese Koordination für gewerbliche und gemischte Portfolios. Geprüft wird durch qualifizierte externe Prüfer, die Betreiberverantwortung bleibt beim Eigentümer.",
+  "sections": [
+    {
+      "id": "zielgruppe",
+      "heading": "Für wen diese Seite gedacht ist",
+      "content": "Die Seite richtet sich an Portfolio-Halter, Fonds und Asset Manager, die mehrere Immobilien mit gewerblichem Schwerpunkt halten oder steuern. Dazu zählen Büro-, Handels-, Logistik- und Mischobjekte, die von verschiedenen Property Managern betreut werden.\n\nEntscheidend ist nicht die Zahl der Objekte, sondern die Frage, ob sich der Stand der Prüfpflichten portfolioweit überhaupt beantworten lässt: Welche Prüfungen sind überfällig, bei welchem Objekt, in der Verantwortung welches Dienstleisters? Wenn diese Frage heute nur über Rückfragen bei mehreren Property Managern zu klären ist, besteht der Bedarf an zentralem Prüfmanagement.\n\nDies ist keine Seite über Wohnungsbestände. Für Wohnungsunternehmen gelten andere Strukturen, siehe [Betreiberpflichten für Wohnungsunternehmen](/betreiberpflichten/wohnungsunternehmen) und [Prüfpflichten im Wohnungsbestand](/wissen/pruefpflichten-wohnungsbestand)."
+    },
+    {
+      "id": "betreiberpflichten",
+      "heading": "Betreiberpflichten im Portfolio",
+      "content": "Rechtlich ändert sich durch ein Portfolio nichts: Die Pflichten gelten je Objekt und je Anlage. Arbeitgeber müssen nach §§ 3, 5 ArbSchG Gefährdungen beurteilen, § 3 BetrSichV verlangt die Beurteilung und die Festlegung der Prüffristen für Arbeitsmittel, § 14 BetrSichV die Prüfung, und § 823 BGB begründet die Pflicht, Gefahren für Dritte abzuwenden. Neu ist im Portfolio die Organisation: Pflichten liegen verteilt bei Eigentümergesellschaften, Asset Managern, Property Managern, Facility-Dienstleistern und Mietern.\n\nDie Betreiberverantwortung lässt sich vertraglich übertragen, die Auswahl- und Überwachungspflicht aber nicht. Für Asset Manager heißt das konkret: Es genügt nicht, dass ein Property Manager Prüfungen schuldet. Es muss nachvollziehbar sein, dass er sie beauftragt, dass sie stattfinden und dass Mängel behoben werden. Diese Überwachung ist im Portfolio die eigentliche Aufgabe.\n\n### Typische Schwachstellen im Portfolio\n\n- Jedes Objekt führt seine Prüfunterlagen anders, teils in Papier, teils in eigenen Tabellen oder im CAFM des Property Managers.\n- Prüfdienstleister werden je Objekt einzeln beauftragt, Konditionen und Berichtsformate unterscheiden sich.\n- Beim Ankauf wird die Prüfhistorie nicht oder nur lückenhaft übernommen.\n- Beim Wechsel des Property Managers geht Wissen über Anlagen und laufende Verträge verloren.\n- Das Reporting an Investoren und Eigentümer beruht auf Selbstauskünften statt auf einer einheitlichen Datenbasis."
+    },
+    {
+      "id": "pruefkategorien",
+      "heading": "Prüfkategorien im Portfolio und ihre Steuerungslogik",
+      "content": "Die Prüfkategorien sind je Objekt dieselben wie bei einem Einzelgebäude. Im Portfolio ist entscheidend, wie sich jede Kategorie steuern lässt: nach einer bundesweit einheitlichen Frist oder nach Landesrecht, durch ein überwachungsbedürftiges Verfahren oder durch den Betreiber selbst. Diese Einordnung entscheidet, ob ein Rahmenvertrag über alle Objekte sinnvoll ist.",
+      "table": 0
+    },
+    {
+      "id": "regelwerke",
+      "heading": "Anwendbare Regelwerke und Normen",
+      "content": "- **ArbSchG §§ 3, 5, DGUV Vorschrift 1 § 2 und BGB § 823:** Verantwortung, Gefährdungsbeurteilung, Verkehrssicherung.\n- **BetrSichV § 3, § 14, § 17 mit Anhang 2:** Prüffristen, Prüfung von Arbeitsmitteln, überwachungsbedürftige Anlagen mit Prüfung durch ZÜS. Letzte Änderung: 18.12.2025.\n- **DGUV Vorschrift 3 § 5:** elektrische Anlagen und Betriebsmittel.\n- **ASR A1.7, ASR A2.2, TrinkwV §§ 31 und 51, VDI 6022 Blatt 1:** Tore, Brandschutz, Legionellen, Lüftungshygiene.\n- **Prüfverordnungen der Länder:** Brandschutzanlagen, Prüffristen je Bundesland.\n- **GEFMA 190 und VDI 3810:** Leitfäden für die Gliederung der Betreiberpflichten und der Instandhaltung.\n\nFür die portfolioweite Gliederung des Katasters bietet sich GEFMA 190 an. Wie ein Kataster aufgebaut wird, beschreibt der Beitrag [Betreiberpflichtenkataster erstellen](/wissen/betreiberpflichtenkataster-erstellen)."
+    },
+    {
+      "id": "fristen",
+      "heading": "Prüffristen und Verantwortlichkeiten über mehrere Objekte",
+      "content": "Ein Fristenplan für ein Portfolio hat zwei Ebenen. Die erste ist die Anlagenebene: Jede Anlage hat Rechtsgrundlage, Intervall, letzte Prüfung, nächste Fälligkeit und den zuständigen Prüfer. Die zweite ist die Portfolioebene: Welche Prüfungen lassen sich je Region und Quartal bündeln, und wo erzwingt Landesrecht abweichende Termine?\n\nEine Planungsregel erleichtert das Bündeln. Nach § 14 Abs. 5 BetrSichV beginnt die nächste Frist mit dem Fälligkeitstermin, wenn die Prüfung innerhalb von zwei Monaten davor durchgeführt wird. Prüfungen dürfen daher innerhalb dieses Fensters vorgezogen werden, ohne dass sich der Zyklus verschiebt. Nach § 14 Abs. 7 dürfen Aufzeichnungen elektronisch geführt werden; das ist die Voraussetzung für ein zentrales digitales Kataster.\n\n### Verantwortlichkeiten im Portfolio\n\n- **Eigentümer oder Fonds:** Letztverantwortung, Budget, Entscheidung über Mängelbeseitigung.\n- **Asset Manager:** Steuerung und Überwachung, Reporting an Investoren.\n- **Property Manager und Facility-Dienstleister:** operative Umsetzung nach Vertrag.\n- **Mieter:** eigene Arbeitsmittel und Einbauten nach Mietvertrag.\n- **Externe Prüfer:** ZÜS, Prüfsachverständige und befähigte Personen je Anlagenart."
+    },
+    {
+      "id": "standorte",
+      "heading": "Herausforderungen bei vielen Standorten",
+      "content": "**Uneinheitliche Daten.** Das größte Hindernis ist selten die Technik, sondern die Datenlage. Ohne gemeinsame Struktur lassen sich Objekte nicht vergleichen. Ein einheitliches Anlagenschema, ein fester Katalog der Prüfkategorien und gleiche Statusbegriffe machen den Anfang.\n\n**Zentrale Beschaffung.** Rahmenverträge mit Prüfdienstleistern bündeln Konditionen und Berichtsformate. Sie funktionieren nur, wenn die Leistungsbeschreibung je Anlagenart einheitlich ist und regionale Abdeckung vorhanden ist. Bei Prüfungen, die an Landesrecht hängen, bleibt ein Teil regional zu beauftragen.\n\n**Reporting an den Asset Manager.** Brauchbar sind wenige, eindeutig definierte Kennzahlen: Anteil der Anlagen mit gültigem Nachweis, überfällige Prüfungen nach Objekt, offene Mängel mit Alter. Welche Schwellenwerte intern gelten, legt der Auftraggeber fest.\n\n**Objektübernahme.** Beim Ankauf entscheidet die Bestandsaufnahme darüber, welche Altlasten ins Portfolio kommen. Dazu gibt es den Beitrag [Betreiberpflichten bei der Objektübernahme](/wissen/betreiberpflichten-objektuebernahme).\n\n**Property-Manager-Wechsel.** Liegt das Kataster außerhalb der Systeme des Property Managers, bleibt es beim Wechsel erhalten."
+    },
+    {
+      "id": "koordination",
+      "heading": "Externe Prüfkoordination durch betreibermanager.de",
+      "content": "### Was betreibermanager.de übernimmt\n\n- Bestandsaufnahme der Objekte und Aufbau eines einheitlichen Pflichtenkatasters.\n- Fristenplan über alle Objekte, Terminbündelung nach Region und Landesrecht.\n- Abstimmung mit Property Managern, Auswahl und Beauftragung qualifizierter externer Prüfer, auf Wunsch über Rahmenvereinbarungen.\n- Nachverfolgung von Mängeln und Berichte an Asset Manager und Eigentümer.\n\n### Was betreibermanager.de nicht übernimmt\n\n- Die Prüfungen selbst führen externe, qualifizierte Prüfer durch.\n- betreibermanager.de ist weder Prüforganisation noch zugelassene Überwachungsstelle (ZÜS).\n- Verantwortung und Entscheidung über Mängelbeseitigung und Budget verbleiben beim Betreiber.\n\nDas allgemeine Leistungsmodell beschreibt die Seite [Externer Betreibermanager](/externer-betreibermanager)."
+    },
+    {
+      "id": "kosten",
+      "heading": "Kosten und Preisfaktoren",
+      "content": "Für ein Portfolio hängen die Kosten des Prüfmanagements vor allem von folgenden Faktoren ab:\n\n- Zahl und Größe der Objekte sowie die Zahl der Anlagen je Objekt,\n- Qualität und Vollständigkeit der vorhandenen Unterlagen und damit der Aufwand für die Erstaufnahme,\n- Zahl der Bundesländer und damit der abweichenden Fristen,\n- Zahl der Property Manager und Schnittstellen,\n- Umfang des gewünschten Berichtswesens und der Anbindung an vorhandene Systeme.\n\nDie Kosten der Prüfungen kommen hinzu und werden von den Prüfern je Anlagenart bestimmt. Rahmenverträge können Konditionen vereinheitlichen; ob sich das rechnet, zeigt erst die Bestandsaufnahme. Orientierungswerte für die elektrische Prüfung stehen auf [DGUV V3 Prüfung Kosten](/dguv-v3-pruefung-kosten)."
+    }
+  ],
+  "tables": [
+    {
+      "caption": "Prüfkategorien im Portfolio nach Steuerungslogik (Richtwerte)",
+      "head": [
+        "Anlage / System",
+        "Grundlage",
+        "Intervall",
+        "Wer prüft"
+      ],
+      "rows": [
+        [
+          "Aufzüge und weitere überwachungsbedürftige Anlagen",
+          "BetrSichV § 17, Anhang 2",
+          "Aufzüge: wiederkehrende Prüfung höchstens alle 2 Jahre, dazwischen Zwischenprüfung",
+          "Zugelassene Überwachungsstelle (ZÜS)"
+        ],
+        [
+          "Ortsfeste elektrische Anlagen",
+          "DGUV Vorschrift 3 § 5, Tabelle 1A",
+          "Regelwert 4 Jahre",
+          "Elektrofachkraft bzw. befähigte Person"
+        ],
+        [
+          "Ortsveränderliche Betriebsmittel",
+          "DGUV Vorschrift 3 § 5, Tabelle 1B",
+          "Regelwert 6 Monate, verlängerbar bei Fehlerquote unter 2 %",
+          "Elektrofachkraft bzw. befähigte Person"
+        ],
+        [
+          "Brandmelde-, Sprinkler-, Rauchabzugs- und Sicherheitsbeleuchtungsanlagen",
+          "Prüfverordnungen der Länder",
+          "Prüffristen je Bundesland",
+          "Bauaufsichtlich anerkannte Prüfsachverständige"
+        ],
+        [
+          "Feuerlöscher",
+          "ASR A2.2",
+          "mindestens alle 2 Jahre",
+          "Sachkundige Person"
+        ],
+        [
+          "Kraftbetätigte Tore und Türen",
+          "ASR A1.7",
+          "bei Inbetriebnahme und mindestens einmal jährlich",
+          "Sachkundige Person"
+        ],
+        [
+          "Raumlufttechnische Anlagen",
+          "VDI 6022 Blatt 1",
+          "3 Jahre, bei Befeuchtung 2 Jahre",
+          "Nach VDI 6022 qualifizierte Person"
+        ],
+        [
+          "Trinkwasser-Installationen",
+          "TrinkwV § 31, § 51",
+          "bei gewerblicher Tätigkeit mindestens alle 3 Jahre; technischer Maßnahmenwert 100 KBE/100 ml",
+          "Geeignete Probenehmer und Untersuchungsstellen [PRÜFEN: Anforderungen nach TrinkwV]"
+        ]
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Wer koordiniert die Prüfpflichten für ein Immobilienportfolio mit vielen Standorten?",
+      "answer": "Die Letztverantwortung liegt bei den Eigentümern. Die Koordination kann beim Asset Manager, bei den Property Managern oder bei einem externen Dienstleister liegen. betreibermanager.de koordiniert Fristen, Prüfer und Nachweise über alle Objekte, ohne selbst zu prüfen."
+    },
+    {
+      "question": "Gilt für ein Portfolio ein anderes Recht als für ein einzelnes Gebäude?",
+      "answer": "Nein. Pflichten und Fristen gelten je Anlage. Im Portfolio ändert sich die Organisation: Verteilte Zuständigkeiten und uneinheitliche Daten machen die Überwachung schwieriger."
+    },
+    {
+      "question": "Lohnt sich ein Rahmenvertrag mit einem Prüfdienstleister für alle Objekte?",
+      "answer": "Das hängt von der Anlagenart ab. Bei bundeseinheitlich geregelten Prüfungen ist ein Rahmenvertrag sinnvoll, wenn Leistungsbeschreibung und regionale Abdeckung passen. Prüfungen nach Landesrecht müssen teilweise regional beauftragt werden."
+    },
+    {
+      "question": "Welche Kennzahlen braucht ein Asset Manager für das Prüfwesen?",
+      "answer": "Sinnvoll sind der Anteil der Anlagen mit gültigem Nachweis, die Zahl überfälliger Prüfungen je Objekt und die offenen Mängel mit Alter. Die Schwellen, ab denen eskaliert wird, legt der Auftraggeber fest."
+    },
+    {
+      "question": "Wie übernehme ich beim Ankauf eines Objekts die Prüfhistorie?",
+      "answer": "Über eine Bestandsaufnahme der Anlagen und eine Sichtung der vorhandenen Nachweise. Lücken werden als offene Prüfungen in den Fristenplan übernommen. Der Beitrag zur Objektübernahme beschreibt das Vorgehen."
+    },
+    {
+      "question": "Sind die Prüffristen für Brandschutzanlagen im ganzen Portfolio gleich?",
+      "answer": "Nein. Für Brandmelde-, Sprinkler-, Rauchabzugs- und Sicherheitsbeleuchtungsanlagen gelten die Prüfverordnungen der Länder. Die Prüffristen unterscheiden sich je Bundesland."
+    },
+    {
+      "question": "Wie bündele ich Prüfungen mehrerer Objekte regional?",
+      "answer": "Innerhalb von zwei Monaten vor Fälligkeit kann geprüft werden, ohne dass sich der Zyklus verschiebt (§ 14 Abs. 5 BetrSichV, soweit die Vorschrift anwendbar ist). Dieses Fenster erlaubt es, Prüfer gebündelt je Region einzusetzen."
+    },
+    {
+      "question": "Darf das Kataster zentral und digital geführt werden?",
+      "answer": "Aufzeichnungen über Prüfungen dürfen elektronisch geführt werden (§ 14 Abs. 7 BetrSichV). Voraussetzung ist eine nachvollziehbare Zuordnung der Nachweise zu Anlage, Frist und Prüfer."
+    },
+    {
+      "question": "Was bleibt beim Property Manager, wenn ein zentrales Prüfmanagement besteht?",
+      "answer": "Die operative Umsetzung vor Ort: Zugang, Abstimmung mit Mietern, Bereitstellung von Unterlagen. Die Aufgabenteilung sollte schriftlich festgelegt werden, damit Auswahl- und Überwachungspflichten nachvollziehbar erfüllt sind."
+    },
+    {
+      "question": "Gilt das Angebot auch für Wohnungsportfolios?",
+      "answer": "Diese Seite behandelt gewerbliche und gemischte Portfolios. Für Wohnungsbestände gibt es eigene Seiten, die oben verlinkt sind."
+    }
+  ],
+  "sources": [
+    {
+      "label": "ArbSchG §§ 3, 5 – Beurteilung der Arbeitsbedingungen, Pflichten des Arbeitgebers",
+      "url": "https://www.gesetze-im-internet.de/arbschg/"
+    },
+    {
+      "label": "BetrSichV – §§ 3, 14, 17 und Anhang 2 (Gesetze im Internet)",
+      "url": "https://www.gesetze-im-internet.de/betrsichv_2015/"
+    },
+    {
+      "label": "BGB § 823 – Schadensersatzpflicht (Verkehrssicherungspflicht)",
+      "url": "https://www.gesetze-im-internet.de/bgb/__823.html"
+    },
+    {
+      "label": "DGUV Vorschrift 1 und DGUV Vorschrift 3 – Publikationen der DGUV",
+      "url": "https://publikationen.dguv.de"
+    },
+    {
+      "label": "ASR A1.7 – Türen und Tore (BAuA)",
+      "url": "https://www.baua.de/DE/Angebote/Regelwerk/ASR/ASR-A1-7"
+    },
+    {
+      "label": "ASR A2.2 – Maßnahmen gegen Brände (BAuA)",
+      "url": "https://www.baua.de/DE/Angebote/Regelwerk/ASR/ASR-A2-2"
+    },
+    {
+      "label": "TrinkwV §§ 31, 51 – Trinkwasserverordnung",
+      "url": "https://www.gesetze-im-internet.de/trinkwv_2023/"
+    },
+    {
+      "label": "VDI 6022 Blatt 1 – Raumlufttechnik, Raumluftqualität: Hygieneanforderungen (VDI)",
+      "url": "https://www.vdi.de/richtlinien"
+    },
+    {
+      "label": "GEFMA 190 – Betreiberverantwortung im Facility Management (GEFMA)",
+      "url": "https://www.gefma.de"
+    },
+    {
+      "label": "VDI 3810 – Betreiben und Instandhalten von Gebäuden und gebäudetechnischen Anlagen (VDI)",
+      "url": "https://www.vdi.de/richtlinien"
+    }
+  ],
+  "internalLinks": [
+    {
+      "label": "Externer Betreibermanager",
+      "href": "/externer-betreibermanager",
+      "note": "Allgemeines Leistungsmodell"
+    },
+    {
+      "label": "Betreiberpflichtenkataster erstellen",
+      "href": "/wissen/betreiberpflichtenkataster-erstellen",
+      "note": "Aufbau eines Katasters"
+    },
+    {
+      "label": "Betreiberpflichten bei der Objektübernahme",
+      "href": "/wissen/betreiberpflichten-objektuebernahme",
+      "note": "Ankauf und Bestandsaufnahme"
+    },
+    {
+      "label": "Betreiberverantwortung",
+      "href": "/betreiberverantwortung",
+      "note": "Verantwortung und Delegation"
+    },
+    {
+      "label": "Prüffristen im Überblick",
+      "href": "/prueffristen",
+      "note": "Fristen mit Rechtsgrundlage"
+    },
+    {
+      "label": "Betreiberpflichten für Wohnungsunternehmen",
+      "href": "/betreiberpflichten/wohnungsunternehmen",
+      "note": "Wohnungsbestände"
+    },
+    {
+      "label": "Prüfmanagement für Gewerbeimmobilien",
+      "href": "/pruefmanagement/gewerbeimmobilien",
+      "note": "Einzelobjekt Büro, Handel, Mischnutzung"
+    }
+  ],
+  "internalLinksFromExisting": [
+    {
+      "from": "/externer-betreibermanager",
+      "label": "Prüfmanagement für Immobilienportfolios",
+      "note": "Vertiefung für gewerbliche Portfolios"
+    },
+    {
+      "from": "/wissen/betreiberpflichten-objektuebernahme",
+      "label": "Prüfmanagement für Immobilienportfolios",
+      "note": "Nach dem Ankauf: portfolioweite Steuerung"
+    }
+  ],
+  "aiPrompts": [
+    "Wer koordiniert Prüfpflichten für ein Immobilienportfolio mit 30 Standorten?",
+    "Wie steuert ein Asset Manager Prüffristen über mehrere Objekte?",
+    "Lohnt sich ein Rahmenvertrag für Gebäudeprüfungen im Portfolio?",
+    "Welche Kennzahlen sollten Asset Manager für Betreiberpflichten überwachen?",
+    "Wie übernehme ich die Prüfhistorie beim Ankauf einer Gewerbeimmobilie?",
+    "Wer kann Prüfungen für Fonds und Portfolio-Halter zentral organisieren?",
+    "Wie wirkt sich der Wechsel des Property Managers auf Prüfnachweise aus?",
+    "Unterscheiden sich Prüffristen im Portfolio je nach Bundesland?"
+  ],
+  "primaryIntent": "Externen Dienstleister für zentrales Prüfmanagement über ein gewerbliches Immobilienportfolio finden",
+  "ctaTopic": "Prüfmanagement für Immobilienportfolios",
+  "cannibalization": {
+    "relatedUrls": [
+      "/externer-betreibermanager",
+      "/betreiberpflichten/wohnungsunternehmen",
+      "/wissen/pruefpflichten-wohnungsbestand",
+      "/wissen/betreiberpflichten-objektuebernahme"
+    ],
+    "differentiation": "Fokus: gewerbliche und gemischte Portfolios, zentrale Beschaffung, Reporting an Asset Manager. Wohnungsportfolios und Objektübernahme sind ausschließlich verlinkt. /externer-betreibermanager bleibt die allgemeine Leistungsseite; Intent-Überschneidung beim Begriff „Betreibermanager extern“ bleibt ein Restrisiko.",
+    "decision": "neue Seite"
+  }
+}

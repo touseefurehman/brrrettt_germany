@@ -10,6 +10,7 @@ import {
   publishedCommercial,
   RELEASE_DATE,
 } from "@/lib/elektropruefung";
+import { b2bPublished } from "@/lib/b2b";
 import { audiences } from "@/lib/leistungen";
 import {
   BASE_PATH as RR_BASE,
@@ -69,6 +70,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...(hasPublishedObjects ? ([[RR_BASE, 0.7, lastmod.static]] as [string, number, string][]) : []),
     ...publishedObjekte.map((o): [string, number, string] => [rrObjektPath(o), 0.7, lastmod.static]),
     ...publishedLandingpages.map((l): [string, number, string] => [rrLandingPath(l), 0.7, l.updated]),
+    // B2B-Landingpages: nur veröffentlichte (Entwürfe und „review“ nie)
+    ...b2bPublished.map((p): [string, number, string] => [p.url, 0.7, p.lastReviewed]),
     [PARTNER_PAGE_PATH, 0.7, "2026-11-20"],
     [SPONSORING_PATH, 0.6, "2026-11-20"],
     // Fachpartner-Seiten je veröffentlichtem Cluster (/befund und /admin bewusst nicht enthalten)

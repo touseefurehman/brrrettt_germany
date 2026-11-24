@@ -1,0 +1,269 @@
+{
+  "slug": "gewerbeimmobilien",
+  "url": "/pruefmanagement/gewerbeimmobilien",
+  "service": "pruefmanagement",
+  "objekt": "gewerbeimmobilien",
+  "zielkunde": "Eigentümer, Asset- und Property-Manager von Büro-, Handels- und gemischt genutzten Gewerbeimmobilien",
+  "status": "review",
+  "reviewedBy": null,
+  "lastReviewed": "2026-11-24",
+  "metaTitle": "Prüfmanagement für Gewerbeimmobilien | betreibermanager.de",
+  "metaDescription": "Prüfpflichten in Büro-, Handels- und Mischobjekten koordinieren: Fristen, Zuständigkeiten, externe Prüfer und Nachweise. Rechtsgrundlagen im Überblick.",
+  "h1": "Prüfmanagement für Gewerbeimmobilien: Prüfpflichten, Fristen und Prüfer koordinieren",
+  "kurzantwort": "Prüfmanagement für Gewerbeimmobilien bedeutet, alle wiederkehrenden Prüfungen von Aufzügen, Brandschutz, Elektro, Lüftung und Trinkwasser mit Frist, Zuständigem und Nachweis an einer Stelle zu führen. betreibermanager.de koordiniert diese Prüfungen und die externen Prüfer; die Prüfungen selbst führen qualifizierte Dritte aus, die Verantwortung bleibt beim Betreiber. Bei vermieteten Flächen legt der Mietvertrag fest, wer welche Prüfung beauftragt.",
+  "sections": [
+    {
+      "id": "zielgruppe",
+      "heading": "Für wen diese Seite gedacht ist",
+      "content": "Die Seite richtet sich an Eigentümer, Asset Manager und Property Manager von Büro-, Handels- und gemischt genutzten Gewerbeimmobilien. Gemeint sind Verantwortliche, die für ein Gebäude mit mehreren Nutzern sicherstellen müssen, dass alle Prüfungen stattfinden, ohne selbst Prüfer zu sein.\n\n**Prüfmanagement** bezeichnet die Planung, Beauftragung, Überwachung und Dokumentation aller wiederkehrenden Prüfungen an Gebäude und technischen Anlagen, mit klarer Zuordnung von Frist, Prüfer, Zuständigem und Nachweis.\n\nTypische Ausgangslagen sind ein Bürogebäude mit Mietern auf mehreren Etagen, ein Handelsobjekt mit Gemeinschaftsflächen und Mieterflächen oder ein gemischt genutztes Quartier mit Büro, Handel und Gastronomie. Gemeinsam ist ihnen: Die Gebäudetechnik gehört zum Objekt, die Nutzer wechseln, und mit jedem Wechsel stellt sich die Frage neu, wer für welche Anlage zuständig ist. Für Wohnungsbestände gilt eine andere Logik; sie behandelt [Betreiberpflichten für Wohnungsunternehmen](/betreiberpflichten/wohnungsunternehmen)."
+    },
+    {
+      "id": "betreiberpflichten",
+      "heading": "Betreiberpflichten bei Gewerbeimmobilien",
+      "content": "Die Betreiberverantwortung folgt aus mehreren Rechtsgebieten. Arbeitgeber müssen Gefährdungen beurteilen und Schutzmaßnahmen festlegen (§§ 3, 5 ArbSchG, § 2 DGUV Vorschrift 1). Für Arbeitsmittel und Anlagen verlangt § 3 BetrSichV eine Gefährdungsbeurteilung, in der auch die Prüffristen festgelegt werden, und § 14 BetrSichV die Prüfung vor der Inbetriebnahme und wiederkehrend. Unabhängig vom Arbeitsschutz verpflichtet § 823 BGB dazu, Gefahren abzuwenden, die von der eigenen Anlage für Dritte ausgehen.\n\nBei Gewerbeimmobilien kommt die Vermietung hinzu. Für Technik im Gemeinschaftsbereich, etwa Aufzüge, Brandmeldeanlage und zentrale Lüftung, ist in der Regel der Eigentümer verantwortlich. Mieter sind es für ihre eigenen Arbeitsmittel und ihre Beschäftigten. Aufgaben lassen sich per Vertrag auf Property Manager oder Mieter übertragen; Auswahl- und Überwachungspflichten bleiben aber bei dem, der überträgt. Wer delegiert, muss also prüfen, ob die Aufgabe tatsächlich erfüllt wird.\n\n### Wo es in Gewerbeobjekten typischerweise hakt\n\n- Der Mietvertrag nennt Prüfpflichten pauschal, ordnet sie aber nicht einzelnen Anlagen zu.\n- Nach einem Mieterwechsel fehlen die Prüfnachweise der Vorgängernutzung.\n- Das Property Management beauftragt Aufzug und Brandmeldeanlage, Lüftung und Trinkwasser laufen nirgends mit.\n- Mängel aus Prüfberichten bleiben liegen, weil die Budgetfreigabe beim Eigentümer fehlt.\n- Mieterausbauten verändern Brandabschnitte oder Lüftungsanlagen, ohne dass die Prüfungen angepasst werden.\n- Ob Prüfkosten auf Mieter umgelegt werden dürfen, ist nicht geklärt [PRÜFEN: Umlagefähigkeit von Prüfkosten nach Mietvertrag und Betriebskostenrecht]."
+    },
+    {
+      "id": "pruefkategorien",
+      "heading": "Relevante Prüfkategorien in Büro-, Handels- und Mischobjekten",
+      "content": "Die Tabelle zeigt, welche Anlagengruppen in Gewerbeimmobilien regelmäßig unter Prüfpflichten fallen. Sie ist eine Orientierung. Verbindlich sind die Fristen aus den Rechtsvorschriften und, soweit diese keine festen Fristen vorgeben, die in der Gefährdungsbeurteilung festgelegten.",
+      "table": 0
+    },
+    {
+      "id": "regelwerke",
+      "heading": "Anwendbare Regelwerke und Normen",
+      "content": "- **ArbSchG §§ 3, 5 und DGUV Vorschrift 1 § 2:** Pflichten des Arbeitgebers, Gefährdungsbeurteilung.\n- **BetrSichV § 3, § 14, § 17 mit Anhang 2:** Gefährdungsbeurteilung und Prüffristen, Prüfung von Arbeitsmitteln, überwachungsbedürftige Anlagen wie Aufzüge. Die Verordnung wurde zuletzt am 18.12.2025 geändert.\n- **DGUV Vorschrift 3 § 5** mit den Durchführungsanweisungen: Prüfung elektrischer Anlagen und Betriebsmittel.\n- **ASR A1.7** (Türen und Tore) und **ASR A2.2** (Maßnahmen gegen Brände).\n- **TrinkwV §§ 31, 51:** Untersuchung auf Legionellen, technischer Maßnahmenwert von 100 KBE je 100 ml.\n- **VDI 6022 Blatt 1:** Hygieneinspektion raumlufttechnischer Anlagen.\n- **Prüfverordnungen der Länder:** Prüfung sicherheitstechnischer Anlagen durch Prüfsachverständige; die Fristen unterscheiden sich je Bundesland.\n- **GEFMA 190 und VDI 3810** als Leitfäden zur Gliederung der Betreiberpflichten.\n\nWo es kein frei zugängliches Volltextverzeichnis gibt, etwa bei DIN- und VDI-Regelwerken, verweist die Quellenliste auf den Herausgeber."
+    },
+    {
+      "id": "fristen",
+      "heading": "Prüffristen und Zuständigkeiten",
+      "content": "Für Arbeitsmittel legt der Betreiber die Prüffristen in der Gefährdungsbeurteilung nach § 3 BetrSichV fest, soweit Rechtsvorschriften keine festen Fristen vorgeben. Zwei Regeln aus § 14 BetrSichV helfen bei der Terminplanung: Wird eine Prüfung innerhalb von zwei Monaten vor dem Fälligkeitstermin durchgeführt, beginnt die nächste Frist mit dem Fälligkeitstermin (§ 14 Abs. 5). Dadurch lassen sich Prüfungen mehrerer Anlagen zu einem Termin bündeln, ohne Frist zu verschenken. Aufzeichnungen über Prüfungen dürfen elektronisch geführt werden (§ 14 Abs. 7).\n\n### Wer ist wofür zuständig?\n\n- **Eigentümer:** Verantwortung für Anlagen im Gemeinschaftsbereich, Budget für Mängelbeseitigung, Auswahl und Überwachung beauftragter Dritter.\n- **Property Manager:** Umsetzung der übertragenen Aufgaben, Beauftragung, Terminierung, Weitergabe von Prüfberichten und Mängeln an den Eigentümer.\n- **Mieter:** Arbeitsmittel und Einbauten in der eigenen Fläche, soweit der Mietvertrag das regelt.\n- **Externe Prüfer:** führen die Prüfung aus und stellen den Bericht aus, je nach Anlage als ZÜS, Prüfsachverständige oder befähigte Person.\n- **betreibermanager.de:** koordiniert Fristen, Beauftragung, Dokumentation und Nachverfolgung. Die Verantwortung des Betreibers geht dadurch nicht über."
+    },
+    {
+      "id": "standorte",
+      "heading": "Besonderheiten bei mehreren Objekten",
+      "content": "Sobald ein Eigentümer oder Asset Manager mehrere Gewerbeobjekte hält, wächst vor allem der Abstimmungsaufwand. Die Objekte liegen häufig in verschiedenen Bundesländern, und für Brandschutzanlagen gelten dort unterschiedliche Prüffristen. Jedes Objekt hat eigene Mietverträge mit eigenen Zuständigkeitsregeln, oft auch einen eigenen Property Manager mit eigener Ablage.\n\nDas Ergebnis sind Datenstände, die sich nicht vergleichen lassen. Für Asset Manager, die dem Eigentümer berichten müssen, fehlt dann die belastbare Aussage, wo Fristen überschritten sind. Hilfreich ist ein einheitliches Pflichtenkataster mit gleicher Gliederung je Objekt, zum Beispiel nach dem Aufbau von GEFMA 190. Die Seite zum [Prüfmanagement für Immobilienportfolios](/pruefmanagement/immobilienportfolios) geht auf die portfolioweite Steuerung ein."
+    },
+    {
+      "id": "koordination",
+      "heading": "Externe Prüfkoordination durch betreibermanager.de",
+      "content": "### Was betreibermanager.de übernimmt\n\n- Anlagen und Prüfpflichten je Objekt erfassen und Fristen, Zuständige und Prüfer in einem Kataster zusammenführen.\n- Prüftermine planen, bündeln und mit Hausverwaltung, Mietern und Prüfern abstimmen.\n- Qualifizierte externe Prüfer beauftragen oder deren Beauftragung vorbereiten.\n- Prüfberichte einsammeln, Mängel nachverfolgen und den Stand an Eigentümer oder Asset Manager berichten.\n\n### Was betreibermanager.de nicht übernimmt\n\n- Wir führen keine Prüfungen selbst durch. Prüfer sind qualifizierte Dritte.\n- betreibermanager.de ist keine Prüforganisation und keine zugelassene Überwachungsstelle (ZÜS).\n- Die Betreiberverantwortung bleibt beim Betreiber; wir ersetzen weder Rechtsberatung noch Gefährdungsbeurteilung."
+    },
+    {
+      "id": "kosten",
+      "heading": "Kosten und Preisfaktoren",
+      "content": "Preise für das Prüfmanagement hängen vom Umfang ab, nicht vom einzelnen Gebäude. Die wichtigsten Faktoren sind die Zahl der Objekte und Anlagen, der Anteil bereits vorhandener und verwertbarer Unterlagen, der Aufwand für die Erstaufnahme des Bestands, die Zahl der beteiligten Mieter und Property Manager sowie das gewünschte Berichtswesen.\n\nDie Kosten der Prüfungen selbst bestimmen die Prüfer, getrennt nach Anlagenart. Sie hängen unter anderem von Anlagenzahl, Zugänglichkeit, Anfahrt und der Frage ab, ob Prüfungen gebündelt werden. Für die elektrische Prüfung nennt die Seite [DGUV V3 Prüfung Kosten](/dguv-v3-pruefung-kosten) Orientierungswerte aus veröffentlichten Anbieterangaben. Ein Angebot ergibt sich erst nach der Bestandsaufnahme."
+    }
+  ],
+  "tables": [
+    {
+      "caption": "Typische Prüfkategorien in Gewerbeimmobilien (Richtwerte, Fristen je Rechtsgrundlage)",
+      "head": [
+        "Anlage / System",
+        "Grundlage",
+        "Intervall",
+        "Wer prüft"
+      ],
+      "rows": [
+        [
+          "Aufzüge",
+          "BetrSichV § 14, § 17, Anhang 2",
+          "wiederkehrende Prüfung höchstens alle 2 Jahre, dazwischen Zwischenprüfung",
+          "Zugelassene Überwachungsstelle (ZÜS)"
+        ],
+        [
+          "Ortsfeste elektrische Anlagen",
+          "DGUV Vorschrift 3 § 5, Tabelle 1A",
+          "Regelwert 4 Jahre",
+          "Elektrofachkraft bzw. befähigte Person"
+        ],
+        [
+          "Ortsveränderliche Betriebsmittel (Gemeinschaftsflächen, Haustechnik)",
+          "DGUV Vorschrift 3 § 5, Tabelle 1B",
+          "Regelwert 6 Monate; bei Fehlerquote unter 2 % verlängerbar, in bürotypischer Umgebung auf höchstens 2 Jahre",
+          "Elektrofachkraft bzw. befähigte Person"
+        ],
+        [
+          "Feuerlöscher",
+          "ASR A2.2",
+          "mindestens alle 2 Jahre",
+          "Sachkundige Person"
+        ],
+        [
+          "Brandmeldeanlage, Sprinkler, Rauch- und Wärmeabzug, Sicherheitsbeleuchtung",
+          "Prüfverordnungen der Länder",
+          "Prüffristen je Bundesland",
+          "Bauaufsichtlich anerkannte Prüfsachverständige"
+        ],
+        [
+          "Kraftbetätigte Tore und Türen (Tiefgarage, Anlieferung, Automatiktüren)",
+          "ASR A1.7",
+          "bei Inbetriebnahme und mindestens einmal jährlich",
+          "Sachkundige Person"
+        ],
+        [
+          "Raumlufttechnische Anlagen",
+          "VDI 6022 Blatt 1",
+          "Hygieneinspektion alle 3 Jahre, bei Anlagen mit Befeuchtung alle 2 Jahre",
+          "Nach VDI 6022 qualifizierte Person"
+        ],
+        [
+          "Trinkwasser-Installation",
+          "TrinkwV § 31, § 51",
+          "Legionellenuntersuchung bei gewerblicher Tätigkeit mindestens alle 3 Jahre [PRÜFEN: Anlagenarten, für die die Untersuchungspflicht greift]",
+          "Probenahme und Untersuchung durch dafür geeignete Stellen [PRÜFEN: Anforderungen an Probenehmer und Labor]"
+        ]
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Wer ist bei einer vermieteten Gewerbeimmobilie für die Prüfpflichten verantwortlich?",
+      "answer": "Für Anlagen im Gemeinschaftsbereich in der Regel der Eigentümer, für Arbeitsmittel und Einbauten in der Mietfläche der Mieter als Arbeitgeber. Der Mietvertrag kann Aufgaben übertragen. Auswahl- und Überwachungspflichten verbleiben bei dem, der überträgt."
+    },
+    {
+      "question": "Kann ich Prüfpflichten per Mietvertrag vollständig auf den Mieter übertragen?",
+      "answer": "Aufgaben lassen sich vertraglich übertragen, die Verantwortung für Auswahl und Überwachung aber nicht. Der Eigentümer sollte deshalb Nachweise einfordern und die Erfüllung kontrollieren. Die Formulierung im Einzelfall gehört in die rechtliche Prüfung."
+    },
+    {
+      "question": "Welche Prüfungen sind in einem Bürogebäude mindestens zu organisieren?",
+      "answer": "Typisch sind Aufzüge, ortsfeste Elektroanlagen, Feuerlöscher, die Brandschutzanlagen nach Landesrecht, kraftbetätigte Tore und Türen, raumlufttechnische Anlagen und die Trinkwasser-Installation. Welche davon im Objekt vorhanden sind, ergibt die Bestandsaufnahme."
+    },
+    {
+      "question": "Wie oft muss ein Aufzug in einer Gewerbeimmobilie geprüft werden?",
+      "answer": "Die wiederkehrende Prüfung durch eine zugelassene Überwachungsstelle ist höchstens alle 2 Jahre fällig, dazwischen liegt eine Zwischenprüfung (BetrSichV § 14, § 17, Anhang 2)."
+    },
+    {
+      "question": "Müssen Prüffristen für Brandschutzanlagen bundesweit einheitlich eingehalten werden?",
+      "answer": "Nein. Brandmeldeanlage, Sprinkler, Rauch- und Wärmeabzug und Sicherheitsbeleuchtung werden nach den Prüfverordnungen der Länder geprüft. Die Prüffristen unterscheiden sich je Bundesland und gehören pro Objekt in den Prüfplan."
+    },
+    {
+      "question": "Kann ich Prüfungen mehrerer Anlagen zu einem Termin bündeln, ohne Fristen zu verlieren?",
+      "answer": "Ja, in Grenzen. Nach § 14 Abs. 5 BetrSichV beginnt die nächste Frist mit dem Fälligkeitstermin, wenn die Prüfung innerhalb von zwei Monaten vor diesem Termin stattfindet. Für andere Anlagen gelten ihre eigenen Regeln."
+    },
+    {
+      "question": "Darf ich Prüfnachweise elektronisch führen?",
+      "answer": "Aufzeichnungen über Prüfungen dürfen nach § 14 Abs. 7 BetrSichV elektronisch geführt werden. Wichtig sind Nachvollziehbarkeit, Zugriff und eine feste Zuordnung zu Anlage und Frist."
+    },
+    {
+      "question": "Was ändert sich bei den Prüfungen, wenn ein Mieter auszieht?",
+      "answer": "Die Verantwortung für die Fläche fällt an den Eigentümer zurück. Prüfnachweise des Mieters sollten bei der Rückgabe eingefordert, der Anlagenbestand aufgenommen und offene Fristen in den Prüfplan übernommen werden."
+    },
+    {
+      "question": "Prüft betreibermanager.de die Anlagen selbst?",
+      "answer": "Nein. betreibermanager.de koordiniert Fristen, Beauftragung, Dokumentation und Nachverfolgung. Die Prüfungen führen qualifizierte externe Prüfer aus. betreibermanager.de ist keine Prüforganisation und keine zugelassene Überwachungsstelle."
+    },
+    {
+      "question": "Wie läuft der Einstieg in das Prüfmanagement ab?",
+      "answer": "Am Anfang steht die Bestandsaufnahme: Welche Objekte, Anlagen und Verträge gibt es, welche Nachweise liegen vor? Daraus entstehen Kataster und Prüfplan. Anschließend werden Prüfer beauftragt und die Termine koordiniert."
+    }
+  ],
+  "sources": [
+    {
+      "label": "ArbSchG §§ 3, 5 – Beurteilung der Arbeitsbedingungen, Pflichten des Arbeitgebers",
+      "url": "https://www.gesetze-im-internet.de/arbschg/"
+    },
+    {
+      "label": "BetrSichV – §§ 3, 14, 17 und Anhang 2 (Gesetze im Internet)",
+      "url": "https://www.gesetze-im-internet.de/betrsichv_2015/"
+    },
+    {
+      "label": "BGB § 823 – Schadensersatzpflicht (Verkehrssicherungspflicht)",
+      "url": "https://www.gesetze-im-internet.de/bgb/__823.html"
+    },
+    {
+      "label": "DGUV Vorschrift 1 und DGUV Vorschrift 3 – Publikationen der DGUV",
+      "url": "https://publikationen.dguv.de"
+    },
+    {
+      "label": "ASR A1.7 – Türen und Tore (BAuA)",
+      "url": "https://www.baua.de/DE/Angebote/Regelwerk/ASR/ASR-A1-7"
+    },
+    {
+      "label": "ASR A2.2 – Maßnahmen gegen Brände (BAuA)",
+      "url": "https://www.baua.de/DE/Angebote/Regelwerk/ASR/ASR-A2-2"
+    },
+    {
+      "label": "TrinkwV §§ 31, 51 – Trinkwasserverordnung",
+      "url": "https://www.gesetze-im-internet.de/trinkwv_2023/"
+    },
+    {
+      "label": "VDI 6022 Blatt 1 – Raumlufttechnik, Raumluftqualität: Hygieneanforderungen (VDI)",
+      "url": "https://www.vdi.de/richtlinien"
+    },
+    {
+      "label": "GEFMA 190 – Betreiberverantwortung im Facility Management (GEFMA)",
+      "url": "https://www.gefma.de"
+    }
+  ],
+  "internalLinks": [
+    {
+      "label": "Betreiberverantwortung",
+      "href": "/betreiberverantwortung",
+      "note": "Grundlagen und Haftung des Betreibers"
+    },
+    {
+      "label": "Betreiberpflichten",
+      "href": "/betreiberpflichten",
+      "note": "Pflichten nach Objektart und Branche"
+    },
+    {
+      "label": "Prüffristen im Überblick",
+      "href": "/prueffristen",
+      "note": "Fristen mit Rechtsgrundlage"
+    },
+    {
+      "label": "Externer Betreibermanager",
+      "href": "/externer-betreibermanager",
+      "note": "Leistungsmodell und Ablauf"
+    },
+    {
+      "label": "Prüfmanagement für Immobilienportfolios",
+      "href": "/pruefmanagement/immobilienportfolios",
+      "note": "Steuerung über mehrere Objekte"
+    },
+    {
+      "label": "Brandschutzprüfungen für Gewerbeimmobilien",
+      "href": "/pruefmanagement/gewerbeimmobilien/brandschutz",
+      "note": "Vertiefung Brandschutz"
+    },
+    {
+      "label": "Wer haftet bei fehlenden Prüfungen?",
+      "href": "/wissen/haftung-fehlende-pruefungen",
+      "note": "Haftung und Delegation"
+    }
+  ],
+  "internalLinksFromExisting": [
+    {
+      "from": "/betreiberpflichten",
+      "label": "Prüfmanagement für Gewerbeimmobilien",
+      "note": "Zielgruppenseite für Eigentümer und Asset Manager"
+    },
+    {
+      "from": "/externer-betreibermanager",
+      "label": "Prüfmanagement für Gewerbeimmobilien",
+      "note": "Anwendung auf Büro-, Handels- und Mischobjekte"
+    }
+  ],
+  "aiPrompts": [
+    "Wer koordiniert Prüfpflichten für eine Gewerbeimmobilie mit mehreren Mietern?",
+    "Welche Betreiberpflichten hat der Eigentümer eines Bürogebäudes?",
+    "Wie organisiere ich Prüfungen von Aufzug, Brandschutz und Elektro in einem Bürogebäude?",
+    "Kann ich Prüfpflichten im Mietvertrag auf den Mieter übertragen?",
+    "Welche Prüffristen gelten für Gewerbeimmobilien?",
+    "Gibt es Dienstleister, die Prüfungen für Property Manager koordinieren?",
+    "Wie dokumentiere ich Prüfnachweise bei einem Mieterwechsel?"
+  ],
+  "primaryIntent": "Dienstleister für die Koordination von Prüfpflichten in Gewerbeimmobilien finden (Prüfmanagement für Eigentümer und Property Manager)",
+  "ctaTopic": "Prüfmanagement für Gewerbeimmobilien",
+  "cannibalization": {
+    "relatedUrls": [
+      "/betreiberverantwortung",
+      "/betreiberpflichten",
+      "/externer-betreibermanager",
+      "/prueffristen",
+      "/betreiberpflichten/wohnungsunternehmen"
+    ],
+    "differentiation": "Bestehende Seiten erklären Betreiberverantwortung allgemein bzw. das Leistungsmodell. Diese Seite behandelt ausschließlich Büro-, Handels- und Mischobjekte mit Vermietung (Zuständigkeit Eigentümer/Property Manager/Mieter, Mieterwechsel). Wohnungsbestände sind ausgeschlossen und nur verlinkt.",
+    "decision": "neue Seite"
+  }
+}

@@ -1,8 +1,8 @@
 "use client";
 
-import { useRef, useState, type FormEvent } from "react";
+import { Suspense, useRef, useState, type FormEvent } from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { ArrowUpRight } from "./icons";
 import { btnPrimary } from "./ui";
 import { track } from "@/lib/analytics";
@@ -12,6 +12,18 @@ import { hasPhone, phoneLink, site } from "@/lib/site";
 import { sendViaWeb3Forms } from "@/lib/web3forms";
 
 type Status = "idle" | "sending" | "error";
+
+const MESSAGE_PLACEHOLDER = "Gebäudearten, Anlagen, aktueller Prüfstatus …";
+
+function MessageField({ preset = "" }: { preset?: string }) {
+  return <textarea key={preset} name="message" rows={4} placeholder={MESSAGE_PLACEHOLDER} maxLength={5000} defaultValue={preset} />;
+}
+
+/** Vorbelegung über ?thema= (B2B-Seiten): „Thema: …“ steht dann in der Nachricht der Anfrage */
+function MessageFromUrl() {
+  const thema = useSearchParams().get("thema")?.trim().slice(0, 200);
+  return <MessageField preset={thema ? `Thema: ${thema}\n\n` : ""} />;
+}
 
 
 /**
@@ -106,12 +118,9 @@ export default function ContactForm({ source, catalog = false }: { source: strin
       </label>
       <label>
         Worum geht es? <span>(optional)</span>
-        <textarea
-          name="message"
-          rows={4}
-          placeholder="Gebäudearten, Anlagen, aktueller Prüfstatus …"
-          maxLength={5000}
-        />
+        <Suspense fallback={<MessageField />}>
+          <MessageFromUrl />
+        </Suspense>
       </label>
       <input type="hidden" name="source" value={source} />
       {/* Honeypot gegen Spam-Bots – für Menschen unsichtbar */}

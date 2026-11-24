@@ -1,0 +1,267 @@
+{
+  "slug": "filialunternehmen",
+  "url": "/pruefmanagement/filialunternehmen",
+  "service": "pruefmanagement",
+  "objekt": "filialunternehmen",
+  "zielkunde": "Handels- und Dienstleistungsketten mit vielen Filialen (zentrales Facility Management und Einkauf)",
+  "status": "draft",
+  "reviewedBy": null,
+  "lastReviewed": "2026-11-24",
+  "metaTitle": "Prüfmanagement für Filialunternehmen | betreibermanager.de",
+  "metaDescription": "Prüfpflichten für viele Filialen zentral steuern: Standard-Prüfplan, Mietflächen, Terminbündelung nach Region und Nachweise je Filiale.",
+  "h1": "Prüfmanagement für Filialunternehmen: Prüfpflichten in vielen Filialen zentral steuern",
+  "kurzantwort": "Filialunternehmen müssen in jeder Filiale dieselben Prüfpflichten erfüllen, haben aber vor Ort selten Fachpersonal. Ein zentrales Prüfmanagement arbeitet mit einem Standard-Prüfplan je Filialtyp, bündelt Termine nach Region und führt die Nachweise je Filiale zusammen. betreibermanager.de koordiniert Fristen, Prüfer und Dokumentation; die Prüfungen führen qualifizierte externe Fachleute durch.",
+  "sections": [
+    {
+      "id": "zielgruppe",
+      "heading": "Für wen diese Seite gedacht ist",
+      "content": "Die Seite richtet sich an Handels- und Dienstleistungsketten mit vielen Filialen und dort an das zentrale Facility Management und den Einkauf. Gemeint sind Unternehmen, bei denen Filialleiter für den Betrieb vor Ort zuständig sind, Technik und Gebäudepflichten aber zentral verantwortet und beschafft werden.\n\nDie Besonderheit gegenüber anderen Objekten: Die einzelne Filiale ist klein, die Zahl groß. Jede Filiale hat dieselben Grundpflichten, aber eigene Vermieter, eigene Gebäudetechnik und eigene Öffnungszeiten. Das Prüfmanagement entscheidet deshalb weniger über die Einzelprüfung als über Standardisierung und Terminlogistik.\n\nFür die elektrische Prüfung in Filialen gibt es die Seite [DGUV V3 Prüfungen für Filialunternehmen](/pruefmanagement/filialunternehmen/dguv-v3)."
+    },
+    {
+      "id": "betreiberpflichten",
+      "heading": "Betreiberpflichten in Filialen",
+      "content": "Als Arbeitgeber muss das Unternehmen Gefährdungen beurteilen und Schutzmaßnahmen festlegen (§§ 3, 5 ArbSchG, § 2 DGUV Vorschrift 1); für Arbeitsmittel legt § 3 BetrSichV fest, dass die Gefährdungsbeurteilung die Prüffristen bestimmt, und § 14 BetrSichV verlangt die Prüfung. Gegenüber Kunden gilt die Verkehrssicherungspflicht nach § 823 BGB. Die Pflichten bestehen je Filiale, nicht für das Unternehmen als Ganzes.\n\nDie meisten Filialen sind gemietet. Welche Pflichten beim Vermieter und welche beim Filialunternehmen liegen, regelt der Mietvertrag, oft pauschal und je Filiale anders. Aufgaben lassen sich vertraglich übertragen, Auswahl- und Überwachungspflichten bleiben aber bei dem, der überträgt. Wer die Zuständigkeit pro Filiale nicht kennt, kann sie auch nicht überwachen.\n\n### Typische Schwachstellen im Filialnetz\n\n- Filialleiter sollen Prüfungen anstoßen, haben aber weder Fachwissen noch Überblick über Fristen.\n- Prüfungen werden je Filiale lokal beauftragt, mit unterschiedlichen Anbietern, Berichten und Preisen.\n- Bei Eröffnung, Umbau, Umzug oder Schließung von Filialen werden Prüfunterlagen nicht übergeben.\n- Zentral ist nicht erkennbar, in welcher Filiale welche Prüfung überfällig ist.\n- Die Verteilung der Pflichten zwischen Vermieter und Filialunternehmen ist je Filiale ungeklärt."
+    },
+    {
+      "id": "pruefkategorien",
+      "heading": "Relevante Prüfkategorien in Filialen",
+      "content": "Welche Kategorien in einer Filiale vorkommen, hängt vom Filialtyp ab: Ein Modefachgeschäft hat andere Anlagen als ein Lebensmittelmarkt mit Kälte- und Backtechnik oder eine Bankfiliale. Der Standard-Prüfplan je Filialtyp beginnt mit den Kategorien, die in fast allen Filialen vorkommen.",
+      "table": 0
+    },
+    {
+      "id": "regelwerke",
+      "heading": "Anwendbare Regelwerke und Normen",
+      "content": "- **ArbSchG §§ 3, 5, DGUV Vorschrift 1 § 2, BGB § 823:** Verantwortung, Gefährdungsbeurteilung, Verkehrssicherung.\n- **BetrSichV § 3, § 14:** Prüffristen und Prüfung von Arbeitsmitteln; elektronische Aufzeichnung nach § 14 Abs. 7. Letzte Änderung 18.12.2025.\n- **DGUV Vorschrift 3 § 5:** elektrische Anlagen und Betriebsmittel.\n- **ASR A1.7:** kraftbetätigte Türen und Tore, z. B. Schiebetüren im Eingangsbereich und Tore der Anlieferung.\n- **ASR A2.2:** Feuerlöscher mindestens alle 2 Jahre.\n- **TrinkwV §§ 31, 51:** Legionellen bei gewerblicher Tätigkeit mindestens alle 3 Jahre; technischer Maßnahmenwert 100 KBE/100 ml.\n- **VDI 6022 Blatt 1:** Hygieneinspektion raumlufttechnischer Anlagen, soweit vorhanden.\n- **DIN EN 15635:** Lagereinrichtungen, soweit Regale im Lager oder Verkaufsraum darunter fallen [PRÜFEN: Anwendung auf Regale im Verkaufsraum].\n- **Prüfverordnungen der Länder:** Brandschutzanlagen, soweit die Filiale oder das Gebäude sie verlangt.\n- **GEFMA 190 und VDI 3810:** Leitfäden zur Strukturierung der Betreiberpflichten."
+    },
+    {
+      "id": "fristen",
+      "heading": "Prüffristen und Verantwortlichkeiten",
+      "content": "**Standardfristen.** Für Prüfungen mit festen Regelwerten (Tore und Türen nach ASR A1.7, Feuerlöscher nach ASR A2.2, Elektro nach DGUV Vorschrift 3, Lüftung nach VDI 6022, Trinkwasser nach TrinkwV) gelten in allen Filialen dieselben Fristen. Für Brandschutzanlagen nach Landesrecht unterscheiden sich die Prüffristen je Bundesland.\n\n**Termine bündeln.** Wird innerhalb von zwei Monaten vor dem Fälligkeitstermin geprüft, beginnt die nächste Frist mit dem Fälligkeitstermin (§ 14 Abs. 5 BetrSichV, soweit die Vorschrift für die Prüfung gilt). Prüfer können deshalb regional Filiale für Filiale abarbeiten.\n\n**Nachweise.** Aufzeichnungen dürfen elektronisch geführt werden (§ 14 Abs. 7). Für den Filialbetrieb heißt das: ein zentraler Nachweis je Filiale, zugleich der Auszug für Filialleiter und Behörden.\n\n### Zuständigkeiten\n\n- **Zentrales Facility Management:** Prüfplan, Rahmenverträge, Überwachung.\n- **Einkauf:** Vergabe, Konditionen, Prüfung der Leistungserfüllung.\n- **Regionalleiter und Filialleiter:** Zugang, Bereitstellung von Geräten und Unterlagen, Meldung von Auffälligkeiten.\n- **Vermieter:** soweit der Mietvertrag Anlagen dem Vermieter zuweist.\n- **Externe Prüfer:** Prüfung und Bericht.\n- **betreibermanager.de:** Kataster, Fristen, Terminlogistik, Nachverfolgung."
+    },
+    {
+      "id": "standorte",
+      "heading": "Herausforderungen bei vielen Filialen",
+      "content": "**Standard-Prüfplan je Filialtyp.** Ein Prüfplan als Vorlage, der je Filialtyp gilt und nur dort angepasst wird, wo eine Filiale abweicht, spart Pflegeaufwand und macht Filialen vergleichbar. Abweichungen aus dem Mietvertrag oder dem Standortrecht werden als Ausnahme geführt.\n\n**Terminlogistik.** Prüfer arbeiten nach Regionen, nicht nach Filialen. Ein Fristenplan mit Zeitfenstern je Region erlaubt Rundreisen. Prüfungen sollen den Verkauf möglichst nicht stören und laufen daher oft vor Öffnung oder abends; das ist mit Filialleiter und Personal abzustimmen.\n\n**Filialleiter als Ansprechpartner.** Sie brauchen kurze Anleitungen: Was ist vorzubereiten, wer kommt, was ist nach der Prüfung zu tun? Mehr Fachwissen sollte nicht verlangt werden [PRÜFEN: Pflichten zur Unterweisung und Beauftragung von Filialleitern].\n\n**Eröffnung, Umbau, Schließung.** Jede Änderung im Filialbestand ändert das Kataster: Neue Filialen erhalten ihren Prüfplan, bei Umbau werden Anlagen abgeglichen, bei Schließung werden Nachweise archiviert.\n\n**Franchise und Pächter.** Bei Franchise-Filialen oder verpachteten Standorten ist die Verantwortung getrennt zu klären [PRÜFEN: Betreiberverantwortung bei Franchise und Verpachtung].\n\nZentrale Steuerung über viele Objekte beschreibt auch die Seite [Prüfmanagement für Immobilienportfolios](/pruefmanagement/immobilienportfolios), allerdings aus Sicht von Eigentümern."
+    },
+    {
+      "id": "koordination",
+      "heading": "Externe Prüfkoordination durch betreibermanager.de",
+      "content": "### Was betreibermanager.de übernimmt\n\n- Standard-Prüfplan je Filialtyp aufbauen und je Filiale anpassen.\n- Filialkataster mit Fristen führen und Fälligkeiten melden.\n- Prüftermine regional bündeln und mit Filialen abstimmen.\n- Qualifizierte externe Prüfer beauftragen, Berichte einsammeln, Mängel verfolgen.\n- Stand je Filiale und Region an zentrales Facility Management und Einkauf berichten.\n\n### Was betreibermanager.de nicht übernimmt\n\n- Die Prüfungen selbst führen qualifizierte externe Fachleute durch.\n- betreibermanager.de ist keine Prüforganisation und keine zugelassene Überwachungsstelle (ZÜS).\n- Mietvertragliche Fragen und die Gefährdungsbeurteilung bleiben beim Unternehmen."
+    },
+    {
+      "id": "kosten",
+      "heading": "Kosten und Preisfaktoren",
+      "content": "Die Kosten der Koordination hängen von der Zahl der Filialen, von der Zahl der Filialtypen und Bundesländer, vom Zustand der vorhandenen Unterlagen und vom Aufwand der Erstaufnahme ab. Auch das gewünschte Berichtswesen und die Zahl der Schnittstellen zu Vermietern wirken sich aus.\n\nDie Prüfkosten bestimmen die Prüfer. Sie hängen von Zahl und Art der Anlagen je Filiale, Anfahrt, Terminfenstern und der Bündelung je Region ab. Rahmenverträge können Konditionen vereinheitlichen. Preise nennen wir erst nach der Bestandsaufnahme."
+    }
+  ],
+  "tables": [
+    {
+      "caption": "Typische Prüfkategorien in Filialen (Richtwerte)",
+      "head": [
+        "Anlage / System",
+        "Grundlage",
+        "Intervall",
+        "Wer prüft"
+      ],
+      "rows": [
+        [
+          "Ortsfeste elektrische Anlagen der Filiale",
+          "DGUV Vorschrift 3 § 5, Tabelle 1A",
+          "Regelwert 4 Jahre",
+          "Elektrofachkraft bzw. befähigte Person"
+        ],
+        [
+          "Ortsveränderliche Betriebsmittel (Kassen, Waagen, Reinigungs- und Küchengeräte)",
+          "DGUV Vorschrift 3 § 5, Tabelle 1B",
+          "Regelwert 6 Monate; bei Fehlerquote unter 2 % verlängerbar, in bürotypischer Umgebung auf höchstens 2 Jahre [PRÜFEN: Einordnung Verkaufsraum]",
+          "Elektrofachkraft bzw. befähigte Person"
+        ],
+        [
+          "Kraftbetätigte Türen und Tore (Eingang, Anlieferung)",
+          "ASR A1.7",
+          "bei Inbetriebnahme und mindestens einmal jährlich",
+          "Sachkundige Person"
+        ],
+        [
+          "Feuerlöscher",
+          "ASR A2.2",
+          "mindestens alle 2 Jahre",
+          "Sachkundige Person"
+        ],
+        [
+          "Brandschutzanlagen (soweit vorhanden)",
+          "Prüfverordnungen der Länder",
+          "Prüffristen je Bundesland",
+          "Bauaufsichtlich anerkannte Prüfsachverständige"
+        ],
+        [
+          "Trinkwasser-Installation",
+          "TrinkwV § 31, § 51",
+          "Legionellenuntersuchung bei gewerblicher Tätigkeit mindestens alle 3 Jahre [PRÜFEN: Untersuchungspflicht für kleine Installationen]",
+          "Geeignete Probenehmer und Untersuchungsstellen"
+        ],
+        [
+          "Raumlufttechnische Anlagen (soweit vorhanden)",
+          "VDI 6022 Blatt 1",
+          "Hygieneinspektion alle 3 Jahre, bei Befeuchtung alle 2 Jahre",
+          "Nach VDI 6022 qualifizierte Person"
+        ],
+        [
+          "Regale und Lagereinrichtungen im Lager",
+          "DIN EN 15635",
+          "mindestens einmal in 12 Monaten",
+          "Sachkundige Person"
+        ]
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Wer ist in einer gemieteten Filiale für Prüfungen zuständig, Vermieter oder Filialunternehmen?",
+      "answer": "Das regelt der Mietvertrag; er sollte Anlagen einzeln zuordnen. Das Filialunternehmen ist als Arbeitgeber für Arbeitsmittel und Beschäftigte verantwortlich. Aufgaben lassen sich übertragen, die Auswahl- und Überwachungspflicht bleibt."
+    },
+    {
+      "question": "Welche Prüfungen sind in praktisch jeder Filiale fällig?",
+      "answer": "Elektrische Anlagen und Betriebsmittel, Feuerlöscher, kraftbetätigte Türen und Tore sowie, soweit vorhanden, Brandschutzanlagen, Trinkwasser-Installation und Lüftungsanlagen. Der Filialtyp bestimmt den Rest."
+    },
+    {
+      "question": "Wie oft müssen Feuerlöscher in Filialen geprüft werden?",
+      "answer": "Nach ASR A2.2 mindestens alle 2 Jahre durch eine sachkundige Person."
+    },
+    {
+      "question": "Wie oft müssen automatische Eingangstüren geprüft werden?",
+      "answer": "Kraftbetätigte Türen und Tore sind nach ASR A1.7 bei der Inbetriebnahme und mindestens einmal jährlich durch eine sachkundige Person zu prüfen."
+    },
+    {
+      "question": "Gelten die Brandschutz-Prüffristen in allen Filialen gleich?",
+      "answer": "Nein. Die Prüfverordnungen der Länder legen die Prüffristen fest, und sie unterscheiden sich je Bundesland. Der Prüfplan muss das je Filiale abbilden."
+    },
+    {
+      "question": "Wie bündele ich Prüfungen für viele Filialen?",
+      "answer": "Nach Regionen mit festen Zeitfenstern. Wird innerhalb von zwei Monaten vor Fälligkeit geprüft, beginnt die nächste Frist mit dem Fälligkeitstermin (§ 14 Abs. 5 BetrSichV, soweit anwendbar). Prüfer können so je Region gesammelt arbeiten."
+    },
+    {
+      "question": "Welche Rolle hat der Filialleiter bei Prüfungen?",
+      "answer": "Er ermöglicht Zugang, stellt Geräte und Unterlagen bereit und meldet Auffälligkeiten. Planung, Beauftragung und Überwachung sollten zentral liegen."
+    },
+    {
+      "question": "Was passiert mit Prüfunterlagen bei Eröffnung, Umbau und Schließung einer Filiale?",
+      "answer": "Bei Eröffnung wird der Prüfplan angelegt, bei Umbau werden Anlagen abgeglichen, bei Schließung werden Nachweise archiviert. Das Kataster muss diese Änderungen abbilden."
+    },
+    {
+      "question": "Kann ein Rahmenvertrag für alle Filialen sinnvoll sein?",
+      "answer": "Bei Prüfungen mit einheitlichen Regelwerken meist ja, wenn der Anbieter regional abdecken kann. Für Prüfungen nach Landesrecht sind regionale Anteile üblich."
+    },
+    {
+      "question": "Prüft betreibermanager.de die Filialen selbst?",
+      "answer": "Nein. betreibermanager.de koordiniert Fristen, Termine und Nachweise. Die Prüfungen führen qualifizierte externe Fachleute durch."
+    }
+  ],
+  "sources": [
+    {
+      "label": "ArbSchG §§ 3, 5 – Beurteilung der Arbeitsbedingungen, Pflichten des Arbeitgebers",
+      "url": "https://www.gesetze-im-internet.de/arbschg/"
+    },
+    {
+      "label": "BetrSichV – §§ 3, 14, 17 und Anhang 2 (Gesetze im Internet)",
+      "url": "https://www.gesetze-im-internet.de/betrsichv_2015/"
+    },
+    {
+      "label": "BGB § 823 – Schadensersatzpflicht (Verkehrssicherungspflicht)",
+      "url": "https://www.gesetze-im-internet.de/bgb/__823.html"
+    },
+    {
+      "label": "DGUV Vorschrift 1 und DGUV Vorschrift 3 – Publikationen der DGUV",
+      "url": "https://publikationen.dguv.de"
+    },
+    {
+      "label": "ASR A1.7 – Türen und Tore (BAuA)",
+      "url": "https://www.baua.de/DE/Angebote/Regelwerk/ASR/ASR-A1-7"
+    },
+    {
+      "label": "ASR A2.2 – Maßnahmen gegen Brände (BAuA)",
+      "url": "https://www.baua.de/DE/Angebote/Regelwerk/ASR/ASR-A2-2"
+    },
+    {
+      "label": "TrinkwV §§ 31, 51 – Trinkwasserverordnung",
+      "url": "https://www.gesetze-im-internet.de/trinkwv_2023/"
+    },
+    {
+      "label": "VDI 6022 Blatt 1 – Raumlufttechnik, Raumluftqualität: Hygieneanforderungen (VDI)",
+      "url": "https://www.vdi.de/richtlinien"
+    },
+    {
+      "label": "DIN-Normen: DIN EN 15635, DIN 1946-4 (DIN Media)",
+      "url": "https://www.dinmedia.de"
+    },
+    {
+      "label": "GEFMA 190 – Betreiberverantwortung im Facility Management (GEFMA)",
+      "url": "https://www.gefma.de"
+    }
+  ],
+  "internalLinks": [
+    {
+      "label": "DGUV V3 Prüfungen für Filialunternehmen",
+      "href": "/pruefmanagement/filialunternehmen/dguv-v3",
+      "note": "Elektrische Prüfung in Filialen"
+    },
+    {
+      "label": "Feuerlöscher-Prüfung",
+      "href": "/feuerloescher-pruefung",
+      "note": "Fristen nach ASR A2.2"
+    },
+    {
+      "label": "Prüffristen im Überblick",
+      "href": "/prueffristen",
+      "note": "Fristen mit Rechtsgrundlage"
+    },
+    {
+      "label": "Betreiberverantwortung",
+      "href": "/betreiberverantwortung",
+      "note": "Verantwortung und Delegation"
+    },
+    {
+      "label": "Externer Betreibermanager",
+      "href": "/externer-betreibermanager",
+      "note": "Leistungsmodell und Ablauf"
+    },
+    {
+      "label": "Prüfmanagement für Immobilienportfolios",
+      "href": "/pruefmanagement/immobilienportfolios",
+      "note": "Steuerung über viele Objekte"
+    }
+  ],
+  "internalLinksFromExisting": [
+    {
+      "from": "/externer-betreibermanager",
+      "label": "Prüfmanagement für Filialunternehmen",
+      "note": "Für Ketten mit vielen Filialen"
+    },
+    {
+      "from": "/betreiberpflichten",
+      "label": "Prüfmanagement für Filialunternehmen",
+      "note": "Zielgruppenseite Filialisten"
+    }
+  ],
+  "aiPrompts": [
+    "Wer koordiniert Prüfpflichten für ein Filialunternehmen mit vielen Filialen?",
+    "Welche Prüfungen sind in jeder Einzelhandelsfiliale vorgeschrieben?",
+    "Wie organisiere ich Prüfungen für 200 Filialen zentral?",
+    "Wer ist in gemieteten Filialen für Prüfungen verantwortlich, Vermieter oder Mieter?",
+    "Wie plane ich Prüftermine in Filialen, ohne den Verkauf zu stören?",
+    "Lohnt sich ein Rahmenvertrag für Gebäudeprüfungen im Filialnetz?",
+    "Wie dokumentiere ich Prüfungen zentral für alle Filialen?"
+  ],
+  "primaryIntent": "Dienstleister für zentrales Prüfmanagement in Filialnetzen finden",
+  "ctaTopic": "Prüfmanagement für Filialunternehmen",
+  "cannibalization": {
+    "relatedUrls": [
+      "/externer-betreibermanager",
+      "/betreiberpflichten",
+      "/wissen/elektropruefung/welche-elektropruefungen-braucht-ein-einzelhaendler-mit-mehreren-filialen",
+      "/pruefmanagement/filialunternehmen/dguv-v3"
+    ],
+    "differentiation": "Kein bestehendes Seitenangebot behandelt Filialnetze als Gesamtthema (Standard-Prüfplan je Filialtyp, Mietflächen, Terminlogistik nach Region). Die DGUV-V3-Frage für Filialisten liegt bereits auf Wissensseiten und ist über Seite 10 geregelt.",
+    "decision": "neue Seite"
+  }
+}

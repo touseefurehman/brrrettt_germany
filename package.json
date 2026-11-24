@@ -12,7 +12,8 @@
     "indexnow": "node scripts/indexnow.mjs",
     "test": "node --test tests/*.test.mjs",
     "measure:cluster": "node tools/report-engine/measure.mjs",
-    "measure:all": "node tools/report-engine/measure.mjs --all"
+    "measure:all": "node tools/report-engine/measure.mjs --all",
+    "b2b:report": "node --experimental-strip-types --no-warnings scripts/b2b-report.mjs"
   },
   "dependencies": {
     "next": "15.5.27",

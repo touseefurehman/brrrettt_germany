@@ -1,0 +1,243 @@
+{
+  "slug": "logistikzentren-dguv-v3",
+  "url": "/pruefmanagement/logistikzentren/dguv-v3",
+  "service": "dguv-v3",
+  "objekt": "logistikzentren",
+  "zielkunde": "Betreiber von Logistikzentren und Kontraktlogistiker (3PL) mit mehreren Standorten",
+  "status": "draft",
+  "reviewedBy": null,
+  "lastReviewed": "2026-11-24",
+  "metaTitle": "DGUV V3 Prüfungen für Logistikzentren | betreibermanager.de",
+  "metaDescription": "DGUV V3 im Logistikzentrum: Fördertechnik, Ladetechnik, Hallenbeleuchtung und Handgeräte. Prüfumfang, Fristen und Koordination über mehrere Standorte.",
+  "h1": "DGUV V3 Prüfungen für Logistikzentren: Geräte- und Anlagenbestand an mehreren Standorten koordinieren",
+  "kurzantwort": "In Logistikzentren umfasst die DGUV V3 Prüfung ortsfeste Anlagen wie Hallenbeleuchtung, Fördertechnik, Ladetechnik und Torsteuerungen sowie ortsveränderliche Betriebsmittel wie Handscanner, Ladegeräte und Verlängerungsleitungen. betreibermanager.de koordiniert Prüfumfang, Fristen und Termine über alle Standorte; die Prüfung führen befähigte externe Fachkräfte aus. Allgemeine Grundlagen der DGUV V3 stehen auf den bestehenden Fachseiten.",
+  "sections": [
+    {
+      "id": "zielgruppe",
+      "heading": "Für wen diese Seite gedacht ist",
+      "content": "Die Seite richtet sich an Betreiber von Logistikzentren und Kontraktlogistiker (3PL) mit mehreren Standorten und dort an Standortleitung, Technik und zentrales Facility Management. Sie setzt die Grundlagen der DGUV V3 voraus und behandelt, was im Logistikzentrum anders ist: der Geräte- und Anlagenbestand, der Schichtbetrieb und die Koordination über viele Standorte.\n\nDie Grundlagen, also Prüffristen, Prüferqualifikation, Protokolle und Kosten, stehen auf [DGUV V3 Prüfung](/dguv-v3-pruefung), [DGUV V3 Prüfung Kosten](/dguv-v3-pruefung-kosten) und im Bereich [Elektroprüfung DGUV V3](/elektropruefung-dguv-v3). Sie werden hier nicht wiederholt."
+    },
+    {
+      "id": "betreiberpflichten",
+      "heading": "Betreiberpflichten bei der Elektroprüfung im Logistikzentrum",
+      "content": "Der Arbeitgeber muss dafür sorgen, dass elektrische Anlagen und Betriebsmittel den Vorschriften entsprechen und wiederkehrend geprüft werden (DGUV Vorschrift 3 § 5). Er beurteilt dazu die Gefährdungen (§§ 3, 5 ArbSchG, § 2 DGUV Vorschrift 1) und legt Prüffristen für Arbeitsmittel nach § 3 BetrSichV fest. Das Ergebnis dokumentiert er; § 14 Abs. 7 BetrSichV erlaubt elektronische Aufzeichnungen.\n\nIm Logistikzentrum entscheidet der Bestand über den Aufwand. Er ist groß, verteilt und bewegt sich: Geräte wandern zwischen Schichten, Stellplätzen und Ladeplätzen, Anlagen werden bei Flächenänderungen versetzt, Vertragskunden bringen eigene Systeme mit.\n\n### Wo es im Logistikbetrieb typischerweise hakt\n\n- Es gibt kein vollständiges Verzeichnis der ortsveränderlichen Betriebsmittel, weil Geräte laufend ausgegeben, getauscht oder ersetzt werden.\n- Prüfplaketten fehlen, oder Geräte sind zum Prüftermin gerade im Einsatz.\n- Ortsfeste Anlagen wie Fördertechnik, Ladetechnik und Hallenbeleuchtung werden nicht systematisch in den Prüfplan aufgenommen.\n- Kundeneigene Systeme in der Halle haben ungeklärte Zuständigkeit.\n- Prüfungen im Schichtbetrieb scheitern am Zugang."
+    },
+    {
+      "id": "pruefkategorien",
+      "heading": "Relevante Prüfkategorien im Logistikzentrum",
+      "content": "Die Tabelle gliedert den typischen Bestand nach Prüfart. Die Fristen entsprechen den Regelwerten der Durchführungsanweisung zur DGUV Vorschrift 3. Wie hoch die Beanspruchung in einem Bereich ist und ob sich Fristen verlängern lassen, entscheidet die Gefährdungsbeurteilung; die Fehlerquote der Vorprüfungen dient als Beleg.",
+      "table": 0
+    },
+    {
+      "id": "regelwerke",
+      "heading": "Anwendbare Regelwerke und Normen",
+      "content": "- **DGUV Vorschrift 3 § 5:** Prüfpflicht für elektrische Anlagen und Betriebsmittel mit den Durchführungsanweisungen (Tabelle 1A für ortsfeste Anlagen, Tabelle 1B für ortsveränderliche Betriebsmittel).\n- **ArbSchG §§ 3, 5, DGUV Vorschrift 1 § 2:** Gefährdungsbeurteilung.\n- **BetrSichV § 3, § 14:** Prüffristen und Prüfung; elektronische Aufzeichnung nach § 14 Abs. 7. Letzte Änderung 18.12.2025.\n- **TRBS 1203:** Anforderungen an befähigte Personen.\n- **ASR A1.7:** Torsteuerungen als Teil der Torprüfung, getrennt von der elektrischen Prüfung.\n- **DIN EN 15635:** Inspektion von Lagereinrichtungen, in der Logistik meist gemeinsam terminiert.\n- **GEFMA 190 und VDI 3810:** Leitfäden zur Strukturierung der Betreiberpflichten.\n\nDer Beitrag [DGUV V3 Prüffristen: Wie oft prüfen?](/wissen/dguv-v3-pruefung-wie-oft) erläutert die Fristen, der Beitrag [Prüfprotokoll](/wissen/dguv-v3-pruefprotokoll) die Anforderungen an die Dokumentation."
+    },
+    {
+      "id": "fristen",
+      "heading": "Prüffristen und Verantwortlichkeiten",
+      "content": "**Ortsfeste Anlagen.** Regelwert 4 Jahre (Tabelle 1A).\n\n**Ortsveränderliche Betriebsmittel.** Regelwert 6 Monate; auf Baustellen 3 Monate (Tabelle 1B). Bei einer Fehlerquote unter 2 % können die Fristen verlängert werden, in Werkstätten und auf Baustellen auf höchstens 1 Jahr, in bürotypischer Umgebung auf höchstens 2 Jahre. Wie ein Lager- oder Umschlagbereich einzuordnen ist, ist im Einzelfall in der Gefährdungsbeurteilung zu begründen [PRÜFEN: Einordnung von Lager- und Umschlaghallen in die Kategorien der Durchführungsanweisung].\n\n**Voraussetzung Fehlerquote.** Fristverlängerungen setzen belastbare Daten voraus: Prüfergebnisse je Gerät und Bereich über mehrere Prüfzyklen. Das ist ein Argument für ein zentrales Gerätekataster.\n\n**Terminierung.** Nach § 14 Abs. 5 BetrSichV beginnt die nächste Frist mit dem Fälligkeitstermin, wenn innerhalb von zwei Monaten davor geprüft wird, soweit die Vorschrift für die Prüfung gilt.\n\n### Zuständigkeiten\n\n- **Standortleitung:** Betreiberpflichten vor Ort, Bereitstellung der Geräte und Zugänge.\n- **Technik / Instandhaltung:** ortsfeste Anlagen, Mängelbeseitigung.\n- **Zentrales Facility Management:** Standards, Rahmenverträge, Überwachung.\n- **Kunden (3PL):** eigene Systeme, soweit vertraglich geregelt.\n- **Externe befähigte Fachkräfte:** Prüfung und Protokoll.\n- **betreibermanager.de:** Kataster, Fristen, Terminplanung, Nachverfolgung."
+    },
+    {
+      "id": "standorte",
+      "heading": "Herausforderungen bei mehreren Logistikstandorten",
+      "content": "**Gerätebestand je Standort erfassen.** Die Erstaufnahme ist der größte Block. Hilfreich ist ein einheitliches Geräteschema mit eindeutiger Kennung je Betriebsmittel und festen Kategorien, zum Beispiel Handgeräte, Ladegeräte und Ladestationen, Fördertechnik und Beleuchtung.\n\n**Einheitliche Berichte.** Mehrere Standorte erzeugen mehrere Protokollformate. Ein einheitliches Berichtsformat erlaubt, Fehlerquoten je Standort zu vergleichen und Fristverlängerungen zentral zu begründen.\n\n**Prüffenster im Schichtbetrieb.** Prüfungen laufen am besten in ruhigen Zeiten und nach Bereichen gestaffelt. Geräte, die ständig im Einsatz sind, werden zu festen Zeiten bereitgestellt oder getauscht.\n\n**Ladetechnik.** Ladegeräte für Flurförderzeuge, Batterieladeräume und Ladeinfrastruktur für Elektrofahrzeuge haben eigene Anforderungen [PRÜFEN: Prüfpflichten und Normen für Batterieladeräume und Ladeinfrastruktur].\n\n**Kombination mit anderen Prüfungen.** Tore, Regale und Stapler werden nach anderen Regeln geprüft, lassen sich aber im selben Zeitfenster abarbeiten. Siehe [Torprüfungen für Logistikzentren](/pruefmanagement/logistikzentren/tore)."
+    },
+    {
+      "id": "koordination",
+      "heading": "Externe Prüfkoordination durch betreibermanager.de",
+      "content": "### Was betreibermanager.de übernimmt\n\n- Geräte- und Anlagenkataster je Standort aufbauen und pflegen.\n- Prüfumfang und Fristen mit der Gefährdungsbeurteilung abgleichen und dokumentieren.\n- Termine mit Standorten abstimmen, Zugänge und Bereitstellung planen.\n- Befähigte externe Fachkräfte beauftragen, Protokolle sammeln, Mängel verfolgen.\n- Fehlerquoten je Standort auswerten und standortübergreifend berichten.\n\n### Was betreibermanager.de nicht übernimmt\n\n- Wir führen keine Messungen oder Prüfungen durch; das tun befähigte externe Fachkräfte.\n- betreibermanager.de ist keine Prüforganisation und keine zugelassene Überwachungsstelle (ZÜS).\n- Die Gefährdungsbeurteilung und die Entscheidung über Fristverlängerungen bleiben beim Betreiber."
+    },
+    {
+      "id": "kosten",
+      "heading": "Kosten und Preisfaktoren",
+      "content": "Die Kosten der Koordination hängen von der Zahl der Standorte, dem Umfang des Geräte- und Anlagenbestands und dem Aufwand der Erstaufnahme ab. Zusätzlich wirken sich die Ausgestaltung des Berichtswesens und die Zahl der Kunden mit eigenen Systemen aus.\n\nDie Prüfkosten selbst bestimmen die Prüfer. Sie hängen von der Zahl der Geräte, dem Anteil ortsfester Anlagen, der Zugänglichkeit, dem Prüfumfang und der Anfahrt ab. Orientierungswerte aus veröffentlichten Anbieterangaben stehen auf [DGUV V3 Prüfung Kosten](/dguv-v3-pruefung-kosten); Preise für Ihre Standorte ergeben sich erst nach einer Bestandsaufnahme."
+    }
+  ],
+  "tables": [
+    {
+      "caption": "Typische DGUV-V3-Prüfobjekte im Logistikzentrum (Regelwerte der Durchführungsanweisung)",
+      "head": [
+        "Anlage / System",
+        "Grundlage",
+        "Intervall",
+        "Wer prüft"
+      ],
+      "rows": [
+        [
+          "Elektrische Anlagen der Halle: Verteilungen, Hallenbeleuchtung, Steckdosen",
+          "DGUV Vorschrift 3 § 5, Tabelle 1A",
+          "Regelwert 4 Jahre",
+          "Elektrofachkraft bzw. befähigte Person"
+        ],
+        [
+          "Fördertechnik, Sorter, Rollenbahnen (ortsfest)",
+          "DGUV Vorschrift 3 § 5, Tabelle 1A",
+          "Regelwert 4 Jahre; kürzere Frist bei hoher Beanspruchung nach Gefährdungsbeurteilung",
+          "Elektrofachkraft bzw. befähigte Person"
+        ],
+        [
+          "Torantriebe und -steuerungen",
+          "DGUV Vorschrift 3 § 5, Tabelle 1A; Torprüfung nach ASR A1.7 getrennt",
+          "Regelwert 4 Jahre",
+          "Elektrofachkraft bzw. befähigte Person"
+        ],
+        [
+          "Handscanner, mobile Drucker, Ladegeräte, Ladeschränke",
+          "DGUV Vorschrift 3 § 5, Tabelle 1B",
+          "Regelwert 6 Monate; bei Fehlerquote unter 2 % verlängerbar [PRÜFEN: Einordnung des Bereichs]",
+          "Elektrofachkraft bzw. befähigte Person; ortsveränderliche Betriebsmittel auch elektrotechnisch unterwiesene Personen unter Aufsicht"
+        ],
+        [
+          "Verlängerungs- und Anschlussleitungen, Kabeltrommeln im Umschlag",
+          "DGUV Vorschrift 3 § 5, Tabelle 1B",
+          "Regelwert 6 Monate; bei Fehlerquote unter 2 % verlängerbar [PRÜFEN: Einordnung des Bereichs]",
+          "Elektrofachkraft bzw. befähigte Person"
+        ],
+        [
+          "Ladeplätze für Flurförderzeuge, Batterieladeräume, Ladeinfrastruktur",
+          "DGUV Vorschrift 3 § 5; weitere Normen [PRÜFEN]",
+          "[PRÜFEN]",
+          "[PRÜFEN]"
+        ]
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Welche elektrischen Prüfungen gelten im Logistikzentrum?",
+      "answer": "Ortsfeste Anlagen wie Verteilungen, Hallenbeleuchtung, Fördertechnik und Torsteuerungen sowie ortsveränderliche Betriebsmittel wie Handscanner, Ladegeräte und Verlängerungsleitungen. Grundlage ist § 5 DGUV Vorschrift 3."
+    },
+    {
+      "question": "Wie oft sind ortsfeste Anlagen im Lager zu prüfen?",
+      "answer": "Die Durchführungsanweisung nennt in Tabelle 1A einen Regelwert von 4 Jahren. Kürzere Fristen können sich aus der Gefährdungsbeurteilung ergeben."
+    },
+    {
+      "question": "Wie oft sind Handscanner und Ladegeräte zu prüfen?",
+      "answer": "Tabelle 1B nennt als Regelwert 6 Monate, auf Baustellen 3 Monate. Bei einer Fehlerquote unter 2 % kann die Frist verlängert werden, in bürotypischer Umgebung auf höchstens 2 Jahre, in Werkstätten und auf Baustellen auf höchstens 1 Jahr. Die Einordnung des Bereichs begründet die Gefährdungsbeurteilung."
+    },
+    {
+      "question": "Wie begründe ich eine Fristverlängerung bei ortsveränderlichen Geräten?",
+      "answer": "Mit dokumentierten Prüfergebnissen aus mehreren Zyklen. Liegt die Fehlerquote unter 2 %, ist eine Verlängerung im Rahmen der Durchführungsanweisung möglich. Ein zentrales Gerätekataster liefert die Datenbasis."
+    },
+    {
+      "question": "Wer darf im Logistikzentrum elektrisch prüfen?",
+      "answer": "Ortsfeste Anlagen prüft eine Elektrofachkraft bzw. befähigte Person. Ortsveränderliche Betriebsmittel dürfen auch elektrotechnisch unterwiesene Personen unter Leitung und Aufsicht einer Elektrofachkraft prüfen. Die Qualifikation richtet sich nach TRBS 1203."
+    },
+    {
+      "question": "Wie gehe ich mit Geräten um, die im Schichtbetrieb ständig im Einsatz sind?",
+      "answer": "Sie werden zu festen Zeiten bereitgestellt oder getauscht, damit sie geprüft werden können. Geräte ohne Kennung oder Prüfnachweis sind aus dem Umlauf zu nehmen."
+    },
+    {
+      "question": "Wie unterscheiden sich Elektroprüfung und Torprüfung?",
+      "answer": "Die Torprüfung folgt ASR A1.7 und ist jährlich durch eine sachkundige Person fällig. Die Elektroprüfung folgt DGUV Vorschrift 3. Beide lassen sich terminlich bündeln."
+    },
+    {
+      "question": "Wer prüft die Ladetechnik für Flurförderzeuge?",
+      "answer": "Ladegeräte und -plätze sind Teil der Elektroprüfung. Welche weiteren Normen für Batterieladeräume und Ladeinfrastruktur gelten, ist für diese Seite noch zu bestätigen."
+    },
+    {
+      "question": "Wie bündele ich Prüfungen über mehrere Standorte?",
+      "answer": "Mit einem einheitlichen Kataster und Berichtsformat, einem Rahmenvertrag mit regionaler Abdeckung und einem Terminplan je Region. Wird innerhalb von zwei Monaten vor Fälligkeit geprüft, beginnt die nächste Frist mit dem Fälligkeitstermin (§ 14 Abs. 5 BetrSichV, soweit anwendbar)."
+    },
+    {
+      "question": "Prüft betreibermanager.de die Geräte selbst?",
+      "answer": "Nein. betreibermanager.de koordiniert Prüfumfang, Fristen, Termine und Nachweise. Die Prüfung führen befähigte externe Fachkräfte aus."
+    }
+  ],
+  "sources": [
+    {
+      "label": "DGUV Vorschrift 1 und DGUV Vorschrift 3 – Publikationen der DGUV",
+      "url": "https://publikationen.dguv.de"
+    },
+    {
+      "label": "ArbSchG §§ 3, 5 – Beurteilung der Arbeitsbedingungen, Pflichten des Arbeitgebers",
+      "url": "https://www.gesetze-im-internet.de/arbschg/"
+    },
+    {
+      "label": "BetrSichV – §§ 3, 14, 17 und Anhang 2 (Gesetze im Internet)",
+      "url": "https://www.gesetze-im-internet.de/betrsichv_2015/"
+    },
+    {
+      "label": "TRBS 1203 – Befähigte Personen (BAuA)",
+      "url": "https://www.baua.de/DE/Angebote/Regelwerk/TRBS/TRBS-1203.html"
+    },
+    {
+      "label": "ASR A1.7 – Türen und Tore (BAuA)",
+      "url": "https://www.baua.de/DE/Angebote/Regelwerk/ASR/ASR-A1-7"
+    },
+    {
+      "label": "DIN-Normen: DIN EN 15635, DIN 1946-4 (DIN Media)",
+      "url": "https://www.dinmedia.de"
+    },
+    {
+      "label": "GEFMA 190 – Betreiberverantwortung im Facility Management (GEFMA)",
+      "url": "https://www.gefma.de"
+    },
+    {
+      "label": "VDI 3810 – Betreiben und Instandhalten von Gebäuden und gebäudetechnischen Anlagen (VDI)",
+      "url": "https://www.vdi.de/richtlinien"
+    }
+  ],
+  "internalLinks": [
+    {
+      "label": "DGUV V3 Prüfung",
+      "href": "/dguv-v3-pruefung",
+      "note": "Grundlagen, Fristen, Ablauf"
+    },
+    {
+      "label": "DGUV V3 Prüfung Kosten",
+      "href": "/dguv-v3-pruefung-kosten",
+      "note": "Orientierungswerte aus Anbieterangaben"
+    },
+    {
+      "label": "Elektroprüfung DGUV V3",
+      "href": "/elektropruefung-dguv-v3",
+      "note": "Fragen und Antworten zur Elektroprüfung"
+    },
+    {
+      "label": "Torprüfungen für Logistikzentren",
+      "href": "/pruefmanagement/logistikzentren/tore",
+      "note": "Tore und Verladetechnik"
+    },
+    {
+      "label": "Prüfprotokoll nach DGUV V3",
+      "href": "/wissen/dguv-v3-pruefprotokoll",
+      "note": "Anforderungen an die Dokumentation"
+    },
+    {
+      "label": "Elektroprüfung in Logistikhallen",
+      "href": "/wissen/elektropruefung/welche-elektropruefungen-gelten-fuer-lager-und-logistikhallen",
+      "note": "Kurzantwort zur Elektroprüfung im Lager"
+    }
+  ],
+  "internalLinksFromExisting": [
+    {
+      "from": "/wissen/elektropruefung/welche-elektropruefungen-gelten-fuer-lager-und-logistikhallen",
+      "label": "DGUV V3 Prüfungen für Logistikzentren",
+      "note": "Vertiefung für Betreiber mit mehreren Standorten"
+    }
+  ],
+  "aiPrompts": [
+    "Welche DGUV V3 Prüfungen gelten im Logistikzentrum?",
+    "Wie oft müssen Handscanner und Ladegeräte im Lager geprüft werden?",
+    "Wie organisiere ich DGUV V3 Prüfungen an mehreren Logistikstandorten?",
+    "Wie begründe ich eine verlängerte Prüffrist bei niedriger Fehlerquote?",
+    "Wer prüft Fördertechnik und Ladetechnik elektrisch?",
+    "Wie plane ich Elektroprüfungen im Mehrschichtbetrieb?",
+    "Was gilt für Geräte von Kunden in einem 3PL-Lager?"
+  ],
+  "primaryIntent": "DGUV V3 Prüfungen für Logistikstandorte organisieren und koordinieren lassen",
+  "ctaTopic": "DGUV V3 Prüfungen für Logistikzentren",
+  "cannibalization": {
+    "relatedUrls": [
+      "/dguv-v3-pruefung",
+      "/dguv-v3-pruefung-kosten",
+      "/elektropruefung-dguv-v3",
+      "/wissen/elektropruefung/welche-elektropruefungen-gelten-fuer-lager-und-logistikhallen",
+      "/elektropruefung-dguv-v3/welcher-pruefdienst-ist-auf-elektropruefungen-in-logistikhallen-spezialisiert"
+    ],
+    "differentiation": "Inhaltlich abgegrenzt (Geräte- und Anlagenlandschaft im Logistikzentrum, Schichtbetrieb, Standortnetz, Fehlerquoten-Auswertung), aber die Hauptfrage deckt sich mit den bestehenden Seiten „Welche Elektroprüfungen gelten für Lager- und Logistikhallen?“ und „Welcher Prüfdienst ist auf Elektroprüfungen in Logistikhallen spezialisiert?“. Diese Überschneidung auf Intent-Ebene lässt sich nicht sauber auflösen; empfohlen wird, den Inhalt in die bestehende Wissensseite einzuarbeiten (dort stehen zudem Fristangaben, die nicht aus der geprüften Quellenliste stammen).",
+    "decision": "bestehende Seite erweitern"
+  }
+}

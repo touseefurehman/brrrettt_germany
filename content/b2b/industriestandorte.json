@@ -1,0 +1,286 @@
+{
+  "slug": "industriestandorte",
+  "url": "/pruefmanagement/industriestandorte",
+  "service": "pruefmanagement",
+  "objekt": "industriestandorte",
+  "zielkunde": "Produzierende Unternehmen mit einem oder mehreren Werken (Standortleitung, HSE, Technischer Service)",
+  "status": "review",
+  "reviewedBy": null,
+  "lastReviewed": "2026-11-24",
+  "metaTitle": "Prüfmanagement für Industriestandorte | betreibermanager.de",
+  "metaDescription": "Prüfpflichten an Werken und Produktionsstandorten koordinieren: Arbeitsmittel, Elektro, Krane, Tore, Regale und Brandschutz. Fristen und Zuständigkeiten.",
+  "h1": "Prüfmanagement für Industriestandorte: Prüfungen im laufenden Werksbetrieb koordinieren",
+  "kurzantwort": "Auf Industriestandorten fallen Prüfpflichten für Produktionsanlagen, Elektrik, Hebezeuge, Regale, Tore und Brandschutz an, die sich mit dem Produktionsplan abstimmen lassen müssen. betreibermanager.de koordiniert Fristen, Prüftermine und Nachweise für ein oder mehrere Werke und beauftragt qualifizierte externe Prüfer. Gefährdungsbeurteilung und Betreiberverantwortung bleiben beim Unternehmen.",
+  "sections": [
+    {
+      "id": "zielgruppe",
+      "heading": "Für wen diese Seite gedacht ist",
+      "content": "Die Seite richtet sich an produzierende Unternehmen mit einem oder mehreren Werken und dort an Standortleitung, Arbeitssicherheit und Umweltschutz (HSE) sowie den technischen Service. Gemeint sind Betreiber, in deren Werk Produktionsanlagen, Förder- und Hebetechnik, Lager, Energieversorgung und Gebäudetechnik nebeneinander laufen.\n\nIhre Aufgabe ist selten, eine einzelne Prüfung zu organisieren. Schwer wiegt die Menge: Eine Vielzahl von Anlagen mit unterschiedlichen Rechtsgrundlagen, Prüfern und Fristen muss so geplant werden, dass die Produktion nicht gestört wird, und das an jedem Werk nach eigener Logik.\n\n**Prüfmanagement am Industriestandort** heißt: Gefährdungsbeurteilung, Prüfplan, Prüfer, Termine und Nachweise werden zusammengeführt, sodass jederzeit belegbar ist, welche Anlage wann von wem geprüft wurde und welche Mängel offen sind."
+    },
+    {
+      "id": "betreiberpflichten",
+      "heading": "Betreiberpflichten an Produktionsstandorten",
+      "content": "Als Arbeitgeber muss das Unternehmen Gefährdungen beurteilen und Schutzmaßnahmen festlegen (§§ 3, 5 ArbSchG, § 2 DGUV Vorschrift 1). Für Arbeitsmittel verlangt § 3 BetrSichV die Gefährdungsbeurteilung einschließlich der Festlegung von Art, Umfang und Fristen der Prüfungen. § 14 BetrSichV schreibt die Prüfung der Arbeitsmittel vor, überwachungsbedürftige Anlagen nach § 17 und Anhang 2 prüfen zugelassene Überwachungsstellen (ZÜS). Daneben begründet § 823 BGB eine Verkehrssicherungspflicht, die auch für Dritte auf dem Werksgelände gilt.\n\nDer Industriestandort hat gegenüber anderen Objekten drei Besonderheiten:\n\n- **Die Prüffristen sind oft betreibereigen.** Für viele Maschinen und Arbeitsmittel gibt es keine feste gesetzliche Frist. Sie ergibt sich aus der Gefährdungsbeurteilung und muss dokumentiert begründet sein.\n- **Prüfungen greifen in den Betrieb ein.** Stillstandsfenster, Schichtbetrieb und Wartungsstillstände bestimmen, wann geprüft werden kann.\n- **Fremdfirmen sind auf dem Gelände unterwegs.** Prüfer sind Fremdfirmenpersonal und müssen eingewiesen werden [PRÜFEN: Pflichten zur Einweisung und Koordination von Fremdfirmen, Rechtsgrundlage].\n\n### Typische Schwachstellen\n\n- Die Gefährdungsbeurteilung begründet die Prüffristen nicht oder nur pauschal.\n- Maschinenprüfungen laufen über die Instandhaltung, Gebäudeprüfungen über das Facility Management, und niemand sieht das Ganze.\n- Prüfungen werden verschoben, weil die Anlage nicht stillgelegt werden kann, und danach nicht nachgeholt.\n- Nach Umbauten oder neuen Maschinen fehlt die Prüfung vor der Wiederinbetriebnahme."
+    },
+    {
+      "id": "pruefkategorien",
+      "heading": "Relevante Prüfkategorien auf Industriestandorten",
+      "content": "Die Tabelle nennt typische Gruppen. Welche in einem Werk tatsächlich vorkommen, ergibt die Bestandsaufnahme. Anlagen in explosionsgefährdeten Bereichen, Druckanlagen und viele Sonderanlagen haben eigene Prüfvorgaben, die hier nur als Gruppe aufgeführt sind.",
+      "table": 0
+    },
+    {
+      "id": "regelwerke",
+      "heading": "Anwendbare Regelwerke und Normen",
+      "content": "- **ArbSchG §§ 3, 5, DGUV Vorschrift 1 § 2:** Gefährdungsbeurteilung und Arbeitsschutzorganisation.\n- **BetrSichV § 3, § 14, § 17 mit Anhang 2:** Prüffristen aus der Gefährdungsbeurteilung, Prüfung von Arbeitsmitteln, überwachungsbedürftige Anlagen (ZÜS). Letzte Änderung 18.12.2025.\n- **TRBS 1203:** Anforderungen an befähigte Personen, die Arbeitsmittel prüfen.\n- **DGUV Vorschrift 3 § 5:** Prüfung elektrischer Anlagen und Betriebsmittel; in Werkstätten ist bei geringer Fehlerquote eine Verlängerung der Fristen für ortsveränderliche Betriebsmittel möglich.\n- **ASR A1.7:** kraftbetätigte Tore und Türen.\n- **ASR A2.2:** Feuerlöscher.\n- **DIN EN 15635:** Inspektion von Lagereinrichtungen.\n- **Prüfverordnungen der Länder:** Brandschutzanlagen.\n- **GEFMA 190 und VDI 3810** als Leitfäden zur Struktur der Betreiberpflichten.\n\nFür Arbeitsmittel mit eigenen Vorschriften, etwa Krane, Flurförderzeuge oder Anlagen in explosionsgefährdeten Bereichen, nennen die Beiträge der Seite [UVV-Prüfung](/uvv-pruefung) die Grundlagen. Weitere Rechtsgrundlagen für Ex-Bereiche sind vor einer Veröffentlichung zu klären [PRÜFEN: Prüfpflichten für Anlagen in explosionsgefährdeten Bereichen]."
+    },
+    {
+      "id": "fristen",
+      "heading": "Prüffristen und Verantwortlichkeiten",
+      "content": "Wo das Recht keine Frist vorgibt, legt der Betreiber sie in der Gefährdungsbeurteilung fest. Das gibt Freiheit und Pflicht zugleich: Die Fristen müssen nachvollziehbar begründet und regelmäßig überprüft werden. Wie das geht, zeigt der Beitrag [Prüffristen festlegen](/wissen/prueffristen-festlegen).\n\nZwei Regeln aus § 14 BetrSichV erleichtern die Planung. Wird eine Prüfung innerhalb von zwei Monaten vor dem Fälligkeitstermin durchgeführt, beginnt die nächste Frist mit dem Fälligkeitstermin (§ 14 Abs. 5). Prüfungen lassen sich so in Stillstandsfenster legen, ohne den Zyklus zu verschieben. Aufzeichnungen dürfen elektronisch geführt werden (§ 14 Abs. 7).\n\nWichtig ist die Rolle der Prüfer. Arbeitsmittel prüft eine befähigte Person im Sinne der TRBS 1203, überwachungsbedürftige Anlagen eine ZÜS. Wer als befähigte Person gilt, hängt von der Anlage ab. Die Auswahl ist Sache des Betreibers.\n\n### Zuständigkeiten\n\n- **Werksleitung:** Betreiberverantwortung, Budget, Entscheidung bei Stillstandsfragen.\n- **HSE / Arbeitssicherheit:** Gefährdungsbeurteilung, Prüffristen, Überwachung der Nachweise.\n- **Instandhaltung und Technischer Service:** Zugang, Stillstandsplanung, Mängelbeseitigung.\n- **Externe Prüfer:** Prüfung und Bericht.\n- **betreibermanager.de:** Kataster, Terminplanung, Beauftragung, Nachverfolgung."
+    },
+    {
+      "id": "standorte",
+      "heading": "Herausforderungen bei mehreren Werken",
+      "content": "Unternehmen mit mehreren Werken stehen vor einer typischen Spannung: Prüfpflichten gelten überall, die Organisation unterscheidet sich aber je Werk. Das eine Werk hat eine eigene Instandhaltung mit Prüfkalender, das andere gibt alles an Dienstleister, das dritte kam durch eine Übernahme hinzu und hat gar keine Struktur.\n\nDie Folge sind Werke mit unterschiedlichen Dokumentationsständen und Berichtswegen. Für den Konzern ist dann nicht erkennbar, wo Risiken liegen. Hilfreich sind ein einheitliches Anlagenschema, eine gemeinsame Gliederung der Prüfkategorien und ein Werk-übergreifender Bericht an die Geschäftsführung oder den Konzern-HSE.\n\nHinzu kommt das Landesrecht. Brandschutzanlagen werden nach den Prüfverordnungen der Länder geprüft; die Prüffristen unterscheiden sich je Bundesland. Werke in verschiedenen Ländern brauchen deshalb jeweils eigene Fristen im Plan."
+    },
+    {
+      "id": "koordination",
+      "heading": "Externe Prüfkoordination durch betreibermanager.de",
+      "content": "### Was betreibermanager.de übernimmt\n\n- Erfassung der Anlagen und Zuordnung der Prüfpflichten je Werk.\n- Fristenplan, abgestimmt mit Produktionsplanung und Stillstandsfenstern.\n- Auswahl und Beauftragung qualifizierter externer Prüfer; Abstimmung von Zugang und Einweisung mit dem Werk.\n- Nachweise zusammenführen, Mängel verfolgen, Bericht an Werksleitung und Konzern.\n\n### Was betreibermanager.de nicht übernimmt\n\n- Wir führen keine Prüfungen durch. Prüfer sind externe, qualifizierte Dritte.\n- betreibermanager.de ist keine zugelassene Überwachungsstelle (ZÜS) und keine Prüforganisation.\n- Gefährdungsbeurteilung und Festlegung der Prüffristen bleiben Aufgabe des Unternehmens; wir bereiten sie vor, ersetzen sie nicht."
+    },
+    {
+      "id": "kosten",
+      "heading": "Kosten und Preisfaktoren",
+      "content": "Der Aufwand des Prüfmanagements steigt nicht linear mit der Werksgröße, sondern mit der Zahl der Anlagen und der Zahl der Schnittstellen. Zu den Faktoren zählen:\n\n- Zahl der Werke und Bundesländer,\n- Zahl und Art der prüfpflichtigen Anlagen und der Anteil bereits dokumentierter Fristen,\n- Aufwand für Erstaufnahme und Abgleich mit der Gefährdungsbeurteilung,\n- Anforderungen an Stillstands- und Schichtplanung,\n- Umfang des Berichtswesens.\n\nDie Kosten der Prüfungen selbst legen die Prüfer fest. Sie hängen von Anlagenart, Anzahl, Zugänglichkeit und Terminfenstern ab. Preise nennen wir erst nach der Bestandsaufnahme."
+    }
+  ],
+  "tables": [
+    {
+      "caption": "Typische Prüfkategorien auf Industriestandorten (Richtwerte)",
+      "head": [
+        "Anlage / System",
+        "Grundlage",
+        "Intervall",
+        "Wer prüft"
+      ],
+      "rows": [
+        [
+          "Produktionsanlagen und Arbeitsmittel",
+          "BetrSichV § 3, § 14",
+          "Fristen aus der Gefährdungsbeurteilung des Betreibers",
+          "Befähigte Person nach TRBS 1203"
+        ],
+        [
+          "Überwachungsbedürftige Anlagen (z. B. Aufzüge)",
+          "BetrSichV § 17, Anhang 2",
+          "Aufzüge: wiederkehrende Prüfung höchstens alle 2 Jahre, dazwischen Zwischenprüfung",
+          "Zugelassene Überwachungsstelle (ZÜS)"
+        ],
+        [
+          "Ortsfeste elektrische Anlagen",
+          "DGUV Vorschrift 3 § 5, Tabelle 1A",
+          "Regelwert 4 Jahre",
+          "Elektrofachkraft bzw. befähigte Person"
+        ],
+        [
+          "Ortsveränderliche Betriebsmittel in Werkstätten und Produktion",
+          "DGUV Vorschrift 3 § 5, Tabelle 1B",
+          "Regelwert 6 Monate; bei Fehlerquote unter 2 % verlängerbar, in Werkstätten auf höchstens 1 Jahr",
+          "Elektrofachkraft bzw. befähigte Person"
+        ],
+        [
+          "Kraftbetätigte Tore (Hallen, Verladung)",
+          "ASR A1.7",
+          "bei Inbetriebnahme und mindestens einmal jährlich",
+          "Sachkundige Person"
+        ],
+        [
+          "Lagereinrichtungen und Regale",
+          "DIN EN 15635",
+          "mindestens einmal in 12 Monaten",
+          "Sachkundige Person"
+        ],
+        [
+          "Feuerlöscher",
+          "ASR A2.2",
+          "mindestens alle 2 Jahre",
+          "Sachkundige Person"
+        ],
+        [
+          "Brandschutzanlagen (Brandmeldung, Löschanlagen, Rauchabzug, Sicherheitsbeleuchtung)",
+          "Prüfverordnungen der Länder",
+          "Prüffristen je Bundesland",
+          "Bauaufsichtlich anerkannte Prüfsachverständige"
+        ],
+        [
+          "Raumlufttechnik in Büro- und Sozialbereichen, Trinkwasser",
+          "VDI 6022 Blatt 1, TrinkwV § 31",
+          "RLT: 3 Jahre, bei Befeuchtung 2 Jahre; Legionellen bei gewerblicher Tätigkeit mindestens alle 3 Jahre",
+          "Nach VDI 6022 qualifizierte Person; geeignete Probenehmer und Labore"
+        ]
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Wer legt auf einem Industriestandort die Prüffristen für Maschinen fest?",
+      "answer": "Der Betreiber, wenn das Recht keine feste Frist vorgibt. Grundlage ist die Gefährdungsbeurteilung nach § 3 BetrSichV. Die Fristen müssen begründet und dokumentiert sein."
+    },
+    {
+      "question": "Wer darf Arbeitsmittel im Werk prüfen?",
+      "answer": "Eine befähigte Person im Sinne der TRBS 1203. Überwachungsbedürftige Anlagen nach § 17 und Anhang 2 BetrSichV prüft eine zugelassene Überwachungsstelle (ZÜS). Die Auswahl der Prüfer bleibt Aufgabe des Betreibers."
+    },
+    {
+      "question": "Wie lassen sich Prüfungen mit dem Produktionsplan vereinbaren?",
+      "answer": "Durch Terminplanung im Fälligkeitsfenster: Wird innerhalb von zwei Monaten vor dem Fälligkeitstermin geprüft, beginnt die nächste Frist mit dem Fälligkeitstermin (§ 14 Abs. 5 BetrSichV). Prüfungen lassen sich so in Stillstandsfenster legen."
+    },
+    {
+      "question": "Wie oft müssen ortsveränderliche Betriebsmittel in der Produktion elektrisch geprüft werden?",
+      "answer": "Die Durchführungsanweisung zur DGUV Vorschrift 3 nennt in Tabelle 1B einen Regelwert von 6 Monaten. Bei einer Fehlerquote unter 2 % kann die Frist verlängert werden, in Werkstätten auf höchstens 1 Jahr. Die Einordnung einzelner Produktionsbereiche klärt die Gefährdungsbeurteilung."
+    },
+    {
+      "question": "Wie oft sind Regale im Werk zu prüfen?",
+      "answer": "DIN EN 15635 sieht eine Inspektion durch eine sachkundige Person mindestens einmal in 12 Monaten vor. Zusätzliche Prüfungen nach Anprall oder Umbau legt der Betreiber fest."
+    },
+    {
+      "question": "Gelten die Brandschutz-Prüffristen in allen Bundesländern gleich?",
+      "answer": "Nein. Brandschutzanlagen werden nach den Prüfverordnungen der Länder geprüft, die Prüffristen unterscheiden sich je Bundesland."
+    },
+    {
+      "question": "Was ist bei mehreren Werken in verschiedenen Bundesländern zu beachten?",
+      "answer": "Jedes Werk braucht einen Plan nach dem Recht seines Landes. Ein einheitliches Kataster mit gleicher Gliederung erlaubt dennoch einen Gesamtüberblick und einen Bericht an Geschäftsführung oder Konzern."
+    },
+    {
+      "question": "Müssen Prüfer von Fremdfirmen im Werk eingewiesen werden?",
+      "answer": "In der Praxis ja; Zugang, Gefährdungen und Verhaltensregeln werden vor Arbeitsbeginn abgestimmt. Die genauen Rechtsgrundlagen sind für diese Seite noch zu klären."
+    },
+    {
+      "question": "Was passiert nach einem Umbau oder der Aufstellung einer neuen Maschine?",
+      "answer": "Arbeitsmittel unterliegen der Prüfung nach § 14 BetrSichV. Ob und welche Prüfung nach einem Umbau oder vor der ersten Nutzung fällig ist, ergibt die Gefährdungsbeurteilung [PRÜFEN: Prüfpflicht vor Wiederinbetriebnahme nach wesentlicher Änderung, Fundstelle]."
+    },
+    {
+      "question": "Übernimmt betreibermanager.de die Gefährdungsbeurteilung?",
+      "answer": "Nein. Die Gefährdungsbeurteilung ist Pflicht des Arbeitgebers. betreibermanager.de koordiniert Prüfungen, Fristen und Nachweise und bereitet Informationen auf."
+    }
+  ],
+  "sources": [
+    {
+      "label": "ArbSchG §§ 3, 5 – Beurteilung der Arbeitsbedingungen, Pflichten des Arbeitgebers",
+      "url": "https://www.gesetze-im-internet.de/arbschg/"
+    },
+    {
+      "label": "BetrSichV – §§ 3, 14, 17 und Anhang 2 (Gesetze im Internet)",
+      "url": "https://www.gesetze-im-internet.de/betrsichv_2015/"
+    },
+    {
+      "label": "BGB § 823 – Schadensersatzpflicht (Verkehrssicherungspflicht)",
+      "url": "https://www.gesetze-im-internet.de/bgb/__823.html"
+    },
+    {
+      "label": "DGUV Vorschrift 1 und DGUV Vorschrift 3 – Publikationen der DGUV",
+      "url": "https://publikationen.dguv.de"
+    },
+    {
+      "label": "TRBS 1203 – Befähigte Personen (BAuA)",
+      "url": "https://www.baua.de/DE/Angebote/Regelwerk/TRBS/TRBS-1203.html"
+    },
+    {
+      "label": "ASR A1.7 – Türen und Tore (BAuA)",
+      "url": "https://www.baua.de/DE/Angebote/Regelwerk/ASR/ASR-A1-7"
+    },
+    {
+      "label": "ASR A2.2 – Maßnahmen gegen Brände (BAuA)",
+      "url": "https://www.baua.de/DE/Angebote/Regelwerk/ASR/ASR-A2-2"
+    },
+    {
+      "label": "DIN-Normen: DIN EN 15635, DIN 1946-4 (DIN Media)",
+      "url": "https://www.dinmedia.de"
+    },
+    {
+      "label": "VDI 6022 Blatt 1 – Raumlufttechnik, Raumluftqualität: Hygieneanforderungen (VDI)",
+      "url": "https://www.vdi.de/richtlinien"
+    },
+    {
+      "label": "TrinkwV §§ 31, 51 – Trinkwasserverordnung",
+      "url": "https://www.gesetze-im-internet.de/trinkwv_2023/"
+    },
+    {
+      "label": "GEFMA 190 – Betreiberverantwortung im Facility Management (GEFMA)",
+      "url": "https://www.gefma.de"
+    }
+  ],
+  "internalLinks": [
+    {
+      "label": "UVV-Prüfung",
+      "href": "/uvv-pruefung",
+      "note": "Krane, Stapler, Hebebühnen, Tore"
+    },
+    {
+      "label": "Regalprüfung",
+      "href": "/regalpruefung",
+      "note": "Inspektion nach DIN EN 15635"
+    },
+    {
+      "label": "Prüffristen festlegen",
+      "href": "/wissen/prueffristen-festlegen",
+      "note": "Fristen aus der Gefährdungsbeurteilung"
+    },
+    {
+      "label": "Befähigte Person nach TRBS 1203",
+      "href": "/wissen/befaehigte-person-trbs-1203",
+      "note": "Wer prüfen darf"
+    },
+    {
+      "label": "DGUV V3 Prüfung",
+      "href": "/dguv-v3-pruefung",
+      "note": "Elektrische Anlagen und Betriebsmittel"
+    },
+    {
+      "label": "Betreiberverantwortung",
+      "href": "/betreiberverantwortung",
+      "note": "Verantwortung und Delegation"
+    },
+    {
+      "label": "Externer Betreibermanager",
+      "href": "/externer-betreibermanager",
+      "note": "Leistungsmodell und Ablauf"
+    },
+    {
+      "label": "Torprüfungen für Logistikzentren",
+      "href": "/pruefmanagement/logistikzentren/tore",
+      "note": "Tore und Verladetechnik in Hallen"
+    }
+  ],
+  "internalLinksFromExisting": [
+    {
+      "from": "/uvv-pruefung",
+      "label": "Prüfmanagement für Industriestandorte",
+      "note": "Prüfungen im Werk koordinieren"
+    },
+    {
+      "from": "/betreiberpflichten",
+      "label": "Prüfmanagement für Industriestandorte",
+      "note": "Zielgruppenseite Industrie"
+    }
+  ],
+  "aiPrompts": [
+    "Wer koordiniert die gesetzlichen Prüfungen in einem Produktionswerk?",
+    "Wie lege ich Prüffristen für Maschinen in der Gefährdungsbeurteilung fest?",
+    "Wie plane ich Prüfungen im laufenden Betrieb eines Industriestandorts?",
+    "Wie organisiere ich Prüfpflichten für mehrere Werke in verschiedenen Bundesländern?",
+    "Wer darf Arbeitsmittel nach BetrSichV prüfen?",
+    "Welche Prüfungen sind in einer Fabrik jährlich fällig?"
+  ],
+  "primaryIntent": "Dienstleister für Prüfkoordination an Industriestandorten und Werken finden",
+  "ctaTopic": "Prüfmanagement für Industriestandorte",
+  "cannibalization": {
+    "relatedUrls": [
+      "/uvv-pruefung",
+      "/regalpruefung",
+      "/betreiberpflichten",
+      "/wissen/prueffristen-festlegen"
+    ],
+    "differentiation": "Bestehende Seiten behandeln einzelne Prüfarten. Diese Seite behandelt das Zusammenspiel aller Prüfungen am Werk (Gefährdungsbeurteilung, Stillstandsplanung, Fremdfirmen, mehrere Werke) und verlinkt auf die Einzelseiten.",
+    "decision": "neue Seite"
+  }
+}

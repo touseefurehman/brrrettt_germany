@@ -1,5 +1,6 @@
 import { clusterPath, publishedClusters } from "@/lib/clusters";
 import { measurementFor } from "@/lib/measurement";
+import { b2bPublished } from "@/lib/b2b";
 import { audiences, externerBetreibermanager } from "@/lib/leistungen";
 import { leistungsseiten } from "@/lib/leistungsseiten";
 import { fullCompanyName, isSet, site } from "@/lib/site";
@@ -62,6 +63,9 @@ export function GET() {
     "",
     ...audiences.map((a) => link(`Betreiberpflichten ${a.name}`, `/betreiberpflichten/${a.slug}`, a.cardText)),
     "",
+    ...(b2bPublished.length > 0
+      ? ["## Prüfmanagement für Unternehmen", "", ...b2bPublished.map((p) => link(p.h1, p.url, p.kurzantwort)), ""]
+      : []),
     "## Wissen",
     "",
     link("Wissen", "/wissen", "Fachartikel zu Prüffristen, Prüferqualifikation, Haftung und Organisation von Betreiberpflichten."),

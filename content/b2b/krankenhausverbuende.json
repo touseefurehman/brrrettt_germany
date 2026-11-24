@@ -1,0 +1,259 @@
+{
+  "slug": "krankenhausverbuende",
+  "url": "/pruefmanagement/krankenhausverbuende",
+  "service": "pruefmanagement",
+  "objekt": "krankenhausverbuende",
+  "zielkunde": "Krankenhausverbünde und Träger mit mehreren Kliniken (zentrale Technik, Einkauf, Geschäftsführung)",
+  "status": "draft",
+  "reviewedBy": null,
+  "lastReviewed": "2026-11-24",
+  "metaTitle": "Prüfmanagement für Krankenhausverbünde | betreibermanager.de",
+  "metaDescription": "Prüfpflichten über mehrere Kliniken zentral steuern: einheitliches Kataster, abgestimmte Prüfer, Berichtswesen. Rechtsgrundlagen und Fristen im Überblick.",
+  "h1": "Prüfmanagement für Krankenhausverbünde: Prüfpflichten über mehrere Kliniken zentral steuern",
+  "kurzantwort": "In einem Krankenhausverbund steuert ein zentrales Prüfmanagement die Prüfpflichten aller Häuser: ein gemeinsames Pflichtenkataster, abgestimmte Prüfer und ein Bericht an die Geschäftsführung. betreibermanager.de koordiniert Fristen, Beauftragung und Nachweise über die Standorte hinweg; die Prüfungen führen qualifizierte externe Prüfer aus. Die Pflichten eines einzelnen Hauses stehen auf der Seite Betreiberpflichten Krankenhaus.",
+  "sections": [
+    {
+      "id": "zielgruppe",
+      "heading": "Für wen diese Seite gedacht ist",
+      "content": "Die Seite richtet sich an Krankenhausverbünde, Klinikketten und Träger mit mehreren Häusern und dort an die zentrale Technik, den Einkauf und die Geschäftsführung. Gemeint sind Organisationen, in denen die Prüfpflichten an jedem Standort anfallen, aber zumindest zum Teil zentral gesteuert werden sollen.\n\nDie Pflichten eines einzelnen Krankenhauses, von der Elektroprüfung in medizinisch genutzten Bereichen bis zu Aufzügen und Medizinprodukten, beschreibt die Seite [Betreiberpflichten für Krankenhäuser](/betreiberpflichten/krankenhaeuser). Sie werden hier nicht wiederholt. Diese Seite behandelt, was zusätzlich entsteht, sobald mehrere Häuser zusammen betrieben werden: Abstimmung, Standardisierung, Beschaffung und Berichtswesen."
+    },
+    {
+      "id": "betreiberpflichten",
+      "heading": "Betreiberpflichten im Verbund",
+      "content": "Rechtlich bleibt jedes Haus ein eigener Betrieb mit eigenen Pflichten. Der Träger muss Gefährdungen beurteilen (§§ 3, 5 ArbSchG, § 2 DGUV Vorschrift 1), für Arbeitsmittel die Prüffristen nach § 3 BetrSichV festlegen und die Prüfung nach § 14 BetrSichV sicherstellen; § 823 BGB verlangt, Gefahren für Dritte abzuwenden. Im Krankenhaus ist die Schutzbedürftigkeit der Patienten dabei besonders hoch.\n\nIm Verbund verteilen sich diese Pflichten auf mehrere Ebenen: Geschäftsführung des Trägers, zentrale technische Leitung, technische Leitung vor Ort, Medizintechnik, Krankenhaushygiene und externe Dienstleister. Aufgaben lassen sich per Vertrag und Organisationsanweisung übertragen; Auswahl- und Überwachungspflichten bleiben bei der übertragenden Ebene. Gerade bei einer zentralen Steuerung muss deshalb klar sein, was zentral entschieden und was vor Ort verantwortet wird.\n\n### Wo Verbünde typischerweise Schwierigkeiten haben\n\n- Jedes Haus hat historisch eigene Verträge, Berichtsformate und Fristenlisten.\n- Die Grenze zwischen Haustechnik und Medizintechnik wird je Standort anders gezogen.\n- Zentrale Rahmenverträge treffen auf Landesrecht, das für Brandschutzanlagen je Bundesland unterschiedliche Prüffristen vorsieht.\n- Zugekaufte oder fusionierte Häuser bringen Altbestand ohne vollständige Nachweise.\n- Die Geschäftsführung erhält Berichte, die sich zwischen den Häusern nicht vergleichen lassen."
+    },
+    {
+      "id": "pruefkategorien",
+      "heading": "Prüfkategorien im Verbund",
+      "content": "Die Prüfkategorien ähneln denen des Einzelhauses. Neu ist die Frage, welche davon zentral gesteuert werden können und welche vor Ort bleiben müssen. Die Spalte „Grundlage“ zeigt zugleich, ob eine bundeseinheitliche Frist besteht oder Landesrecht gilt. Die Angaben zu Krankenhausbereichen entsprechen denen der Seite zu den Betreiberpflichten im Krankenhaus.",
+      "table": 0
+    },
+    {
+      "id": "regelwerke",
+      "heading": "Anwendbare Regelwerke und Normen",
+      "content": "- **ArbSchG §§ 3, 5, DGUV Vorschrift 1 § 2, BGB § 823:** Verantwortung, Gefährdungsbeurteilung, Verkehrssicherung.\n- **BetrSichV § 3, § 14, § 17 mit Anhang 2:** Prüffristen, Prüfung, überwachungsbedürftige Anlagen wie Aufzüge (ZÜS). Letzte Änderung 18.12.2025.\n- **DGUV Vorschrift 3 § 5:** elektrische Anlagen; für medizinisch genutzte Bereiche gelten kürzere Fristen, wie auf der Seite zu den Betreiberpflichten im Krankenhaus beschrieben.\n- **TrinkwV §§ 31, 51:** Legionellen, technischer Maßnahmenwert 100 KBE/100 ml.\n- **VDI 6022 Blatt 1** und **DIN 1946-4** (Raumlufttechnik im Gesundheitswesen; hier nur als Norm genannt).\n- **ASR A2.2** und **Prüfverordnungen der Länder** für den Brandschutz.\n- **MPBetreibV** für Medizinprodukte, soweit die Medizintechnik sie koordiniert [PRÜFEN: Zuständigkeitsabgrenzung zwischen Medizintechnik und zentralem Prüfmanagement].\n- **GEFMA 190 und VDI 3810** als Leitfäden zur Strukturierung der Betreiberpflichten.\n\nDie Lüftungshygiene im Krankenhaus behandelt die Seite [RLT-Hygieneprüfungen für Krankenhäuser](/pruefmanagement/krankenhaeuser/rlt-hygiene)."
+    },
+    {
+      "id": "fristen",
+      "heading": "Prüffristen und Verantwortlichkeiten",
+      "content": "**Fristenplan über alle Häuser.** Jede Anlage hat Rechtsgrundlage, Frist, letzten Prüftermin, nächste Fälligkeit und Prüfer. Für Verbünde kommt eine Ebene hinzu: Welche Häuser liegen in welchem Bundesland, und welche Fristen gelten dort für Brandschutzanlagen?\n\n**Terminierung.** Prüfungen müssen mit dem laufenden Klinikbetrieb abgestimmt werden. Wird innerhalb von zwei Monaten vor dem Fälligkeitstermin geprüft, beginnt die nächste Frist mit dem Fälligkeitstermin (§ 14 Abs. 5 BetrSichV). Das schafft Spielraum, Prüfungen um OP-Pläne und Belegung herum zu legen. Aufzeichnungen dürfen elektronisch geführt werden (§ 14 Abs. 7).\n\n### Verantwortlichkeiten im Verbund\n\n- **Geschäftsführung des Trägers:** Letztverantwortung, Rahmenentscheidungen, Budget.\n- **Zentrale Technik:** Standards, Rahmenverträge, Überwachung der Häuser.\n- **Technische Leitung vor Ort:** Umsetzung, Zugang, Mängelbeseitigung.\n- **Medizintechnik und Krankenhaushygiene:** eigene Zuständigkeiten, mit dem Prüfplan abgestimmt.\n- **Externe Prüfer:** Prüfung und Bericht, je nach Anlage ZÜS, Prüfsachverständige oder befähigte Personen.\n- **betreibermanager.de:** Kataster, Terminplan, Beauftragung, Nachverfolgung."
+    },
+    {
+      "id": "standorte",
+      "heading": "Herausforderungen bei mehreren Kliniken",
+      "content": "**Standardisierung ohne Gleichmacherei.** Ein Verbund braucht ein gemeinsames Anlagenschema und eine gemeinsame Sprache für Fristen und Status, damit Standorte vergleichbar werden. Gleichzeitig unterscheiden sich Häuser nach Baujahr, Fachabteilungen und Bundesland. Das Schema muss das abbilden können.\n\n**Zentrale Beschaffung.** Rahmenverträge mit Prüfdienstleistern können Konditionen und Berichtsformate vereinheitlichen. Voraussetzung sind eine einheitliche Leistungsbeschreibung und regionale Abdeckung. Für Prüfungen nach Landesrecht wird ein Teil regional bleiben.\n\n**Schnittstellen.** Die Abgrenzung zwischen Haustechnik und Medizintechnik muss je Haus geklärt und in den Prüfplan übernommen werden, damit Prüfungen weder doppelt beauftragt werden noch ausfallen.\n\n**Berichtswesen.** Die Geschäftsführung braucht wenige, vergleichbare Kennzahlen: Anteil gültiger Nachweise, überfällige Prüfungen je Haus, offene Mängel mit Alter. Schwellenwerte legt der Träger fest.\n\n**Zukäufe und Fusionen.** Neue Häuser werden mit einer Bestandsaufnahme in das Kataster überführt. Die Methodik beschreibt der Beitrag [Betreiberpflichtenkataster erstellen](/wissen/betreiberpflichtenkataster-erstellen)."
+    },
+    {
+      "id": "koordination",
+      "heading": "Externe Prüfkoordination durch betreibermanager.de",
+      "content": "### Was betreibermanager.de übernimmt\n\n- Bestandsaufnahme je Haus und Aufbau eines verbundweiten Pflichtenkatasters.\n- Fristenplan mit Berücksichtigung des Landesrechts je Standort.\n- Abstimmung von Prüfterminen mit technischer Leitung, Medizintechnik und Krankenhaushygiene.\n- Auswahl und Beauftragung qualifizierter externer Prüfer, auf Wunsch über Rahmenvereinbarungen.\n- Nachverfolgung von Mängeln und Berichte an Geschäftsführung und zentrale Technik.\n\n### Was betreibermanager.de nicht übernimmt\n\n- Wir führen keine Prüfungen durch; das tun qualifizierte Dritte.\n- betreibermanager.de ist keine Prüforganisation und keine zugelassene Überwachungsstelle (ZÜS).\n- Medizinprodukte und klinische Entscheidungen bleiben Aufgabe der Medizintechnik und der Klinik.\n- Die Betreiberverantwortung des Trägers geht nicht über."
+    },
+    {
+      "id": "kosten",
+      "heading": "Kosten und Preisfaktoren",
+      "content": "Der Aufwand für ein verbundweites Prüfmanagement wird bestimmt durch die Zahl der Häuser und Bundesländer, die Zahl und Art der Anlagen, die Qualität der vorhandenen Unterlagen und den Aufwand der Erstaufnahme. Hinzu kommen die Zahl der Schnittstellen zu Medizintechnik und Hygiene, die Anforderungen an das Berichtswesen und die Frage, ob Rahmenverträge mit Prüfdienstleistern ausgehandelt werden sollen.\n\nDie Kosten der einzelnen Prüfungen legen die Prüfer fest; sie hängen von Anlagenart, Menge, Zugänglichkeit und Terminvorgaben ab. Preisangaben folgen erst nach einer Bestandsaufnahme."
+    }
+  ],
+  "tables": [
+    {
+      "caption": "Prüfkategorien in Krankenhäusern und ihre Steuerung im Verbund (Richtwerte)",
+      "head": [
+        "Anlage / System",
+        "Grundlage",
+        "Intervall",
+        "Wer prüft"
+      ],
+      "rows": [
+        [
+          "Elektrische Anlagen in medizinisch genutzten Bereichen",
+          "DGUV Vorschrift 3 § 5, Tabelle 1A; DIN VDE 0100-710",
+          "1 Jahr (Räume besonderer Art)",
+          "Elektrofachkraft bzw. befähigte Person"
+        ],
+        [
+          "Medizinprodukte (sicherheitstechnische Kontrolle)",
+          "MPBetreibV § 12",
+          "spätestens alle 2 Jahre",
+          "Medizintechnik bzw. beauftragte Fachbetriebe"
+        ],
+        [
+          "Raumlufttechnik, OP-Bereiche",
+          "VDI 6022 Blatt 1; DIN 1946-4",
+          "VDI 6022: alle 3 Jahre, bei Befeuchtung alle 2 Jahre; Intervalle nach DIN 1946-4 [PRÜFEN]",
+          "Nach VDI 6022 qualifizierte Person bzw. Fachfirma"
+        ],
+        [
+          "Trinkwasser-Installation",
+          "TrinkwV § 31, § 51",
+          "öffentliche Tätigkeit: mindestens jährlich; technischer Maßnahmenwert 100 KBE/100 ml",
+          "Geeignete Probenehmer und Untersuchungsstellen"
+        ],
+        [
+          "Aufzüge, Bettenaufzüge",
+          "BetrSichV § 17, Anhang 2",
+          "wiederkehrende Prüfung höchstens alle 2 Jahre, dazwischen Zwischenprüfung",
+          "Zugelassene Überwachungsstelle (ZÜS)"
+        ],
+        [
+          "Brandmelde-, Sprinkler- und Sicherheitsbeleuchtungsanlagen",
+          "Prüfverordnungen der Länder",
+          "Prüffristen je Bundesland",
+          "Bauaufsichtlich anerkannte Prüfsachverständige"
+        ],
+        [
+          "Feuerlöscher",
+          "ASR A2.2",
+          "mindestens alle 2 Jahre",
+          "Sachkundige Person"
+        ],
+        [
+          "Sicherheitsstromversorgung",
+          "DIN VDE 0100-710; BetrSichV [PRÜFEN: Fristen und Prüfer]",
+          "[PRÜFEN]",
+          "[PRÜFEN]"
+        ]
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Wer koordiniert die Prüfpflichten in einem Krankenhausverbund?",
+      "answer": "Die Letztverantwortung liegt beim Träger. Die Koordination kann bei der zentralen Technik, bei einem externen Dienstleister oder aufgeteilt erfolgen. betreibermanager.de koordiniert Fristen, Prüfer und Nachweise über alle Häuser und prüft nicht selbst."
+    },
+    {
+      "question": "Worin unterscheidet sich diese Seite von den Betreiberpflichten für Krankenhäuser?",
+      "answer": "Die Seite zu den Betreiberpflichten beschreibt, welche Pflichten ein einzelnes Haus hat. Diese Seite behandelt, wie Prüfpflichten bei mehreren Häusern zentral organisiert, beschafft und berichtet werden."
+    },
+    {
+      "question": "Kann ich Prüfungen für alle Häuser zentral beauftragen?",
+      "answer": "Teilweise. Bei bundeseinheitlich geregelten Prüfungen ist eine zentrale Beauftragung möglich. Prüfungen nach den Prüfverordnungen der Länder müssen die Landesvorgaben je Standort berücksichtigen."
+    },
+    {
+      "question": "Gelten für Brandschutzanlagen in allen Häusern dieselben Prüffristen?",
+      "answer": "Nein. Die Prüffristen unterscheiden sich je Bundesland. Der Fristenplan muss je Haus das Landesrecht abbilden."
+    },
+    {
+      "question": "Wie wird die Abgrenzung zwischen Haustechnik und Medizintechnik geregelt?",
+      "answer": "Je Haus schriftlich, nach Anlagen und Geräten getrennt, mit benanntem Verantwortlichen. Die Regelung wird in den Prüfplan übernommen, damit nichts doppelt beauftragt wird oder entfällt."
+    },
+    {
+      "question": "Wie oft müssen elektrische Anlagen in medizinisch genutzten Bereichen geprüft werden?",
+      "answer": "Die Durchführungsanweisung zur DGUV Vorschrift 3 nennt in Tabelle 1A für Räume besonderer Art eine Frist von einem Jahr statt vier Jahren. Welche Bereiche darunter fallen, klärt die Gefährdungsbeurteilung."
+    },
+    {
+      "question": "Wie oft ist auf Legionellen zu untersuchen?",
+      "answer": "Nach § 31 TrinkwV mindestens jährlich bei öffentlicher Tätigkeit. Der technische Maßnahmenwert liegt nach § 51 TrinkwV bei 100 KBE/100 ml. Die Anforderungen an Probenahme und Labor sind eigens zu beachten."
+    },
+    {
+      "question": "Wie wird ein zugekauftes Haus in das Prüfmanagement aufgenommen?",
+      "answer": "Durch eine Bestandsaufnahme der Anlagen und Nachweise. Lücken werden als offene Prüfungen in den Fristenplan übernommen und nach Risiko abgearbeitet."
+    },
+    {
+      "question": "Welche Berichte erhält die Geschäftsführung?",
+      "answer": "Vergleichbare Kennzahlen je Haus, etwa Anteil gültiger Nachweise, überfällige Prüfungen und offene Mängel mit Alter. Welche Schwellen zur Eskalation führen, legt der Träger fest."
+    },
+    {
+      "question": "Ersetzt die Koordination durch betreibermanager.de die Verantwortung des Trägers?",
+      "answer": "Nein. Die Betreiberverantwortung bleibt beim Träger. Aufgaben lassen sich übertragen, Auswahl- und Überwachungspflichten bleiben."
+    }
+  ],
+  "sources": [
+    {
+      "label": "ArbSchG §§ 3, 5 – Beurteilung der Arbeitsbedingungen, Pflichten des Arbeitgebers",
+      "url": "https://www.gesetze-im-internet.de/arbschg/"
+    },
+    {
+      "label": "BetrSichV – §§ 3, 14, 17 und Anhang 2 (Gesetze im Internet)",
+      "url": "https://www.gesetze-im-internet.de/betrsichv_2015/"
+    },
+    {
+      "label": "BGB § 823 – Schadensersatzpflicht (Verkehrssicherungspflicht)",
+      "url": "https://www.gesetze-im-internet.de/bgb/__823.html"
+    },
+    {
+      "label": "DGUV Vorschrift 1 und DGUV Vorschrift 3 – Publikationen der DGUV",
+      "url": "https://publikationen.dguv.de"
+    },
+    {
+      "label": "TrinkwV §§ 31, 51 – Trinkwasserverordnung",
+      "url": "https://www.gesetze-im-internet.de/trinkwv_2023/"
+    },
+    {
+      "label": "VDI 6022 Blatt 1 – Raumlufttechnik, Raumluftqualität: Hygieneanforderungen (VDI)",
+      "url": "https://www.vdi.de/richtlinien"
+    },
+    {
+      "label": "DIN-Normen: DIN EN 15635, DIN 1946-4 (DIN Media)",
+      "url": "https://www.dinmedia.de"
+    },
+    {
+      "label": "ASR A2.2 – Maßnahmen gegen Brände (BAuA)",
+      "url": "https://www.baua.de/DE/Angebote/Regelwerk/ASR/ASR-A2-2"
+    },
+    {
+      "label": "GEFMA 190 – Betreiberverantwortung im Facility Management (GEFMA)",
+      "url": "https://www.gefma.de"
+    },
+    {
+      "label": "VDI 3810 – Betreiben und Instandhalten von Gebäuden und gebäudetechnischen Anlagen (VDI)",
+      "url": "https://www.vdi.de/richtlinien"
+    }
+  ],
+  "internalLinks": [
+    {
+      "label": "Betreiberpflichten für Krankenhäuser",
+      "href": "/betreiberpflichten/krankenhaeuser",
+      "note": "Pflichten eines einzelnen Hauses"
+    },
+    {
+      "label": "RLT-Hygieneprüfungen für Krankenhäuser",
+      "href": "/pruefmanagement/krankenhaeuser/rlt-hygiene",
+      "note": "Lüftungshygiene im Krankenhaus"
+    },
+    {
+      "label": "Betreiberpflichtenkataster erstellen",
+      "href": "/wissen/betreiberpflichtenkataster-erstellen",
+      "note": "Aufbau eines Katasters"
+    },
+    {
+      "label": "Prüffristen im Überblick",
+      "href": "/prueffristen",
+      "note": "Fristen mit Rechtsgrundlage"
+    },
+    {
+      "label": "Betreiberverantwortung",
+      "href": "/betreiberverantwortung",
+      "note": "Verantwortung und Delegation"
+    },
+    {
+      "label": "Externer Betreibermanager",
+      "href": "/externer-betreibermanager",
+      "note": "Leistungsmodell und Ablauf"
+    }
+  ],
+  "internalLinksFromExisting": [
+    {
+      "from": "/betreiberpflichten/krankenhaeuser",
+      "label": "Prüfmanagement für Krankenhausverbünde",
+      "note": "Für Träger mit mehreren Häusern"
+    }
+  ],
+  "aiPrompts": [
+    "Wer koordiniert Prüfpflichten für einen Krankenhausverbund mit mehreren Standorten?",
+    "Wie standardisiere ich Prüffristen über mehrere Kliniken?",
+    "Wie steuert die zentrale Technik eines Klinikträgers die Prüfungen vor Ort?",
+    "Kann ein Klinikverbund Prüfungen über Rahmenverträge beauftragen?",
+    "Wie gehe ich mit unterschiedlichen Prüffristen in verschiedenen Bundesländern um?",
+    "Wie integriere ich ein zugekauftes Krankenhaus in das Prüfmanagement?"
+  ],
+  "primaryIntent": "Externen Dienstleister für zentrales Prüfmanagement über mehrere Krankenhäuser finden",
+  "ctaTopic": "Prüfmanagement für Krankenhausverbünde",
+  "cannibalization": {
+    "relatedUrls": [
+      "/betreiberpflichten/krankenhaeuser",
+      "/pruefmanagement/krankenhaeuser/rlt-hygiene"
+    ],
+    "differentiation": "Die bestehende Seite /betreiberpflichten/krankenhaeuser bleibt die Seite für Pflichten eines einzelnen Hauses; diese Seite behandelt ausschließlich Verbund-Themen (zentrale Steuerung, Standardisierung, Beschaffung, Landesrecht je Haus, Berichtswesen) und verlinkt dorthin.",
+    "decision": "neue Seite"
+  }
+}

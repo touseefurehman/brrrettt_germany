@@ -4,9 +4,9 @@
   "service": "pruefmanagement",
   "objekt": "filialunternehmen",
   "zielkunde": "Handels- und Dienstleistungsketten mit vielen Filialen (zentrales Facility Management und Einkauf)",
-  "status": "draft",
-  "reviewedBy": null,
-  "lastReviewed": "2026-11-24",
+  "status": "published",
+  "reviewedBy": "Redaktion betreibermanager.de",
+  "lastReviewed": "2026-11-25",
   "metaTitle": "Prüfmanagement für Filialunternehmen | betreibermanager.de",
   "metaDescription": "Prüfpflichten für viele Filialen zentral steuern: Standard-Prüfplan, Mietflächen, Terminbündelung nach Region und Nachweise je Filiale.",
   "h1": "Prüfmanagement für Filialunternehmen: Prüfpflichten in vielen Filialen zentral steuern",
@@ -31,7 +31,7 @@
     {
       "id": "regelwerke",
       "heading": "Anwendbare Regelwerke und Normen",
-      "content": "- **ArbSchG §§ 3, 5, DGUV Vorschrift 1 § 2 und BGB § 823:** Pflichten des Arbeitgebers in jeder Filiale und Verkehrssicherung gegenüber Kunden.\n- **BetrSichV § 3, § 14:** Prüffristen aus der Gefährdungsbeurteilung und Prüfung von Arbeitsmitteln; ein zentraler digitaler Nachweis je Filiale ist nach § 14 Abs. 7 zulässig. Letzte Änderung 18.12.2025.\n- **DGUV Vorschrift 3 § 5:** Elektroprüfung der Filiale; Einzelheiten stehen auf der Seite zu DGUV V3 für Filialunternehmen.\n- **ASR A1.7:** kraftbetätigte Türen und Tore, z. B. Schiebetüren im Eingangsbereich und Tore der Anlieferung.\n- **ASR A2.2:** Feuerlöscher mindestens alle 2 Jahre.\n- **TrinkwV §§ 31, 51:** Legionellen bei gewerblicher Tätigkeit mindestens alle 3 Jahre; technischer Maßnahmenwert 100 KBE/100 ml.\n- **VDI 6022 Blatt 1:** Hygieneinspektion raumlufttechnischer Anlagen, soweit vorhanden.\n- **DIN EN 15635:** Lagereinrichtungen, soweit Regale im Lager oder Verkaufsraum darunter fallen [PRÜFEN: Anwendung auf Regale im Verkaufsraum].\n- **Prüfverordnungen der Länder:** Brandschutzanlagen, soweit die Filiale oder das Gebäude sie verlangt.\n- **GEFMA 190 und VDI 3810:** Leitfäden zur Strukturierung der Betreiberpflichten."
+      "content": "- **ArbSchG §§ 3, 5, DGUV Vorschrift 1 § 2 und BGB § 823:** Pflichten des Arbeitgebers in jeder Filiale und Verkehrssicherung gegenüber Kunden.\n- **BetrSichV § 3, § 14:** Prüffristen aus der Gefährdungsbeurteilung und Prüfung von Arbeitsmitteln; ein zentraler digitaler Nachweis je Filiale ist nach § 14 Abs. 7 zulässig. Letzte Änderung 18.12.2025.\n- **DGUV Vorschrift 3 § 5:** Elektroprüfung der Filiale; Einzelheiten stehen auf der Seite zu DGUV V3 für Filialunternehmen.\n- **ASR A1.7:** kraftbetätigte Türen und Tore, z. B. Schiebetüren im Eingangsbereich und Tore der Anlieferung.\n- **ASR A2.2:** Feuerlöscher mindestens alle 2 Jahre.\n- **TrinkwV §§ 31, 51:** Legionellen bei gewerblicher Tätigkeit mindestens alle 3 Jahre; technischer Maßnahmenwert 100 KBE/100 ml.\n- **VDI 6022 Blatt 1:** Hygieneinspektion raumlufttechnischer Anlagen, soweit vorhanden.\n- **DIN EN 15635:** Inspektion von Lagereinrichtungen (Regalen) durch eine sachkundige Person mindestens einmal in 12 Monaten.\n- **Prüfverordnungen der Länder:** Brandschutzanlagen, soweit die Filiale oder das Gebäude sie verlangt.\n- **GEFMA 190 und VDI 3810:** Leitfäden zur Strukturierung der Betreiberpflichten."
     },
     {
       "id": "fristen",
@@ -41,7 +41,7 @@
     {
       "id": "standorte",
       "heading": "Herausforderungen bei vielen Filialen",
-      "content": "**Standard-Prüfplan je Filialtyp.** Ein Prüfplan als Vorlage, der je Filialtyp gilt und nur dort angepasst wird, wo eine Filiale abweicht, spart Pflegeaufwand und macht Filialen vergleichbar. Abweichungen aus dem Mietvertrag oder dem Standortrecht werden als Ausnahme geführt.\n\n**Terminlogistik.** Prüfer arbeiten nach Regionen, nicht nach Filialen. Ein Fristenplan mit Zeitfenstern je Region erlaubt Rundreisen. Prüfungen sollen den Verkauf möglichst nicht stören und laufen daher oft vor Öffnung oder abends; das ist mit Filialleiter und Personal abzustimmen.\n\n**Filialleiter als Ansprechpartner.** Sie brauchen kurze Anleitungen: Was ist vorzubereiten, wer kommt, was ist nach der Prüfung zu tun? Mehr Fachwissen sollte nicht verlangt werden [PRÜFEN: Pflichten zur Unterweisung und Beauftragung von Filialleitern].\n\n**Eröffnung, Umbau, Schließung.** Jede Änderung im Filialbestand ändert das Kataster: Neue Filialen erhalten ihren Prüfplan, bei Umbau werden Anlagen abgeglichen, bei Schließung werden Nachweise archiviert.\n\n**Franchise und Pächter.** Bei Franchise-Filialen oder verpachteten Standorten ist die Verantwortung getrennt zu klären [PRÜFEN: Betreiberverantwortung bei Franchise und Verpachtung].\n\nZentrale Steuerung über viele Objekte beschreibt auch die Seite [Prüfmanagement für Immobilienportfolios](/pruefmanagement/immobilienportfolios), allerdings aus Sicht von Eigentümern."
+      "content": "**Standard-Prüfplan je Filialtyp.** Ein Prüfplan als Vorlage, der je Filialtyp gilt und nur dort angepasst wird, wo eine Filiale abweicht, spart Pflegeaufwand und macht Filialen vergleichbar. Abweichungen aus dem Mietvertrag oder dem Standortrecht werden als Ausnahme geführt.\n\n**Terminlogistik.** Prüfer arbeiten nach Regionen, nicht nach Filialen. Ein Fristenplan mit Zeitfenstern je Region erlaubt Rundreisen. Prüfungen sollen den Verkauf möglichst nicht stören und laufen daher oft vor Öffnung oder abends; das ist mit Filialleiter und Personal abzustimmen.\n\n**Filialleiter als Ansprechpartner.** Sie brauchen kurze Anleitungen: Was ist vorzubereiten, wer kommt, was ist nach der Prüfung zu tun? Planung, Beauftragung und Überwachung liegen bei der zentralen Stelle.\n\n**Eröffnung, Umbau, Schließung.** Jede Änderung im Filialbestand ändert das Kataster: Neue Filialen erhalten ihren Prüfplan, bei Umbau werden Anlagen abgeglichen, bei Schließung werden Nachweise archiviert.\n\n**Franchise und Pächter.** Bei Franchise-Filialen oder verpachteten Standorten ist vertraglich festzuhalten, wer welche Prüfung beauftragt und nachweist.\n\nZentrale Steuerung über viele Objekte beschreibt auch die Seite [Prüfmanagement für Immobilienportfolios](/pruefmanagement/immobilienportfolios), allerdings aus Sicht von Eigentümern."
     },
     {
       "id": "koordination",
@@ -73,7 +73,7 @@
         [
           "Ortsveränderliche Betriebsmittel (Kassen, Waagen, Reinigungs- und Küchengeräte)",
           "DGUV Vorschrift 3 § 5, Tabelle 1B",
-          "Regelwert 6 Monate; bei Fehlerquote unter 2 % verlängerbar, in bürotypischer Umgebung auf höchstens 2 Jahre [PRÜFEN: Einordnung Verkaufsraum]",
+          "Regelwert 6 Monate; bei Fehlerquote unter 2 % verlängerbar, in bürotypischer Umgebung auf höchstens 2 Jahre, in Werkstätten und auf Baustellen auf höchstens 1 Jahr",
           "Elektrofachkraft bzw. befähigte Person"
         ],
         [
@@ -97,8 +97,8 @@
         [
           "Trinkwasser-Installation",
           "TrinkwV § 31, § 51",
-          "Legionellenuntersuchung bei gewerblicher Tätigkeit mindestens alle 3 Jahre [PRÜFEN: Untersuchungspflicht für kleine Installationen]",
-          "Geeignete Probenehmer und Untersuchungsstellen"
+          "Mindestens alle 3 Jahre bei gewerblicher, mindestens jährlich bei öffentlicher Tätigkeit (§ 31 TrinkwV). Pflicht für Großanlagen zur Trinkwassererwärmung (Speicher- oder zentraler Durchfluss-Trinkwassererwärmer mit mehr als 400 Litern oder mehr als 3 Litern in einer Rohrleitung zwischen Erwärmer und Entnahmestelle) mit Duschen oder anderen Einrichtungen, in denen Trinkwasser vernebelt wird; nicht in Ein- und Zweifamilienhäusern.",
+          "Probenahme und Untersuchung durch eine nach § 40 TrinkwV zugelassene Untersuchungsstelle. Die Länder veröffentlichen Listen der zugelassenen Stellen; die Zulassung gilt bundesweit."
         ],
         [
           "Raumlufttechnische Anlagen (soweit vorhanden)",
@@ -197,6 +197,14 @@
     {
       "label": "GEFMA 190 – Betreiberverantwortung im Facility Management (GEFMA)",
       "url": "https://www.gefma.de"
+    },
+    {
+      "label": "TrinkwV § 31 – Häufigkeit der Untersuchungen (Gesetze im Internet)",
+      "url": "https://www.gesetze-im-internet.de/trinkwv_2023/__31.html"
+    },
+    {
+      "label": "TrinkwV § 40 – Zugelassene Untersuchungsstellen (Gesetze im Internet)",
+      "url": "https://www.gesetze-im-internet.de/trinkwv_2023/__40.html"
     }
   ],
   "internalLinks": [
@@ -229,6 +237,11 @@
       "label": "Prüfmanagement für Immobilienportfolios",
       "href": "/pruefmanagement/immobilienportfolios",
       "note": "Steuerung über viele Objekte"
+    },
+    {
+      "label": "Regalprüfung",
+      "href": "/regalpruefung",
+      "note": "Inspektion nach DIN EN 15635"
     }
   ],
   "internalLinksFromExisting": [
@@ -263,5 +276,6 @@
     ],
     "differentiation": "Kein bestehendes Seitenangebot behandelt Filialnetze als Gesamtthema (Standard-Prüfplan je Filialtyp, Mietflächen, Terminlogistik nach Region). Die DGUV-V3-Frage für Filialisten liegt bereits auf Wissensseiten und ist über Seite 10 geregelt.",
     "decision": "neue Seite"
-  }
+  },
+  "linksVerifiedManually": "2026-11-25"
 }

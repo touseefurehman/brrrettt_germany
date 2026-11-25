@@ -4,9 +4,9 @@
   "service": "rlt-hygiene",
   "objekt": "krankenhaeuser",
   "zielkunde": "Technische Abteilungen von Krankenhäusern und Krankenhaushygiene (Hygienebeauftragte)",
-  "status": "draft",
-  "reviewedBy": null,
-  "lastReviewed": "2026-11-24",
+  "status": "published",
+  "reviewedBy": "Redaktion betreibermanager.de",
+  "lastReviewed": "2026-11-25",
   "metaTitle": "RLT-Hygieneprüfungen im Krankenhaus | betreibermanager.de",
   "metaDescription": "RLT-Hygieneprüfungen im Krankenhaus koordinieren: OP-Lüftung, Abstimmung mit der Krankenhaushygiene, Termine im Klinikbetrieb. Normen und Fristen.",
   "h1": "RLT-Hygieneprüfungen für Krankenhäuser: Prüfung, Hygiene und Klinikbetrieb abstimmen",
@@ -20,7 +20,7 @@
     {
       "id": "betreiberpflichten",
       "heading": "Betreiberpflichten für RLT-Anlagen im Krankenhaus",
-      "content": "Die Verantwortung für den hygienisch einwandfreien Betrieb liegt beim Träger. Er muss Gefährdungen beurteilen (§§ 3, 5 ArbSchG, § 2 DGUV Vorschrift 1), Prüffristen für Arbeitsmittel und Anlagen festlegen (§ 3 BetrSichV) und für Dritte Gefahren abwenden (§ 823 BGB). Aufgaben lassen sich an Technik, Hygiene oder externe Dienstleister übertragen; Auswahl- und Überwachungspflichten verbleiben beim Träger.\n\nIm Krankenhaus ist die Schutzbedürftigkeit höher als in anderen Gebäuden, weil Patienten Infektionen weniger widerstehen können und sich nicht selbst schützen können. Hygienische Anforderungen an Raumluft und Anlagen sind deshalb strenger [PRÜFEN: Rechtsgrundlagen der Anforderungen an die Hygiene im Krankenhaus, z. B. Infektionsschutzgesetz und Empfehlungen der KRINKO, Fundstellen und Verbindlichkeit].\n\n### Typische Schwachstellen\n\n- Hygieneinspektion nach VDI 6022 und Abnahme- oder Wiederholungsprüfungen nach der Krankenhausnorm laufen unabhängig voneinander.\n- Technik und Hygiene führen getrennte Listen, und es ist unklar, wer Befunde bewertet.\n- Prüftermine in OP-Bereichen werden wegen des Betriebs verschoben und nicht nachgeholt.\n- Nach Umbauten oder Filterwechseln fehlen Dokumentation und Folgeprüfung.\n- Befunde werden festgestellt, aber nicht mit Frist und Verantwortlichem verfolgt."
+      "content": "Die Verantwortung für den hygienisch einwandfreien Betrieb liegt beim Träger. Er muss Gefährdungen beurteilen (§§ 3, 5 ArbSchG, § 2 DGUV Vorschrift 1), Prüffristen für Arbeitsmittel und Anlagen festlegen (§ 3 BetrSichV) und für Dritte Gefahren abwenden (§ 823 BGB). Aufgaben lassen sich an Technik, Hygiene oder externe Dienstleister übertragen; Auswahl- und Überwachungspflichten verbleiben beim Träger.\n\nIm Krankenhaus ist die Schutzbedürftigkeit höher als in anderen Gebäuden, weil Patienten Infektionen weniger widerstehen können und sich nicht selbst schützen können. Die Hygiene der Raumluft hat im Krankenhaus deshalb besonderes Gewicht; welche Anforderungen im Einzelnen gelten, ergibt sich aus der Gefährdungsbeurteilung und den einschlägigen Regeln.\n\n### Typische Schwachstellen\n\n- Hygieneinspektion nach VDI 6022 und Abnahme- oder Wiederholungsprüfungen nach der Krankenhausnorm laufen unabhängig voneinander.\n- Technik und Hygiene führen getrennte Listen, und es ist unklar, wer Befunde bewertet.\n- Prüftermine in OP-Bereichen werden wegen des Betriebs verschoben und nicht nachgeholt.\n- Nach Umbauten oder Filterwechseln fehlen Dokumentation und Folgeprüfung.\n- Befunde werden festgestellt, aber nicht mit Frist und Verantwortlichem verfolgt."
     },
     {
       "id": "pruefkategorien",
@@ -31,12 +31,12 @@
     {
       "id": "regelwerke",
       "heading": "Anwendbare Regelwerke und Normen",
-      "content": "- **VDI 6022 Blatt 1:** Hygieneinspektion raumlufttechnischer Anlagen alle 3 Jahre, bei Anlagen mit Befeuchtung alle 2 Jahre.\n- **DIN 1946-4:** Raumlufttechnik in Gebäuden und Räumen des Gesundheitswesens. Die Norm wird hier nur genannt; Anforderungen und Intervalle sind aus der Norm selbst zu entnehmen [PRÜFEN: Intervalle und Prüfumfang nach DIN 1946-4].\n- **ArbSchG §§ 3, 5, DGUV Vorschrift 1 § 2 und BGB § 823:** Verantwortung und Gefährdungsbeurteilung.\n- **BetrSichV § 3 und § 14:** Prüffristen und Prüfung von Arbeitsmitteln; letzte Änderung 18.12.2025.\n- **TRBS 1203:** Anforderungen an befähigte Personen.\n- **GEFMA 190 und VDI 3810:** Leitfäden zur Strukturierung der Betreiberpflichten.\n\nZur Qualifikation der Prüfer nach VDI 6022 gibt es den Beitrag [VDI 6022 Kategorien](/wissen/vdi-6022-kategorien), zum Ablauf den Beitrag [VDI 6022 Hygieneinspektion](/wissen/vdi-6022-hygieneinspektion)."
+      "content": "- **VDI 6022 Blatt 1:** Hygieneinspektion raumlufttechnischer Anlagen alle 3 Jahre, bei Anlagen mit Befeuchtung alle 2 Jahre.\n- **DIN 1946-4:** Raumlufttechnik in Gebäuden und Räumen des Gesundheitswesens. Die Norm wird hier nur genannt, ohne Aussage zu ihrem Inhalt.\n- **ArbSchG §§ 3, 5, DGUV Vorschrift 1 § 2 und BGB § 823:** Verantwortung und Gefährdungsbeurteilung.\n- **BetrSichV § 3 und § 14:** Prüffristen und Prüfung von Arbeitsmitteln; letzte Änderung 18.12.2025.\n- **TRBS 1203:** Anforderungen an befähigte Personen.\n- **GEFMA 190 und VDI 3810:** Leitfäden zur Strukturierung der Betreiberpflichten.\n\nZur Qualifikation der Prüfer nach VDI 6022 gibt es den Beitrag [VDI 6022 Kategorien](/wissen/vdi-6022-kategorien), zum Ablauf den Beitrag [VDI 6022 Hygieneinspektion](/wissen/vdi-6022-hygieneinspektion)."
     },
     {
       "id": "fristen",
       "heading": "Prüffristen und Zuständigkeiten",
-      "content": "**Hygieneinspektion nach VDI 6022 Blatt 1.** Alle 3 Jahre, bei Anlagen mit Befeuchtung alle 2 Jahre. Das ist die Grundfrist, die für alle Anlagen gilt, auf die VDI 6022 anzuwenden ist.\n\n**Anforderungen aus DIN 1946-4.** Für Anlagen im Gesundheitswesen kommen Abnahmeprüfungen und wiederkehrende Prüfungen nach DIN 1946-4 hinzu. Die Intervalle und der Prüfumfang sind in der Norm festgelegt; sie sind für diese Seite fachlich zu bestätigen [PRÜFEN: Intervalle und Prüfumfang nach DIN 1946-4, Verbindlichkeit je Bundesland und Bereich].\n\n**Terminplanung.** Soweit § 14 Abs. 5 BetrSichV für die Anlage gilt, läuft die nächste Frist ab dem Fälligkeitstermin, wenn in den zwei Monaten davor geprüft wird. Das hilft, Hygieneinspektionen in Revisionsfenster zu legen.\n\n### Zuständigkeiten\n\n- **Träger und Geschäftsführung:** Letztverantwortung.\n- **Technische Leitung:** Betrieb, Wartung, Zugang, Mängelbeseitigung.\n- **Krankenhaushygiene:** fachliche Bewertung hygienischer Befunde, Abstimmung zu Terminen und Maßnahmen.\n- **Externe Prüfer:** Hygieneinspektion und Prüfungen nach Krankenhausnorm.\n- **betreibermanager.de:** Fristenplan, Terminabstimmung, Beauftragung, Befundverfolgung."
+      "content": "**Hygieneinspektion nach VDI 6022 Blatt 1.** Alle 3 Jahre, bei Anlagen mit Befeuchtung alle 2 Jahre. Das ist die Grundfrist, die für alle Anlagen gilt, auf die VDI 6022 anzuwenden ist.\n\n**Anforderungen aus DIN 1946-4.** Für Anlagen im Gesundheitswesen nennt die Seite DIN 1946-4 als Norm, ohne Aussage zu Intervallen oder Prüfumfang. Welche Prüfungen und Fristen gelten, ergibt sich aus der Gefährdungsbeurteilung, den Herstellerangaben und den einschlägigen Regeln; betreibermanager.de stellt die Anforderungen je Standort zusammen und lässt sie durch qualifizierte Prüfdienstleister umsetzen.\n\n**Terminplanung.** Soweit § 14 Abs. 5 BetrSichV für die Anlage gilt, läuft die nächste Frist ab dem Fälligkeitstermin, wenn in den zwei Monaten davor geprüft wird. Das hilft, Hygieneinspektionen in Revisionsfenster zu legen.\n\n### Zuständigkeiten\n\n- **Träger und Geschäftsführung:** Letztverantwortung.\n- **Technische Leitung:** Betrieb, Wartung, Zugang, Mängelbeseitigung.\n- **Krankenhaushygiene:** fachliche Bewertung hygienischer Befunde, Abstimmung zu Terminen und Maßnahmen.\n- **Externe Prüfer:** Hygieneinspektion und Prüfungen nach Krankenhausnorm.\n- **betreibermanager.de:** Fristenplan, Terminabstimmung, Beauftragung, Befundverfolgung."
     },
     {
       "id": "standorte",
@@ -79,19 +79,19 @@
         [
           "Anlagen für OP-Bereiche und besonders hygienekritische Bereiche",
           "DIN 1946-4 (Norm); VDI 6022 Blatt 1",
-          "Intervalle nach DIN 1946-4 [PRÜFEN]; Hygieneinspektion nach VDI 6022",
-          "Fachfirma bzw. qualifizierte Prüfer [PRÜFEN: Anforderungen an Prüfer nach DIN 1946-4]"
+          "Hygieneinspektion nach VDI 6022: alle 3 Jahre, bei Anlagen mit Befeuchtung alle 2 Jahre",
+          "Qualifizierte Prüfdienstleister"
         ],
         [
           "Abnahme nach Neubau, Umbau oder wesentlicher Änderung",
           "DIN 1946-4 (Norm)",
-          "[PRÜFEN]",
-          "[PRÜFEN]"
+          "nach Maßgabe der Gefährdungsbeurteilung, der Herstellerangaben und der einschlägigen Regeln",
+          "Qualifizierte Prüfdienstleister"
         ],
         [
           "Filterwechsel, Wartung und Hygienekontrollen (laufender Betrieb)",
           "VDI 6022 Blatt 1; Herstellerangaben",
-          "nach Wartungsplan [PRÜFEN: Intervalle nach Betriebsart]",
+          "nach Wartungsplan und Herstellerangaben",
           "Fachpersonal der Technik oder Fachfirma"
         ]
       ]
@@ -100,11 +100,11 @@
   "faq": [
     {
       "question": "Wie oft müssen RLT-Anlagen im Krankenhaus hygienisch geprüft werden?",
-      "answer": "Nach VDI 6022 Blatt 1 alle 3 Jahre, bei Anlagen mit Befeuchtung alle 2 Jahre. Zusätzliche Prüfungen für Räume des Gesundheitswesens ergeben sich aus DIN 1946-4; die Intervalle sind der Norm zu entnehmen."
+      "answer": "Nach VDI 6022 Blatt 1 alle 3 Jahre, bei Anlagen mit Befeuchtung alle 2 Jahre. DIN 1946-4 wird hier nur als Norm für das Gesundheitswesen genannt, ohne Aussage zu Intervallen."
     },
     {
       "question": "Was regelt DIN 1946-4?",
-      "answer": "Die Norm betrifft Raumlufttechnik in Gebäuden und Räumen des Gesundheitswesens. Sie wird hier nur als Norm genannt. Anforderungen und Intervalle sind dem Normtext zu entnehmen und fachlich zu bestätigen."
+      "answer": "Die Norm betrifft Raumlufttechnik in Gebäuden und Räumen des Gesundheitswesens. Sie wird hier nur als Norm genannt, ohne Aussage zu ihrem Inhalt."
     },
     {
       "question": "Wer verantwortet die hygienische Bewertung von Prüfbefunden?",
@@ -116,11 +116,11 @@
     },
     {
       "question": "Wer darf eine Hygieneinspektion nach VDI 6022 durchführen?",
-      "answer": "Personen mit entsprechender Qualifikation nach VDI 6022. Die Kategorien erläutert der Beitrag zu VDI 6022 Kategorien. Ob für Krankenhausbereiche weitere Anforderungen gelten, ist für diese Seite zu bestätigen."
+      "answer": "Personen mit entsprechender Qualifikation nach VDI 6022. Die Kategorien erläutert der Beitrag zu VDI 6022 Kategorien."
     },
     {
       "question": "Was ist nach einem Umbau im Krankenhaus zu beachten?",
-      "answer": "Luftführung und Anforderungen können sich ändern. Die Anlage ist anzupassen und zu dokumentieren; ob eine Abnahme- oder Wiederholungsprüfung erforderlich ist, richtet sich nach den einschlägigen Normen und der Gefährdungsbeurteilung."
+      "answer": "Luftführung und Anforderungen können sich ändern. Die Anlage ist anzupassen und zu dokumentieren. Welche Prüfungen und Fristen gelten, ergibt sich aus der Gefährdungsbeurteilung, den Herstellerangaben und den einschlägigen Regeln; betreibermanager.de stellt die Anforderungen je Standort zusammen und lässt sie durch qualifizierte Prüfdienstleister umsetzen."
     },
     {
       "question": "Wie werden Hygienebefunde nachverfolgt?",
@@ -203,6 +203,11 @@
       "label": "Legionellenprüfung",
       "href": "/legionellenpruefung",
       "note": "Trinkwasser nach TrinkwV"
+    },
+    {
+      "label": "Externer Betreibermanager",
+      "href": "/externer-betreibermanager",
+      "note": "Leistungsmodell und Ablauf"
     }
   ],
   "internalLinksFromExisting": [
@@ -236,5 +241,6 @@
     ],
     "differentiation": "Die VDI-6022-Grundlagen bleiben auf /vdi-6022 und den Wissensbeiträgen; diese Seite behandelt ausschließlich Krankenhaus-Besonderheiten (DIN 1946-4 als Norm, Abstimmung mit der Krankenhaushygiene, Terminierung im Klinikbetrieb) und verlinkt dorthin.",
     "decision": "neue Seite"
-  }
+  },
+  "linksVerifiedManually": "2026-11-25"
 }

@@ -153,6 +153,7 @@ export function validatePages(pages: B2bPage[]): string[] {
     }
     if (p.status === "published") {
       if (!p.reviewedBy) e("veröffentlicht, aber reviewedBy fehlt");
+      if (!p.linksVerifiedManually) e("veröffentlicht, aber Quellenlinks nicht geprüft (linksVerifiedManually fehlt)");
       const markers = openMarkers(p);
       if (markers.length > 0) e(`veröffentlicht, aber ${markers.length} offene [PRÜFEN]-Marker`);
       const words = wordCount(p);

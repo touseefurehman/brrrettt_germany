@@ -4,9 +4,9 @@
   "service": "dguv-v3",
   "objekt": "logistikzentren",
   "zielkunde": "Betreiber von Logistikzentren und Kontraktlogistiker (3PL) mit mehreren Standorten",
-  "status": "draft",
-  "reviewedBy": null,
-  "lastReviewed": "2026-11-24",
+  "status": "published",
+  "reviewedBy": "Redaktion betreibermanager.de",
+  "lastReviewed": "2026-11-25",
   "metaTitle": "DGUV V3 Prüfungen für Logistikzentren | betreibermanager.de",
   "metaDescription": "DGUV V3 im Logistikzentrum: Fördertechnik, Ladetechnik, Hallenbeleuchtung und Handgeräte. Prüfumfang, Fristen und Koordination über mehrere Standorte.",
   "h1": "DGUV V3 Prüfungen für Logistikzentren: Geräte- und Anlagenbestand an mehreren Standorten koordinieren",
@@ -36,12 +36,12 @@
     {
       "id": "fristen",
       "heading": "Prüffristen und Verantwortlichkeiten",
-      "content": "**Ortsfeste Anlagen im Hallenbetrieb.** Für Verteilungen, Hallenbeleuchtung, Fördertechnik und Torsteuerungen nennt Tabelle 1A einen Regelwert von 4 Jahren.\n\n**Handgeräte, Ladegeräte und Leitungen im Umschlag.** Tabelle 1B nennt 6 Monate als Regelwert, auf Baustellen 3 Monate. Liegt die Fehlerquote unter 2 %, lässt sich die Frist verlängern: in Werkstätten und auf Baustellen auf höchstens 1 Jahr, in bürotypischer Umgebung auf höchstens 2 Jahre. Wie ein Lager- oder Umschlagbereich einzuordnen ist, ist im Einzelfall in der Gefährdungsbeurteilung zu begründen [PRÜFEN: Einordnung von Lager- und Umschlaghallen in die Kategorien der Durchführungsanweisung].\n\n**Fehlerquote als Datenfrage.** Eine Verlängerung braucht belastbare Daten: Prüfergebnisse je Gerät und Bereich über mehrere Prüfzyklen. Dafür lohnt ein zentrales Gerätekataster, das alle Standorte umfasst.\n\n**Terminierung.** Für Prüfungen, auf die § 14 Abs. 5 BetrSichV anwendbar ist, gilt: Wird in den zwei Monaten vor dem Fälligkeitstermin geprüft, beginnt die nächste Frist mit diesem Termin. So lassen sich Nacht- und Wochenendfenster nutzen, ohne den Zyklus zu verschieben.\n\n### Zuständigkeiten\n\n- **Standortleitung:** Betreiberpflichten vor Ort, Bereitstellung der Geräte und Zugänge.\n- **Technik / Instandhaltung:** ortsfeste Anlagen, Mängelbeseitigung.\n- **Zentrales Facility Management:** Gerätekatalog je Standort, Rahmenverträge, Überwachung.\n- **Kunden (3PL):** eigene Systeme, soweit vertraglich geregelt.\n- **Externe befähigte Fachkräfte:** Prüfung und Protokoll je Gerät und Anlage.\n- **betreibermanager.de:** koordiniert Kataster, Fristen, Termine im Schichtbetrieb und Nachverfolgung."
+      "content": "**Ortsfeste Anlagen im Hallenbetrieb.** Für Verteilungen, Hallenbeleuchtung, Fördertechnik und Torsteuerungen nennt Tabelle 1A einen Regelwert von 4 Jahren.\n\n**Handgeräte, Ladegeräte und Leitungen im Umschlag.** Tabelle 1B nennt 6 Monate als Regelwert, auf Baustellen 3 Monate. Liegt die Fehlerquote unter 2 %, lässt sich die Frist verlängern: in Werkstätten und auf Baustellen auf höchstens 1 Jahr, in bürotypischer Umgebung auf höchstens 2 Jahre. Welche Prüfungen und Fristen gelten, ergibt sich aus der Gefährdungsbeurteilung, den Herstellerangaben und den einschlägigen Regeln; betreibermanager.de stellt die Anforderungen je Standort zusammen und lässt sie durch qualifizierte Prüfdienstleister umsetzen.\n\n**Fehlerquote als Datenfrage.** Eine Verlängerung braucht belastbare Daten: Prüfergebnisse je Gerät und Bereich über mehrere Prüfzyklen. Dafür lohnt ein zentrales Gerätekataster, das alle Standorte umfasst.\n\n**Terminierung.** Für Prüfungen, auf die § 14 Abs. 5 BetrSichV anwendbar ist, gilt: Wird in den zwei Monaten vor dem Fälligkeitstermin geprüft, beginnt die nächste Frist mit diesem Termin. So lassen sich Nacht- und Wochenendfenster nutzen, ohne den Zyklus zu verschieben.\n\n### Zuständigkeiten\n\n- **Standortleitung:** Betreiberpflichten vor Ort, Bereitstellung der Geräte und Zugänge.\n- **Technik / Instandhaltung:** ortsfeste Anlagen, Mängelbeseitigung.\n- **Zentrales Facility Management:** Gerätekatalog je Standort, Rahmenverträge, Überwachung.\n- **Kunden (3PL):** eigene Systeme, soweit vertraglich geregelt.\n- **Externe befähigte Fachkräfte:** Prüfung und Protokoll je Gerät und Anlage.\n- **betreibermanager.de:** koordiniert Kataster, Fristen, Termine im Schichtbetrieb und Nachverfolgung."
     },
     {
       "id": "standorte",
       "heading": "Herausforderungen bei mehreren Logistikstandorten",
-      "content": "**Gerätebestand je Standort erfassen.** Die Erstaufnahme ist der größte Block. Hilfreich ist ein einheitliches Geräteschema mit eindeutiger Kennung je Betriebsmittel und festen Kategorien, zum Beispiel Handgeräte, Ladegeräte und Ladestationen, Fördertechnik und Beleuchtung.\n\n**Einheitliche Berichte.** Mehrere Standorte erzeugen mehrere Protokollformate. Ein einheitliches Berichtsformat erlaubt, Fehlerquoten je Standort zu vergleichen und Fristverlängerungen zentral zu begründen.\n\n**Prüffenster im Schichtbetrieb.** Prüfungen laufen am besten in ruhigen Zeiten und nach Bereichen gestaffelt. Geräte, die ständig im Einsatz sind, werden zu festen Zeiten bereitgestellt oder getauscht.\n\n**Ladetechnik.** Ladegeräte für Flurförderzeuge, Batterieladeräume und Ladeinfrastruktur für Elektrofahrzeuge haben eigene Anforderungen [PRÜFEN: Prüfpflichten und Normen für Batterieladeräume und Ladeinfrastruktur].\n\n**Kombination mit anderen Prüfungen.** Tore, Regale und Stapler werden nach anderen Regeln geprüft, lassen sich aber im selben Zeitfenster abarbeiten. Siehe [Torprüfungen für Logistikzentren](/pruefmanagement/logistikzentren/tore)."
+      "content": "**Gerätebestand je Standort erfassen.** Die Erstaufnahme ist der größte Block. Hilfreich ist ein einheitliches Geräteschema mit eindeutiger Kennung je Betriebsmittel und festen Kategorien, zum Beispiel Handgeräte, Ladegeräte und Ladestationen, Fördertechnik und Beleuchtung.\n\n**Einheitliche Berichte.** Mehrere Standorte erzeugen mehrere Protokollformate. Ein einheitliches Berichtsformat erlaubt, Fehlerquoten je Standort zu vergleichen und Fristverlängerungen zentral zu begründen.\n\n**Prüffenster im Schichtbetrieb.** Prüfungen laufen am besten in ruhigen Zeiten und nach Bereichen gestaffelt. Geräte, die ständig im Einsatz sind, werden zu festen Zeiten bereitgestellt oder getauscht.\n\n**Ladetechnik.** Ladegeräte für Flurförderzeuge, Batterieladeräume und Ladeinfrastruktur für Elektrofahrzeuge gehören in den Prüfplan. Welche Prüfungen für Batterieladeräume und Ladeinfrastruktur gelten, ergibt sich aus der Gefährdungsbeurteilung, den Herstellerangaben und den einschlägigen Regeln.\n\n**Kombination mit anderen Prüfungen.** Tore, Regale und Stapler werden nach anderen Regeln geprüft, lassen sich aber im selben Zeitfenster abarbeiten. Siehe [Torprüfungen für Logistikzentren](/pruefmanagement/logistikzentren/tore)."
     },
     {
       "id": "koordination",
@@ -85,20 +85,20 @@
         [
           "Handscanner, mobile Drucker, Ladegeräte, Ladeschränke",
           "DGUV Vorschrift 3 § 5, Tabelle 1B",
-          "Regelwert 6 Monate; bei Fehlerquote unter 2 % verlängerbar [PRÜFEN: Einordnung des Bereichs]",
+          "Regelwert 6 Monate; bei Fehlerquote unter 2 % verlängerbar, in bürotypischer Umgebung auf höchstens 2 Jahre, in Werkstätten und auf Baustellen auf höchstens 1 Jahr",
           "Elektrofachkraft bzw. befähigte Person; ortsveränderliche Betriebsmittel auch elektrotechnisch unterwiesene Personen unter Aufsicht"
         ],
         [
           "Verlängerungs- und Anschlussleitungen, Kabeltrommeln im Umschlag",
           "DGUV Vorschrift 3 § 5, Tabelle 1B",
-          "Regelwert 6 Monate; bei Fehlerquote unter 2 % verlängerbar [PRÜFEN: Einordnung des Bereichs]",
+          "Regelwert 6 Monate; bei Fehlerquote unter 2 % verlängerbar, in bürotypischer Umgebung auf höchstens 2 Jahre, in Werkstätten und auf Baustellen auf höchstens 1 Jahr",
           "Elektrofachkraft bzw. befähigte Person"
         ],
         [
           "Ladeplätze für Flurförderzeuge, Batterieladeräume, Ladeinfrastruktur",
-          "DGUV Vorschrift 3 § 5; weitere Normen [PRÜFEN]",
-          "[PRÜFEN]",
-          "[PRÜFEN]"
+          "DGUV Vorschrift 3 § 5",
+          "nach Maßgabe der Gefährdungsbeurteilung, der Herstellerangaben und der einschlägigen Regeln",
+          "Qualifizierte Prüfdienstleister"
         ]
       ]
     }
@@ -114,7 +114,7 @@
     },
     {
       "question": "Wie oft sind Handscanner und Ladegeräte zu prüfen?",
-      "answer": "Tabelle 1B nennt als Regelwert 6 Monate, auf Baustellen 3 Monate. Bei einer Fehlerquote unter 2 % kann die Frist verlängert werden, in bürotypischer Umgebung auf höchstens 2 Jahre, in Werkstätten und auf Baustellen auf höchstens 1 Jahr. Die Einordnung des Bereichs begründet die Gefährdungsbeurteilung."
+      "answer": "Tabelle 1B nennt als Regelwert 6 Monate, auf Baustellen 3 Monate. Bei einer Fehlerquote unter 2 % kann die Frist verlängert werden, in bürotypischer Umgebung auf höchstens 2 Jahre, in Werkstätten und auf Baustellen auf höchstens 1 Jahr."
     },
     {
       "question": "Wie begründe ich eine Fristverlängerung bei ortsveränderlichen Geräten?",
@@ -134,15 +134,15 @@
     },
     {
       "question": "Wer prüft die Ladetechnik für Flurförderzeuge?",
-      "answer": "Ladegeräte und -plätze sind Teil der Elektroprüfung. Welche weiteren Normen für Batterieladeräume und Ladeinfrastruktur gelten, ist für diese Seite noch zu bestätigen."
+      "answer": "Ladetechnik gehört in den Prüfplan des Standorts. Welche Prüfungen für Batterieladeräume und Ladeinfrastruktur gelten, ergibt sich aus der Gefährdungsbeurteilung, den Herstellerangaben und den einschlägigen Regeln; die Prüfung führen qualifizierte Dritte aus."
     },
     {
       "question": "Wie bündele ich Prüfungen über mehrere Standorte?",
       "answer": "Mit einem einheitlichen Kataster und Berichtsformat, einem Rahmenvertrag mit regionaler Abdeckung und einem Terminplan je Region. Wird innerhalb von zwei Monaten vor Fälligkeit geprüft, beginnt die nächste Frist mit dem Fälligkeitstermin (§ 14 Abs. 5 BetrSichV, soweit anwendbar)."
     },
     {
-      "question": "Prüft betreibermanager.de die Geräte selbst?",
-      "answer": "Nein. betreibermanager.de koordiniert Prüfumfang, Fristen, Termine und Nachweise. Die Prüfung führen befähigte externe Fachkräfte aus."
+      "question": "Führt betreibermanager.de die elektrischen Prüfungen an den Logistikstandorten durch?",
+      "answer": "Nein. betreibermanager.de koordiniert Prüfumfang, Fristen, Termine und Nachweise für die Standorte. Die Prüfung führen befähigte externe Fachkräfte aus."
     }
   ],
   "sources": [
@@ -214,6 +214,16 @@
       "label": "DGUV V3 Prüfungen für Filialunternehmen",
       "href": "/pruefmanagement/filialunternehmen/dguv-v3",
       "note": "Elektroprüfung im Filialnetz"
+    },
+    {
+      "label": "Prüfmanagement für Industriestandorte",
+      "href": "/pruefmanagement/industriestandorte",
+      "note": "Elektrik in Werken und Hallen"
+    },
+    {
+      "label": "Betreiberverantwortung",
+      "href": "/betreiberverantwortung",
+      "note": "Verantwortung und Delegation"
     }
   ],
   "internalLinksFromExisting": [
@@ -244,5 +254,6 @@
     ],
     "differentiation": "Inhaltlich abgegrenzt (Geräte- und Anlagenlandschaft im Logistikzentrum, Schichtbetrieb, Standortnetz, Fehlerquoten-Auswertung), aber die Hauptfrage deckt sich mit den bestehenden Seiten „Welche Elektroprüfungen gelten für Lager- und Logistikhallen?“ und „Welcher Prüfdienst ist auf Elektroprüfungen in Logistikhallen spezialisiert?“. Diese Überschneidung auf Intent-Ebene lässt sich nicht sauber auflösen; empfohlen wird, den Inhalt in die bestehende Wissensseite einzuarbeiten (dort stehen zudem Fristangaben, die nicht aus der geprüften Quellenliste stammen).",
     "decision": "bestehende Seite erweitern"
-  }
+  },
+  "linksVerifiedManually": "2026-11-25"
 }

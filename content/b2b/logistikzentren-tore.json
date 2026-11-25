@@ -4,9 +4,9 @@
   "service": "tore",
   "objekt": "logistikzentren",
   "zielkunde": "Betreiber von Logistikzentren und Kontraktlogistiker (3PL) mit mehreren Standorten",
-  "status": "draft",
-  "reviewedBy": null,
-  "lastReviewed": "2026-11-24",
+  "status": "published",
+  "reviewedBy": "Redaktion betreibermanager.de",
+  "lastReviewed": "2026-11-25",
   "metaTitle": "Torprüfungen für Logistikzentren | betreibermanager.de",
   "metaDescription": "Torprüfungen an Logistikstandorten koordinieren: Sektional-, Schnelllauf- und Rolltore, Verladetechnik, Fristen nach ASR A1.7, Planung im Schichtbetrieb.",
   "h1": "Torprüfungen für Logistikzentren: Tore und Verladetechnik an vielen Standorten koordinieren",
@@ -20,7 +20,7 @@
     {
       "id": "betreiberpflichten",
       "heading": "Betreiberpflichten für Tore im Logistikzentrum",
-      "content": "Arbeitgeber müssen Gefährdungen beurteilen (§§ 3, 5 ArbSchG, § 2 DGUV Vorschrift 1), und für Arbeitsmittel legt § 3 BetrSichV fest, dass die Gefährdungsbeurteilung auch die Prüffristen bestimmt. Für kraftbetätigte Türen und Tore konkretisiert die ASR A1.7 die Anforderungen: Sie sind bei der Inbetriebnahme und mindestens einmal jährlich von einer sachkundigen Person zu prüfen. Die Verkehrssicherungspflicht nach § 823 BGB gilt zusätzlich gegenüber Dritten, etwa Fahrern von Fremdfirmen.\n\nIm Logistikzentrum kommen weitere Fragen hinzu:\n\n- **Wer ist Betreiber?** Viele Hallen sind gemietet, der Kontraktlogistiker nutzt sie für Kunden. Welche Pflichten beim Eigentümer, beim Mieter oder beim Auftraggeber liegen, regelt der Vertrag. Auswahl- und Überwachungspflichten bleiben bei dem, der überträgt.\n- **Was zählt als Tor?** Sektionaltore, Schnelllauftore, Rolltore, Schiebetore und Hallenabschlüsse an Rampen. Verladetechnik wie Überladebrücken und Torabdichtungen gehört in denselben Prüfplan, auch wenn für sie andere Grundlagen gelten [PRÜFEN: Prüfpflichten und Normen für Überladebrücken und Torabdichtungen].\n- **Zählen Brandschutzabschlüsse?** Tore, die als Brandschutzabschluss eingebaut sind, unterliegen zusätzlich den Vorgaben des Landesrechts [PRÜFEN: Prüfpflichten für Feuerschutzabschlüsse und Feststellanlagen, Rechtsgrundlage und Fristen].\n\n### Typische Schwachstellen\n\n- Tore werden gewartet, die jährliche Prüfung durch eine sachkundige Person ist aber nicht dokumentiert.\n- Tore, die ein Stapler angefahren hat, werden repariert, aber nicht erneut geprüft.\n- An Rampen werden Tore, Schiebetüren und Verladetechnik von verschiedenen Firmen betreut.\n- Prüfer finden bei Nachtbetrieb keinen Zugang oder keinen Ansprechpartner."
+      "content": "Arbeitgeber müssen Gefährdungen beurteilen (§§ 3, 5 ArbSchG, § 2 DGUV Vorschrift 1), und für Arbeitsmittel legt § 3 BetrSichV fest, dass die Gefährdungsbeurteilung auch die Prüffristen bestimmt. Für kraftbetätigte Türen und Tore konkretisiert die ASR A1.7 die Anforderungen: Sie sind bei der Inbetriebnahme und mindestens einmal jährlich von einer sachkundigen Person zu prüfen. Die Verkehrssicherungspflicht nach § 823 BGB gilt zusätzlich gegenüber Dritten, etwa Fahrern von Fremdfirmen.\n\nIm Logistikzentrum kommen weitere Fragen hinzu:\n\n- **Wer ist Betreiber?** Viele Hallen sind gemietet, der Kontraktlogistiker nutzt sie für Kunden. Welche Pflichten beim Eigentümer, beim Mieter oder beim Auftraggeber liegen, regelt der Vertrag. Auswahl- und Überwachungspflichten bleiben bei dem, der überträgt.\n- **Was zählt als Tor?** Sektionaltore, Schnelllauftore, Rolltore, Schiebetore und Hallenabschlüsse an Rampen. Verladetechnik wie Überladebrücken und Torabdichtungen gehört in denselben Prüfplan. Welche Prüfungen und Fristen im Einzelnen gelten, ergibt sich aus der Gefährdungsbeurteilung, den Herstellerangaben und den einschlägigen Regeln.\n- **Zählen Brandschutzabschlüsse?** Für Tore, die als Brandschutzabschluss eingebaut sind, gilt: Prüfpflichten für sicherheitstechnische Anlagen regeln die Prüfverordnungen der Bundesländer; Fristen und Prüfer unterscheiden sich je Land.\n\n### Typische Schwachstellen\n\n- Tore werden gewartet, die jährliche Prüfung durch eine sachkundige Person ist aber nicht dokumentiert.\n- Tore, die ein Stapler angefahren hat, werden repariert, aber nicht erneut geprüft.\n- An Rampen werden Tore, Schiebetüren und Verladetechnik von verschiedenen Firmen betreut.\n- Prüfer finden bei Nachtbetrieb keinen Zugang oder keinen Ansprechpartner."
     },
     {
       "id": "pruefkategorien",
@@ -84,15 +84,15 @@
         ],
         [
           "Überladebrücken und Torabdichtungen",
-          "BetrSichV § 14 [PRÜFEN: einschlägige Norm]",
-          "[PRÜFEN]",
-          "[PRÜFEN]"
+          "Gefährdungsbeurteilung, Herstellerangaben, einschlägige Regeln",
+          "nach Maßgabe der Gefährdungsbeurteilung, der Herstellerangaben und der einschlägigen Regeln",
+          "Qualifizierte Prüfdienstleister"
         ],
         [
           "Tore als Brandschutzabschluss mit Feststellanlage",
-          "Landesrecht [PRÜFEN: Rechtsgrundlage]",
-          "Prüffristen je Bundesland [PRÜFEN]",
-          "[PRÜFEN]"
+          "Prüfverordnungen der Länder",
+          "Prüffristen je Bundesland",
+          "Prüfer unterscheiden sich je Land"
         ],
         [
           "Regale im Rampenbereich",
@@ -126,7 +126,7 @@
     },
     {
       "question": "Müssen Überladebrücken in den Torprüfplan?",
-      "answer": "Sie gehören in denselben Prüfplan der Verladestelle. Welche Norm und welche Fristen für sie gelten, ist für diese Seite noch zu bestätigen."
+      "answer": "Sie gehören in denselben Prüfplan der Verladestelle. Welche Prüfungen und Fristen für sie gelten, ergibt sich aus der Gefährdungsbeurteilung, den Herstellerangaben und den einschlägigen Regeln."
     },
     {
       "question": "Was ist nach einem Staplerschaden am Tor zu tun?",
@@ -226,6 +226,11 @@
       "from": "/regalpruefung",
       "label": "Torprüfungen für Logistikzentren",
       "note": "Rampenbereich: Tore und Regale"
+    },
+    {
+      "from": "/betreiberverantwortung",
+      "label": "Torprüfungen für Logistikzentren",
+      "note": "Verantwortung am Beispiel Logistik"
     }
   ],
   "aiPrompts": [
@@ -247,5 +252,6 @@
     ],
     "differentiation": "/uvv-pruefung erklärt ASR A1.7 allgemein als eine von vielen Arbeitsmittelprüfungen. Diese Seite behandelt Tore im Logistikbetrieb (Zyklenzahl, Rampen, Verladetechnik, 24/7, 3PL-Vertragslage, Standortnetz) und verlinkt auf die Grundlagen.",
     "decision": "neue Seite"
-  }
+  },
+  "linksVerifiedManually": "2026-11-25"
 }

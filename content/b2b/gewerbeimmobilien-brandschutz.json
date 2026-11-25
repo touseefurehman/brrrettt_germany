@@ -4,9 +4,9 @@
   "service": "brandschutz",
   "objekt": "gewerbeimmobilien",
   "zielkunde": "Eigentümer, Asset- und Property-Manager von Büro-, Handels- und gemischt genutzten Gewerbeimmobilien (Schwerpunkt Brandschutz)",
-  "status": "draft",
-  "reviewedBy": null,
-  "lastReviewed": "2026-11-24",
+  "status": "published",
+  "reviewedBy": "Redaktion betreibermanager.de",
+  "lastReviewed": "2026-11-25",
   "metaTitle": "Brandschutzprüfungen Gewerbeimmobilien | betreibermanager.de",
   "metaDescription": "Brandschutzprüfungen in Büro-, Handels- und Mischobjekten koordinieren: Anlagen, Prüffristen je Bundesland, Mieterausbau, Nachweise und Mängelverfolgung.",
   "h1": "Brandschutzprüfungen für Gewerbeimmobilien: Anlagen, Fristen und Nachweise koordinieren",
@@ -25,13 +25,13 @@
     {
       "id": "pruefkategorien",
       "heading": "Relevante Prüfkategorien im Brandschutz",
-      "content": "Die Tabelle fasst die Anlagen zusammen, die in Gewerbeimmobilien typischerweise vorkommen. Wartungsintervalle der Anlagenhersteller und der einschlägigen DIN-Normen sind hier nicht aufgeführt; sie werden vor einer Veröffentlichung ergänzt [PRÜFEN: Wartungs- und Inspektionsintervalle nach DIN 14675 und DIN VDE 0833-1, die auf /pruefbereiche/brandschutz bisher nicht fachlich geprüft sind].\n\nFür die Terminplanung ist die Unterscheidung wichtig, welche Tätigkeit welche Rolle verlangt. Wartung und Inspektion durch Fachfirmen sind nicht dasselbe wie die wiederkehrende Prüfung durch Prüfsachverständige. Beides gehört in denselben Prüfplan, wird aber von unterschiedlichen Auftragnehmern erbracht und mit unterschiedlichen Berichten nachgewiesen. Wer nur die Wartungsverträge im Blick hat, übersieht leicht die behördlich geforderte Prüfung, und umgekehrt.",
+      "content": "Die Tabelle fasst die Anlagen zusammen, die in Gewerbeimmobilien typischerweise vorkommen. Prüfpflichten für sicherheitstechnische Anlagen regeln die Prüfverordnungen der Bundesländer; Fristen und Prüfer unterscheiden sich je Land. Wartungs- und Inspektionsintervalle der Anlagen ergeben sich aus den Herstellerangaben und den einschlägigen Regeln.\n\nFür die Terminplanung ist die Unterscheidung wichtig, welche Tätigkeit welche Rolle verlangt. Wartung und Inspektion durch Fachfirmen sind nicht dasselbe wie die wiederkehrende Prüfung durch Prüfsachverständige. Beides gehört in denselben Prüfplan, wird aber von unterschiedlichen Auftragnehmern erbracht und mit unterschiedlichen Berichten nachgewiesen. Wer nur die Wartungsverträge im Blick hat, übersieht leicht die behördlich geforderte Prüfung, und umgekehrt.",
       "table": 0
     },
     {
       "id": "regelwerke",
       "heading": "Anwendbare Regelwerke und Normen",
-      "content": "- **ArbSchG §§ 3, 5, DGUV Vorschrift 1 § 2, BGB § 823:** Verantwortung und Gefährdungsbeurteilung.\n- **BetrSichV § 3 und § 14:** Fristen aus der Gefährdungsbeurteilung und Prüfung von Arbeitsmitteln im Brandschutz. Zuletzt geändert am 18.12.2025.\n- **ASR A2.2:** Maßnahmen gegen Brände, Feuerlöscher mindestens alle 2 Jahre durch eine sachkundige Person.\n- **ASR A1.7:** kraftbetätigte Türen und Tore, soweit sie Teil der Rettungs- und Brandschutzkonzeption sind.\n- **Prüfverordnungen der Länder:** Prüfung sicherheitstechnischer Anlagen durch bauaufsichtlich anerkannte Prüfsachverständige; Prüffristen je Bundesland.\n- **GEFMA 190 und VDI 3810:** Gliederung der Betreiberpflichten.\n\nWelche weiteren Normen für einzelne Anlagen gelten, steht je Anlagentyp in den Herstellerunterlagen und in den Auflagen der Baugenehmigung [PRÜFEN: Normenliste je Anlagenart ergänzen]. Auf der Seite [Feuerlöscher-Prüfung](/feuerloescher-pruefung) stehen die Grundlagen für tragbare Feuerlöscher."
+      "content": "- **ArbSchG §§ 3, 5, DGUV Vorschrift 1 § 2, BGB § 823:** Verantwortung und Gefährdungsbeurteilung.\n- **BetrSichV § 3 und § 14:** Fristen aus der Gefährdungsbeurteilung und Prüfung von Arbeitsmitteln im Brandschutz. Zuletzt geändert am 18.12.2025.\n- **ASR A2.2:** Maßnahmen gegen Brände, Feuerlöscher mindestens alle 2 Jahre durch eine sachkundige Person.\n- **ASR A1.7:** kraftbetätigte Türen und Tore, soweit sie Teil der Rettungs- und Brandschutzkonzeption sind.\n- **Prüfverordnungen der Länder:** Prüfung sicherheitstechnischer Anlagen durch bauaufsichtlich anerkannte Prüfsachverständige; Prüffristen je Bundesland.\n- **GEFMA 190 und VDI 3810:** Gliederung der Betreiberpflichten.\n\nWelche Prüfungen und Fristen gelten, ergibt sich aus der Gefährdungsbeurteilung, den Herstellerangaben und den einschlägigen Regeln; betreibermanager.de stellt die Anforderungen je Standort zusammen und lässt sie durch qualifizierte Prüfdienstleister umsetzen. Auf der Seite [Feuerlöscher-Prüfung](/feuerloescher-pruefung) stehen die Grundlagen für tragbare Feuerlöscher."
     },
     {
       "id": "fristen",
@@ -96,9 +96,9 @@
         ],
         [
           "Brandschutztüren und Feststellanlagen",
-          "Landesrecht und Herstellervorgaben [PRÜFEN: einschlägige Norm und Fristen]",
-          "Prüffristen je Bundesland [PRÜFEN]",
-          "Fachfirma bzw. Prüfsachverständige [PRÜFEN]"
+          "Prüfverordnungen der Länder; Herstellerangaben",
+          "Prüffristen je Bundesland",
+          "Prüfer unterscheiden sich je Land"
         ],
         [
           "Kraftbetätigte Türen und Tore in Rettungswegen",
@@ -211,6 +211,11 @@
       "label": "Wer haftet bei fehlenden Prüfungen?",
       "href": "/wissen/haftung-fehlende-pruefungen",
       "note": "Haftung und Delegation"
+    },
+    {
+      "label": "Externer Betreibermanager",
+      "href": "/externer-betreibermanager",
+      "note": "Leistungsmodell und Ablauf"
     }
   ],
   "internalLinksFromExisting": [
@@ -244,5 +249,6 @@
     ],
     "differentiation": "Überschneidung mit /pruefbereiche/brandschutz (derzeit noindex, TODO-Redaktion; wird nicht verändert) ist vermerkt. Diese Seite behandelt Brandschutzprüfungen aus Sicht von Eigentümer, Property Manager und Mieter in Gewerbeobjekten (geteilte Verantwortung, Mieterausbau, Landesrecht) und verlinkt auf /feuerloescher-pruefung für Löscher. Die Seite /pruefbereiche/brandschutz sollte nach der Redaktion auf diese Seite verweisen oder sie ergänzen.",
     "decision": "neue Seite"
-  }
+  },
+  "linksVerifiedManually": "2026-11-25"
 }

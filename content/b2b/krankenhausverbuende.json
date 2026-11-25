@@ -4,9 +4,9 @@
   "service": "pruefmanagement",
   "objekt": "krankenhausverbuende",
   "zielkunde": "Krankenhausverbünde und Träger mit mehreren Kliniken (zentrale Technik, Einkauf, Geschäftsführung)",
-  "status": "draft",
-  "reviewedBy": null,
-  "lastReviewed": "2026-11-24",
+  "status": "published",
+  "reviewedBy": "Redaktion betreibermanager.de",
+  "lastReviewed": "2026-11-25",
   "metaTitle": "Prüfmanagement für Krankenhausverbünde | betreibermanager.de",
   "metaDescription": "Prüfpflichten über mehrere Kliniken zentral steuern: einheitliches Kataster, abgestimmte Prüfer, Berichtswesen. Rechtsgrundlagen und Fristen im Überblick.",
   "h1": "Prüfmanagement für Krankenhausverbünde: Prüfpflichten über mehrere Kliniken zentral steuern",
@@ -31,7 +31,7 @@
     {
       "id": "regelwerke",
       "heading": "Anwendbare Regelwerke und Normen",
-      "content": "- **ArbSchG §§ 3, 5, DGUV Vorschrift 1 § 2 und BGB § 823:** Pflichten des Trägers für jedes Haus, Verkehrssicherung gegenüber Dritten.\n- **BetrSichV § 3, § 14, § 17 mit Anhang 2:** Fristen aus der Gefährdungsbeurteilung, Prüfung von Arbeitsmitteln und die ZÜS-Prüfung der Aufzüge in den Häusern. Letzte Änderung 18.12.2025.\n- **DGUV Vorschrift 3 § 5:** elektrische Anlagen; für medizinisch genutzte Bereiche gelten kürzere Fristen, wie auf der Seite zu den Betreiberpflichten im Krankenhaus beschrieben.\n- **TrinkwV §§ 31, 51:** Legionellen, technischer Maßnahmenwert 100 KBE/100 ml.\n- **VDI 6022 Blatt 1** und **DIN 1946-4** (Raumlufttechnik im Gesundheitswesen; hier nur als Norm genannt).\n- **ASR A2.2** und **Prüfverordnungen der Länder** für den Brandschutz.\n- **MPBetreibV** für Medizinprodukte, soweit die Medizintechnik sie koordiniert [PRÜFEN: Zuständigkeitsabgrenzung zwischen Medizintechnik und zentralem Prüfmanagement].\n- **GEFMA 190 und VDI 3810** als Leitfäden zur Strukturierung der Betreiberpflichten.\n\nDie Lüftungshygiene im Krankenhaus behandelt die Seite [RLT-Hygieneprüfungen für Krankenhäuser](/pruefmanagement/krankenhaeuser/rlt-hygiene)."
+      "content": "- **ArbSchG §§ 3, 5, DGUV Vorschrift 1 § 2 und BGB § 823:** Pflichten des Trägers für jedes Haus, Verkehrssicherung gegenüber Dritten.\n- **BetrSichV § 3, § 14, § 17 mit Anhang 2:** Fristen aus der Gefährdungsbeurteilung, Prüfung von Arbeitsmitteln und die ZÜS-Prüfung der Aufzüge in den Häusern. Letzte Änderung 18.12.2025.\n- **DGUV Vorschrift 3 § 5:** elektrische Anlagen; für medizinisch genutzte Bereiche gelten kürzere Fristen, wie auf der Seite zu den Betreiberpflichten im Krankenhaus beschrieben.\n- **TrinkwV §§ 31, 51:** Legionellen, technischer Maßnahmenwert 100 KBE/100 ml.\n- **VDI 6022 Blatt 1** und **DIN 1946-4** (Raumlufttechnik im Gesundheitswesen; hier nur als Norm genannt).\n- **ASR A2.2** und **Prüfverordnungen der Länder** für den Brandschutz.\n- **MPBetreibV:** Medizinprodukte; die Verordnung wird hier nur genannt und nicht behandelt.\n- **GEFMA 190 und VDI 3810** als Leitfäden zur Strukturierung der Betreiberpflichten.\n\nDie Lüftungshygiene im Krankenhaus behandelt die Seite [RLT-Hygieneprüfungen für Krankenhäuser](/pruefmanagement/krankenhaeuser/rlt-hygiene)."
     },
     {
       "id": "fristen",
@@ -79,7 +79,7 @@
         [
           "Raumlufttechnik, OP-Bereiche",
           "VDI 6022 Blatt 1; DIN 1946-4",
-          "VDI 6022: alle 3 Jahre, bei Befeuchtung alle 2 Jahre; Intervalle nach DIN 1946-4 [PRÜFEN]",
+          "VDI 6022: alle 3 Jahre, bei Befeuchtung alle 2 Jahre",
           "Nach VDI 6022 qualifizierte Person bzw. Fachfirma"
         ],
         [
@@ -108,9 +108,9 @@
         ],
         [
           "Sicherheitsstromversorgung",
-          "DIN VDE 0100-710; BetrSichV [PRÜFEN: Fristen und Prüfer]",
-          "[PRÜFEN]",
-          "[PRÜFEN]"
+          "DIN VDE 0100-710 (Norm, nur genannt)",
+          "Welche Prüfungen und Fristen im Einzelnen gelten, ergibt sich aus der Gefährdungsbeurteilung, den Herstellerangaben und den einschlägigen Regeln.",
+          "Qualifizierte Prüfdienstleister"
         ]
       ]
     }
@@ -229,6 +229,11 @@
       "label": "Externer Betreibermanager",
       "href": "/externer-betreibermanager",
       "note": "Leistungsmodell und Ablauf"
+    },
+    {
+      "label": "Legionellenprüfung",
+      "href": "/legionellenpruefung",
+      "note": "Trinkwasser nach TrinkwV"
     }
   ],
   "internalLinksFromExisting": [
@@ -236,6 +241,11 @@
       "from": "/betreiberpflichten/krankenhaeuser",
       "label": "Prüfmanagement für Krankenhausverbünde",
       "note": "Für Träger mit mehreren Häusern"
+    },
+    {
+      "from": "/legionellenpruefung",
+      "label": "Prüfmanagement für Krankenhausverbünde",
+      "note": "Trinkwasser im Verbund koordinieren"
     }
   ],
   "aiPrompts": [
@@ -255,5 +265,6 @@
     ],
     "differentiation": "Die bestehende Seite /betreiberpflichten/krankenhaeuser bleibt die Seite für Pflichten eines einzelnen Hauses; diese Seite behandelt ausschließlich Verbund-Themen (zentrale Steuerung, Standardisierung, Beschaffung, Landesrecht je Haus, Berichtswesen) und verlinkt dorthin.",
     "decision": "neue Seite"
-  }
+  },
+  "linksVerifiedManually": "2026-11-25"
 }

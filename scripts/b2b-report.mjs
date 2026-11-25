@@ -147,6 +147,45 @@ const csv = "﻿" + [header, ...rows].map((r) => r.map(cell).join(";")).join("\r
 fs.mkdirSync(path.join(root, "deliverables"), { recursive: true });
 fs.writeFileSync(path.join(root, "deliverables/b2b-landingpages.csv"), csv);
 
+// ---- Abschlusstabelle für Henryk: deliverables/b2b-landingpages-final.csv (die .xlsx entsteht daraus mit scripts/b2b-csv-to-xlsx.py) ----
+const stripMd = (t) => t.replace(/\[([^\]]+)\]\([^)]+\)/g, "$1").replace(/\*\*/g, "").replace(/^###\s+|^\s*[-*]\s+/gm, "");
+const EXEMPT = /keine Prüforganisation|keine zugelassene|GEFMA 190 und VDI 3810|nicht wiederholt|Wir führen keine Prüfungen selbst durch|wir ersetzen weder Rechtsberatung/;
+const tok = (t) => new Set(t.toLowerCase().match(/[\p{L}\p{N}]+/gu) ?? []);
+const jac = (a, b) => [...a].filter((x) => b.has(x)).length / new Set([...a, ...b]).size;
+const sentencesOf = (p) =>
+  [p.kurzantwort, ...p.sections.map((x) => stripMd(x.content))]
+    .flatMap((t) => t.split("\n").flatMap((l) => l.split(/(?<=[.!?])\s+/)))
+    .map((x) => x.trim())
+    .filter((x) => x.split(/\s+/).length >= 5 && !EXEMPT.test(x))
+    .map((x) => ({ x, t: tok(x) }));
+const sents = new Map(pages.map((p) => [p.slug, sentencesOf(p)]));
+const similar = (p) => {
+  let best = { slug: "–", pct: 0 };
+  for (const q of pages) {
+    if (q.slug === p.slug) continue;
+    const mine = sents.get(p.slug), other = sents.get(q.slug);
+    const n = mine.filter((a) => other.some((b) => jac(a.t, b.t) >= 0.7)).length;
+    const pct = Math.round((100 * n) / Math.max(1, mine.length));
+    if (pct > best.pct || best.slug === "–") best = { slug: q.url, pct };
+  }
+  return `${best.slug} (${best.pct} % der Sätze ähnlich)`;
+};
+const outgoing = (p) => [...new Set([...p.internalLinks.map((l) => l.href), ...contentLinks(p)])].filter((h) => !h.startsWith("/pruefmanagement/") || byUrl.get(h)?.status === "published");
+const incoming = (p) => [
+  ...pages.filter((q) => q.slug !== p.slug && q.status === "published" && outgoing(q).includes(p.url)).map((q) => q.url),
+  ...p.internalLinksFromExisting.map((l) => l.from).filter((f) => !f.startsWith("/pruefmanagement/")),
+];
+const hdr = ["Nr.", "Seite", "URL", "Status", "Zielkunde", "Kommerzielle Hauptintention", "KI-Ziel-Prompts", "H1", "Meta-Title (Zeichen)", "Meta-Description (Zeichen)", "Wörter", "FAQs", "Regulatorische Quellen (mit URL)", "Interne Links (ausgehend)", "Interne Links (eingehend)", "Canonical", "JSON-LD-Typen", "JSON-LD-Validierung", "Differenzierung (ähnlichste Seite + Überlappung)", "Veröffentlicht am"];
+const fin = pages.map((p, i) => [
+  i + 1, p.h1, p.url, p.status === "published" ? "veröffentlicht" : p.status, p.zielkunde, p.primaryIntent, p.aiPrompts.join(" | "), p.h1,
+  `${p.metaTitle} (${p.metaTitle.length})`, `${p.metaDescription} (${p.metaDescription.length})`, wordCount(p), p.faq.length,
+  p.sources.map((x) => `${x.label} <${x.url}>`).join(" | "), outgoing(p).join(" | "), incoming(p).join(" | "),
+  `${siteUrl}${p.url}`, "WebPage, Service, BreadcrumbList, FAQPage", validateSchemas(p, pages, siteUrl).length ? "Fehler" : "ok", similar(p),
+  p.status === "published" ? p.lastReviewed : "–",
+]);
+fs.writeFileSync(path.join(root, "deliverables/b2b-landingpages-final.csv"), "\uFEFF" + [hdr, ...fin].map((r) => r.map(cell).join(";")).join("\r\n") + "\r\n");
+
+
 console.log(`\n${pages.length} Seiten geprüft, ${problems} Beanstandung(en). CSV: deliverables/b2b-landingpages.csv`);
 console.table(pages.map((p) => ({ slug: p.slug, status: p.status, wörter: wordCount(p), faq: p.faq.length, quellen: p.sources.length, "[PRÜFEN]": markerCount(p), entscheidung: p.cannibalization.decision })));
 process.exit(problems ? 1 : 0);

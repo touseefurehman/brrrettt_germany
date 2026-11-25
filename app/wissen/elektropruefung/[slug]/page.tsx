@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import ElektroQaView, { QaLinks } from "@/components/ElektroQaView";
+import { b2bLinksFrom } from "@/lib/b2b";
 import {
   commercialPath,
   HUB_NAME,
@@ -77,6 +78,7 @@ export default async function ElektroKnowledgePage({ params }: Props) {
           ["Elektroprüfung nach DGUV V3 – alle Fragen", HUB_PATH, "Übersicht"],
         ]}
       />
+      {b2bLinksFrom(path).length > 0 && <QaLinks title="Für Betreiber mit mehreren Standorten" links={b2bLinksFrom(path)} />}
     </ElektroQaView>
   );
 }

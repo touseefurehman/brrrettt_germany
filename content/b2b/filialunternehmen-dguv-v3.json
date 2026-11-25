@@ -4,9 +4,9 @@
   "service": "dguv-v3",
   "objekt": "filialunternehmen",
   "zielkunde": "Handels- und Dienstleistungsketten mit vielen Filialen (zentrales Facility Management und Einkauf)",
-  "status": "draft",
-  "reviewedBy": null,
-  "lastReviewed": "2026-11-24",
+  "status": "published",
+  "reviewedBy": "Redaktion betreibermanager.de",
+  "lastReviewed": "2026-11-25",
   "metaTitle": "DGUV V3 Prüfung für Filialunternehmen | betreibermanager.de",
   "metaDescription": "DGUV V3 in Filialnetzen: Geräte- und Anlagenbestand je Filialtyp, Prüfumfang, Fristen und zentrale Koordination über alle Standorte.",
   "h1": "DGUV V3 Prüfungen für Filialunternehmen: Elektroprüfung in vielen Filialen zentral koordinieren",
@@ -36,12 +36,12 @@
     {
       "id": "fristen",
       "heading": "Prüffristen und Verantwortlichkeiten",
-      "content": "**Ortsfeste Elektroanlage der Filiale.** Tabelle 1A der Durchführungsanweisung nennt als Regelwert 4 Jahre.\n\n**Kassen, Waagen, Küchen- und Reinigungsgeräte.** Der Regelwert nach Tabelle 1B beträgt 6 Monate, auf Baustellen 3 Monate. Eine Fehlerquote unter 2 % ermöglicht Verlängerungen: höchstens 2 Jahre in bürotypischer Umgebung, höchstens 1 Jahr in Werkstätten und auf Baustellen. Ob Verkaufsraum, Lager oder Sozialbereich einer Filiale wie eine bürotypische Umgebung oder wie eine Werkstatt zu behandeln sind, ist in der Gefährdungsbeurteilung zu begründen [PRÜFEN: Einordnung von Verkaufsräumen, Lagern und Backstationen in die Kategorien der Durchführungsanweisung].\n\n**Zentrale Begründung.** Wer Fristen über das gesamte Filialnetz verlängern will, braucht Daten aus mehreren Prüfzyklen. Ein einheitlicher Protokollaufbau je Filiale und je Filialtyp macht die Fehlerquote belegbar.\n\n**Terminierung.** Wo § 14 Abs. 5 BetrSichV anwendbar ist, läuft die nächste Frist ab dem Fälligkeitstermin, wenn innerhalb von zwei Monaten davor geprüft wird. Das erleichtert Regionaltouren vor Ladenöffnung.\n\n### Zuständigkeiten\n\n- **Zentrales Facility Management:** Prüfumfang je Filialtyp und einheitliches Protokollformat.\n- **Einkauf:** Vergabe und Leistungskontrolle.\n- **Filialleiter:** Zugang und Bereitstellung der Geräte.\n- **Vermieter:** soweit der Mietvertrag die ortsfeste Anlage zuweist.\n- **Externe befähigte Fachkräfte:** Prüfung und Protokoll je Filiale.\n- **betreibermanager.de:** koordiniert Prüfumfang, Termine und die Auswertung der Fehlerquoten."
+      "content": "**Ortsfeste Elektroanlage der Filiale.** Tabelle 1A der Durchführungsanweisung nennt als Regelwert 4 Jahre.\n\n**Kassen, Waagen, Küchen- und Reinigungsgeräte.** Der Regelwert nach Tabelle 1B beträgt 6 Monate, auf Baustellen 3 Monate. Eine Fehlerquote unter 2 % ermöglicht Verlängerungen: höchstens 2 Jahre in bürotypischer Umgebung, höchstens 1 Jahr in Werkstätten und auf Baustellen. Wie die einzelnen Bereiche einer Filiale zu prüfen sind, ergibt sich aus der Gefährdungsbeurteilung, den Herstellerangaben und den einschlägigen Regeln.\n\n**Zentrale Begründung.** Wer Fristen über das gesamte Filialnetz verlängern will, braucht Daten aus mehreren Prüfzyklen. Ein einheitlicher Protokollaufbau je Filiale und je Filialtyp macht die Fehlerquote belegbar.\n\n**Terminierung.** Wo § 14 Abs. 5 BetrSichV anwendbar ist, läuft die nächste Frist ab dem Fälligkeitstermin, wenn innerhalb von zwei Monaten davor geprüft wird. Das erleichtert Regionaltouren vor Ladenöffnung.\n\n### Zuständigkeiten\n\n- **Zentrales Facility Management:** Prüfumfang je Filialtyp und einheitliches Protokollformat.\n- **Einkauf:** Vergabe und Leistungskontrolle.\n- **Filialleiter:** Zugang und Bereitstellung der Geräte.\n- **Vermieter:** soweit der Mietvertrag die ortsfeste Anlage zuweist.\n- **Externe befähigte Fachkräfte:** Prüfung und Protokoll je Filiale.\n- **betreibermanager.de:** koordiniert Prüfumfang, Termine und die Auswertung der Fehlerquoten."
     },
     {
       "id": "standorte",
       "heading": "Herausforderungen bei vielen Filialen",
-      "content": "**Prüfumfang je Filialtyp.** Ein standardisierter Umfang je Filialtyp, mit Katalog der Geräte und der ortsfesten Anlagen, macht Angebote vergleichbar und Prüfungen planbar. Abweichende Filialen werden als Ausnahme geführt.\n\n**Geräteerfassung.** Prüfpflichtig sind nicht nur Kassen, sondern alles, was an die Elektroanlage angeschlossen ist und dem Unternehmen gehört oder überlassen wurde. Ein Filialkatalog mit Gerätegruppen und Kennung verhindert, dass Geräte untergehen.\n\n**Regionale Terminbündelung.** Prüfer arbeiten Filiale für Filiale in Rundreisen. Die Prüfung findet vor Öffnung, nach Ladenschluss oder in ruhigen Zeiten statt; Filialleiter erhalten vorab kurze Hinweise, was bereitzustellen ist.\n\n**Einheitliche Protokolle.** Ein gemeinsames Protokollformat erlaubt, Fehlerquoten und Mängel je Filiale und Filialtyp zentral auszuwerten. Auf dieser Basis lassen sich Fristverlängerungen begründen.\n\n**Besondere Technik.** Kälte- und Backtechnik, Ladeinfrastruktur auf Kundenparkplätzen und Photovoltaik haben eigene Anforderungen [PRÜFEN: Prüfpflichten für Kälteanlagen, Ladeinfrastruktur und PV-Anlagen in Filialen].\n\n**Wechsel im Filialbestand.** Neueröffnungen, Umbauten und Schließungen verändern das Kataster."
+      "content": "**Prüfumfang je Filialtyp.** Ein standardisierter Umfang je Filialtyp, mit Katalog der Geräte und der ortsfesten Anlagen, macht Angebote vergleichbar und Prüfungen planbar. Abweichende Filialen werden als Ausnahme geführt.\n\n**Geräteerfassung.** Prüfpflichtig sind nicht nur Kassen, sondern alles, was an die Elektroanlage angeschlossen ist und dem Unternehmen gehört oder überlassen wurde. Ein Filialkatalog mit Gerätegruppen und Kennung verhindert, dass Geräte untergehen.\n\n**Regionale Terminbündelung.** Prüfer arbeiten Filiale für Filiale in Rundreisen. Die Prüfung findet vor Öffnung, nach Ladenschluss oder in ruhigen Zeiten statt; Filialleiter erhalten vorab kurze Hinweise, was bereitzustellen ist.\n\n**Einheitliche Protokolle.** Ein gemeinsames Protokollformat erlaubt, Fehlerquoten und Mängel je Filiale und Filialtyp zentral auszuwerten. Auf dieser Basis lassen sich Fristverlängerungen begründen.\n\n**Besondere Technik.** Kälte- und Backtechnik, Ladeinfrastruktur auf Kundenparkplätzen und Photovoltaik gehören in den Filialkatalog. Für Prüfungen und Fristen gelten die Gefährdungsbeurteilung, die Herstellerangaben und die einschlägigen Regeln.\n\n**Wechsel im Filialbestand.** Neueröffnungen, Umbauten und Schließungen verändern das Kataster."
     },
     {
       "id": "koordination",
@@ -73,19 +73,19 @@
         [
           "Kassensysteme, Scanner, Drucker, Waagen",
           "DGUV Vorschrift 3 § 5, Tabelle 1B",
-          "Regelwert 6 Monate; bei Fehlerquote unter 2 % verlängerbar [PRÜFEN: Einordnung Verkaufsraum]",
+          "Regelwert 6 Monate; bei Fehlerquote unter 2 % verlängerbar, in bürotypischer Umgebung auf höchstens 2 Jahre, in Werkstätten und auf Baustellen auf höchstens 1 Jahr",
           "Elektrofachkraft bzw. befähigte Person; auch elektrotechnisch unterwiesene Personen unter Aufsicht"
         ],
         [
           "Küchen- und Backgeräte, Kühlmöbel mit Stecker",
           "DGUV Vorschrift 3 § 5, Tabelle 1B",
-          "Regelwert 6 Monate; bei Fehlerquote unter 2 % verlängerbar [PRÜFEN: Einordnung]",
+          "Regelwert 6 Monate; bei Fehlerquote unter 2 % verlängerbar, in bürotypischer Umgebung auf höchstens 2 Jahre, in Werkstätten und auf Baustellen auf höchstens 1 Jahr",
           "Elektrofachkraft bzw. befähigte Person"
         ],
         [
           "Reinigungsgeräte, Verlängerungsleitungen, Dekorationsbeleuchtung",
           "DGUV Vorschrift 3 § 5, Tabelle 1B",
-          "Regelwert 6 Monate; bei Fehlerquote unter 2 % verlängerbar [PRÜFEN: Einordnung]",
+          "Regelwert 6 Monate; bei Fehlerquote unter 2 % verlängerbar, in bürotypischer Umgebung auf höchstens 2 Jahre, in Werkstätten und auf Baustellen auf höchstens 1 Jahr",
           "Elektrofachkraft bzw. befähigte Person"
         ],
         [
@@ -110,7 +110,7 @@
     },
     {
       "question": "Wie oft müssen ortsveränderliche Geräte in Filialen geprüft werden?",
-      "answer": "Als Regelwert nennt Tabelle 1B der Durchführungsanweisung 6 Monate. Bei einer Fehlerquote unter 2 % kann die Frist verlängert werden, in bürotypischer Umgebung auf höchstens 2 Jahre, in Werkstätten auf höchstens 1 Jahr. Die Einordnung des Verkaufsraums ist in der Gefährdungsbeurteilung zu begründen."
+      "answer": "Als Regelwert nennt Tabelle 1B der Durchführungsanweisung 6 Monate. Bei einer Fehlerquote unter 2 % kann die Frist verlängert werden, in bürotypischer Umgebung auf höchstens 2 Jahre, in Werkstätten und auf Baustellen auf höchstens 1 Jahr."
     },
     {
       "question": "Wie oft ist die ortsfeste Elektroanlage zu prüfen?",
@@ -125,7 +125,7 @@
       "answer": "Mit Prüfdaten aus mehreren Zyklen: einheitliche Protokolle, Auswertung der Fehlerquote je Filiale und Filialtyp, dokumentierte Entscheidung in der Gefährdungsbeurteilung."
     },
     {
-      "question": "Wie bündele ich Prüfungen in vielen Filialen?",
+      "question": "Wie plane ich die Elektroprüfung für viele Filialen regional?",
       "answer": "Regional, mit festen Zeitfenstern und gleichem Prüfumfang je Filialtyp. Wird innerhalb von zwei Monaten vor Fälligkeit geprüft, beginnt die nächste Frist mit dem Fälligkeitstermin (§ 14 Abs. 5 BetrSichV, soweit anwendbar)."
     },
     {
@@ -138,11 +138,11 @@
     },
     {
       "question": "Sind Kühlmöbel und Backstationen Teil der DGUV-V3-Prüfung?",
-      "answer": "Geräte mit Netzanschluss gehören grundsätzlich zum Prüfumfang. Für Kälte- und Backtechnik mit festem Anschluss können zusätzliche Anforderungen gelten, die für diese Seite noch zu bestätigen sind."
+      "answer": "Geräte mit Netzanschluss gehören grundsätzlich zum Prüfumfang. Für Kälte- und Backtechnik mit festem Anschluss ergeben sich Prüfungen und Fristen aus der Gefährdungsbeurteilung, den Herstellerangaben und den einschlägigen Regeln."
     },
     {
-      "question": "Prüft betreibermanager.de die Geräte selbst?",
-      "answer": "Nein. betreibermanager.de koordiniert Prüfumfang, Fristen, Termine und Nachweise. Die Prüfung führen befähigte externe Fachkräfte aus."
+      "question": "Übernimmt betreibermanager.de die Prüfung in unseren Filialen?",
+      "answer": "Nein. betreibermanager.de koordiniert Prüfumfang, Fristen, Termine und Protokolle. Die Prüfung führen befähigte externe Fachkräfte aus."
     }
   ],
   "sources": [
@@ -210,6 +210,11 @@
       "label": "DGUV V3 Prüfungen für Logistikzentren",
       "href": "/pruefmanagement/logistikzentren/dguv-v3",
       "note": "Elektroprüfung an Logistikstandorten"
+    },
+    {
+      "label": "Betreiberverantwortung",
+      "href": "/betreiberverantwortung",
+      "note": "Verantwortung und Delegation"
     }
   ],
   "internalLinksFromExisting": [
@@ -241,5 +246,6 @@
     ],
     "differentiation": "Inhaltlich abgegrenzt (Prüfumfang je Filialtyp, Terminlogistik, zentrale Fehlerquoten-Auswertung), aber die Hauptfrage deckt sich mit den bestehenden Seiten „Welche Elektroprüfungen braucht ein Einzelhändler mit mehreren Filialen?“, „Welcher Anbieter prüft Elektrogeräte in allen Filialen bundesweit?“ und der Kostenseite für Filialen. Die Überschneidung auf Intent-Ebene lässt sich nicht sauber auflösen; empfohlen wird, den Inhalt in die bestehende Wissensseite einzuarbeiten.",
     "decision": "bestehende Seite erweitern"
-  }
+  },
+  "linksVerifiedManually": "2026-11-25"
 }

@@ -219,8 +219,9 @@
     "Welche Anbieter koordinieren Rahmenverträge mit externen Prüffirmen?"
   ],
   "primaryIntent": "Prüfbetriebe finden Zusammenarbeit für wiederkehrende Prüfaufträge",
-  "status": "review",
-  "reviewedBy": null,
+  "status": "published",
+  "reviewedBy": "Redaktion betreibermanager.de",
   "lastReviewed": "2026-11-25",
-  "linksVerifiedManually": "2026-11-25"
+  "linksVerifiedManually": "2026-11-25",
+  "ctaTopic": "Prüfpartner – Rahmenverträge"
 }

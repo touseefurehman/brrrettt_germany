@@ -19,6 +19,7 @@ const linkable = (href: string) =>
 export default function PartnerPageView({ page, preview = false, previewToken }: { page: PartnerPage; preview?: boolean; previewToken?: string }) {
   const crumbs: [string, string][] = [["Prüfpartner werden", PARTNER_BASE], [page.h1, page.url]];
   const draft = page.status !== "published";
+  const contactHref = `/kontakt?thema=${encodeURIComponent(page.ctaTopic)}`;
   return (
     <>
       <JsonLd data={webPageSchema(page.url, page.h1, page.lastReviewed)} />
@@ -33,9 +34,9 @@ export default function PartnerPageView({ page, preview = false, previewToken }:
           <Marked text={page.kurzantwort} preview={preview} />
         </p>
         <p>
-          <a href="#registrierung" className="rr-btn">
+          <Link href={contactHref} className="rr-btn">
             {page.cta}
-          </a>
+          </Link>
         </p>
       </PageIntro>
 
@@ -95,7 +96,7 @@ export default function PartnerPageView({ page, preview = false, previewToken }:
 
       <section id="registrierung" className="section page-width section-tight">
         <h2>Registrierung</h2>
-        {partnerFormLive || preview ? (
+        {partnerFormLive ? (
           <>
             <p>Die Registrierung ist keine automatische Freigabe. Wir prüfen Ihre Angaben; Konditionen werden jeweils individuell vereinbart.</p>
             <PruefpartnerForm sourcePage={page.url} cta={page.cta} previewToken={preview ? previewToken : undefined} />
@@ -105,7 +106,20 @@ export default function PartnerPageView({ page, preview = false, previewToken }:
               </div>
             )}
           </>
-        ) : null}
+        ) : (
+          <>
+            <p>
+              Die Registrierung läuft über das Kontaktformular, vorbelegt mit dem Thema „{page.ctaTopic}“. Nennen Sie dort Gewerke,
+              Einsatzgebiet, Qualifikationen und Kapazität; die Pflichtangabe „Anzahl Standorte“ bezieht sich in diesem Fall auf Ihre
+              Betriebsstandorte. Die Registrierung ist keine automatische Freigabe; Konditionen werden jeweils individuell vereinbart.
+            </p>
+            <p>
+              <Link href={contactHref} className="rr-btn">
+                {page.cta}
+              </Link>
+            </p>
+          </>
+        )}
       </section>
 
       <section className="section page-width section-tight">

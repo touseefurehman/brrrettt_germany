@@ -8,11 +8,16 @@ const pages = fs.readdirSync(dir).filter((f) => f.endsWith(".json")).map((f) => 
 
 test("Prüfpartner-Seiten bestehen die Qualitätsschranke", () => assert.deepEqual(validatePartnerPages(pages), []));
 
-test("Seiten sind Entwürfe bis zur Freigabe: nichts veröffentlicht, kein reviewedBy", () => {
-  for (const p of pages) {
-    assert.notEqual(p.status, "published", p.slug);
-    assert.equal(p.reviewedBy, null, p.slug);
+test("Veröffentlichte Seiten: reviewedBy, geprüfte Links, ctaTopic, 0 Marker/TODO", () => {
+  for (const p of pages.filter((x) => x.status === "published")) {
+    assert.ok(p.reviewedBy && p.linksVerifiedManually && p.ctaTopic, p.slug);
+    assert.equal(/\[PRÜFEN|TODO/.test(JSON.stringify(p)), false, p.slug);
   }
+});
+
+test("nur geprüfte externe Quellen", () => {
+  const hosts = ["www.gesetze-im-internet.de", "www.baua.de", "publikationen.dguv.de", "www.dinmedia.de", "www.gefma.de", "www.vdi.de"];
+  for (const p of pages) for (const s of p.sources) assert.ok(hosts.includes(new URL(s.url).hostname), s.url);
 });
 
 test("Umfang, Kurzantwort, FAQ, Tabelle, kein Service-Schema", () => {
@@ -51,7 +56,7 @@ test("Qualifikation nur allgemein: keine pauschalen Prüffristen, Link auf TRBS 
 });
 
 test("Veröffentlichung nur mit reviewedBy, geprüften Links und ohne Marker", () => {
-  const p = JSON.parse(JSON.stringify(pages[0]));
+  const p = JSON.parse(JSON.stringify({ ...pages[0], status: "draft", reviewedBy: null }));
   const pub = { ...p, status: "published" };
   assert.match(validatePartnerPages([pub]).join(), /reviewedBy/);
   assert.match(validatePartnerPages([{ ...pub, reviewedBy: "X", linksVerifiedManually: undefined }]).join(), /Links/);

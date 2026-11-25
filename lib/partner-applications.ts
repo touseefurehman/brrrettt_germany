@@ -2,7 +2,6 @@ import { randomUUID } from "node:crypto";
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { allow, EMAIL_RE, oneLine, str, type Json, type Result } from "@/lib/leads";
-import { previewTokenValid } from "@/lib/b2b";
 import { partnerFormLive } from "@/lib/partner";
 import { site } from "@/lib/site";
 import type { Web3FormsPayload } from "@/lib/web3forms";
@@ -131,9 +130,8 @@ export async function setApplicationStatus(id: string, status: ApplicationStatus
 const fail = (status: number, message: string): Result => ({ ok: false, status, message });
 
 export async function handlePartnerApplication(body: Json, ip: string): Promise<Result> {
-  // Bis die Seiten veröffentlicht sind, nimmt nur die Vorschau (gültiges Token) Bewerbungen an
-  const preview = previewTokenValid(typeof body.previewToken === "string" ? body.previewToken : undefined);
-  if (!partnerFormLive && !preview) return fail(404, "Das Formular ist noch nicht freigeschaltet.");
+  // Feature-Flag PARTNER_FORM_ENABLED=true; ohne Flag nimmt der Endpunkt nichts an
+  if (!partnerFormLive) return fail(404, "Das Formular ist noch nicht freigeschaltet.");
   if (str(body.website, 200) || Number(body.elapsed) < 3000) return { ok: true, silent: true };
   if (!(await allow("pruefpartner", ip, 5))) return fail(429, "Zu viele Anfragen. Bitte versuchen Sie es später erneut.");
 

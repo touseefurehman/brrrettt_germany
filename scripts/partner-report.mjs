@@ -9,7 +9,7 @@ import { markerCount, PROMISES, validatePartnerPages, wordCount, visibleTexts } 
 
 const root = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const arg = (n) => { const i = process.argv.indexOf(`--${n}`); return i > 0 ? process.argv[i + 1] : ""; };
-const base = arg("base"), token = arg("token"), formtest = arg("formtest") || "nicht getestet";
+const base = arg("base"), token = arg("token"), formtest = arg("formtest") || "Partner-Formular vorbereitet, nicht aktiv – CTA zum Kontaktformular";
 const siteUrl = fs.readFileSync(path.join(root, "lib/site.ts"), "utf8").match(/url: "(https:\/\/[^"]+)"/)[1];
 const pages = fs.readdirSync(path.join(root, "content/partner")).filter((f) => f.endsWith(".json")).sort().map((f) => JSON.parse(fs.readFileSync(path.join(root, "content/partner", f), "utf8")));
 const errors = validatePartnerPages(pages);
@@ -54,10 +54,12 @@ for (const p of all) {
   rows.push([
     p.url, p.isHub ? p.status : p.status === "published" ? "veröffentlicht" : `Entwurf (${p.status})`, `${p.metaTitle} (${p.metaTitle.length})`, `${p.metaDescription} (${p.metaDescription.length})`, p.h1,
     p.aiPrompts.join(" | "), p.isHub ? "–" : p.sources.map((s) => `${s.label} <${s.url}>`).join(" | "), links.join(" | "), `${siteUrl}${p.url}${p.isHub || p.status === "published" ? "" : " (geplant; gesetzt bei Veröffentlichung)"}`,
-    c.types, c.ok, p.isHub ? "kein Formular (erst mit den Unterseiten)" : formtest, p.isHub ? "–" : `${siteUrl}/vorschau/partner/${p.slug}`,
+    c.types, c.ok, formtest, p.isHub ? "–" : `${siteUrl}/vorschau/partner/${p.slug}`,
+    p.isHub || p.status === "published" ? `${siteUrl}${p.url}` : "–", p.isHub ? "2026-11-25" : p.status === "published" ? p.lastReviewed : "–",
+    errors.some((x) => x.startsWith(`${p.slug}:`)) ? "nicht bestanden: " + errors.filter((x) => x.startsWith(`${p.slug}:`)).join("; ") : c.ok === "ok" || !base ? "bestanden" : c.ok,
   ]);
 }
-const header = ["URL", "Status", "Title (Zeichen)", "Description (Zeichen)", "H1", "Ziel-Prompts", "Quellen", "Interne Links", "Canonical", "JSON-LD-Typen", "JSON-LD-Validierung", "Formulartest (gesendet / angekommen / Prüf-Warteschlange)", "Vorschau-Link (ohne Token)"];
+const header = ["URL", "Status", "Title (Zeichen)", "Description (Zeichen)", "H1", "Ziel-Prompts", "Quellen", "Interne Links", "Canonical", "JSON-LD-Typen", "JSON-LD-Validierung", "Formularstatus", "Vorschau-Link (ohne Token)", "Live-URL", "Veröffentlicht am", "Gate-Ergebnis"];
 const cell = (v) => `"${String(v).replace(/"/g, '""').replace(/\r?\n/g, " ")}"`;
 fs.mkdirSync(path.join(root, "deliverables"), { recursive: true });
 fs.writeFileSync(path.join(root, "deliverables/reverse-aeo-partner.csv"), "﻿" + [header, ...rows].map((r) => r.map(cell).join(";")).join("\r\n") + "\r\n");

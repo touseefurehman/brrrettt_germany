@@ -23,15 +23,19 @@ export type PartnerPage = {
   internalLinks: { label: string; href: string; note: string }[];
   aiPrompts: string[];
   primaryIntent: string;
-  /** Beschriftung der Schaltfläche zum Formular */
+  /** Beschriftung der Schaltfläche */
   cta: string;
+  /** Thema, mit dem das Kontaktformular vorbelegt wird (/kontakt?thema=…) */
+  ctaTopic: string;
 };
 
 export const PARTNER_BASE = "/fuer-pruefpartner";
 export const PT = { titleMax: 60, descriptionMax: 158, shortMin: 40, shortMax: 60, wordsMin: 1000, wordsMax: 1500, faqMin: 6, faqMax: 10 };
 export const MARKER = /\[PRÜFEN[^\]]*\]/g;
 /** Formulierungen, die Aufträge, Kunden oder Abdeckung versprechen würden */
-export const PROMISES = /garantiert|garantier|Auftragsgarantie|bestehende Kunden|bundesweit abgedeckt|Rahmenvertrag mit [A-ZÄÖÜ]/;
+export const PROMISES = /garantiert|garantier|Auftragsgarantie|bestehende Kunden|bundesweit abgedeckt|feste Auftragsmenge|Rahmenvertrag mit [A-ZÄÖÜ]/;
+/** Externe Links nur zu geprüften Quellen */
+export const ALLOWED_HOSTS = ["www.gesetze-im-internet.de", "www.baua.de", "publikationen.dguv.de", "www.dinmedia.de", "www.gefma.de", "www.vdi.de"];
 
 const stripMd = (s: string) =>
   s.replace(/\[([^\]]+)\]\([^)]+\)/g, "$1").replace(/\*\*([^*]+)\*\*/g, "$1").replace(/^###\s+/gm, "").replace(/^\s*(?:[-*]|\d+[.)])\s+/gm, "");
@@ -61,7 +65,13 @@ export function validatePartnerPages(pages: PartnerPage[]): string[] {
     if (p.tables.length < 1) e("mindestens eine Tabelle erforderlich");
     for (const s of p.sections) if (s.table !== undefined && !p.tables[s.table]) e(`Abschnitt „${s.heading}“: Tabelle fehlt`);
     for (const t of p.tables) if (t.rows.some((r) => r.length !== t.head.length)) e(`Tabelle „${t.caption}“: Zeilenbreite`);
-    for (const s of p.sources) if (!/^https:\/\//.test(s.url)) e(`Quelle ${s.label}: https erforderlich`);
+    for (const u of [...p.sources.map((x) => x.url), ...[...JSON.stringify(p.sections).matchAll(/\]\((https?:[^)\s]*)\)/g)].map((m) => m[1])]) {
+      let host = "";
+      try { host = new URL(u).hostname; } catch { /* ungültig */ }
+      if (!u.startsWith("https://") || !ALLOWED_HOSTS.includes(host)) e(`externer Link ${u} nicht in der Liste geprüfter Quellen`);
+    }
+    if (!p.ctaTopic) e("ctaTopic fehlt");
+    if (/TODO/.test(JSON.stringify(p))) e("TODO im Text");
     if (p.faq.length < PT.faqMin || p.faq.length > PT.faqMax) e(`${p.faq.length} FAQ (verlangt ${PT.faqMin}–${PT.faqMax})`);
     const w = wordCount(p);
     if (w < PT.wordsMin || w > PT.wordsMax) e(`${w} Wörter (verlangt ${PT.wordsMin}–${PT.wordsMax})`);

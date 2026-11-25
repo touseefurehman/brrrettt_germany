@@ -17,6 +17,7 @@ const h1 = "Prüfpartner werden: Zusammenarbeit mit betreibermanager.de für Pr�
 const kurzantwort =
   "betreibermanager.de koordiniert gesetzliche Prüfungen für Betreiber mit mehreren Standorten und sucht dafür qualifizierte Prüfbetriebe als operative Partner, etwa für Elektro, Brandschutz, RLT-Hygiene, Trinkwasser, Türen und Tore oder Regale. Registrierung und Prüfung Ihrer Angaben sind keine Auftragszusage; Konditionen werden jeweils individuell vereinbart.";
 const modified = "2026-11-25";
+const contactHref = `/kontakt?thema=${encodeURIComponent("Prüfpartner – Registrierung")}`;
 
 export const metadata: Metadata = {
   title: { absolute: title },
@@ -31,7 +32,7 @@ const faqs: [string, string][] = [
   ["Wer legt Preise und Konditionen fest?", "Preise und Konditionen werden jeweils individuell vereinbart."],
   ["Ist das dasselbe wie ein Fachpartnerplatz?", "Nein. Fachpartnerplätze sind ein bezahltes Angebot für Sichtbarkeit und unter /fachpartner beschrieben. Die Registrierung als Prüfpartner ist davon unabhängig."],
   ["Welche Nachweise werden verlangt?", "Je nach Gewerk und Prüfaufgabe, zum Beispiel Nachweise zur Qualifikation (etwa Elektrofachkraft bzw. zur Prüfung befähigte Person nach BetrSichV/TRBS 1203), zu Einsatzgebiet und Kapazität."],
-  ["Wann geht das Registrierungsformular online?", "Das Formular wird zusammen mit den Detailseiten freigeschaltet. Bis dahin ist keine Registrierung möglich."],
+  ["Wie registriere ich mich?", "Über das Kontaktformular mit dem Thema „Prüfpartner“. Nennen Sie Gewerke, Einsatzgebiet, Qualifikationen und Kapazität; die Pflichtangabe „Anzahl Standorte“ bezieht sich auf Ihre Betriebsstandorte. Die Registrierung ist keine automatische Freigabe."],
 ];
 
 const trades: [string, string][] = [
@@ -57,9 +58,9 @@ export default function PruefpartnerHub() {
       <PageIntro crumbs={[["Prüfpartner werden", PARTNER_BASE]]} kicker="PRÜFPARTNER" title={h1}>
         <p className="b2b-kurzantwort">{kurzantwort}</p>
         <p>
-          <a href="#registrierung" className="rr-btn">
-            Zur Registrierung
-          </a>
+          <Link href={contactHref} className="rr-btn">
+            Als Prüfpartner registrieren
+          </Link>
         </p>
       </PageIntro>
 
@@ -144,7 +145,17 @@ export default function PruefpartnerHub() {
             <PruefpartnerForm sourcePage={PARTNER_BASE} cta="Als Prüfpartner registrieren" />
           </>
         ) : (
-          <p>Das Registrierungsformular wird zusammen mit den Detailseiten freigeschaltet.</p>
+          <>
+            <p>
+              Die Registrierung läuft über das Kontaktformular, vorbelegt mit dem Thema „Prüfpartner – Registrierung“. Die Registrierung ist
+              keine automatische Freigabe; Konditionen werden jeweils individuell vereinbart.
+            </p>
+            <p>
+              <Link href={contactHref} className="rr-btn">
+                Als Prüfpartner registrieren
+              </Link>
+            </p>
+          </>
         )}
       </section>
 

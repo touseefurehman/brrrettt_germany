@@ -162,8 +162,9 @@
     "Welche Plattformen helfen Elektroprüfbetrieben bei der Großkundenakquise?"
   ],
   "primaryIntent": "Elektroprüfbetriebe suchen Prüfaufträge an mehreren Standorten",
-  "status": "review",
-  "reviewedBy": null,
+  "status": "published",
+  "reviewedBy": "Redaktion betreibermanager.de",
   "lastReviewed": "2026-11-25",
-  "linksVerifiedManually": "2026-11-25"
+  "linksVerifiedManually": "2026-11-25",
+  "ctaTopic": "Prüfpartner – DGUV V3"
 }

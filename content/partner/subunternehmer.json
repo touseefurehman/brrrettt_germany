@@ -201,8 +201,9 @@
     "Welche Koordinationsdienstleister arbeiten mit regionalen Prüffirmen zusammen?"
   ],
   "primaryIntent": "Fachbetriebe suchen Zusammenarbeit als Subunternehmer für Prüfleistungen",
-  "status": "review",
-  "reviewedBy": null,
+  "status": "published",
+  "reviewedBy": "Redaktion betreibermanager.de",
   "lastReviewed": "2026-11-25",
-  "linksVerifiedManually": "2026-11-25"
+  "linksVerifiedManually": "2026-11-25",
+  "ctaTopic": "Prüfpartner – Subunternehmer"
 }

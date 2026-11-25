@@ -10,7 +10,7 @@ for r in rows:
     ws.append([int(c) if c.isdigit() else c for c in r])
 for c in ws[1]:
     c.font = Font(bold=True, color="FFFFFF"); c.fill = PatternFill("solid", fgColor="1F4D3A"); c.alignment = Alignment(wrap_text=True, vertical="top")
-widths = [38, 22, 44, 50, 44, 60, 60, 50, 44, 26, 26, 34, 44]
+widths = [38, 22, 44, 50, 44, 60, 60, 50, 44, 26, 26, 40, 44, 44, 16, 30]
 for i, w in enumerate(widths, 1):
     ws.column_dimensions[ws.cell(1, i).column_letter].width = w
 for row in ws.iter_rows(min_row=2):

@@ -113,7 +113,7 @@ for (const p of pages) {
   if (nums.length) console.log(`  ℹ ${p.slug}: Zahlen zur Durchsicht: ${nums.join(" ")}`);
 
   rows.push([
-    p.h1, p.url, p.zielkunde, p.primaryIntent, p.aiPrompts.join(" | "), p.metaTitle, p.metaDescription, words, p.faq.length,
+    p.h1, p.url, p.zielkunde, p.primaryIntent, p.aiPrompts.join(" | "), p.metaTitle, p.metaDescription, words, p.kurzantwort.trim().split(/\s+/).length, p.faq.length,
     links.join(" | "), p.sources.map((s) => `${s.label} <${s.url}>`).join(" | "),
     `${markerCount(p)}${markerCount(p) ? ": " + openMarkers(p).join(" ") : ""}`,
     schemaErrors.length ? `Fehler: ${schemaErrors.join("; ")}` : "ok",
@@ -127,7 +127,21 @@ for (const e of buildErrors) {
   console.log(`  ✗ ${e}`);
 }
 
-const header = ["Seitentitel", "URL", "Zielkunde", "Kommerzielle Hauptintention", "Verwandte KI-Prompts", "Meta-Title", "Meta-Description", "Wortzahl", "Anzahl FAQ", "Interne Links", "Regulatorische Quellen", "Offene [PRÜFEN]-Marker", "JSON-LD-Validierung", "Kannibalisierungs-Entscheidung", "Status", "Live-URL", "Veröffentlicht am", "Vorschau-Link (ohne Token)"];
+// ---- Verlinkungsmatrix: (a) Objekt-Seite, (b) Schwesterseiten gleicher Objektart, (c) bestehende Infoseite, (d) verwandte neue Seiten ----
+const byUrl = new Map(pages.map((p) => [p.url, p]));
+const mark = (href) => (byUrl.has(href) ? (byUrl.get(href).status === "published" ? `${href} (aktiv)` : `${href} (vorbereitet)`) : href);
+const matrix = pages.map((p) => {
+  const hrefs = [...new Set([...p.internalLinks.map((l) => l.href), ...contentLinks(p)])];
+  const neu = hrefs.filter((h) => h.startsWith("/pruefmanagement/") && h !== p.url);
+  const a = neu.filter((h) => h === `/pruefmanagement/${p.objekt}`);
+  const b = neu.filter((h) => h.startsWith(`/pruefmanagement/${p.objekt}/`));
+  const d = neu.filter((h) => !a.includes(h) && !b.includes(h));
+  const c = hrefs.filter((h) => !h.startsWith("/pruefmanagement/"));
+  return [p.url, a.map(mark).join(", ") || (p.url === `/pruefmanagement/${p.objekt}` ? "(Seite selbst)" : "– (keine Objektseite vorhanden)"), b.map(mark).join(", ") || "–", c.join(", "), d.map(mark).join(", ") || "–"];
+});
+fs.writeFileSync(path.join(root, "deliverables/b2b-linkmatrix.csv"), "\uFEFF" + [["Seite", "(a) Objektseite", "(b) Schwesterseiten", "(c) Bestehende Infoseiten", "(d) Verwandte neue Seiten"], ...matrix].map((r) => r.map((v) => `"${String(v).replace(/"/g, '""')}"`).join(";")).join("\r\n") + "\r\n");
+
+const header = ["Seitentitel", "URL", "Zielkunde", "Kommerzielle Hauptintention", "Verwandte KI-Prompts", "Meta-Title", "Meta-Description", "Wortzahl", "Kurzantwort (Wörter)", "Anzahl FAQ", "Interne Links", "Regulatorische Quellen", "Offene [PRÜFEN]-Marker", "JSON-LD-Validierung", "Kannibalisierungs-Entscheidung", "Status", "Live-URL", "Veröffentlicht am", "Vorschau-Link (ohne Token)"];
 const cell = (v) => `"${String(v).replace(/"/g, '""').replace(/\r?\n/g, " ")}"`;
 const csv = "﻿" + [header, ...rows].map((r) => r.map(cell).join(";")).join("\r\n") + "\r\n";
 fs.mkdirSync(path.join(root, "deliverables"), { recursive: true });

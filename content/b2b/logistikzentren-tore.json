@@ -10,12 +10,12 @@
   "metaTitle": "Torprüfungen für Logistikzentren | betreibermanager.de",
   "metaDescription": "Torprüfungen an Logistikstandorten koordinieren: Sektional-, Schnelllauf- und Rolltore, Verladetechnik, Fristen nach ASR A1.7, Planung im Schichtbetrieb.",
   "h1": "Torprüfungen für Logistikzentren: Tore und Verladetechnik an vielen Standorten koordinieren",
-  "kurzantwort": "Kraftbetätigte Tore in Logistikzentren müssen nach ASR A1.7 bei der Inbetriebnahme und mindestens einmal jährlich von einer sachkundigen Person geprüft werden. Bei vielen Toren, mehreren Standorten und Betrieb rund um die Uhr ist das vor allem eine Planungsaufgabe. betreibermanager.de koordiniert Fristen, Termine und Nachweise; die Prüfung führen qualifizierte externe Fachleute durch.",
+  "kurzantwort": "Kraftbetätigte Tore in Logistikzentren sind nach ASR A1.7 bei der Inbetriebnahme und mindestens einmal jährlich von einer sachkundigen Person zu prüfen. Bei vielen Toren und Betrieb rund um die Uhr ist das vor allem eine Planungsaufgabe. betreibermanager.de koordiniert Fristen, Termine und Nachweise; geprüft wird durch qualifizierte Dritte.",
   "sections": [
     {
       "id": "zielgruppe",
       "heading": "Für wen diese Seite gedacht ist",
-      "content": "Die Seite richtet sich an Betreiber von Logistikzentren und Kontraktlogistiker (3PL) mit mehreren Standorten. Gemeint sind Standortleiter, Technikverantwortliche und zentrale Stellen für Facility Management, die für viele Tore, Rampen und Verladestellen die Prüfpflichten sicherstellen müssen, ohne den Warenumschlag zu stören.\n\nEin Logistikzentrum ist beim Thema Tore ein Sonderfall. Während im Bürogebäude einzelne Tore selten benutzt werden, laufen sie hier in hoher Zyklenzahl und im Schichtbetrieb, werden von Staplern angefahren und sind für den Durchsatz zentral. Ein ausgefallenes Tor kann eine Verladestelle blockieren.\n\nFür die elektrische Prüfung derselben Standorte gibt es die Seite [DGUV V3 Prüfungen für Logistikzentren](/pruefmanagement/logistikzentren/dguv-v3)."
+      "content": "Gemeint sind Standortleiter, Technikverantwortliche und zentrale Stellen für Facility Management von Logistikzentren und Kontraktlogistikern (3PL) mit mehreren Standorten, die für viele Tore, Rampen und Verladestellen die Prüfpflichten sicherstellen müssen, ohne den Warenumschlag zu stören.\n\nEin Logistikzentrum ist beim Thema Tore ein Sonderfall. Während im Bürogebäude einzelne Tore selten benutzt werden, laufen sie hier in hoher Zyklenzahl und im Schichtbetrieb, werden von Staplern angefahren und sind für den Durchsatz zentral. Ein ausgefallenes Tor kann eine Verladestelle blockieren.\n\nFür die elektrische Prüfung derselben Standorte gibt es die Seite [DGUV V3 Prüfungen für Logistikzentren](/pruefmanagement/logistikzentren/dguv-v3)."
     },
     {
       "id": "betreiberpflichten",
@@ -31,12 +31,12 @@
     {
       "id": "regelwerke",
       "heading": "Anwendbare Regelwerke und Normen",
-      "content": "- **ASR A1.7:** Anforderungen an Türen und Tore, Prüfung kraftbetätigter Türen und Tore bei Inbetriebnahme und mindestens einmal jährlich durch eine sachkundige Person.\n- **ArbSchG §§ 3, 5, DGUV Vorschrift 1 § 2:** Pflichten des Arbeitgebers, Gefährdungsbeurteilung.\n- **BetrSichV § 3 und § 14:** Gefährdungsbeurteilung und Prüffristen, Prüfung von Arbeitsmitteln. Zuletzt geändert am 18.12.2025.\n- **DGUV Vorschrift 3 § 5:** elektrische Prüfung von Torantrieben und Steuerungen als Teil der Elektroprüfung.\n- **DIN EN 15635:** Inspektion von Lagereinrichtungen; Regale und Tore teilen sich in Logistikhallen oft Rampenbereiche.\n- **BGB § 823:** Verkehrssicherung.\n- **GEFMA 190 und VDI 3810:** Leitfäden zur Strukturierung der Betreiberpflichten.\n\nDie ASR A1.7 ist über die [UVV-Prüfung](/uvv-pruefung) in den Grundzügen beschrieben. Die Prüfung von Regalen behandelt die Seite [Regalprüfung](/regalpruefung)."
+      "content": "- **ASR A1.7:** Anforderungen an Türen und Tore, Prüfung kraftbetätigter Türen und Tore bei Inbetriebnahme und mindestens einmal jährlich durch eine sachkundige Person.\n- **ArbSchG §§ 3, 5 und DGUV Vorschrift 1 § 2:** Beurteilung der Gefährdungen an Rampen und Toren.\n- **BetrSichV § 3 und § 14:** Gefährdungsbeurteilung und Prüffristen, Prüfung von Arbeitsmitteln. Zuletzt geändert am 18.12.2025.\n- **DGUV Vorschrift 3 § 5:** elektrische Prüfung von Torantrieben und Steuerungen als Teil der Elektroprüfung.\n- **DIN EN 15635:** Inspektion von Lagereinrichtungen; Regale und Tore teilen sich in Logistikhallen oft Rampenbereiche.\n- **BGB § 823:** Verkehrssicherung.\n- **GEFMA 190 und VDI 3810:** Leitfäden zur Strukturierung der Betreiberpflichten.\n\nDie ASR A1.7 ist über die [UVV-Prüfung](/uvv-pruefung) in den Grundzügen beschrieben. Die Prüfung von Regalen behandelt die Seite [Regalprüfung](/regalpruefung)."
     },
     {
       "id": "fristen",
       "heading": "Prüffristen und Verantwortlichkeiten",
-      "content": "**Kraftbetätigte Tore.** Prüfung bei der Inbetriebnahme und danach mindestens einmal jährlich durch eine sachkundige Person (ASR A1.7). Das Intervall ist eine Mindestanforderung; bei hoher Beanspruchung kann die Gefährdungsbeurteilung kürzere Intervalle ergeben.\n\n**Wartung ist nicht Prüfung.** Eine Wartung durch den Hersteller oder eine Fachfirma kann die Prüfung enthalten, ersetzt aber nicht automatisch den dokumentierten Nachweis durch eine sachkundige Person. Beides gehört in den Plan.\n\n**Terminplanung.** Wird innerhalb von zwei Monaten vor dem Fälligkeitstermin geprüft, beginnt die nächste Frist mit dem Fälligkeitstermin (§ 14 Abs. 5 BetrSichV, soweit die Vorschrift für die Prüfung gilt). Das erlaubt es, Torprüfungen in Zeiten mit geringem Umschlag zu legen. Aufzeichnungen dürfen elektronisch geführt werden (§ 14 Abs. 7).\n\n### Zuständigkeiten\n\n- **Standortleitung:** Betreiberpflichten vor Ort, Zugang und Freigabe.\n- **Technik / Instandhaltung:** Wartung, Mängelbeseitigung, Prüftermine.\n- **Zentrales Facility Management:** Standards, Rahmenverträge, Überwachung.\n- **Vermieter:** soweit der Mietvertrag Tore und Verladetechnik ihm zuweist.\n- **Externe Sachkundige:** Prüfung und Bericht.\n- **betreibermanager.de:** Torkataster, Fristen, Terminplanung, Nachverfolgung."
+      "content": "**Kraftbetätigte Tore.** Prüfung bei der Inbetriebnahme und danach mindestens einmal jährlich durch eine sachkundige Person (ASR A1.7). Das Intervall ist eine Mindestanforderung; bei hoher Beanspruchung kann die Gefährdungsbeurteilung kürzere Intervalle ergeben.\n\n**Wartung ist nicht Prüfung.** Eine Wartung durch den Hersteller oder eine Fachfirma kann die Prüfung enthalten, ersetzt aber nicht automatisch den dokumentierten Nachweis durch eine sachkundige Person. Beides gehört in den Plan.\n\n**Terminplanung.** Für die Staffelung der Tore ist § 14 Abs. 5 BetrSichV nützlich, soweit die Vorschrift für die Prüfung gilt: Liegt die Prüfung in den zwei Monaten vor dem Fälligkeitstermin, läuft die nächste Frist ab diesem Termin. Ein Tor kann deshalb in einer umschlagarmen Zeit geprüft werden, ohne den Jahreszyklus zu verschieben. Das Torkataster darf digital geführt werden, denn elektronische Aufzeichnungen sind zulässig (§ 14 Abs. 7).\n\n### Zuständigkeiten\n\n- **Standortleitung:** Betreiberpflichten vor Ort, Zugang und Freigabe.\n- **Technik / Instandhaltung:** Wartung, Mängelbeseitigung, Prüftermine.\n- **Zentrales Facility Management:** einheitlicher Torkatalog, Rahmenverträge für die Sachkundigenprüfung, Überwachung der Standorte.\n- **Vermieter:** soweit der Mietvertrag Tore und Verladetechnik ihm zuweist.\n- **Externe Sachkundige:** Prüfung und Bericht.\n- **betreibermanager.de:** koordiniert Torkataster, Fristen, Zeitfenster je Verladestelle und Mängelverfolgung."
     },
     {
       "id": "standorte",
@@ -46,12 +46,12 @@
     {
       "id": "koordination",
       "heading": "Externe Prüfkoordination durch betreibermanager.de",
-      "content": "### Was betreibermanager.de übernimmt\n\n- Torkataster je Standort aufbauen und Fristen nach ASR A1.7 führen.\n- Prüftermine mit Standortleitung und Verladeplanung abstimmen und gestaffelt terminieren.\n- Qualifizierte externe Sachkundige beauftragen und Berichte einsammeln.\n- Mängel verfolgen und den Stand je Standort und standortübergreifend berichten.\n\n### Was betreibermanager.de nicht übernimmt\n\n- Wir führen keine Prüfungen, Wartungen oder Reparaturen durch.\n- betreibermanager.de ist keine Prüforganisation und keine zugelassene Überwachungsstelle (ZÜS).\n- Die Betreiberverantwortung bleibt beim Betreiber bzw. nach Vertrag bei dem, der sie übernommen hat."
+      "content": "### Was betreibermanager.de übernimmt\n\n- Torkataster je Standort aufbauen und Fristen nach ASR A1.7 führen.\n- Prüftermine mit Standortleitung und Verladeplanung abstimmen und gestaffelt terminieren.\n- Qualifizierte externe Sachkundige beauftragen und Berichte einsammeln.\n- Mängel verfolgen und den Stand je Standort und standortübergreifend berichten.\n\n### Was betreibermanager.de nicht übernimmt\n\n- Wir führen keine Prüfungen selbst durch. Prüfer sind qualifizierte Dritte.\n- betreibermanager.de ist keine Prüforganisation und keine zugelassene Überwachungsstelle (ZÜS).\n- Die Betreiberverantwortung bleibt beim Betreiber; wir ersetzen weder Rechtsberatung noch Gefährdungsbeurteilung.\n- Wartungen und Reparaturen der Tore führen wir nicht durch."
     },
     {
       "id": "kosten",
       "heading": "Kosten und Preisfaktoren",
-      "content": "Die Kosten der Koordination hängen von der Zahl der Standorte und Tore, vom Zustand des vorhandenen Bestandsverzeichnisses und von den Anforderungen an Terminplanung und Berichtswesen ab. Zusätzlicher Aufwand entsteht bei gemieteten Hallen mit unterschiedlicher Vertragslage.\n\nDie Prüfkosten legen die Sachkundigen fest. Sie hängen von der Zahl und Art der Tore, der Zugänglichkeit, der Bündelung je Standort, der Anfahrt und den zulässigen Zeitfenstern ab. Preise nennen wir erst nach einer Bestandsaufnahme."
+      "content": "Die Kosten der Koordination hängen von der Zahl der Standorte und Tore, vom Zustand des vorhandenen Bestandsverzeichnisses und von den Anforderungen an Terminplanung und Berichtswesen ab. Zusätzlicher Aufwand entsteht bei gemieteten Hallen mit unterschiedlicher Vertragslage.\n\nDie Prüfkosten legen die Sachkundigen fest. Sie hängen von der Zahl und Art der Tore, der Zugänglichkeit, der Bündelung je Standort, der Anfahrt und den zulässigen Zeitfenstern ab. Ein Preis für Ihre Standorte setzt eine Bestandsaufnahme der Tore voraus."
     }
   ],
   "tables": [
@@ -209,6 +209,11 @@
       "label": "Externer Betreibermanager",
       "href": "/externer-betreibermanager",
       "note": "Leistungsmodell und Ablauf"
+    },
+    {
+      "label": "Prüfmanagement für Industriestandorte",
+      "href": "/pruefmanagement/industriestandorte",
+      "note": "Tore und Regale in Werkhallen"
     }
   ],
   "internalLinksFromExisting": [

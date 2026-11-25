@@ -161,22 +161,17 @@ export default function B2bPageView({ page, preview = false }: { page: B2bPage; 
         </div>
       )}
 
+      {/* Kurzantwort: eigenständiger Absatz direkt unter der H1 (40–60 Wörter), kein Kasten, nicht eingeklappt */}
       <PageIntro crumbs={crumbs} kicker={`PRÜFMANAGEMENT · ${page.objekt.toUpperCase()}`} title={<Marked text={page.h1} preview={preview} />}>
+        <p className="b2b-kurzantwort">
+          <Marked text={page.kurzantwort} preview={preview} />
+        </p>
         <p>
           <a href="#anfrage" className="rr-btn">
             B2B-Anfrage stellen
           </a>
         </p>
       </PageIntro>
-
-      <section className="section page-width section-tight">
-        <div className="short-answer">
-          <span className="short-answer-label">Kurzantwort</span>
-          <p>
-            <Marked text={page.kurzantwort} preview={preview} />
-          </p>
-        </div>
-      </section>
 
       {page.sections.map((s) => (
         <section key={s.id} id={s.id} className="section page-width section-tight prose">

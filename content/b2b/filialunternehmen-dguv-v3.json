@@ -10,12 +10,12 @@
   "metaTitle": "DGUV V3 Prüfung für Filialunternehmen | betreibermanager.de",
   "metaDescription": "DGUV V3 in Filialnetzen: Geräte- und Anlagenbestand je Filialtyp, Prüfumfang, Fristen und zentrale Koordination über alle Standorte.",
   "h1": "DGUV V3 Prüfungen für Filialunternehmen: Elektroprüfung in vielen Filialen zentral koordinieren",
-  "kurzantwort": "In Filialen umfasst die DGUV V3 Prüfung die ortsfeste Elektroanlage der Filiale und ortsveränderliche Betriebsmittel wie Kassen, Waagen, Küchen- und Reinigungsgeräte. Für ein Filialnetz kommt es auf einen einheitlichen Prüfumfang je Filialtyp, regional gebündelte Termine und zentral auswertbare Protokolle an. betreibermanager.de koordiniert das; die Prüfung führen befähigte externe Fachkräfte aus.",
+  "kurzantwort": "In Filialen umfasst die DGUV V3 Prüfung die Elektroanlage der Filiale und ortsveränderliche Betriebsmittel wie Kassen, Waagen sowie Küchen- und Reinigungsgeräte. Für ein Filialnetz zählen ein einheitlicher Prüfumfang je Filialtyp, regional gebündelte Termine und auswertbare Protokolle. betreibermanager.de koordiniert das; geprüft wird durch befähigte Dritte.",
   "sections": [
     {
       "id": "zielgruppe",
       "heading": "Für wen diese Seite gedacht ist",
-      "content": "Die Seite richtet sich an Handels- und Dienstleistungsketten mit vielen Filialen und dort an das zentrale Facility Management und den Einkauf. Sie setzt die Grundlagen der DGUV V3 voraus und behandelt, was im Filialnetz anders ist: der Geräte- und Anlagenbestand je Filialtyp, die Terminlogistik und die zentrale Auswertung.\n\nDie Grundlagen stehen auf [DGUV V3 Prüfung](/dguv-v3-pruefung), [DGUV V3 Prüfung Kosten](/dguv-v3-pruefung-kosten) und im Bereich [Elektroprüfung DGUV V3](/elektropruefung-dguv-v3). Sie werden hier nicht wiederholt. Das übergeordnete Thema ist das [Prüfmanagement für Filialunternehmen](/pruefmanagement/filialunternehmen)."
+      "content": "Diese Seite ist für Ketten mit vielen Filialen gedacht, in denen zentrales Facility Management und Einkauf die Elektroprüfung steuern. Sie setzt die Grundlagen der DGUV V3 voraus und behandelt, was im Filialnetz anders ist: der Geräte- und Anlagenbestand je Filialtyp, die Terminlogistik und die zentrale Auswertung.\n\nFür Fristen, Prüferqualifikation und Kostenwerte verweist die Seite auf [DGUV V3 Prüfung](/dguv-v3-pruefung), [DGUV V3 Prüfung Kosten](/dguv-v3-pruefung-kosten) und den Bereich [Elektroprüfung DGUV V3](/elektropruefung-dguv-v3). Das übergeordnete Thema ist das [Prüfmanagement für Filialunternehmen](/pruefmanagement/filialunternehmen)."
     },
     {
       "id": "betreiberpflichten",
@@ -31,12 +31,12 @@
     {
       "id": "regelwerke",
       "heading": "Anwendbare Regelwerke und Normen",
-      "content": "- **DGUV Vorschrift 3 § 5** mit den Durchführungsanweisungen: Tabelle 1A für ortsfeste Anlagen, Tabelle 1B für ortsveränderliche Betriebsmittel.\n- **ArbSchG §§ 3, 5, DGUV Vorschrift 1 § 2:** Gefährdungsbeurteilung.\n- **BetrSichV § 3, § 14:** Prüffristen und Prüfung; elektronische Aufzeichnung nach § 14 Abs. 7. Letzte Änderung 18.12.2025.\n- **TRBS 1203:** Anforderungen an befähigte Personen.\n- **ASR A1.7:** kraftbetätigte Türen und Tore, getrennt von der elektrischen Prüfung.\n- **GEFMA 190 und VDI 3810:** Leitfäden zur Strukturierung der Betreiberpflichten.\n\nDer Beitrag [DGUV V3 Prüffristen: Wie oft prüfen?](/wissen/dguv-v3-pruefung-wie-oft) erläutert die Fristen, der Beitrag [Ortsveränderliche Geräte](/wissen/dguv-v3-ortsveraenderliche-geraete) die Prüfung von Geräten im Einzelnen."
+      "content": "- **DGUV Vorschrift 3 § 5** mit den Durchführungsanweisungen: Tabelle 1A für die Elektroanlage der Filiale, Tabelle 1B für Kassen, Küchen- und Reinigungsgeräte und andere ortsveränderliche Betriebsmittel.\n- **ArbSchG §§ 3, 5 und DGUV Vorschrift 1 § 2:** Beurteilung der Gefährdungen durch elektrische Betriebsmittel in der Filiale.\n- **BetrSichV § 3, § 14:** Prüffristen und Prüfung; zentrale digitale Protokolle sind nach § 14 Abs. 7 zulässig. Letzte Änderung 18.12.2025.\n- **TRBS 1203:** Qualifikation der Personen, die die Filialen prüfen.\n- **ASR A1.7:** Automatische Eingangs- und Anlieferungstüren werden getrennt von der Elektroprüfung geprüft.\n- **GEFMA 190 und VDI 3810:** Leitfäden zur Strukturierung der Betreiberpflichten.\n\nZu Fristen und zur Prüfung einzelner Geräte siehe [DGUV V3 Prüffristen: Wie oft prüfen?](/wissen/dguv-v3-pruefung-wie-oft) und [Ortsveränderliche Geräte](/wissen/dguv-v3-ortsveraenderliche-geraete)."
     },
     {
       "id": "fristen",
       "heading": "Prüffristen und Verantwortlichkeiten",
-      "content": "**Ortsfeste Anlagen.** Regelwert 4 Jahre (Tabelle 1A).\n\n**Ortsveränderliche Betriebsmittel.** Regelwert 6 Monate; auf Baustellen 3 Monate (Tabelle 1B). Bei einer Fehlerquote unter 2 % können die Fristen verlängert werden, in Werkstätten und auf Baustellen auf höchstens 1 Jahr, in bürotypischer Umgebung auf höchstens 2 Jahre. Ob Verkaufsraum, Lager oder Sozialbereich einer Filiale wie eine bürotypische Umgebung oder wie eine Werkstatt zu behandeln sind, ist in der Gefährdungsbeurteilung zu begründen [PRÜFEN: Einordnung von Verkaufsräumen, Lagern und Backstationen in die Kategorien der Durchführungsanweisung].\n\n**Zentrale Begründung.** Wer Fristen über das gesamte Filialnetz verlängern will, braucht Daten aus mehreren Prüfzyklen. Ein einheitlicher Protokollaufbau je Filiale und je Filialtyp macht die Fehlerquote belegbar.\n\n**Terminierung.** Wird innerhalb von zwei Monaten vor dem Fälligkeitstermin geprüft, beginnt die nächste Frist mit dem Fälligkeitstermin (§ 14 Abs. 5 BetrSichV, soweit die Vorschrift für die Prüfung gilt).\n\n### Zuständigkeiten\n\n- **Zentrales Facility Management:** Standard-Prüfumfang je Filialtyp, Rahmenverträge, Überwachung.\n- **Einkauf:** Vergabe und Leistungskontrolle.\n- **Filialleiter:** Zugang und Bereitstellung der Geräte.\n- **Vermieter:** soweit der Mietvertrag die ortsfeste Anlage zuweist.\n- **Externe befähigte Fachkräfte:** Prüfung und Protokoll.\n- **betreibermanager.de:** Kataster, Fristen, Termine, Nachverfolgung."
+      "content": "**Ortsfeste Elektroanlage der Filiale.** Tabelle 1A der Durchführungsanweisung nennt als Regelwert 4 Jahre.\n\n**Kassen, Waagen, Küchen- und Reinigungsgeräte.** Der Regelwert nach Tabelle 1B beträgt 6 Monate, auf Baustellen 3 Monate. Eine Fehlerquote unter 2 % ermöglicht Verlängerungen: höchstens 2 Jahre in bürotypischer Umgebung, höchstens 1 Jahr in Werkstätten und auf Baustellen. Ob Verkaufsraum, Lager oder Sozialbereich einer Filiale wie eine bürotypische Umgebung oder wie eine Werkstatt zu behandeln sind, ist in der Gefährdungsbeurteilung zu begründen [PRÜFEN: Einordnung von Verkaufsräumen, Lagern und Backstationen in die Kategorien der Durchführungsanweisung].\n\n**Zentrale Begründung.** Wer Fristen über das gesamte Filialnetz verlängern will, braucht Daten aus mehreren Prüfzyklen. Ein einheitlicher Protokollaufbau je Filiale und je Filialtyp macht die Fehlerquote belegbar.\n\n**Terminierung.** Wo § 14 Abs. 5 BetrSichV anwendbar ist, läuft die nächste Frist ab dem Fälligkeitstermin, wenn innerhalb von zwei Monaten davor geprüft wird. Das erleichtert Regionaltouren vor Ladenöffnung.\n\n### Zuständigkeiten\n\n- **Zentrales Facility Management:** Prüfumfang je Filialtyp und einheitliches Protokollformat.\n- **Einkauf:** Vergabe und Leistungskontrolle.\n- **Filialleiter:** Zugang und Bereitstellung der Geräte.\n- **Vermieter:** soweit der Mietvertrag die ortsfeste Anlage zuweist.\n- **Externe befähigte Fachkräfte:** Prüfung und Protokoll je Filiale.\n- **betreibermanager.de:** koordiniert Prüfumfang, Termine und die Auswertung der Fehlerquoten."
     },
     {
       "id": "standorte",
@@ -46,12 +46,12 @@
     {
       "id": "koordination",
       "heading": "Externe Prüfkoordination durch betreibermanager.de",
-      "content": "### Was betreibermanager.de übernimmt\n\n- Prüfumfang je Filialtyp definieren und das Filialkataster aufbauen.\n- Prüfungen regional bündeln, mit Filialen abstimmen und Termine überwachen.\n- Befähigte externe Fachkräfte beauftragen, Protokolle sammeln und Mängel verfolgen.\n- Fehlerquoten je Filiale und Region auswerten und berichten.\n\n### Was betreibermanager.de nicht übernimmt\n\n- Wir führen keine Prüfungen durch; das tun befähigte externe Fachkräfte.\n- betreibermanager.de ist keine Prüforganisation und keine zugelassene Überwachungsstelle (ZÜS).\n- Die Gefährdungsbeurteilung und die Entscheidung über Fristverlängerungen bleiben beim Unternehmen."
+      "content": "### Was betreibermanager.de übernimmt\n\n- Prüfumfang je Filialtyp definieren und das Filialkataster aufbauen.\n- Prüfungen regional bündeln, mit Filialen abstimmen und Termine überwachen.\n- Fachkräfte für die Filialen beauftragen, Protokolle einsammeln und offene Mängel verfolgen.\n- Fehlerquoten je Filiale und Region auswerten und berichten.\n\n### Was betreibermanager.de nicht übernimmt\n\n- Wir führen keine Prüfungen selbst durch. Prüfer sind qualifizierte Dritte.\n- betreibermanager.de ist keine Prüforganisation und keine zugelassene Überwachungsstelle (ZÜS).\n- Die Betreiberverantwortung bleibt beim Betreiber; wir ersetzen weder Rechtsberatung noch Gefährdungsbeurteilung.\n- Die Entscheidung über Fristverlängerungen bleibt beim Unternehmen."
     },
     {
       "id": "kosten",
       "heading": "Kosten und Preisfaktoren",
-      "content": "Die Kosten der Koordination hängen von der Zahl der Filialen und Filialtypen, vom Aufwand der Erstaufnahme und vom Berichtswesen ab. Für Filialnetze spielen außerdem die Zahl der Vermieter und Schnittstellen eine Rolle.\n\nDie Prüfkosten bestimmen die Prüfer. Sie hängen von der Zahl der Geräte je Filiale, vom Anteil ortsfester Anlagen, von der Anfahrt und von der Bündelung je Region ab. Orientierungswerte aus veröffentlichten Anbieterangaben stehen auf [DGUV V3 Prüfung Kosten](/dguv-v3-pruefung-kosten). Preise für Ihr Filialnetz nennen wir erst nach der Bestandsaufnahme."
+      "content": "Der Aufwand der Koordination richtet sich nach Filialzahl, Zahl der Filialtypen, Erstaufnahme und Berichtswesen. Für Filialnetze spielen außerdem die Zahl der Vermieter und Schnittstellen eine Rolle.\n\nWas die Prüfung je Filiale kostet, bestimmen die Prüfer. Sie hängen von der Zahl der Geräte je Filiale, vom Anteil ortsfester Anlagen, von der Anfahrt und von der Bündelung je Region ab. Orientierungswerte aus veröffentlichten Anbieterangaben stehen auf [DGUV V3 Prüfung Kosten](/dguv-v3-pruefung-kosten). Ein Angebot für Ihre Filialen folgt erst auf die Bestandsaufnahme."
     }
   ],
   "tables": [
@@ -205,6 +205,11 @@
       "label": "Elektroprüfung für Einzelhändler mit mehreren Filialen",
       "href": "/wissen/elektropruefung/welche-elektropruefungen-braucht-ein-einzelhaendler-mit-mehreren-filialen",
       "note": "Kurzantwort zum Einzelhandel"
+    },
+    {
+      "label": "DGUV V3 Prüfungen für Logistikzentren",
+      "href": "/pruefmanagement/logistikzentren/dguv-v3",
+      "note": "Elektroprüfung an Logistikstandorten"
     }
   ],
   "internalLinksFromExisting": [

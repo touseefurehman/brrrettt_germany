@@ -77,6 +77,9 @@ export const THRESHOLDS = {
   publishedWordsMin: 1000,
   wordsMin: 1200,
   wordsMax: 1800,
+  /** Kurzantwort: eigenständiger Absatz direkt unter der H1 */
+  shortAnswerMin: 40,
+  shortAnswerMax: 60,
 };
 
 export const MARKER = /\[PRÜFEN[^\]]*\]/g;
@@ -135,6 +138,8 @@ export function validatePages(pages: B2bPage[]): string[] {
     if (p.slug !== p.url.slice(BASE.length + 1).replace(/\//g, "-")) e("slug muss der URL-Pfad mit „-“ statt „/“ sein");
     if (p.metaTitle.length > THRESHOLDS.titleMax) e(`metaTitle ${p.metaTitle.length} Zeichen (max. ${THRESHOLDS.titleMax})`);
     if (p.metaDescription.length > THRESHOLDS.descriptionMax) e(`metaDescription ${p.metaDescription.length} Zeichen (max. ${THRESHOLDS.descriptionMax})`);
+    const ka = p.kurzantwort.trim().split(/\s+/).length;
+    if (ka < THRESHOLDS.shortAnswerMin || ka > THRESHOLDS.shortAnswerMax) e(`kurzantwort hat ${ka} Wörter (verlangt ${THRESHOLDS.shortAnswerMin}–${THRESHOLDS.shortAnswerMax})`);
     const ids = p.sections.map((s) => s.id).join(",");
     if (ids !== SECTION_ORDER.join(",")) e(`Abschnitte müssen in der Reihenfolge ${SECTION_ORDER.join(", ")} stehen`);
     for (const s of p.sections) {

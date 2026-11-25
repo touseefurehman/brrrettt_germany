@@ -47,6 +47,34 @@ const numberFindings = (p) => {
 };
 const contentLinks = (p) => [...JSON.stringify(p).matchAll(/\]\((\/[^)\s]*)\)/g)].map((m) => m[1].split("#")[0].split("?")[0]);
 
+// Freigegebene Seiten (schriftlich von Henryk). Nur diese dürfen live gehen, und nur wenn das Gate bestanden ist.
+const APPROVED = ["gewerbeimmobilien", "immobilienportfolios", "industriestandorte"];
+const REVIEWED_BY = "Redaktion betreibermanager.de";
+// Linkprüfung der Quellen: `--check-links` (braucht Netzzugang zu gesetze-im-internet.de, baua.de, dguv.de, vdi.de, dinmedia.de, gefma.de)
+const checkLinks = process.argv.includes("--check-links");
+const linkStatus = new Map();
+if (checkLinks) {
+  for (const u of new Set(pages.flatMap((p) => p.sources.map((x) => x.url)))) {
+    try {
+      const r = await fetch(u, { redirect: "follow", signal: AbortSignal.timeout(20000), headers: { "user-agent": "Mozilla/5.0" } });
+      linkStatus.set(u, r.status);
+    } catch {
+      linkStatus.set(u, 0);
+    }
+  }
+}
+/** Gründe, warum eine freigegebene Seite nicht live gehen darf (leer = Gate bestanden) */
+const gateReasons = (p) => {
+  const r = [];
+  if (!APPROVED.includes(p.slug)) return ["nicht freigegeben"];
+  const m = markerCount(p);
+  if (m) r.push(`${m} offene [PRÜFEN]-Marker`);
+  if (p.cannibalization.decision === "bestehende Seite erweitern") r.push("Kannibalisierung: bestehende Seite erweitern");
+  if (!checkLinks) r.push("Quellenlinks nicht per HTTP geprüft (--check-links)");
+  else for (const x of p.sources) if (linkStatus.get(x.url) !== 200) r.push(`Quelle ${x.url}: HTTP ${linkStatus.get(x.url)}`);
+  return r;
+};
+
 const buildErrors = validatePages(pages);
 const rows = [];
 let problems = 0;
@@ -82,7 +110,9 @@ for (const p of pages) {
     links.join(" | "), p.sources.map((s) => `${s.label} <${s.url}>`).join(" | "),
     `${markerCount(p)}${markerCount(p) ? ": " + openMarkers(p).join(" ") : ""}`,
     schemaErrors.length ? `Fehler: ${schemaErrors.join("; ")}` : "ok",
-    `${p.cannibalization.decision} (${p.cannibalization.relatedUrls.join(", ")})`, p.status, `${siteUrl}${previewPath(p)}`,
+    `${p.cannibalization.decision} (${p.cannibalization.relatedUrls.join(", ")})`,
+    p.status === "published" ? "published" : APPROVED.includes(p.slug) ? `blockiert durch Gate: ${gateReasons(p).join("; ")}` : "draft (nicht freigegeben)",
+    p.status === "published" ? `${siteUrl}${p.url}` : "–", p.status === "published" ? p.lastReviewed : "–", `${siteUrl}${previewPath(p)}`,
   ]);
 }
 for (const e of buildErrors) {
@@ -90,7 +120,7 @@ for (const e of buildErrors) {
   console.log(`  ✗ ${e}`);
 }
 
-const header = ["Seitentitel", "URL", "Zielkunde", "Kommerzielle Hauptintention", "Verwandte KI-Prompts", "Meta-Title", "Meta-Description", "Wortzahl", "Anzahl FAQ", "Interne Links", "Regulatorische Quellen", "Offene [PRÜFEN]-Marker", "JSON-LD-Validierung", "Kannibalisierungs-Entscheidung", "Status", "Vorschau-Link (ohne Token)"];
+const header = ["Seitentitel", "URL", "Zielkunde", "Kommerzielle Hauptintention", "Verwandte KI-Prompts", "Meta-Title", "Meta-Description", "Wortzahl", "Anzahl FAQ", "Interne Links", "Regulatorische Quellen", "Offene [PRÜFEN]-Marker", "JSON-LD-Validierung", "Kannibalisierungs-Entscheidung", "Status", "Live-URL", "Veröffentlicht am", "Vorschau-Link (ohne Token)"];
 const cell = (v) => `"${String(v).replace(/"/g, '""').replace(/\r?\n/g, " ")}"`;
 const csv = "﻿" + [header, ...rows].map((r) => r.map(cell).join(";")).join("\r\n") + "\r\n";
 fs.mkdirSync(path.join(root, "deliverables"), { recursive: true });

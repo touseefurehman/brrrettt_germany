@@ -48,11 +48,6 @@ export default async function AreaPage({ params }: Props) {
     <>
       <JsonLd data={serviceSchema(area.serviceType, area.description, path, area.name)} />
       {modified && <JsonLd data={webPageSchema(path, area.h1, modified)} />}
-      {area.todoRedaktion?.length ? (
-        <div hidden data-todo-redaktion>
-          {`TODO-Redaktion: ${area.todoRedaktion.join(" | ")}`}
-        </div>
-      ) : null}
       <PageIntro crumbs={[["Prüfbereiche", "/#pruefbereiche"], [area.name, path]]} kicker="PRÜFBEREICH" title={area.h1}>
         {area.intro.map((p) => (
           <p key={p.slice(0, 40)}>{p}</p>

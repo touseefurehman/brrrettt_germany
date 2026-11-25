@@ -158,6 +158,9 @@ export default function Fachpartner() {
             KI-Report ansehen
           </Link>
         </p>
+        <p className="muted-note">
+          Sie suchen Prüfaufträge statt Sichtbarkeit? → <Link href="/fuer-pruefpartner">Prüfpartner werden</Link>
+        </p>
       </PageIntro>
 
       <section className="section page-width section-tight">

@@ -16,10 +16,10 @@ export type Json = Record<string, unknown>;
 
 // ---- Hilfen -----------------------------------------------------------------------------------------------------
 
-const str = (v: unknown, max: number) => (typeof v === "string" ? v.replace(/\r/g, "").trim().slice(0, max) : "");
+export const str = (v: unknown, max: number) => (typeof v === "string" ? v.replace(/\r/g, "").trim().slice(0, max) : "");
 /** Einzeiliger Text für Betreff und Header – kein Zeilenumbruch, damit keine Header eingeschleust werden */
-const oneLine = (v: string) => v.replace(/[\r\n]+/g, " ").trim();
-const EMAIL_RE = /^[^\s@<>()"]+@[^\s@<>()"]+\.[A-Za-z]{2,}$/;
+export const oneLine = (v: string) => v.replace(/[\r\n]+/g, " ").trim();
+export const EMAIL_RE = /^[^\s@<>()"]+@[^\s@<>()"]+\.[A-Za-z]{2,}$/;
 const MIN_FILL_MS = 3000;
 
 export type Result = { ok: true; dry?: boolean; silent?: boolean; mail?: Web3FormsPayload } | { ok: false; status: number; message: string };
@@ -52,7 +52,7 @@ const memoryHits = new Map<string, { count: number; reset: number }>();
 const WINDOW_SEC = 3600;
 
 /** true, wenn die Anfrage durchgelassen wird. Erst Redis (über Instanzen hinweg), sonst Speicher dieser Instanz. */
-async function allow(bucket: string, ip: string, limit: number): Promise<boolean> {
+export async function allow(bucket: string, ip: string, limit: number): Promise<boolean> {
   const key = `rankrent:rl:${bucket}:${createHash("sha256").update(ip).digest("hex").slice(0, 24)}`;
   const res = await kv([["INCR", key], ["EXPIRE", key, WINDOW_SEC, "NX"]]);
   if (res && typeof res[0]?.result === "number") return res[0].result <= limit;

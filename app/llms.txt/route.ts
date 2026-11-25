@@ -1,6 +1,7 @@
 import { clusterPath, publishedClusters } from "@/lib/clusters";
 import { measurementFor } from "@/lib/measurement";
 import { b2bPublished } from "@/lib/b2b";
+import { partnerPublished } from "@/lib/partner";
 import { audiences, externerBetreibermanager } from "@/lib/leistungen";
 import { leistungsseiten } from "@/lib/leistungsseiten";
 import { fullCompanyName, isSet, site } from "@/lib/site";
@@ -66,6 +67,11 @@ export function GET() {
     ...(b2bPublished.length > 0
       ? ["## Prüfmanagement für Unternehmen", "", ...b2bPublished.map((p) => link(p.h1, p.url, p.kurzantwort)), ""]
       : []),
+    "## Prüfpartner (operative Zusammenarbeit)",
+    "",
+    link("Prüfpartner werden", "/fuer-pruefpartner", "Zusammenarbeit mit qualifizierten Prüfbetrieben: Registrierung und Prüfung der Angaben, keine Auftragszusage; getrennt vom bezahlten Fachpartner-Programm."),
+    ...partnerPublished.map((p) => link(p.h1, p.url, p.kurzantwort)),
+    "",
     "## Wissen",
     "",
     link("Wissen", "/wissen", "Fachartikel zu Prüffristen, Prüferqualifikation, Haftung und Organisation von Betreiberpflichten."),

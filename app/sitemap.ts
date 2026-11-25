@@ -11,6 +11,7 @@ import {
   RELEASE_DATE,
 } from "@/lib/elektropruefung";
 import { b2bPublished } from "@/lib/b2b";
+import { partnerPublished } from "@/lib/partner";
 import { audiences } from "@/lib/leistungen";
 import {
   BASE_PATH as RR_BASE,
@@ -73,6 +74,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // B2B-Landingpages: nur veröffentlichte (Entwürfe und „review“ nie)
     ...b2bPublished.map((p): [string, number, string] => [p.url, 0.7, p.lastReviewed]),
     [PARTNER_PAGE_PATH, 0.7, "2026-11-20"],
+    // Prüfpartner-Hub (operative Zusammenarbeit) und veröffentlichte Unterseiten (Entwürfe nie)
+    ["/fuer-pruefpartner", 0.7, "2026-11-25"],
+    ...partnerPublished.map((p): [string, number, string] => [p.url, 0.6, p.lastReviewed]),
     [SPONSORING_PATH, 0.6, "2026-11-20"],
     // Fachpartner-Seiten je veröffentlichtem Cluster (/befund und /admin bewusst nicht enthalten)
     ...publishedClusters.map((c): [string, number, string] => [

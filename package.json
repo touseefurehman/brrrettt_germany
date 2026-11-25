@@ -14,7 +14,9 @@
     "measure:cluster": "node tools/report-engine/measure.mjs",
     "measure:all": "node tools/report-engine/measure.mjs --all",
     "b2b:report": "node --experimental-strip-types --no-warnings scripts/b2b-report.mjs",
-    "b2b:xlsx": "python3 scripts/b2b-csv-to-xlsx.py"
+    "b2b:xlsx": "python3 scripts/b2b-csv-to-xlsx.py",
+    "partner:report": "node --experimental-strip-types --no-warnings scripts/partner-report.mjs",
+    "partner:xlsx": "python3 scripts/partner-csv-to-xlsx.py"
   },
   "dependencies": {
     "next": "15.5.27",

@@ -1,3 +1,5 @@
+import PartnerPrivacySection from "@/components/partners/PartnerPrivacySection";
+import { partnerFormLive } from "@/lib/partner";
 import type { Metadata } from "next";
 import { PageIntro } from "@/components/Subpage";
 import { hasAnalytics } from "@/lib/analytics";
@@ -91,6 +93,8 @@ export default function DatenschutzPage() {
           zuverlässigen Zustellung Ihrer Anfrage. Ihre Daten werden gelöscht, sobald die Anfrage abschließend bearbeitet ist und keine gesetzlichen
           Aufbewahrungspflichten entgegenstehen.
         </p>
+
+        {partnerFormLive && <PartnerPrivacySection />}
 
         <h2>3a. Nullmessung, Befundseite und E-Mail-Folge</h2>
         <p>

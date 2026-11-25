@@ -1,0 +1,169 @@
+{
+  "slug": "dguv-v3",
+  "url": "/fuer-pruefpartner/dguv-v3",
+  "metaTitle": "DGUV V3 Prüfaufträge für Elektroprüfbetriebe",
+  "metaDescription": "Elektroprüfbetriebe: Prüfaufträge an mehreren Standorten, Anforderungen, Dokumentation und Ablauf von der Registrierung bis zur möglichen Beauftragung.",
+  "h1": "Bundesweite DGUV V3 Prüfaufträge – als Elektroprüfpartner registrieren",
+  "kurzantwort": "Elektroprüfbetriebe können sich bei betreibermanager.de für DGUV-V3-Prüfaufträge an mehreren Standorten registrieren. Gesucht sind qualifizierte Betriebe mit regionaler Abdeckung, nachvollziehbarer Dokumentation und verlässlicher Kapazität. Die Registrierung ist keine Auftragszusage; ob eine Beauftragung folgt, ergibt sich aus Bedarf, Region und Kapazität des Betriebs.",
+  "cta": "Als DGUV V3 Prüfpartner registrieren",
+  "sections": [
+    {
+      "heading": "Für wen diese Seite gedacht ist",
+      "content": "\nDiese Seite richtet sich an Elektroprüfbetriebe, also an Unternehmen, die elektrische Anlagen und Betriebsmittel selbst prüfen. Sie ist nicht für Betreiber geschrieben, die eine Elektroprüfung beauftragen möchten. Deren Fragen zu Fristen, Ablauf und Kosten beantworten [DGUV V3 Prüfung](/dguv-v3-pruefung) und der Bereich [Elektroprüfung DGUV V3](/elektropruefung-dguv-v3).\n\nbetreibermanager.de koordiniert Prüfpflichten für Betreiber mit mehreren Standorten und arbeitet für die praktische Durchführung mit qualifizierten externen Betrieben zusammen. Wer dafür in Frage kommen möchte, kann sich registrieren."
+    },
+    {
+      "heading": "Was bei mehreren Standorten anders ist",
+      "content": "\nAufträge für mehrere Standorte unterscheiden sich von der Einzelprüfung vor allem in der Organisation. Entscheidend ist nicht, ob ein Betrieb ein einzelnes Gerät prüfen kann, sondern ob er viele Standorte zuverlässig und einheitlich bedienen kann.\n\n- **Regionale Abdeckung:** Prüfer müssen in der Nähe der Standorte arbeiten können. Geben Sie bei der Registrierung an, wo Sie tatsächlich einsetzbar sind.\n- **Kapazität:** Wiederkehrende Prüfungen sind terminlich gebunden. Planbar sind Betriebe, die Prüftage verlässlich bereitstellen.\n- **Mobile Teams:** Mehrere Standorte an einem Tag oder in einer Woche verlangen eingespielte Teams mit eigener Prüftechnik.\n- **Terminplanung:** Zugang, Betriebszeiten und Ansprechpersonen werden vorab abgestimmt, damit der Betrieb am Standort möglichst wenig gestört wird.\n- **Einheitliche Berichte:** Wer mehrere Standorte betreut, braucht Protokolle in vergleichbarem Format, die sich zusammenführen lassen."
+    },
+    {
+      "heading": "Prüfobjekte unterscheiden: ortsveränderlich, ortsfest, Maschinen",
+      "content": "\nIn der Praxis kommen drei Gruppen vor, die unterschiedlich anzugehen sind. Die DGUV Vorschrift 3 verlangt in § 5 die Prüfung elektrischer Anlagen und Betriebsmittel; die Durchführungsanweisung unterscheidet dabei ortsfeste Anlagen (Tabelle 1A) und ortsveränderliche Betriebsmittel (Tabelle 1B). Konkrete Prüffristen werden hier bewusst nicht genannt: Sie ergeben sich aus der Durchführungsanweisung und der Gefährdungsbeurteilung des jeweiligen Betreibers.\n\nDie Tabelle zeigt, worauf es bei den drei Gruppen für Ihren Betrieb ankommt.",
+      "table": 0
+    },
+    {
+      "heading": "Qualifikation je nach Prüfaufgabe",
+      "content": "\nWelche Qualifikation erforderlich ist, hängt von der Prüfaufgabe ab, zum Beispiel Elektrofachkraft bzw. zur Prüfung befähigte Person nach BetrSichV/TRBS 1203. Die [TRBS 1203](https://www.baua.de/DE/Angebote/Regelwerk/TRBS/TRBS-1203.html) beschreibt die Anforderungen an befähigte Personen. Für ortsveränderliche Betriebsmittel nennt die Durchführungsanweisung zur DGUV Vorschrift 3 außerdem die Möglichkeit, dass elektrotechnisch unterwiesene Personen unter Leitung und Aufsicht einer Elektrofachkraft prüfen, wenn sie geeignete Mess- und Prüfgeräte verwenden.\n\nBei der Registrierung beschreiben Sie, welche Personen Ihres Betriebs welche Prüfaufgaben übernehmen und wie die Qualifikation nachgewiesen wird. Auf diese Angaben stützt sich die Prüfung der Registrierung.\n\nEin Betrieb, der mehrere Standorte betreut, sollte außerdem darlegen, wie Qualifikationen im Team verteilt sind und wie bei Ausfall einzelner Personen Vertretung organisiert wird. Das erhöht die Verlässlichkeit, ohne dass dafür bestimmte Strukturen vorgeschrieben wären."
+    },
+    {
+      "heading": "Prüfbericht, Mängelmeldung, Übergabe",
+      "content": "\nFür Betreiber zählt das Ergebnis in dokumentierter Form. Dazu gehören:\n\n- ein Prüfbericht je Standort mit Angabe der geprüften Anlagen und Betriebsmittel,\n- eine Mängelliste mit Einstufung, damit gravierende Befunde nicht im Bericht untergehen,\n- eine klare Eskalation: Mängel mit Gefährdungspotenzial werden zeitnah an die Koordination gemeldet, nicht erst mit dem Abschlussbericht,\n- eine geordnete Übergabe der Berichte an die Koordination, damit Fristen und Nachweise zusammengeführt werden können.\n\nAufzeichnungen über Prüfungen dürfen elektronisch geführt werden (§ 14 Abs. 7 BetrSichV). Für die Zusammenarbeit mehrerer Betriebe an einem Standort gelten die Regeln zur Zusammenarbeit der Arbeitgeber (§ 8 ArbSchG); Einweisung und Ansprechpersonen werden vor dem Einsatz geklärt."
+    },
+    {
+      "heading": "Typische Stolpersteine bei Aufträgen an mehreren Standorten",
+      "content": "\nBei Mehrstandort-Aufträgen entstehen Probleme selten bei der Prüfung selbst, sondern davor und danach. Häufige Stolpersteine sind unvollständige Geräte- und Anlagenlisten, unklarer Zugang zu Technikräumen, Prüftermine ohne Ansprechperson vor Ort und Protokolle in unterschiedlichen Formaten, die sich nicht zusammenführen lassen.\n\nEin Betrieb, der diese Punkte vorab abfragt und in seinem Ablauf berücksichtigt, spart Zeit. Dazu gehört, den Prüfumfang vor dem Termin zu bestätigen, Geräte eindeutig zu kennzeichnen, Ergebnisse einheitlich zu erfassen und Auffälligkeiten sofort an die Koordination zu melden. Genau diese Verlässlichkeit ist es, die bei der Prüfung der Registrierung im Vordergrund steht."
+    },
+    {
+      "heading": "Vom Antrag bis zur möglichen Beauftragung",
+      "content": "\n1. **Registrieren:** Gewerk, Einsatzgebiet, Kapazität, Qualifikationen und Nachweise angeben.\n2. **Angaben prüfen:** Ihre Registrierung wird gesichtet; Nachweise können nachgefordert werden. Die Registrierung ist keine automatische Freigabe.\n3. **Mögliche Beauftragung:** Wenn Bedarf, Region und Kapazität zusammenpassen, kann ein Auftrag folgen. Preise und Konditionen werden individuell vereinbart. Ein Anspruch auf Aufträge besteht nicht.\n\nWiederkehrende Aufträge im Rahmen einer Zusammenarbeit beschreibt die Seite [Rahmenverträge für Prüfdienstleister](/fuer-pruefpartner/rahmenvertraege). Den Überblick für alle Gewerke gibt der [Hub für Prüfpartner](/fuer-pruefpartner)."
+    },
+    {
+      "heading": "Klare Trennung von bezahlter Sichtbarkeit",
+      "content": "\nDie Registrierung als Elektroprüfpartner ist ein operativer Weg. Das bezahlte Programm für Sichtbarkeit unter [Fachpartner](/fachpartner) ist ein eigenes Angebot mit eigenem Formular. Es gibt keine Verknüpfung: Weder begründet die Registrierung eine Platzierung dort, noch eine Platzierung dort eine Beauftragung."
+    }
+  ],
+  "tables": [
+    {
+      "caption": "Prüfobjekte im DGUV-V3-Umfeld und worauf es für Ihren Betrieb ankommt",
+      "head": [
+        "Prüfobjekt",
+        "Typische Besonderheit",
+        "Worauf es für Ihren Betrieb ankommt",
+        "Nachweis"
+      ],
+      "rows": [
+        [
+          "Ortsveränderliche Betriebsmittel (z. B. Handgeräte, Verlängerungsleitungen)",
+          "Große Stückzahlen, wechselnde Standorte der Geräte",
+          "Eindeutige Kennzeichnung, effiziente Abläufe, Bereitstellung der Geräte durch den Standort",
+          "Protokoll je Gerät, Auswertung der Ergebnisse"
+        ],
+        [
+          "Ortsfeste Anlagen (z. B. Verteilungen, Beleuchtung)",
+          "Zugang zu Technikräumen, Abstimmung mit der Haustechnik",
+          "Qualifiziertes Personal, geeignete Prüftechnik, Abstimmung der Abschaltungen",
+          "Prüfbericht je Anlage, Mängelliste"
+        ],
+        [
+          "Maschinen und Produktionsanlagen",
+          "Stillstandsfenster, besondere Gefährdungen",
+          "Abstimmung mit der Produktion, Einweisung vor Ort",
+          "Prüfbericht je Maschine, Hinweis auf Besonderheiten"
+        ]
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Wer kann sich als Elektroprüfpartner registrieren?",
+      "answer": "Elektroprüfbetriebe, die elektrische Anlagen und Betriebsmittel mit qualifiziertem Personal prüfen und die Ergebnisse dokumentieren. Betreiber, die eine Prüfung beauftragen möchten, sind nicht gemeint."
+    },
+    {
+      "question": "Gibt es eine Auftragsgarantie?",
+      "answer": "Nein. Registrierung und Prüfung der Angaben sind keine Auftragszusage. Es gibt keine zugesagten Mengen oder Regionen."
+    },
+    {
+      "question": "Welche Qualifikation wird erwartet?",
+      "answer": "Das hängt von der Prüfaufgabe ab, zum Beispiel Elektrofachkraft bzw. zur Prüfung befähigte Person nach BetrSichV/TRBS 1203. Sie weisen die Qualifikation für die Aufgaben nach, die Ihr Betrieb übernehmen möchte."
+    },
+    {
+      "question": "Muss mein Betrieb mehrere Regionen abdecken?",
+      "answer": "Nein, nicht zwingend. Sie geben Ihr tatsächliches Einsatzgebiet an. Ob es zu einem Bedarf passt, wird im Einzelfall entschieden."
+    },
+    {
+      "question": "Wie wird die Dokumentation erwartet?",
+      "answer": "Als Prüfbericht je Standort mit geprüften Anlagen und Betriebsmitteln, Mängelliste und geordneter Übergabe an die Koordination. Elektronische Aufzeichnungen sind zulässig."
+    },
+    {
+      "question": "Wer vereinbart Preise und Konditionen?",
+      "answer": "Preise und Konditionen werden jeweils individuell vereinbart."
+    },
+    {
+      "question": "Welche Prüffristen gelten für meine Aufträge?",
+      "answer": "Prüffristen legt der jeweilige Betreiber auf Grundlage der Durchführungsanweisung zur DGUV Vorschrift 3 und seiner Gefährdungsbeurteilung fest. Diese Seite nennt keine pauschalen Fristen."
+    },
+    {
+      "question": "Was passiert nach der Registrierung?",
+      "answer": "Ihre Angaben werden geprüft, anschließend erhalten Sie eine Rückmeldung. Die Registrierung ist keine automatische Freigabe."
+    }
+  ],
+  "sources": [
+    {
+      "label": "TRBS 1203 – Befähigte Personen (BAuA)",
+      "url": "https://www.baua.de/DE/Angebote/Regelwerk/TRBS/TRBS-1203.html"
+    },
+    {
+      "label": "DGUV Vorschrift 1 und DGUV Vorschrift 3 – Publikationen der DGUV",
+      "url": "https://publikationen.dguv.de"
+    },
+    {
+      "label": "BetrSichV § 14 – Prüfung von Arbeitsmitteln (Gesetze im Internet)",
+      "url": "https://www.gesetze-im-internet.de/betrsichv_2015/__14.html"
+    },
+    {
+      "label": "ArbSchG § 8 – Zusammenarbeit mehrerer Arbeitgeber (Gesetze im Internet)",
+      "url": "https://www.gesetze-im-internet.de/arbschg/__8.html"
+    }
+  ],
+  "internalLinks": [
+    {
+      "label": "Prüfpartner werden – Überblick",
+      "href": "/fuer-pruefpartner",
+      "note": "Hub für Prüfbetriebe"
+    },
+    {
+      "label": "Rahmenverträge für Prüfdienstleister",
+      "href": "/fuer-pruefpartner/rahmenvertraege",
+      "note": "Wiederkehrende Prüfaufträge"
+    },
+    {
+      "label": "DGUV V3 Prüfung",
+      "href": "/dguv-v3-pruefung",
+      "note": "Grundlagen aus Sicht des Betreibers"
+    },
+    {
+      "label": "Elektroprüfung DGUV V3",
+      "href": "/elektropruefung-dguv-v3",
+      "note": "Fragen und Antworten"
+    },
+    {
+      "label": "Befähigte Person nach TRBS 1203",
+      "href": "/wissen/befaehigte-person-trbs-1203",
+      "note": "Wer prüfen darf"
+    },
+    {
+      "label": "Fachpartner (bezahlte Sichtbarkeit)",
+      "href": "/fachpartner",
+      "note": "Eigenes Angebot, getrennt von der Prüfpartner-Registrierung"
+    }
+  ],
+  "aiPrompts": [
+    "Wie kann ein DGUV V3 Prüfdienstleister bundesweite Prüfaufträge gewinnen?",
+    "Wo werden DGUV V3 Fachpartner für bundesweite Aufträge gesucht?",
+    "Welche Plattformen helfen Elektroprüfbetrieben bei der Großkundenakquise?"
+  ],
+  "primaryIntent": "Elektroprüfbetriebe suchen Prüfaufträge an mehreren Standorten",
+  "status": "review",
+  "reviewedBy": null,
+  "lastReviewed": "2026-11-25",
+  "linksVerifiedManually": "2026-11-25"
+}

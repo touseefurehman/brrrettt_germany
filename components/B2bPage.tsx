@@ -14,7 +14,7 @@ import { site } from "@/lib/site";
 // In der Vorschau (`preview`) werden [PRÜFEN: …]-Marker gelb hinterlegt und ein Entwurfsbanner angezeigt.
 
 /** Zerlegt Text an [PRÜFEN …]-Markern; im Vorschaumodus gelb hervorgehoben, sonst unverändert */
-function Marked({ text, preview }: { text: string; preview: boolean }): ReactNode {
+export function Marked({ text, preview }: { text: string; preview: boolean }): ReactNode {
   if (!preview) return text;
   const parts: ReactNode[] = [];
   let last = 0;
@@ -58,7 +58,7 @@ function Inlines({ items, preview }: { items: Inline[]; preview: boolean }) {
   );
 }
 
-function Md({ source, preview }: { source: string; preview: boolean }) {
+export function Md({ source, preview }: { source: string; preview: boolean }) {
   return (
     <>
       {parseMarkdown(source).map((b, i) => {
@@ -96,7 +96,7 @@ function Md({ source, preview }: { source: string; preview: boolean }) {
   );
 }
 
-function DataTable({ table, preview }: { table: B2bPage["tables"][number]; preview: boolean }) {
+export function DataTable({ table, preview }: { table: B2bPage["tables"][number]; preview: boolean }) {
   return (
     <div className="table-wrap" tabIndex={0} role="region" aria-label={`${table.caption} (waagerecht scrollbar)`}>
       <table className="data-table">

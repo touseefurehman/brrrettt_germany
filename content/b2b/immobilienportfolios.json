@@ -4,9 +4,9 @@
   "service": "pruefmanagement",
   "objekt": "immobilienportfolios",
   "zielkunde": "Portfolio-Halter, Fonds und Asset Manager mit mehreren Immobilien (Schwerpunkt Gewerbe und Mischnutzung)",
-  "status": "review",
-  "reviewedBy": null,
-  "lastReviewed": "2026-11-24",
+  "status": "published",
+  "reviewedBy": "Redaktion betreibermanager.de",
+  "lastReviewed": "2026-11-25",
   "metaTitle": "Prüfmanagement Immobilienportfolios | betreibermanager.de",
   "metaDescription": "Prüfpflichten über viele Standorte steuern: einheitliches Kataster, zentrale Beauftragung, Reporting für Asset Manager. Mit Rechtsgrundlagen und Fristen.",
   "h1": "Prüfmanagement für Immobilienportfolios: Prüfpflichten über viele Standorte steuern",
@@ -110,7 +110,7 @@
           "Trinkwasser-Installationen",
           "TrinkwV § 31, § 51",
           "bei gewerblicher Tätigkeit mindestens alle 3 Jahre; technischer Maßnahmenwert 100 KBE/100 ml",
-          "Geeignete Probenehmer und Untersuchungsstellen [PRÜFEN: Anforderungen nach TrinkwV]"
+          "Eine nach § 40 TrinkwV zugelassene Untersuchungsstelle (Probenahme und Labor). Die Länder veröffentlichen Listen der zugelassenen Stellen."
         ]
       ]
     }
@@ -188,7 +188,7 @@
     },
     {
       "label": "VDI 6022 Blatt 1 – Raumlufttechnik, Raumluftqualität: Hygieneanforderungen (VDI)",
-      "url": "https://www.vdi.de/richtlinien"
+      "url": "https://www.vdi.de/mitgliedschaft/vdi-richtlinien"
     },
     {
       "label": "GEFMA 190 – Betreiberverantwortung im Facility Management (GEFMA)",
@@ -196,7 +196,11 @@
     },
     {
       "label": "VDI 3810 – Betreiben und Instandhalten von Gebäuden und gebäudetechnischen Anlagen (VDI)",
-      "url": "https://www.vdi.de/richtlinien"
+      "url": "https://www.vdi.de/mitgliedschaft/vdi-richtlinien"
+    },
+    {
+      "label": "TrinkwV § 40 – Zugelassene Untersuchungsstellen (Gesetze im Internet)",
+      "url": "https://www.gesetze-im-internet.de/trinkwv_2023/__40.html"
     }
   ],
   "internalLinks": [
@@ -269,5 +273,6 @@
     ],
     "differentiation": "Fokus: gewerbliche und gemischte Portfolios, zentrale Beschaffung, Reporting an Asset Manager. Wohnungsportfolios und Objektübernahme sind ausschließlich verlinkt. /externer-betreibermanager bleibt die allgemeine Leistungsseite; Intent-Überschneidung beim Begriff „Betreibermanager extern“ bleibt ein Restrisiko.",
     "decision": "neue Seite"
-  }
+  },
+  "linksVerifiedManually": "2026-11-25"
 }

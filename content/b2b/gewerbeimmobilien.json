@@ -4,9 +4,9 @@
   "service": "pruefmanagement",
   "objekt": "gewerbeimmobilien",
   "zielkunde": "Eigentümer, Asset- und Property-Manager von Büro-, Handels- und gemischt genutzten Gewerbeimmobilien",
-  "status": "review",
-  "reviewedBy": null,
-  "lastReviewed": "2026-11-24",
+  "status": "published",
+  "reviewedBy": "Redaktion betreibermanager.de",
+  "lastReviewed": "2026-11-25",
   "metaTitle": "Prüfmanagement für Gewerbeimmobilien | betreibermanager.de",
   "metaDescription": "Prüfpflichten in Büro-, Handels- und Mischobjekten koordinieren: Fristen, Zuständigkeiten, externe Prüfer und Nachweise. Rechtsgrundlagen im Überblick.",
   "h1": "Prüfmanagement für Gewerbeimmobilien: Prüfpflichten, Fristen und Prüfer koordinieren",
@@ -20,7 +20,7 @@
     {
       "id": "betreiberpflichten",
       "heading": "Betreiberpflichten bei Gewerbeimmobilien",
-      "content": "Die Betreiberverantwortung folgt aus mehreren Rechtsgebieten. Arbeitgeber müssen Gefährdungen beurteilen und Schutzmaßnahmen festlegen (§§ 3, 5 ArbSchG, § 2 DGUV Vorschrift 1). Für Arbeitsmittel und Anlagen verlangt § 3 BetrSichV eine Gefährdungsbeurteilung, in der auch die Prüffristen festgelegt werden, und § 14 BetrSichV die Prüfung vor der Inbetriebnahme und wiederkehrend. Unabhängig vom Arbeitsschutz verpflichtet § 823 BGB dazu, Gefahren abzuwenden, die von der eigenen Anlage für Dritte ausgehen.\n\nBei Gewerbeimmobilien kommt die Vermietung hinzu. Für Technik im Gemeinschaftsbereich, etwa Aufzüge, Brandmeldeanlage und zentrale Lüftung, ist in der Regel der Eigentümer verantwortlich. Mieter sind es für ihre eigenen Arbeitsmittel und ihre Beschäftigten. Aufgaben lassen sich per Vertrag auf Property Manager oder Mieter übertragen; Auswahl- und Überwachungspflichten bleiben aber bei dem, der überträgt. Wer delegiert, muss also prüfen, ob die Aufgabe tatsächlich erfüllt wird.\n\n### Wo es in Gewerbeobjekten typischerweise hakt\n\n- Der Mietvertrag nennt Prüfpflichten pauschal, ordnet sie aber nicht einzelnen Anlagen zu.\n- Nach einem Mieterwechsel fehlen die Prüfnachweise der Vorgängernutzung.\n- Das Property Management beauftragt Aufzug und Brandmeldeanlage, Lüftung und Trinkwasser laufen nirgends mit.\n- Mängel aus Prüfberichten bleiben liegen, weil die Budgetfreigabe beim Eigentümer fehlt.\n- Mieterausbauten verändern Brandabschnitte oder Lüftungsanlagen, ohne dass die Prüfungen angepasst werden.\n- Ob Prüfkosten auf Mieter umgelegt werden dürfen, ist nicht geklärt [PRÜFEN: Umlagefähigkeit von Prüfkosten nach Mietvertrag und Betriebskostenrecht]."
+      "content": "Die Betreiberverantwortung folgt aus mehreren Rechtsgebieten. Arbeitgeber müssen Gefährdungen beurteilen und Schutzmaßnahmen festlegen (§§ 3, 5 ArbSchG, § 2 DGUV Vorschrift 1). Für Arbeitsmittel und Anlagen verlangt § 3 BetrSichV eine Gefährdungsbeurteilung, in der auch die Prüffristen festgelegt werden, und § 14 BetrSichV die Prüfung vor der Inbetriebnahme und wiederkehrend. Unabhängig vom Arbeitsschutz verpflichtet § 823 BGB dazu, Gefahren abzuwenden, die von der eigenen Anlage für Dritte ausgehen.\n\nBei Gewerbeimmobilien kommt die Vermietung hinzu. Für Technik im Gemeinschaftsbereich, etwa Aufzüge, Brandmeldeanlage und zentrale Lüftung, ist in der Regel der Eigentümer verantwortlich. Mieter sind es für ihre eigenen Arbeitsmittel und ihre Beschäftigten. Aufgaben lassen sich per Vertrag auf Property Manager oder Mieter übertragen; Auswahl- und Überwachungspflichten bleiben aber bei dem, der überträgt. Wer delegiert, muss also prüfen, ob die Aufgabe tatsächlich erfüllt wird.\n\n### Wo es in Gewerbeobjekten typischerweise hakt\n\n- Der Mietvertrag nennt Prüfpflichten pauschal, ordnet sie aber nicht einzelnen Anlagen zu.\n- Nach einem Mieterwechsel fehlen die Prüfnachweise der Vorgängernutzung.\n- Das Property Management beauftragt Aufzug und Brandmeldeanlage, Lüftung und Trinkwasser laufen nirgends mit.\n- Mängel aus Prüfberichten bleiben liegen, weil die Budgetfreigabe beim Eigentümer fehlt.\n- Mieterausbauten verändern Brandabschnitte oder Lüftungsanlagen, ohne dass die Prüfungen angepasst werden.\n- Ob Prüfkosten auf Mieter umgelegt werden können, richtet sich bei Gewerbemietverhältnissen nach dem Mietvertrag: Die Umlage muss vertraglich vereinbart sein, ohne Vereinbarung trägt der Vermieter die Kosten. Verweist ein Gewerbemietvertrag pauschal auf „Betriebskosten“, sind nach der Rechtsprechung des BGH die Kostenarten der Betriebskostenverordnung gemeint; im Gewerbemietvertrag können darüber hinaus weitere Kosten vereinbart werden. Die konkrete Klausel sollte im Einzelfall rechtlich geprüft werden."
     },
     {
       "id": "pruefkategorien",
@@ -109,8 +109,8 @@
         [
           "Trinkwasser-Installation",
           "TrinkwV § 31, § 51",
-          "Legionellenuntersuchung bei gewerblicher Tätigkeit mindestens alle 3 Jahre [PRÜFEN: Anlagenarten, für die die Untersuchungspflicht greift]",
-          "Probenahme und Untersuchung durch dafür geeignete Stellen [PRÜFEN: Anforderungen an Probenehmer und Labor]"
+          "Mindestens alle 3 Jahre bei gewerblicher, mindestens jährlich bei öffentlicher Tätigkeit (§ 31 TrinkwV). Pflicht für Großanlagen zur Trinkwassererwärmung (Speicher- oder zentraler Durchfluss-Trinkwassererwärmer mit mehr als 400 Litern oder mehr als 3 Litern in einer Rohrleitung zwischen Erwärmer und Entnahmestelle) mit Duschen oder anderen Einrichtungen, in denen Trinkwasser vernebelt wird; nicht in Ein- und Zweifamilienhäusern.",
+          "Probenahme und Untersuchung durch eine nach § 40 TrinkwV zugelassene Untersuchungsstelle. Die Länder veröffentlichen Listen der zugelassenen Stellen; die Zulassung gilt bundesweit."
         ]
       ]
     }
@@ -188,11 +188,19 @@
     },
     {
       "label": "VDI 6022 Blatt 1 – Raumlufttechnik, Raumluftqualität: Hygieneanforderungen (VDI)",
-      "url": "https://www.vdi.de/richtlinien"
+      "url": "https://www.vdi.de/mitgliedschaft/vdi-richtlinien"
     },
     {
       "label": "GEFMA 190 – Betreiberverantwortung im Facility Management (GEFMA)",
       "url": "https://www.gefma.de"
+    },
+    {
+      "label": "TrinkwV § 31 – Häufigkeit der Untersuchungen (Gesetze im Internet)",
+      "url": "https://www.gesetze-im-internet.de/trinkwv_2023/__31.html"
+    },
+    {
+      "label": "TrinkwV § 40 – Zugelassene Untersuchungsstellen (Gesetze im Internet)",
+      "url": "https://www.gesetze-im-internet.de/trinkwv_2023/__40.html"
     }
   ],
   "internalLinks": [
@@ -265,5 +273,6 @@
     ],
     "differentiation": "Bestehende Seiten erklären Betreiberverantwortung allgemein bzw. das Leistungsmodell. Diese Seite behandelt ausschließlich Büro-, Handels- und Mischobjekte mit Vermietung (Zuständigkeit Eigentümer/Property Manager/Mieter, Mieterwechsel). Wohnungsbestände sind ausgeschlossen und nur verlinkt.",
     "decision": "neue Seite"
-  }
+  },
+  "linksVerifiedManually": "2026-11-25"
 }

@@ -12,8 +12,14 @@ test("Daten bestehen die Qualitätsschranke des Builds", () => {
   assert.deepEqual(validatePages(pages), []);
 });
 
-test("Entwürfe und Seiten im Status review sind nie öffentlich", () => {
-  for (const p of pages) assert.notEqual(p.status, "published", `${p.slug} darf ohne Freigabe nicht veröffentlicht sein`);
+// Freigegeben von Henryk (Phase 1). Alle anderen bleiben Entwurf, bis sie ausdrücklich freigegeben werden.
+const APPROVED = ["gewerbeimmobilien", "immobilienportfolios", "industriestandorte"];
+test("Nur freigegebene Seiten sind veröffentlicht, mit reviewedBy", () => {
+  for (const p of pages) {
+    if (APPROVED.includes(p.slug)) continue;
+    assert.notEqual(p.status, "published", `${p.slug} darf ohne Freigabe nicht veröffentlicht sein`);
+  }
+  for (const p of pages.filter((x) => x.status === "published")) assert.ok(p.reviewedBy && p.linksVerifiedManually, p.slug);
 });
 
 test("Wortzahl, FAQ, Quellen, Links, Titel und Description", () => {
@@ -37,12 +43,14 @@ test("keine verbotenen Aussagen über betreibermanager.de", () => {
 });
 
 test("Qualitätsschranke greift: Veröffentlichung nur mit Freigabe, ohne [PRÜFEN], genug Umfang", () => {
-  const p = JSON.parse(JSON.stringify(pages.find((x) => x.slug === "gewerbeimmobilien")));
+  const p = JSON.parse(JSON.stringify(pages.find((x) => x.slug === "logistikzentren-tore")));
   const errors = validatePages([{ ...p, status: "published" }]).join("\n");
   assert.match(errors, /reviewedBy/);
   assert.match(errors, /PRÜFEN/);
   const clean = JSON.parse(JSON.stringify({ ...p, status: "published", reviewedBy: "Test" }).replace(/\[PRÜFEN[^\]]*\]/g, "geklärt"));
-  assert.deepEqual(validatePages([clean]), []);
+  // Der Text verlinkt auf eine noch nicht veröffentlichte Seite: das muss die Schranke ebenfalls melden, sonst nichts
+  const rest = validatePages([clean]);
+  assert.ok(rest.length >= 1 && rest.every((e) => /nicht veröffentlichte Seite/.test(e)), rest.join("\n"));
   assert.match(validatePages([{ ...clean, faq: clean.faq.slice(0, 7) }]).join(), /FAQ/);
   assert.match(validatePages([{ ...clean, sources: clean.sources.slice(0, 2) }]).join(), /Quellen/);
 });

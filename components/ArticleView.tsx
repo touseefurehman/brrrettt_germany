@@ -4,6 +4,7 @@ import FaqList from "./FaqList";
 import JsonLd, { articleSchema, faqSchema } from "./JsonLd";
 import { CoordinationNote, LegalNotice } from "./PageParts";
 import { CtaBand, PageIntro } from "./Subpage";
+import { b2bLinksFrom } from "@/lib/b2b";
 import { authorFor, authorPath } from "@/lib/autoren";
 import type { Article } from "@/lib/pages";
 import { isSet } from "@/lib/site";
@@ -81,7 +82,7 @@ export default function ArticleView({ article }: { article: Article }) {
 
       <section className="section page-width section-tight">
         <h2>Weiterführend</h2>
-        <RelatedLinks links={article.related} />
+        <RelatedLinks links={[...article.related, ...b2bLinksFrom(`/wissen/${article.slug}`)]} />
       </section>
 
       <CoordinationNote href="/kontakt" />

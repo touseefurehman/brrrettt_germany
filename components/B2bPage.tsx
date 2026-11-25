@@ -3,7 +3,7 @@ import { Fragment, type ReactNode } from "react";
 import JsonLd from "./JsonLd";
 import { PageIntro } from "./Subpage";
 import { LegalNotice } from "./PageParts";
-import { b2bAll } from "@/lib/b2b";
+import { b2bAll, b2bPublished } from "@/lib/b2b";
 import { b2bSchemas, crumbsFor } from "@/lib/b2b-schema";
 import { MARKER, type B2bPage } from "@/lib/b2b-core";
 import { formatDate, parseMarkdown, type Inline } from "@/lib/rank-rent";
@@ -222,7 +222,10 @@ export default function B2bPageView({ page, preview = false }: { page: B2bPage; 
       <section className="section page-width section-tight">
         <h2>Weiterführende Seiten</h2>
         <div className="link-cards three">
-          {page.internalLinks.map((l) => (
+          {/* Links auf noch nicht veröffentlichte B2B-Seiten bleiben in den Daten, werden aber nicht ausgegeben */}
+          {page.internalLinks
+            .filter((l) => !l.href.startsWith("/pruefmanagement/") || b2bPublished.some((x) => x.url === l.href))
+            .map((l) => (
             <Link key={l.href} href={l.href}>
               <strong>{l.label}</strong>
               <span>{l.note}</span>

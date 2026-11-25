@@ -34,3 +34,10 @@ export function previewTokenValid(given: string | undefined): boolean {
   const b = Buffer.from(expected);
   return a.length === b.length && timingSafeEqual(a, b);
 }
+
+/** Links bestehender Seiten auf veröffentlichte B2B-Seiten (internalLinksFromExisting). Auf Entwürfe wird nie verlinkt. */
+export function b2bLinksFrom(path: string): [title: string, path: string, note: string][] {
+  return b2bPublished.flatMap((p) =>
+    p.internalLinksFromExisting.filter((l) => l.from === path).map((l): [string, string, string] => [l.label, p.url, l.note]),
+  );
+}

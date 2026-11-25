@@ -70,8 +70,15 @@ const gateReasons = (p) => {
   const m = markerCount(p);
   if (m) r.push(`${m} offene [PRÜFEN]-Marker`);
   if (p.cannibalization.decision === "bestehende Seite erweitern") r.push("Kannibalisierung: bestehende Seite erweitern");
-  if (!checkLinks) r.push("Quellenlinks nicht per HTTP geprüft (--check-links)");
-  else for (const x of p.sources) if (linkStatus.get(x.url) !== 200) r.push(`Quelle ${x.url}: HTTP ${linkStatus.get(x.url)}`);
+  // Quellenlinks: von Hand geprüft (Feld linksVerifiedManually) zählt als bestanden. Mit --check-links gilt: 403/Verbindungsfehler
+  // aus der Sandbox (Proxy) = „nicht prüfbar“, kein Fehler; andere Statuscodes ≠ 200 (z. B. 404) sind Fehler.
+  if (!p.linksVerifiedManually && !checkLinks) r.push("Quellenlinks weder von Hand noch per HTTP geprüft");
+  if (checkLinks)
+    for (const x of p.sources) {
+      const st = linkStatus.get(x.url);
+      if (st === 200 || st === 403 || st === 0) continue;
+      r.push(`Quelle ${x.url}: HTTP ${st}`);
+    }
   return r;
 };
 

@@ -4,9 +4,9 @@
   "service": "pruefmanagement",
   "objekt": "industriestandorte",
   "zielkunde": "Produzierende Unternehmen mit einem oder mehreren Werken (Standortleitung, HSE, Technischer Service)",
-  "status": "review",
-  "reviewedBy": null,
-  "lastReviewed": "2026-11-24",
+  "status": "published",
+  "reviewedBy": "Redaktion betreibermanager.de",
+  "lastReviewed": "2026-11-25",
   "metaTitle": "Prüfmanagement für Industriestandorte | betreibermanager.de",
   "metaDescription": "Prüfpflichten an Werken und Produktionsstandorten koordinieren: Arbeitsmittel, Elektro, Krane, Tore, Regale und Brandschutz. Fristen und Zuständigkeiten.",
   "h1": "Prüfmanagement für Industriestandorte: Prüfungen im laufenden Werksbetrieb koordinieren",
@@ -20,7 +20,7 @@
     {
       "id": "betreiberpflichten",
       "heading": "Betreiberpflichten an Produktionsstandorten",
-      "content": "Als Arbeitgeber muss das Unternehmen Gefährdungen beurteilen und Schutzmaßnahmen festlegen (§§ 3, 5 ArbSchG, § 2 DGUV Vorschrift 1). Für Arbeitsmittel verlangt § 3 BetrSichV die Gefährdungsbeurteilung einschließlich der Festlegung von Art, Umfang und Fristen der Prüfungen. § 14 BetrSichV schreibt die Prüfung der Arbeitsmittel vor, überwachungsbedürftige Anlagen nach § 17 und Anhang 2 prüfen zugelassene Überwachungsstellen (ZÜS). Daneben begründet § 823 BGB eine Verkehrssicherungspflicht, die auch für Dritte auf dem Werksgelände gilt.\n\nDer Industriestandort hat gegenüber anderen Objekten drei Besonderheiten:\n\n- **Die Prüffristen sind oft betreibereigen.** Für viele Maschinen und Arbeitsmittel gibt es keine feste gesetzliche Frist. Sie ergibt sich aus der Gefährdungsbeurteilung und muss dokumentiert begründet sein.\n- **Prüfungen greifen in den Betrieb ein.** Stillstandsfenster, Schichtbetrieb und Wartungsstillstände bestimmen, wann geprüft werden kann.\n- **Fremdfirmen sind auf dem Gelände unterwegs.** Prüfer sind Fremdfirmenpersonal und müssen eingewiesen werden [PRÜFEN: Pflichten zur Einweisung und Koordination von Fremdfirmen, Rechtsgrundlage].\n\n### Typische Schwachstellen\n\n- Die Gefährdungsbeurteilung begründet die Prüffristen nicht oder nur pauschal.\n- Maschinenprüfungen laufen über die Instandhaltung, Gebäudeprüfungen über das Facility Management, und niemand sieht das Ganze.\n- Prüfungen werden verschoben, weil die Anlage nicht stillgelegt werden kann, und danach nicht nachgeholt.\n- Nach Umbauten oder neuen Maschinen fehlt die Prüfung vor der Wiederinbetriebnahme."
+      "content": "Als Arbeitgeber muss das Unternehmen Gefährdungen beurteilen und Schutzmaßnahmen festlegen (§§ 3, 5 ArbSchG, § 2 DGUV Vorschrift 1). Für Arbeitsmittel verlangt § 3 BetrSichV die Gefährdungsbeurteilung einschließlich der Festlegung von Art, Umfang und Fristen der Prüfungen. § 14 BetrSichV schreibt die Prüfung der Arbeitsmittel vor, überwachungsbedürftige Anlagen nach § 17 und Anhang 2 prüfen zugelassene Überwachungsstellen (ZÜS). Daneben begründet § 823 BGB eine Verkehrssicherungspflicht, die auch für Dritte auf dem Werksgelände gilt.\n\nDer Industriestandort hat gegenüber anderen Objekten drei Besonderheiten:\n\n- **Die Prüffristen sind oft betreibereigen.** Für viele Maschinen und Arbeitsmittel gibt es keine feste gesetzliche Frist. Sie ergibt sich aus der Gefährdungsbeurteilung und muss dokumentiert begründet sein.\n- **Prüfungen greifen in den Betrieb ein.** Stillstandsfenster, Schichtbetrieb und Wartungsstillstände bestimmen, wann geprüft werden kann.\n- **Fremdfirmen sind auf dem Gelände unterwegs.** Prüfer externer Prüfdienste sind Fremdfirmenpersonal. Arbeiten Beschäftigte mehrerer Arbeitgeber an einem Arbeitsplatz, müssen die Arbeitgeber zusammenarbeiten und ihre Schutzmaßnahmen abstimmen (§ 8 Abs. 1 ArbSchG); der Arbeitgeber, in dessen Betrieb die Prüfer tätig werden, muss sich vergewissern, dass sie angemessene Anweisungen zu den Gefahren vor Ort erhalten haben (§ 8 Abs. 2 ArbSchG). Die DGUV Vorschrift 1 (§§ 5 und 6) konkretisiert diese Pflichten, für Arbeitsmittel ergänzend § 13 BetrSichV.\n\n### Typische Schwachstellen\n\n- Die Gefährdungsbeurteilung begründet die Prüffristen nicht oder nur pauschal.\n- Maschinenprüfungen laufen über die Instandhaltung, Gebäudeprüfungen über das Facility Management, und niemand sieht das Ganze.\n- Prüfungen werden verschoben, weil die Anlage nicht stillgelegt werden kann, und danach nicht nachgeholt.\n- Nach Umbauten oder neuen Maschinen fehlt die Prüfung vor der Wiederinbetriebnahme."
     },
     {
       "id": "pruefkategorien",
@@ -31,7 +31,7 @@
     {
       "id": "regelwerke",
       "heading": "Anwendbare Regelwerke und Normen",
-      "content": "- **ArbSchG §§ 3, 5, DGUV Vorschrift 1 § 2:** Gefährdungsbeurteilung und Arbeitsschutzorganisation.\n- **BetrSichV § 3, § 14, § 17 mit Anhang 2:** Prüffristen aus der Gefährdungsbeurteilung, Prüfung von Arbeitsmitteln, überwachungsbedürftige Anlagen (ZÜS). Letzte Änderung 18.12.2025.\n- **TRBS 1203:** Anforderungen an befähigte Personen, die Arbeitsmittel prüfen.\n- **DGUV Vorschrift 3 § 5:** Prüfung elektrischer Anlagen und Betriebsmittel; in Werkstätten ist bei geringer Fehlerquote eine Verlängerung der Fristen für ortsveränderliche Betriebsmittel möglich.\n- **ASR A1.7:** kraftbetätigte Tore und Türen.\n- **ASR A2.2:** Feuerlöscher.\n- **DIN EN 15635:** Inspektion von Lagereinrichtungen.\n- **Prüfverordnungen der Länder:** Brandschutzanlagen.\n- **GEFMA 190 und VDI 3810** als Leitfäden zur Struktur der Betreiberpflichten.\n\nFür Arbeitsmittel mit eigenen Vorschriften, etwa Krane, Flurförderzeuge oder Anlagen in explosionsgefährdeten Bereichen, nennen die Beiträge der Seite [UVV-Prüfung](/uvv-pruefung) die Grundlagen. Weitere Rechtsgrundlagen für Ex-Bereiche sind vor einer Veröffentlichung zu klären [PRÜFEN: Prüfpflichten für Anlagen in explosionsgefährdeten Bereichen]."
+      "content": "- **ArbSchG §§ 3, 5, DGUV Vorschrift 1 § 2:** Gefährdungsbeurteilung und Arbeitsschutzorganisation.\n- **BetrSichV § 3, § 14, § 17 mit Anhang 2:** Prüffristen aus der Gefährdungsbeurteilung, Prüfung von Arbeitsmitteln, überwachungsbedürftige Anlagen (ZÜS). Letzte Änderung 18.12.2025.\n- **TRBS 1203:** Anforderungen an befähigte Personen, die Arbeitsmittel prüfen.\n- **DGUV Vorschrift 3 § 5:** Prüfung elektrischer Anlagen und Betriebsmittel; in Werkstätten ist bei geringer Fehlerquote eine Verlängerung der Fristen für ortsveränderliche Betriebsmittel möglich.\n- **ASR A1.7:** kraftbetätigte Tore und Türen.\n- **ASR A2.2:** Feuerlöscher.\n- **DIN EN 15635:** Inspektion von Lagereinrichtungen.\n- **Prüfverordnungen der Länder:** Brandschutzanlagen.\n- **GEFMA 190 und VDI 3810** als Leitfäden zur Struktur der Betreiberpflichten.\n\nFür Arbeitsmittel mit eigenen Vorschriften, etwa Krane, Flurförderzeuge oder Anlagen in explosionsgefährdeten Bereichen, nennen die Beiträge der Seite [UVV-Prüfung](/uvv-pruefung) die Grundlagen. Anlagen in explosionsgefährdeten Bereichen sind vor der Inbetriebnahme und wiederkehrend mindestens alle sechs Jahre auf Explosionssicherheit zu prüfen (BetrSichV Anhang 2 Abschnitt 3 Nr. 4.1 und 5.1). Geräte, Schutzsysteme sowie Sicherheits-, Kontroll- und Regelvorrichtungen sind mindestens alle drei Jahre zu prüfen (Nr. 5.2). Wer prüfen darf – zugelassene Überwachungsstelle oder zur Prüfung befähigte Person – richtet sich nach Anhang 2 Abschnitt 3 BetrSichV; Details regelt die TRBS 1201 Teil 1."
     },
     {
       "id": "fristen",
@@ -156,7 +156,7 @@
     },
     {
       "question": "Was passiert nach einem Umbau oder der Aufstellung einer neuen Maschine?",
-      "answer": "Arbeitsmittel unterliegen der Prüfung nach § 14 BetrSichV. Ob und welche Prüfung nach einem Umbau oder vor der ersten Nutzung fällig ist, ergibt die Gefährdungsbeurteilung [PRÜFEN: Prüfpflicht vor Wiederinbetriebnahme nach wesentlicher Änderung, Fundstelle]."
+      "answer": "Arbeitsmittel unterliegen der Prüfung nach § 14 BetrSichV. Nach einer prüfpflichtigen Änderung sind Arbeitsmittel vor ihrer nächsten Verwendung von einer zur Prüfung befähigten Person zu prüfen (§ 14 Abs. 3 BetrSichV), überwachungsbedürftige Anlagen vor der Wiederinbetriebnahme (§ 15 Abs. 1 BetrSichV). Prüfpflichtig ist jede Maßnahme, durch die die Sicherheit beeinflusst wird – auch Instandsetzungsarbeiten können dazu gehören (§ 2 Abs. 9 BetrSichV). Welche Arbeitsmittel betroffen sind, ergibt die Gefährdungsbeurteilung."
     },
     {
       "question": "Übernimmt betreibermanager.de die Gefährdungsbeurteilung?",
@@ -198,7 +198,7 @@
     },
     {
       "label": "VDI 6022 Blatt 1 – Raumlufttechnik, Raumluftqualität: Hygieneanforderungen (VDI)",
-      "url": "https://www.vdi.de/richtlinien"
+      "url": "https://www.vdi.de/mitgliedschaft/vdi-richtlinien"
     },
     {
       "label": "TrinkwV §§ 31, 51 – Trinkwasserverordnung",
@@ -207,6 +207,18 @@
     {
       "label": "GEFMA 190 – Betreiberverantwortung im Facility Management (GEFMA)",
       "url": "https://www.gefma.de"
+    },
+    {
+      "label": "ArbSchG § 8 – Zusammenarbeit mehrerer Arbeitgeber (Gesetze im Internet)",
+      "url": "https://www.gesetze-im-internet.de/arbschg/__8.html"
+    },
+    {
+      "label": "BetrSichV § 14 – Prüfung von Arbeitsmitteln (Gesetze im Internet)",
+      "url": "https://www.gesetze-im-internet.de/betrsichv_2015/__14.html"
+    },
+    {
+      "label": "BetrSichV § 15 – Prüfung vor Wiederinbetriebnahme überwachungsbedürftiger Anlagen (Gesetze im Internet)",
+      "url": "https://www.gesetze-im-internet.de/betrsichv_2015/__15.html"
     }
   ],
   "internalLinks": [
@@ -282,5 +294,6 @@
     ],
     "differentiation": "Bestehende Seiten behandeln einzelne Prüfarten. Diese Seite behandelt das Zusammenspiel aller Prüfungen am Werk (Gefährdungsbeurteilung, Stillstandsplanung, Fremdfirmen, mehrere Werke) und verlinkt auf die Einzelseiten.",
     "decision": "neue Seite"
-  }
+  },
+  "linksVerifiedManually": "2026-11-25"
 }

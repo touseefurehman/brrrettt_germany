@@ -3,6 +3,7 @@ import FaqList from "./FaqList";
 import { ArrowUpRight, Check } from "./icons";
 import JsonLd, { faqSchema, serviceSchema, webPageSchema } from "./JsonLd";
 import PageStand from "./PageStand";
+import { b2bLinksFrom } from "@/lib/b2b";
 import { pageModified } from "@/lib/page-meta";
 import { CoordinationNote, InquirySection, LegalNotice } from "./PageParts";
 import { PageIntro } from "./Subpage";
@@ -23,6 +24,7 @@ export default function ServicePageView({
   crumbs: [name: string, path: string][];
 }) {
   const modified = pageModified[path];
+  const related = [...page.related, ...b2bLinksFrom(path)];
   return (
     <>
       <JsonLd data={serviceSchema(page.serviceType, page.description, path, page.name)} />
@@ -56,10 +58,10 @@ export default function ServicePageView({
         <FaqList faqs={page.faqs} />
       </section>
 
-      {page.related.length > 0 && (
+      {related.length > 0 && (
         <section className="section page-width section-tight">
           <h2>Weiterführend</h2>
-          <RelatedLinks links={page.related} />
+          <RelatedLinks links={related} />
         </section>
       )}
 

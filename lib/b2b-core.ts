@@ -31,6 +31,8 @@ export type B2bPage = {
   /** Name und Funktion der fachlich prüfenden Person; null = nicht freigegeben */
   reviewedBy: string | null;
   lastReviewed: string;
+  /** Datum, an dem die Quellenlinks von Hand im Browser geprüft wurden (Gate des Prüfskripts) */
+  linksVerifiedManually?: string;
   metaTitle: string;
   metaDescription: string;
   h1: string;
@@ -151,6 +153,10 @@ export function validatePages(pages: B2bPage[]): string[] {
       const words = wordCount(p);
       if (words < THRESHOLDS.publishedWordsMin) e(`veröffentlicht, aber nur ${words} Wörter (mind. ${THRESHOLDS.publishedWordsMin})`);
       if (p.faq.length < THRESHOLDS.faqMin) e(`veröffentlicht, aber nur ${p.faq.length} FAQ (mind. ${THRESHOLDS.faqMin})`);
+      for (const m of JSON.stringify(p.sections).matchAll(/\]\((\/pruefmanagement\/[^)\s]*)\)/g)) {
+        const target = pages.find((x) => x.url === m[1]);
+        if (!target || target.status !== "published") e(`verlinkt im Text auf nicht veröffentlichte Seite ${m[1]}`);
+      }
       if (p.sources.length < THRESHOLDS.sourcesMin) e(`veröffentlicht, aber nur ${p.sources.length} Quellen (mind. ${THRESHOLDS.sourcesMin})`);
     }
   }

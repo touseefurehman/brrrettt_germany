@@ -11,6 +11,7 @@ export const DELETION_CONTACT = "[PRÜFEN: Kontakt-E-Mail]";
 export default function PartnerPrivacySection({ heading = "3b. Bewerbung als Prüfpartner", highlight = false }: { heading?: string; highlight?: boolean }) {
   const days = retentionDays();
   const months = days === 365 ? "12 Monate" : `${days} Tage`;
+  const monthsDat = days === 365 ? "12 Monaten" : `${days} Tagen`;
   const mark = (text: string) =>
     highlight && text.startsWith("[PRÜFEN") ? (
       <mark style={{ background: "#fde047", color: "#1c1917", padding: "0 3px", borderRadius: 3 }}>{text}</mark>
@@ -43,7 +44,7 @@ export default function PartnerPrivacySection({ heading = "3b. Bewerbung als Pr�
       </p>
       <p>
         <strong>Speicherdauer:</strong> {months} nach dem letzten Statuswechsel Ihrer Bewerbung; danach wird sie automatisch gelöscht.
-        Während einer aktiven Partnerschaft speichern wir die Angaben für deren Dauer; endet sie, beginnt die Frist von {months} erneut.
+        Während einer aktiven Partnerschaft speichern wir die Angaben für deren Dauer; endet sie, beginnt die Frist von {monthsDat} erneut.
         Kopien der Benachrichtigungs-E-Mails in unserem Postfach und im Web3Forms-Konto löschen wir nach derselben Frist.
       </p>
       <p>

@@ -59,7 +59,9 @@ function notification(v: Valid, stored: boolean, waitlist: boolean): Web3FormsPa
       `E-Mail: ${v.email}`,
       "",
       stored
-        ? `${waitlist ? "Warteliste (noch keine Messung für diesen Prüfbereich)" : "Befund liegt vor"} – Befund-Link kopieren und persönlich senden: ${baseUrl()}/admin/leads`
+        ? waitlist
+          ? `Warteliste (noch keine Messung für diesen Prüfbereich) – der Befund erscheint nach der nächsten Messung in ${baseUrl()}/admin/leads`
+          : `Befund liegt vor – Befund-Link kopieren und persönlich senden: ${baseUrl()}/admin/leads`
         : "Ohne Datenbank: nicht gespeichert, kein Befund erzeugt.",
       `Einwilligung zur Verarbeitung: ${new Date().toISOString()}`,
     ].join("\n"),

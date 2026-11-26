@@ -41,3 +41,15 @@ export function parseCsv(text: string): string[][] {
   if (row.some((x) => x.trim())) rows.push(row.map((x) => x.trim()));
   return rows;
 }
+
+/** Benutzername aus Basic Auth (middleware.ts hat die Zugangsdaten bereits geprüft) */
+export function adminUser(req: Request): string {
+  const h = req.headers.get("authorization") ?? "";
+  if (!h.startsWith("Basic ")) return "admin";
+  try {
+    const decoded = new TextDecoder().decode(Uint8Array.from(atob(h.slice(6)), (c) => c.charCodeAt(0)));
+    return decoded.slice(0, Math.max(0, decoded.indexOf(":"))).slice(0, 60) || "admin";
+  } catch {
+    return "admin";
+  }
+}

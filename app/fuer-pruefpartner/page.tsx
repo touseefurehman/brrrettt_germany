@@ -4,7 +4,7 @@ import JsonLd, { breadcrumbSchema, faqSchema, webPageSchema } from "@/components
 import PruefpartnerForm from "@/components/partners/PruefpartnerForm";
 import SichtbarkeitBox from "@/components/partners/SichtbarkeitBox";
 import { PageIntro } from "@/components/Subpage";
-import { partnerFormLive, partnerPublishedBySlug } from "@/lib/partner";
+import { partnerFormLive, partnerPublishedBySlug, partnerWeb3FormsKey } from "@/lib/partner";
 import { PARTNER_BASE } from "@/lib/partner-core";
 import { site } from "@/lib/site";
 
@@ -18,6 +18,8 @@ const kurzantwort =
   "betreibermanager.de koordiniert gesetzliche Prüfungen für Betreiber mit mehreren Standorten und sucht dafür qualifizierte Prüfbetriebe als operative Partner, etwa für Elektro, Brandschutz, RLT-Hygiene, Trinkwasser, Türen und Tore oder Regale. Registrierung und Prüfung Ihrer Angaben sind keine Auftragszusage; Konditionen werden jeweils individuell vereinbart.";
 const modified = "2026-11-25";
 const contactHref = `/kontakt?thema=${encodeURIComponent("Prüfpartner – Registrierung")}`;
+// Mit freigeschaltetem Formular führen die CTAs zur Registrierung auf dieser Seite, sonst zum Kontaktformular
+const ctaHref = partnerFormLive ? "#registrierung" : contactHref;
 
 export const metadata: Metadata = {
   title: { absolute: title },
@@ -58,7 +60,7 @@ export default function PruefpartnerHub() {
       <PageIntro crumbs={[["Prüfpartner werden", PARTNER_BASE]]} kicker="PRÜFPARTNER" title={h1}>
         <p className="b2b-kurzantwort">{kurzantwort}</p>
         <p>
-          <Link href={contactHref} className="rr-btn">
+          <Link href={ctaHref} className="rr-btn">
             Als Prüfpartner registrieren
           </Link>
         </p>
@@ -141,8 +143,8 @@ export default function PruefpartnerHub() {
         <h2>Registrierung</h2>
         {partnerFormLive ? (
           <>
-            <p>Die Registrierung ist keine automatische Freigabe. Wir prüfen Ihre Angaben und melden uns.</p>
-            <PruefpartnerForm sourcePage={PARTNER_BASE} cta="Als Prüfpartner registrieren" />
+            <p>Die Registrierung ist keine automatische Freigabe und keine Auftragszusage. Wir prüfen Ihre Angaben und melden uns.</p>
+            <PruefpartnerForm sourcePage={PARTNER_BASE} cta="Als Prüfpartner registrieren" accessKey={partnerWeb3FormsKey} />
           </>
         ) : (
           <>

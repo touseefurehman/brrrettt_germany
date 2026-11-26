@@ -4,8 +4,7 @@ import { type PartnerPage, validatePartnerPages } from "./partner-core";
 import { previewTokenValid } from "./b2b";
 
 // Prüfpartner-Unterseiten: content/partner/<slug>.json. Nur `published` ist öffentlich (und in der Sitemap).
-// `review`/`draft`: ausschließlich unter /vorschau/partner/<slug>?token=… (PREVIEW_TOKEN). Das Formular geht nur zusammen mit
-// Das Formular ist ausgeschaltet (PARTNER_FORM_ENABLED); mit eingeschaltetem Flag verlangt der Build PARTNER_RETENTION_DAYS und PARTNER_NOTIFY_EMAIL.
+// `review`/`draft`: ausschließlich unter /vorschau/partner/<slug>?token=… (PREVIEW_TOKEN).
 
 const dir = path.join(process.cwd(), "content", "partner");
 export const partnerAll: PartnerPage[] = fs
@@ -16,13 +15,11 @@ export const partnerAll: PartnerPage[] = fs
 
 const errors = validatePartnerPages(partnerAll);
 export const partnerPublished = partnerAll.filter((p) => p.status === "published");
-// Das Bewerbungsformular (partner_applications) ist hinter dem Feature-Flag PARTNER_FORM_ENABLED=true vorbereitet und standardmäßig aus.
-// Erst wenn es eingeschaltet wird, müssen Ziel und Speicherdauer feststehen. Bis dahin führen alle CTAs zum Kontaktformular.
-export const partnerFormLive = process.env.PARTNER_FORM_ENABLED === "true";
-if (partnerFormLive) {
-  if (!process.env.PARTNER_RETENTION_DAYS) errors.push("Veröffentlichung nur mit PARTNER_RETENTION_DAYS (Speicherdauer der Bewerbungen, von Henryk festzulegen)");
-  if (!process.env.PARTNER_NOTIFY_EMAIL) errors.push("Veröffentlichung nur mit PARTNER_NOTIFY_EMAIL (Ziel der Bewerbungen, von Henryk festzulegen)");
-}
+// Bewerbungsformular (partner_applications): nur sichtbar mit PARTNER_FORM_ENABLED=true UND gesetztem Web3Forms-Key
+// (NEXT_PUBLIC_WEB3FORMS_PARTNER_KEY; soll derselbe Key wie beim Kontaktformular genutzt werden, denselben Wert eintragen).
+// Ohne beides führen alle CTAs zum Kontaktformular. DATABASE_URL ist empfohlen; ohne sie geht die Bewerbung nur per Web3Forms ein.
+export const partnerWeb3FormsKey = (process.env.NEXT_PUBLIC_WEB3FORMS_PARTNER_KEY ?? "").trim();
+export const partnerFormLive = process.env.PARTNER_FORM_ENABLED === "true" && partnerWeb3FormsKey !== "";
 if (errors.length > 0) throw new Error(`content/partner ist inkonsistent oder verletzt die Qualitätsschranke:\n- ${errors.join("\n- ")}`);
 
 export const partnerBySlug = (slug: string) => partnerAll.find((p) => p.slug === slug);

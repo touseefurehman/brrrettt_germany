@@ -8,8 +8,8 @@ import { join } from "node:path";
 export type LeadStatus = "neu" | "bestaetigt" | "warteliste" | "gebucht" | "angebot" | "partner" | "abgemeldet";
 export const leadStatuses: LeadStatus[] = ["neu", "bestaetigt", "warteliste", "gebucht", "angebot", "partner", "abgemeldet"];
 export const statusLabel: Record<LeadStatus, string> = {
-  neu: "neu (unbestätigt)",
-  bestaetigt: "bestätigt",
+  neu: "neu (Befund noch nicht gesendet)",
+  bestaetigt: "Befund gesendet",
   warteliste: "Warteliste",
   gebucht: "Gespräch gebucht",
   angebot: "Angebot",
@@ -33,8 +33,9 @@ export type Lead = {
   /** "form" = Nullmessung angefordert; "outbound" = vorab erzeugte Befundseite, kein E-Mail-Versand */
   source: "form" | "outbound";
   createdAt: string;
+  /** Zeitpunkt, ab dem der Befund bereitsteht (Altbestand: Double-Opt-in-Bestätigung) */
   confirmedAt: string | null;
-  /** Letzter gesendeter Schritt der Mail-Folge (Tag 0, 3, 7, 14, 30); null = noch keiner */
+  /** Nur Altbestand: letzter Schritt der früheren automatischen Mail-Folge; wird nicht mehr gesetzt */
   lastEmailStep: number | null;
   /** Messmonat der Nullmessung (Basis für den Vergleich an Tag 30) */
   baselineMonth: string | null;

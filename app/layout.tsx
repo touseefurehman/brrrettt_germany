@@ -6,7 +6,9 @@ import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import JsonLd, { organizationSchema, websiteSchema } from "@/components/JsonLd";
 import CookieConsent from "@/components/CookieConsent";
+import AttributionCapture from "@/components/AttributionCapture";
 import { hasAnalytics } from "@/lib/analytics";
+import { partnerFormLive } from "@/lib/partner";
 import { site } from "@/lib/site";
 
 // next/font lädt die Schrift zur Build-Zeit und liefert sie selbst aus – kein Aufruf an Google beim Besucher.
@@ -43,6 +45,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main>{children}</main>
         <SiteFooter />
         {hasAnalytics && <CookieConsent />}
+        {/* Herkunft nur erfassen, solange das Prüfpartner-Formular sie nutzt */}
+        {partnerFormLive && <AttributionCapture />}
       </body>
     </html>
   );

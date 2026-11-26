@@ -60,3 +60,6 @@ export const hasAddress = [site.street, site.postalCode, site.city].every(isSet)
 export const addressLine = `${site.street}, ${site.postalCode} ${site.city}`;
 export const phoneLink = `tel:${site.phoneHref}`;
 export const emailLink = `mailto:${site.email}`;
+
+/** Basis-URL für absolute Links (z. B. Befund- und Admin-Links); SITE_URL überschreibt sie serverseitig */
+export const baseUrl = () => (process.env.SITE_URL || site.url).replace(/\/$/, "");

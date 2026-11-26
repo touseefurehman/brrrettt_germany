@@ -9,6 +9,7 @@ const FREEMAIL = new Set([
   "gmail.com", "googlemail.com", "gmx.de", "gmx.net", "gmx.at", "gmx.ch", "web.de", "t-online.de", "outlook.com", "outlook.de",
   "hotmail.com", "hotmail.de", "live.com", "live.de", "yahoo.com", "yahoo.de", "icloud.com", "me.com", "mail.de", "freenet.de",
   "posteo.de", "protonmail.com", "proton.me", "aol.com", "online.de", "arcor.de", "mailbox.org", "web.com", "msn.com",
+  "mac.com", "aol.de", "1und1.de", "email.de", "mail.com", "yandex.com", "zoho.com", "gmx.com", "tutanota.com", "tuta.io",
 ]);
 export const isFreemail = (email: string) => FREEMAIL.has(email.split("@")[1]?.toLowerCase() ?? "");
 

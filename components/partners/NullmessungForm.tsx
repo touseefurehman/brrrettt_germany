@@ -2,17 +2,16 @@
 
 import { useRef, useState, type FormEvent } from "react";
 import Link from "next/link";
-import { sendViaWeb3Forms, type Web3FormsPayload } from "@/lib/web3forms";
+import { sendViaWeb3Forms, submitWeb3Forms, type Web3FormsPayload } from "@/lib/web3forms";
 import { site } from "@/lib/site";
 
 const ROLES = ["Geschäftsführung", "Marketing", "Vertrieb", "Sonstige"];
 
-/** Kostenlose Nullmessung anfordern; Prüfung und Double-Opt-in laufen über /api/nullmessung */
+/** Kostenlose Nullmessung anfordern: Speicherung über /api/nullmessung, Benachrichtigung per Web3Forms, Befund kommt persönlich */
 export default function NullmessungForm({ cluster, clusterName }: { cluster: string; clusterName: string }) {
   const [status, setStatus] = useState<"idle" | "sending" | "done" | "error">("idle");
   const [error, setError] = useState("");
   const [waitlist, setWaitlist] = useState(false);
-  const [fallback, setFallback] = useState(false);
   const startedAt = useRef(Date.now());
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
@@ -36,14 +35,14 @@ export default function NullmessungForm({ cluster, clusterName }: { cluster: str
           elapsed: Date.now() - startedAt.current,
         }),
       });
-      const r = (await res.json().catch(() => ({}))) as { ok?: boolean; message?: string; status?: string; mail?: Web3FormsPayload };
+      const r = (await res.json().catch(() => ({}))) as { ok?: boolean; message?: string; stored?: boolean; waitlist?: boolean; mail?: Web3FormsPayload };
       if (!res.ok || !r.ok) throw new Error(r.message || "Die Anfrage konnte nicht gesendet werden.");
+      // Benachrichtigung an uns über Web3Forms (wie das Kontaktformular). Ist die Anfrage gespeichert, gilt sie auch ohne Zustellung als eingegangen.
       if (r.mail) {
-        // Ausweichweg: gleicher Versand wie das Kontaktformular (Web3Forms aus dem Browser)
-        await sendViaWeb3Forms(r.mail, site.email);
-        setFallback(true);
+        if (r.stored) await submitWeb3Forms(r.mail);
+        else await sendViaWeb3Forms(r.mail, site.email);
       }
-      setWaitlist(r.status === "warteliste");
+      setWaitlist(Boolean(r.waitlist));
       setStatus("done");
     } catch (err) {
       setError(err instanceof Error ? err.message : "Die Anfrage konnte nicht gesendet werden.");
@@ -51,24 +50,14 @@ export default function NullmessungForm({ cluster, clusterName }: { cluster: str
     }
   }
 
-  if (status === "done" && fallback) {
-    return (
-      <div className="rr-form-done" role="status">
-        <strong>Danke – Ihre Nullmessung ist angefragt.</strong>
-        <p>Wir melden uns per E-Mail, sobald Ihr Befund vorliegt.</p>
-      </div>
-    );
-  }
-
   if (status === "done") {
     return (
       <div className="rr-form-done" role="status">
-        <strong>Fast geschafft: Bitte bestätigen Sie Ihre E-Mail-Adresse.</strong>
+        <strong>Danke – Ihre Nullmessung ist angefragt.</strong>
         <p>
-          Wir haben Ihnen eine Nachricht mit einem Bestätigungslink gesendet.{" "}
           {waitlist
-            ? `Ihre Nullmessung folgt, sobald die Erhebung für ${clusterName} abgeschlossen ist.`
-            : "Nach der Bestätigung erhalten Sie Ihren persönlichen Befund."}
+            ? `Ihre Nullmessung folgt, sobald die Erhebung für ${clusterName} abgeschlossen ist. Wir senden Ihnen den Befund dann persönlich per E-Mail.`
+            : "Wir prüfen Ihre Angaben und senden Ihnen den persönlichen Befund per E-Mail."}
         </p>
       </div>
     );
@@ -123,12 +112,12 @@ export default function NullmessungForm({ cluster, clusterName }: { cluster: str
       <label className="consent">
         <input name="consent" type="checkbox" value="yes" required />
         <span>
-          Ich bin damit einverstanden, dass meine Angaben zur Erstellung der Nullmessung und für die zugehörigen E-Mails verarbeitet
-          werden. Hinweise und Abmeldung: <Link href="/datenschutz">Datenschutzerklärung</Link>.
+          Ich bin damit einverstanden, dass meine Angaben zur Erstellung der Nullmessung und zur Kontaktaufnahme verarbeitet
+          werden. Hinweise: <Link href="/datenschutz">Datenschutzerklärung</Link>.
         </span>
       </label>
       <div className="form-footer">
-        <p role={status === "error" ? "alert" : undefined}>{status === "error" ? error : "Kostenlos und unverbindlich. Sie erhalten zuerst eine Bestätigungs-E-Mail."}</p>
+        <p role={status === "error" ? "alert" : undefined}>{status === "error" ? error : "Kostenlos und unverbindlich. Den Befund senden wir Ihnen persönlich."}</p>
         <button className="rr-btn" disabled={status === "sending"} type="submit">
           {status === "sending" ? "Wird gesendet …" : "Nullmessung anfordern"}
         </button>

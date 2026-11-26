@@ -1,182 +1,407 @@
 import { randomUUID } from "node:crypto";
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
-import { allow, EMAIL_RE, oneLine, str, type Json, type Result } from "@/lib/leads";
+import { allow, EMAIL_RE, oneLine, str, type Json } from "@/lib/leads";
 import { partnerFormLive } from "@/lib/partner";
-import { site } from "@/lib/site";
+import {
+  CATEGORIES,
+  CONSENT_VERSION,
+  QUALIFICATIONS,
+  REGIONS,
+  SOURCE_PAGES,
+  transitions,
+  type ApplicationStatus,
+  type Category,
+} from "@/lib/partner-options";
+import { isFreemail } from "@/lib/nullmessung";
+import { baseUrl } from "@/lib/site";
 import type { Web3FormsPayload } from "@/lib/web3forms";
 
 // Bewerbungen von Prüfbetrieben (operative Zusammenarbeit) – getrennt von Anfragen zum bezahlten Fachpartner-Programm.
-// Speicher: mit DATABASE_URL Tabelle `partner_applications` (Neon/Vercel Postgres über HTTP-SQL, wie lib/store.ts) = Prüf-Warteschlange
-// für /admin/partner. Ohne DATABASE_URL in Produktion: Weitergabe über den Kontaktformular-Weg (Web3Forms im Browser), kein Speicher.
-// In der Entwicklung ersatzweise Datei .data/partner_applications.json.
-// Offene Entscheidungen von Henryk: PARTNER_NOTIFY_EMAIL (Ziel), PARTNER_RETENTION_DAYS (Speicherdauer).
+// Speicher: DATABASE_URL → Tabellen `partner_applications` und `partner_application_events` (Neon/Vercel Postgres über HTTP-SQL,
+// wie lib/store.ts). In der Entwicklung ohne DATABASE_URL: Datei .data/partner_applications.json.
+// In Produktion ohne DATABASE_URL: kein Speicher, die Bewerbung geht nur per Web3Forms ins Postfach (Hinweis in /admin/partner).
+// Versand: ausschließlich Web3Forms aus dem Browser (NEXT_PUBLIC_WEB3FORMS_PARTNER_KEY). Freitexte gehen nicht in die E-Mail.
+// Speicherdauer: PARTNER_RETENTION_DAYS (Standard 365) ab dem letzten Statuswechsel; „aktiv“ wird nicht gelöscht.
 
-export type ApplicationStatus = "neu" | "geprueft" | "abgelehnt" | "freigegeben";
-export const applicationStatuses: ApplicationStatus[] = ["neu", "geprueft", "abgelehnt", "freigegeben"];
-export const applicationStatusLabel: Record<ApplicationStatus, string> = { neu: "neu", geprueft: "geprüft", abgelehnt: "abgelehnt", freigegeben: "freigegeben" };
+export type Web3FormsStatus = "sent" | "error";
 
 export type PartnerApplication = {
   id: string;
   createdAt: string;
-  sourcePage: string;
-  company: string;
-  contact: string;
-  email: string;
-  trades: string[];
-  region: string;
-  qualifications: string;
-  capacity: string;
-  message: string;
-  consentAt: string;
+  updatedAt: string;
+  statusChangedAt: string;
   status: ApplicationStatus;
+  company: string;
+  contactName: string;
+  email: string;
+  phone: string;
+  categories: string[];
+  regions: string[];
+  plzAreas: string;
+  /** Selbstauskunft: angehakte Qualifikationen als „Kategorie: Qualifikation“ */
+  qualifications: string[];
+  qualificationsText: string;
+  capacityDays: number;
+  mobileTeams: number;
+  message: string;
+  sourcePage: string;
+  utmSource: string;
+  utmMedium: string;
+  utmCampaign: string;
+  utmTerm: string;
+  utmContent: string;
+  referrer: string;
+  consentAt: string;
+  consentTextVersion: string;
+  approvedBy: string | null;
+  approvedAt: string | null;
+  notes: string;
+  deleteAfter: string | null;
+  web3formsStatus: Web3FormsStatus | null;
 };
 
-export const TRADES = ["Elektro (DGUV V3)", "Brandschutz", "RLT-Hygiene", "Trinkwasser", "Türen und Tore", "Regale"] as const;
-export const SOURCE_PAGES = ["/fuer-pruefpartner", "/fuer-pruefpartner/rahmenvertraege", "/fuer-pruefpartner/dguv-v3", "/fuer-pruefpartner/subunternehmer"];
-export const CONFIRMATION = "Danke für Ihre Registrierung. Die Registrierung ist keine automatische Freigabe – wir prüfen Ihre Angaben und melden uns.";
+export type EventType = "eingang" | "status" | "freigabe" | "notiz" | "web3forms" | "loeschung";
+/** Ereignis. Löschungen werden ohne Bewerbungs-ID und ohne personenbezogene Daten protokolliert (applicationId = null). */
+export type ApplicationEvent = { id: string; applicationId: string | null; createdAt: string; type: EventType; detail: string };
 
-const FREEMAIL = new Set([
-  "gmail.com", "googlemail.com", "gmx.de", "gmx.net", "gmx.at", "gmx.ch", "web.de", "t-online.de", "freenet.de", "yahoo.com", "yahoo.de",
-  "outlook.com", "outlook.de", "hotmail.com", "hotmail.de", "live.com", "live.de", "msn.com", "icloud.com", "me.com", "mac.com", "aol.com",
-  "aol.de", "posteo.de", "mailbox.org", "mail.de", "protonmail.com", "proton.me", "1und1.de", "online.de", "arcor.de", "email.de", "mail.com",
-  "yandex.com", "zoho.com", "gmx.com", "tutanota.com", "tuta.io",
-]);
-export const isFreemail = (email: string) => FREEMAIL.has(email.split("@").pop()?.toLowerCase() ?? "");
+const DAY = 86_400_000;
+export const retentionDays = () => {
+  const n = Number(process.env.PARTNER_RETENTION_DAYS);
+  return Number.isFinite(n) && n > 0 ? Math.floor(n) : 365;
+};
+/** Löschdatum: Speicherfrist ab letztem Statuswechsel; aktive Partner werden während der Partnerschaft nicht gelöscht */
+export const deleteAfterFor = (status: ApplicationStatus, statusChangedAt: string) =>
+  status === "aktiv" ? null : new Date(Date.parse(statusChangedAt) + retentionDays() * DAY).toISOString();
 
 // ---- Speicher ---------------------------------------------------------------------------------------------------
 
+interface Backend {
+  all(): Promise<PartnerApplication[]>;
+  save(a: PartnerApplication): Promise<void>;
+  remove(id: string): Promise<void>;
+  events(): Promise<ApplicationEvent[]>;
+  addEvent(e: ApplicationEvent): Promise<void>;
+}
+
 const dbUrl = process.env.DATABASE_URL;
-const retentionDays = () => {
-  const n = Number(process.env.PARTNER_RETENTION_DAYS);
-  return Number.isFinite(n) && n > 0 ? Math.floor(n) : 0;
-};
-export const queueAvailable = Boolean(dbUrl) || process.env.NODE_ENV !== "production";
 
-async function sql(query: string, params: unknown[] = []) {
-  const host = new URL(dbUrl!).hostname;
-  const res = await fetch(`https://${host}/sql`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json", "Neon-Connection-String": dbUrl! },
-    body: JSON.stringify({ query, params }),
-    cache: "no-store",
-  });
-  if (!res.ok) throw new Error(`Datenbank ${res.status}: ${(await res.text()).slice(0, 200)}`);
-  return (await res.json()) as { rows: Record<string, unknown>[] };
-}
-let ready: Promise<unknown> | null = null;
-const init = () =>
-  (ready ??= sql(`CREATE TABLE IF NOT EXISTS partner_applications (
-    id text PRIMARY KEY, created_at timestamptz NOT NULL, source_page text NOT NULL, company text NOT NULL, contact text NOT NULL,
-    email text NOT NULL, trades text NOT NULL, region text NOT NULL, qualifications text, capacity text, message text,
-    consent_at timestamptz NOT NULL, status text NOT NULL DEFAULT 'neu')`));
+const COLS = [
+  "id", "created_at", "updated_at", "status_changed_at", "status", "company", "contact_name", "email", "phone", "categories", "regions",
+  "plz_areas", "qualifications", "capacity_days", "mobile_teams", "message", "source_page", "utm_source", "utm_medium", "utm_campaign",
+  "utm_term", "utm_content", "referrer", "consent_at", "consent_text_version", "approved_by", "approved_at", "notes", "delete_after",
+  "web3forms_status",
+] as const;
 
-const file = join(process.cwd(), ".data", "partner_applications.json");
-const readFile = (): PartnerApplication[] => (existsSync(file) ? JSON.parse(readFileSync(file, "utf8")) : []);
-const writeFile = (d: PartnerApplication[]) => {
-  mkdirSync(join(process.cwd(), ".data"), { recursive: true });
-  writeFileSync(file, JSON.stringify(d, null, 2));
-};
-
-/** Löscht Bewerbungen nach Ablauf der Speicherdauer (nur wenn PARTNER_RETENTION_DAYS gesetzt ist) */
-export async function purgeExpired() {
-  const days = retentionDays();
-  if (!days) return;
-  const limit = new Date(Date.now() - days * 86_400_000).toISOString();
-  if (dbUrl) {
-    await init();
-    await sql("DELETE FROM partner_applications WHERE created_at < $1", [limit]);
-  } else if (process.env.NODE_ENV !== "production") writeFile(readFile().filter((a) => a.createdAt >= limit));
-}
-
-export async function saveApplication(a: PartnerApplication) {
-  if (dbUrl) {
-    await init();
-    await sql(
-      `INSERT INTO partner_applications (id, created_at, source_page, company, contact, email, trades, region, qualifications, capacity, message, consent_at, status)
-       VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13)`,
-      [a.id, a.createdAt, a.sourcePage, a.company, a.contact, a.email, a.trades.join(", "), a.region, a.qualifications, a.capacity, a.message, a.consentAt, a.status],
-    );
-  } else writeFile([a, ...readFile()]);
-  await purgeExpired();
-}
-
-export async function listApplications(): Promise<PartnerApplication[]> {
-  await purgeExpired();
-  if (dbUrl) {
-    await init();
-    const { rows } = await sql("SELECT * FROM partner_applications ORDER BY created_at DESC");
-    const iso = (v: unknown) => new Date(v as string).toISOString();
-    return rows.map((r) => ({
-      id: r.id as string, createdAt: iso(r.created_at), sourcePage: r.source_page as string, company: r.company as string, contact: r.contact as string,
-      email: r.email as string, trades: String(r.trades ?? "").split(", ").filter(Boolean), region: r.region as string,
-      qualifications: (r.qualifications as string) ?? "", capacity: (r.capacity as string) ?? "", message: (r.message as string) ?? "",
-      consentAt: iso(r.consent_at), status: r.status as ApplicationStatus,
-    }));
+function sqlBackend(url: string): Backend {
+  const host = new URL(url).hostname;
+  async function sql(query: string, params: unknown[] = []) {
+    const res = await fetch(`https://${host}/sql`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "Neon-Connection-String": url },
+      body: JSON.stringify({ query, params }),
+      cache: "no-store",
+    });
+    if (!res.ok) throw new Error(`Datenbank ${res.status}: ${(await res.text()).slice(0, 200)}`);
+    return (await res.json()) as { rows: Record<string, unknown>[] };
   }
-  if (process.env.NODE_ENV === "production") throw new Error("Kein Speicher konfiguriert (DATABASE_URL fehlt).");
-  return readFile();
+  let ready: Promise<unknown> | null = null;
+  const init = () =>
+    (ready ??= (async () => {
+      // Tabelle des früheren, nie freigeschalteten Formulars (Spalte „trades“) beiseitelegen statt zu überschreiben
+      await sql(`DO $$ BEGIN
+        IF EXISTS (SELECT 1 FROM information_schema.columns WHERE table_name = 'partner_applications' AND column_name = 'trades') THEN
+          ALTER TABLE partner_applications RENAME TO partner_applications_alt;
+        END IF; END $$`);
+      await sql(`CREATE TABLE IF NOT EXISTS partner_applications (
+        id text PRIMARY KEY, created_at timestamptz NOT NULL, updated_at timestamptz NOT NULL, status_changed_at timestamptz NOT NULL,
+        status text NOT NULL DEFAULT 'neu', company text NOT NULL, contact_name text NOT NULL, email text NOT NULL, phone text,
+        categories jsonb NOT NULL, regions jsonb NOT NULL, plz_areas text, qualifications jsonb NOT NULL,
+        capacity_days int NOT NULL, mobile_teams int NOT NULL, message text, source_page text NOT NULL,
+        utm_source text, utm_medium text, utm_campaign text, utm_term text, utm_content text, referrer text,
+        consent_at timestamptz NOT NULL, consent_text_version text NOT NULL, approved_by text, approved_at timestamptz, notes text,
+        delete_after timestamptz, web3forms_status text)`);
+      await sql(`CREATE TABLE IF NOT EXISTS partner_application_events (
+        id text PRIMARY KEY, application_id text, created_at timestamptz NOT NULL, type text NOT NULL, detail text)`);
+    })());
+  const iso = (v: unknown) => (v ? new Date(v as string).toISOString() : null);
+  const s = (v: unknown) => (v == null ? "" : String(v));
+  return {
+    async all() {
+      await init();
+      const { rows } = await sql("SELECT * FROM partner_applications ORDER BY created_at DESC");
+      return rows.map((r) => {
+        const q = (r.qualifications ?? {}) as { items?: string[]; text?: string };
+        return {
+          id: s(r.id), createdAt: iso(r.created_at)!, updatedAt: iso(r.updated_at)!, statusChangedAt: iso(r.status_changed_at)!,
+          status: r.status as ApplicationStatus, company: s(r.company), contactName: s(r.contact_name), email: s(r.email), phone: s(r.phone),
+          categories: (r.categories as string[]) ?? [], regions: (r.regions as string[]) ?? [], plzAreas: s(r.plz_areas),
+          qualifications: q.items ?? [], qualificationsText: q.text ?? "", capacityDays: Number(r.capacity_days), mobileTeams: Number(r.mobile_teams),
+          message: s(r.message), sourcePage: s(r.source_page), utmSource: s(r.utm_source), utmMedium: s(r.utm_medium),
+          utmCampaign: s(r.utm_campaign), utmTerm: s(r.utm_term), utmContent: s(r.utm_content), referrer: s(r.referrer),
+          consentAt: iso(r.consent_at)!, consentTextVersion: s(r.consent_text_version), approvedBy: (r.approved_by as string) ?? null,
+          approvedAt: iso(r.approved_at), notes: s(r.notes), deleteAfter: iso(r.delete_after),
+          web3formsStatus: (r.web3forms_status as Web3FormsStatus) ?? null,
+        };
+      });
+    },
+    async save(a) {
+      await init();
+      const values = [
+        a.id, a.createdAt, a.updatedAt, a.statusChangedAt, a.status, a.company, a.contactName, a.email, a.phone, JSON.stringify(a.categories),
+        JSON.stringify(a.regions), a.plzAreas, JSON.stringify({ items: a.qualifications, text: a.qualificationsText }), a.capacityDays,
+        a.mobileTeams, a.message, a.sourcePage, a.utmSource, a.utmMedium, a.utmCampaign, a.utmTerm, a.utmContent, a.referrer, a.consentAt,
+        a.consentTextVersion, a.approvedBy, a.approvedAt, a.notes, a.deleteAfter, a.web3formsStatus,
+      ];
+      const mutable = ["updated_at", "status_changed_at", "status", "approved_by", "approved_at", "notes", "delete_after", "web3forms_status"];
+      await sql(
+        `INSERT INTO partner_applications (${COLS.join(", ")}) VALUES (${COLS.map((_, i) => `$${i + 1}`).join(",")})
+         ON CONFLICT (id) DO UPDATE SET ${mutable.map((c) => `${c}=EXCLUDED.${c}`).join(", ")}`,
+        values,
+      );
+    },
+    async remove(id) {
+      await init();
+      await sql("DELETE FROM partner_application_events WHERE application_id = $1", [id]);
+      await sql("DELETE FROM partner_applications WHERE id = $1", [id]);
+    },
+    async events() {
+      await init();
+      const { rows } = await sql("SELECT * FROM partner_application_events ORDER BY created_at DESC LIMIT 5000");
+      return rows.map((r) => ({
+        id: s(r.id), applicationId: (r.application_id as string) ?? null, createdAt: iso(r.created_at)!, type: r.type as EventType, detail: s(r.detail),
+      }));
+    },
+    async addEvent(e) {
+      await init();
+      await sql("INSERT INTO partner_application_events (id, application_id, created_at, type, detail) VALUES ($1,$2,$3,$4,$5)", [
+        e.id, e.applicationId, e.createdAt, e.type, e.detail,
+      ]);
+    },
+  };
 }
 
-export async function setApplicationStatus(id: string, status: ApplicationStatus) {
-  if (dbUrl) {
-    await init();
-    await sql("UPDATE partner_applications SET status = $1 WHERE id = $2", [status, id]);
-  } else writeFile(readFile().map((a) => (a.id === id ? { ...a, status } : a)));
+function fileBackend(): Backend {
+  const file = join(process.cwd(), ".data", "partner_applications.json");
+  type Data = { applications: PartnerApplication[]; events: ApplicationEvent[] };
+  const read = (): Data => {
+    if (!existsSync(file)) return { applications: [], events: [] };
+    const d = JSON.parse(readFileSync(file, "utf8"));
+    return Array.isArray(d) ? { applications: [], events: [] } : (d as Data); // Format des früheren Formulars ignorieren
+  };
+  const write = (d: Data) => {
+    mkdirSync(join(process.cwd(), ".data"), { recursive: true });
+    writeFileSync(file, JSON.stringify(d, null, 2));
+  };
+  return {
+    async all() {
+      return read().applications.sort((a, b) => b.createdAt.localeCompare(a.createdAt));
+    },
+    async save(a) {
+      const d = read();
+      const i = d.applications.findIndex((x) => x.id === a.id);
+      if (i >= 0) d.applications[i] = a;
+      else d.applications.push(a);
+      write(d);
+    },
+    async remove(id) {
+      const d = read();
+      write({ applications: d.applications.filter((a) => a.id !== id), events: d.events.filter((e) => e.applicationId !== id) });
+    },
+    async events() {
+      return read().events.sort((a, b) => b.createdAt.localeCompare(a.createdAt));
+    },
+    async addEvent(e) {
+      const d = read();
+      d.events.push(e);
+      write(d);
+    },
+  };
 }
 
-// ---- Annahme ----------------------------------------------------------------------------------------------------
+const backend: Backend | null = dbUrl ? sqlBackend(dbUrl) : process.env.NODE_ENV !== "production" ? fileBackend() : null;
+/** true, wenn Bewerbungen gespeichert werden (Datenbank oder Entwicklungs-Datei) */
+export const queueAvailable = backend !== null;
 
-const fail = (status: number, message: string): Result => ({ ok: false, status, message });
+function need(): Backend {
+  if (!backend) throw new Error("Kein Speicher konfiguriert (DATABASE_URL fehlt).");
+  return backend;
+}
 
-export async function handlePartnerApplication(body: Json, ip: string): Promise<Result> {
-  // Feature-Flag PARTNER_FORM_ENABLED=true; ohne Flag nimmt der Endpunkt nichts an
+async function log(applicationId: string | null, type: EventType, detail = "") {
+  await need().addEvent({ id: randomUUID(), applicationId, createdAt: new Date().toISOString(), type, detail });
+}
+
+export const listApplications = () => need().all();
+export const getApplication = async (id: string) => (id ? ((await need().all()).find((a) => a.id === id) ?? null) : null);
+export const applicationEvents = async (id: string) => (await need().events()).filter((e) => e.applicationId === id);
+export const deletionLog = async () => (await need().events()).filter((e) => e.type === "loeschung");
+
+// ---- Admin-Aktionen ---------------------------------------------------------------------------------------------
+
+type ActionResult = { ok: true } | { ok: false; message: string };
+
+function withStatus(a: PartnerApplication, status: ApplicationStatus): PartnerApplication {
+  const now = new Date().toISOString();
+  return { ...a, status, statusChangedAt: now, updatedAt: now, deleteAfter: deleteAfterFor(status, now) };
+}
+
+export async function setApplicationStatus(id: string, status: ApplicationStatus, actor: string): Promise<ActionResult> {
+  const a = await getApplication(id);
+  if (!a) return { ok: false, message: "Bewerbung nicht gefunden." };
+  if (!transitions[a.status].includes(status)) return { ok: false, message: `Wechsel ${a.status} → ${status} ist nicht erlaubt.` };
+  await need().save(withStatus(a, status));
+  await log(id, "status", `${a.status} → ${status} (${actor})`);
+  return { ok: true };
+}
+
+/** Manuelle Freigabe: nur aus „qualifiziert“; setzt approved_by/approved_at */
+export async function approveApplication(id: string, actor: string): Promise<ActionResult> {
+  const a = await getApplication(id);
+  if (!a) return { ok: false, message: "Bewerbung nicht gefunden." };
+  if (a.status !== "qualifiziert") return { ok: false, message: "Freigeben ist nur aus dem Status „Qualifiziert“ möglich." };
+  const next = withStatus(a, "aktiv");
+  await need().save({ ...next, approvedBy: actor, approvedAt: next.statusChangedAt });
+  await log(id, "freigabe", `qualifiziert → aktiv (freigegeben von ${actor})`);
+  return { ok: true };
+}
+
+export async function setApplicationNotes(id: string, notes: string, actor: string): Promise<ActionResult> {
+  const a = await getApplication(id);
+  if (!a) return { ok: false, message: "Bewerbung nicht gefunden." };
+  await need().save({ ...a, notes: notes.slice(0, 5000), updatedAt: new Date().toISOString() });
+  await log(id, "notiz", `Notiz geändert (${actor})`);
+  return { ok: true };
+}
+
+/** Endgültig löschen. Protokoll ohne ID und ohne personenbezogene Daten. */
+export async function deleteApplication(id: string, reason: "manuell" | "Speicherfrist", actor?: string): Promise<ActionResult> {
+  const a = await getApplication(id);
+  if (!a) return { ok: false, message: "Bewerbung nicht gefunden." };
+  await need().remove(id);
+  await log(null, "loeschung", `Bewerbung gelöscht (${reason}${actor ? `, ${actor}` : ""}; Status: ${a.status}; Eingang: ${a.createdAt.slice(0, 7)})`);
+  return { ok: true };
+}
+
+/** Tägliche Bereinigung: löscht Bewerbungen, deren Löschdatum erreicht ist. `now` nur in der Entwicklung verschiebbar. */
+export async function purgeExpired(now: Date = new Date()): Promise<number> {
+  if (!backend) return 0;
+  let n = 0;
+  for (const a of await need().all()) {
+    if (a.status !== "aktiv" && a.deleteAfter && Date.parse(a.deleteAfter) <= now.getTime()) {
+      await deleteApplication(a.id, "Speicherfrist");
+      n++;
+    }
+  }
+  return n;
+}
+
+// ---- Annahme (öffentlich) ---------------------------------------------------------------------------------------
+
+export type CreateResult =
+  | { ok: true; silent?: boolean; id?: string; stored?: boolean; mail?: Web3FormsPayload }
+  | { ok: false; status: number; message: string };
+const fail = (status: number, message: string): CreateResult => ({ ok: false, status, message });
+
+const list = (v: unknown, allowed: readonly string[]) =>
+  [...new Set((Array.isArray(v) ? v : []).map((x) => str(x, 120)).filter((x) => allowed.includes(x)))];
+const int = (v: unknown) => (typeof v === "number" ? v : typeof v === "string" && /^\d+$/.test(v.trim()) ? Number(v) : NaN);
+/** Referrer nur als Ursprung + Pfad (keine Query-Parameter, damit keine personenbezogenen Daten mitkommen) */
+function cleanReferrer(v: unknown): string {
+  try {
+    const u = new URL(str(v, 500));
+    return u.protocol.startsWith("http") ? `${u.origin}${u.pathname}`.slice(0, 300) : "";
+  } catch {
+    return "";
+  }
+}
+
+export async function handlePartnerApplication(body: Json, ip: string): Promise<CreateResult> {
+  // Feature-Flag PARTNER_FORM_ENABLED=true und Web3Forms-Key; ohne beides nimmt der Endpunkt nichts an
   if (!partnerFormLive) return fail(404, "Das Formular ist noch nicht freigeschaltet.");
-  if (str(body.website, 200) || Number(body.elapsed) < 3000) return { ok: true, silent: true };
+  if (body.botcheck === true || str(body.botcheck, 10) || Number(body.elapsed) < 3000) return { ok: true, silent: true };
   if (!(await allow("pruefpartner", ip, 5))) return fail(429, "Zu viele Anfragen. Bitte versuchen Sie es später erneut.");
 
   const sourcePage = SOURCE_PAGES.find((s) => s === str(body.sourcePage, 100));
   const company = str(body.company, 160);
-  const contact = str(body.contact, 120);
-  const email = str(body.email, 200);
-  const trades = (Array.isArray(body.trades) ? body.trades : []).map((t) => str(t, 60)).filter((t): t is (typeof TRADES)[number] => (TRADES as readonly string[]).includes(t));
-  const region = str(body.region, 300);
-  const qualifications = str(body.qualifications, 1500);
-  const capacity = str(body.capacity, 200);
+  const contactName = str(body.contactName, 120);
+  const email = str(body.email, 200).toLowerCase();
+  const phone = str(body.phone, 40);
+  const categories = list(body.categories, CATEGORIES) as Category[];
+  const regions = list(body.regions, REGIONS);
+  const plzAreas = str(body.plzAreas, 300);
+  const allQuals = categories.flatMap((c) => QUALIFICATIONS[c].map((q) => `${c}: ${q}`));
+  const qualifications = list(body.qualifications, allQuals);
+  const qualificationsText = str(body.qualificationsText, 1500);
+  const capacityDays = int(body.capacityDays);
+  const mobileTeams = int(body.mobileTeams);
   const message = str(body.message, 2000);
+
   if (!sourcePage) return fail(400, "Ungültige Quellseite.");
   if (!company) return fail(400, "Bitte geben Sie Ihr Unternehmen an.");
-  if (!contact) return fail(400, "Bitte geben Sie eine Ansprechperson an.");
+  if (!contactName) return fail(400, "Bitte geben Sie eine Ansprechperson an.");
   if (!EMAIL_RE.test(email)) return fail(400, "Bitte geben Sie eine gültige geschäftliche E-Mail-Adresse an.");
   if (isFreemail(email)) return fail(400, "Bitte verwenden Sie eine geschäftliche E-Mail-Adresse (keine Freemail-Adresse).");
-  if (trades.length === 0) return fail(400, "Bitte wählen Sie mindestens ein Gewerk.");
-  if (!region) return fail(400, "Bitte geben Sie Ihr Einsatzgebiet an (Region oder PLZ-Bereiche).");
-  if (!qualifications) return fail(400, "Bitte beschreiben Sie Ihre Qualifikationen bzw. Nachweise.");
-  if (!capacity) return fail(400, "Bitte geben Sie Ihre Kapazität an (z. B. Prüftage pro Monat).");
+  if (phone && !/^[+\d][\d\s/()-]{4,}$/.test(phone)) return fail(400, "Bitte prüfen Sie die Telefonnummer.");
+  if (categories.length === 0) return fail(400, "Bitte wählen Sie mindestens eine Kategorie.");
+  if (regions.length === 0) return fail(400, "Bitte wählen Sie mindestens eine Region (Bundesland oder bundesweit).");
+  if (!Number.isInteger(capacityDays) || capacityDays < 1 || capacityDays > 1000) return fail(400, "Bitte geben Sie Ihre Kapazität in Prüftagen pro Monat an.");
+  if (!Number.isInteger(mobileTeams) || mobileTeams < 1 || mobileTeams > 500) return fail(400, "Bitte geben Sie die Anzahl Ihrer mobilen Teams an.");
   if (body.consent !== true) return fail(400, "Bitte stimmen Sie der Verarbeitung Ihrer Angaben zu.");
 
   const now = new Date().toISOString();
-  const application: PartnerApplication = { id: randomUUID(), createdAt: now, sourcePage, company, contact, email, trades, region, qualifications, capacity, message, consentAt: now, status: "neu" };
-
-  if (queueAvailable) {
-    await saveApplication(application);
-    return { ok: true };
-  }
-  // Ohne Datenbank (Produktion): Weitergabe über den Kontaktformular-Weg, Versand per Web3Forms im Browser
-  const payload: Web3FormsPayload = {
-    subject: oneLine(`Prüfpartner-Registrierung – ${company}`).slice(0, 200),
-    from_name: site.domain,
-    replyto: email,
-    ...(process.env.PARTNER_NOTIFY_EMAIL && process.env.WEB3FORMS_PRO === "1" && { ccemail: process.env.PARTNER_NOTIFY_EMAIL }),
-    message: [
-      `Registrierung als Prüfpartner über ${sourcePage} (${site.domain})`, "", `Unternehmen: ${company}`, `Ansprechperson: ${contact}`, `E-Mail: ${email}`,
-      `Gewerke: ${trades.join(", ")}`, `Einsatzgebiet: ${region}`, `Kapazität: ${capacity}`, `Qualifikationen/Nachweise: ${qualifications}`,
-      ...(message ? ["", "Nachricht:", message] : []), "", `Einwilligung: ${now}`, "Status: neu (keine automatische Freigabe)",
-    ].join("\n"),
+  const a: PartnerApplication = {
+    id: randomUUID(), createdAt: now, updatedAt: now, statusChangedAt: now, status: "neu", company, contactName, email, phone,
+    categories, regions, plzAreas, qualifications, qualificationsText, capacityDays, mobileTeams, message, sourcePage,
+    utmSource: str(body.utm_source, 100), utmMedium: str(body.utm_medium, 100), utmCampaign: str(body.utm_campaign, 150),
+    utmTerm: str(body.utm_term, 150), utmContent: str(body.utm_content, 150), referrer: cleanReferrer(body.referrer),
+    consentAt: now, consentTextVersion: CONSENT_VERSION, approvedBy: null, approvedAt: null, notes: "",
+    deleteAfter: deleteAfterFor("neu", now), web3formsStatus: null,
   };
-  if (process.env.LEAD_DRY_RUN === "1") {
-    console.log(`[pruefpartner:dry-run] Web3Forms\n${JSON.stringify(payload, null, 2)}`);
-    return { ok: true, dry: true };
+
+  if (process.env.LEAD_DRY_RUN === "1") console.log(`[pruefpartner:dry-run]\n${JSON.stringify(partnerMail(a, Boolean(backend)), null, 2)}`);
+  if (backend) {
+    await need().save(a);
+    await log(a.id, "eingang", `Eingang über ${sourcePage}`);
   }
-  return { ok: true, mail: payload };
+  return { ok: true, id: a.id, stored: Boolean(backend), mail: partnerMail(a, Boolean(backend)) };
+}
+
+/**
+ * Benachrichtigung über Web3Forms. Enthält bewusst KEINE Freitexte (Qualifikationen, Nachricht) – die stehen nur im Admin-Bereich.
+ * Das Feld `email` ist Pflicht für den Web3Forms-Autoresponder (Bestätigung an den Bewerber).
+ */
+export function partnerMail(a: PartnerApplication, stored: boolean): Web3FormsPayload {
+  const utm = [["source", a.utmSource], ["medium", a.utmMedium], ["campaign", a.utmCampaign], ["term", a.utmTerm], ["content", a.utmContent]]
+    .filter(([, v]) => v)
+    .map(([k, v]) => `utm_${k}=${v}`)
+    .join("; ");
+  return {
+    subject: oneLine(`Neue Prüfpartner-Bewerbung: ${a.company} – ${a.categories.join(", ")}`).slice(0, 200),
+    from_name: "betreibermanager.de Prüfpartner",
+    replyto: a.email,
+    email: a.email,
+    name: a.contactName,
+    Unternehmen: a.company,
+    Kategorien: a.categories.join(", "),
+    Regionen: a.regions.join(", ") + (a.plzAreas ? ` · PLZ-Bereiche: ${a.plzAreas}` : ""),
+    Kapazität: `${a.capacityDays} Prüftage pro Monat, ${a.mobileTeams} mobile Team(s)`,
+    Quellseite: a.sourcePage,
+    UTM: utm || "–",
+    "Bewerbungs-ID": a.id,
+    "Admin-Bereich": stored ? `${baseUrl()}/admin/partner/${a.id}` : "nicht gespeichert (DATABASE_URL fehlt) – Freitexte liegen nicht vor",
+  };
+}
+
+/** Ergebnis des Web3Forms-Versands (einmalig je Bewerbung, danach unveränderlich) */
+export async function recordWeb3FormsResult(id: string, result: unknown): Promise<CreateResult> {
+  if (!partnerFormLive) return fail(404, "Das Formular ist noch nicht freigeschaltet.");
+  if (result !== "sent" && result !== "error") return fail(400, "Ungültiges Ergebnis.");
+  if (!backend) return { ok: true };
+  const a = await getApplication(id);
+  if (!a) return fail(404, "Bewerbung nicht gefunden.");
+  if (a.web3formsStatus) return { ok: true };
+  await need().save({ ...a, web3formsStatus: result, updatedAt: new Date().toISOString() });
+  await log(id, "web3forms", result === "sent" ? "Web3Forms: gesendet" : "Web3Forms: Fehler beim Versand");
+  return { ok: true };
 }

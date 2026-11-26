@@ -1,31 +1,30 @@
 import { clusterBySlug } from "@/lib/clusters";
-import { sendMail } from "@/lib/mail";
-import { measurementFor, measurementHistory } from "@/lib/measurement";
-import { computeFindings, isFreemail, normDomain, type Findings } from "@/lib/nullmessung";
-import { COMPARISON_STEP, confirmMail, day0, day14, day3, day30, day7, notifyMail, STEPS } from "@/lib/sequence";
-import { site } from "@/lib/site";
+import { measurementFor } from "@/lib/measurement";
+import { computeFindings, isFreemail, normDomain } from "@/lib/nullmessung";
+import { baseUrl, site } from "@/lib/site";
 import type { Web3FormsPayload } from "@/lib/web3forms";
-import { deleteLead, getLeads, leadBy, logEvent, newId, newToken, saveLead, type Lead } from "@/lib/store";
+import { deleteLead, getLeads, leadBy, logEvent, newId, newToken, saveLead, storeConfigured, type Lead } from "@/lib/store";
+
+// Nullmessung: Die Anfrage wird gespeichert (DATABASE_URL; in der Entwicklung Datei-Speicher) und per Web3Forms an Henryk gemeldet.
+// Kein Double-Opt-in, keine automatische E-Mail-Folge. Den Befund (/befund/<token>) sendet Henryk persönlich aus /admin/leads.
 
 export const ROLES = ["Geschäftsführung", "Marketing", "Vertrieb", "Sonstige"] as const;
 const EMAIL_RE = /^[^\s@<>()"]+@[^\s@<>()"]+\.[A-Za-z]{2,}$/;
 const DAY = 86_400_000;
+/** Unbearbeitete Anfragen (Status „neu“) werden so viele Tage nach Bereitstellung des Befunds gelöscht */
+export const UNPROCESSED_RETENTION_DAYS = 30;
 const str = (v: unknown, max: number) => (typeof v === "string" ? v.replace(/\r/g, "").trim().slice(0, max) : "");
 
 /** Messung des Clusters für Befunde: letzte echte Messung, sonst null (dann Warteliste) */
 export const baselineFor = (cluster: string) => measurementFor(cluster);
 
-export type CreateResult = { ok: true; status: "neu" | "warteliste" } | { ok: false; status: number; message: string };
-
-export const FALLBACK_MESSAGE = "Danke – Ihre Nullmessung ist angefragt. Wir melden uns per E-Mail, sobald Ihr Befund vorliegt.";
-
-/** Voller Ablauf (Speicher, Double-Opt-in, Folge) nur mit Datenbank UND Resend; in der Entwicklung immer (Datei-Speicher, Konsole) */
-export const funnelReady =
-  process.env.NODE_ENV !== "production" || Boolean(process.env.DATABASE_URL && process.env.RESEND_API_KEY);
+export const CONFIRMATION = "Danke – Ihre Nullmessung ist angefragt. Wir prüfen Ihre Angaben und senden Ihnen den Befund persönlich per E-Mail.";
 
 type Valid = { company: string; domain: string; name: string; role: string; email: string; cluster: NonNullable<ReturnType<typeof clusterBySlug>> };
+type Fail = { ok: false; status: number; message: string };
+export type CreateResult = { ok: true; stored: boolean; waitlist: boolean; mail: Web3FormsPayload } | Fail;
 
-function validate(body: Record<string, unknown>): Valid | { ok: false; status: number; message: string } {
+function validate(body: Record<string, unknown>): Valid | Fail {
   const company = str(body.company, 160);
   const domain = normDomain(str(body.domain, 200));
   const name = str(body.name, 120);
@@ -43,84 +42,63 @@ function validate(body: Record<string, unknown>): Valid | { ok: false; status: n
   return { company, domain, name, role, email, cluster };
 }
 
-/**
- * Ausweichweg ohne Datenbank/Resend: dieselbe Zustellung wie das Kontaktformular auf /fachpartner (Web3Forms, Versand im Browser).
- * Die Route liefert die fertige Nachricht zurück; der Browser sendet sie ab.
- */
-export function createFallback(body: Record<string, unknown>): { ok: true; mail: Web3FormsPayload } | { ok: false; status: number; message: string } {
-  const v = validate(body);
-  if (!("cluster" in v)) return v;
+/** Benachrichtigung an Henryk (Web3Forms, Versand im Browser). Der Befund-Link steht nur im Admin-Bereich, nicht in der E-Mail. */
+function notification(v: Valid, stored: boolean, waitlist: boolean): Web3FormsPayload {
   return {
-    ok: true,
-    mail: {
-      subject: `Nullmessung angefragt (${v.cluster.name}) – ${v.company}`.replace(/[\r\n]+/g, " ").slice(0, 200),
-      from_name: site.domain,
-      replyto: v.email,
-      message: [
-        `Nullmessung angefragt über ${site.domain} (ohne Datenbank, Ausweichweg)`,
-        "",
-        `Cluster: ${v.cluster.name} (${v.cluster.slug})`,
-        `Firma: ${v.company}`,
-        `Domain: ${v.domain}`,
-        `Name: ${v.name}`,
-        `Rolle: ${v.role}`,
-        `E-Mail: ${v.email}`,
-        "",
-        `Einwilligung zur Verarbeitung: ${new Date().toISOString()}`,
-      ].join("\n"),
-    },
+    subject: `Nullmessung angefragt (${v.cluster.name}) – ${v.company}`.replace(/[\r\n]+/g, " ").slice(0, 200),
+    from_name: site.domain,
+    replyto: v.email,
+    message: [
+      `Nullmessung angefragt über ${site.domain}`,
+      "",
+      `Cluster: ${v.cluster.name} (${v.cluster.slug})`,
+      `Firma: ${v.company}`,
+      `Domain: ${v.domain}`,
+      `Name: ${v.name}`,
+      `Rolle: ${v.role}`,
+      `E-Mail: ${v.email}`,
+      "",
+      stored
+        ? `${waitlist ? "Warteliste (noch keine Messung für diesen Prüfbereich)" : "Befund liegt vor"} – Befund-Link kopieren und persönlich senden: ${baseUrl()}/admin/leads`
+        : "Ohne Datenbank: nicht gespeichert, kein Befund erzeugt.",
+      `Einwilligung zur Verarbeitung: ${new Date().toISOString()}`,
+    ].join("\n"),
   };
 }
 
 export async function createRequest(body: Record<string, unknown>): Promise<CreateResult> {
   const v = validate(body);
   if (!("cluster" in v)) return v;
-  const { company, domain, name, role, email, cluster } = v;
+  const m = baselineFor(v.cluster.slug);
+  if (!storeConfigured) return { ok: true, stored: false, waitlist: !m, mail: notification(v, false, !m) };
 
-  const m = baselineFor(cluster.slug);
+  const now = new Date().toISOString();
   const lead: Lead = {
     id: newId(),
     token: newToken(),
     confirmToken: newToken(),
     unsubToken: newToken(),
-    cluster: cluster.slug,
-    company,
-    domain,
-    name,
-    role,
-    email,
+    cluster: v.cluster.slug,
+    company: v.company,
+    domain: v.domain,
+    name: v.name,
+    role: v.role,
+    email: v.email,
     status: m ? "neu" : "warteliste",
     source: "form",
-    createdAt: new Date().toISOString(),
-    confirmedAt: null,
+    createdAt: now,
+    // Seit der Umstellung ohne Double-Opt-in: Zeitpunkt, ab dem der Befund bereitsteht
+    confirmedAt: m ? now : null,
     lastEmailStep: null,
     baselineMonth: m?.month ?? null,
-    findingsJson: m ? computeFindings(m, company, domain) : null,
+    findingsJson: m ? computeFindings(m, v.company, v.domain) : null,
   };
   await saveLead(lead);
-  await sendMail(confirmMail(lead, !m));
-  await logEvent(lead.id, "email", m ? "Bestätigung" : "Warteliste");
-  return { ok: true, status: lead.status === "warteliste" ? "warteliste" : "neu" };
+  await logEvent(lead.id, "status", m ? "angefragt (Befund bereit)" : "angefragt (Warteliste)");
+  return { ok: true, stored: true, waitlist: !m, mail: notification(v, true, !m) };
 }
 
-/** Double-Opt-in-Klick: Befund freischalten, Tag-0-Mail senden, Henryk benachrichtigen */
-export async function confirmLead(confirmToken: string): Promise<Lead | null> {
-  const lead = await leadBy("confirmToken", confirmToken);
-  if (!lead || lead.status === "abgemeldet") return null;
-  if (lead.confirmedAt) return lead;
-  lead.confirmedAt = new Date().toISOString();
-  await logEvent(lead.id, "bestaetigung");
-  if (lead.status === "neu") {
-    lead.status = "bestaetigt";
-    lead.lastEmailStep = 0;
-    await sendMail(day0(lead));
-    await logEvent(lead.id, "email", "Tag 0");
-  }
-  await saveLead(lead);
-  if (process.env.NOTIFY_EMAIL) await sendMail(notifyMail(lead, (lead.findingsJson as Findings | null) ?? null));
-  return lead;
-}
-
+/** Abmeldelinks aus früher versandten E-Mails bleiben gültig */
 export async function unsubscribe(unsubToken: string): Promise<boolean> {
   const lead = await leadBy("unsubToken", unsubToken);
   if (!lead) return false;
@@ -132,65 +110,33 @@ export async function unsubscribe(unsubToken: string): Promise<boolean> {
   return true;
 }
 
-export type CronReport = { sent: { lead: string; step: number }[]; promoted: string[]; deleted: number };
+export type CleanupReport = { promoted: string[]; deleted: number };
 
 /**
- * Tägliche Verarbeitung. `now` ist in Produktion immer die aktuelle Zeit; nur in der Entwicklung darf die Route sie überschreiben.
- * - Unbestätigte Leads (Status neu) werden nach 30 Tagen gelöscht.
- * - Warteliste (bestätigt): sobald eine echte Messung vorliegt, Befund berechnen und Tag-0-Mail senden.
- * - Tag 3/7/14 für bestätigte Leads ohne Buchung; Tag 30 nur, wenn eine neuere Messung als die Nullmessung existiert.
+ * Tägliche Bereinigung (kein E-Mail-Versand).
+ * - Anfragen im Status „neu“ (Befund nie versendet) werden 30 Tage nach Bereitstellung des Befunds gelöscht.
+ * - Warteliste: Sobald eine echte Messung vorliegt, wird der Befund berechnet; Henryk sieht ihn in /admin/leads.
  */
-export async function runSequences(now: Date): Promise<CronReport> {
-  const report: CronReport = { sent: [], promoted: [], deleted: 0 };
+export async function runLeadCleanup(now: Date): Promise<CleanupReport> {
+  const report: CleanupReport = { promoted: [], deleted: 0 };
   for (const lead of await getLeads()) {
-    if (lead.source === "form" && lead.status === "neu" && now.getTime() - Date.parse(lead.createdAt) > 30 * DAY) {
+    if (lead.source !== "form") continue;
+    const since = Date.parse(lead.confirmedAt ?? lead.createdAt);
+    if (lead.status === "neu" && now.getTime() - since > UNPROCESSED_RETENTION_DAYS * DAY) {
       await deleteLead(lead.id);
       report.deleted++;
       continue;
     }
-    if (lead.status === "warteliste" && lead.confirmedAt) {
+    if (lead.status === "warteliste") {
       const m = baselineFor(lead.cluster);
-      if (m) {
-        lead.findingsJson = computeFindings(m, lead.company, lead.domain);
-        lead.baselineMonth = m.month;
-        lead.status = "bestaetigt";
-        lead.lastEmailStep = 0;
-        lead.confirmedAt = now.toISOString();
-        await saveLead(lead);
-        await sendMail(day0(lead));
-        await logEvent(lead.id, "email", "Tag 0 (nach Warteliste)");
-        report.promoted.push(lead.id);
-      }
-      continue;
-    }
-    if (lead.source !== "form" || !lead.confirmedAt) continue;
-    // Nach Buchung, Angebot, Partner oder Abmeldung keine Folge mehr (Tag 30 gilt nur für laufende Folge und Wartende)
-    if (!["bestaetigt"].includes(lead.status)) continue;
-
-    const days = Math.floor((now.getTime() - Date.parse(lead.confirmedAt)) / DAY);
-    const last = lead.lastEmailStep ?? 0;
-    const f = lead.findingsJson as Findings | null;
-    if (!f) continue;
-
-    const next = STEPS.find((s) => s > last && days >= s);
-    if (next) {
-      const mail = next === 3 ? day3(lead, f) : next === 7 ? day7(lead) : day14(lead);
-      await sendMail(mail);
-      lead.lastEmailStep = next;
+      if (!m) continue;
+      lead.findingsJson = computeFindings(m, lead.company, lead.domain);
+      lead.baselineMonth = m.month;
+      lead.status = "neu";
+      lead.confirmedAt = now.toISOString();
       await saveLead(lead);
-      await logEvent(lead.id, "email", `Tag ${next}`);
-      report.sent.push({ lead: lead.id, step: next });
-      continue; // höchstens eine Mail pro Lauf
-    }
-    if (last < COMPARISON_STEP && last >= STEPS[STEPS.length - 1] && days >= COMPARISON_STEP) {
-      const newest = measurementHistory(lead.cluster)[0];
-      if (newest && lead.baselineMonth && newest.month > lead.baselineMonth) {
-        await sendMail(day30(lead, f, computeFindings(newest, lead.company, lead.domain)));
-        lead.lastEmailStep = COMPARISON_STEP;
-        await saveLead(lead);
-        await logEvent(lead.id, "email", "Tag 30");
-        report.sent.push({ lead: lead.id, step: COMPARISON_STEP });
-      }
+      await logEvent(lead.id, "status", "warteliste → neu (Befund bereit)");
+      report.promoted.push(lead.id);
     }
   }
   return report;

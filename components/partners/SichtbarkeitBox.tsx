@@ -6,7 +6,7 @@ export default function SichtbarkeitBox() {
     <aside className="author-box" aria-labelledby="sichtbarkeit-titel">
       <strong id="sichtbarkeit-titel">Sie möchten als Anbieter sichtbar werden?</strong>
       <span>
-        Exklusive Fachpartnerplätze (bezahlt) → <Link href="/fachpartner">Fachpartner werden</Link>. Das ist ein eigenes Angebot für
+        Exklusive Fachpartnerplätze (bezahlt) → <Link href="/fachpartner">Bezahlte Sichtbarkeit (Fachpartnerplatz)</Link>. Das ist ein eigenes Angebot für
         Sichtbarkeit und unabhängig von der Registrierung als Prüfpartner; die Registrierung als Prüfpartner begründet keine
         Fachpartner-Platzierung und umgekehrt.
       </span>

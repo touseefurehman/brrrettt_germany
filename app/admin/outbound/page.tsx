@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { clusterBySlug } from "@/lib/clusters";
-import { baseUrl } from "@/lib/mail";
+import { baseUrl } from "@/lib/site";
 import type { Findings } from "@/lib/nullmessung";
 import { getLeads, storeConfigured } from "@/lib/store";
 

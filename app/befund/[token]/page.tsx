@@ -22,8 +22,8 @@ export default async function Befund({ params }: { params: Promise<{ token: stri
   // Ohne Datenbank oder bei Datenbankfehler: 404 statt 500
   const lead = await leadBy("token", token).catch(() => null);
   const f = lead?.findingsJson as Findings | null | undefined;
-  // Nur bestätigte Leads (Double-Opt-in) oder vorab erzeugte Outbound-Befunde; Warteliste hat noch keinen Befund
-  if (!lead || !f || (lead.source === "form" && !lead.confirmedAt) || lead.status === "warteliste") notFound();
+  // Befund nur, wenn er berechnet ist (Warteliste hat noch keinen). Der Link wird von Henryk persönlich aus /admin/leads versendet.
+  if (!lead || !f || lead.status === "warteliste") notFound();
   const cluster = clusterBySlug(lead.cluster);
   const agg = f.granularity === "aggregate";
   const book = BOOKING_URL || `mailto:${site.email}?subject=Gespr%C3%A4ch%20zum%20Befund`;

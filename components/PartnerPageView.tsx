@@ -6,7 +6,7 @@ import PartnerPrivacySection from "./partners/PartnerPrivacySection";
 import PruefpartnerForm from "./partners/PruefpartnerForm";
 import SichtbarkeitBox from "./partners/SichtbarkeitBox";
 import { b2bPublished } from "@/lib/b2b";
-import { partnerFormLive, partnerPublished } from "@/lib/partner";
+import { partnerFormLive, partnerPublished, partnerWeb3FormsKey } from "@/lib/partner";
 import { PARTNER_BASE, type PartnerPage } from "@/lib/partner-core";
 import { formatDate } from "@/lib/rank-rent";
 import { site } from "@/lib/site";
@@ -20,6 +20,7 @@ export default function PartnerPageView({ page, preview = false, previewToken }:
   const crumbs: [string, string][] = [["Prüfpartner werden", PARTNER_BASE], [page.h1, page.url]];
   const draft = page.status !== "published";
   const contactHref = `/kontakt?thema=${encodeURIComponent(page.ctaTopic)}`;
+  const ctaHref = partnerFormLive ? "#registrierung" : contactHref;
   return (
     <>
       <JsonLd data={webPageSchema(page.url, page.h1, page.lastReviewed)} />
@@ -34,7 +35,7 @@ export default function PartnerPageView({ page, preview = false, previewToken }:
           <Marked text={page.kurzantwort} preview={preview} />
         </p>
         <p>
-          <Link href={contactHref} className="rr-btn">
+          <Link href={ctaHref} className="rr-btn">
             {page.cta}
           </Link>
         </p>
@@ -98,8 +99,11 @@ export default function PartnerPageView({ page, preview = false, previewToken }:
         <h2>Registrierung</h2>
         {partnerFormLive ? (
           <>
-            <p>Die Registrierung ist keine automatische Freigabe. Wir prüfen Ihre Angaben; Konditionen werden jeweils individuell vereinbart.</p>
-            <PruefpartnerForm sourcePage={page.url} cta={page.cta} previewToken={preview ? previewToken : undefined} />
+            <p>
+              Die Registrierung ist keine automatische Freigabe und keine Auftragszusage. Wir prüfen Ihre Angaben; Konditionen werden jeweils
+              individuell vereinbart.
+            </p>
+            <PruefpartnerForm sourcePage={page.url} cta={page.cta} accessKey={partnerWeb3FormsKey} />
             {preview && (
               <div className="prose">
                 <PartnerPrivacySection heading="Datenschutzhinweis (Vorschau; erscheint in der Datenschutzerklärung)" highlight />

@@ -16,9 +16,12 @@
     "b2b:report": "node --experimental-strip-types --no-warnings scripts/b2b-report.mjs",
     "b2b:xlsx": "python3 scripts/b2b-csv-to-xlsx.py",
     "partner:report": "node --experimental-strip-types --no-warnings scripts/partner-report.mjs",
-    "partner:xlsx": "python3 scripts/partner-csv-to-xlsx.py"
+    "partner:xlsx": "python3 scripts/partner-csv-to-xlsx.py",
+    "db:migrate": "node scripts/db-migrate.mjs",
+    "db:check": "node scripts/db-migrate.mjs --check"
   },
   "dependencies": {
+    "@neondatabase/serverless": "1.2.1",
     "next": "15.5.27",
     "react": "19.1.9",
     "react-dom": "19.1.9"

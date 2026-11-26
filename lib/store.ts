@@ -1,8 +1,9 @@
 import { randomBytes } from "node:crypto";
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
+import { hasDatabase, sql } from "@/lib/db";
 
-// Lead-Speicher. Mit DATABASE_URL: Neon/Vercel Postgres über die HTTP-SQL-Schnittstelle (nur fetch, kein Paket).
+// Lead-Speicher. Mit DATABASE_URL: Neon Postgres (lib/db.ts, Treiber @neondatabase/serverless).
 // Ohne DATABASE_URL (nur Entwicklung): Datei .data/store.json. In Produktion ohne Datenbank wird nichts gespeichert.
 
 export type LeadStatus = "neu" | "bestaetigt" | "warteliste" | "gebucht" | "angebot" | "partner" | "abgemeldet";
@@ -62,34 +63,10 @@ interface Backend {
   addEvent(e: LeadEvent): Promise<void>;
 }
 
-const dbUrl = process.env.DATABASE_URL;
-
-function sqlBackend(url: string): Backend {
-  const host = new URL(url).hostname;
-  async function sql(query: string, params: unknown[] = []) {
-    const res = await fetch(`https://${host}/sql`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json", "Neon-Connection-String": url },
-      body: JSON.stringify({ query, params }),
-      cache: "no-store",
-    });
-    if (!res.ok) throw new Error(`Datenbank ${res.status}: ${(await res.text()).slice(0, 200)}`);
-    return (await res.json()) as { rows: Record<string, unknown>[] };
-  }
-  let ready: Promise<unknown> | null = null;
-  const init = () =>
-    (ready ??= (async () => {
-      await sql(`CREATE TABLE IF NOT EXISTS leads (
-        id text PRIMARY KEY, token text UNIQUE NOT NULL, confirm_token text, unsub_token text, cluster text NOT NULL,
-        company text, domain text, name text, role text, email text, status text NOT NULL, source text NOT NULL DEFAULT 'form',
-        created_at timestamptz NOT NULL, confirmed_at timestamptz, last_email_step int, baseline_month text, findings_json jsonb)`);
-      await sql(`CREATE TABLE IF NOT EXISTS events (
-        id text PRIMARY KEY, lead_id text NOT NULL, type text NOT NULL, detail text, created_at timestamptz NOT NULL)`);
-    })());
+function sqlBackend(): Backend {
   const iso = (v: unknown) => (v ? new Date(v as string).toISOString() : null);
   return {
     async leads() {
-      await init();
       const { rows } = await sql("SELECT * FROM leads ORDER BY created_at DESC");
       return rows.map((r) => ({
         id: r.id as string,
@@ -112,7 +89,6 @@ function sqlBackend(url: string): Backend {
       }));
     },
     async saveLead(l) {
-      await init();
       await sql(
         `INSERT INTO leads (id, token, confirm_token, unsub_token, cluster, company, domain, name, role, email, status, source, created_at, confirmed_at, last_email_step, baseline_month, findings_json)
          VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17)
@@ -123,17 +99,14 @@ function sqlBackend(url: string): Backend {
       );
     },
     async deleteLead(id) {
-      await init();
       await sql("DELETE FROM events WHERE lead_id = $1", [id]);
       await sql("DELETE FROM leads WHERE id = $1", [id]);
     },
     async events() {
-      await init();
       const { rows } = await sql("SELECT * FROM events ORDER BY created_at DESC LIMIT 2000");
       return rows.map((r) => ({ id: r.id as string, leadId: r.lead_id as string, type: r.type as EventType, detail: (r.detail as string) ?? "", createdAt: iso(r.created_at)! }));
     },
     async addEvent(e) {
-      await init();
       await sql("INSERT INTO events (id, lead_id, type, detail, created_at) VALUES ($1,$2,$3,$4,$5)", [e.id, e.leadId, e.type, e.detail, e.createdAt]);
     },
   };
@@ -173,8 +146,8 @@ function fileBackend(): Backend {
   };
 }
 
-export const storeConfigured = Boolean(dbUrl) || process.env.NODE_ENV !== "production";
-const backend: Backend | null = dbUrl ? sqlBackend(dbUrl) : process.env.NODE_ENV !== "production" ? fileBackend() : null;
+export const storeConfigured = hasDatabase || process.env.NODE_ENV !== "production";
+const backend: Backend | null = hasDatabase ? sqlBackend() : process.env.NODE_ENV !== "production" ? fileBackend() : null;
 
 function need(): Backend {
   if (!backend) throw new Error("Kein Lead-Speicher konfiguriert (DATABASE_URL fehlt).");

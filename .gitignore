@@ -7,3 +7,6 @@ content/measurements/*.mock.json
 .data
 .env
 .env.local
+.vercel
+.env*
+!.env.example

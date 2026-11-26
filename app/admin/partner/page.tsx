@@ -52,7 +52,7 @@ export default async function AdminPartner({ searchParams }: { searchParams: SP 
       </p>
       <p className="muted-note">
         Eine Registrierung ist keine Freigabe: Qualifikationen sind Selbstauskunft und werden vor jeder Beauftragung geprüft. „Aktiv“ nur über
-        „Freigeben“ in der Detailansicht. Formular: {partnerFormLive ? "freigeschaltet" : "aus (PARTNER_FORM_ENABLED / NEXT_PUBLIC_WEB3FORMS_PARTNER_KEY)"}.
+        „Freigeben“ in der Detailansicht. Formular: {partnerFormLive ? "freigeschaltet" : "aus (PARTNER_FORM_ENABLED=false)"}.
       </p>
       {!queueAvailable && (
         <p role="alert">

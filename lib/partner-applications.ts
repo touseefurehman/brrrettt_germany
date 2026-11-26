@@ -1,6 +1,7 @@
 import { randomUUID } from "node:crypto";
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
+import { hasDatabase, sql } from "@/lib/db";
 import { allow, EMAIL_RE, oneLine, str, type Json } from "@/lib/leads";
 import { partnerFormLive } from "@/lib/partner";
 import {
@@ -18,8 +19,7 @@ import { baseUrl } from "@/lib/site";
 import type { Web3FormsPayload } from "@/lib/web3forms";
 
 // Bewerbungen von Prüfbetrieben (operative Zusammenarbeit) – getrennt von Anfragen zum bezahlten Fachpartner-Programm.
-// Speicher: DATABASE_URL → Tabellen `partner_applications` und `partner_application_events` (Neon/Vercel Postgres über HTTP-SQL,
-// wie lib/store.ts). In der Entwicklung ohne DATABASE_URL: Datei .data/partner_applications.json.
+// Speicher: DATABASE_URL → Tabellen `partner_applications` und `partner_application_events` (Neon Postgres über lib/db.ts). In der Entwicklung ohne DATABASE_URL: Datei .data/partner_applications.json.
 // In Produktion ohne DATABASE_URL: kein Speicher, die Bewerbung geht nur per Web3Forms ins Postfach (Hinweis in /admin/partner).
 // Versand: ausschließlich Web3Forms aus dem Browser (NEXT_PUBLIC_WEB3FORMS_PARTNER_KEY). Freitexte gehen nicht in die E-Mail.
 // Speicherdauer: PARTNER_RETENTION_DAYS (Standard 365) ab dem letzten Statuswechsel; „aktiv“ wird nicht gelöscht.
@@ -84,8 +84,6 @@ interface Backend {
   addEvent(e: ApplicationEvent): Promise<void>;
 }
 
-const dbUrl = process.env.DATABASE_URL;
-
 const COLS = [
   "id", "created_at", "updated_at", "status_changed_at", "status", "company", "contact_name", "email", "phone", "categories", "regions",
   "plz_areas", "qualifications", "capacity_days", "mobile_teams", "message", "source_page", "utm_source", "utm_medium", "utm_campaign",
@@ -93,42 +91,11 @@ const COLS = [
   "web3forms_status",
 ] as const;
 
-function sqlBackend(url: string): Backend {
-  const host = new URL(url).hostname;
-  async function sql(query: string, params: unknown[] = []) {
-    const res = await fetch(`https://${host}/sql`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json", "Neon-Connection-String": url },
-      body: JSON.stringify({ query, params }),
-      cache: "no-store",
-    });
-    if (!res.ok) throw new Error(`Datenbank ${res.status}: ${(await res.text()).slice(0, 200)}`);
-    return (await res.json()) as { rows: Record<string, unknown>[] };
-  }
-  let ready: Promise<unknown> | null = null;
-  const init = () =>
-    (ready ??= (async () => {
-      // Tabelle des früheren, nie freigeschalteten Formulars (Spalte „trades“) beiseitelegen statt zu überschreiben
-      await sql(`DO $$ BEGIN
-        IF EXISTS (SELECT 1 FROM information_schema.columns WHERE table_name = 'partner_applications' AND column_name = 'trades') THEN
-          ALTER TABLE partner_applications RENAME TO partner_applications_alt;
-        END IF; END $$`);
-      await sql(`CREATE TABLE IF NOT EXISTS partner_applications (
-        id text PRIMARY KEY, created_at timestamptz NOT NULL, updated_at timestamptz NOT NULL, status_changed_at timestamptz NOT NULL,
-        status text NOT NULL DEFAULT 'neu', company text NOT NULL, contact_name text NOT NULL, email text NOT NULL, phone text,
-        categories jsonb NOT NULL, regions jsonb NOT NULL, plz_areas text, qualifications jsonb NOT NULL,
-        capacity_days int NOT NULL, mobile_teams int NOT NULL, message text, source_page text NOT NULL,
-        utm_source text, utm_medium text, utm_campaign text, utm_term text, utm_content text, referrer text,
-        consent_at timestamptz NOT NULL, consent_text_version text NOT NULL, approved_by text, approved_at timestamptz, notes text,
-        delete_after timestamptz, web3forms_status text)`);
-      await sql(`CREATE TABLE IF NOT EXISTS partner_application_events (
-        id text PRIMARY KEY, application_id text, created_at timestamptz NOT NULL, type text NOT NULL, detail text)`);
-    })());
+function sqlBackend(): Backend {
   const iso = (v: unknown) => (v ? new Date(v as string).toISOString() : null);
   const s = (v: unknown) => (v == null ? "" : String(v));
   return {
     async all() {
-      await init();
       const { rows } = await sql("SELECT * FROM partner_applications ORDER BY created_at DESC");
       return rows.map((r) => {
         const q = (r.qualifications ?? {}) as { items?: string[]; text?: string };
@@ -146,7 +113,6 @@ function sqlBackend(url: string): Backend {
       });
     },
     async save(a) {
-      await init();
       const values = [
         a.id, a.createdAt, a.updatedAt, a.statusChangedAt, a.status, a.company, a.contactName, a.email, a.phone, JSON.stringify(a.categories),
         JSON.stringify(a.regions), a.plzAreas, JSON.stringify({ items: a.qualifications, text: a.qualificationsText }), a.capacityDays,
@@ -161,19 +127,16 @@ function sqlBackend(url: string): Backend {
       );
     },
     async remove(id) {
-      await init();
       await sql("DELETE FROM partner_application_events WHERE application_id = $1", [id]);
       await sql("DELETE FROM partner_applications WHERE id = $1", [id]);
     },
     async events() {
-      await init();
       const { rows } = await sql("SELECT * FROM partner_application_events ORDER BY created_at DESC LIMIT 5000");
       return rows.map((r) => ({
         id: s(r.id), applicationId: (r.application_id as string) ?? null, createdAt: iso(r.created_at)!, type: r.type as EventType, detail: s(r.detail),
       }));
     },
     async addEvent(e) {
-      await init();
       await sql("INSERT INTO partner_application_events (id, application_id, created_at, type, detail) VALUES ($1,$2,$3,$4,$5)", [
         e.id, e.applicationId, e.createdAt, e.type, e.detail,
       ]);
@@ -219,7 +182,7 @@ function fileBackend(): Backend {
   };
 }
 
-const backend: Backend | null = dbUrl ? sqlBackend(dbUrl) : process.env.NODE_ENV !== "production" ? fileBackend() : null;
+const backend: Backend | null = hasDatabase ? sqlBackend() : process.env.NODE_ENV !== "production" ? fileBackend() : null;
 /** true, wenn Bewerbungen gespeichert werden (Datenbank oder Entwicklungs-Datei) */
 export const queueAvailable = backend !== null;
 

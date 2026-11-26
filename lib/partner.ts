@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { type PartnerPage, validatePartnerPages } from "./partner-core";
 import { previewTokenValid } from "./b2b";
+import { WEB3FORMS_ACCESS_KEY } from "./web3forms";
 
 // Prüfpartner-Unterseiten: content/partner/<slug>.json. Nur `published` ist öffentlich (und in der Sitemap).
 // `review`/`draft`: ausschließlich unter /vorschau/partner/<slug>?token=… (PREVIEW_TOKEN).
@@ -15,11 +16,11 @@ export const partnerAll: PartnerPage[] = fs
 
 const errors = validatePartnerPages(partnerAll);
 export const partnerPublished = partnerAll.filter((p) => p.status === "published");
-// Bewerbungsformular (partner_applications): nur sichtbar mit PARTNER_FORM_ENABLED=true UND gesetztem Web3Forms-Key
-// (NEXT_PUBLIC_WEB3FORMS_PARTNER_KEY; soll derselbe Key wie beim Kontaktformular genutzt werden, denselben Wert eintragen).
-// Ohne beides führen alle CTAs zum Kontaktformular. DATABASE_URL ist empfohlen; ohne sie geht die Bewerbung nur per Web3Forms ein.
-export const partnerWeb3FormsKey = (process.env.NEXT_PUBLIC_WEB3FORMS_PARTNER_KEY ?? "").trim();
-export const partnerFormLive = process.env.PARTNER_FORM_ENABLED === "true" && partnerWeb3FormsKey !== "";
+// Bewerbungsformular (partner_applications): nur sichtbar mit PARTNER_FORM_ENABLED=true, sonst führen alle CTAs zum Kontaktformular.
+// Web3Forms-Key: NEXT_PUBLIC_WEB3FORMS_PARTNER_KEY, falls Henryk einen eigenen Key für Bewerbungen will; sonst der bestehende Key
+// des Kontaktformulars. DATABASE_URL ist empfohlen; ohne sie geht die Bewerbung nur per Web3Forms ein.
+export const partnerWeb3FormsKey = (process.env.NEXT_PUBLIC_WEB3FORMS_PARTNER_KEY ?? "").trim() || WEB3FORMS_ACCESS_KEY;
+export const partnerFormLive = process.env.PARTNER_FORM_ENABLED === "true";
 if (errors.length > 0) throw new Error(`content/partner ist inkonsistent oder verletzt die Qualitätsschranke:\n- ${errors.join("\n- ")}`);
 
 export const partnerBySlug = (slug: string) => partnerAll.find((p) => p.slug === slug);

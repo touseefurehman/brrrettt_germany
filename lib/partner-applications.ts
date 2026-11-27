@@ -21,7 +21,7 @@ import type { Web3FormsPayload } from "@/lib/web3forms";
 // Bewerbungen von Prüfbetrieben (operative Zusammenarbeit) – getrennt von Anfragen zum bezahlten Fachpartner-Programm.
 // Speicher: DATABASE_URL → Tabellen `partner_applications` und `partner_application_events` (Neon Postgres über lib/db.ts). In der Entwicklung ohne DATABASE_URL: Datei .data/partner_applications.json.
 // In Produktion ohne DATABASE_URL: kein Speicher, die Bewerbung geht nur per Web3Forms ins Postfach (Hinweis in /admin/partner).
-// Versand: ausschließlich Web3Forms aus dem Browser (NEXT_PUBLIC_WEB3FORMS_PARTNER_KEY). Freitexte gehen nicht in die E-Mail.
+// Versand: ausschließlich Web3Forms aus dem Browser mit dem bestehenden Access Key aus lib/web3forms.ts, Empfänger wie beim Kontaktformular. Freitexte gehen nicht in die E-Mail.
 // Speicherdauer: PARTNER_RETENTION_DAYS (Standard 365) ab dem letzten Statuswechsel; „aktiv“ wird nicht gelöscht.
 
 export type Web3FormsStatus = "sent" | "error";
@@ -332,7 +332,7 @@ export async function handlePartnerApplication(body: Json, ip: string): Promise<
 
 /**
  * Benachrichtigung über Web3Forms. Enthält bewusst KEINE Freitexte (Qualifikationen, Nachricht) – die stehen nur im Admin-Bereich.
- * Das Feld `email` ist Pflicht für den Web3Forms-Autoresponder (Bestätigung an den Bewerber).
+ * `email`/`replyto` dienen nur der Antwort aus dem Postfach; der Bewerber erhält keine E-Mail (kein Web3Forms-Pro).
  */
 export function partnerMail(a: PartnerApplication, stored: boolean): Web3FormsPayload {
   const utm = [["source", a.utmSource], ["medium", a.utmMedium], ["campaign", a.utmCampaign], ["term", a.utmTerm], ["content", a.utmContent]]

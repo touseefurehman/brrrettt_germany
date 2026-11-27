@@ -1,9 +1,9 @@
 // Web3Forms (web3forms.com) – einziger E-Mail-Versand der Website. Zustellung an das Postfach des jeweiligen Access Keys.
 // Der Versand läuft immer im Browser: Der kostenlose Tarif nimmt keine serverseitigen Anfragen an.
 // Access Keys sind öffentlich (sie erlauben nur das Senden an das eigene Postfach) und dürfen im Client stehen.
-// Bestätigungs-E-Mails an Absender laufen ausschließlich über den Web3Forms-Autoresponder (Pro, im Web3Forms-Dashboard eingerichtet).
+// Kein Pro-Tarif: Absender erhalten keine Bestätigungs-E-Mail, nur die Bestätigung auf der Seite.
 
-/** Access Key für Kontaktformular, Nullmessung, Fachpartner- und Rank-&-Rent-Anfragen */
+/** Access Key für Kontaktformular, Nullmessung, Prüfpartner-Bewerbungen, Fachpartner- und Rank-&-Rent-Anfragen */
 export const WEB3FORMS_ACCESS_KEY = "faef2fdb-f4c6-40c8-ac8c-a551a003e1b6";
 
 /** Felder einer Web3Forms-Nachricht (ohne access_key); weitere Schlüssel erscheinen als Zeilen in der E-Mail */

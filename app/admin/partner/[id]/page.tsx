@@ -35,7 +35,7 @@ export default async function AdminPartnerDetail({ params, searchParams }: { par
       </p>
       {fehler && <p role="alert">{fehler}</p>}
       {a.web3formsStatus === "error" && (
-        <p role="alert">Die Web3Forms-Benachrichtigung ist fehlgeschlagen. Die Bewerbung ist trotzdem gespeichert; ggf. Bestätigung manuell senden.</p>
+        <p role="alert">Die Web3Forms-Benachrichtigung ist fehlgeschlagen. Die Bewerbung ist trotzdem gespeichert und nur hier sichtbar.</p>
       )}
 
       <h2>Status</h2>

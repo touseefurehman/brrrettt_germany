@@ -9,7 +9,7 @@ import { site } from "@/lib/site";
 
 /**
  * Gemeinsames Registrierungsformular für Prüfbetriebe (Hub und Unterseiten). Getrennt vom Formular des bezahlten Fachpartner-Programms.
- * Ablauf im Browser: 1. POST /api/partner-application (prüfen, speichern) → 2. Web3Forms (Benachrichtigung, Autoresponder an `email`)
+ * Ablauf im Browser: 1. POST /api/partner-application (prüfen, speichern) → 2. Web3Forms (Benachrichtigung an uns; keine E-Mail an den Bewerber)
  * → 3. PATCH /api/partner-application/<id> mit dem Versandergebnis. Quellseite und UTM gehen als versteckte Felder mit, nie in der URL.
  */
 export default function PruefpartnerForm({ sourcePage, cta, accessKey }: { sourcePage: string; cta: string; accessKey: string }) {

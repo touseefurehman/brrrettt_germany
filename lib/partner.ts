@@ -17,9 +17,9 @@ export const partnerAll: PartnerPage[] = fs
 const errors = validatePartnerPages(partnerAll);
 export const partnerPublished = partnerAll.filter((p) => p.status === "published");
 // Bewerbungsformular (partner_applications): nur sichtbar mit PARTNER_FORM_ENABLED=true, sonst führen alle CTAs zum Kontaktformular.
-// Web3Forms-Key: NEXT_PUBLIC_WEB3FORMS_PARTNER_KEY, falls Henryk einen eigenen Key für Bewerbungen will; sonst der bestehende Key
-// des Kontaktformulars. DATABASE_URL ist empfohlen; ohne sie geht die Bewerbung nur per Web3Forms ein.
-export const partnerWeb3FormsKey = (process.env.NEXT_PUBLIC_WEB3FORMS_PARTNER_KEY ?? "").trim() || WEB3FORMS_ACCESS_KEY;
+// Web3Forms: derselbe Access Key und Empfänger wie das Kontaktformular (kein eigener Partner-Key).
+// DATABASE_URL ist empfohlen; ohne sie geht die Bewerbung nur per Web3Forms ein.
+export const partnerWeb3FormsKey = WEB3FORMS_ACCESS_KEY;
 export const partnerFormLive = process.env.PARTNER_FORM_ENABLED === "true";
 if (errors.length > 0) throw new Error(`content/partner ist inkonsistent oder verletzt die Qualitätsschranke:\n- ${errors.join("\n- ")}`);
 
